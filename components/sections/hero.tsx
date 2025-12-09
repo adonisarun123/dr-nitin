@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 import { motion } from "framer-motion";
@@ -57,9 +58,13 @@ export function Hero() {
                     <FadeIn delay={0.4} direction="left" className="relative lg:h-[600px] w-full flex items-center justify-center">
                         {/* Image Placeholder */}
                         <div className="relative w-full h-full max-h-[500px] lg:max-h-full bg-blue-100 rounded-3xl overflow-hidden shadow-2xl border-4 border-white z-10">
-                            <div className="absolute inset-0 flex items-center justify-center text-blue-300 font-bold text-2xl">
-                                Doctor Image Placeholder
-                            </div>
+                            <Image
+                                src="/dr-nitin-hero.jpg"
+                                alt="Dr. Nitin N Sunku"
+                                fill
+                                className="object-cover object-top"
+                                priority
+                            />
                         </div>
                         {/* Decorational generic elements */}
                         <motion.div
