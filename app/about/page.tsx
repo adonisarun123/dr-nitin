@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageHeader } from "@/components/ui/page-header";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Award, BookOpen, Heart } from "lucide-react";
+import { FadeIn } from "@/components/animations/fade-in";
 
 export default function AboutPage() {
     return (
@@ -15,13 +16,13 @@ export default function AboutPage() {
             <section className="py-16 lg:py-24">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-start">
-                        <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gray-100 border border-gray-200 shadow-xl">
+                        <FadeIn direction="right" className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gray-100 border border-gray-200 shadow-xl">
                             <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold text-2xl">
                                 Doctor Portrait
                             </div>
-                        </div>
+                        </FadeIn>
 
-                        <div>
+                        <FadeIn delay={0.2}>
                             <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">Dr. Nitin N Sunku</h2>
                             <div className="text-lg text-gray-600 space-y-4 mb-8">
                                 <p>
@@ -54,7 +55,7 @@ export default function AboutPage() {
                             <Button size="lg" asChild>
                                 <Link href="/contact">Schedule a Consultation</Link>
                             </Button>
-                        </div>
+                        </FadeIn>
                     </div>
                 </div>
             </section>
@@ -62,22 +63,22 @@ export default function AboutPage() {
             {/* Mission & Values */}
             <section className="py-16 bg-gray-50 border-y border-gray-200">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-2xl mx-auto mb-16">
+                    <FadeIn className="text-center max-w-2xl mx-auto mb-16">
                         <h2 className="text-3xl font-heading font-bold text-gray-900">Our Care Philosophy</h2>
                         <p className="mt-4 text-gray-600">Guided by principles that put the patient first.</p>
-                    </div>
+                    </FadeIn>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
                             { title: "Compassion", desc: "Treating every patient with empathy and understanding their unique lifestyle goals." },
                             { title: "Evidence-Based", desc: "Adopting only proven medical treatments and avoiding unnecessary procedures." },
                             { title: "Excellence", desc: "Striving for the best possible clinical outcomes through continuous learning." },
-                        ].map((value) => (
-                            <div key={value.title} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                        ].map((value, idx) => (
+                            <FadeIn key={value.title} delay={idx * 0.1} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 h-full">
                                 <CheckCircle2 className="h-10 w-10 text-primary mb-4" />
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">{value.title}</h3>
                                 <p className="text-gray-600">{value.desc}</p>
-                            </div>
+                            </FadeIn>
                         ))}
                     </div>
                 </div>

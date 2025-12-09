@@ -1,6 +1,7 @@
 import { PageHeader } from "@/components/ui/page-header";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import { FadeIn } from "@/components/animations/fade-in";
 
 export default function ContactPage() {
     return (
@@ -15,7 +16,7 @@ export default function ContactPage() {
 
                     {/* Contact Information Cards */}
                     <div className="space-y-8">
-                        <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+                        <FadeIn delay={0.1} className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
                             <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                                 <Clock className="h-6 w-6 text-primary" /> Consulting Hours
                             </h3>
@@ -29,9 +30,9 @@ export default function ContactPage() {
                                     <span className="font-semibold text-gray-900">By Appointment</span>
                                 </div>
                             </div>
-                        </div>
+                        </FadeIn>
 
-                        <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+                        <FadeIn delay={0.2} className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
                             <h3 className="text-xl font-bold text-gray-900 mb-6">Contact Info</h3>
                             <ul className="space-y-6">
                                 <li className="flex items-start gap-4">
@@ -62,11 +63,11 @@ export default function ContactPage() {
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </FadeIn>
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-white p-8 lg:p-10 rounded-3xl shadow-xl border border-gray-100">
+                    <FadeIn delay={0.3} className="bg-white p-8 lg:p-10 rounded-3xl shadow-xl border border-gray-100">
                         <h2 className="text-2xl font-bold text-gray-900 mb-2">Book an Appointment</h2>
                         <p className="text-gray-600 mb-8">Fill out the form below and we'll get back to you shortly.</p>
 
@@ -101,7 +102,7 @@ export default function ContactPage() {
 
                             <Button size="lg" className="w-full h-14 text-base">Confirm Booking Request</Button>
                         </form>
-                    </div>
+                    </FadeIn>
 
                 </div>
             </div>

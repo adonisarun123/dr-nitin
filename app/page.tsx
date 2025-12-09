@@ -6,6 +6,7 @@ import { AboutTeaser } from "@/components/sections/about-teaser";
 import { Locations } from "@/components/sections/locations";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/data";
+import { FadeIn } from "@/components/animations/fade-in";
 
 export default function Home() {
   const physicianSchema = {
@@ -37,11 +38,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <JsonLd data={physicianSchema} />
       <Hero />
-      <Stats />
+      <FadeIn delay={0.2}><Stats /></FadeIn>
       <ServicesGrid />
-      <Testimonials />
-      <AboutTeaser />
-      <Locations />
+      <FadeIn delay={0.2}><Testimonials /></FadeIn>
+      <FadeIn delay={0.2}><AboutTeaser /></FadeIn>
+      <FadeIn delay={0.2}><Locations /></FadeIn>
     </main>
   );
 }
