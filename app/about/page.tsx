@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { PageHeader } from "@/components/ui/page-header";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Award, BookOpen, Heart } from "lucide-react";
@@ -17,9 +18,13 @@ export default function AboutPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-start">
                         <FadeIn direction="right" className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gray-100 border border-gray-200 shadow-xl">
-                            <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold text-2xl">
-                                Doctor Portrait
-                            </div>
+                            <Image
+                                src="/dr-nitin-hero.jpg"
+                                alt="Dr. Nitin N Sunku - Orthopaedic Surgeon"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
                         </FadeIn>
 
                         <FadeIn delay={0.2}>
@@ -80,6 +85,44 @@ export default function AboutPage() {
                                 <p className="text-gray-600">{value.desc}</p>
                             </FadeIn>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Certifications & Affiliations */}
+            <section className="py-16 lg:py-24">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <FadeIn className="text-center max-w-2xl mx-auto mb-16">
+                        <h2 className="text-3xl font-heading font-bold text-gray-900">Certifications & Affiliations</h2>
+                        <p className="mt-4 text-gray-600">Trained at premier institutions recognized for excellence in orthopedic care.</p>
+                    </FadeIn>
+
+                    <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                        <FadeIn delay={0.1} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col items-center justify-center text-center">
+                            <div className="relative w-48 h-48 mb-6">
+                                <Image
+                                    src="/bmcri-logo.png"
+                                    alt="Bangalore Medical College & Research Institute"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Bangalore Medical College & Research Institute</h3>
+                            <p className="text-gray-600">MS Orthopaedics</p>
+                        </FadeIn>
+
+                        <FadeIn delay={0.2} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col items-center justify-center text-center">
+                            <div className="relative w-48 h-48 mb-6">
+                                <Image
+                                    src="/sgito-logo.png"
+                                    alt="Sanjay Gandhi Institute of Trauma and Orthopaedics"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Sanjay Gandhi Institute of Trauma and Orthopaedics</h3>
+                            <p className="text-gray-600">Fellowship in Arthroscopy & Sports Medicine</p>
+                        </FadeIn>
                     </div>
                 </div>
             </section>
