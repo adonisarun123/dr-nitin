@@ -1,27 +1,66 @@
+import Image from "next/image";
 import { PageHeader } from "@/components/ui/page-header";
+import { FadeIn } from "@/components/animations/fade-in";
 
 export default function GalleryPage() {
-    // Placeholder structure for gallery images
-    const images = Array.from({ length: 6 }).map((_, i) => i);
+    const images = [
+        {
+            src: "/hsr-waiting-area.jpg",
+            alt: "HSR Layout Clinic - Waiting Area",
+            caption: "Spacious and comfortable waiting area at Health Nest Hospital, HSR Layout",
+            location: "HSR Layout"
+        },
+        {
+            src: "/hsr-reception.jpg",
+            alt: "HSR Layout Clinic - Reception",
+            caption: "Modern reception desk with welcoming ambiance",
+            location: "HSR Layout"
+        },
+        {
+            src: "/hsr-examination-room.jpg",
+            alt: "HSR Layout Clinic - Examination Room",
+            caption: "Well-equipped examination room with state-of-the-art facilities",
+            location: "HSR Layout"
+        },
+        {
+            src: "/hsr-consultation-room.jpg",
+            alt: "HSR Layout Clinic - Consultation Room",
+            caption: "Private consultation room for personalized patient care",
+            location: "HSR Layout"
+        }
+    ];
 
     return (
         <main className="min-h-screen pb-20">
             <PageHeader
                 title="Gallery"
-                description="A glimpse into our clinic, advanced facilities, and happy moments."
+                description="A glimpse into our clinic, advanced facilities, and patient-centered care environment."
             />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-                <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-                    {images.map((img) => (
-                        <div key={img} className="break-inside-avoid bg-gray-100 rounded-2xl overflow-hidden shadow-md">
-                            <div className={`w-full ${img % 2 === 0 ? 'aspect-video' : 'aspect-square'} bg-gray-200 flex items-center justify-center text-gray-400 font-medium`}>
-                                Gallery Image {img + 1}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {images.map((image, idx) => (
+                        <FadeIn key={idx} delay={idx * 0.1} className="group">
+                            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                                    <Image
+                                        src={image.src}
+                                        alt={image.alt}
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
+                                </div>
+                                <div className="p-6">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <span className="inline-block px-3 py-1 text-xs font-semibold text-primary bg-blue-50 rounded-full">
+                                            {image.location}
+                                        </span>
+                                    </div>
+                                    <p className="text-sm text-gray-700 leading-relaxed">{image.caption}</p>
+                                </div>
                             </div>
-                            <div className="p-4 bg-white">
-                                <p className="text-sm font-medium text-gray-900">Clinic / Surgery / Event Description</p>
-                            </div>
-                        </div>
+                        </FadeIn>
                     ))}
                 </div>
             </div>
