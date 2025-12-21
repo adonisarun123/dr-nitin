@@ -40,8 +40,17 @@ export default function ContactPage() {
                                         <MapPin className="h-6 w-6 text-primary" />
                                     </div>
                                     <div>
+                                        <strong className="block text-gray-900 mb-1">Attibele Clinic</strong>
+                                        <p className="text-gray-600">39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal, Bengaluru, Karnataka 562107</p>
+                                    </div>
+                                </li>
+                                <li className="flex items-start gap-4">
+                                    <div className="bg-blue-50 p-3 rounded-xl shrink-0">
+                                        <MapPin className="h-6 w-6 text-primary" />
+                                    </div>
+                                    <div>
                                         <strong className="block text-gray-900 mb-1">Health Nest Hospital</strong>
-                                        <p className="text-gray-600">1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102</p>
+                                        <p className="text-gray-600">Health Nest Hospital #1162, 23rd main, 24th Cross Rd, Sector 2, HSR Layout, Bengaluru, Karnataka 560102</p>
                                     </div>
                                 </li>
                                 <li className="flex items-center gap-4">

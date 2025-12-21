@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 
 const locations = [
     {
-        name: "Health Nest Hospital",
-        address: "1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
+        name: "Attibele Clinic",
+        address: "39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal, Bengaluru, Karnataka 562107",
         phone: "+91-9449031003",
         mapLink: "https://goo.gl/maps/placeholder", // Update with real link
     },
     {
-        name: "Raghava Multispeciality Hospital",
-        address: "HSR Layout, Bengaluru, Karnataka", // Detailed address needed
+        name: "Health Nest Hospital",
+        address: "Health Nest Hospital #1162, 23rd main, 24th Cross Rd, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
         phone: "+91-9449031003",
         mapLink: "https://goo.gl/maps/placeholder",
     }

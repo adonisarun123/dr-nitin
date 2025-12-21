@@ -45,7 +45,17 @@ export function Footer() {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
                                 <MapPin className="h-5 w-5 text-gray-500 shrink-0 mt-1" />
-                                <span>Health Nest Hospital, HSR Layout, Bengaluru</span>
+                                <div>
+                                    <p className="font-semibold text-white mb-1">Attibele Clinic</p>
+                                    <span className="text-sm">39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal, Bengaluru</span>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <MapPin className="h-5 w-5 text-gray-500 shrink-0 mt-1" />
+                                <div>
+                                    <p className="font-semibold text-white mb-1">Health Nest Hospital</p>
+                                    <span className="text-sm">HSR Layout, Bengaluru</span>
+                                </div>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="h-5 w-5 text-gray-500" />
