@@ -81,7 +81,7 @@ export const teamData = [
         role: "Orthopedic & Sports Medicine Specialist",
         qualifications: "MBBS, MS Ortho, Fellowship in Arthroscopy & Sports Medicine",
         bio: "Dr. Nitin is the lead consultant with over 7 years of specialized experience. He is the Team Doctor for Bengaluru FC and consults at top hospitals in Bangalore.",
-        image: "/doctor-placeholder.jpg"
+        image: "/dr-nitin-team.png"
     },
     {
         name: "Mr. Vijayan",
