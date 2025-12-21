@@ -2,7 +2,7 @@ import { Bone, Activity, HeartPulse, UserPlus, Stethoscope, Microscope } from "l
 
 export const siteConfig = {
     name: "Dr. Nitin Sunku",
-    description: "Orthopedic & Sports Medicine Specialist in HSR Layout, Bangalore",
+    description: "Orthopedic & Sports Medicine Specialist in Attibele & HSR Layout, Bangalore",
     address: "1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
     phone: "+91-9449031003",
     email: "contact@drnitinsunku.com",

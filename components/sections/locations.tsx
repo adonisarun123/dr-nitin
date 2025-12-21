@@ -22,7 +22,7 @@ export function Locations() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-heading font-bold text-gray-900">Visit Us</h2>
-                    <p className="mt-4 text-gray-600">Consult Dr. Nitin at these convenient locations in HSR Layout.</p>
+                    <p className="mt-4 text-gray-600">Consult Dr. Nitin at these convenient locations in Attibele & HSR Layout.</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
