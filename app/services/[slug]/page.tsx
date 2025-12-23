@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { servicesData } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone, ArrowLeft } from "lucide-react";
@@ -51,7 +52,13 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     </Link>
                     <div className="max-w-4xl">
                         <div className={`inline-flex items-center justify-center p-3 rounded-2xl ${service.color} mb-6`}>
-                            <service.icon className="h-8 w-8" />
+                            <Image
+                                src={service.icon}
+                                alt={service.title}
+                                width={32}
+                                height={32}
+                                className="object-contain"
+                            />
                         </div>
                         <h1 className="text-4xl lg:text-5xl font-heading font-bold text-gray-900 mb-6">{service.title}</h1>
                         <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">{service.shortDesc}</p>

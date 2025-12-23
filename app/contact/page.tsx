@@ -40,7 +40,7 @@ export default function ContactPage() {
                                         <MapPin className="h-6 w-6 text-primary" />
                                     </div>
                                     <div>
-                                        <strong className="block text-gray-900 mb-1">Attibele Clinic</strong>
+                                        <strong className="block text-gray-900 mb-1">Raghava Multispeciality Hospital</strong>
                                         <p className="text-gray-600">39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal, Bengaluru, Karnataka 562107</p>
                                     </div>
                                 </li>

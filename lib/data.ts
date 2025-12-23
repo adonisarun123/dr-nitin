@@ -1,8 +1,6 @@
-import { Bone, Activity, HeartPulse, UserPlus, Stethoscope, Microscope } from "lucide-react";
-
 export const siteConfig = {
     name: "Dr. Nitin Sunku",
-    description: "Orthopedic & Sports Medicine Specialist in Attibele & HSR Layout, Bangalore",
+    description: "Orthopedic & Sports Medicine Specialist in HSR Layout, Bangalore",
     address: "1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
     phone: "+91-9449031003",
     email: "contact@drnitinsunku.com",
@@ -14,7 +12,7 @@ export const servicesData = [
         title: "ACL Care",
         shortDesc: "Expert diagnosis and arthroscopic reconstruction for ACL tears.",
         fullDesc: "The Anterior Cruciate Ligament (ACL) is crucial for knee stability. Dr. Nitin specializes in arthroscopic ACL reconstruction, ensuring a safe return to sports and daily activities.",
-        icon: Activity,
+        icon: "/icons/acl.png",
         color: "bg-blue-50 text-blue-600",
     },
     {
@@ -22,7 +20,7 @@ export const servicesData = [
         title: "Meniscal Care",
         shortDesc: "Minimally invasive treatment for meniscus tears used in sports.",
         fullDesc: "Meniscus tears are common in athletes. We offer meniscus repair and partial meniscectomy using advanced arthroscopic techniques to preserve the knee joint.",
-        icon: Bone,
+        icon: "/icons/meniscal-care.png",
         color: "bg-indigo-50 text-indigo-600",
     },
     {
@@ -30,7 +28,7 @@ export const servicesData = [
         title: "Sports Medicine",
         shortDesc: "Comprehensive care for sports-related injuries and rehabilitation.",
         fullDesc: "From sprains to complex ligament injuries, our sports medicine program is designed to get athletes back in the game with personalized treatment plans.",
-        icon: HeartPulse,
+        icon: "/icons/sports-medicine.png",
         color: "bg-green-50 text-green-600",
     },
     {
@@ -38,7 +36,7 @@ export const servicesData = [
         title: "Knee Replacement",
         shortDesc: "Total and partial knee replacement surgeries for chronic pain.",
         fullDesc: "For severe arthritis, knee replacement surgery can restore mobility and eliminate pain. Dr. Nitin uses the latest implants and techniques for long-lasting results.",
-        icon: UserPlus,
+        icon: "/icons/knee-replacement.png",
         color: "bg-orange-50 text-orange-600",
     },
     {
@@ -46,7 +44,7 @@ export const servicesData = [
         title: "Hip Replacement",
         shortDesc: "Advanced hip replacement techniques for mobility restoration.",
         fullDesc: "Hip replacement surgery helps patients suffering from hip arthritis or fractures regain their quality of life with reduced pain and improved function.",
-        icon: Bone,
+        icon: "/icons/hip-replacement.png",
         color: "bg-purple-50 text-purple-600",
     },
     {
@@ -54,7 +52,7 @@ export const servicesData = [
         title: "Shoulder Care",
         shortDesc: "Treatment for rotator cuff tears, dislocations, and frozen shoulder.",
         fullDesc: "Shoulder pain can be debilitating. We treat rotator cuff tears, shoulder instability, and frozen shoulder with both conservative and surgical options.",
-        icon: Stethoscope,
+        icon: "/icons/shoulder-care.png",
         color: "bg-cyan-50 text-cyan-600",
     },
     {
@@ -62,7 +60,7 @@ export const servicesData = [
         title: "Bone Fracture",
         shortDesc: "Emergency collision and trauma care for all types of fractures.",
         fullDesc: "Rapid and precise treatment for fractures ensuring proper alignment and healing.",
-        icon: Microscope,
+        icon: "/icons/broken-bone.png",
         color: "bg-red-50 text-red-600",
     },
     {
@@ -70,7 +68,7 @@ export const servicesData = [
         title: "Spine Care",
         shortDesc: "Diagnosis and management of back pain and spinal disorders.",
         fullDesc: "Comprehensive evaluation and non-surgical/surgical management of spinal conditions.",
-        icon: Activity,
+        icon: "/icons/spinal-care.png",
         color: "bg-emerald-50 text-emerald-600",
     },
 ];
@@ -81,14 +79,14 @@ export const teamData = [
         role: "Orthopedic & Sports Medicine Specialist",
         qualifications: "MBBS, MS Ortho, Fellowship in Arthroscopy & Sports Medicine",
         bio: "Dr. Nitin is the lead consultant with over 7 years of specialized experience. He is the Team Doctor for Bengaluru FC and consults at top hospitals in Bangalore.",
-        image: "/dr-nitin-team.png"
+        image: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin.png"
     },
     {
         name: "Mr. Vijayan",
         role: "Senior Physiotherapist",
         qualifications: "BPTh/BPT, MPTh/MPT (Musculoskeletal)",
         bio: "Mr. Vijayan specializes in post-operative rehabilitation and sports injury recovery, ensuring patients regain full function quickly.",
-        image: "/physio-placeholder.jpg"
+        image: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/mr-vijayan-physiotherapist.png"
     }
 ];
 

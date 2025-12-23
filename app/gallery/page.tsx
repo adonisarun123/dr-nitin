@@ -27,6 +27,36 @@ export default function GalleryPage() {
             alt: "HSR Layout Clinic - Consultation Room",
             caption: "Private consultation room for personalized patient care",
             location: "HSR Layout"
+        },
+        {
+            src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/surgery-2.png",
+            alt: "Surgical Procedure",
+            caption: "Advanced arthroscopic surgery being performed with precision",
+            location: "Surgery"
+        },
+        {
+            src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/health-nest-hospital.png",
+            alt: "Health Nest Hospital",
+            caption: "Health Nest Hospital, HSR Layout - Our state-of-the-art facility",
+            location: "HSR Layout"
+        },
+        {
+            src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/surgery-1.png",
+            alt: "Surgical Procedure",
+            caption: "Minimally invasive arthroscopic procedure in progress",
+            location: "Surgery"
+        },
+        {
+            src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/surgery.png",
+            alt: "Surgical Team",
+            caption: "Expert surgical team performing orthopedic procedure",
+            location: "Surgery"
+        },
+        {
+            src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-sunil-chhetri.png",
+            alt: "Dr. Nitin with Sunil Chhetri",
+            caption: "Dr. Nitin with Indian football captain Sunil Chhetri - Team Doctor for Bengaluru FC",
+            location: "Bengaluru FC"
         }
     ];
 

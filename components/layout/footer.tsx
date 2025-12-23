@@ -46,7 +46,7 @@ export function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin className="h-5 w-5 text-gray-500 shrink-0 mt-1" />
                                 <div>
-                                    <p className="font-semibold text-white mb-1">Attibele Clinic</p>
+                                    <p className="font-semibold text-white mb-1">Raghava Multispeciality Hospital</p>
                                     <span className="text-sm">39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal, Bengaluru</span>
                                 </div>
                             </li>

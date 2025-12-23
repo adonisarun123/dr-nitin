@@ -32,7 +32,7 @@ export function Hero() {
 
                         <FadeIn delay={0.3}>
                             <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
-                                Top-rated orthopedic surgeon in Attibele & HSR Layout, specializing in arthroscopy, sports injuries, joint replacement, and compassionate, evidence-based care.
+                                Top-rated orthopedic surgeon in HSR Layout, specializing in arthroscopy, sports injuries, joint replacement, and compassionate, evidence-based care.
                             </p>
                         </FadeIn>
 
@@ -50,7 +50,7 @@ export function Hero() {
                         <FadeIn delay={0.5}>
                             <div className="flex items-center gap-2 mt-4 text-sm font-medium text-gray-700">
                                 <span className="text-yellow-500 text-lg">⭐⭐⭐⭐⭐</span>
-                                <span>5/5 · Top-rated orthopedic doctor in Attibele & HSR Layout</span>
+                                <span>5/5 · Top-rated orthopedic doctor in HSR Layout</span>
                             </div>
                         </FadeIn>
                     </div>
@@ -59,7 +59,7 @@ export function Hero() {
                         {/* Image Placeholder */}
                         <div className="relative w-full h-full max-h-[500px] lg:max-h-full bg-blue-100 rounded-3xl overflow-hidden shadow-2xl border-4 border-white z-10">
                             <Image
-                                src="/dr-nitin-hero.jpg"
+                                src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin.png"
                                 alt="Dr. Nitin N Sunku"
                                 fill
                                 className="object-cover object-top"
