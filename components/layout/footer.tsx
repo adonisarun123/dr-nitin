@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Twitter, MapPin, Phone, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
     return (
@@ -12,10 +12,10 @@ export function Footer() {
                             Expert orthopedic care specializing in arthroscopy, sports injuries, and joint replacements. Restoring mobility, empowering lives.
                         </p>
                         <div className="flex gap-4">
-                            <Link href="#" className="hover:text-white transition-colors"><Instagram className="h-5 w-5" /></Link>
-                            <Link href="#" className="hover:text-white transition-colors"><Facebook className="h-5 w-5" /></Link>
-                            <Link href="#" className="hover:text-white transition-colors"><Linkedin className="h-5 w-5" /></Link>
-                            <Link href="#" className="hover:text-white transition-colors"><Twitter className="h-5 w-5" /></Link>
+                            <Link href="https://www.instagram.com/dr.nitinsunku" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Instagram className="h-5 w-5" /></Link>
+                            <Link href="https://www.facebook.com/share/18zdyd1tuD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Facebook className="h-5 w-5" /></Link>
+                            <Link href="https://www.linkedin.com/in/dr-nitin-sunku-0b0170204" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Linkedin className="h-5 w-5" /></Link>
+                            <Link href="https://www.youtube.com/@dr.nitinsunkuorthopedicsurgeon" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Youtube className="h-5 w-5" /></Link>
                         </div>
                     </div>
 
@@ -48,13 +48,15 @@ export function Footer() {
                                 <div>
                                     <p className="font-semibold text-white mb-1">Raghava Multispeciality Hospital</p>
                                     <span className="text-sm">39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal, Bengaluru</span>
+                                    <p className="text-sm mt-1">📞 +91-9980031006</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <MapPin className="h-5 w-5 text-gray-500 shrink-0 mt-1" />
                                 <div>
                                     <p className="font-semibold text-white mb-1">Health Nest Hospital</p>
-                                    <span className="text-sm">HSR Layout, Bengaluru</span>
+                                    <span className="text-sm">1162, 24th Main Rd Sector 2, HSR Layout, Bengaluru</span>
+                                    <p className="text-sm mt-1">📞 +91-9449031003</p>
                                 </div>
                             </li>
                             <li className="flex items-center gap-3">

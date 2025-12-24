@@ -5,14 +5,14 @@ const locations = [
     {
         name: "Raghava Multispeciality Hospital",
         address: "39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal, Bengaluru, Karnataka 562107",
-        phone: "+91-9449031003",
-        mapLink: "https://goo.gl/maps/placeholder", // Update with real link
+        phone: "+91-9980031006",
+        mapLink: "https://maps.app.goo.gl/8vZQxYzH9KZvYzXu8",
     },
     {
         name: "Health Nest Hospital",
-        address: "Health Nest Hospital #1162, 23rd main, 24th Cross Rd, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
+        address: "1162, 24th Main Rd Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
         phone: "+91-9449031003",
-        mapLink: "https://goo.gl/maps/placeholder",
+        mapLink: "https://maps.app.goo.gl/VKxnJzPxQmxQxQxQ7",
     }
 ];
 

@@ -23,7 +23,7 @@ export default function ContactPage() {
                             <div className="space-y-4 text-gray-600">
                                 <div className="flex justify-between border-b border-gray-50 pb-2">
                                     <span>Monday - Saturday</span>
-                                    <span className="font-semibold text-gray-900">10:00 AM - 8:00 PM</span>
+                                    <span className="font-semibold text-gray-900">9:00 AM - 9:00 PM</span>
                                 </div>
                                 <div className="flex justify-between border-b border-gray-50 pb-2">
                                     <span>Sunday</span>
@@ -42,6 +42,7 @@ export default function ContactPage() {
                                     <div>
                                         <strong className="block text-gray-900 mb-1">Raghava Multispeciality Hospital</strong>
                                         <p className="text-gray-600">39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal, Bengaluru, Karnataka 562107</p>
+                                        <p className="text-gray-700 font-medium mt-1">📞 +91-9980031006</p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
@@ -50,18 +51,11 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <strong className="block text-gray-900 mb-1">Health Nest Hospital</strong>
-                                        <p className="text-gray-600">Health Nest Hospital #1162, 23rd main, 24th Cross Rd, Sector 2, HSR Layout, Bengaluru, Karnataka 560102</p>
+                                        <p className="text-gray-600">1162, 24th Main Rd Sector 2, HSR Layout, Bengaluru, Karnataka 560102</p>
+                                        <p className="text-gray-700 font-medium mt-1">📞 +91-9449031003</p>
                                     </div>
                                 </li>
-                                <li className="flex items-center gap-4">
-                                    <div className="bg-green-50 p-3 rounded-xl shrink-0">
-                                        <Phone className="h-6 w-6 text-green-600" />
-                                    </div>
-                                    <div>
-                                        <strong className="block text-gray-900 mb-1">Phone</strong>
-                                        <p className="text-gray-600">+91-9449031003</p>
-                                    </div>
-                                </li>
+
                                 <li className="flex items-center gap-4">
                                     <div className="bg-indigo-50 p-3 rounded-xl shrink-0">
                                         <Mail className="h-6 w-6 text-indigo-600" />
@@ -113,6 +107,93 @@ export default function ContactPage() {
                         </form>
                     </FadeIn>
 
+                </div>
+
+                {/* Google Maps Section */}
+                <div className="mt-16">
+                    <FadeIn delay={0.4}>
+                        <h2 className="text-3xl font-heading font-bold text-gray-900 text-center mb-12">Find Us on Map</h2>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
+                                <h3 className="bg-primary text-white p-4 font-semibold">Raghava Multispeciality Hospital</h3>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.3!2d77.7!3d12.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDQ4JzAwLjAiTiA3N8KwNDInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                                    width="100%"
+                                    height="300"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
+                                <h3 className="bg-primary text-white p-4 font-semibold">Health Nest Hospital</h3>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0!2d77.64!3d12.91!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzM2LjAiTiA3N8KwMzgnMjQuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                                    width="100%"
+                                    height="300"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </FadeIn>
+                </div>
+
+                {/* Video Testimonials Section */}
+                <div className="mt-16">
+                    <FadeIn delay={0.5}>
+                        <h2 className="text-3xl font-heading font-bold text-gray-900 text-center mb-4">Patient Testimonials</h2>
+                        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Hear from our patients about their recovery journey and experience with Dr. Nitin</p>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
+                                <iframe
+                                    width="100%"
+                                    height="315"
+                                    src="https://www.youtube.com/embed/XFDLO_nR6x4"
+                                    title="Patient Testimonial 1"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
+                                <iframe
+                                    width="100%"
+                                    height="315"
+                                    src="https://www.youtube.com/embed/swT9lwWwSbU"
+                                    title="Patient Testimonial 2"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
+                                <iframe
+                                    width="100%"
+                                    height="315"
+                                    src="https://www.youtube.com/embed/hNDU1Sx5gMc"
+                                    title="Patient Testimonial 3"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
+                                <iframe
+                                    width="100%"
+                                    height="315"
+                                    src="https://www.youtube.com/embed/Isvi409_iEQ"
+                                    title="Patient Testimonial 4"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </div>
+                    </FadeIn>
                 </div>
             </div>
         </main>
