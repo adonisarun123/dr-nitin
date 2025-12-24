@@ -37,15 +37,11 @@ export function Header() {
                     {/* Logo */}
                     <div className="flex lg:flex-1">
                         <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
-                            <div className="bg-gradient-to-br from-blue-600 to-teal-500 p-2 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                                <Stethoscope className="h-6 w-6 text-white" />
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-xl font-heading font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                                    Dr. Nitin Sunku
-                                </span>
-                                <span className="text-xs text-gray-600 font-medium">Orthopedic & Sports Medicine</span>
-                            </div>
+                            <img
+                                src="/dr-nitin-sunku-logo.svg"
+                                alt="Dr. Nitin Sunku - Orthopedic & Sports Medicine Specialist"
+                                className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
+                            />
                         </Link>
                     </div>
 
