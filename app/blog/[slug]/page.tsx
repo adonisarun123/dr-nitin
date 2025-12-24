@@ -112,12 +112,25 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
 
                     {/* Main Article Content */}
                     <article className="flex-grow max-w-3xl">
-                        <FadeIn delay={0.2} className="prose prose-lg prose-slate prose-headings:font-heading prose-headings:font-bold prose-a:text-primary hover:prose-a:text-blue-700 prose-img:rounded-3xl">
+                        <FadeIn delay={0.2} className="prose prose-lg md:prose-xl prose-slate max-w-none
+                            prose-headings:font-heading prose-headings:font-bold prose-headings:text-gray-900
+                            prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight
+                            prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
+                            prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-lg
+                            prose-a:text-primary prose-a:no-underline hover:prose-a:text-blue-700 hover:prose-a:underline
+                            prose-strong:text-gray-900 prose-strong:font-semibold
+                            prose-ul:my-6 prose-ul:space-y-3
+                            prose-ol:my-6 prose-ol:space-y-3
+                            prose-li:text-gray-700 prose-li:leading-relaxed prose-li:text-lg
+                            prose-li:marker:text-primary
+                            prose-img:rounded-3xl prose-img:shadow-lg
+                            prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-600
+                        ">
                             <p className="lead text-xl md:text-2xl text-slate-600 mb-10 font-medium leading-relaxed border-l-4 border-primary pl-6 italic">
                                 {post.excerpt}
                             </p>
 
-                            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                            <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.content }} />
                         </FadeIn>
 
                         {/* Author Bio */}
