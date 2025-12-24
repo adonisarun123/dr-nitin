@@ -1,0 +1,119 @@
+/* Blog Content Styling */
+.blog-content {
+  @apply text-gray-700 leading-relaxed;
+}
+
+/* Headings */
+.blog-content h2 {
+  @apply text-3xl font-heading font-bold text-gray-900 mt-12 mb-6 leading-tight;
+}
+
+.blog-content h3 {
+  @apply text-2xl font-heading font-bold text-gray-900 mt-8 mb-4 leading-snug;
+}
+
+.blog-content h4 {
+  @apply text-xl font-heading font-semibold text-gray-800 mt-6 mb-3;
+}
+
+/* Paragraphs */
+.blog-content p {
+  @apply text-lg text-gray-700 leading-relaxed mb-6;
+}
+
+/* Lists */
+.blog-content ul {
+  @apply my-6 space-y-3 list-none;
+}
+
+.blog-content ol {
+  @apply my-6 space-y-3 list-decimal list-inside;
+}
+
+.blog-content li {
+  @apply text-lg text-gray-700 leading-relaxed pl-6 relative;
+}
+
+.blog-content ul li::before {
+  content: "•";
+  @apply absolute left-0 text-primary font-bold text-xl;
+}
+
+.blog-content ol li {
+  @apply pl-2;
+}
+
+/* Strong/Bold text */
+.blog-content strong {
+  @apply font-semibold text-gray-900;
+}
+
+/* Links */
+.blog-content a {
+  @apply text-primary no-underline hover:text-blue-700 hover:underline transition-colors;
+}
+
+/* Blockquotes */
+.blog-content blockquote {
+  @apply border-l-4 border-primary pl-6 italic text-gray-600 my-6;
+}
+
+/* Code blocks */
+.blog-content code {
+  @apply bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800;
+}
+
+.blog-content pre {
+  @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-6;
+}
+
+.blog-content pre code {
+  @apply bg-transparent p-0 text-gray-100;
+}
+
+/* Images */
+.blog-content img {
+  @apply rounded-3xl shadow-lg my-8;
+}
+
+/* Horizontal rules */
+.blog-content hr {
+  @apply my-12 border-gray-200;
+}
+
+/* Tables */
+.blog-content table {
+  @apply w-full my-8 border-collapse;
+}
+
+.blog-content th {
+  @apply bg-gray-100 font-semibold text-left p-3 border-b-2 border-gray-300;
+}
+
+.blog-content td {
+  @apply p-3 border-b border-gray-200;
+}
+
+/* Nested lists */
+.blog-content ul ul,
+.blog-content ol ul,
+.blog-content ul ol,
+.blog-content ol ol {
+  @apply mt-3 mb-3;
+}
+
+/* First paragraph after heading */
+.blog-content h2 + p,
+.blog-content h3 + p {
+  @apply mt-0;
+}
+
+/* Remove top margin from first element */
+.blog-content > *:first-child {
+  @apply mt-0;
+}
+
+/* Remove bottom margin from last element */
+.blog-content > *:last-child {
+  @apply mb-0;
+}
