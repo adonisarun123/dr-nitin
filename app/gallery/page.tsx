@@ -29,28 +29,10 @@ export default function GalleryPage() {
             location: "HSR Layout"
         },
         {
-            src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/surgery-2.png",
-            alt: "Spine Surgery Procedure",
-            caption: "Advanced arthroscopic spine surgery being performed with precision",
-            location: "Spine Surgery"
-        },
-        {
             src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/health-nest-hospital.png",
             alt: "Health Nest Hospital",
             caption: "Health Nest Hospital, HSR Layout - Our state-of-the-art facility",
             location: "HSR Layout"
-        },
-        {
-            src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/surgery-1.png",
-            alt: "Spine Surgery Procedure",
-            caption: "Minimally invasive arthroscopic spine procedure in progress",
-            location: "Spine Surgery"
-        },
-        {
-            src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/surgery.png",
-            alt: "Spine Surgery Team",
-            caption: "Expert surgical team performing spine surgery procedure",
-            location: "Spine Surgery"
         },
         {
             src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-sunil-chhetri.png",

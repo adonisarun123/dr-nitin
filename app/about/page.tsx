@@ -166,41 +166,151 @@ export default function AboutPage() {
             </section>
 
             {/* Certifications & Affiliations */}
-            <section className="py-16 lg:py-24">
+            <section className="py-16 lg:py-24 overflow-hidden">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <FadeIn className="text-center max-w-2xl mx-auto mb-16">
                         <h2 className="text-3xl font-heading font-bold text-gray-900">Certifications & Affiliations</h2>
                         <p className="mt-4 text-gray-600">Trained at premier institutions recognized for excellence in orthopedic care.</p>
                     </FadeIn>
 
-                    <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-                        <FadeIn delay={0.1} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col items-center justify-center text-center">
-                            <div className="relative w-48 h-48 mb-6">
-                                <Image
-                                    src="/bmcri-logo.png"
-                                    alt="Bangalore Medical College & Research Institute"
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Bangalore Medical College & Research Institute</h3>
-                            <p className="text-gray-600">MS Orthopaedics</p>
-                        </FadeIn>
+                    {/* Auto-scrolling logos */}
+                    <div className="relative">
+                        <div className="flex overflow-hidden">
+                            <div className="flex animate-scroll">
+                                {/* First set of logos */}
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="/bmcri-logo.png"
+                                        alt="Bangalore Medical College & Research Institute"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="/sgito-logo.png"
+                                        alt="Sanjay Gandhi Institute of Trauma and Orthopaedics"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/bengaluru-football-logo.webp?updatedAt=1766657804981"
+                                        alt="Bengaluru Football Club"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/ISAKOS-logo.png"
+                                        alt="ISAKOS"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/ao-trauma-logo.png"
+                                        alt="AO Trauma"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/ISKSAA-logo.png"
+                                        alt="ISKSAA"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
 
-                        <FadeIn delay={0.2} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col items-center justify-center text-center">
-                            <div className="relative w-48 h-48 mb-6">
-                                <Image
-                                    src="/sgito-logo.png"
-                                    alt="Sanjay Gandhi Institute of Trauma and Orthopaedics"
-                                    fill
-                                    className="object-contain"
-                                />
+                                {/* Duplicate set for seamless loop */}
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="/bmcri-logo.png"
+                                        alt="Bangalore Medical College & Research Institute"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="/sgito-logo.png"
+                                        alt="Sanjay Gandhi Institute of Trauma and Orthopaedics"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/bengaluru-football-logo.webp?updatedAt=1766657804981"
+                                        alt="Bengaluru Football Club"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/ISAKOS-logo.png"
+                                        alt="ISAKOS"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/ao-trauma-logo.png"
+                                        alt="AO Trauma"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/ISKSAA-logo.png"
+                                        alt="ISKSAA"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Sanjay Gandhi Institute of Trauma and Orthopaedics</h3>
-                            <p className="text-gray-600">Fellowship in Arthroscopy & Sports Medicine</p>
-                        </FadeIn>
+                        </div>
                     </div>
                 </div>
+
+                <style jsx>{`
+                    @keyframes scroll {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        100% {
+                            transform: translateX(-50%);
+                        }
+                    }
+                    
+                    .animate-scroll {
+                        animation: scroll 30s linear infinite;
+                    }
+                    
+                    .animate-scroll:hover {
+                        animation-play-state: paused;
+                    }
+                `}</style>
             </section>
         </main>
     );
