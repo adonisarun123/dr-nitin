@@ -3,6 +3,8 @@ import { BookingForm } from "@/components/forms/booking-form";
 import { Phone, MapPin, Clock, Award, Heart, Users, CheckCircle } from "lucide-react";
 import { siteConfig } from "@/lib/data";
 import { HideNavigation } from "@/components/ui/hide-navigation";
+import { LandingPageTracker } from "@/components/analytics/landing-page-tracker";
+import { TrackedButton } from "@/components/analytics/tracked-button";
 
 export const metadata: Metadata = {
     title: "Book Appointment - Best Orthopaedic Doctor in HSR Layout & Attibele | Dr. Nitin Sunku",
@@ -78,6 +80,7 @@ export default function BookAppointmentPage() {
     return (
         <main className="min-h-screen">
             <HideNavigation />
+            <LandingPageTracker />
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 text-blue-900 py-16 md:py-24 overflow-hidden border-b-4 border-blue-600">
                 <div className="absolute inset-0 bg-[url('/patterns/medical-pattern.svg')] opacity-5"></div>
@@ -111,19 +114,25 @@ export default function BookAppointmentPage() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <a
+                            <TrackedButton
+                                buttonName="Call Now - Hero"
+                                buttonLocation="Hero Section"
                                 href="tel:+919449031003"
                                 className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
+                                metadata={{ phone_number: "+91-9449031003", cta_type: "phone" }}
                             >
                                 <Phone className="w-5 h-5" />
                                 Call Now: +91-9449031003
-                            </a>
-                            <a
+                            </TrackedButton>
+                            <TrackedButton
+                                buttonName="Book Appointment - Hero"
+                                buttonLocation="Hero Section"
                                 href="#booking-form"
                                 className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
+                                metadata={{ cta_type: "form_scroll" }}
                             >
                                 Book Appointment Online
-                            </a>
+                            </TrackedButton>
                         </div>
                     </div>
                 </div>
@@ -290,19 +299,25 @@ export default function BookAppointmentPage() {
                         Don't let orthopaedic problems hold you back. Book your consultation today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
+                        <TrackedButton
+                            buttonName="Book Appointment - Final CTA"
+                            buttonLocation="Final CTA Section"
                             href="#booking-form"
                             className="inline-flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
+                            metadata={{ cta_type: "form_scroll" }}
                         >
                             Book Appointment Now
-                        </a>
-                        <a
+                        </TrackedButton>
+                        <TrackedButton
+                            buttonName="Call Now - Final CTA"
+                            buttonLocation="Final CTA Section"
                             href="tel:+919449031003"
                             className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
+                            metadata={{ phone_number: "+91-9449031003", cta_type: "phone" }}
                         >
                             <Phone className="w-5 h-5" />
                             Call +91-9449031003
-                        </a>
+                        </TrackedButton>
                     </div>
                 </div>
             </section>

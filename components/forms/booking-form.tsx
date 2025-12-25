@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
+import { trackFormEvent, getUTMParameters } from "@/lib/analytics";
 
 interface BookingFormProps {
     source?: string;
@@ -21,6 +22,28 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [error, setError] = useState("");
+    const formStarted = useRef(false);
+    const fieldsInteracted = useRef<Set<string>>(new Set());
+
+    // Track form start on first field focus
+    const handleFieldFocus = (fieldName: string) => {
+        if (!formStarted.current) {
+            formStarted.current = true;
+            trackFormEvent('booking_form', 'start', {
+                source,
+                utm_params: getUTMParameters(),
+            });
+        }
+
+        // Track field interaction
+        if (!fieldsInteracted.current.has(fieldName)) {
+            fieldsInteracted.current.add(fieldName);
+            trackFormEvent('booking_form', 'field_interaction', {
+                field_name: fieldName,
+                source,
+            });
+        }
+    };
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -48,10 +71,26 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
             // For now, we'll simulate the submission
             console.log("Form submitted:", submissionData);
 
+            // Track form submission
+            trackFormEvent('booking_form', 'submit', {
+                source,
+                condition: formData.condition,
+                location: formData.preferredLocation,
+                utm_params: getUTMParameters(),
+            });
+
             // Simulate API call
             await new Promise((resolve) => setTimeout(resolve, 1500));
 
             setIsSuccess(true);
+
+            // Track successful submission
+            trackFormEvent('booking_form', 'success', {
+                source,
+                condition: formData.condition,
+                location: formData.preferredLocation,
+                utm_params: getUTMParameters(),
+            });
 
             // Reset form after 3 seconds
             setTimeout(() => {
@@ -65,10 +104,19 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     message: "",
                 });
                 setIsSuccess(false);
+                formStarted.current = false;
+                fieldsInteracted.current.clear();
             }, 3000);
         } catch (err) {
             setError("Something went wrong. Please try again or call us directly.");
             console.error("Form submission error:", err);
+
+            // Track form error
+            trackFormEvent('booking_form', 'error', {
+                source,
+                error_message: err instanceof Error ? err.message : 'Unknown error',
+                utm_params: getUTMParameters(),
+            });
         } finally {
             setIsSubmitting(false);
         }
@@ -107,6 +155,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     required
                     value={formData.name}
                     onChange={handleChange}
+                    onFocus={() => handleFieldFocus('name')}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none"
                     placeholder="Enter your full name"
                 />
@@ -124,6 +173,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     required
                     value={formData.phone}
                     onChange={handleChange}
+                    onFocus={() => handleFieldFocus('phone')}
                     pattern="[0-9]{10}"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none"
                     placeholder="10-digit mobile number"
@@ -141,6 +191,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    onFocus={() => handleFieldFocus('email')}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none"
                     placeholder="your.email@example.com"
                 />
@@ -157,6 +208,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     required
                     value={formData.condition}
                     onChange={handleChange}
+                    onFocus={() => handleFieldFocus('condition')}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none bg-white"
                 >
                     <option value="">Select your condition</option>
@@ -183,6 +235,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     required
                     value={formData.preferredLocation}
                     onChange={handleChange}
+                    onFocus={() => handleFieldFocus('preferredLocation')}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none bg-white"
                 >
                     <option value="">Select location</option>
@@ -202,6 +255,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     name="preferredDate"
                     value={formData.preferredDate}
                     onChange={handleChange}
+                    onFocus={() => handleFieldFocus('preferredDate')}
                     min={new Date().toISOString().split("T")[0]}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none"
                 />
@@ -217,6 +271,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                    onFocus={() => handleFieldFocus('message')}
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none resize-none"
                     placeholder="Tell us more about your condition or any specific concerns..."
