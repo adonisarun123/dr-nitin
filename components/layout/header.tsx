@@ -29,7 +29,7 @@ export function Header() {
 
     return (
         <>
-            <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-white/95 via-white/90 to-blue-50/30 backdrop-blur-lg shadow-md border-b border-gray-200/50">
+            <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 backdrop-blur-lg shadow-lg border-b border-blue-900/50">
                 <nav
                     className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
                     aria-label="Global"
@@ -49,7 +49,7 @@ export function Header() {
                     <div className="flex lg:hidden">
                         <button
                             type="button"
-                            className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-gray-700 hover:bg-gray-100 transition-colors"
+                            className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-white hover:bg-blue-700 transition-colors"
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="sr-only">Open main menu</span>
@@ -66,14 +66,14 @@ export function Header() {
                                 className={cn(
                                     "relative px-3 py-2 text-sm font-semibold transition-all duration-200 rounded-lg group",
                                     isActive(item.href)
-                                        ? "text-primary"
-                                        : "text-gray-700 hover:text-primary hover:bg-blue-50/50"
+                                        ? "text-white bg-blue-800"
+                                        : "text-blue-100 hover:text-white hover:bg-blue-700"
                                 )}
                             >
                                 {item.name}
                                 <span
                                     className={cn(
-                                        "absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-blue-600 to-teal-500 transition-all duration-300",
+                                        "absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 transition-all duration-300",
                                         isActive(item.href)
                                             ? "w-3/4"
                                             : "w-0 group-hover:w-3/4"
@@ -87,12 +87,12 @@ export function Header() {
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center gap-3">
                         <a
                             href="tel:+919449031003"
-                            className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-gray-700 hover:text-primary transition-colors rounded-lg hover:bg-blue-50/50 whitespace-nowrap"
+                            className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-blue-100 hover:text-white transition-colors rounded-lg hover:bg-blue-700 whitespace-nowrap"
                         >
                             <Phone className="h-4 w-4" />
                             <span>+91-9449031003</span>
                         </a>
-                        <Button asChild className="shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300">
+                        <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300">
                             <Link href="/contact">Book Appointment</Link>
                         </Button>
                     </div>
