@@ -1,4 +1,4 @@
-import { LeadInput } from '../types/lead';
+import { LeadInput } from '@/lib/types/lead';
 
 export function generateLeadNotificationEmail(lead: LeadInput): { html: string; text: string } {
     const formattedDate = lead.preferredDate
