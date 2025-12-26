@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { PageHeader } from "@/components/ui/page-header";
 import { blogPosts } from "@/lib/data";
 import { ArrowRight, Calendar } from "lucide-react";
@@ -15,8 +16,13 @@ export default function BlogPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts.map((post) => (
                         <article key={post.slug} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-shadow flex flex-col h-full">
-                            <div className="aspect-video bg-gray-100 w-full flex items-center justify-center text-gray-400 font-medium">
-                                Post Cover Image
+                            <div className="aspect-video relative w-full overflow-hidden">
+                                <Image
+                                    src="/blog_image.jpg"
+                                    alt={post.title}
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
                             <div className="p-6 flex flex-col flex-grow">
                                 <div className="flex items-center gap-4 text-xs text-gray-500 mb-3">

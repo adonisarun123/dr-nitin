@@ -55,21 +55,41 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
+        console.log('🔵 Form submit triggered');
         e.preventDefault();
+        console.log('🔵 Default prevented');
         setIsSubmitting(true);
         setError("");
 
         try {
+            console.log('🔵 Starting submission...');
             // Add source suffix to identify leads from ads
             const submissionData = {
                 ...formData,
                 source: source === "ads" ? "google-meta-ads" : source,
                 submittedAt: new Date().toISOString(),
+                utm_params: getUTMParameters(),
             };
 
-            // Here you would typically send to your backend/CRM
-            // For now, we'll simulate the submission
-            console.log("Form submitted:", submissionData);
+            console.log('🔵 Submission data prepared:', { ...submissionData, phone: '***', email: '***' });
+
+            // Send to API endpoint
+            console.log('🔵 Calling API...');
+            const response = await fetch('/api/leads', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(submissionData),
+            });
+
+            console.log('🔵 API response status:', response.status);
+            const result = await response.json();
+            console.log('🔵 API result:', result);
+
+            if (!response.ok || !result.success) {
+                throw new Error(result.message || 'Failed to submit form');
+            }
 
             // Track form submission
             trackFormEvent('booking_form', 'submit', {
@@ -78,9 +98,6 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                 location: formData.preferredLocation,
                 utm_params: getUTMParameters(),
             });
-
-            // Simulate API call
-            await new Promise((resolve) => setTimeout(resolve, 1500));
 
             setIsSuccess(true);
 
@@ -108,6 +125,8 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                 fieldsInteracted.current.clear();
             }, 3000);
         } catch (err) {
+            console.error('🔴 Form submission error:', err);
+            console.error('🔴 Error details:', err instanceof Error ? err.message : 'Unknown error');
             setError("Something went wrong. Please try again or call us directly.");
             console.error("Form submission error:", err);
 
@@ -289,7 +308,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-4 px-6 rounded-lg transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2 shadow-lg"
+                className="w-full bg-primary-600 hover:bg-primary-700 text-black font-semibold py-4 px-6 rounded-lg transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2 shadow-lg"
             >
                 {isSubmitting ? (
                     <>
@@ -298,7 +317,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     </>
                 ) : (
                     <>
-                        <Send className="w-5 h-5" />
+                        <Send className="w-5 h-5 text-black" />
                         Book Appointment
                     </>
                 )}

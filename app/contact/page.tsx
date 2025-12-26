@@ -2,6 +2,7 @@ import { PageHeader } from "@/components/ui/page-header";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
+import { BookingForm } from "@/components/forms/booking-form";
 
 export default function ContactPage() {
     return (
@@ -74,37 +75,7 @@ export default function ContactPage() {
                         <h2 className="text-2xl font-bold text-gray-900 mb-2">Book an Appointment</h2>
                         <p className="text-gray-600 mb-8">Fill out the form below and we'll get back to you shortly.</p>
 
-                        <form className="space-y-6">
-                            <div className="grid sm:grid-cols-2 gap-6">
-                                <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                                    <input type="text" id="name" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="John Doe" />
-                                </div>
-                                <div>
-                                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                                    <input type="tel" id="phone" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="+91 9999999999" />
-                                </div>
-                            </div>
-
-                            <div>
-                                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">Service Interested In</label>
-                                <select id="service" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all bg-white">
-                                    <option>General Consultation</option>
-                                    <option>ACL / Knee Injury</option>
-                                    <option>Sports Medicine</option>
-                                    <option>Joint Replacement</option>
-                                    <option>Physiotherapy</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message (Optional)</label>
-                                <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Tell us about your symptoms..."></textarea>
-                            </div>
-
-                            <Button size="lg" className="w-full h-14 text-base">Confirm Booking Request</Button>
-                        </form>
+                        <BookingForm source="website" />
                     </FadeIn>
 
                 </div>
