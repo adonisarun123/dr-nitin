@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
       RETURNING id, created_at
     `;
 
-        const insertedLead = result[0];
+        const insertedLead = (result as any)[0];
         console.log('✅ Database insert successful! Lead ID:', insertedLead.id);
 
         // Generate and send email notification

@@ -22,8 +22,8 @@ export async function GET() {
         const dbResult = await sql`SELECT NOW() as time, version() as version`;
         results.tests.database = {
             status: '✅ Connected',
-            serverTime: dbResult[0].time,
-            version: dbResult[0].version.substring(0, 50) + '...',
+            serverTime: (dbResult as any)[0].time,
+            version: (dbResult as any)[0].version.substring(0, 50) + '...',
         };
     } catch (error) {
         results.tests.database = {
@@ -42,8 +42,8 @@ export async function GET() {
       ) as exists
     `;
         results.tests.leadsTable = {
-            status: tableCheck[0].exists ? '✅ Table exists' : '❌ Table not found',
-            message: tableCheck[0].exists
+            status: (tableCheck as any)[0].exists ? '✅ Table exists' : '❌ Table not found',
+            message: (tableCheck as any)[0].exists
                 ? 'Ready to accept data'
                 : 'Run the schema.sql file to create the table',
         };

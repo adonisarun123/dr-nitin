@@ -1,23 +1,37 @@
 import nodemailer from 'nodemailer';
 
-// Validate required environment variables
-const requiredEnvVars = ['SMTP_HOST', 'SMTP_PORT', 'SMTP_USER', 'SMTP_PASS', 'FROM_EMAIL'];
-for (const envVar of requiredEnvVars) {
-    if (!process.env[envVar]) {
-        throw new Error(`${envVar} environment variable is not set`);
+// Lazy initialization for transporter to avoid build-time errors
+let transporterInstance: nodemailer.Transporter | null = null;
+
+function getTransporter() {
+    if (!transporterInstance) {
+        // Validate required environment variables at runtime
+        const requiredEnvVars = ['SMTP_HOST', 'SMTP_PORT', 'SMTP_USER', 'SMTP_PASS', 'FROM_EMAIL'];
+        for (const envVar of requiredEnvVars) {
+            if (!process.env[envVar]) {
+                throw new Error(`${envVar} environment variable is not set`);
+            }
+        }
+
+        // Create reusable transporter
+        transporterInstance = nodemailer.createTransport({
+            host: process.env.SMTP_HOST,
+            port: parseInt(process.env.SMTP_PORT || '587'),
+            secure: false, // true for 465, false for other ports
+            auth: {
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS,
+            },
+        });
     }
+    return transporterInstance;
 }
 
-// Create reusable transporter
-export const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || '587'),
-    secure: false, // true for 465, false for other ports
-    auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-    },
-});
+// Export transporter getter
+export const transporter = {
+    verify: () => getTransporter().verify(),
+    sendMail: (options: any) => getTransporter().sendMail(options),
+};
 
 // Verify transporter configuration
 export async function verifyEmailConnection() {
