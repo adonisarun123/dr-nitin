@@ -23,6 +23,15 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   metadataBase: new URL("https://drnitinsunkuortho.com"),
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+  },
   openGraph: {
     type: "website",
     locale: "en_IE",
