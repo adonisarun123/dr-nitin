@@ -51,11 +51,13 @@ export async function sendEmail({
     subject,
     html,
     text,
+    bcc,
 }: {
     to: string;
     subject: string;
     html: string;
     text?: string;
+    bcc?: string;
 }) {
     try {
         const info = await transporter.sendMail({
@@ -64,6 +66,7 @@ export async function sendEmail({
             subject,
             text,
             html,
+            bcc,
         });
 
         console.log('Email sent successfully:', info.messageId);

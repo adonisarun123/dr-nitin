@@ -87,9 +87,13 @@ export async function POST(request: NextRequest) {
 
         // Generate and send email notification
         const salesEmail = process.env.SALES_EMAIL;
+        const bccEmail = process.env.BCC_EMAIL;
 
         if (salesEmail) {
             console.log('📧 Attempting to send email to:', salesEmail);
+            if (bccEmail) {
+                console.log('📧 BCC email configured:', bccEmail);
+            }
             const { html, text } = generateLeadNotificationEmail(leadData);
 
             const emailResult = await sendEmail({
@@ -97,6 +101,7 @@ export async function POST(request: NextRequest) {
                 subject: `🏥 New Appointment Request from ${leadData.name}`,
                 html,
                 text,
+                bcc: bccEmail,
             });
 
             if (!emailResult.success) {
