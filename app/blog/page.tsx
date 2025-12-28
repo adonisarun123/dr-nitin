@@ -18,7 +18,7 @@ export default function BlogPage() {
                         <article key={post.slug} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-shadow flex flex-col h-full">
                             <div className="aspect-video relative w-full overflow-hidden">
                                 <Image
-                                    src="/blog_image.jpg"
+                                    src={post.image || "/blog_image.jpg"}
                                     alt={post.title}
                                     fill
                                     className="object-cover"

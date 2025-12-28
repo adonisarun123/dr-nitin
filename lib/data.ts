@@ -135,6 +135,7 @@ export const blogPosts = [
     excerpt: "Whether you’re a professional athlete, a weekend runner, or someone who enjoys gym workouts, sports injuries can strike unexpectedly. From sudden twists on the ",
     date: "Dec 5, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-01.jpg?updatedAt=1766843020657",
     content: `
       <h2>Introduction</h2>
       
@@ -216,6 +217,7 @@ export const blogPosts = [
     excerpt: "One of the most common questions people ask after a knee injury is:",
     date: "Nov 6, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-02.jpg?updatedAt=1766843020643",
     content: `
       <h2>Introduction</h2>
       
@@ -284,6 +286,7 @@ export const blogPosts = [
     excerpt: "Ankle sprains are common but often misunderstood injuries. Whether you’re an athlete, a fitness enthusiast, or simply misstepped while walking, twisting your an",
     date: "Oct 7, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-03.jpg?updatedAt=1766843021036",
     content: `
       <h2>Introduction</h2>
       
@@ -368,6 +371,7 @@ export const blogPosts = [
     excerpt: "Elbow pain when lifting, gripping, or typing? It might be **Tennis Elbow**.",
     date: "Sep 8, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-04.jpg?updatedAt=1766843021025",
     content: `
       <h2>Dr. Nitin Sunku</h2>
       
@@ -401,6 +405,7 @@ export const blogPosts = [
     excerpt: "Shoulder pain can start as a mild discomfort but, over time, may become severe enough to interfere with daily tasks like lifting, dressing, or even sleeping. If",
     date: "Aug 9, 2024",
     category: "Shoulder Care",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-05.jpg?updatedAt=1766843021099",
     content: `
       <h2>Dr. Nitin Sunku</h2>
       
@@ -466,6 +471,7 @@ export const blogPosts = [
     excerpt: "Are you struggling with **persistent shoulder pain** that’s affecting your daily activities or sleep? You may be dealing with a **rotator cuff injury** — a comm",
     date: "Jul 10, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-06.jpg?updatedAt=1766843021068",
     content: `
       <h2>Introduction</h2>
       
@@ -533,6 +539,7 @@ export const blogPosts = [
     excerpt: "Are you struggling with **back pain**, **numbness**, or **leg weakness** that’s affecting your daily routine? You might be dealing with a **herniated disc**—a c",
     date: "Jun 11, 2024",
     category: "Spine Health",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-07.jpg?updatedAt=1766843020938",
     content: `
       <h2>Introduction</h2>
       
@@ -589,6 +596,7 @@ export const blogPosts = [
     excerpt: "Are you experiencing persistent pain, swelling, or stiffness in your joints that’s affecting your daily life? You may be suffering from **tendonitis**—a common ",
     date: "May 12, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-08.jpg?updatedAt=1766843021064",
     content: `
       <h2>Introduction</h2>
       
@@ -640,6 +648,7 @@ export const blogPosts = [
     excerpt: "Recovering from a sports injury is more than just waiting for the pain to go away — **it’s about restoring full function** and preventing future injuries. This ",
     date: "Apr 13, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-10.jpg?updatedAt=1766843020553",
     content: `
       <h2>Introduction</h2>
       
@@ -707,6 +716,7 @@ export const blogPosts = [
     excerpt: "When we think about the effects of obesity, we often focus on heart disease, diabetes, or high blood pressure. But did you know that **excess weight can signifi",
     date: "Mar 14, 2024",
     category: "Knee Care",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-11.jpg?updatedAt=1766843020620",
     content: `
       <h2>Introduction</h2>
       
@@ -772,6 +782,7 @@ export const blogPosts = [
     excerpt: "Knee arthroscopy is a minimally invasive surgical procedure that allows an orthopaedic surgeon to see inside the knee joint using a small camera.",
     date: "Feb 15, 2024",
     category: "Knee Care",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-12.jpg?updatedAt=1766843020590",
     content: `
       <strong>Publication Date:</strong> August 31, 2025
       <strong>Author:</strong> Dr. Nitin Sunku
@@ -803,6 +814,7 @@ export const blogPosts = [
     excerpt: "Dr. Nithin N, a recognized expert in Orthopaedics, is dedicated to helping patients regain their mobility and improve their quality of life. Joint pain can sign",
     date: "Jan 16, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-13.jpg?updatedAt=1766843020638",
     content: `
       <p>Dr. Nithin N, a recognized expert in Orthopaedics, is dedicated to helping patients regain their mobility and improve their quality of life. Joint pain can significantly impact daily activities, but with the right diagnosis and treatment plan, relief is possible.</p>
       
@@ -827,6 +839,7 @@ export const blogPosts = [
     excerpt: "A meniscus tear is a common knee injury that affects the cartilage acting as a cushion between your thigh bone and shin bone.",
     date: "Dec 17, 2024",
     category: "Knee Care",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-14.jpg?updatedAt=1766843020684",
     content: `
       <p>A meniscus tear is a common knee injury that affects the cartilage acting as a cushion between your thigh bone and shin bone.</p>
       
@@ -852,6 +865,7 @@ export const blogPosts = [
     excerpt: "Chronic joint pain — whether in the knee, shoulder, hip, or ankle — can limit daily activities and affect quality of life.",
     date: "Nov 18, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-15.jpg?updatedAt=1766843020681",
     content: `
       <p>Chronic joint pain — whether in the knee, shoulder, hip, or ankle — can limit daily activities and affect quality of life.</p>
       
@@ -890,6 +904,7 @@ export const blogPosts = [
     excerpt: "A meniscus tear is a common knee injury that affects the cartilage acting as a cushion between the thigh bone and shin bone.",
     date: "Oct 19, 2024",
     category: "Knee Care",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-16.jpg?updatedAt=1766843020600",
     content: `
       <p>A meniscus tear is a common knee injury that affects the cartilage acting as a cushion between the thigh bone and shin bone.</p>
       
@@ -930,6 +945,7 @@ export const blogPosts = [
     excerpt: "Shin splints, also called **medial tibial stress syndrome**, are a common cause of leg pain in runners and athletes. They occur when the muscles, tendons, and b",
     date: "Sep 20, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-17.jpg?updatedAt=1766843020690",
     content: `
       <p>Shin splints, also called <strong>medial tibial stress syndrome</strong>, are a common cause of leg pain in runners and athletes. They occur when the muscles, tendons, and bone tissue around your shin bone become overworked.</p>
       
@@ -977,6 +993,7 @@ export const blogPosts = [
     excerpt: "Hip pain while rising from a chair is a common complaint, especially in middle-aged and older adults.",
     date: "Aug 21, 2024",
     category: "Spine Health",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-18.jpg?updatedAt=1766843020618",
     content: `
       <p>Hip pain while rising from a chair is a common complaint, especially in middle-aged and older adults.</p>
       
@@ -1019,6 +1036,7 @@ export const blogPosts = [
     excerpt: "Shoulder instability is a common problem athletes face after injuries.",
     date: "Jul 22, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-19.jpg?updatedAt=1766843020592",
     content: `
       <p>Shoulder instability is a common problem athletes face after injuries.</p>
       
@@ -1049,6 +1067,7 @@ export const blogPosts = [
     excerpt: "Arthroscopic meniscus repair is a minimally invasive procedure used to treat meniscus tears while preserving the natural knee structure. This advanced technique",
     date: "Jun 23, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-20.jpg?updatedAt=1766843020606",
     content: `
       <p>Arthroscopic meniscus repair is a minimally invasive procedure used to treat meniscus tears while preserving the natural knee structure. This advanced technique allows surgeons to repair the damaged cartilage through small incisions, offering patients a safer and faster recovery compared to traditional open surgery. It is also commonly performed for patients who have associated knee issues such as ACL surgery, cruciate ligament injury, or ACL tear, making it an essential part of comprehensive knee treatment.</p>
       
@@ -1081,6 +1100,7 @@ export const blogPosts = [
     excerpt: "Maintaining good posture is more than just standing straight — it plays a vital role in keeping your spine, joints, and muscles healthy. Poor posture, if ignore",
     date: "May 24, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-21.jpg?updatedAt=1766843020664",
     content: `
       <p>Maintaining good posture is more than just standing straight — it plays a vital role in keeping your spine, joints, and muscles healthy. Poor posture, if ignored, can contribute to long-term pain, stiffness, and even structural changes in the body. Many people who experience chronic neck pain, back pain, or joint discomfort eventually seek help from a spine specialist or a back pain specialist to correct posture-related issues before they worsen.</p>
       
@@ -1117,6 +1137,7 @@ export const blogPosts = [
     excerpt: "Meniscus tears are among the most common knee injuries, particularly prevalent in **active adults** and athletes. The meniscus, a C-shaped piece of cartilage in",
     date: "Apr 25, 2024",
     category: "Sports Medicine",
+    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-010.jpg?updatedAt=1766843020652",
     content: `
       <p>Meniscus tears are among the most common knee injuries, particularly prevalent in <strong>active adults</strong> and athletes. The meniscus, a C-shaped piece of cartilage in the knee that acts as a shock absorber and stabilizer, is crucial for knee function. When subjected to excessive force or sudden movements, this vital structure can tear, leading to pain, swelling, and mechanical symptoms like locking or catching. Understanding the common mechanisms of injury is the first step toward prevention and effective treatment.</p>
       
