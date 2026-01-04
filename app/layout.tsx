@@ -103,6 +103,16 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={cn(inter.variable, poppins.variable, "font-sans bg-background text-text-primary")}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KD458LQT"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <JsonLd data={organizationSchema} />
         <Header />
         {children}
