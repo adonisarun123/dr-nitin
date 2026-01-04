@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   metadataBase: new URL("https://drnitinsunkuortho.com"),
+  verification: {
+    google: "sjlvelpdhlvU4nWP7nRTltuK_TelCCIddJlm67csZSM",
+  },
   icons: {
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' },
@@ -83,6 +86,21 @@ export default function RootLayout({
           `}
         </Script>
         {/* End Google Tag Manager */}
+
+        {/* Google Analytics Tag Script */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-RZVLJVZTJ3"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-RZVLJVZTJ3');
+          `}
+        </Script>
       </head>
       <body className={cn(inter.variable, poppins.variable, "font-sans bg-background text-text-primary")}>
         <JsonLd data={organizationSchema} />
