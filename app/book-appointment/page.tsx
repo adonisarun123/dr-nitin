@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { BookingForm } from "@/components/forms/booking-form";
 import { Phone, MapPin, Clock, Award, Heart, Users, CheckCircle } from "lucide-react";
 import { siteConfig } from "@/lib/data";
@@ -81,58 +82,82 @@ export default function BookAppointmentPage() {
         <main className="min-h-screen">
             <HideNavigation />
             <LandingPageTracker />
-            {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 text-blue-900 py-16 md:py-24 overflow-hidden border-b-4 border-blue-600">
+            <section className="relative bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 text-blue-900 py-12 md:py-20 overflow-hidden border-b-4 border-blue-600">
                 <div className="absolute inset-0 bg-[url('/patterns/medical-pattern.svg')] opacity-5"></div>
                 <div className="container mx-auto px-4 relative z-10">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <div className="inline-block bg-blue-600 text-white rounded-full px-6 py-2 mb-6">
-                            <p className="text-sm font-medium">✓ Trusted by 1000+ Patients</p>
+                    <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+                        {/* Left Column: Image */}
+                        <div className="relative h-[400px] lg:h-[600px] w-full hidden lg:block">
+                            <Image
+                                src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-lp"
+                                alt="Dr. Nitin Sunku"
+                                fill
+                                className="object-contain object-center"
+                                priority
+                            />
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-blue-900">
-                            Expert Orthopaedic Care in <span className="text-blue-700">HSR Layout & Attibele</span>
-                        </h1>
-
-                        <p className="text-xl md:text-2xl mb-8 text-blue-800 font-light">
-                            Get Relief from Knee Pain, Sports Injuries & Joint Problems
-                        </p>
-
-                        <div className="flex flex-wrap justify-center gap-4 mb-8">
-                            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
-                                <CheckCircle className="w-5 h-5 text-blue-600" />
-                                <span className="text-sm font-medium text-blue-900">Same Day Appointments</span>
+                        {/* Right Column: Text Content */}
+                        <div className="text-center lg:text-left">
+                            <div className="inline-block bg-blue-600 text-white rounded-full px-6 py-2 mb-6">
+                                <p className="text-sm font-medium">✓ Trusted by 1000+ Patients</p>
                             </div>
-                            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
-                                <CheckCircle className="w-5 h-5 text-blue-600" />
-                                <span className="text-sm font-medium text-blue-900">Insurance Accepted</span>
-                            </div>
-                            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
-                                <CheckCircle className="w-5 h-5 text-blue-600" />
-                                <span className="text-sm font-medium text-blue-900">7+ Years Experience</span>
-                            </div>
-                        </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <TrackedButton
-                                buttonName="Call Now - Hero"
-                                buttonLocation="Hero Section"
-                                href="tel:+919449031003"
-                                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
-                                metadata={{ phone_number: "+91-9449031003", cta_type: "phone" }}
-                            >
-                                <Phone className="w-5 h-5" />
-                                Call Now: +91-9449031003
-                            </TrackedButton>
-                            <TrackedButton
-                                buttonName="Book Appointment - Hero"
-                                buttonLocation="Hero Section"
-                                href="#booking-form"
-                                className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
-                                metadata={{ cta_type: "form_scroll" }}
-                            >
-                                Book Appointment Online
-                            </TrackedButton>
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-blue-900">
+                                Expert Orthopaedic Care in <span className="text-blue-700">HSR Layout & Attibele</span>
+                            </h1>
+
+                            <p className="text-xl md:text-2xl mb-8 text-blue-800 font-light">
+                                Get Relief from Knee Pain, Sports Injuries & Joint Problems
+                            </p>
+
+                            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
+                                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
+                                    <CheckCircle className="w-5 h-5 text-blue-600" />
+                                    <span className="text-sm font-medium text-blue-900">Same Day Appointments</span>
+                                </div>
+                                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
+                                    <CheckCircle className="w-5 h-5 text-blue-600" />
+                                    <span className="text-sm font-medium text-blue-900">Insurance Accepted</span>
+                                </div>
+                                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
+                                    <CheckCircle className="w-5 h-5 text-blue-600" />
+                                    <span className="text-sm font-medium text-blue-900">7+ Years Experience</span>
+                                </div>
+                            </div>
+
+                            {/* Mobile Image (Visible only on smaller screens) */}
+                            <div className="relative h-[300px] w-full mb-8 lg:hidden">
+                                <Image
+                                    src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-lp"
+                                    alt="Dr. Nitin Sunku"
+                                    fill
+                                    className="object-contain object-center"
+                                    priority
+                                />
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+                                <TrackedButton
+                                    buttonName="Call Now - Hero"
+                                    buttonLocation="Hero Section"
+                                    href="tel:+919449031003"
+                                    className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg w-full sm:w-auto justify-center"
+                                    metadata={{ phone_number: "+91-9449031003", cta_type: "phone" }}
+                                >
+                                    <Phone className="w-5 h-5" />
+                                    Call Now: +91-9449031003
+                                </TrackedButton>
+                                <TrackedButton
+                                    buttonName="Book Appointment - Hero"
+                                    buttonLocation="Hero Section"
+                                    href="#booking-form"
+                                    className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg w-full sm:w-auto justify-center"
+                                    metadata={{ cta_type: "form_scroll" }}
+                                >
+                                    Book Appointment Online
+                                </TrackedButton>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -206,7 +231,58 @@ export default function BookAppointmentPage() {
                 </div>
             </section>
 
-            {/* Booking Form Section */}
+            {/* Video Testimonials Section */}
+            <section className="py-16 md:py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Patient Success Stories
+                        </h2>
+                        <p className="text-lg text-gray-600">
+                            Hear from our happy patients about their recovery journey
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                        <div className="aspect-[9/16] w-full max-w-[350px] mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/hNDU1Sx5gMc"
+                                title="Patient Testimonial 1"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                className="w-full h-full"
+                            ></iframe>
+                        </div>
+                        <div className="aspect-[9/16] w-full max-w-[350px] mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/XFDLO_nR6x4"
+                                title="Patient Testimonial 2"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                className="w-full h-full"
+                            ></iframe>
+                        </div>
+                        <div className="aspect-[9/16] w-full max-w-[350px] mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/swT9lwWwSbU"
+                                title="Patient Testimonial 3"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                className="w-full h-full"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="booking-form" className="py-16 md:py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-2xl mx-auto">
