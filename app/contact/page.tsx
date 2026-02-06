@@ -87,7 +87,7 @@ export default function ContactPage() {
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative group">
                                 <a
-                                    href="https://www.google.com/maps/place/Sri+Raghava+Childrens+and+General+Hospital/@12.7885442,77.7850557,17z/data=!4m6!3m5!1s0x3bae6718d03ae031:0x36ae9d8f3317ae34!8m2!3d12.7885442!4d77.7850557!16s%2Fg%2F1tf7w45m?hl=en"
+                                    href="https://www.google.com/maps/place/Raghava+Multispeciality+Hospital/@12.7447969,77.7341172,13z/data=!4m10!1m2!2m1!1sSri+Raghava+Childrens+and+General+Hospital+Attibele+Bangalore!3m6!1s0x3bae7193012f5045:0xaeb4c2023a37fea6!8m2!3d12.7803654!4d77.7707144!15sCj1TcmkgUmFnaGF2YSBDaGlsZHJlbnMgYW5kIEdlbmVyYWwgSG9zcGl0YWwgQXR0aWJlbGUgQmFuZ2Fsb3JlWj8iPXNyaSByYWdoYXZhIGNoaWxkcmVucyBhbmQgZ2VuZXJhbCBob3NwaXRhbCBhdHRpYmVsZSBiYW5nYWxvcmWSARJjaGlsZHJlbnNfaG9zcGl0YWyaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUk9ialJEWDNoUlJSQULgAQD6AQQIABBB!16s%2Fg%2F11c5ssrsxc?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="absolute inset-0 z-10 bg-transparent cursor-pointer"
