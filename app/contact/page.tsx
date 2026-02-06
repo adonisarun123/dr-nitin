@@ -42,8 +42,8 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <strong className="block text-gray-900 mb-1">Raghava Multispeciality Hospital</strong>
-                                        <p className="text-gray-600">39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal, Bengaluru, Karnataka 562107</p>
-                                        <p className="text-gray-700 font-medium mt-1">📞 +91-9980031006</p>
+                                        <p className="text-gray-600">39, Sarjapura - Attibele Rd, opposite syndicate bank, Attibele, Bengaluru, Karnataka 562107</p>
+                                        <p className="text-gray-700 font-medium mt-1">📞 <a href="tel:+919980031006" className="hover:text-primary transition-colors">+91-9980031006</a></p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
@@ -53,7 +53,7 @@ export default function ContactPage() {
                                     <div>
                                         <strong className="block text-gray-900 mb-1">Health Nest Hospital</strong>
                                         <p className="text-gray-600">1162, 24th Main Rd Sector 2, HSR Layout, Bengaluru, Karnataka 560102</p>
-                                        <p className="text-gray-700 font-medium mt-1">📞 +91-9449031003</p>
+                                        <p className="text-gray-700 font-medium mt-1">📞 <a href="tel:+919449031003" className="hover:text-primary transition-colors">+91-9449031003</a></p>
                                     </div>
                                 </li>
 
@@ -85,8 +85,15 @@ export default function ContactPage() {
                     <FadeIn delay={0.4}>
                         <h2 className="text-3xl font-heading font-bold text-gray-900 text-center mb-12">Find Us on Map</h2>
                         <div className="grid md:grid-cols-2 gap-8">
-                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
-                                <h3 className="bg-primary text-white p-4 font-semibold">Raghava Multispeciality Hospital</h3>
+                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative group">
+                                <a
+                                    href="https://www.google.com/maps/place/Sri+Raghava+Childrens+and+General+Hospital/@12.7885442,77.7850557,17z/data=!4m6!3m5!1s0x3bae6718d03ae031:0x36ae9d8f3317ae34!8m2!3d12.7885442!4d77.7850557!16s%2Fg%2F1tf7w45m?hl=en"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="absolute inset-0 z-10 bg-transparent cursor-pointer"
+                                    aria-label="View Raghava Multispeciality Hospital on Google Maps"
+                                ></a>
+                                <h3 className="bg-primary text-white p-4 font-semibold relative z-20 pointer-events-none">Raghava Multispeciality Hospital</h3>
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.3!2d77.7!3d12.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDQ4JzAwLjAiTiA3N8KwNDInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
                                     width="100%"
@@ -95,10 +102,18 @@ export default function ContactPage() {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
+                                    className="filter group-hover:brightness-90 transition-all duration-300"
                                 ></iframe>
                             </div>
-                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
-                                <h3 className="bg-primary text-white p-4 font-semibold">Health Nest Hospital</h3>
+                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative group">
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&query=Health+Nest+Hospital+1162%2C+24th+Main+Rd%2C+Garden+Layout%2C+Sector+2+HSR+Layout%2C+Bangalore%2C+Karnataka+560102"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="absolute inset-0 z-10 bg-transparent cursor-pointer"
+                                    aria-label="View Health Nest Hospital on Google Maps"
+                                ></a>
+                                <h3 className="bg-primary text-white p-4 font-semibold relative z-20 pointer-events-none">Health Nest Hospital</h3>
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0!2d77.64!3d12.91!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzM2LjAiTiA3N8KwMzgnMjQuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
                                     width="100%"
@@ -107,6 +122,7 @@ export default function ContactPage() {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
+                                    className="filter group-hover:brightness-90 transition-all duration-300"
                                 ></iframe>
                             </div>
                         </div>
