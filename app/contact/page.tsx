@@ -87,7 +87,7 @@ export default function ContactPage() {
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative group">
                                 <a
-                                    href="https://www.google.com/maps/place/Raghava+Multispeciality+Hospital/@12.7447969,77.7341172,13z/data=!4m10!1m2!2m1!1sSri+Raghava+Childrens+and+General+Hospital+Attibele+Bangalore!3m6!1s0x3bae7193012f5045:0xaeb4c2023a37fea6!8m2!3d12.7803654!4d77.7707144!15sCj1TcmkgUmFnaGF2YSBDaGlsZHJlbnMgYW5kIEdlbmVyYWwgSG9zcGl0YWwgQXR0aWJlbGUgQmFuZ2Fsb3JlWj8iPXNyaSByYWdoYXZhIGNoaWxkcmVucyBhbmQgZ2VuZXJhbCBob3NwaXRhbCBhdHRpYmVsZSBiYW5nYWxvcmWSARJjaGlsZHJlbnNfaG9zcGl0YWyaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUk9ialJEWDNoUlJSQULgAQD6AQQIABBB!16s%2Fg%2F11c5ssrsxc?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D"
+                                    href="https://maps.app.goo.gl/82xv2KzEU7GUjT357"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="absolute inset-0 z-10 bg-transparent cursor-pointer"
@@ -95,7 +95,7 @@ export default function ContactPage() {
                                 ></a>
                                 <h3 className="bg-primary text-white p-4 font-semibold relative z-20 pointer-events-none">Raghava Multispeciality Hospital</h3>
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.3!2d77.7!3d12.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDQ4JzAwLjAiTiA3N8KwNDInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                                    src="https://maps.google.com/maps?q=Sri+Raghava+Childrens+and+General+Hospital+Attibele+Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                     width="100%"
                                     height="300"
                                     style={{ border: 0 }}
