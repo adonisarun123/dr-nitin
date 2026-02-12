@@ -14,6 +14,65 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
+    if (params.slug === "sports-medicine") {
+        return {
+            title: "Sports Medicine Treatment in Attibele ",
+            description: "Get expert sports medicine treatment in Attibele by Dr Nitin N Sunku for sports injuries, ligament tears, joint pain and faster recovery care.",
+        };
+    }
+
+    if (params.slug === "acl-care") {
+        return {
+            title: "ACL CareTreatment in Attibele ",
+            description: "Expert ACL injury treatment in Attibele by Dr Nitin N Sunku for ligament tears, knee instability and sports injuries with advanced care.",
+        };
+    }
+
+    if (params.slug === "knee-replacement") {
+        return {
+            title: "Knee Replacement Surgery in Attibele ",
+            description: "Advanced knee replacement surgery in Attibele by Dr Nitin N Sunku for arthritis, chronic knee pain and improved mobility with expert care.",
+        };
+    }
+
+    if (params.slug === "meniscal-care") {
+        return {
+            title: "Meniscus Tear Treatment in Attibele ",
+            description: "Expert meniscus tear treatment in Attibele by Dr Nitin N Sunku for knee locking, pain and sports injuries with advanced orthopedic care.",
+        };
+    }
+
+    if (params.slug === "hip-replacement") {
+        return {
+            title: "Hip Replacement Surgery in Attibele ",
+            description: "Get expert hip replacement surgery in Attibele by Dr Nitin N Sunku for arthritis, chronic hip pain, and improved mobility with advanced orthopedic care.",
+        };
+    }
+
+    if (params.slug === "shoulder-care") {
+        return {
+            title: "Shoulder Care Treatment in Attibele ",
+            description: "Advanced shoulder care treatments in Attibele by Dr. Nitin Sunku. Expert diagnosis & personalized solutions for pain, injuries & mobility restoration.",
+        };
+    }
+
+    if (params.slug === "bone-fracture") {
+        return {
+            title: "Bone Fracture Treatment in Attibele ",
+            description: "Comprehensive bone fracture care in Attibele by Dr. Nitin Sunku — expert diagnosis, stabilization & recovery plans for all types of fractures.",
+        };
+    }
+
+    if (params.slug === "spine-care") {
+        return {
+            title: {
+                absolute: "Bone Fracture Treatment in Attibele | Dr. Nitin Sunku",
+            },
+            description: "Comprehensive bone fracture care in Attibele by Dr. Nitin Sunku — expert diagnosis, stabilization & recovery plans for all types of fractures.",
+        };
+    }
+
+
     const service = servicesData.find((s) => s.slug === params.slug);
     if (!service) return {};
 

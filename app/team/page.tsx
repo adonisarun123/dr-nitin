@@ -1,7 +1,15 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import { PageHeader } from "@/components/ui/page-header";
 import { teamData } from "@/lib/data";
 import { FadeIn } from "@/components/animations/fade-in";
+
+export const metadata: Metadata = {
+    title: {
+        absolute: "Our Medical Team | Dr Nitin N Sunku Orthopedic Care",
+    },
+    description: "Meet the medical team supporting Dr Nitin N Sunku, delivering expert orthopedic and sports medicine care with a patient-focused approach.",
+};
 
 export default function TeamPage() {
     return (

@@ -1,4 +1,12 @@
+import { Metadata } from "next";
 import { PageHeader } from "@/components/ui/page-header";
+
+export const metadata: Metadata = {
+    title: {
+        absolute: "Privacy Policy | Dr Nitin N Sunku Orthopedic Care",
+    },
+    description: "Read the privacy policy of Dr Nitin N Sunku’s orthopedic and sports medicine services, ensuring secure and confidential handling of patient information.",
+};
 
 export default function PrivacyPage() {
     return (
