@@ -1,6 +1,14 @@
+import { Metadata } from "next";
 import { PageHeader } from "@/components/ui/page-header";
 import { testimonialsData } from "@/lib/data";
 import { Star, Quote } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: {
+        absolute: "Patient Testimonials | Dr Nitin N Sunku Orthopedic",
+    },
+    description: "Read real patient testimonials of Dr Nitin N Sunku, trusted orthopedic & sports medicine specialist known for expert care and recovery outcomes.",
+};
 
 export default function TestimonialsPage() {
     return (

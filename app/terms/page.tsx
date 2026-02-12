@@ -1,4 +1,12 @@
+import { Metadata } from "next";
 import { PageHeader } from "@/components/ui/page-header";
+
+export const metadata: Metadata = {
+    title: {
+        absolute: "Terms & Conditions | Dr Nitin N Sunku Orthopedic Care",
+    },
+    description: "Read the terms and conditions for Dr Nitin N Sunku’s orthopedic and sports medicine services, ensuring transparent and trustworthy patient care.",
+};
 
 export default function TermsPage() {
     return (

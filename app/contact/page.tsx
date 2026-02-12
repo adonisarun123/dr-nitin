@@ -1,8 +1,16 @@
+import { Metadata } from "next";
 import { PageHeader } from "@/components/ui/page-header";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { BookingForm } from "@/components/forms/booking-form";
+
+export const metadata: Metadata = {
+    title: {
+        absolute: "Contact Dr Nitin N Sunku | Orthopedic Care in Attibele",
+    },
+    description: "Get in touch with Dr Nitin N Sunku, orthopedic & sports medicine specialist in Attibele for appointments, consultations, and expert joint care.",
+};
 
 export default function ContactPage() {
     return (

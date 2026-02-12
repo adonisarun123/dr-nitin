@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Hero } from "@/components/sections/hero";
 import { Stats } from "@/components/sections/stats";
 import { ServicesGrid } from "@/components/sections/services";
@@ -7,6 +8,11 @@ import { Locations } from "@/components/sections/locations";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/data";
 import { FadeIn } from "@/components/animations/fade-in";
+
+export const metadata: Metadata = {
+  title: "Dr. Nitin N Sunku | Orthopedic & Sports Medicine Specialist",
+  description: "Consult Dr Nitin N Sunku, trusted orthopedic & sports medicine surgeon for joint pain, fractures, ligament injuries and advanced orthopedic care.",
+};
 
 export default function Home() {
   const physicianSchema = {

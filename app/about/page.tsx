@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { PageHeader } from "@/components/ui/page-header";
@@ -6,9 +7,11 @@ import { CheckCircle2, Award, BookOpen, Heart } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { JsonLd } from "@/components/seo/json-ld";
 
-export const metadata = {
-    title: "About Dr. Nitin N Sunku - Orthopaedic Surgeon in Bengaluru",
-    description: "Dr. Nitin N. Sunku is a highly regarded Consultant Orthopaedic Surgeon in Bengaluru, specializing in sports injuries, knee conditions, arthroscopy, joint replacement, and trauma care with over 7 years of experience.",
+export const metadata: Metadata = {
+    title: {
+        absolute: "About Dr Nitin N Sunku | Orthopedic Surgeon in Bengaluru",
+    },
+    description: "Know Dr Nitin N Sunku, experienced orthopedic surgeon in Bengaluru specializing in sports injuries, knee care, joint replacement and advanced treatment.",
 };
 
 export default function AboutPage() {

@@ -1,8 +1,14 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { PageHeader } from "@/components/ui/page-header";
 import { blogPosts } from "@/lib/data";
 import { ArrowRight, Calendar } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Orthopedic & Sports Medicine Blog",
+    description: "Read expert blogs by Dr Nitin N Sunku on orthopedic care, sports injuries, knee pain, joint health and recovery tips for patients.",
+};
 
 export default function BlogPage() {
     return (

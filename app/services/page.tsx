@@ -1,9 +1,15 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { PageHeader } from "@/components/ui/page-header";
 import { servicesData } from "@/lib/data";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
+
+export const metadata: Metadata = {
+    title: "Orthopedic & Sports Medicine Services",
+    description: "Explore orthopedic and sports medicine services by Dr Nitin N Sunku, including knee care, ACL injuries, joint replacement and sports injury treatment.",
+};
 
 export default function ServicesPage() {
     return (

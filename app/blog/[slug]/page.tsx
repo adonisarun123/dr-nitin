@@ -18,6 +18,213 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
+    if (params.slug === "herniated-disc-pain-find-expert-relief-in-bangalore-with-dr-nithin-n") {
+        return {
+            title: {
+                absolute: "Herniated Disc Pain: Expert Insights from Dr. Nitin Sunku",
+            },
+            description: "Learn what causes herniated disc pain, common symptoms, diagnosis methods, and treatment options to manage pain and improve spine health.",
+        };
+    }
+
+    if (params.slug === "rotator-cuff-injury-heres-how-to-treat-shoulder-pain-effectively") {
+        return {
+            title: {
+                absolute: "Rotator Cuff Injury: Causes, Symptoms & Treatment Tips",
+            },
+            description: "Learn about rotator cuff injury causes, symptoms, and effective shoulder pain treatment tips to restore mobility and reduce discomfort.",
+        };
+    }
+
+    if (params.slug === "can-a-meniscus-tear-heal-without-surgery") {
+        return {
+            title: {
+                absolute: "Meniscus Tear: Can It Heal Without Surgery? | Dr. Sunku",
+            },
+            description: "Discover when a meniscus tear can heal without surgery. Learn causes, healing factors, and treatment options from Dr. Nitin Sunku.",
+        };
+    }
+
+    if (params.slug === "can-a-meniscus-tear-heal-with-physiotherapy-alone") {
+        return {
+            title: {
+                absolute: "Can a Meniscus Tear Heal With Physiotherapy? | Dr. Sunku",
+            },
+            description: "Learn if a meniscus tear can heal with physiotherapy alone. Expert insights on recovery, exercises, and treatment options for better knee health.",
+        };
+    }
+
+    if (params.slug === "herniated-disc-pain-find-expert-relief-in-bangalore-with-dr-nithin-n") {
+        return {
+            title: {
+                absolute: "Herniated Disc Pain: Expert Insights from Dr. Nitin Sunku",
+            },
+            description: "Learn what causes herniated disc pain, common symptoms, diagnosis methods, and treatment options to manage pain and improve spine health.",
+        };
+    }
+
+    if (params.slug === "can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru") {
+        return {
+            title: {
+                absolute: "Can You Walk With a Torn ACL? ACL Treatment in Bengaluru",
+            },
+            description: "Learn if you can walk with a torn ACL, common symptoms, and ACL treatment options in Bengaluru to support recovery and knee stability.",
+        };
+    }
+
+    if (params.slug === "how-does-obesity-affect-joint-health") {
+        return {
+            title: {
+                absolute: "How Does Obesity Affect Joint Health? | Dr. Nitin N Sunku",
+            },
+            description: "Understand how obesity impacts joint health, common risks, and ways to protect your knees, hips & spine for better mobility and comfort.",
+        };
+    }
+
+    if (params.slug === "why-do-i-feel-pain-in-my-hip-when-standing-from-a-chair") {
+        return {
+            title: {
+                absolute: "Hip Pain When Standing From a Chair? Causes & Relief",
+            },
+            description: "Learn why your hip hurts when standing from a chair, common causes, and expert tips for relief and improved mobility.",
+        };
+    }
+
+    if (params.slug === "what-is-a-pcl-tear-and-how-it-happens") {
+        return {
+            title: {
+                absolute: "What Is a PCL Tear: Causes, Symptoms & Treatment",
+            },
+            description: "Learn what a PCL tear is, how it happens, common signs, and treatment options to support knee stability and recovery.",
+        };
+    }
+
+    if (params.slug === "when-is-shoulder-replacement-surgery-needed") {
+        return {
+            title: {
+                absolute: "When Is Shoulder Replacement Surgery Needed? Causes & Signs",
+            },
+            description: "Learn when shoulder replacement is needed, common symptoms, and factors that guide the decision for optimal shoulder health and mobility.",
+        };
+    }
+
+    if (params.slug === "why-rehabilitation-is-essential-after-a-sports-injury") {
+        return {
+            title: {
+                absolute: "Why Rehabilitation Is Essential After a Sports Injury",
+            },
+            description: "Discover why rehabilitation after a sports injury matters, key benefits, and how it speeds recovery and prevents re-injury.",
+        };
+    }
+
+    if (params.slug === "ankle-sprain-treatment") {
+        return {
+            title: {
+                absolute: "Ankle Sprain Treatment: Causes & Recovery Tips",
+            },
+            description: "Get expert hip replacement surgery in Attibele by Dr Nitin N Sunku for arthritis, chronic hip pain, and improved mobility with advanced orthopedic care.",
+        };
+    }
+
+    if (params.slug === "say-goodbye-to-tendonitis-pain-a-beginner-friendly-guide-to-relief-with-dr-nithin-n-in-bangalore") {
+        return {
+            title: {
+                absolute: "What Causes Tendonitis Pain? Symptoms & Treatment",
+            },
+            description: "Beginner-friendly guide to tendonitis pain relief with expert tips from Dr. Nitin Sunku in Bangalore for faster recovery and better tendon health.",
+        };
+    }
+
+    if (params.slug === "are-you-struggling-with-joint-pain-in-bangalore") {
+        return {
+            title: {
+                absolute: "Struggling with joint pain: Causes, Relief & Treatments",
+            },
+            description: "Explore common joint pain causes, symptoms, and effective relief options in Bangalore to improve mobility and comfort.",
+        };
+    }
+
+    if (params.slug === "why-does-my-shoulder-feel-unstable-after-a-sports-injury") {
+        return {
+            title: {
+                absolute: "Why Does My Shoulder Feel Unstable After Injury?",
+            },
+            description: "Learn why your shoulder feels unstable after a sports injury, common causes, and treatment options to support recovery and strength.",
+        };
+    }
+
+    if (params.slug === "elbow-pain-treatment") {
+        return {
+            title: {
+                absolute: "Elbow Pain Treatment: Causes and Relief Tips",
+            },
+            description: "Learn what causes elbow pain and explore effective treatment and relief options to reduce discomfort and improve arm function.",
+        };
+    }
+
+    if (params.slug === "why-do-i-get-shin-splints-after-running") {
+        return {
+            title: {
+                absolute: "Why Do I Get Shin Splints After Running? Causes & Tips",
+            },
+            description: "Learn why shin splints occur after running, common causes, and practical tips for relief and prevention to keep you active and pain-free.",
+        };
+    }
+
+    if (params.slug === "how-posture-affects-spine-and-joint-health") {
+        return {
+            title: {
+                absolute: "How Posture Affects Spine & Joint Health | Dr. Sunku",
+            },
+            description: "Learn how posture impacts spine and joint health, common issues from poor posture, and tips to improve alignment for better mobility and comfort.",
+        };
+    }
+
+    if (params.slug === "common-causes-of-meniscus-tears-in-active-adults") {
+        return {
+            title: {
+                absolute: "Meniscus Tears in Active Adults: Common Causes Explained",
+            },
+            description: "Why do active adults get meniscus tears? Explore the most common causes, risk factors, and knee stress triggers.",
+        };
+    }
+
+    if (params.slug === "can-prp-injections-help-with-chronic-joint-pain") {
+        return {
+            title: {
+                absolute: "PRP Injections for Chronic Joint Pain: Do They Work?",
+            },
+            description: "Explore whether PRP injections can help with chronic joint pain, how they work, and who may benefit from this regenerative treatment option.",
+        };
+    }
+
+    if (params.slug === "what-is-knee-arthroscopy-and-when-is-it-needed") {
+        return {
+            title: {
+                absolute: "Knee Arthroscopy: Purpose, Benefits & When It’s Used",
+            },
+            description: "Learn what knee arthroscopy is, how it works, and when this minimally invasive procedure is recommended to diagnose and treat knee problems.",
+        };
+    }
+
+    if (params.slug === "why-are-sports-injuries-so-common-and-how-do-we-treat-them") {
+        return {
+            title: {
+                absolute: "Why Sports Injuries Happen and How Do We Treat Them?",
+            },
+            description: "Why are sports injuries so common? Explore the reasons and treatment options that help athletes return to activity safely.",
+        };
+    }
+
+    if (params.slug === "benefits-of-arthroscopic-meniscus-repair-surgery") {
+        return {
+            title: {
+                absolute: "Meniscus Repair Surgery Benefits: What to Expect",
+            },
+            description: "Discover the key benefits of arthroscopic meniscus repair surgery, including faster recovery, less pain, and improved knee stability for active lifestyles.",
+        };
+    }
+
     const post = blogPosts.find((p) => p.slug === params.slug);
     if (!post) return {};
 
