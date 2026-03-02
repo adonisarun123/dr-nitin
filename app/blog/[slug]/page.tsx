@@ -18,6 +18,52 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
+    // Explicit overrides for the specific blog posts
+    if (params.slug === "types-of-total-knee-replacement-a-complete-patient-guide") {
+        return {
+            title: {
+                absolute: "Types of Total Knee Replacement: A Complete Patient Guide",
+            },
+            description: "Learn about types of total knee replacement, including partial, traditional, and minimally invasive options, to choose the right surgery in 2026.",
+        };
+    }
+
+    if (params.slug === "arthroscopy-shoulder-everything-you-need-to-know-before-your-surgery") {
+        return {
+            title: {
+                absolute: "Arthroscopy Shoulder Surgery: Complete 2026 Guide",
+            },
+            description: "Discover how arthroscopy shoulder surgery works, who needs it, recovery stages, risks, and expected outcomes before treatment.",
+        };
+    }
+
+    if (params.slug === "acl-repair-over-age-60-is-surgery-still-a-viable-option-for-you") {
+        return {
+            title: {
+                absolute: "ACL Repair Over Age 60: Is surgery still an option for you?",
+            },
+            description: "Discover if ACL repair over age 60 is safe and effective, with insights on healing time, mobility goals, and choosing the right treatment plan.",
+        };
+    }
+
+    if (params.slug === "phases-of-achilles-tendinopathy-what-each-stage-means-and-how-to-treat-it") {
+        return {
+            title: {
+                absolute: "Phases of Achilles Tendinopathy: Causes & Treatment",
+            },
+            description: "Understand the phases of Achilles tendinopathy, including early, reactive, and chronic stages, with proven treatment strategies for healing.",
+        };
+    }
+
+    if (params.slug === "bad-signs-after-acl-surgery-warning-symptoms-you-should-never-ignore") {
+        return {
+            title: {
+                absolute: "Bad Signs After ACL Surgery: Signs You Must Not Ignore",
+            },
+            description: "Learn the bad signs after ACL surgery, including swelling, severe pain, fever, and instability, and know when to seek urgent medical attention quickly",
+        };
+    }
+
     if (params.slug === "herniated-disc-pain-find-expert-relief-in-bangalore-with-dr-nithin-n") {
         return {
             title: {
