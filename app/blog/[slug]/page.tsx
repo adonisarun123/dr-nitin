@@ -19,7 +19,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
     // Explicit overrides for the specific blog posts
-    if (params.slug === "types-of-total-knee-replacement-a-complete-patient-guide") {
+    if (params.slug === "types-of-total-knee-replacement") {
         return {
             title: {
                 absolute: "Types of Total Knee Replacement: A Complete Patient Guide",
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         };
     }
 
-    if (params.slug === "arthroscopy-shoulder-everything-you-need-to-know-before-your-surgery") {
+    if (params.slug === "arthroscopy-shoulder") {
         return {
             title: {
                 absolute: "Arthroscopy Shoulder Surgery: Complete 2026 Guide",
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         };
     }
 
-    if (params.slug === "acl-repair-over-age-60-is-surgery-still-a-viable-option-for-you") {
+    if (params.slug === "acl-repair-over-age-60") {
         return {
             title: {
                 absolute: "ACL Repair Over Age 60: Is surgery still an option for you?",
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         };
     }
 
-    if (params.slug === "phases-of-achilles-tendinopathy-what-each-stage-means-and-how-to-treat-it") {
+    if (params.slug === "phases-of-achilles-tendinopathy") {
         return {
             title: {
                 absolute: "Phases of Achilles Tendinopathy: Causes & Treatment",
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         };
     }
 
-    if (params.slug === "bad-signs-after-acl-surgery-warning-symptoms-you-should-never-ignore") {
+    if (params.slug === "bad-signs-after-acl-surgery") {
         return {
             title: {
                 absolute: "Bad Signs After ACL Surgery: Signs You Must Not Ignore",
