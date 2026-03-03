@@ -130,7 +130,7 @@ export const testimonialsData = [
 
 export const blogPosts = [
   {
-    slug: "types-of-total-knee-replacement-a-complete-patient-guide",
+    slug: "types-of-total-knee-replacement",
     title: "Types of Total Knee Replacement: A Complete Patient Guide (2026)",
     excerpt: "Learn about types of total knee replacement, including partial, traditional, and minimally invasive options, to choose the right surgery in 2026.",
     date: "Mar 2, 2026",
@@ -374,7 +374,7 @@ export const blogPosts = [
     `
   },
   {
-    slug: "arthroscopy-shoulder-everything-you-need-to-know-before-your-surgery",
+    slug: "arthroscopy-shoulder",
     title: "Arthroscopy Shoulder: Everything You Need to Know Before Your Surgery",
     excerpt: "If you have been living with persistent shoulder pain, limited arm movement, or a shoulder injury that hasn't responded to rest and physiotherapy, your orthopaedic surgeon may have recommended shoulder arthroscopy. This minimally invasive procedure has transformed the way shoulder conditions are treated, offering faster recovery, smaller scars, and better outcomes compared to traditional open surgery.",
     date: "Mar 2, 2026",
@@ -575,7 +575,7 @@ export const blogPosts = [
     `
   },
   {
-    slug: "phases-of-achilles-tendinopathy-what-each-stage-means-and-how-to-treat-it",
+    slug: "phases-of-achilles-tendinopathy",
     title: "Phases of Achilles Tendinopathy: What Each Stage Means and How to Treat It",
     excerpt: "If you have been dealing with persistent pain at the back of your ankle or lower leg, you have probably come across the term Achilles tendinopathy. This guide breaks down every phase, explains what is happening inside the tendon, and outlines the right treatment.",
     date: "Mar 2, 2026",
@@ -759,7 +759,7 @@ export const blogPosts = [
     `
   },
   {
-    slug: "acl-repair-over-age-60-is-surgery-still-a-viable-option-for-you",
+    slug: "acl-repair-over-age-60",
     title: "ACL Repair Over Age 60: Is Surgery Still a Viable Option for You?",
     excerpt: "A torn ACL does not have to mean the end of an active life for older adults. If you are over 60 and have been told your knee instability is due to an ACL tear, you likely have more options than you realize.",
     date: "Mar 2, 2026",
@@ -947,7 +947,7 @@ export const blogPosts = [
     `
   },
   {
-    slug: "bad-signs-after-acl-surgery-warning-symptoms-you-should-never-ignore",
+    slug: "bad-signs-after-acl-surgery",
     title: "Bad Signs After ACL Surgery: Warning Symptoms You Should Never Ignore",
     excerpt: "Watch out for these bad signs after ACL surgery. Learn the warning symptoms you should never ignore for a safe and effective recovery.",
     date: "Mar 2, 2026",
