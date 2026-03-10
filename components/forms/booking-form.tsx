@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { Send, CheckCircle, Loader2 } from "lucide-react";
+import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
+import { Send, Loader2 } from "lucide-react";
 import { trackFormEvent, getUTMParameters } from "@/lib/analytics";
 
 interface BookingFormProps {
@@ -19,8 +20,8 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
         message: "",
     });
 
+    const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
     const [error, setError] = useState("");
     const formStarted = useRef(false);
     const fieldsInteracted = useRef<Set<string>>(new Set());
@@ -99,8 +100,6 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                 utm_params: getUTMParameters(),
             });
 
-            setIsSuccess(true);
-
             // Track successful submission
             trackFormEvent('booking_form', 'success', {
                 source,
@@ -109,21 +108,8 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                 utm_params: getUTMParameters(),
             });
 
-            // Reset form after 3 seconds
-            setTimeout(() => {
-                setFormData({
-                    name: "",
-                    phone: "",
-                    email: "",
-                    condition: "",
-                    preferredLocation: "",
-                    preferredDate: "",
-                    message: "",
-                });
-                setIsSuccess(false);
-                formStarted.current = false;
-                fieldsInteracted.current.clear();
-            }, 3000);
+            // Redirect to thank you page
+            router.push('/thank-you');
         } catch (err) {
             console.error('🔴 Form submission error:', err);
             console.error('🔴 Error details:', err instanceof Error ? err.message : 'Unknown error');
@@ -141,24 +127,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
         }
     };
 
-    if (isSuccess) {
-        return (
-            <div className="text-center py-12">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                    <CheckCircle className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Thank You!
-                </h3>
-                <p className="text-gray-600 mb-4">
-                    Your appointment request has been received.
-                </p>
-                <p className="text-gray-600">
-                    We'll contact you within 24 hours to confirm your appointment.
-                </p>
-            </div>
-        );
-    }
+
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
