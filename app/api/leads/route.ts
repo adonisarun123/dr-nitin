@@ -86,18 +86,26 @@ export async function POST(request: NextRequest) {
         console.log('✅ Database insert successful! Lead ID:', insertedLead.id);
 
         // Generate and send email notification
-        const salesEmail = process.env.SALES_EMAIL;
+        let recipientEmail = process.env.SALES_EMAIL;
+
+        // Override recipient based on location
+        if (leadData.preferredLocation === 'hsr-layout') {
+            recipientEmail = 'healthnest2010@yahoo.in';
+        } else if (leadData.preferredLocation === 'attibele') {
+            recipientEmail = 'raghavahospital2002@gmail.com';
+        }
+
         const bccEmail = process.env.BCC_EMAIL;
 
-        if (salesEmail) {
-            console.log('📧 Attempting to send email to:', salesEmail);
+        if (recipientEmail) {
+            console.log('📧 Attempting to send email to:', recipientEmail);
             if (bccEmail) {
                 console.log('📧 BCC email configured:', bccEmail);
             }
             const { html, text } = generateLeadNotificationEmail(leadData);
 
             const emailResult = await sendEmail({
-                to: salesEmail,
+                to: recipientEmail,
                 subject: `🏥 New Appointment Request from ${leadData.name}`,
                 html,
                 text,
@@ -111,7 +119,7 @@ export async function POST(request: NextRequest) {
                 console.log('✅ Email sent successfully! Message ID:', emailResult.messageId);
             }
         } else {
-            console.warn('⚠️ SALES_EMAIL not configured, skipping email notification');
+            console.warn('⚠️ No recipient email configured (SALES_EMAIL missing and no matching location), skipping email notification');
         }
 
         // Return success response

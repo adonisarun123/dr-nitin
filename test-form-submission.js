@@ -23,9 +23,15 @@ fetch('http://localhost:3000/api/leads', {
     },
     body: JSON.stringify(testLead),
 })
-    .then(response => response.json())
-    .then(data => {
-        console.log('✅ Response:', JSON.stringify(data, null, 2));
+    .then(async response => {
+        const text = await response.text();
+        try {
+            const data = JSON.parse(text);
+            console.log('✅ Response:', JSON.stringify(data, null, 2));
+        } catch (e) {
+            require('fs').writeFileSync('error.html', text);
+            console.error('❌ Error parsing JSON. Wrote Raw Response to error.html');
+        }
     })
     .catch(error => {
         console.error('❌ Error:', error);
