@@ -1,6 +1,6 @@
 // Google Analytics 4 helper functions
 
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+export const GA_MEASUREMENT_ID = 'GT-K8MTGRQ9';
 
 // Initialize GA4
 export const initGA = () => {

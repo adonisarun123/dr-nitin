@@ -6,7 +6,7 @@ export default function BookAppointmentLayout({
 }: {
     children: React.ReactNode;
 }) {
-    const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+    const GA_MEASUREMENT_ID = 'GT-K8MTGRQ9';
     const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
     return (
