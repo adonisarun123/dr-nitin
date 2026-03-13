@@ -41,7 +41,7 @@ export const trackEvent = (event: AnalyticsEvent) => {
 export const trackPageView = (url: string, title?: string) => {
     // Google Analytics 4
     if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
+        (window as any).gtag('config', 'GT-K8MTGRQ9', {
             page_path: url,
             page_title: title,
         });
@@ -62,7 +62,7 @@ export const trackConversion = (conversionType: 'lead' | 'contact' | 'phone_clic
     // Google Analytics 4
     if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'conversion', {
-            send_to: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
+            send_to: 'GT-K8MTGRQ9',
             conversion_type: conversionType,
             ...metadata,
         });
