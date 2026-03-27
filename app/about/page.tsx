@@ -11,7 +11,8 @@ export const metadata: Metadata = {
     title: {
         absolute: "About Dr Nitin N Sunku | Orthopedic Surgeon in Bengaluru",
     },
-    description: "Know Dr Nitin N Sunku, experienced orthopedic surgeon in Bengaluru specializing in sports injuries, knee care, joint replacement and advanced treatment.",
+    description:
+        "Know Dr Nitin N Sunku, experienced orthopedic surgeon in Bengaluru specializing in sports injuries, knee care, joint replacement and advanced treatment with over 10 years of focused practice.",
 };
 
 export default function AboutPage() {
@@ -83,7 +84,7 @@ export default function AboutPage() {
                             <p className="text-xl font-semibold text-primary mb-6">Consultant Orthopaedic Surgeon | Sports Injuries | Arthroscopy & Joint Care</p>
                             <div className="text-lg text-gray-600 space-y-4 mb-8">
                                 <p>
-                                    Dr. Nitin N. Sunku is a highly regarded <strong>Consultant Orthopaedic Surgeon in Bengaluru</strong>, known for his expertise in <strong>sports injuries, knee conditions, arthroscopy, joint replacement, and trauma care</strong>. With over <strong>7 years of focused orthopaedic experience</strong>, he combines advanced clinical skill with a patient-first philosophy to deliver reliable, long-term outcomes.
+                                    Dr. Nitin N. Sunku is a highly regarded <strong>Consultant Orthopaedic Surgeon in Bengaluru</strong>, known for his expertise in <strong>sports injuries, knee conditions, arthroscopy, joint replacement, and trauma care</strong>. With over <strong>10 years of focused orthopaedic experience</strong>, he combines advanced clinical skill with a patient-first philosophy to deliver reliable, long-term outcomes.
                                 </p>
                                 <p>
                                     He completed his <strong>MBBS</strong> from <em>Rajarajeshwari Medical College & Hospital</em> and his <strong>MS in Orthopaedics</strong> from <em>Bangalore Medical College & Research Institute</em>. He has further pursued advanced <strong>fellowship training in Arthroscopy, Joint Replacement, and Sports Medicine</strong>, enabling him to manage complex musculoskeletal conditions with precision.
@@ -99,7 +100,7 @@ export default function AboutPage() {
                             <div className="grid sm:grid-cols-2 gap-6 mb-8">
                                 <div className="bg-blue-50 p-4 rounded-xl">
                                     <Award className="h-8 w-8 text-blue-600 mb-2" />
-                                    <h3 className="font-bold text-gray-900">7+ Years</h3>
+                                    <h3 className="font-bold text-gray-900">10+ Years</h3>
                                     <p className="text-sm text-gray-600">Specialist Experience</p>
                                 </div>
                                 <div className="bg-green-50 p-4 rounded-xl">

@@ -44,7 +44,7 @@ export default function BookAppointmentPage() {
         {
             icon: Users,
             title: "Extensive Experience in Joint & Trauma Care",
-            description: "Over 7 years of specialized experience in complex joint surgeries and trauma management"
+            description: "Over 10 years of specialized experience in complex joint surgeries and trauma management"
         },
         {
             icon: CheckCircle,
@@ -124,7 +124,7 @@ export default function BookAppointmentPage() {
                                 </div>
                                 <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
                                     <CheckCircle className="w-5 h-5 text-blue-600" />
-                                    <span className="text-sm font-medium text-blue-900">7+ Years Experience</span>
+                                <span className="text-sm font-medium text-blue-900">10+ Years Experience</span>
                                 </div>
                             </div>
 

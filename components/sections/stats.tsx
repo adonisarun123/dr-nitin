@@ -10,7 +10,7 @@ const stats = [
     {
         id: 2,
         name: "Years Experience",
-        value: "7+",
+        value: "10+",
         icon: Award,
     },
     {
