@@ -2253,7 +2253,7 @@ export const blogPosts = [
     excerpt: "Meniscus tear surgery recovery time explained with a week-by-week guide covering healing stages, exercises, and recovery tips.",
     date: "Apr 1, 2026",
     category: "Meniscal Care",
-    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-01.jpg?updatedAt=1766843020657",
+    image: "https://ik.imagekit.io/M0nger/Meniscus-Tear-Surgery-recovery-Time.jpeg",
     content: `
       <p>A meniscus tear can feel like the end of your active life. Whether you twisted your knee during a football match on Bengaluru's turf, stepped awkwardly while jogging on Cubbon Park's trails, or simply squatted wrong at the gym, the question that follows is almost always the same: How long will recovery take after meniscus tear surgery?</p>
       <p>The honest answer: it depends. Recovery time after meniscus surgery ranges from as little as 4–6 weeks for a partial meniscectomy to 4–6 months or more for a meniscus repair. But knowing the difference between these procedures, what each phase of recovery looks like, and what you can do to speed things along — that knowledge can make all the difference.</p>
@@ -2429,7 +2429,7 @@ export const blogPosts = [
     excerpt: "Explore bucket handle meniscus tear treatment in Bengaluru with insights on causes, symptoms, and advanced diagnosis methods.",
     date: "Apr 1, 2026",
     category: "Meniscal Care",
-    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-010.jpg?updatedAt=1766843020652",
+    image: "https://ik.imagekit.io/M0nger/Bucket-Handel-Meniscus-Tear.jpeg",
     content: `
       <p>Bucket handle meniscus tear is one of the most serious and disabling knee injuries a person can experience. If you suddenly cannot fully straighten your knee after a sport or a twisting movement, you may be dealing with this specific type of meniscal injury. The good news is that with the right specialist, a full recovery and return to your normal activities — including sport — is absolutely achievable.</p>
       
@@ -2497,7 +2497,7 @@ export const blogPosts = [
     excerpt: "Explore meniscus tear treatment options and understand whether repair, reconstruction, or surgery is best for recovery.",
     date: "Apr 1, 2026",
     category: "Meniscal Care",
-    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-20.jpg?updatedAt=1766843020606",
+    image: "https://ik.imagekit.io/M0nger/Meniscus%20tear.jpeg",
     content: `
       <p>That sharp pop during a football tackle, or the slow ache after weeks of running — these are all ways a meniscus tear announces itself. It is one of the most common knee injuries seen in active adults across Bengaluru.</p>
       
@@ -2544,7 +2544,7 @@ export const blogPosts = [
     excerpt: "Learn activities to avoid with a tear in the medial meniscus to prevent further injury and support safe and effective knee recovery.",
     date: "Apr 1, 2026",
     category: "Knee Care",
-    image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-21.jpg?updatedAt=1766843020664",
+    image: "https://ik.imagekit.io/M0nger/activities-to-avoid-with-meniscus-tear.jpeg",
     content: `
       <p>A medial meniscus tear demands respect and careful management. Getting activity choices wrong can turn a manageable injury into one that requires complex surgery.</p>
       
