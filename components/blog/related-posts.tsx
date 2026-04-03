@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, Calendar, Tag } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Tag } from "lucide-react";
 import { blogPosts } from "@/lib/data";
 
 interface RelatedPostsProps {
@@ -35,8 +36,13 @@ export function RelatedPosts({ currentSlug, category }: RelatedPostsProps) {
                         href={`/blog/${post.slug}`}
                         className="group flex flex-col bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1"
                     >
-                        <div className="bg-gray-100 aspect-video flex items-center justify-center text-gray-400 text-sm">
-                            Article Image
+                        <div className="aspect-video relative w-full overflow-hidden bg-gray-100">
+                            <Image
+                                src={post.image || "/blog_image.jpg"}
+                                alt={post.title}
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
                             <div className="flex items-center gap-2 text-xs font-medium text-primary mb-3">

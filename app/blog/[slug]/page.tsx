@@ -271,6 +271,42 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         };
     }
 
+    if (params.slug === "meniscus-tear-surgery-recovery-time") {
+        return {
+            title: {
+                absolute: "Meniscus Tear Surgery Recovery Time: Week-by-Week Guide",
+            },
+            description: "Meniscus tear surgery recovery time explained with a week-by-week guide covering healing stages, exercises, and recovery tips.",
+        };
+    }
+
+    if (params.slug === "bucket-handle-meniscus-tear") {
+        return {
+            title: {
+                absolute: "Bucket Handle Meniscus Tear: Causes and Treatment Guide",
+            },
+            description: "Explore bucket handle meniscus tear treatment in Bengaluru with insights on causes, symptoms, and advanced diagnosis methods.",
+        };
+    }
+
+    if (params.slug === "meniscus-tear") {
+        return {
+            title: {
+                absolute: "Meniscus Tear: Repair, Reconstruction or Surgery Guide",
+            },
+            description: "Explore meniscus tear treatment options and understand whether repair, reconstruction, or surgery is best for recovery.",
+        };
+    }
+
+    if (params.slug === "activities-to-avoid-with-a-tear-in-the-medial-meniscus") {
+        return {
+            title: {
+                absolute: "Activities to Avoid with a Medial Meniscus Tear Recovery",
+            },
+            description: "Learn activities to avoid with a tear in the medial meniscus to prevent further injury and support safe and effective knee recovery.",
+        };
+    }
+
     const post = blogPosts.find((p) => p.slug === params.slug);
     if (!post) return {};
 

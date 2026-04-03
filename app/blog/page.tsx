@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+    const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
     return (
         <main className="min-h-screen pb-20">
             <PageHeader
@@ -20,7 +22,7 @@ export default function BlogPage() {
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {blogPosts.map((post) => (
+                    {sortedPosts.map((post) => (
                         <article key={post.slug} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-shadow flex flex-col h-full">
                             <div className="aspect-video relative w-full overflow-hidden">
                                 <Image
