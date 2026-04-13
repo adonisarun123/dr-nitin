@@ -70,9 +70,18 @@ export default function Home() {
               step.
             </p>
             <p>
-              New patients are seen at Health Nest Hospital in HSR Layout and at Raghava Multispeciality
-              Hospital near Attibele. Use the booking form on the contact page, call the numbers in the
-              footer, or read the blog library first if you want plain-language background before your visit.
+              New patients are seen primarily at <strong>Raghava Multispeciality Hospital, Attibele</strong>,
+              with additional sessions at <strong>Health Nest Hospital, HSR Layout</strong>. Use the booking
+              form on the contact page, call the numbers in the footer, or read the blog library first if you
+              want plain-language background before your visit.
+            </p>
+            <p>
+              Common reasons for referral include knee ACL or meniscus symptoms, shoulder rotator cuff or
+              frozen shoulder pain, hip or knee arthritis when walking distance is shrinking, acute fractures
+              after a fall or collision, sports injuries that need staged return-to-play plans, and persistent
+              back or leg pain that has been assessed for urgent warning signs. Each pathway starts with
+              listening to your story, examining the joint or region involved, and only then ordering tests
+              that will change the plan.
             </p>
           </div>
         </div>

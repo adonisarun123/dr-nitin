@@ -5,6 +5,7 @@ import { servicesData, siteConfig, practicePostalAddress } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone, ArrowLeft } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
+import { ServicePageLocalContext } from "@/components/seo/service-page-local-context";
 
 // Generate static params for all services
 export function generateStaticParams() {
@@ -141,13 +142,13 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 Dr. Nitin Sunku uses a patient-first approach to diagnosis, combining clinical examination with advanced imaging only when necessary. Treatment plans are tailored to your specific goals, whether it's returning to professional sports or simply walking pain-free.
                             </p>
                             <p className="text-gray-600 leading-relaxed mt-4">
-                                Appointments for {service.title.toLowerCase()} are available at Health Nest Hospital,
-                                HSR Layout, and at Raghava Multispeciality Hospital on Sarjapura–Attibele Road.
-                                Bring prior scans, a list of medicines, and footwear or clothing that lets the
-                                affected joint be examined properly. Follow-up intervals depend on whether you
-                                are in a diagnostic phase, recovering after a procedure, or completing a
-                                structured physiotherapy block—each step is explained so you know why the next
-                                visit matters.
+                                Appointments for {service.title.toLowerCase()} are available at Raghava
+                                Multispeciality Hospital on Sarjapura–Attibele Road (Attibele) and at Health Nest
+                                Hospital, HSR Layout. Bring prior scans, a list of medicines, and footwear or
+                                clothing that lets the affected joint be examined properly. Follow-up intervals
+                                depend on whether you are in a diagnostic phase, recovering after a procedure, or
+                                completing a structured physiotherapy block—each step is explained so you know
+                                why the next visit matters.
                             </p>
                         </div>
 
@@ -169,6 +170,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 With specialized fellowship training and experience as a team doctor for professional athletes, Dr. Nitin brings a high level of precision to every case.
                             </p>
                         </div>
+
+                        <ServicePageLocalContext serviceTitle={service.title} />
                     </div>
 
                     <div className="lg:col-span-1">
@@ -191,8 +194,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             <div className="mt-8 border-t border-gray-200 pt-6">
                                 <h4 className="font-semibold text-gray-900 mb-2">Locations</h4>
                                 <ul className="text-sm text-gray-600 space-y-2">
-                                    <li>• Health Nest Hospital, HSR</li>
-                                    <li>• Raghava Multispeciality</li>
+                                    <li>• Raghava Multispeciality, Attibele</li>
+                                    <li>• Health Nest Hospital, HSR Layout</li>
                                 </ul>
                             </div>
                         </div>

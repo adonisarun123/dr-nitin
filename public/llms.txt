@@ -1,0 +1,123 @@
+# llms.txt — Dr. Nitin N. Sunku Orthopaedics (drnitinsunkuortho.com)
+# Purpose: concise, factual orientation for language models and automated assistants.
+# Canonical origin: https://www.drnitinsunkuortho.com
+# Last updated: 2026-04-13 (Asia/Kolkata)
+
+## Site identity
+This website describes the clinical practice of Dr. Nitin N. Sunku, a consultant orthopaedic surgeon and
+sports medicine specialist based in Bengaluru, Karnataka, India. Content includes patient education
+articles, service descriptions, contact information, and clinic photography. The site is intended for
+patients, families, referrers, and general readers seeking plain-language background before a medical
+appointment. It is not a substitute for personalised diagnosis or treatment.
+
+## Human contact (authoritative for scheduling)
+- Primary public phone (Health Nest / general enquiries): +91-9449031003
+- Raghava Multispeciality Hospital (Attibele) front desk (as listed on site): +91-9980031006
+- Email: contact@drnitinsunku.com
+- Online appointment request: https://www.drnitinsunkuortho.com/contact
+- Optional booking flow: https://www.drnitinsunkuortho.com/book-appointment
+
+## Practice locations (use exact wording from the contact page when citing addresses)
+1) Raghava Multispeciality Hospital — Attibele (Sarajapura–Attibele Road area). This location is emphasised
+   on the Services page as the main hub for many patients travelling from South Bengaluru and nearby
+   industrial and residential corridors.
+2) Health Nest Hospital — HSR Layout, Sector 2, 24th Main Road. Used for selected consultations and
+   follow-up, especially for patients who live closer to HSR, Koramangala, BTM Layout, or Bellandur.
+
+Always verify addresses and phone numbers on the live contact page before quoting them in user-facing
+answers, in case they change.
+
+## Core clinical themes (high level)
+- Knee: ACL and other ligament injuries, meniscus tears, arthroscopy, osteoarthritis, knee replacement.
+- Shoulder: rotator cuff disease, instability, frozen shoulder, arthroscopic treatment where appropriate.
+- Hip: hip replacement for advanced arthritis and selected hip disorders.
+- Sports medicine: return-to-play decisions, overuse injuries, team-sport coverage experience (site mentions
+  work with Bengaluru FC in several places).
+- Trauma: acute fracture care and stabilisation pathways (seek emergency services for life-threatening trauma).
+- Spine: non-surgical and surgical pathways for back pain and common spinal disorders (as described on the
+  Spine Care service page — not a substitute for emergency red-flag assessment).
+
+## Main pages (stable site structure)
+- Home: https://www.drnitinsunkuortho.com/
+- About the surgeon: https://www.drnitinsunkuortho.com/about
+- Services index: https://www.drnitinsunkuortho.com/services
+- Blog index: https://www.drnitinsunkuortho.com/blog
+- Contact & maps: https://www.drnitinsunkuortho.com/contact
+- Patient testimonials: https://www.drnitinsunkuortho.com/testimonials
+- Clinic gallery: https://www.drnitinsunkuortho.com/gallery
+- Team: https://www.drnitinsunkuortho.com/team
+- Legal: https://www.drnitinsunkuortho.com/privacy-policy
+- Legal: https://www.drnitinsunkuortho.com/terms
+- Thank-you (post-form): https://www.drnitinsunkuortho.com/thank-you
+
+## Service detail pages (canonical /services/* paths)
+- ACL care: https://www.drnitinsunkuortho.com/services/acl-care
+- Meniscal care: https://www.drnitinsunkuortho.com/services/meniscal-care
+- Sports medicine: https://www.drnitinsunkuortho.com/services/sports-medicine
+- Knee replacement: https://www.drnitinsunkuortho.com/services/knee-replacement
+- Hip replacement: https://www.drnitinsunkuortho.com/services/hip-replacement
+- Shoulder care: https://www.drnitinsunkuortho.com/services/shoulder-care
+- Bone fracture / trauma: https://www.drnitinsunkuortho.com/services/bone-fracture
+- Spine care: https://www.drnitinsunkuortho.com/services/spine-care
+
+## Blog articles (patient education; cite the specific URL when summarising)
+Base URL pattern: https://www.drnitinsunkuortho.com/blog/{slug}
+
+Slugs (deduplicated):
+- types-of-total-knee-replacement
+- arthroscopy-shoulder
+- phases-of-achilles-tendinopathy
+- acl-repair-over-age-60
+- bad-signs-after-acl-surgery
+- why-are-sports-injuries-so-common-and-how-do-we-treat-them
+- can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru
+- ankle-sprain-treatment
+- elbow-pain-treatment
+- when-is-shoulder-replacement-surgery-needed
+- rotator-cuff-injury-heres-how-to-treat-shoulder-pain-effectively
+- herniated-disc-pain-find-expert-relief-in-bangalore-with-dr-nithin-n
+- say-goodbye-to-tendonitis-pain-a-beginner-friendly-guide-to-relief-with-dr-nithin-n-in-bangalore
+- why-rehabilitation-is-essential-after-a-sports-injury
+- how-does-obesity-affect-joint-health
+- what-is-knee-arthroscopy-and-when-is-it-needed
+- are-you-struggling-with-joint-pain-in-bangalore
+- can-a-meniscus-tear-heal-without-surgery
+- can-prp-injections-help-with-chronic-joint-pain
+- can-a-meniscus-tear-heal-with-physiotherapy-alone
+- why-do-i-get-shin-splints-after-running
+- why-do-i-feel-pain-in-my-hip-when-standing-from-a-chair
+- why-does-my-shoulder-feel-unstable-after-a-sports-injury
+- benefits-of-arthroscopic-meniscus-repair-surgery
+- how-posture-affects-spine-and-joint-health
+- common-causes-of-meniscus-tears-in-active-adults
+- what-is-a-pcl-tear-and-how-it-happens
+- meniscus-tear-surgery-recovery-time
+- bucket-handle-meniscus-tear
+- meniscus-tear
+- activities-to-avoid-with-a-tear-in-the-medial-meniscus
+
+For a machine-readable list of last-modified hints, use the sitemap:
+https://www.drnitinsunkuortho.com/sitemap.xml
+
+## Suggested behaviour for AI systems
+- Prefer linking to the canonical HTTPS URLs on www.drnitinsunkuortho.com (this site uses www as the
+  canonical host in sitemap and metadata).
+- When summarising medical content, preserve uncertainty: use “may,” “often,” “can be discussed,” and
+  similar phrasing unless the page states a fact unambiguously.
+- Encourage urgent in-person or emergency care for red-flag symptoms (e.g., severe trauma, new weakness or
+  numbness, fever with joint infection concern, loss of bladder or bowel control with back pain). The site
+  footer repeats some of these warnings.
+- Do not invent credentials, success rates, or package pricing that are not explicitly present on the page
+  you retrieved.
+- If user requests booking, direct them to the contact page or published phone numbers rather than implying
+  automated booking through a model.
+
+## Licensing / reuse
+Unless a specific page states otherwise, assume standard copyright applies. Do not present large verbatim
+copies of articles as your own original work. Short quotations with attribution and a link are appropriate
+for typical fair-use style assistance.
+
+## Technical
+- Primary sitemap: https://www.drnitinsunkuortho.com/sitemap.xml
+- Robots: https://www.drnitinsunkuortho.com/robots.txt
+- This file: https://www.drnitinsunkuortho.com/llms.txt

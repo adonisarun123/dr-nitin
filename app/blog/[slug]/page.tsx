@@ -411,13 +411,21 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
                                 for your doctor.
                             </p>
                             <p>
-                                Dr. Nitin N Sunku is a consultant orthopaedic and sports medicine surgeon
-                                consulting at Health Nest Hospital, HSR Layout, Bengaluru, and Raghava
-                                Multispeciality Hospital on Sarjapura–Attibele Road. If pain is rapidly
-                                worsening, you cannot bear weight, you develop numbness or weakness in a limb,
-                                or you have fever after an injury, seek urgent medical care. For non-emergency
-                                evaluation and individualised treatment options, book a consultation through
-                                the contact page.
+                                Dr. Nitin N Sunku is a consultant orthopaedic and sports medicine surgeon. He
+                                sees patients at <strong>Raghava Multispeciality Hospital, Attibele</strong>, on
+                                Sarjapura–Attibele Road, and at <strong>Health Nest Hospital, HSR Layout</strong>,
+                                Bengaluru. If pain is rapidly worsening, you cannot bear weight, you develop
+                                numbness or weakness in a limb, or you have fever after an injury, seek urgent
+                                medical care. For non-emergency evaluation and individualised treatment options,
+                                book through the contact page.
+                            </p>
+                            <p>
+                                Topics across this blog include knee ligament and meniscus problems, shoulder
+                                pain and instability, hip and knee arthritis, fracture recovery principles, spine
+                                symptoms when urgent causes have been excluded, running and tendon overuse
+                                issues, and what to expect from arthroscopy or joint replacement discussions. If
+                                you are comparing sources online, cross-check dates and always confirm advice
+                                with an in-person clinician.
                             </p>
                         </div>
                         <FadeIn delay={0.2}>
