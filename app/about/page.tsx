@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, Award, BookOpen, Heart } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { JsonLd } from "@/components/seo/json-ld";
+import { practicePostalAddress } from "@/lib/data";
+import { siteOrigin } from "@/lib/site-url";
 
 export const metadata: Metadata = {
     title: {
@@ -25,20 +27,25 @@ export default function AboutPage() {
             "Sports Medicine"
         ],
         "description": "Dr. Nitin N. Sunku is a Consultant Orthopaedic Surgeon in Bengaluru specialising in sports injuries, knee disorders, arthroscopy, joint replacement and trauma care.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bengaluru",
-            "addressRegion": "KA",
-            "addressCountry": "IN"
-        },
-        "alumniOf": [
+        "address": practicePostalAddress,
+        "hasCredential": [
             {
-                "@type": "CollegeOrUniversity",
-                "name": "Rajarajeshwari Medical College & Hospital"
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Medical degree",
+                "name": "MBBS",
+                "recognizedBy": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Rajarajeshwari Medical College & Hospital"
+                }
             },
             {
-                "@type": "CollegeOrUniversity",
-                "name": "Bangalore Medical College & Research Institute"
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Medical specialty degree",
+                "name": "MS Orthopaedics",
+                "recognizedBy": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Bangalore Medical College & Research Institute"
+                }
             }
         ],
         "knowsAbout": [
@@ -48,12 +55,12 @@ export default function AboutPage() {
             "Trauma Care",
             "Orthopaedic Surgery"
         ],
-        "affiliation": {
-            "@type": "SportsTeam",
+        "memberOf": {
+            "@type": "SportsOrganization",
             "name": "Bengaluru Football Club"
         },
         "sameAs": [
-            "https://drnitinsunkuortho.com"
+            siteOrigin
         ]
     };
 
@@ -64,6 +71,25 @@ export default function AboutPage() {
                 title="Nurturing Mobility. Empowering Active Lives."
                 description="Dr. Nitin Sunku believes in evidence-based, personalized orthopedic care that prioritizes your long-term joint health."
             />
+
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl -mt-6 pb-8">
+                <div className="space-y-4 text-gray-700 leading-relaxed text-base">
+                    <p>
+                        This page summarises Dr. Nitin N. Sunku&apos;s training philosophy and the clinical
+                        themes that shape his practice across Bengaluru. You will read how conservative care is
+                        balanced with modern arthroscopic and joint replacement techniques, why second opinions
+                        are welcomed, and how follow-up is structured after surgery so that strength and range
+                        of motion return in predictable stages.
+                    </p>
+                    <p>
+                        If you are comparing surgeons for a complex knee or shoulder problem, note the
+                        combination of academic hospital training, dedicated sports medicine exposure, and
+                        ongoing work with active patients from IT corridors, weekend runners, and professional
+                        sport. The sections below translate that background into what you can expect at the
+                        first consultation and beyond.
+                    </p>
+                </div>
+            </div>
 
             {/* Doctor Bio Section */}
             <section className="py-16 lg:py-24">

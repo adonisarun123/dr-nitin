@@ -19,6 +19,26 @@ export default function ServicesPage() {
                 description="Expert care for sports injuries, joint replacements, and bone health in HSR Layout."
             />
 
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-4xl">
+                <div className="space-y-4 text-gray-700 leading-relaxed text-base lg:text-lg">
+                    <p>
+                        Browse the service pages below to understand how common orthopaedic problems are
+                        assessed and treated in Dr. Nitin N. Sunku&apos;s practice. Each section summarises
+                        typical symptoms, what happens during a specialist consultation, and the range of
+                        surgical and non-surgical options that may be discussed after your examination.
+                    </p>
+                    <p>
+                        Care pathways cover ligament injuries such as ACL tears, meniscus problems, shoulder
+                        instability and rotator cuff disease, hip and knee arthritis requiring replacement when
+                        quality of life is affected, spine-related symptoms that need structured evaluation,
+                        acute fractures, and sports medicine issues for athletes who need realistic return-to-play
+                        timelines. If you are unsure which category fits your situation, start with sports
+                        medicine or the joint that hurts most, then book a combined assessment on the contact
+                        page.
+                    </p>
+                </div>
+            </div>
+
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {servicesData.map((service, idx) => (

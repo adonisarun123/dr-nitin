@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next'
 import { servicesData, blogPosts } from '@/lib/data'
+import { siteOrigin } from '@/lib/site-url'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://drnitinsunkuortho.com'
+    const baseUrl = siteOrigin
 
     const routes = [
         '',

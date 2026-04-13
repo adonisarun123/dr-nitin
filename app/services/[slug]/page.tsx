@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { servicesData } from "@/lib/data";
+import { servicesData, siteConfig, practicePostalAddress } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone, ArrowLeft } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -59,16 +59,17 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     if (params.slug === "bone-fracture") {
         return {
             title: "Bone Fracture Treatment in Attibele ",
-            description: "Comprehensive bone fracture care in Attibele by Dr. Nitin Sunku — expert diagnosis, stabilization & recovery plans for all types of fractures.",
+            description:
+                "Expert fracture and trauma care in Attibele with Dr. Nitin N Sunku — accurate diagnosis, immobilization or surgery when needed, and follow-up plans for safe healing.",
         };
     }
 
     if (params.slug === "spine-care") {
         return {
             title: {
-                absolute: "Bone Fracture Treatment in Attibele | Dr. Nitin Sunku",
+                absolute: "Spine Care Treatment in Attibele | Dr. Nitin Sunku",
             },
-            description: "Comprehensive bone fracture care in Attibele by Dr. Nitin Sunku — expert diagnosis, stabilization & recovery plans for all types of fractures.",
+            description: "Comprehensive spine care in Attibele by Dr. Nitin Sunku — expert evaluation and non-surgical or surgical management of back pain and spinal disorders.",
         };
     }
 
@@ -96,7 +97,9 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         "description": service.shortDesc,
         "provider": {
             "@type": "Physician",
-            "name": "Dr. Nitin N Sunku"
+            "name": "Dr. Nitin N Sunku",
+            "address": practicePostalAddress,
+            "telephone": siteConfig.phone
         }
     };
 
@@ -136,6 +139,15 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             </p>
                             <p className="text-gray-600 leading-relaxed mt-4">
                                 Dr. Nitin Sunku uses a patient-first approach to diagnosis, combining clinical examination with advanced imaging only when necessary. Treatment plans are tailored to your specific goals, whether it's returning to professional sports or simply walking pain-free.
+                            </p>
+                            <p className="text-gray-600 leading-relaxed mt-4">
+                                Appointments for {service.title.toLowerCase()} are available at Health Nest Hospital,
+                                HSR Layout, and at Raghava Multispeciality Hospital on Sarjapura–Attibele Road.
+                                Bring prior scans, a list of medicines, and footwear or clothing that lets the
+                                affected joint be examined properly. Follow-up intervals depend on whether you
+                                are in a diagnostic phase, recovering after a procedure, or completing a
+                                structured physiotherapy block—each step is explained so you know why the next
+                                visit matters.
                             </p>
                         </div>
 

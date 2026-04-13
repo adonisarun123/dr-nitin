@@ -19,6 +19,16 @@ export default function TeamPage() {
                 description="Dedicated professionals committed to getting you back to your best."
             />
 
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-3xl text-center">
+                <p className="text-gray-700 leading-relaxed">
+                    The profiles below introduce clinicians and staff who support orthopaedic consultations,
+                    scheduling, and perioperative education. Together they help maintain short waiting times,
+                    coordinate investigations, and ensure you understand home exercises or wound care before
+                    discharge. Leadership of the surgical team rests with Dr. Nitin N. Sunku; reach him through
+                    the same contact channels listed site-wide.
+                </p>
+            </div>
+
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                 <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                     {teamData.map((member, idx) => (

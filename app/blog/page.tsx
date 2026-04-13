@@ -20,6 +20,16 @@ export default function BlogPage() {
                 description="Expert insights, tips, and updates from Dr. Nitin Sunku on orthopedic health and sports medicine."
             />
 
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-4xl">
+                <p className="text-gray-700 leading-relaxed text-base">
+                    Articles are organised by topic—knee ligaments, meniscus, shoulder pain, spine symptoms,
+                    running injuries, joint replacement, and recovery after sports trauma. Skim the excerpts
+                    below to find a guide that matches your question, then read the full post for structured
+                    explanations you can discuss with Dr. Nitin N Sunku during a consultation in HSR Layout or
+                    Attibele. New guides are added when common themes emerge from clinic discussions.
+                </p>
+            </div>
+
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {sortedPosts.map((post) => (

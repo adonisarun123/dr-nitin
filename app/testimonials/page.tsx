@@ -18,6 +18,17 @@ export default function TestimonialsPage() {
                 description="Hear from patients who have regained their mobility and active lifestyle with Dr. Nitin's care."
             />
 
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-3xl text-center">
+                <p className="text-gray-700 leading-relaxed text-base">
+                    Feedback here comes from people treated for ligament injuries, meniscus tears, shoulder
+                    problems, joint replacement recovery, and fracture care. Quotes summarise their experience
+                    with communication, postoperative guidance, and confidence returning to work or sport. Your
+                    own outcome depends on diagnosis, adherence to rehabilitation, and general health; use
+                    these stories as encouragement rather than a guarantee of results. New patients can book
+                    through the contact page to discuss expectations in person.
+                </p>
+            </div>
+
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {testimonialsData.map((t) => (

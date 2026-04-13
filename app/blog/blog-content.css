@@ -1,6 +1,6 @@
-/* Blog Content Styling */
+/* Blog Content Styling — line length and rhythm help readability scores */
 .blog-content {
-  @apply text-gray-700 leading-relaxed;
+  @apply text-gray-700 leading-relaxed max-w-[70ch] mx-auto;
 }
 
 /* Headings */
@@ -16,9 +16,9 @@
   @apply text-xl font-heading font-semibold text-gray-800 mt-6 mb-3;
 }
 
-/* Paragraphs */
+/* Paragraphs — slightly shorter lines than text-lg for easier scanning */
 .blog-content p {
-  @apply text-lg text-gray-700 leading-relaxed mb-6;
+  @apply text-base md:text-lg text-gray-700 leading-[1.75] mb-5 md:mb-6;
 }
 
 /* Lists */
@@ -31,7 +31,7 @@
 }
 
 .blog-content li {
-  @apply text-lg text-gray-700 leading-relaxed pl-6 relative;
+  @apply text-base md:text-lg text-gray-700 leading-[1.7] pl-6 relative;
 }
 
 .blog-content ul li::before {

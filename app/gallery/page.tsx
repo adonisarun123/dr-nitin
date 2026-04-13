@@ -57,6 +57,25 @@ export default function GalleryPage() {
                 description="A glimpse into our clinic, advanced facilities, and patient-centered care environment."
             />
 
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-4xl">
+                <div className="text-gray-700 leading-relaxed space-y-4 text-base">
+                    <p>
+                        The photographs below document real consulting and waiting areas used for orthopaedic
+                        and sports medicine appointments. You will see reception and waiting spaces designed
+                        for comfort during busy clinic hours, private examination rooms where gait, range of
+                        motion, and swelling are checked systematically, and modern consultation rooms suited to
+                        reviewing imaging and consent discussions before any procedure.
+                    </p>
+                    <p>
+                        Facilities are located at Health Nest Hospital in HSR Layout, Bengaluru, with
+                        additional sessions at Raghava Multispeciality Hospital on Sarjapura–Attibele Road.
+                        Images may include team and community events where Dr. Sunku provides medical coverage;
+                        these highlight the same attention to detail applied to everyday patients recovering
+                        from injury or arthritis.
+                    </p>
+                </div>
+            </div>
+
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {images.map((image, idx) => (
