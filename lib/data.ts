@@ -6,6 +6,16 @@ export const siteConfig = {
   email: "contact@drnitinsunku.com",
 };
 
+/** PostalAddress for JSON-LD (LocalBusiness / Physician provider). */
+export const practicePostalAddress = {
+  "@type": "PostalAddress" as const,
+  streetAddress: siteConfig.address,
+  addressLocality: "Bengaluru",
+  addressRegion: "Karnataka",
+  postalCode: "560102",
+  addressCountry: "IN",
+};
+
 export const servicesData = [
   {
     slug: "acl-care",
@@ -368,7 +378,7 @@ export const blogPosts = [
           <p class="font-bold text-lg mb-2">Author: Dr. Nitin N. Sunku, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Consulting at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Bengaluru, Karnataka.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-white font-bold no-underline hover:bg-primary/90 h-10 px-4 py-2">
-              📞 Book an appointment: +91-9449031003 | Contact Us
+              Book appointment online or call +91-9449031003
           </a>
       </div>
     `
@@ -381,12 +391,14 @@ export const blogPosts = [
     category: "Shoulder Care",
     image: "https://ik.imagekit.io/M0nger/Arthroscopy%20Shoulder.jpg.jpeg",
     content: `
-      <p>If you have been living with persistent shoulder pain, limited arm movement, or a shoulder injury that hasn't responded to rest and physiotherapy, your orthopaedic surgeon may have recommended shoulder arthroscopy. This minimally invasive procedure has transformed the way shoulder conditions are treated, offering faster recovery, smaller scars, and better outcomes compared to traditional open surgery.</p>
-      <p>In this detailed guide, Dr. Nitin N. Sunku, a fellowship-trained arthroscopic surgeon based in HSR Layout, Bengaluru, walks you through everything you need to know about arthroscopy shoulder surgery, from what the procedure involves, to who needs it, what to expect during recovery, and when to seek specialist care.</p>
+      <p>Shoulder pain, stiffness, or an injury that did not improve with rest and physiotherapy may lead your surgeon to suggest shoulder arthroscopy. This is a keyhole (minimally invasive) operation.</p>
+      <p>Compared with open surgery, it often means less pain after the operation, smaller scars, and a quicker return to daily life or sport.</p>
+      <p>Dr. Nitin N. Sunku is a fellowship-trained arthroscopic surgeon in HSR Layout, Bengaluru. In this guide he explains what the procedure is, who it suits, what recovery is like, and when to seek specialist care.</p>
       <h2>What Is Shoulder Arthroscopy?</h2>
-      <p>Shoulder arthroscopy is a minimally invasive surgical procedure in which an orthopaedic surgeon uses a small camera, called an arthroscope, to examine, diagnose, and treat problems inside the shoulder joint. The word "arthroscopy" itself comes from the Greek words arthro (joint) and skopein (to look), meaning "to look within the joint."</p>
-      <p>During the procedure, the surgeon makes a small incision, roughly the size of a buttonhole, and inserts the arthroscope, which is connected to a video monitor. The live images help the surgeon navigate and treat damaged tissue using tiny, specialized instruments inserted through one to three additional small incisions.</p>
-      <p>Because the instruments are so small, arthroscopic shoulder surgery involves significantly less tissue damage than traditional open surgery. This translates to less postoperative pain, a lower risk of infection, shorter hospital stays, and a faster return to daily activities or sport.</p>
+      <p>Shoulder arthroscopy is keyhole surgery. The surgeon passes a small camera (arthroscope) into the joint to see the inside of the shoulder on a screen.</p>
+      <p>The word comes from Greek: “arthro” (joint) and “skopein” (to look). So it literally means to look inside the joint.</p>
+      <p>One small cut is used for the camera. One to three extra small cuts allow fine instruments to treat torn tissue, bone spurs, or tight capsule as needed.</p>
+      <p>Smaller cuts usually mean less soft-tissue damage than open surgery. Many patients have less pain after the operation, a lower wound risk, and a faster return to desk work, driving, or sport.</p>
       <p>Shoulder arthroscopy is the second most common orthopaedic procedure globally, after knee arthroscopy, a testament to how widely trusted and effective it has become.</p>
       <h2>Understanding the Shoulder Joint</h2>
       <p>Before exploring what arthroscopy treats, it helps to understand how complex your shoulder really is. The shoulder is the most mobile joint in the human body, capable of rotating in nearly every direction. It is made up of three bones:</p>
@@ -395,17 +407,21 @@ export const blogPosts = [
       <li>Scapula – the shoulder blade</li>
       <li>Clavicle – the collarbone</li>
       </ul>
-      <p>The joint has two articulating sections: the glenohumeral joint (where the ball of the humerus fits into the cup-shaped glenoid of the scapula) and the acromioclavicular (AC) joint (where the acromion meets the collarbone). Surrounding this structure is a group of four muscles and their tendons collectively known as the rotator cuff, along with the labrum (a rim of cartilage that deepens the socket), bursae (fluid-filled sacs that reduce friction), and ligaments.</p>
+      <p>The joint has two main parts. The glenohumeral joint is where the ball of the upper arm meets the socket on the shoulder blade. The AC (acromioclavicular) joint is where the collarbone meets the shoulder blade.</p>
+      <p>Around these bones sit the rotator cuff (four muscles and tendons that steady the shoulder), the labrum (cartilage that deepens the socket), fluid-filled bursae that reduce friction, and ligaments.</p>
       <p>Any one of these structures can be damaged through injury, overuse, or aging, and many of these conditions can be effectively treated arthroscopically.</p>
       <h2>Conditions Treated with Arthroscopy Shoulder Surgery</h2>
       <p>Shoulder arthroscopy is used to diagnose and treat a wide range of conditions. Here are the most common ones:</p>
       <h3>1. Rotator Cuff Tears</h3>
-      <p>The rotator cuff is the group of muscles and tendons that stabilize the shoulder and allow overhead movement. Tears can be partial or full-thickness and are commonly caused by sports injuries, repetitive overhead work, or age-related degeneration. During arthroscopic rotator cuff repair, the torn tendon is reattached to the bone using suture anchors. This is one of the most frequently performed arthroscopic procedures, with success rates ranging from 75% to 90%.</p>
+      <p>The rotator cuff is the group of muscles and tendons that steady the shoulder and help you lift the arm. Tears may be partial or full. Common causes include sport, repetitive overhead work, and wear and tear with age.</p>
+      <p>In arthroscopic repair, the torn tendon is stitched back to bone with small anchors. This is a common keyhole procedure. Reported success rates are often in the range of 75% to 90%, depending on tear size and rehab.</p>
       <p>If you are dealing with shoulder weakness or pain that worsens with overhead activity, explore more about our Shoulder Care services to understand your treatment options.</p>
       <h3>2. Shoulder Impingement Syndrome</h3>
       <p>Shoulder impingement occurs when the rotator cuff tendon becomes pinched between the bones of the shoulder, particularly the acromion and the head of the humerus. This causes pain, especially when lifting the arm. Arthroscopic subacromial decompression (acromioplasty) removes a portion of the acromion and inflamed bursal tissue to create more space for the tendon, relieving pain effectively.</p>
       <h3>3. Labral Tears (SLAP Tears and Bankart Lesions)</h3>
-      <p>The labrum is the ring of cartilage that deepens the shoulder socket and provides stability. A SLAP tear (Superior Labrum, Anterior to Posterior) typically affects overhead athletes like cricket players and swimmers. A Bankart lesion occurs following a shoulder dislocation. Arthroscopic labral repair stabilizes the joint by suturing the torn cartilage back to the glenoid bone using anchors.</p>
+      <p>The labrum is a ring of cartilage that deepens the shoulder socket and adds stability.</p>
+      <p>A SLAP tear (superior labrum, front to back) is often seen in people who load the shoulder overhead, such as cricketers or swimmers. A Bankart lesion is common after a dislocation.</p>
+      <p>With arthroscopic labral repair, the torn labrum is sewn back to the socket using small anchors.</p>
       <p>Shoulder instability caused by recurrent dislocation is a condition we frequently treat in athletes across Bengaluru. Learn more about our Sports Medicine services and how we help athletes return to peak performance.</p>
       <h3>4. Frozen Shoulder (Adhesive Capsulitis)</h3>
       <p>Frozen shoulder is a debilitating condition in which the joint capsule thickens, tightens, and fills with scar tissue, severely limiting movement and causing significant pain. When physiotherapy and injections fail, arthroscopic capsular release cuts through the tight capsule tissue, restoring motion and relieving pain dramatically.</p>
@@ -569,7 +585,7 @@ export const blogPosts = [
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <p class="mb-4 text-sm">📍 Health Nest Hospital, HSR Layout, Bengaluru | Raghava Multispeciality Hospital, Anekal.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
-              📞 Book an appointment: +91-9449031003 | Contact Us
+              Book appointment online or call +91-9449031003
           </a>
       </div>
     `
@@ -583,11 +599,12 @@ export const blogPosts = [
     image: "https://ik.imagekit.io/M0nger/Phases%20of%20Achilles%20Tendinopathy.jpg.jpeg",
     content: `
       <h2>What Is Achilles Tendinopathy?</h2>
-      <p>The Achilles tendon is the largest and strongest tendon in the human body. It connects the calf muscles, specifically the gastrocnemius and soleus, to the heel bone (calcaneus) and is responsible for every push-off movement you make when walking, running, jumping, or climbing stairs.</p>
+      <p>The Achilles tendon joins your calf muscles to your heel bone. It is the largest tendon in the body. It helps you push off when you walk, run, jump, or use stairs.</p>
       
-      <p>Achilles tendinopathy is a clinical syndrome characterized by pain, localized swelling, and impaired physical performance in and around the Achilles tendon. Historically, the condition was called Achilles tendinitis, implying that inflammation was the primary driver. Modern research has overturned that understanding. Histopathological studies consistently show that classic inflammatory cells are largely absent in tendinopathic tissue. Instead, what occurs is a failed healing response, a situation where the tendon attempts to repair repeated micro-damage but cannot complete that repair cycle successfully.</p>
+      <p>Achilles tendinopathy means pain and often swelling near the tendon. Sport and daily activities can feel harder. In the past, doctors often called it tendinitis and blamed inflammation alone.</p>
+      <p>Research on tendon tissue tells a different story. True inflammatory change is often mild or absent. The tendon keeps taking small overloads. It tries to heal but can get stuck in a cycle of incomplete repair.</p>
       
-      <p>According to research published in PubMed, approximately 52% of runners will experience Achilles tendinopathy at some point in their lifetime. It is not, however, exclusive to runners. Active professionals, recreational athletes, military personnel, and even sedentary individuals in Bengaluru and across India present with this condition regularly.</p>
+      <p>Roughly half of runners may have Achilles tendon pain at some point in life. The problem is not limited to runners. Office workers, weekend athletes, and people from all walks of life in Bengaluru and across India seek care for it.</p>
       
       <h3>Two Anatomical Subtypes</h3>
       <p>Before exploring the phases, it is worth noting that Achilles tendinopathy is classified by location into two main subtypes:</p>
@@ -598,23 +615,27 @@ export const blogPosts = [
       <p>The phases described in this article apply primarily to midportion tendinopathy, though the general continuum concept is relevant to both types.</p>
       
       <h2>The Tendon Continuum: Understanding Achilles Tendinopathy as a Progression</h2>
-      <p>The concept of the tendon continuum, developed by Cook and Purdam and now widely accepted in sports medicine, describes Achilles tendinopathy as a spectrum rather than a fixed condition. A tendon can move forward along this continuum when it is overloaded, and importantly, it can also move backward toward a healthier state when load is managed appropriately. This reversibility is critical because it means that with the right intervention, most patients can recover fully without surgery.</p>
+      <p>Cook and Purdam described the “tendon continuum.” In simple terms, Achilles problems sit on a spectrum, not a single fixed disease stage.</p>
+      <p>Load the tendon too hard and it may slide along that spectrum toward more change in the tissue. Reduce and grade load the right way and it can move back toward a healthier state. That is why many people improve without surgery.</p>
       
-      <p>The continuum is divided into three main pathological phases, each with a corresponding rehabilitation phase overlay:</p>
+      <p>Clinicians often describe three overlapping tissue phases. Rehab also follows staged goals. The three tissue phases are:</p>
       <ul>
         <li>Phase 1: Reactive Tendinopathy</li>
         <li>Phase 2: Tendon Disrepair</li>
         <li>Phase 3: Degenerative Tendinopathy</li>
       </ul>
-      <p>A fourth stage, tendon rupture, represents the end of the continuum and requires a separate surgical discussion altogether. Some clinical frameworks also describe a rehabilitation continuum of four phases: symptom management, recovery, rebuilding, and return to sport. In this article, both frameworks are addressed together so you can understand both what is happening biologically and what you should be doing about it.</p>
+      <p>A full tendon rupture is a separate, urgent problem and needs its own plan.</p>
+      <p>Rehab is often grouped into four practical stages: calm symptoms, build basic strength, rebuild power, then return to sport. This article links tissue stages to those rehab stages so you know what is going on and what to do next.</p>
       
       <h2>Phase 1: Reactive Tendinopathy</h2>
       <h3>What Is Happening in the Tendon?</h3>
-      <p>Reactive tendinopathy is the earliest stage on the continuum and is characterized by a non-inflammatory proliferative response within the tendon's cell matrix. When the tendon is subjected to sudden compressive or tensile overload beyond what it is conditioned to handle, the tenocytes (tendon cells) proliferate rapidly. They increase protein production, which causes the tendon to swell and thicken. This thickening is actually a protective mechanism. The tendon is trying to increase its cross-sectional area to distribute the load more safely.</p>
+      <p>Reactive tendinopathy is the earliest stage. The tendon has been loaded too fast for what it is used to.</p>
+      <p>Tendon cells respond by swelling the tissue. The tendon may look or feel thicker. This is often a protective response: the body tries to spread load over a wider area.</p>
       <p>At this stage, the structural integrity of the collagen is largely preserved. There is no significant collagen disruption. This is important because it means the tendon has strong potential for full reversal if the overload is removed quickly and the tendon is managed correctly.</p>
       
       <h3>Who Gets Reactive Tendinopathy?</h3>
-      <p>Reactive tendinopathy typically occurs in two distinct clinical presentations. The first is in younger, previously active individuals who have done too much too soon, such as a runner who significantly increases weekly mileage, a cricketer who returns to training after the off-season, or someone in Bengaluru who starts a new HIIT class without adequate base fitness. The second presentation is an acute-on-chronic flare in an older individual with pre-existing tendon changes who has subjected the tendon to sudden increased demand.</p>
+      <p>It often appears in people who ramp up training too quickly. Examples include a runner who jumps weekly mileage, a cricketer who returns hard after a break, or someone in Bengaluru who starts intense HIIT without a base.</p>
+      <p>It can also flare in an older tendon that already had wear, then faces a sudden spike in load.</p>
       
       <h3>Symptoms</h3>
       <p>Pain appears quickly after the overloading event, often within 24 to 48 hours. The tendon is tender to touch, may be visibly swollen, and the surrounding area feels warm. Morning stiffness and stiffness after prolonged rest are common. Pain is typically constant and can interrupt sleep or simple daily activities.</p>
@@ -624,13 +645,14 @@ export const blogPosts = [
       
       <h3>Treatment for Reactive Tendinopathy</h3>
       <p>The priority in this phase is load reduction without complete immobilization. Complete rest actually weakens the tendon over time. The goal is to reduce the provocative load while maintaining baseline tendon stimulus.</p>
-      <p>Isometric calf exercises are the cornerstone of reactive phase management. Research shows that isometric contractions provide pain relief while maintaining muscle and tendon activity. A common protocol involves 5 repetitions of 45-second holds at around 70% of maximum effort, performed on a flat surface (not over the edge of a step, which increases compressive load). Anti-inflammatory strategies such as ice, relative rest, and short-term non-steroidal anti-inflammatory medication can help manage symptoms. Activity modification, switching from high-load to low-load activities such as cycling or swimming, helps maintain cardiovascular fitness while the tendon settles.</p>
+      <p>Isometric calf work is the main treatment in this phase. That means holding a calf muscle contraction without moving the ankle through a big range. Many protocols use several holds of about 45 seconds, on flat ground first.</p>
+      <p>Ice, a short period of easier training, and simple pain relief may help symptoms. Low-impact options like cycling or swimming can keep fitness up while the tendon calms.</p>
       <p>Corticosteroid injections are generally avoided in this phase as they can weaken tendon collagen structure and risk progressing the condition.</p>
       
       <h2>Phase 2: Tendon Disrepair</h2>
       <h3>What Is Happening in the Tendon?</h3>
-      <p>If reactive tendinopathy is not adequately managed, the tendon enters the disrepair phase. This is where the biological picture becomes more complex. The continued overproduction of proteins and tenocyte proliferation that characterized the reactive phase now persists at a higher level. Focal disruption and disorganization of the collagen fibers begin to occur. The matrix between collagen fibers shows increased concentrations of glycosaminoglycans. Neovascularization, the growth of abnormal new blood vessels into the tendon, begins to appear.</p>
-      <p>The tendon is still attempting to heal itself, but the repair mechanisms are being outpaced by the ongoing damage. The structural integrity is partially compromised but not entirely lost. This phase is where most people with chronic Achilles pain tend to sit if they have been managing symptoms for three to twelve weeks without a structured approach.</p>
+      <p>If reactive change is not managed, the tendon can enter disrepair. More tendon cells stay active. Collagen fibres begin to lose their tidy layout. New small blood vessels may grow into the tendon.</p>
+      <p>The tendon is still trying to heal, but damage is happening faster than repair. Strength is partly reduced but not gone. Many people with Achilles pain for weeks to a few months sit in this zone if load has not been guided well.</p>
       
       <h3>Symptoms</h3>
       <p>Pain is less constant than in the reactive phase. Patients typically describe pain at the start of activity that eases after a warm-up, then returns with prolonged or high-intensity activity and again the following morning. The tendon may feel thickened or nodular on palpation. Morning stiffness lasting more than 20 to 30 minutes is common. Running is possible but limited, and activities like hill running, stairs, and jumping are particularly provocative.</p>
@@ -643,8 +665,8 @@ export const blogPosts = [
       
       <h2>Phase 3: Degenerative Tendinopathy</h2>
       <h3>What Is Happening in the Tendon?</h3>
-      <p>Degenerative tendinopathy represents the most advanced stage of the tendon continuum. At this stage, there are areas of cell death (apoptosis), large zones of collagen disorganization and fragmentation, and significant neovascularization throughout the tendon. The tendon's mechanical properties are substantially reduced. It has lost much of its ability to store and release energy efficiently, which is exactly what it needs to do with every step during running.</p>
-      <p>Importantly, not all of the tendon is affected uniformly. The degenerative changes tend to be focal, meaning healthy collagen tissue surrounds the damaged areas. This matters clinically because the healthy tissue still has the capacity to be trained and strengthened, and increased strength in the surrounding tissue can compensate for the degenerative core.</p>
+      <p>Degenerative tendinopathy is the most advanced stage on the spectrum. Parts of the tendon show more cell loss, more messy collagen, and more new vessels. The tendon stores and releases less elastic energy. That matters for runners, who load the tendon with every step.</p>
+      <p>The damage is often patchy. Healthy tendon often sits next to worn areas. That is good news: the healthy parts can still be trained. Stronger muscle and tendon around the patch can share the load.</p>
       
       <h3>Symptoms</h3>
       <p>The symptom pattern in degenerative tendinopathy resembles the disrepair phase in terms of daily behavior: pain at the start of activity, some easing during activity, and return of pain with high load or the following day. However, symptoms are more persistent despite treatment, and the overall tolerance for load is lower. The tendon may show a visible nodular thickening. Some patients experience a sudden reduction in symptoms that is paradoxically worrying, as it can indicate significant loss of nerve supply to the degenerative area.</p>
@@ -701,7 +723,7 @@ export const blogPosts = [
       
       <h2>Booking an Appointment with Dr. Nitin Sunku in Bengaluru</h2>
       <p>If you are struggling with Achilles tendon pain and are not sure which phase of tendinopathy you are in or what treatment you need, a proper clinical assessment is the most important first step. Dr. Nitin N Sunku offers evidence-based, phase-specific management of Achilles tendinopathy for athletes, recreational exercisers, and active adults across Bengaluru.</p>
-      <p>Book your appointment here: <a href="/contact">https://www.drnitinsunkuortho.com/contact</a></p>
+      <p>Book your appointment here: <a href="/contact">Book your appointment online</a></p>
       
       <h2>Frequently Asked Questions About Phases of Achilles Tendinopathy</h2>
       
@@ -731,12 +753,12 @@ export const blogPosts = [
       
       <h2>Medical References and Further Reading</h2>
       <ul>
-        <li>Cook JL, Purdam CR. Is tendon pathology a continuum? A pathology model to explain the clinical presentation of load-induced tendinopathy. British Journal of Sports Medicine, 2009. <a href="https://bjsm.bmj.com/content/43/6/409" target="_blank" rel="noopener noreferrer">https://bjsm.bmj.com/content/43/6/409</a></li>
-        <li>Beyer R et al. Current Clinical Concepts: Conservative Management of Achilles Tendinopathy. Journal of Athletic Training, 2015. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7249277/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC7249277/</a></li>
-        <li>Li HY, Hua YH. Achilles Tendinopathy: Current Concepts about the Basic Science and Clinical Treatments. BioMed Research International, 2016. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5112330/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC5112330/</a></li>
-        <li>Achilles Tendinopathy: Pathophysiology, Epidemiology, Diagnosis, Treatment, Prevention, and Screening. PubMed, 2020. <a href="https://pubmed.ncbi.nlm.nih.gov/32203618/" target="_blank" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov/32203618/</a></li>
-        <li>Achilles Tendinopathy. StatPearls, NCBI Bookshelf. <a href="https://www.ncbi.nlm.nih.gov/books/NBK538149/" target="_blank" rel="noopener noreferrer">https://www.ncbi.nlm.nih.gov/books/NBK538149/</a></li>
-        <li>A Treatment Algorithm for Managing Achilles Tendinopathy. PMC, British Journal of Sports Medicine. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2658946/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC2658946/</a></li>
+        <li>Cook JL, Purdam CR. Is tendon pathology a continuum? A pathology model to explain the clinical presentation of load-induced tendinopathy. British Journal of Sports Medicine, 2009. <a href="https://bjsm.bmj.com/content/43/6/409" target="_blank" rel="noopener noreferrer">Read the BJSM article on tendon pathology</a></li>
+        <li>Beyer R et al. Current Clinical Concepts: Conservative Management of Achilles Tendinopathy. Journal of Athletic Training, 2015. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7249277/" target="_blank" rel="noopener noreferrer">Open conservative management paper on PubMed Central</a></li>
+        <li>Li HY, Hua YH. Achilles Tendinopathy: Current Concepts about the Basic Science and Clinical Treatments. BioMed Research International, 2016. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5112330/" target="_blank" rel="noopener noreferrer">Open basic science review on PubMed Central</a></li>
+        <li>Achilles Tendinopathy: Pathophysiology, Epidemiology, Diagnosis, Treatment, Prevention, and Screening. PubMed, 2020. <a href="https://pubmed.ncbi.nlm.nih.gov/32203618/" target="_blank" rel="noopener noreferrer">View PubMed abstract for this overview</a></li>
+        <li>Achilles Tendinopathy. StatPearls, NCBI Bookshelf. <a href="https://www.ncbi.nlm.nih.gov/books/NBK538149/" target="_blank" rel="noopener noreferrer">Read the NCBI Bookshelf chapter on Achilles tendinopathy</a></li>
+        <li>A Treatment Algorithm for Managing Achilles Tendinopathy. PMC, British Journal of Sports Medicine. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2658946/" target="_blank" rel="noopener noreferrer">Open treatment algorithm article on PubMed Central</a></li>
       </ul>
       
       <h2>Related Services at Dr. Nitin Sunku's Clinic</h2>
@@ -753,7 +775,7 @@ export const blogPosts = [
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <p class="mb-4 text-sm">Dr. Nitin regularly manages athletes and active adults presenting with Achilles tendinopathy, tendon ruptures, and complex lower limb overuse injuries using a structured, evidence-based, phase-specific approach.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
-              📞 Book an appointment: +91-9449031003 | Contact Us
+              Book appointment online or call +91-9449031003
           </a>
       </div>
     `
@@ -767,9 +789,11 @@ export const blogPosts = [
     image: "https://ik.imagekit.io/M0nger/ACL%20Repair%20Over%20Age%2060.jpg.jpeg",
     content: `
       <h2>Understanding the ACL and Why It Matters After 60</h2>
-      <p>The anterior cruciate ligament (ACL) is one of the four primary ligaments that stabilize the knee joint. It runs diagonally through the center of the knee and is responsible for controlling rotational movement and preventing the tibia from sliding forward in relation to the femur. When it tears, even partial activities like walking on uneven ground, climbing stairs, or pivoting to change direction can cause the knee to "give way" or buckle.</p>
-      <p>For decades, ACL reconstruction was considered a surgery primarily for young athletes. Older adults, particularly those over 40, were routinely advised to manage the injury conservatively with physiotherapy and lifestyle modification. The reasoning was straightforward: older patients were assumed to be less active, less likely to place high demands on the knee, and more prone to surgical complications.</p>
-      <p>That thinking has changed dramatically. Today's adults over 60 are living longer, remaining physically active well into their senior years, and increasingly unwilling to accept reduced mobility as inevitable. Research published in the American Journal of Sports Medicine confirms that ACL reconstruction in patients older than 60 can achieve outcomes comparable to younger age groups in terms of patient satisfaction and knee function. The conversation is no longer whether older adults can have ACL surgery, but whether they should based on their individual circumstances.</p>
+      <p>The ACL is one of four main knee ligaments. It sits in the centre of the joint. It limits forward shift of the shin bone and helps control rotation.</p>
+      <p>When the ACL is torn, the knee may feel unstable. Walking on uneven ground, stairs, or quick turns can make it give way or buckle.</p>
+      <p>For many years, surgery was aimed mainly at young athletes. People over about 40 were often told to try physiotherapy and activity changes first.</p>
+      <p>That pattern has shifted. Many adults over 60 stay active for decades. Published sports medicine research suggests ACL reconstruction after 60 can match younger cohorts for satisfaction and knee function when patients are well selected.</p>
+      <p>Today the question is less “Can someone over 60 have ACL surgery?” and more “Is it the right choice for this person, their knee, and their goals?”</p>
 
       <h2>What the Research Shows</h2>
       <p>A long-term outcomes study of ACL reconstruction in patients aged 60 and above found that all 13 patients who underwent surgery reported they would choose the procedure again. Seven had excellent results, five had good results, and one had a fair result based on modified Cincinnati Knee Scores at an average follow-up of nearly 10 years. The reinjury rate was just 6%, consistent with outcomes in younger cohorts. (Source: Baker CL et al., Orthopaedic Journal of Sports Medicine)</p>
@@ -777,8 +801,9 @@ export const blogPosts = [
       <h2>How ACL Tears Happen in People Over 60</h2>
       <p>ACL injuries in older adults often occur in different circumstances than in young athletes. While sporting activities are still a common cause, many patients over 60 experience ACL tears through everyday activities.</p>
       <h3>Common Causes of ACL Injury in Older Adults</h3>
-      <p>Sudden twisting movements during recreational sports such as badminton, tennis, trekking, or recreational cricket are a frequent culprit. A simple misstep on an uneven surface, a stumble while walking down stairs, or a fall that causes the knee to twist awkwardly can also be enough to tear the ACL in someone over 60, particularly if underlying degenerative changes in the knee have already weakened the ligament's structural integrity.</p>
-      <p>In Bengaluru and across urban Karnataka, we see a growing number of active professionals and retirees presenting with ACL injuries sustained during morning walks in parks, yoga sessions, or weekend sports. Age-related muscle weakening around the knee joint, reduced proprioception (the body's sense of joint position), and any pre-existing cartilage wear can all make the ACL more vulnerable to injury.</p>
+      <p>Twisting sports such as badminton, tennis, trekking, or cricket are common causes. A slip on uneven ground, a trip on stairs, or a simple fall can also tear the ACL. Wear inside the knee can make the ligament easier to injure.</p>
+      <p>In Bengaluru and wider Karnataka, active professionals and retirees often hurt the ACL during walks, yoga, or weekend games.</p>
+      <p>Weaker thigh muscles, poorer joint position sense, and worn cartilage can all add risk.</p>
 
       <h2>Recognising Symptoms of ACL Tear Over 60</h2>
       <p>The classic signs of an ACL tear include a popping sound or sensation at the time of injury, rapid swelling of the knee within the first few hours, significant pain, and an inability to bear weight. In older adults, these acute symptoms may be accompanied by a pre-existing background of mild knee discomfort, which can make diagnosis less straightforward.</p>
@@ -788,8 +813,9 @@ export const blogPosts = [
       <p>When an older adult presents with an ACL tear, the treatment path is not automatically surgical or automatically conservative. A thorough assessment of multiple factors guides the decision. At our clinic in Bengaluru, Dr. Nitin Sunku evaluates each patient individually, considering their overall health, activity goals, knee stability, and the presence of any associated injuries such as meniscus tears or cartilage damage.</p>
 
       <h3>Option 1: Conservative (Non-Surgical) Treatment</h3>
-      <p>Conservative management is a legitimate and appropriate choice for some patients over 60. It typically involves a structured physiotherapy program designed to strengthen the quadriceps, hamstrings, and calf muscles that support the knee joint in the absence of a functioning ACL. Functional knee bracing provides additional stability during activity. Anti-inflammatory medications and, in some cases, intra-articular injections can help manage pain and swelling.</p>
-      <p>This approach tends to work best for patients who have low physical demands, do not experience significant knee instability during daily activities, and are willing to modify their lifestyle permanently. However, it is important to understand its limitations. Studies show that chronic ACL deficiency in active patients leads to progressive meniscal damage, accelerated cartilage wear, and a higher long-term risk of knee osteoarthritis. Patients who experience repeated episodes of the knee giving way are particularly poor candidates for conservative management alone.</p>
+      <p>Non-surgical care is a fair option for some people over 60. It usually means guided physiotherapy to strengthen the front and back of the thigh and the calf. A hinged brace can add support. Tablets or injections may ease pain and swelling for a time.</p>
+      <p>It fits best if you mainly walk on flat ground, rarely feel the knee give way, and accept long-term limits on twisting sports.</p>
+      <p>If the knee keeps giving way, the meniscus and joint surface can wear faster. That can raise the risk of arthritis. In those cases, braces and physio alone may not be enough.</p>
 
       <h3>Option 2: ACL Reconstruction Surgery</h3>
       <p>Arthroscopic ACL reconstruction involves replacing the torn ligament with a graft, typically harvested from the patient's own body (autograft) or from a tissue donor (allograft). For patients over 60, allografts are frequently preferred because they eliminate the need for a second harvest site, reducing surgical time and post-operative pain. However, hamstring tendon autografts remain an excellent option for active older patients with good tissue quality.</p>
@@ -877,7 +903,7 @@ export const blogPosts = [
       <h2>ACL Care in Bengaluru: Why Choose Dr. Nitin Sunku</h2>
       <p>Patients across HSR Layout, Anekal, and the wider Bengaluru region seeking expert management of ACL injuries in older adults can consult Dr. Nitin N Sunku at Health Nest Hospital and Raghava Multispeciality Hospital. As a fellowship-trained orthopedic and sports medicine specialist and the team doctor for Bengaluru FC, Dr. Nitin brings elite-level expertise to patients of all ages.</p>
       <p>His approach is grounded in evidence-based decision-making, not a one-size-fits-all protocol. Every patient over 60 presenting with a knee ligament injury receives a thorough evaluation of their activity goals, overall health status, and knee imaging before any surgical recommendation is made. Where conservative management is appropriate, a structured rehabilitation plan is prescribed. Where surgery offers the best long-term outcome, patients receive minimally invasive arthroscopic care with comprehensive support through every stage of recovery.</p>
-      <p>If you are over 60 and dealing with a knee that buckles, swells, or limits your daily life, do not assume your only option is to live with it. Book a consultation with Dr. Nitin Sunku in Bengaluru and get a clear, personalized answer: <a href="/contact">https://www.drnitinsunkuortho.com/contact</a></p>
+      <p>If you are over 60 and dealing with a knee that buckles, swells, or limits your daily life, do not assume your only option is to live with it. Book a consultation with Dr. Nitin Sunku in Bengaluru and get a clear, personalized answer: <a href="/contact">Book your consultation online</a></p>
 
       <h2>Tips for Older Adults to Protect Knee Health and Prevent ACL Injuries</h2>
       <p>Prevention is always preferable to treatment. If you are an active adult over 60, these evidence-based measures can reduce your risk of ACL and other knee injuries:</p>
@@ -920,11 +946,11 @@ export const blogPosts = [
 
       <h2>Medical References and Further Reading</h2>
       <ul>
-        <li>Baker CL, Jones JC, Zhang J. Long-term Outcomes After ACL Reconstruction in Patients 60 Years and Older. Orthopaedic Journal of Sports Medicine, 2014. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4555533/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC4555533/</a></li>
-        <li>Csete K et al. Anterior cruciate ligament reconstruction in the elderly: 5-Year follow-up study. ScienceDirect, 2024. <a href="https://www.sciencedirect.com/science/article/abs/pii/S002013832400216X" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/abs/pii/S002013832400216X</a></li>
-        <li>ACL Injury: Does It Require Surgery? OrthoInfo, AAOS. <a href="https://orthoinfo.aaos.org/en/treatment/acl-injury-does-it-require-surgery/" target="_blank" rel="noopener noreferrer">https://orthoinfo.aaos.org/en/treatment/acl-injury-does-it-require-surgery/</a></li>
-        <li>ACL Reconstruction Improves Functional Scores in Patients Older Than 50. Arthroscopy, Sports Medicine and Rehabilitation, 2023. <a href="https://www.arthroscopysportsmedicineandrehabilitation.org/article/S2666-061X(23)00157-8/fulltext" target="_blank" rel="noopener noreferrer">https://www.arthroscopysportsmedicineandrehabilitation.org/article/S2666-061X(23)00157-8/fulltext</a></li>
-        <li>Management of ACL Rupture in Patients Aged 40 Years and Older. PMC, National Institutes of Health. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3225626/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC3225626/</a></li>
+        <li>Baker CL, Jones JC, Zhang J. Long-term Outcomes After ACL Reconstruction in Patients 60 Years and Older. Orthopaedic Journal of Sports Medicine, 2014. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4555533/" target="_blank" rel="noopener noreferrer">Open long-term ACL outcomes study on PubMed Central</a></li>
+        <li>Csete K et al. Anterior cruciate ligament reconstruction in the elderly: 5-Year follow-up study. ScienceDirect, 2024. <a href="https://www.sciencedirect.com/science/article/abs/pii/S002013832400216X" target="_blank" rel="noopener noreferrer">View elderly ACL reconstruction follow-up study</a></li>
+        <li>ACL Injury: Does It Require Surgery? OrthoInfo, AAOS. <a href="https://orthoinfo.aaos.org/en/treatment/acl-injury-does-it-require-surgery/" target="_blank" rel="noopener noreferrer">Read AAOS OrthoInfo guide on ACL injury and surgery</a></li>
+        <li>ACL Reconstruction Improves Functional Scores in Patients Older Than 50. Arthroscopy, Sports Medicine and Rehabilitation, 2023. <a href="https://www.arthroscopysportsmedicineandrehabilitation.org/article/S2666-061X(23)00157-8/fulltext" target="_blank" rel="noopener noreferrer">Open ASMR journal article on ACL scores after age 50</a></li>
+        <li>Management of ACL Rupture in Patients Aged 40 Years and Older. PMC, National Institutes of Health. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3225626/" target="_blank" rel="noopener noreferrer">Open ACL management in older adults on PubMed Central</a></li>
       </ul>
 
       <h2>Related Services at Dr. Nitin Sunku's Clinic</h2>
@@ -941,7 +967,7 @@ export const blogPosts = [
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <p class="mb-4 text-sm">Dr. Nitin has performed ACL reconstructions, meniscal repairs, and joint replacements for patients across all age groups, including many patients over 60 who have returned to active, fulfilling lifestyles after surgery.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
-              📞 Book an appointment: +91-9449031003 | Contact Us
+              Book appointment online or call +91-9449031003
           </a>
       </div>
     `
@@ -1065,8 +1091,8 @@ export const blogPosts = [
         <li><a href="/services/acl-care">ACL Care, Dr. Nitin Sunku</a></li>
         <li><a href="/services/sports-medicine">Sports Medicine, Dr. Nitin Sunku</a></li>
         <li><a href="/contact">Book an Appointment</a></li>
-        <li>American Academy of Orthopaedic Surgeons (AAOS), ACL Reconstruction Guidelines: <a href="https://www.aaos.org" target="_blank" rel="noopener noreferrer">https://www.aaos.org</a></li>
-        <li>National Library of Medicine, ACL Graft Healing and Complications: <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov</a></li>
+        <li>American Academy of Orthopaedic Surgeons (AAOS), ACL Reconstruction Guidelines: <a href="https://www.aaos.org" target="_blank" rel="noopener noreferrer">Visit the American Academy of Orthopaedic Surgeons website</a></li>
+        <li>National Library of Medicine, ACL Graft Healing and Complications: <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener noreferrer">Search medical literature on PubMed</a></li>
       </ul>
 
       <h2>Frequently Asked Questions (FAQs)</h2>
@@ -1101,7 +1127,7 @@ export const blogPosts = [
           <p class="font-bold text-lg mb-2">Dr. Nitin N. Sunku, MBBS, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
-              📞 Book an appointment: +91-9449031003 | Contact Us
+              Book appointment online or call +91-9449031003
           </a>
       </div>
     `

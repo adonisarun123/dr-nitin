@@ -31,7 +31,9 @@ export function Locations() {
                             <div className="bg-blue-50 p-3 rounded-xl mb-6">
                                 <MapPin className="h-8 w-8 text-primary" />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">{loc.name}</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 bg-yellow-200 inline-block px-2 rounded">
+                                {loc.name}
+                            </h3>
                             <p className="text-gray-600 mb-6 flex-grow">{loc.address}</p>
 
                             <div className="space-y-3 w-full">

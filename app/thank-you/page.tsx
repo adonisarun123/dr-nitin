@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import Script from "next/script";
 import { CheckCircle2, ArrowRight, Home, Mail, Phone, Calendar, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/animations/fade-in";
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
     return (
         <main className="min-h-screen bg-white">
+            <Script id="google-ads-conversion" strategy="afterInteractive">
+                {`gtag('event', 'conversion', {'send_to': 'AW-11392406445/G95dCKqvm8gZEK2nqbgq'});`}
+            </Script>
             {/* Hero Section */}
             <div className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20 lg:py-32 overflow-hidden">
                 {/* Background Pattern */}

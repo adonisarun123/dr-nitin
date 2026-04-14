@@ -6,12 +6,15 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, Award, BookOpen, Heart } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { JsonLd } from "@/components/seo/json-ld";
+import { practicePostalAddress } from "@/lib/data";
+import { siteOrigin } from "@/lib/site-url";
 
 export const metadata: Metadata = {
     title: {
         absolute: "About Dr Nitin N Sunku | Orthopedic Surgeon in Bengaluru",
     },
-    description: "Know Dr Nitin N Sunku, experienced orthopedic surgeon in Bengaluru specializing in sports injuries, knee care, joint replacement and advanced treatment.",
+    description:
+        "Know Dr Nitin N Sunku, experienced orthopedic surgeon in Bengaluru specializing in sports injuries, knee care, joint replacement and advanced treatment with over 10 years of focused practice.",
 };
 
 export default function AboutPage() {
@@ -24,20 +27,25 @@ export default function AboutPage() {
             "Sports Medicine"
         ],
         "description": "Dr. Nitin N. Sunku is a Consultant Orthopaedic Surgeon in Bengaluru specialising in sports injuries, knee disorders, arthroscopy, joint replacement and trauma care.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bengaluru",
-            "addressRegion": "KA",
-            "addressCountry": "IN"
-        },
-        "alumniOf": [
+        "address": practicePostalAddress,
+        "hasCredential": [
             {
-                "@type": "CollegeOrUniversity",
-                "name": "Rajarajeshwari Medical College & Hospital"
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Medical degree",
+                "name": "MBBS",
+                "recognizedBy": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Rajarajeshwari Medical College & Hospital"
+                }
             },
             {
-                "@type": "CollegeOrUniversity",
-                "name": "Bangalore Medical College & Research Institute"
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Medical specialty degree",
+                "name": "MS Orthopaedics",
+                "recognizedBy": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Bangalore Medical College & Research Institute"
+                }
             }
         ],
         "knowsAbout": [
@@ -47,12 +55,12 @@ export default function AboutPage() {
             "Trauma Care",
             "Orthopaedic Surgery"
         ],
-        "affiliation": {
-            "@type": "SportsTeam",
+        "memberOf": {
+            "@type": "SportsOrganization",
             "name": "Bengaluru Football Club"
         },
         "sameAs": [
-            "https://drnitinsunkuortho.com"
+            siteOrigin
         ]
     };
 
@@ -63,6 +71,25 @@ export default function AboutPage() {
                 title="Nurturing Mobility. Empowering Active Lives."
                 description="Dr. Nitin Sunku believes in evidence-based, personalized orthopedic care that prioritizes your long-term joint health."
             />
+
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl -mt-6 pb-8">
+                <div className="space-y-4 text-gray-700 leading-relaxed text-base">
+                    <p>
+                        This page summarises Dr. Nitin N. Sunku&apos;s training philosophy and the clinical
+                        themes that shape his practice across Bengaluru. You will read how conservative care is
+                        balanced with modern arthroscopic and joint replacement techniques, why second opinions
+                        are welcomed, and how follow-up is structured after surgery so that strength and range
+                        of motion return in predictable stages.
+                    </p>
+                    <p>
+                        If you are comparing surgeons for a complex knee or shoulder problem, note the
+                        combination of academic hospital training, dedicated sports medicine exposure, and
+                        ongoing work with active patients from IT corridors, weekend runners, and professional
+                        sport. The sections below translate that background into what you can expect at the
+                        first consultation and beyond.
+                    </p>
+                </div>
+            </div>
 
             {/* Doctor Bio Section */}
             <section className="py-16 lg:py-24">
@@ -83,7 +110,7 @@ export default function AboutPage() {
                             <p className="text-xl font-semibold text-primary mb-6">Consultant Orthopaedic Surgeon | Sports Injuries | Arthroscopy & Joint Care</p>
                             <div className="text-lg text-gray-600 space-y-4 mb-8">
                                 <p>
-                                    Dr. Nitin N. Sunku is a highly regarded <strong>Consultant Orthopaedic Surgeon in Bengaluru</strong>, known for his expertise in <strong>sports injuries, knee conditions, arthroscopy, joint replacement, and trauma care</strong>. With over <strong>7 years of focused orthopaedic experience</strong>, he combines advanced clinical skill with a patient-first philosophy to deliver reliable, long-term outcomes.
+                                    Dr. Nitin N. Sunku is a highly regarded <strong>Consultant Orthopaedic Surgeon in Bengaluru</strong>, known for his expertise in <strong>sports injuries, knee conditions, arthroscopy, joint replacement, and trauma care</strong>. With over <strong>10 years of focused orthopaedic experience</strong>, he combines advanced clinical skill with a patient-first philosophy to deliver reliable, long-term outcomes.
                                 </p>
                                 <p>
                                     He completed his <strong>MBBS</strong> from <em>Rajarajeshwari Medical College & Hospital</em> and his <strong>MS in Orthopaedics</strong> from <em>Bangalore Medical College & Research Institute</em>. He has further pursued advanced <strong>fellowship training in Arthroscopy, Joint Replacement, and Sports Medicine</strong>, enabling him to manage complex musculoskeletal conditions with precision.
@@ -99,7 +126,7 @@ export default function AboutPage() {
                             <div className="grid sm:grid-cols-2 gap-6 mb-8">
                                 <div className="bg-blue-50 p-4 rounded-xl">
                                     <Award className="h-8 w-8 text-blue-600 mb-2" />
-                                    <h3 className="font-bold text-gray-900">7+ Years</h3>
+                                    <h3 className="font-bold text-gray-900">10+ Years</h3>
                                     <p className="text-sm text-gray-600">Specialist Experience</p>
                                 </div>
                                 <div className="bg-green-50 p-4 rounded-xl">

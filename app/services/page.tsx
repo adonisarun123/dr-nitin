@@ -8,7 +8,8 @@ import { FadeIn } from "@/components/animations/fade-in";
 
 export const metadata: Metadata = {
     title: "Orthopedic & Sports Medicine Services",
-    description: "Explore orthopedic and sports medicine services by Dr Nitin N Sunku, including knee care, ACL injuries, joint replacement and sports injury treatment.",
+    description:
+        "Orthopaedic and sports medicine services in Attibele with Dr Nitin N Sunku—ACL, meniscus, joint replacement, fractures, and spine symptoms. Consultations also at HSR Layout for patients across South Bengaluru.",
 };
 
 export default function ServicesPage() {
@@ -16,8 +17,35 @@ export default function ServicesPage() {
         <main className="min-h-screen pb-20">
             <PageHeader
                 title="Comprehensive Orthopedic Services"
-                description="Expert care for sports injuries, joint replacements, and bone health in HSR Layout."
+                description="Primary care at Raghava Multispeciality, Attibele, on Sarjapura–Attibele Road—sports injuries, joint replacement, fractures, and arthroscopy. Additional sessions at Health Nest Hospital, HSR Layout, for patients from nearby areas."
             />
+
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-4xl">
+                <div className="space-y-4 text-gray-700 leading-relaxed text-base lg:text-lg">
+                    <p>
+                        Most consultations and treatment planning for the services below are centred at{" "}
+                        <strong>Raghava Multispeciality Hospital, Attibele</strong>, on Sarjapura–Attibele Road.
+                        The clinic serves Attibele, Anekal, Chandapura, Jigani, Bommasandra, and the industrial and
+                        residential corridors along Sarjapura Road and Hosur Road, including patients who travel
+                        from Electronic City and Sarjapura for fracture care, knee and shoulder problems, sports
+                        injuries, and joint replacement assessment. Each service page explains typical symptoms,
+                        what to expect in clinic, and which non-surgical or surgical options may apply after
+                        examination.
+                    </p>
+                    <p>
+                        Dr. Nitin N. Sunku also holds sessions at <strong>Health Nest Hospital, HSR Layout</strong>{" "}
+                        (24th Main, Sector 2) for follow-up, pre-operative review, and patients who live closer to
+                        HSR, Koramangala, BTM Layout, or Bellandur. If you are unsure which site suits you best,
+                        mention your location when you use the{" "}
+                        <Link href="/contact" className="text-primary font-medium hover:underline">
+                            contact page
+                        </Link>
+                        ; the team will guide you. Broadly, expect <strong>Attibele as the main hub</strong> for
+                        most of your care, with <strong>HSR Layout used as a convenient secondary site</strong> when
+                        your address or diary makes that the better choice.
+                    </p>
+                </div>
+            </div>
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -95,7 +95,9 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         "description": service.shortDesc,
         "provider": {
             "@type": "Physician",
-            "name": "Dr. Nitin N Sunku"
+            "name": "Dr. Nitin N Sunku",
+            "address": practicePostalAddress,
+            "telephone": siteConfig.phone
         }
     };
 
@@ -1826,8 +1828,8 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             <div className="mt-8 border-t border-gray-200 pt-6">
                                 <h4 className="font-semibold text-gray-900 mb-2">Locations</h4>
                                 <ul className="text-sm text-gray-600 space-y-2">
-                                    <li>• Health Nest Hospital, HSR</li>
-                                    <li>• Raghava Multispeciality</li>
+                                    <li>• Raghava Multispeciality, Attibele</li>
+                                    <li>• Health Nest Hospital, HSR Layout</li>
                                 </ul>
                             </div>
                         </div>

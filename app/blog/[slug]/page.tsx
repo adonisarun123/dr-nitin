@@ -168,7 +168,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             title: {
                 absolute: "Ankle Sprain Treatment: Causes & Recovery Tips",
             },
-            description: "Get expert hip replacement surgery in Attibele by Dr Nitin N Sunku for arthritis, chronic hip pain, and improved mobility with advanced orthopedic care.",
+            description:
+                "Understand ankle sprain grades, swelling, instability, and recovery timelines. Expert guidance from Dr. Nitin N Sunku in Bengaluru on bracing, rehab, and when to seek care.",
         };
     }
 
@@ -402,6 +403,31 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
 
                     {/* Main Article Content */}
                     <article className="flex-grow max-w-3xl">
+                        <div className="text-slate-600 text-base leading-relaxed space-y-4 mb-10 border border-slate-200 rounded-2xl bg-slate-50/80 p-6">
+                            <p>
+                                This article is for general education and does not replace an in-person
+                                assessment, examination, or imaging. Everyone&apos;s injury pattern, medical
+                                history, and goals differ; use what you read here to prepare better questions
+                                for your doctor.
+                            </p>
+                            <p>
+                                Dr. Nitin N Sunku is a consultant orthopaedic and sports medicine surgeon. He
+                                sees patients at <strong>Raghava Multispeciality Hospital, Attibele</strong>, on
+                                Sarjapura–Attibele Road, and at <strong>Health Nest Hospital, HSR Layout</strong>,
+                                Bengaluru. If pain is rapidly worsening, you cannot bear weight, you develop
+                                numbness or weakness in a limb, or you have fever after an injury, seek urgent
+                                medical care. For non-emergency evaluation and individualised treatment options,
+                                book through the contact page.
+                            </p>
+                            <p>
+                                Topics across this blog include knee ligament and meniscus problems, shoulder
+                                pain and instability, hip and knee arthritis, fracture recovery principles, spine
+                                symptoms when urgent causes have been excluded, running and tendon overuse
+                                issues, and what to expect from arthroscopy or joint replacement discussions. If
+                                you are comparing sources online, cross-check dates and always confirm advice
+                                with an in-person clinician.
+                            </p>
+                        </div>
                         <FadeIn delay={0.2}>
                             {/* Lead/Excerpt */}
                             <p className="text-xl md:text-2xl text-slate-600 mb-12 font-medium leading-relaxed border-l-4 border-primary pl-6 italic bg-blue-50/30 py-4 rounded-r-lg">

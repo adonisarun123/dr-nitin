@@ -44,7 +44,7 @@ export default function BookAppointmentPage() {
         {
             icon: Users,
             title: "Extensive Experience in Joint & Trauma Care",
-            description: "Over 7 years of specialized experience in complex joint surgeries and trauma management"
+            description: "Over 10 years of specialized experience in complex joint surgeries and trauma management"
         },
         {
             icon: CheckCircle,
@@ -65,16 +65,18 @@ export default function BookAppointmentPage() {
 
     const locations = [
         {
-            name: "HSR Layout Clinic",
-            address: "1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout",
-            city: "Bengaluru, Karnataka 560102",
-            timings: "Mon-Sat: 10:00 AM - 8:00 PM"
+            name: "Raghava Multispeciality Hospital",
+            address: "39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal",
+            city: "Bengaluru, Karnataka 562107",
+            timings: "Mon-Sat: 10:00 AM - 6:00 PM",
+            phone: "+91-9980031006"
         },
         {
-            name: "Attibele Clinic",
-            address: "Attibele, Bangalore",
-            city: "Karnataka",
-            timings: "Mon-Sat: 10:00 AM - 6:00 PM"
+            name: "Health Nest Hospital",
+            address: "1162, 24th Main Rd Sector 2, HSR Layout",
+            city: "Bengaluru, Karnataka 560102",
+            timings: "Mon-Sat: 10:00 AM - 8:00 PM",
+            phone: "+91-9449031003"
         }
     ];
 
@@ -122,7 +124,7 @@ export default function BookAppointmentPage() {
                                 </div>
                                 <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
                                     <CheckCircle className="w-5 h-5 text-blue-600" />
-                                    <span className="text-sm font-medium text-blue-900">7+ Years Experience</span>
+                                <span className="text-sm font-medium text-blue-900">10+ Years Experience</span>
                                 </div>
                             </div>
 
@@ -331,7 +333,7 @@ export default function BookAppointmentPage() {
                                 key={index}
                                 className="bg-white rounded-xl p-8 shadow-md border border-gray-200"
                             >
-                                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                                <h3 className="text-2xl font-bold text-center text-gray-900 bg-yellow-200 mb-6">
                                     {location.name}
                                 </h3>
 
@@ -352,10 +354,10 @@ export default function BookAppointmentPage() {
                                     <div className="flex gap-3">
                                         <Phone className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" />
                                         <a
-                                            href="tel:+919449031003"
+                                            href={`tel:${location.phone}`}
                                             className="text-primary-600 hover:text-primary-700 font-medium"
                                         >
-                                            +91-9449031003
+                                            {location.phone}
                                         </a>
                                     </div>
                                 </div>

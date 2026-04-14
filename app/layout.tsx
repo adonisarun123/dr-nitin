@@ -6,7 +6,8 @@ import { cn } from "@/lib/utils";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/lib/data";
+import { siteConfig, practicePostalAddress } from "@/lib/data";
+import { siteOrigin } from "@/lib/site-url";
 import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Dr. Nitin N Sunku",
   },
   description: siteConfig.description,
-  metadataBase: new URL("https://drnitinsunkuortho.com"),
+  metadataBase: new URL(siteOrigin),
   verification: {
     google: "sjlvelpdhlvU4nWP7nRTltuK_TelCCIddJlm67csZSM",
   },
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IE",
-    url: "https://drnitinsunkuortho.com",
+    url: siteOrigin,
     siteName: siteConfig.name,
     images: [{
       url: "/og-image.jpg",
@@ -57,17 +58,11 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
+    "@id": `${siteOrigin}/#clinic`,
     "name": "Dr Nitin Sunku Orthopaedics",
-    "url": "https://drnitinsunkuortho.com/",
-    "logo": "https://drnitinsunkuortho.com/logo.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": siteConfig.address,
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560102",
-      "addressCountry ": "IN"
-    },
+    "url": `${siteOrigin}/`,
+    "logo": `${siteOrigin}/logo.png`,
+    "address": practicePostalAddress,
     "telephone": siteConfig.phone,
     "priceRange": "$$",
   };

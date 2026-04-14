@@ -20,6 +20,29 @@ export default function BlogPage() {
                 description="Expert insights, tips, and updates from Dr. Nitin Sunku on orthopedic health and sports medicine."
             />
 
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-4xl space-y-4 text-gray-700 leading-relaxed text-base">
+                <p>
+                    Articles are organised by topic—knee ligaments, meniscus, shoulder pain, spine symptoms,
+                    running injuries, joint replacement, and recovery after sports trauma. Skim the excerpts
+                    below to find a guide that matches your question, then read the full post for structured
+                    explanations you can discuss with Dr. Nitin N Sunku during a consultation in HSR Layout or
+                    Attibele. New guides are added when common themes emerge from clinic discussions.
+                </p>
+                <p>
+                    Most long-form pieces are written for adults in Bengaluru who want clearer language before
+                    they commit to time off work or sport for treatment. You will see repeated themes: how
+                    imaging is used, when keyhole surgery is discussed, what physiotherapy usually involves,
+                    and how return-to-run or return-to-court timelines are staged. None of this replaces your own
+                    examination.
+                </p>
+                <p>
+                    If you live closer to Attibele, Anekal, Electronic City, or Sarjapura Road, plan around
+                    Raghava Multispeciality as the main hub. If HSR, Koramangala, BTM, or Bellandur is easier on
+                    a given week, ask about Health Nest when you use the contact page so the team can suggest the
+                    right slot.
+                </p>
+            </div>
+
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {sortedPosts.map((post) => (

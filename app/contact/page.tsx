@@ -21,6 +21,14 @@ export default function ContactPage() {
             />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
+                <p className="text-gray-700 leading-relaxed text-center max-w-3xl mx-auto mb-10">
+                    Use the appointment form for non-urgent enquiries, or call the hospital numbers listed
+                    beside each address if you prefer to speak with the front desk first. Please describe
+                    your main symptom, how long it has lasted, and any prior treatment so the team can suggest
+                    the right slot length. For emergencies—open fractures, loss of consciousness, new
+                    weakness after trauma—go to the nearest emergency department instead of waiting for an
+                    outpatient reply.
+                </p>
                 <div className="grid lg:grid-cols-2 gap-12">
 
                     {/* Contact Information Cards */}
@@ -93,15 +101,8 @@ export default function ContactPage() {
                     <FadeIn delay={0.4}>
                         <h2 className="text-3xl font-heading font-bold text-gray-900 text-center mb-12">Find Us on Map</h2>
                         <div className="grid md:grid-cols-2 gap-8">
-                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative group">
-                                <a
-                                    href="https://maps.app.goo.gl/82xv2KzEU7GUjT357"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="absolute inset-0 z-10 bg-transparent cursor-pointer"
-                                    aria-label="View Raghava Multispeciality Hospital on Google Maps"
-                                ></a>
-                                <h3 className="bg-primary text-white p-4 font-semibold relative z-20 pointer-events-none">Raghava Multispeciality Hospital</h3>
+                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                                <h3 className="bg-primary text-white p-4 font-semibold">Raghava Multispeciality Hospital</h3>
                                 <iframe
                                     src="https://maps.google.com/maps?q=Sri+Raghava+Childrens+and+General+Hospital+Attibele+Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                     width="100%"
@@ -110,18 +111,22 @@ export default function ContactPage() {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
+                                    title="Map showing Raghava Multispeciality Hospital, Attibele"
                                     className="filter group-hover:brightness-90 transition-all duration-300"
                                 ></iframe>
+                                <p className="p-4 bg-gray-50 border-t border-gray-100 text-sm">
+                                    <a
+                                        href="https://maps.app.goo.gl/82xv2KzEU7GUjT357"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="font-medium text-primary hover:underline"
+                                    >
+                                        Open Raghava Multispeciality Hospital in Google Maps
+                                    </a>
+                                </p>
                             </div>
-                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 relative group">
-                                <a
-                                    href="https://www.google.com/maps/search/?api=1&query=Health+Nest+Hospital+1162%2C+24th+Main+Rd%2C+Garden+Layout%2C+Sector+2+HSR+Layout%2C+Bangalore%2C+Karnataka+560102"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="absolute inset-0 z-10 bg-transparent cursor-pointer"
-                                    aria-label="View Health Nest Hospital on Google Maps"
-                                ></a>
-                                <h3 className="bg-primary text-white p-4 font-semibold relative z-20 pointer-events-none">Health Nest Hospital</h3>
+                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                                <h3 className="bg-primary text-white p-4 font-semibold">Health Nest Hospital</h3>
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0!2d77.64!3d12.91!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzM2LjAiTiA3N8KwMzgnMjQuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
                                     width="100%"
@@ -130,8 +135,19 @@ export default function ContactPage() {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
+                                    title="Map showing Health Nest Hospital, HSR Layout"
                                     className="filter group-hover:brightness-90 transition-all duration-300"
                                 ></iframe>
+                                <p className="p-4 bg-gray-50 border-t border-gray-100 text-sm">
+                                    <a
+                                        href="https://www.google.com/maps/search/?api=1&query=Health+Nest+Hospital+1162%2C+24th+Main+Rd%2C+Garden+Layout%2C+Sector+2+HSR+Layout%2C+Bangalore%2C+Karnataka+560102"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="font-medium text-primary hover:underline"
+                                    >
+                                        Open Health Nest Hospital in Google Maps
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </FadeIn>

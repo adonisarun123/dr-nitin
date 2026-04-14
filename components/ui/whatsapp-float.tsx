@@ -7,7 +7,7 @@ export function WhatsAppFloat() {
     const [isVisible, setIsVisible] = useState(false);
     const phoneNumber = "919449031003"; // +91-9449031003 in international format without + and -
     const message = "Hi, I would like to book an appointment with Dr. Nitin Sunku";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
     useEffect(() => {
         // Show button after a short delay for better UX
@@ -19,7 +19,7 @@ export function WhatsAppFloat() {
         <a
             href={whatsappUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className={`fixed bottom-6 right-6 z-50 group transition-all duration-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
             aria-label="Chat on WhatsApp"
