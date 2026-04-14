@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { FAQ } from "@/components/ui/faq";
 import { CheckCircle, Phone, ArrowLeft, ArrowRight, MapPin, Calendar as CalendarIcon, Clock, ShieldCheck } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
-import { servicesData } from "@/lib/data";
+import { servicesData, siteConfig, practicePostalAddress } from "@/lib/data";
 
 // Generate static params for all services
 export function generateStaticParams() {
