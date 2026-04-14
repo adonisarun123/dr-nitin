@@ -20,7 +20,7 @@ export const servicesData = [
   {
     slug: "acl-care",
     title: "ACL Care",
-    shortDesc: "Expert diagnosis and arthroscopic reconstruction for ACL tears.",
+    shortDesc: "Expert diagnosis and arthroscopic reconstruction for ACL tears. Learn causes, symptoms, treatment, recovery.",
     fullDesc: "The Anterior Cruciate Ligament (ACL) is crucial for knee stability. Dr. Nitin specializes in arthroscopic ACL reconstruction, ensuring a safe return to sports and daily activities.",
     icon: "/icons/acl.png",
     color: "bg-blue-50 text-blue-600",
@@ -28,7 +28,7 @@ export const servicesData = [
   {
     slug: "meniscal-care",
     title: "Meniscal Care",
-    shortDesc: "Minimally invasive treatment for meniscus tears used in sports.",
+    shortDesc: "Specialized meniscus tear care: arthroscopic repair or partial meniscectomy by Dr. Sunku. Learn causes, symptoms, recovery.",
     fullDesc: "Meniscus tears are common in athletes. We offer meniscus repair and partial meniscectomy using advanced arthroscopic techniques to preserve the knee joint.",
     icon: "/icons/meniscal-care.png",
     color: "bg-indigo-50 text-indigo-600",
@@ -36,7 +36,7 @@ export const servicesData = [
   {
     slug: "sports-medicine",
     title: "Sports Medicine",
-    shortDesc: "Comprehensive care for sports-related injuries and rehabilitation.",
+    shortDesc: "Specialized sports medicine care in Bangalore. Dr. Sunku treats sprains, fractures, ligament tears with personalized plans. Return to sport safely.",
     fullDesc: "From sprains to complex ligament injuries, our sports medicine program is designed to get athletes back in the game with personalized treatment plans.",
     icon: "/icons/sports-medicine.png",
     color: "bg-green-50 text-green-600",
@@ -44,7 +44,7 @@ export const servicesData = [
   {
     slug: "knee-replacement",
     title: "Knee Replacement",
-    shortDesc: "Total and partial knee replacement surgeries for chronic pain.",
+    shortDesc: "Advanced total & partial knee replacements by Dr. Sunku. Relieve arthritis pain, restore mobility. Learn about surgery, recovery",
     fullDesc: "For severe arthritis, knee replacement surgery can restore mobility and eliminate pain. Dr. Nitin uses the latest implants and techniques for long-lasting results.",
     icon: "/icons/knee-replacement.png",
     color: "bg-orange-50 text-orange-600",
@@ -52,7 +52,7 @@ export const servicesData = [
   {
     slug: "hip-replacement",
     title: "Hip Replacement",
-    shortDesc: "Advanced hip replacement techniques for mobility restoration.",
+    shortDesc: "Expert hip replacement surgeries in Bangalore. Dr. Sunku treats arthritis and hip fractures with advanced prostheses. Learn about surgery, recovery",
     fullDesc: "Hip replacement surgery helps patients suffering from hip arthritis or fractures regain their quality of life with reduced pain and improved function.",
     icon: "/icons/hip-replacement.png",
     color: "bg-purple-50 text-purple-600",
@@ -60,7 +60,7 @@ export const servicesData = [
   {
     slug: "shoulder-care",
     title: "Shoulder Care",
-    shortDesc: "Treatment for rotator cuff tears, dislocations, and frozen shoulder.",
+    shortDesc: "Comprehensive shoulder pain treatment by Dr. Sunku. We manage rotator cuff tears, impingement, instability, frozen shoulder with personalized care.",
     fullDesc: "Shoulder pain can be debilitating. We treat rotator cuff tears, shoulder instability, and frozen shoulder with both conservative and surgical options.",
     icon: "/icons/shoulder-care.png",
     color: "bg-cyan-50 text-cyan-600",
@@ -68,7 +68,7 @@ export const servicesData = [
   {
     slug: "bone-fracture",
     title: "Bone Fracture",
-    shortDesc: "Emergency collision and trauma care for all types of fractures.",
+    shortDesc: "Expert bone fracture care in Bangalore. Dr. Sunku treats simple to complex breaks with casting, ORIF, intramedullary nails. Personalized rehab for full recovery.",
     fullDesc: "Rapid and precise treatment for fractures ensuring proper alignment and healing.",
     icon: "/icons/broken-bone.png",
     color: "bg-red-50 text-red-600",
@@ -76,7 +76,7 @@ export const servicesData = [
   {
     slug: "spine-care",
     title: "Spine Care",
-    shortDesc: "Diagnosis and management of back pain and spinal disorders.",
+    shortDesc: "Comprehensive spine care in Attibele by Dr. Nitin Sunku — expert evaluation and non-surgical or surgical management of back pain and spinal disorders.",
     fullDesc: "Comprehensive evaluation and non-surgical/surgical management of spinal conditions.",
     icon: "/icons/spinal-care.png",
     color: "bg-emerald-50 text-emerald-600",
