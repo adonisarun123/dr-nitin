@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Hero } from "@/components/sections/hero";
 import { Stats } from "@/components/sections/stats";
 import { ServicesGrid } from "@/components/sections/services";
+import { TreatmentsGrid } from "@/components/sections/treatments";
 import { Testimonials } from "@/components/sections/testimonials";
 import { AboutTeaser } from "@/components/sections/about-teaser";
 import { Locations } from "@/components/sections/locations";
@@ -39,6 +40,7 @@ export default function Home() {
       <JsonLd data={physicianSchema} />
       <Hero />
       <FadeIn delay={0.2}><Stats /></FadeIn>
+      <TreatmentsGrid />
       <ServicesGrid />
       <FadeIn delay={0.2}><Testimonials /></FadeIn>
       <FadeIn delay={0.2}><AboutTeaser /></FadeIn>
