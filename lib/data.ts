@@ -1,3 +1,5 @@
+import { treatmentClusterPosts } from "./blog-posts-treatments";
+
 export const siteConfig = {
   name: "Dr. Nitin Sunku",
   description: "Orthopedic & Sports Medicine Specialist in HSR Layout, Bangalore",
@@ -2613,5 +2615,6 @@ export const blogPosts = [
       <p><strong>Can I walk?</strong><br/>Yes, on flat surfaces, but avoid stairs or long distances initially.</p>
       <p><strong>Is cycling safe?</strong><br/>Stationary cycling is one of the safest options when set up correctly.</p>
     `
-  }
+  },
+  ...treatmentClusterPosts,
 ];

@@ -54,27 +54,6 @@ export function FooterPracticeSummary() {
                     prioritise whether bracing, injections, structured physiotherapy, arthroscopy, or joint
                     replacement is discussed first.
                 </p>
-                <h3 className="text-lg font-heading font-semibold text-white pt-2">
-                    Using this website responsibly
-                </h3>
-                <p>
-                    Articles under the blog section explain common symptoms and treatment concepts in plain
-                    language. They are educational, may simplify complex decisions, and should always be
-                    confirmed in clinic after examination and, when needed, imaging. If you have severe
-                    deformity after injury, numbness or weakness in a limb, high fever with a hot swollen joint,
-                    chest pain, shortness of breath, or new bladder or bowel dysfunction with back pain, seek
-                    emergency care immediately rather than waiting for an outpatient slot.
-                </p>
-                <p>
-                    You may book through the contact page, call the numbers in the footer, browse services and
-                    the gallery for facility context, or read testimonials to understand how recovery plans are
-                    communicated. For machine-readable orientation aimed at language models, this site publishes
-                    <a href="/llms.txt" className="text-white underline underline-offset-2 hover:text-orange-200">
-                        {" "}
-                        /llms.txt
-                    </a>
-                    .
-                </p>
             </div>
         </section>
     );

@@ -38,7 +38,7 @@ export function RelatedPosts({ currentSlug, category }: RelatedPostsProps) {
                     >
                         <div className="aspect-video relative w-full overflow-hidden bg-gray-100">
                             <Image
-                                src={post.image || "/blog_image.jpg"}
+                                src={("image" in post && post.image) || "/blog_image.jpg"}
                                 alt={post.title}
                                 fill
                                 className="object-cover"

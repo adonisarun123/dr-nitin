@@ -159,7 +159,7 @@ export default function TreatmentDetailPage({
                             Non-Surgical · Regenerative
                         </div>
 
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight max-w-4xl">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight max-w-4xl text-white">
                             {t.heroH1}
                         </h1>
 
