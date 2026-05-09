@@ -9,13 +9,18 @@ export const metadata: Metadata = {
 
 const samples = [
     {
+        slug: "hero-b",
+        label: "Direction B — Bold modern hero (active)",
+        desc: "Dark slate canvas, large display headline with gradient accent, pill buttons, stat strip, glowing photo halo. Compared against the current live hero.",
+    },
+    {
         slug: "full-editorial",
-        label: "Direction A — Full editorial homepage",
-        desc: "Hero, stats, treatments grid, about teaser, locations, page header — all in editorial-clinical style.",
+        label: "Direction A — Full editorial homepage (rejected)",
+        desc: "Hero, stats, treatments grid, about teaser, locations, page header — all in editorial-clinical style. Kept as reference.",
     },
     {
         slug: "hero-a",
-        label: "Direction A — Hero only (with current hero for comparison)",
+        label: "Direction A — Hero only, side-by-side with current (rejected)",
         desc: "Side-by-side: editorial hero on top, current live hero below.",
     },
 ];
