@@ -4,13 +4,50 @@ import { leadSchema, type LeadInput, type UTMParams } from '@/lib/types/lead';
 import { sendEmail } from '@/lib/email/mailer';
 import { generateLeadNotificationEmail } from '@/lib/email/templates/lead-notification';
 
+// ─────────────────────────────────────────────────────────────────
+// Lead email routing
+// • Primary recipient is decided by the patient's preferred clinic.
+// • drnitinmarketing@gmail.com is BCC'd on every lead so the practice
+//   has a single master archive of all incoming consultations.
+// • If the deployment also sets a BCC_EMAIL env var (e.g. for a
+//   compliance archive), it's appended and deduplicated.
+// ─────────────────────────────────────────────────────────────────
+const LOCATION_ROUTING: Record<string, string> = {
+    'hsr-layout': 'healthnest2010@yahoo.in',
+    'attibele': 'raghavahospital2002@gmail.com',
+};
+const MARKETING_BCC = 'drnitinmarketing@gmail.com';
+
+function resolveLeadRecipients(location: string): { to: string; bcc?: string } {
+    const primary = LOCATION_ROUTING[location] ?? MARKETING_BCC;
+
+    const bccs = new Set<string>();
+    if (primary !== MARKETING_BCC) {
+        bccs.add(MARKETING_BCC);
+    }
+    if (process.env.BCC_EMAIL) {
+        process.env.BCC_EMAIL
+            .split(',')
+            .map((s) => s.trim())
+            .filter(Boolean)
+            .forEach((extra) => {
+                if (extra !== primary) bccs.add(extra);
+            });
+    }
+
+    return {
+        to: primary,
+        bcc: bccs.size > 0 ? Array.from(bccs).join(', ') : undefined,
+    };
+}
+
 export async function POST(request: NextRequest) {
     try {
         // Log API call for debugging
         console.log('=== Lead Submission API Called ===');
         console.log('DATABASE_URL:', process.env.DATABASE_URL ? '✅ Configured' : '❌ MISSING');
         console.log('SMTP_USER:', process.env.SMTP_USER ? '✅ Configured' : '❌ MISSING');
-        console.log('SALES_EMAIL:', process.env.SALES_EMAIL ? '✅ Configured' : '❌ MISSING');
+        console.log('Lead routing: location-based + drnitinmarketing@gmail.com (master BCC)');
 
         // Check for required environment variables
         if (!process.env.DATABASE_URL) {
@@ -86,40 +123,30 @@ export async function POST(request: NextRequest) {
         console.log('✅ Database insert successful! Lead ID:', insertedLead.id);
 
         // Generate and send email notification
-        let recipientEmail = process.env.SALES_EMAIL;
+        const { to: recipientEmail, bcc: bccEmail } = resolveLeadRecipients(
+            leadData.preferredLocation
+        );
 
-        // Override recipient based on location
-        if (leadData.preferredLocation === 'hsr-layout') {
-            recipientEmail = 'healthnest2010@yahoo.in';
-        } else if (leadData.preferredLocation === 'attibele') {
-            recipientEmail = 'raghavahospital2002@gmail.com';
+        console.log('📧 Routing lead → To:', recipientEmail);
+        if (bccEmail) {
+            console.log('📧 BCC:', bccEmail);
         }
 
-        const bccEmail = process.env.BCC_EMAIL;
+        const { html, text } = generateLeadNotificationEmail(leadData);
 
-        if (recipientEmail) {
-            console.log('📧 Attempting to send email to:', recipientEmail);
-            if (bccEmail) {
-                console.log('📧 BCC email configured:', bccEmail);
-            }
-            const { html, text } = generateLeadNotificationEmail(leadData);
+        const emailResult = await sendEmail({
+            to: recipientEmail,
+            subject: `🏥 New Appointment Request from ${leadData.name}`,
+            html,
+            text,
+            bcc: bccEmail,
+        });
 
-            const emailResult = await sendEmail({
-                to: recipientEmail,
-                subject: `🏥 New Appointment Request from ${leadData.name}`,
-                html,
-                text,
-                bcc: bccEmail,
-            });
-
-            if (!emailResult.success) {
-                console.error('❌ Failed to send email notification:', emailResult.error);
-                // Don't fail the request if email fails, just log it
-            } else {
-                console.log('✅ Email sent successfully! Message ID:', emailResult.messageId);
-            }
+        if (!emailResult.success) {
+            console.error('❌ Failed to send email notification:', emailResult.error);
+            // Don't fail the request if email fails, just log it
         } else {
-            console.warn('⚠️ No recipient email configured (SALES_EMAIL missing and no matching location), skipping email notification');
+            console.log('✅ Email sent successfully! Message ID:', emailResult.messageId);
         }
 
         // Return success response
