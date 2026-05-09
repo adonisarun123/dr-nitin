@@ -1417,6 +1417,423 @@ export const treatments: Treatment[] = [
             { label: "Ultrasound-Guided Injections", href: "/treatments/ultrasound-guided-orthopedic-injections" },
         ],
     },
+
+    // ───────────────────────────────────────────────────────────────────
+    // Pillar 6 — Advanced Sports Injuries Treatment
+    // ───────────────────────────────────────────────────────────────────
+    {
+        slug: "advanced-sports-injuries-treatment",
+        title: "Advanced Sports Injuries Treatment",
+        shortDesc:
+            "Comprehensive non-surgical and minimally invasive sports injury care — acute management, regenerative therapy, structured rehab, and a clear return-to-play plan.",
+        metaTitle:
+            "Advanced Sports Injuries Treatment in Bengaluru | Dr. Nitin N Sunku",
+        metaDescription:
+            "Advanced sports injury treatment by Dr. Nitin N Sunku at Raghava Multispeciality Hospital, Attibele and Health Nest Hospital, HSR Layout. Acute injury management, regenerative therapy (GFC, PRP), ultrasound-guided injections, structured rehab, and return-to-play planning.",
+        heroH1: "Advanced Sports Injuries Treatment in Bengaluru — From Acute Care to Return-to-Play",
+        heroSubhead:
+            "Comprehensive, evidence-based care for athletes and active adults — acute injury management, accurate diagnosis with in-clinic ultrasound, regenerative therapies, structured rehabilitation, and a clear pathway back to your sport.",
+        heroBullets: [
+            "Acute injury management — first 0–72 hours, the right way",
+            "In-clinic diagnostic ultrasound for tendons, joints & soft tissue",
+            "Regenerative options (GFC, PRP) under image guidance",
+            "Structured return-to-sport pathway — not a guess",
+        ],
+        primaryKeywords: [
+            "advanced sports injuries treatment in Bengaluru",
+            "sports medicine specialist Bengaluru",
+            "sports injury doctor Attibele",
+            "sports injury treatment HSR Layout",
+            "sports injury rehab Electronic City",
+        ],
+        procedureName: "Sports Injury Management",
+        color: "bg-sky-50 text-sky-600",
+        icon: "Zap",
+        sections: [
+            {
+                id: "what-is-it",
+                title: "What \"advanced sports injuries treatment\" actually means",
+                blocks: [
+                    {
+                        type: "paragraph",
+                        text: "Advanced sports injury care goes far beyond \"rest and a painkiller.\" It is a structured pathway — accurate diagnosis, the right early intervention, evidence-based rehabilitation, modern regenerative options when indicated, and a graded return-to-play plan that respects the demands of your specific sport.",
+                    },
+                    {
+                        type: "paragraph",
+                        text: "Whether you are a weekend cricketer with a hamstring strain, a runner with patellar tendinopathy, a footballer with an ACL injury, or a desk-bound professional who took up gym training and now has shoulder pain, the principles are the same: protect the tissue early, diagnose accurately, treat the right structure, rehabilitate the whole athletic chain, and return safely.",
+                    },
+                    {
+                        type: "callout",
+                        tone: "info",
+                        text: "This page covers the full spectrum of sports injury care offered by Dr. Nitin N Sunku in Bengaluru — the broader \"how it all fits together\" view. For specific regenerative treatments, see the linked pillar pages below.",
+                    },
+                ],
+            },
+            {
+                id: "common-injuries",
+                title: "Common sports injuries treated",
+                blocks: [
+                    { type: "heading", level: 3, text: "Knee" },
+                    {
+                        type: "list",
+                        items: [
+                            "ACL, MCL, LCL, and PCL ligament injuries",
+                            "Meniscal tears (medial and lateral)",
+                            "Patellar tendinopathy / jumper's knee",
+                            "Quadriceps tendinopathy",
+                            "Patellofemoral pain syndrome (runner's knee)",
+                            "IT band syndrome",
+                            "Pes anserine bursitis",
+                            "Cartilage defects (chondral injuries)",
+                        ],
+                    },
+                    { type: "heading", level: 3, text: "Shoulder" },
+                    {
+                        type: "list",
+                        items: [
+                            "Rotator cuff strains, partial and full-thickness tears",
+                            "Recurrent shoulder dislocation / instability",
+                            "Subacromial bursitis and impingement",
+                            "Biceps tendinopathy and SLAP-type injuries",
+                            "AC joint sprains",
+                            "Adhesive capsulitis (frozen shoulder) post-injury",
+                        ],
+                    },
+                    { type: "heading", level: 3, text: "Ankle, foot & lower leg" },
+                    {
+                        type: "list",
+                        items: [
+                            "Lateral and medial ankle sprains",
+                            "Chronic ankle instability",
+                            "Achilles tendinopathy and ruptures",
+                            "Plantar fasciitis",
+                            "Stress fractures",
+                            "Shin splints (medial tibial stress syndrome)",
+                            "Calf strains",
+                        ],
+                    },
+                    { type: "heading", level: 3, text: "Hip & thigh" },
+                    {
+                        type: "list",
+                        items: [
+                            "Hamstring strains",
+                            "Quadriceps strains and contusions",
+                            "Adductor (groin) strains",
+                            "Trochanteric bursitis and gluteal tendinopathy",
+                            "Hip impingement (FAI) symptoms",
+                        ],
+                    },
+                    { type: "heading", level: 3, text: "Elbow, wrist & hand" },
+                    {
+                        type: "list",
+                        items: [
+                            "Tennis elbow (lateral epicondylitis)",
+                            "Golfer's elbow (medial epicondylitis)",
+                            "Triceps tendinopathy",
+                            "Wrist sprains and TFCC injuries",
+                            "Finger and thumb ligament injuries",
+                        ],
+                    },
+                ],
+            },
+            {
+                id: "pathway",
+                title: "The complete care pathway",
+                blocks: [
+                    {
+                        type: "paragraph",
+                        text: "Advanced sports injury care is delivered as a five-stage pathway, individualised for each athlete:",
+                    },
+                    {
+                        type: "ordered",
+                        items: [
+                            "Acute care — protect the tissue, control swelling, and avoid making things worse in the first 72 hours.",
+                            "Accurate diagnosis — clinical examination, in-clinic ultrasound, X-ray, and MRI only when it changes management.",
+                            "Targeted treatment — physiotherapy, taping/bracing, regenerative injections, and selected surgical referrals.",
+                            "Structured rehabilitation — strength, control, sport-specific drills, and load progression.",
+                            "Return-to-sport — graded reintroduction with objective milestones, not arbitrary timelines.",
+                        ],
+                    },
+                ],
+            },
+            {
+                id: "acute-care",
+                title: "Acute injury management — the first 72 hours",
+                blocks: [
+                    {
+                        type: "paragraph",
+                        text: "What you do in the first three days often shapes the next three months. Modern guidance has moved beyond classic \"RICE\" toward a more nuanced approach that emphasises early protection without prolonged immobilisation.",
+                    },
+                    { type: "heading", level: 3, text: "POLICE protocol" },
+                    {
+                        type: "list",
+                        items: [
+                            "Protection — avoid worsening the injury (taping, bracing, crutches if needed)",
+                            "Optimal Loading — short, gentle, pain-controlled movement rather than total rest",
+                            "Ice — 15–20 minutes every 2–3 hours for the first 48 hours",
+                            "Compression — elastic wrap for swelling control",
+                            "Elevation — limb above heart level when resting",
+                        ],
+                    },
+                    { type: "heading", level: 3, text: "When to seek urgent care" },
+                    {
+                        type: "list",
+                        items: [
+                            "Visible deformity or inability to bear weight",
+                            "Severe swelling within minutes of injury",
+                            "Numbness, tingling, or weakness in the limb",
+                            "A loud \"pop\" with immediate giving way",
+                            "Fever or hot, red, swollen joint",
+                            "Open wounds with suspected joint penetration",
+                        ],
+                    },
+                    {
+                        type: "callout",
+                        tone: "warning",
+                        text: "If any of the above is present, seek emergency care immediately rather than waiting for an outpatient slot.",
+                    },
+                ],
+            },
+            {
+                id: "diagnosis",
+                title: "Diagnosis — what we actually look at",
+                blocks: [
+                    {
+                        type: "paragraph",
+                        text: "A correct diagnosis is the most important step in sports injury care. Dr. Nitin N Sunku uses a layered approach:",
+                    },
+                    {
+                        type: "list",
+                        items: [
+                            "Detailed history — mechanism of injury, position when it happened, what you heard or felt",
+                            "Focused clinical examination — special tests that reproduce or rule out specific structures",
+                            "In-clinic diagnostic ultrasound — live view of tendons, ligaments, bursae, and fluid collections",
+                            "X-ray — when bone or alignment needs to be assessed",
+                            "MRI — only when it will change the treatment plan, not by reflex",
+                        ],
+                    },
+                    {
+                        type: "callout",
+                        tone: "info",
+                        text: "Many sports injuries — especially tendon, bursa, and ligament problems — are best assessed live with ultrasound rather than \"static\" MRI alone. We use both, in the right sequence.",
+                    },
+                ],
+            },
+            {
+                id: "treatment-options",
+                title: "Treatment options under one roof",
+                blocks: [
+                    {
+                        type: "linkCard",
+                        title: "Ultrasound-Guided Orthopedic Injections",
+                        description:
+                            "Real-time imaging delivers regenerative material or medication exactly to the injured structure — critical for tendons, bursae, and small-joint targets in sports injuries.",
+                        href: "/treatments/ultrasound-guided-orthopedic-injections",
+                    },
+                    {
+                        type: "linkCard",
+                        title: "GFC (Growth Factor Concentrate) Therapy",
+                        description:
+                            "Concentrated growth factors from your own blood — well-suited to tendinopathies, partial tears, and chronic sports injuries that have plateaued with rehab alone.",
+                        href: "/treatments/gfc-treatment-knee-pain",
+                    },
+                    {
+                        type: "linkCard",
+                        title: "Hyaluronic Acid Injections",
+                        description:
+                            "Lubrication and cushioning support for athletes with early joint wear, post-traumatic stiffness, or persistent intra-articular symptoms.",
+                        href: "/treatments/hyaluronic-acid-injection-treatment",
+                    },
+                    {
+                        type: "linkCard",
+                        title: "Non-Surgical Knee Pain Treatment",
+                        description:
+                            "Hub for the layered non-surgical pathway — physiotherapy, weight management, regenerative options — applied to athletic knee problems.",
+                        href: "/treatments/non-surgical-knee-pain-treatment",
+                    },
+                    {
+                        type: "paragraph",
+                        text: "Conservative care also includes prescribed physiotherapy, taping and bracing, footwear advice, training-load review, and selected medications used briefly and purposefully.",
+                    },
+                ],
+            },
+            {
+                id: "regenerative",
+                title: "Regenerative options for sports injuries",
+                blocks: [
+                    {
+                        type: "paragraph",
+                        text: "Regenerative therapies — particularly GFC and PRP — are an important part of modern sports injury care, especially for stubborn tendinopathies, partial tears, and chronic joint pain that hasn't responded to rehab alone.",
+                    },
+                    { type: "heading", level: 3, text: "Why athletes value regenerative care" },
+                    {
+                        type: "list",
+                        items: [
+                            "Daycare procedure — minimal disruption to training",
+                            "Uses your own biology — strong safety profile",
+                            "Compatible with rehab — supports recovery without halting it",
+                            "Can be repeated if needed",
+                            "Delivered with ultrasound guidance for accuracy",
+                        ],
+                    },
+                    {
+                        type: "callout",
+                        tone: "honest",
+                        text: "Regenerative injections are a tool, not a shortcut. Outcomes depend on accurate diagnosis, the right indication, and consistent rehabilitation. Tendons heal slowly even with biological support.",
+                    },
+                ],
+            },
+            {
+                id: "return-to-sport",
+                title: "Return-to-sport pathway",
+                blocks: [
+                    {
+                        type: "paragraph",
+                        text: "Going back to your sport too early or too aggressively is the most common reason injuries recur. We use a graded, milestone-based pathway rather than fixed timelines:",
+                    },
+                    {
+                        type: "ordered",
+                        items: [
+                            "Pain-free daily activity — walk, climb stairs, sleep without pain",
+                            "Restored range of motion — equal to the uninjured side",
+                            "Strength benchmarks — typically 85–100% of the uninjured side, depending on the injury",
+                            "Sport-specific drills — gradual reintroduction of cutting, jumping, throwing, sprinting",
+                            "Controlled return — start with practice, then non-contact, then full play",
+                            "Maintenance phase — keep doing the strength and control work that protected you",
+                        ],
+                    },
+                    {
+                        type: "paragraph",
+                        text: "Each milestone is verified with objective tests where possible — strength testing, hop tests, sport-specific functional tests — rather than relying on \"how does it feel?\" alone.",
+                    },
+                ],
+            },
+            {
+                id: "scenarios",
+                title: "Common scenarios — what care looks like",
+                blocks: [
+                    {
+                        type: "paragraph",
+                        text: "A few illustrative pathways. Your plan is always individualised to your sport, position, and goals.",
+                    },
+                    {
+                        type: "table",
+                        headers: ["Scenario", "Typical pathway"],
+                        rows: [
+                            [
+                                "Runner's knee (anterior knee pain)",
+                                "Gait & footwear review · quad/hip strengthening · taping if helpful · regenerative injection in stubborn cases · graded return to running",
+                            ],
+                            [
+                                "Jumper's knee (patellar tendinopathy)",
+                                "Heavy-slow-resistance protocol · load management · ultrasound-guided GFC if rehab plateaus · staged return to jumping/cutting sports",
+                            ],
+                            [
+                                "Hamstring strain",
+                                "POLICE 0–72h · early gentle loading · progressive eccentric strengthening · sprint-mechanics drills before return",
+                            ],
+                            [
+                                "Recurrent shoulder dislocation",
+                                "Cuff & scapular rehab · activity modification · imaging review · surgical referral when stability is compromised",
+                            ],
+                            [
+                                "ACL injury",
+                                "Acute care · diagnostic confirmation · prehab · personalised decision on conservative vs surgical management with experienced surgeon coordination",
+                            ],
+                            [
+                                "Tennis/golfer's elbow",
+                                "Load review · eccentric forearm strengthening · brace/taping · ultrasound-guided regenerative injection in chronic cases",
+                            ],
+                            [
+                                "Plantar fasciitis",
+                                "Footwear · calf and intrinsic foot strengthening · taping · ultrasound-guided injection if persistent · gradual loading",
+                            ],
+                        ],
+                    },
+                ],
+            },
+            {
+                id: "eligibility",
+                title: "Eligibility & when surgery is the better answer",
+                blocks: [
+                    { type: "heading", level: 3, text: "You are likely a good candidate for non-surgical advanced care if:" },
+                    {
+                        type: "list",
+                        items: [
+                            "Your injury does not involve a complete structural failure (e.g., a full ACL tear in a high-demand athlete)",
+                            "You are willing to commit to a structured rehab programme",
+                            "Your goals can be met without surgery, given your sport and demands",
+                            "Imaging and examination support a non-surgical pathway",
+                        ],
+                    },
+                    { type: "heading", level: 3, text: "Surgical referral may be appropriate when:" },
+                    {
+                        type: "list",
+                        items: [
+                            "There is a complete or unstable structural tear (ligament, tendon, meniscus) in a high-demand athlete",
+                            "Recurrent dislocation or instability is compromising daily life or performance",
+                            "Mechanical symptoms (locking, giving way) are not resolving with rehab",
+                            "Imaging shows a clearly surgical lesion in the right clinical context",
+                        ],
+                    },
+                    {
+                        type: "paragraph",
+                        text: "When surgery is genuinely the right answer, you are referred to trusted joint and sports surgery specialists with full transparency — and we coordinate the rehab and return-to-play plan that follows.",
+                    },
+                ],
+            },
+            {
+                id: "why-dr-nitin",
+                title: "Why athletes choose Dr. Nitin N Sunku",
+                blocks: [
+                    {
+                        type: "list",
+                        items: [
+                            "Fellowship-level training in arthroscopy and sports medicine",
+                            "Conservative-first philosophy — surgery only when clearly warranted",
+                            "In-clinic diagnostic and image-guided ultrasound capability",
+                            "Coordinated rehabilitation with experienced physiotherapy partners",
+                            "Honest counselling — including when training load, technique, or equipment is the real fix",
+                            "Two convenient locations — Raghava Multispeciality Hospital, Attibele and Health Nest Hospital, HSR Layout",
+                            "Time given to each athlete — sport demands, position, and goals are part of the plan",
+                        ],
+                    },
+                ],
+            },
+            {
+                id: "service-area",
+                title: "Service area — South Bengaluru",
+                blocks: [
+                    {
+                        type: "paragraph",
+                        text: "Sports injury consultations are offered at Raghava Multispeciality Hospital, Attibele (Sarjapura–Attibele Road) — convenient for patients from Anekal, Bommasandra, Chandapura, Hosur Road, and Electronic City — and at Health Nest Hospital, HSR Layout — convenient for HSR, Koramangala, BTM Layout, Sarjapur Road, Bellandur, and the Bengaluru tech corridor.",
+                    },
+                ],
+            },
+        ],
+        faqs: [
+            { q: "What counts as a \"sports injury\"?", a: "Any injury that occurs during athletic activity or affects your ability to do that activity. This includes acute injuries (sprains, strains, dislocations, fractures), overuse injuries (tendinopathies, stress fractures), and post-injury changes that limit performance." },
+            { q: "How quickly should I see a doctor after a sports injury?", a: "For severe pain, deformity, inability to bear weight, numbness, or a hot swollen joint — immediately. For most other injuries, a structured assessment within 3–7 days is ideal so the right treatment starts early." },
+            { q: "Is RICE still the right approach?", a: "RICE is fine, but modern guidance prefers POLICE — Protection, Optimal Loading, Ice, Compression, Elevation. The key change: gentle, pain-controlled movement is encouraged rather than total rest." },
+            { q: "Do I always need an MRI?", a: "No. MRI is ordered only when it will change the treatment plan. Many soft-tissue injuries are diagnosed accurately with examination plus in-clinic ultrasound." },
+            { q: "Is rest enough for most sports injuries?", a: "Rarely. Rest alone often leads to deconditioning and recurrence. Active, structured rehab with appropriate loading is what restores tissue and performance." },
+            { q: "When is surgery needed?", a: "For complete structural tears in high-demand athletes, recurrent instability, mechanical symptoms not resolving with rehab, or imaging plus exam findings that clearly require surgical fixation." },
+            { q: "How do regenerative injections fit in?", a: "They support healing in tendinopathies, partial tears, and chronic joint pain when rehab alone has plateaued. They work best combined with structured rehabilitation, not as a substitute." },
+            { q: "How long until I can play my sport again?", a: "It varies by injury, sport, and your starting fitness. Hamstring strains typically 3–6 weeks, tendinopathies 8–16 weeks, ACL surgery 6–12 months. We use milestones, not fixed timelines." },
+            { q: "Can I keep training while I rehab?", a: "Often yes — with modifications. Pool training, cycling, upper-body work, or sport-specific technical drills can usually continue. We will tell you exactly what to do and what to avoid." },
+            { q: "Is taping or bracing useful?", a: "In selected injuries, yes — for offloading, proprioception, or stability. It is a tool, not a long-term substitute for strengthening." },
+            { q: "What about kids and teen sports injuries?", a: "Adolescent injuries (e.g., Osgood-Schlatter, Sever's disease, growth-plate concerns) need a different approach. We screen for these and coordinate paediatric input where needed." },
+            { q: "Are professional and recreational athletes treated differently?", a: "The same diagnostic principles apply, but the return-to-sport thresholds and intensity of rehab differ. The plan is always tailored to your sport, position, and goals." },
+            { q: "Where in Bengaluru can I get this care?", a: "At Raghava Multispeciality Hospital, Attibele and Health Nest Hospital, HSR Layout. Patients travel from across South Bengaluru, including Electronic City, Koramangala, BTM Layout, Sarjapur Road, and Bellandur." },
+            { q: "What should I bring to my first visit?", a: "Any prior imaging (X-ray, MRI), reports from previous treatments, the footwear or kit you usually train in if relevant, and a brief written list of your sport, training volume, and goals." },
+        ],
+        relatedLinks: [
+            { label: "Non-Surgical Knee Pain Treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
+            { label: "GFC Treatment for Knee Pain", href: "/treatments/gfc-treatment-knee-pain" },
+            { label: "Ultrasound-Guided Injections", href: "/treatments/ultrasound-guided-orthopedic-injections" },
+            { label: "Sports Injury Regenerative Treatments (blog)", href: "/blog/sports-injury-regenerative-treatments" },
+        ],
+    },
 ];
 
 /** Lookup helper used by the dynamic route. */

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Inter, Poppins, Lora } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -15,6 +15,13 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-poppins"
+});
+// Editorial serif used by the new "editorial clinical" hero (direction A).
+const lora = Lora({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-lora",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -86,7 +93,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={cn(inter.variable, poppins.variable, "font-sans bg-background text-text-primary")}>
+      <body className={cn(inter.variable, poppins.variable, lora.variable, "font-sans bg-background text-text-primary")}>
         <JsonLd data={organizationSchema} />
         <Header />
         {children}
