@@ -1,12 +1,10 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail } from "lucide-react";
-import { FooterPracticeSummary } from "@/components/layout/footer-practice-summary";
 
 export function Footer() {
     return (
         <footer className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-gray-100 py-16 border-t-4 border-orange-500">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <FooterPracticeSummary />
                 <div className="grid lg:grid-cols-4 gap-12 mb-12">
                     <div>
                         <h3 className="text-2xl font-heading font-bold text-white mb-6">Dr. Nitin Sunku</h3>
@@ -26,6 +24,7 @@ export function Footer() {
                         <ul className="space-y-3">
                             <li><Link href="/about" className="text-blue-100 hover:text-orange-400 transition-colors">About Dr. Nitin</Link></li>
                             <li><Link href="/services" className="text-blue-100 hover:text-orange-400 transition-colors">Services</Link></li>
+                            <li><Link href="/practice" className="text-blue-100 hover:text-orange-400 transition-colors">Practice overview</Link></li>
                             <li><Link href="/testimonials" className="text-blue-100 hover:text-orange-400 transition-colors">Patient Stories</Link></li>
                             <li><Link href="/blog" className="text-blue-100 hover:text-orange-400 transition-colors">Blog</Link></li>
                             <li><Link href="/contact" className="text-blue-100 hover:text-orange-400 transition-colors">Book Appointment</Link></li>
