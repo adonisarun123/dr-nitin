@@ -21,6 +21,8 @@ import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/seo/json-ld";
 import { FadeIn } from "@/components/animations/fade-in";
 import { TreatmentBlocks } from "@/components/treatments/treatment-blocks";
+import { BookingForm } from "@/components/forms/booking-form";
+import { TreatmentMobileStickyCta } from "@/components/treatments/mobile-sticky-cta";
 
 export function generateStaticParams() {
     return treatments.map((t) => ({ slug: t.slug }));
@@ -353,6 +355,71 @@ export default function TreatmentDetailPage({
                     </aside>
                 </div>
 
+                {/* Lead form — high-intent, end-of-page conversion */}
+                <section
+                    id="book"
+                    aria-labelledby="book-heading"
+                    className="mt-20 lg:mt-24 scroll-mt-28"
+                >
+                    <div className="rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 p-1 shadow-2xl">
+                        <div className="rounded-[calc(1.5rem-4px)] bg-white p-6 sm:p-10 lg:p-14 grid lg:grid-cols-5 gap-8 lg:gap-12">
+                            <div className="lg:col-span-2 lg:pr-4">
+                                <h2
+                                    id="book-heading"
+                                    className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-gray-900 leading-tight mb-4"
+                                >
+                                    Book your {t.title.toLowerCase()} consultation
+                                </h2>
+                                <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-6">
+                                    Share a few details and the clinic team will reach out to confirm
+                                    your slot. Bring any prior X-ray or MRI to your visit — Dr. Nitin
+                                    N Sunku will review your imaging and walk you through the right
+                                    options for your case.
+                                </p>
+                                <ul className="space-y-3 text-sm text-gray-700">
+                                    <li className="flex items-start gap-3">
+                                        <CheckCircle className="h-5 w-5 shrink-0 text-primary mt-0.5" />
+                                        <span>
+                                            Two convenient locations — Raghava Multispeciality
+                                            Hospital, Attibele and Health Nest Hospital, HSR Layout
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <CheckCircle className="h-5 w-5 shrink-0 text-primary mt-0.5" />
+                                        <span>
+                                            Honest counselling — no rushing to surgery, no
+                                            over-promising
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <CheckCircle className="h-5 w-5 shrink-0 text-primary mt-0.5" />
+                                        <span>
+                                            Written treatment plan with realistic expectations
+                                        </span>
+                                    </li>
+                                </ul>
+
+                                <div className="mt-8 pt-6 border-t border-gray-200">
+                                    <p className="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-2">
+                                        Prefer to call?
+                                    </p>
+                                    <a
+                                        href={`tel:${siteConfig.phone}`}
+                                        className="text-primary font-semibold hover:underline inline-flex items-center gap-2"
+                                    >
+                                        <Phone className="h-4 w-4" />
+                                        {siteConfig.phone}
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="lg:col-span-3">
+                                <BookingForm source={`treatment-${t.slug}`} />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Other treatments — full width below */}
                 {otherTreatments.length > 0 && (
                     <section className="mt-20 lg:mt-24">
@@ -387,6 +454,9 @@ export default function TreatmentDetailPage({
                     </section>
                 )}
             </div>
+
+            {/* Mobile-only sticky CTA bar (hidden on md+) */}
+            <TreatmentMobileStickyCta phone={siteConfig.phone} />
         </main>
     );
 }

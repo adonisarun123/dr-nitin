@@ -29,11 +29,11 @@ Capture high-intent searches from patients who have been recommended knee replac
 
 ## 5. SEO title
 
-`Knee Replacement Alternatives in Bengaluru — Non-Surgical Options That Work | Dr. Nitin`
+`Knee Replacement Alternatives in Bengaluru — Non-Surgical Options That Work | Dr. Nitin N Sunku`
 
 ## 6. Meta description
 
-`Real, evidence-based alternatives to knee replacement surgery — physiotherapy, HA, GFC, ultrasound-guided injections, and lifestyle care — at Dr. Nitin's Electronic City and Attibele clinics. Get an honest second opinion.`
+`Real, evidence-based alternatives to knee replacement surgery — physiotherapy, HA, GFC, ultrasound-guided injections, and lifestyle care — at Dr. Nitin N Sunku's Attibele and HSR Layout clinics. Get an honest second opinion.`
 
 ---
 
@@ -114,7 +114,7 @@ In such cases, we coordinate with experienced joint-replacement surgeons to ensu
 
 ---
 
-### How a "second opinion" visit works at Dr. Nitin's clinic
+### How a "second opinion" visit works at Dr. Nitin N Sunku's clinic
 
 1. **Bring your imaging** (X-ray, MRI) and any prior reports.
 2. **30–45 minute consultation** — clinical examination, imaging review, OA grading.
@@ -175,7 +175,7 @@ Even modest weight loss (5–10%) can substantially reduce pain and improve outc
 Bring your X-ray and MRI files (digital is fine), prior reports, and a list of medications and prior treatments tried.
 
 **Q10. Where in Bengaluru can I get this assessment?**
-At Dr. Nitin's clinics in Electronic City and Attibele.
+At Dr. Nitin N Sunku's clinics in Attibele and HSR Layout.
 
 ---
 

@@ -1,4 +1,4 @@
-# Osteoarthritis Knee Treatment in Electronic City & Attibele, Bengaluru
+# Osteoarthritis Knee Treatment in Attibele & HSR Layout, Bengaluru
 
 > **Pillar #5 — Education-heavy ranking page for OA**
 
@@ -19,11 +19,11 @@ Rank for high-volume, high-intent OA queries ("knee osteoarthritis treatment", "
 ## 3. SEO strategy
 
 - **Primary keywords**:
-  - osteoarthritis knee treatment in Bengaluru
-  - knee OA treatment Electronic City
-  - osteoarthritis specialist Attibele
-  - OA knee grades treatment
-  - knee OA stages and management
+ - osteoarthritis knee treatment in Bengaluru
+ - knee OA treatment Electronic City
+ - osteoarthritis specialist Attibele
+ - OA knee grades treatment
+ - knee OA stages and management
 - **Secondary keywords**: knee arthritis doctor near me, knee wear and tear treatment, KL grade 3 OA, OA knee without surgery, OA knee injection
 - **Semantic / NLP entities**: osteoarthritis, articular cartilage, subchondral bone, osteophytes, Kellgren–Lawrence, joint space narrowing, synovitis, BMI, gait, hyaluronic acid, GFC, viscosupplementation, NSAIDs
 
@@ -35,11 +35,11 @@ Rank for high-volume, high-intent OA queries ("knee osteoarthritis treatment", "
 
 ## 5. SEO title
 
-`Osteoarthritis Knee Treatment in Bengaluru | OA Grades, Symptoms & Care | Dr. Nitin`
+`Osteoarthritis Knee Treatment in Bengaluru | OA Grades, Symptoms & Care | Dr. Nitin N Sunku`
 
 ## 6. Meta description
 
-`Comprehensive guide to knee osteoarthritis treatment by Dr. Nitin in Electronic City and Attibele, Bengaluru. Understand OA grades, symptoms, causes, and modern non-surgical options including HA, GFC, and ultrasound-guided injections.`
+`Comprehensive guide to knee osteoarthritis treatment by Dr. Nitin N Sunku in Attibele and HSR Layout, Bengaluru. Understand OA grades, symptoms, causes, and modern non-surgical options including HA, GFC, and ultrasound-guided injections.`
 
 ---
 
@@ -49,10 +49,10 @@ Rank for high-volume, high-intent OA queries ("knee osteoarthritis treatment", "
 
 **H1:** Knee Osteoarthritis Treatment in Bengaluru — Understand It, Manage It, Move Better
 
-**Sub-headline:** A complete patient guide to knee OA — symptoms, stages, modern non-surgical treatments, and when surgery becomes necessary. Care led by Dr. Nitin in Electronic City and Attibele.
+**Sub-headline:** A complete patient guide to knee OA — symptoms, stages, modern non-surgical treatments, and when surgery becomes necessary. Care led by Dr. Nitin N Sunku in Attibele and HSR Layout.
 
 **Primary CTA:** Get Your Knee OA Assessed
-**Secondary CTA:** WhatsApp Dr. Nitin's Team
+**Secondary CTA:** WhatsApp Dr. Nitin N Sunku's Team
 
 ---
 
@@ -228,7 +228,7 @@ See: [Knee Replacement Alternatives](/knee-replacement-alternatives).
 
 ---
 
-### Why patients in Electronic City and Attibele choose Dr. Nitin for knee OA care
+### Why patients in Attibele and HSR Layout choose Dr. Nitin N Sunku for knee OA care
 
 - **Specialist focus** on non-surgical and regenerative orthopedic medicine
 - **Conservative-first philosophy** — no rushing to surgery
@@ -246,7 +246,7 @@ See: [Knee Replacement Alternatives](/knee-replacement-alternatives).
 
 **Buttons:**
 - 📅 Book a Consultation
-- 💬 WhatsApp Dr. Nitin's Team
+- 💬 WhatsApp Dr. Nitin N Sunku's Team
 - 📞 Call Now
 
 ---
@@ -310,7 +310,7 @@ Every 3–6 months once your plan is stable; sooner if symptoms worsen or you ha
 **Q19. Can OA affect both knees?**
 Yes. Bilateral knee OA is common, especially in older adults. Both knees can be assessed and treated.
 
-**Q20. How do I book a knee OA consultation in Electronic City or Attibele?**
+**Q20. How do I book a knee OA consultation in Attibele or HSR Layout?**
 You can book online, call the clinic, or message us on WhatsApp.
 
 ---
@@ -341,7 +341,7 @@ You can book online, call the clinic, or message us on WhatsApp.
 - **MedicalCondition** — name: "Knee Osteoarthritis", possibleTreatment, riskFactor, signOrSymptom.
 - **MedicalWebPage** — about: MedicalCondition (Knee OA).
 - **FAQPage** — all 20 FAQs.
-- **Physician** — Dr. Nitin.
+- **Physician** — Dr. Nitin N Sunku.
 - **LocalBusiness / MedicalClinic** — both locations.
 - **BreadcrumbList** — Home › Conditions › Knee Osteoarthritis.
 

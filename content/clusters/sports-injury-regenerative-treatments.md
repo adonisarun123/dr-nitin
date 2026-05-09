@@ -30,11 +30,11 @@ Capture sports-injury searches from athletes, gym-goers, and weekend warriors. C
 
 ## 5. SEO title
 
-`Sports Injury Regenerative Treatments in Bengaluru | GFC, PRP, Ultrasound-Guided | Dr. Nitin`
+`Sports Injury Regenerative Treatments in Bengaluru | GFC, PRP, Ultrasound-Guided | Dr. Nitin N Sunku`
 
 ## 6. Meta description
 
-`Modern regenerative care for sports injuries — GFC, PRP, ultrasound-guided injections, and rehab — at Dr. Nitin's clinics in Electronic City and Attibele, Bengaluru. Get back to your sport faster, smarter.`
+`Modern regenerative care for sports injuries — GFC, PRP, ultrasound-guided injections, and rehab — at Dr. Nitin N Sunku's clinics in Attibele and HSR Layout, Bengaluru. Get back to your sport faster, smarter.`
 
 ---
 
@@ -108,13 +108,13 @@ For a comparison: 👉 [PRP vs GFC](/prp-vs-gfc).
 
 ---
 
-### Why patients choose Dr. Nitin for sports injury care
+### Why patients choose Dr. Nitin N Sunku for sports injury care
 
 - Specialist focus on **regenerative & non-surgical orthopedic care**
 - **Diagnostic + therapeutic ultrasound** in one visit
 - **Sport-aware return-to-play planning** in coordination with physiotherapy
 - **Honest counselling** — including when surgery is the better path
-- **Two convenient Bengaluru locations** — Electronic City and Attibele
+- **Two convenient Bengaluru locations** — Attibele and HSR Layout
 
 ---
 
@@ -158,7 +158,7 @@ Highly accurate for tendons, bursae, and many soft-tissue conditions.
 Full-thickness tears, mechanical blocks, and selected structural problems may benefit from surgery. Honest assessment guides the choice.
 
 **Q10. Where can I get this care in Bengaluru?**
-At Dr. Nitin's clinics in Electronic City and Attibele.
+At Dr. Nitin N Sunku's clinics in Attibele and HSR Layout.
 
 ---
 

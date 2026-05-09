@@ -6,7 +6,7 @@
 
 ## 1. Page goal
 
-Capture searches for chronic tendon pain and convert into regenerative-care consultations. Position Dr. Nitin as a destination for ultrasound-guided, regenerative tendon care.
+Capture searches for chronic tendon pain and convert into regenerative-care consultations. Position Dr. Nitin N Sunku as a destination for ultrasound-guided, regenerative tendon care.
 
 ## 2. Target audience
 
@@ -29,11 +29,11 @@ Capture searches for chronic tendon pain and convert into regenerative-care cons
 
 ## 5. SEO title
 
-`Tendinopathy Treatment in Bengaluru — Tennis Elbow, Jumper's Knee, Achilles | Dr. Nitin`
+`Tendinopathy Treatment in Bengaluru — Tennis Elbow, Jumper's Knee, Achilles | Dr. Nitin N Sunku`
 
 ## 6. Meta description
 
-`Modern, non-surgical care for chronic tendon pain — tennis elbow, golfer's elbow, jumper's knee, Achilles tendinopathy, plantar fasciitis. Ultrasound-guided injections, GFC therapy, and rehab by Dr. Nitin in Electronic City and Attibele, Bengaluru.`
+`Modern, non-surgical care for chronic tendon pain — tennis elbow, golfer's elbow, jumper's knee, Achilles tendinopathy, plantar fasciitis. Ultrasound-guided injections, GFC therapy, and rehab by Dr. Nitin N Sunku in Attibele and HSR Layout, Bengaluru.`
 
 ---
 
@@ -113,13 +113,13 @@ Tendons sit close to nerves, blood vessels, and other delicate structures. Many 
 
 ---
 
-### Why patients choose Dr. Nitin for tendinopathy
+### Why patients choose Dr. Nitin N Sunku for tendinopathy
 
 - Specialist focus on **regenerative & non-surgical orthopedic care**
 - **In-clinic ultrasound** for diagnosis and image-guided injection
 - **Personalised rehab coordination**
 - **Honest counselling** — including when to refer for shockwave or surgery
-- **Two convenient locations** — Electronic City and Attibele, Bengaluru
+- **Two convenient locations** — Attibele and HSR Layout, Bengaluru
 
 ---
 
@@ -163,7 +163,7 @@ Yes, safely. Ultrasound has no radiation and accuracy remains high.
 For many patients, yes. For stubborn cases, a regenerative injection accelerates recovery.
 
 **Q10. Where can I get tendinopathy care in Bengaluru?**
-At Dr. Nitin's clinics in Electronic City and Attibele.
+At Dr. Nitin N Sunku's clinics in Attibele and HSR Layout.
 
 ---
 

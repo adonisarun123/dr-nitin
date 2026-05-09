@@ -6,7 +6,7 @@
 
 ## 1. Page goal
 
-Capture broad mid-funnel demographic searches and convert into consultations. Position Dr. Nitin's practice as the destination for working-age adults with knee pain.
+Capture broad mid-funnel demographic searches and convert into consultations. Position Dr. Nitin N Sunku's practice as the destination for working-age adults with knee pain.
 
 ## 2. Target audience
 
@@ -26,11 +26,11 @@ Adults 40–60 noticing recurring knee discomfort, mild OA, sports/overuse pain,
 
 ## 5. SEO title
 
-`Best Treatments for Knee Pain After 40 — A Practical Guide | Dr. Nitin, Bengaluru`
+`Best Treatments for Knee Pain After 40 — A Practical Guide | Dr. Nitin N Sunku, Bengaluru`
 
 ## 6. Meta description
 
-`Knee pain after 40? A practical, evidence-based guide to the best non-surgical treatments — exercise, weight, HA, GFC, ultrasound-guided injections — by Dr. Nitin, Electronic City and Attibele, Bengaluru.`
+`Knee pain after 40? A practical, evidence-based guide to the best non-surgical treatments — exercise, weight, HA, GFC, ultrasound-guided injections — by Dr. Nitin N Sunku, Attibele and HSR Layout, Bengaluru.`
 
 ---
 
@@ -127,7 +127,7 @@ Painkillers can help during flares — short-term, targeted use is reasonable. B
 ### Final CTA
 
 **Headline:** A great plan in your 40s saves your knees for your 60s and beyond.
-**Sub-line:** Book an evaluation in Electronic City or Attibele.
+**Sub-line:** Book an evaluation in Attibele or HSR Layout.
 
 - 📅 Book a Consultation
 - 💬 WhatsApp the Clinic
@@ -164,7 +164,7 @@ With a consistent plan, most people feel meaningful improvement in 6–12 weeks.
 Some patients do; many don't. It depends on diagnosis and response to foundation care.
 
 **Q10. Where can I get this care in Bengaluru?**
-At Dr. Nitin's clinics in Electronic City and Attibele.
+At Dr. Nitin N Sunku's clinics in Attibele and HSR Layout.
 
 ---
 

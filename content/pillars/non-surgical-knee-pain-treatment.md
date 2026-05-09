@@ -1,4 +1,4 @@
-# Non-Surgical Knee Pain Treatment in Electronic City & Attibele, Bengaluru
+# Non-Surgical Knee Pain Treatment in Attibele & HSR Layout, Bengaluru
 
 > **Pillar #1 — Main conversion hub**
 
@@ -23,11 +23,11 @@ Convert high-intent local searchers (knee pain, OA, "alternative to knee replace
 - **Search intent**: Mid-to-high commercial intent + informational
 - **Pillar role**: Hub page; receives links from all OA, GFC, HA, ultrasound, and exercise cluster pages
 - **Primary keywords**:
-  - non-surgical knee pain treatment in Electronic City
-  - knee pain doctor in Attibele Bengaluru
-  - knee pain treatment without surgery Bengaluru
-  - alternative to knee replacement Bengaluru
-  - regenerative knee treatment Electronic City
+ - non-surgical knee pain treatment in Electronic City
+ - knee pain doctor in Attibele Bengaluru
+ - knee pain treatment without surgery Bengaluru
+ - alternative to knee replacement Bengaluru
+ - regenerative knee treatment Electronic City
 - **Secondary keywords**: knee osteoarthritis treatment, knee injection therapy, GFC for knee, HA injection knee, knee pain specialist near me, ultrasound guided knee injection
 - **Semantic / NLP entities**: osteoarthritis, articular cartilage, synovial fluid, growth factor concentrate, hyaluronic acid, viscosupplementation, platelet-rich plasma, intra-articular injection, meniscus, patellofemoral joint, BMI, physiotherapy, range of motion, Kellgren–Lawrence grading
 
@@ -41,11 +41,11 @@ Convert high-intent local searchers (knee pain, OA, "alternative to knee replace
 
 ## 5. SEO title
 
-`Non-Surgical Knee Pain Treatment in Electronic City & Attibele, Bengaluru | Dr. Nitin`
+`Non-Surgical Knee Pain Treatment in Attibele & HSR Layout, Bengaluru | Dr. Nitin N Sunku`
 
 ## 6. Meta description
 
-`Advanced non-surgical knee pain treatment by Dr. Nitin in Electronic City & Attibele, Bengaluru. Regenerative therapy, GFC, hyaluronic acid & ultrasound-guided injections to reduce pain and delay knee surgery. Book a consultation today.`
+`Advanced non-surgical knee pain treatment by Dr. Nitin N Sunku in Attibele & HSR Layout, Bengaluru. Regenerative therapy, GFC, hyaluronic acid & ultrasound-guided injections to reduce pain and delay knee surgery. Book a consultation today.`
 
 ---
 
@@ -57,10 +57,10 @@ Convert high-intent local searchers (knee pain, OA, "alternative to knee replace
 
 **Sub-headline:** Modern regenerative and minimally invasive care designed to reduce knee pain, restore mobility, and help many patients delay or avoid knee replacement surgery.
 
-**Trust line:** Led by Dr. Nitin, MS (Orthopaedics), with advanced training in regenerative orthopedic medicine. Clinics in Electronic City and Attibele, Bengaluru.
+**Trust line:** Led by Dr. Nitin N Sunku, MS (Orthopaedics), with advanced training in regenerative orthopedic medicine. Clinics in Attibele and HSR Layout, Bengaluru.
 
 **Primary CTA button:** Book a Consultation
-**Secondary CTA:** WhatsApp Dr. Nitin's Team
+**Secondary CTA:** WhatsApp Dr. Nitin N Sunku's Team
 
 **Hero supporting bullets** (icon list):
 
@@ -77,7 +77,7 @@ Knee pain rarely arrives all at once. It usually starts as morning stiffness, a 
 
 If left unaddressed, this slow process — often **knee osteoarthritis** — can quietly take away the things you love: walking in Cubbon Park, playing with your grandchildren, climbing the stairs at home in Electronic City, or simply standing through a long workday.
 
-The good news: in most early and moderate cases, you do not have to jump from "painkillers" to "knee replacement." There is a well-established middle path of non-surgical, regenerative, and minimally invasive treatments — the focus of Dr. Nitin's practice.
+The good news: in most early and moderate cases, you do not have to jump from "painkillers" to "knee replacement." There is a well-established middle path of non-surgical, regenerative, and minimally invasive treatments — the focus of Dr. Nitin N Sunku's practice.
 
 ---
 
@@ -109,11 +109,11 @@ Most chronic knee pain is driven by one or a combination of these:
 - **Bursitis & synovitis:** inflammation of small fluid sacs and the joint lining.
 - **Post-injury changes:** old fractures, surgeries, or sports injuries that altered joint mechanics.
 
-A correct diagnosis matters because the right treatment depends on the right cause. Dr. Nitin uses a combination of clinical examination, X-ray, and where needed MRI or in-clinic ultrasound to map exactly what's happening inside your knee before recommending any therapy.
+A correct diagnosis matters because the right treatment depends on the right cause. Dr. Nitin N Sunku uses a combination of clinical examination, X-ray, and where needed MRI or in-clinic ultrasound to map exactly what's happening inside your knee before recommending any therapy.
 
 ---
 
-### How Dr. Nitin approaches knee pain — the non-surgical pathway
+### How Dr. Nitin N Sunku approaches knee pain — the non-surgical pathway
 
 Our philosophy is simple: **start with what is least invasive but still effective**, and escalate only when truly required. A typical pathway looks like this:
 
@@ -139,11 +139,11 @@ GFC is an advanced regenerative therapy that uses concentrated growth factors de
 👉 Read more: [GFC Treatment for Knee Pain](/gfc-treatment-knee-pain) · [PRP vs GFC](/prp-vs-gfc)
 
 #### 3. Ultrasound-Guided Injections — precision delivery
-Many knee structures are small, deep, or sit close to nerves and vessels. Real-time ultrasound guidance allows Dr. Nitin to deliver medication or regenerative material exactly where it is needed — improving accuracy, comfort, and safety compared to "blind" injections.
+Many knee structures are small, deep, or sit close to nerves and vessels. Real-time ultrasound guidance allows Dr. Nitin N Sunku to deliver medication or regenerative material exactly where it is needed — improving accuracy, comfort, and safety compared to "blind" injections.
 👉 Read more: [Ultrasound-Guided Orthopedic Injections](/ultrasound-guided-orthopedic-injections)
 
 #### 4. Physiotherapy & rehabilitation
-Injections work best when paired with strengthening and conditioning. We coordinate with trusted physiotherapists in Electronic City and Attibele so your quadriceps, hamstrings, and hip stabilisers support the knee long after the procedure.
+Injections work best when paired with strengthening and conditioning. We coordinate with trusted physiotherapists in Attibele and HSR Layout so your quadriceps, hamstrings, and hip stabilisers support the knee long after the procedure.
 
 #### 5. Lifestyle and weight management
 Every kilogram of body weight places roughly 3–4 kg of additional load across the knee while walking, and even more while climbing stairs. Even modest weight reduction can meaningfully reduce knee pain. We provide simple, achievable guidance — no fad diets.
@@ -183,7 +183,7 @@ You may **not** be the best candidate if you have:
 - Certain bleeding disorders or uncontrolled medical conditions
 - A clear mechanical block requiring orthopedic surgery (e.g., a large displaced meniscal tear)
 
-In such situations, Dr. Nitin will discuss surgical options openly and may refer you to a trusted joint replacement specialist.
+In such situations, Dr. Nitin N Sunku will discuss surgical options openly and may refer you to a trusted joint replacement specialist.
 
 ---
 
@@ -219,18 +219,18 @@ Surgery is generally considered when:
 - There is a structural problem (large displaced meniscal tear, locked knee, severe ligament rupture) that injections cannot address
 - Quality of life is significantly impaired
 
-Even then, a second opinion is reasonable. Dr. Nitin will give you an honest assessment of whether your knee genuinely needs surgery — or whether non-surgical care still has real value.
+Even then, a second opinion is reasonable. Dr. Nitin N Sunku will give you an honest assessment of whether your knee genuinely needs surgery — or whether non-surgical care still has real value.
 
 👉 Read: [Knee Replacement Alternatives](/knee-replacement-alternatives)
 
 ---
 
-### Why patients choose Dr. Nitin
+### Why patients choose Dr. Nitin N Sunku
 
 - **Specialised focus** on regenerative and non-surgical orthopedic care
 - **Conservative, evidence-led philosophy** — no over-promising
 - **Ultrasound-guided injection capability** for higher precision and safety
-- **Two convenient Bengaluru locations** — Electronic City and Attibele
+- **Two convenient Bengaluru locations** — Attibele and HSR Layout
 - **Transparent communication** — you always know what is being recommended and why
 - **Coordinated rehab** with trusted physiotherapy partners
 - **Time given to each patient** — not a 5-minute consultation
@@ -241,8 +241,8 @@ Even then, a second opinion is reasonable. Dr. Nitin will give you an honest ass
 
 Whether you live near Hosa Road, Bommanahalli, Singasandra, Anekal, Chandapura, Hosur Road, or work in the Electronic City IT corridor, our two clinics are designed for easy access:
 
-- **Electronic City clinic** — convenient for Phase 1, Phase 2, Neeladri Road, and Doddathoguru residents and IT employees.
-- **Attibele clinic** — accessible for patients from Anekal, Sarjapur Road extensions, Hosur (Tamil Nadu border), Bommasandra, and surrounding areas.
+- **Attibele clinic — Raghava Multispeciality Hospital, Sarjapura–Attibele Road** — convenient for Phase 1, Phase 2, Neeladri Road, and Doddathoguru residents and IT employees.
+- **HSR Layout clinic — Health Nest Hospital, 24th Main, Sector 2** — accessible for patients from Anekal, Sarjapur Road extensions, Hosur (Tamil Nadu border), Bommasandra, and surrounding areas.
 
 If you have searched for "knee pain doctor near me", "orthopedic in Electronic City", or "knee specialist Attibele", we are within easy reach.
 
@@ -264,7 +264,7 @@ If you have searched for "knee pain doctor near me", "orthopedic in Electronic C
 
 **Buttons:**
 - 📅 Book a Consultation
-- 💬 WhatsApp Dr. Nitin's Team
+- 💬 WhatsApp Dr. Nitin N Sunku's Team
 - 📞 Call the Clinic
 
 ---
@@ -293,13 +293,13 @@ Most knee injections are done as daycare procedures with only local anaesthesia.
 HA and regenerative injections work gradually. Many patients notice improvement starting around 2–4 weeks, with peak benefit typically by 6–12 weeks.
 
 **Q8. How many sessions will I need?**
-Some patients need a single injection; others benefit from a planned series. Dr. Nitin will customise the schedule based on your imaging, OA grade, and response.
+Some patients need a single injection; others benefit from a planned series. Dr. Nitin N Sunku will customise the schedule based on your imaging, OA grade, and response.
 
 **Q9. Can these treatments completely cure osteoarthritis?**
 No. OA is a progressive, age-related condition. Non-surgical treatments aim to reduce pain, improve function, and slow worsening — not deliver a permanent cure or fully regrow lost cartilage.
 
 **Q10. Can I avoid knee replacement surgery completely?**
-For many early-to-moderate OA patients, non-surgical care can delay or avoid surgery. For severe end-stage OA with deformity, surgery may eventually be the most reliable option. Dr. Nitin will give you an honest assessment.
+For many early-to-moderate OA patients, non-surgical care can delay or avoid surgery. For severe end-stage OA with deformity, surgery may eventually be the most reliable option. Dr. Nitin N Sunku will give you an honest assessment.
 
 **Q11. Are these treatments safe?**
 When performed correctly under sterile conditions and, where appropriate, with ultrasound guidance, these therapies have a strong safety profile. Mild soreness or temporary swelling is the most common side effect.
@@ -320,7 +320,7 @@ Yes — including patellar tendinopathy, jumper's knee, IT band issues, and cert
 The only reliable way is a clinical evaluation with imaging review. Many patients who feel "too far gone" turn out to be excellent candidates for non-surgical care.
 
 **Q17. Are your clinics easy to reach from Hosur Road or Sarjapur?**
-Yes. The Electronic City clinic is accessible from Hosur Road, and the Attibele clinic serves Anekal, Bommasandra, and Sarjapur extensions.
+Yes. The Attibele clinic is accessible from Hosur Road, and the Attibele clinic serves Anekal, Bommasandra, and Sarjapur extensions.
 
 **Q18. Do you accept insurance for these procedures?**
 Insurance coverage for regenerative therapies and injections varies by policy. The clinic team will help you check coverage and provide all required documentation.
@@ -364,8 +364,8 @@ Add the following blocks to `<head>`:
 
 1. **MedicalWebPage** — name, description, lastReviewed, reviewedBy, primaryImageOfPage, about (MedicalCondition: Knee Osteoarthritis).
 2. **MedicalProcedure** — for each treatment offered (HA injection, GFC, ultrasound-guided injection), with `procedureType`: "Therapeutic", `bodyLocation`: "Knee".
-3. **Physician** — Dr. Nitin, with `medicalSpecialty`: "Orthopedic", `affiliation`, `availableService`.
-4. **LocalBusiness / MedicalClinic** — two `Place` entries for Electronic City and Attibele with `address`, `geo`, `openingHours`, `telephone`.
+3. **Physician** — Dr. Nitin N Sunku, with `medicalSpecialty`: "Orthopedic", `affiliation`, `availableService`.
+4. **LocalBusiness / MedicalClinic** — two `Place` entries for Attibele and HSR Layout with `address`, `geo`, `openingHours`, `telephone`.
 5. **FAQPage** — wrap all 20 FAQs.
 6. **BreadcrumbList** — Home › Treatments › Non-Surgical Knee Pain Treatment.
 

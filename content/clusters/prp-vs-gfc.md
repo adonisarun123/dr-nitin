@@ -26,11 +26,11 @@ Patients researching regenerative options for knee pain, tendinopathy, or sports
 
 ## 5. SEO title
 
-`PRP vs GFC for Knee Pain — What's the Real Difference? | Dr. Nitin, Bengaluru`
+`PRP vs GFC for Knee Pain — What's the Real Difference? | Dr. Nitin N Sunku, Bengaluru`
 
 ## 6. Meta description
 
-`PRP vs GFC explained simply by Dr. Nitin in Electronic City and Attibele, Bengaluru. Understand how each regenerative injection works, who benefits, and how to choose the right option for your knee or tendon pain.`
+`PRP vs GFC explained simply by Dr. Nitin N Sunku in Attibele and HSR Layout, Bengaluru. Understand how each regenerative injection works, who benefits, and how to choose the right option for your knee or tendon pain.`
 
 ---
 
@@ -40,7 +40,7 @@ Patients researching regenerative options for knee pain, tendinopathy, or sports
 
 If you have been researching non-surgical treatments for knee pain, tendinopathy, or a sports injury, you have probably come across two names: **PRP (Platelet-Rich Plasma)** and **GFC (Growth Factor Concentrate)**. Both are regenerative injection therapies prepared from your own blood. Both aim to reduce pain and support tissue health. So — what's actually different, and which one might suit you?
 
-Here's a straightforward, patient-friendly explanation from Dr. Nitin.
+Here's a straightforward, patient-friendly explanation from Dr. Nitin N Sunku.
 
 > Looking for the bigger picture? Start with [Non-Surgical Knee Pain Treatment](/non-surgical-knee-pain-treatment) and [What Is Regenerative Medicine?](/what-is-regenerative-medicine).
 
@@ -90,15 +90,15 @@ In effect, GFC is often described as an **evolved, more refined version of PRP**
 There is no universally better option — only the better fit for *your* situation. Generally:
 
 - **GFC may be preferred** when:
-  - A more standardised, growth-factor-rich injection is desired
-  - The target tissue (e.g., a small tendon) needs a cleaner injectate
-  - The patient has had limited benefit from a previous PRP
+ - A more standardised, growth-factor-rich injection is desired
+ - The target tissue (e.g., a small tendon) needs a cleaner injectate
+ - The patient has had limited benefit from a previous PRP
 - **PRP may still be appropriate** when:
-  - The clinical situation is well suited to platelet-rich preparations
-  - Specific indications or patient preferences favour it
-  - It is the option available with the team treating the patient
+ - The clinical situation is well suited to platelet-rich preparations
+ - Specific indications or patient preferences favour it
+ - It is the option available with the team treating the patient
 
-In Dr. Nitin's practice, GFC is often the regenerative option of choice for **mild-to-moderate knee OA, patellar tendinopathy, and select shoulder/elbow tendinopathies**, while PRP retains a role in selected cases.
+In Dr. Nitin N Sunku's practice, GFC is often the regenerative option of choice for **mild-to-moderate knee OA, patellar tendinopathy, and select shoulder/elbow tendinopathies**, while PRP retains a role in selected cases.
 
 > Decision is always individualised after examination, imaging review, and your goals.
 
@@ -115,7 +115,7 @@ They are **biological tools** — when used in the right patient with the right 
 
 ---
 
-### How does Dr. Nitin decide PRP vs GFC for you?
+### How does Dr. Nitin N Sunku decide PRP vs GFC for you?
 
 The decision usually rests on:
 
@@ -141,10 +141,10 @@ The decision usually rests on:
 ### Final CTA
 
 **Headline:** Want a clear recommendation — PRP, GFC, or something else?
-Book an evaluation with Dr. Nitin in Electronic City or Attibele. Bring any prior reports.
+Book an evaluation with Dr. Nitin N Sunku in Attibele or HSR Layout. Bring any prior reports.
 
 - 📅 Book a Consultation
-- 💬 WhatsApp Dr. Nitin's Team
+- 💬 WhatsApp Dr. Nitin N Sunku's Team
 
 ---
 
@@ -193,7 +193,7 @@ Avoid NSAIDs for the period your doctor advises, as they may blunt the regenerat
 After clinical examination, imaging review, and a discussion of your goals.
 
 **Q15. Where can I get PRP or GFC in Bengaluru?**
-At Dr. Nitin's clinics in Electronic City and Attibele.
+At Dr. Nitin N Sunku's clinics in Attibele and HSR Layout.
 
 ---
 
@@ -214,7 +214,7 @@ At Dr. Nitin's clinics in Electronic City and Attibele.
 
 ## 10. Suggested schema
 
-- **Article** — author: Dr. Nitin; about: MedicalProcedure (PRP, GFC).
+- **Article** — author: Dr. Nitin N Sunku; about: MedicalProcedure (PRP, GFC).
 - **FAQPage** — all 15 FAQs.
 - **BreadcrumbList** — Home › Learn › PRP vs GFC.
 

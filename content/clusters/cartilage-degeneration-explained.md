@@ -26,11 +26,11 @@ OA patients, early-stage knee pain patients, second-opinion seekers, family memb
 
 ## 5. SEO title
 
-`Cartilage Degeneration Explained — A Patient's Guide | Dr. Nitin, Bengaluru`
+`Cartilage Degeneration Explained — A Patient's Guide | Dr. Nitin N Sunku, Bengaluru`
 
 ## 6. Meta description
 
-`Cartilage degeneration in your knee, explained simply. What causes it, how it progresses, and what modern non-surgical treatments can — and cannot — do. By Dr. Nitin (Electronic City and Attibele, Bengaluru).`
+`Cartilage degeneration in your knee, explained simply. What causes it, how it progresses, and what modern non-surgical treatments can — and cannot — do. By Dr. Nitin N Sunku (Attibele and HSR Layout, Bengaluru).`
 
 ---
 
@@ -164,7 +164,7 @@ X-rays show *joint space*, which indirectly reflects cartilage thickness. MRI sh
 Not necessarily. Symptoms and function guide treatment, not imaging alone.
 
 **Q10. Where in Bengaluru can I get assessed?**
-At Dr. Nitin's clinics in Electronic City and Attibele.
+At Dr. Nitin N Sunku's clinics in Attibele and HSR Layout.
 
 ---
 

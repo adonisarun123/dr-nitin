@@ -6,7 +6,7 @@
 
 ## 1. Page goal
 
-Educate patients on regenerative orthopedic medicine in plain language, position Dr. Nitin as an authoritative expert, and route qualified readers to GFC, HA, ultrasound-guided, and Non-Surgical Knee Pain pillars.
+Educate patients on regenerative orthopedic medicine in plain language, position Dr. Nitin N Sunku as an authoritative expert, and route qualified readers to GFC, HA, ultrasound-guided, and Non-Surgical Knee Pain pillars.
 
 ## 2. Target audience
 
@@ -26,11 +26,11 @@ Curious adults, OA patients, sports injury patients, and family members research
 
 ## 5. SEO title
 
-`What Is Regenerative Medicine? A Patient's Guide | Dr. Nitin, Bengaluru`
+`What Is Regenerative Medicine? A Patient's Guide | Dr. Nitin N Sunku, Bengaluru`
 
 ## 6. Meta description
 
-`Regenerative orthopedic medicine explained simply — what it is, how it works, who benefits, and what it can and cannot do. By Dr. Nitin, Electronic City and Attibele, Bengaluru.`
+`Regenerative orthopedic medicine explained simply — what it is, how it works, who benefits, and what it can and cannot do. By Dr. Nitin N Sunku, Attibele and HSR Layout, Bengaluru.`
 
 ---
 
@@ -141,13 +141,13 @@ A good plan usually includes:
 
 ---
 
-### Dr. Nitin's approach
+### Dr. Nitin N Sunku's approach
 
 - Specialist focus on **regenerative and non-surgical orthopedics**
 - Use of **ultrasound guidance** for precision
 - **Honest counselling** — including about the limits of regenerative options
 - **Combination protocols** built around the individual
-- **Two convenient Bengaluru locations** — Electronic City and Attibele
+- **Two convenient Bengaluru locations** — Attibele and HSR Layout
 
 ---
 
@@ -191,7 +191,7 @@ Yes. Combination protocols are common, especially in moderate OA.
 Coverage varies by policy. The clinic team will help you check.
 
 **Q10. Where can I get regenerative orthopedic care in Bengaluru?**
-Dr. Nitin offers regenerative care in Electronic City and Attibele.
+Dr. Nitin N Sunku offers regenerative care in Attibele and HSR Layout.
 
 ---
 

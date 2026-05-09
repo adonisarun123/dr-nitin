@@ -26,11 +26,11 @@ OA patients, overweight individuals with knee pain, working professionals, famil
 
 ## 5. SEO title
 
-`Weight Loss and Knee Pain — How Much Difference Does It Make? | Dr. Nitin, Bengaluru`
+`Weight Loss and Knee Pain — How Much Difference Does It Make? | Dr. Nitin N Sunku, Bengaluru`
 
 ## 6. Meta description
 
-`How much can weight loss really help your knee pain? An honest, practical guide by Dr. Nitin (Electronic City and Attibele, Bengaluru) for patients with knee OA, early arthritis, and chronic joint pain.`
+`How much can weight loss really help your knee pain? An honest, practical guide by Dr. Nitin N Sunku (Attibele and HSR Layout, Bengaluru) for patients with knee OA, early arthritis, and chronic joint pain.`
 
 ---
 
@@ -128,7 +128,7 @@ Knee pain plus weight is rarely a willpower problem. It is a metabolic, mechanic
 ### Final CTA
 
 **Headline:** Build a knee plan that includes weight realistically — not punitively.
-Book a consultation in Electronic City or Attibele.
+Book a consultation in Attibele or HSR Layout.
 
 - 📅 Book a Consultation
 - 💬 WhatsApp the Clinic
@@ -165,7 +165,7 @@ Many patients notice less pain within weeks of starting a structured plan, even 
 No. Whole grains, legumes, vegetables, and home-cooked meals are usually affordable.
 
 **Q10. Where do I start in Bengaluru?**
-Book a knee assessment with Dr. Nitin in Electronic City or Attibele. We'll integrate weight strategy with the rest of your plan.
+Book a knee assessment with Dr. Nitin N Sunku in Attibele or HSR Layout. We'll integrate weight strategy with the rest of your plan.
 
 ---
 

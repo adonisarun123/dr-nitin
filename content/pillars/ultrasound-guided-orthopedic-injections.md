@@ -1,4 +1,4 @@
-# Ultrasound-Guided Orthopedic Injections in Electronic City & Attibele, Bengaluru
+# Ultrasound-Guided Orthopedic Injections in Attibele & HSR Layout, Bengaluru
 
 > **Pillar #4 — Precision injection authority page**
 
@@ -6,7 +6,7 @@
 
 ## 1. Page goal
 
-Position Dr. Nitin's practice as a precision-care destination for orthopedic injections by educating patients on why ultrasound guidance is safer, more accurate, and more effective than landmark-only ("blind") injections. Capture mid-funnel commercial searches and refer traffic into knee, GFC, HA, and shoulder pillars.
+Position Dr. Nitin N Sunku's practice as a precision-care destination for orthopedic injections by educating patients on why ultrasound guidance is safer, more accurate, and more effective than landmark-only ("blind") injections. Capture mid-funnel commercial searches and refer traffic into knee, GFC, HA, and shoulder pillars.
 
 ## 2. Target audience
 
@@ -20,11 +20,11 @@ Position Dr. Nitin's practice as a precision-care destination for orthopedic inj
 ## 3. SEO strategy
 
 - **Primary keywords**:
-  - ultrasound-guided injection in Bengaluru
-  - ultrasound-guided knee injection Electronic City
-  - sonography-guided orthopedic injection Attibele
-  - precise knee injection Bengaluru
-  - guided GFC injection knee
+ - ultrasound-guided injection in Bengaluru
+ - ultrasound-guided knee injection Electronic City
+ - sonography-guided orthopedic injection Attibele
+ - precise knee injection Bengaluru
+ - guided GFC injection knee
 - **Secondary keywords**: USG-guided shoulder injection, ultrasound-guided tendon injection, image-guided knee injection, accurate joint injection
 - **Semantic / NLP entities**: ultrasonography, sonography, real-time imaging, intra-articular, peritendinous, bursa, rotator cuff, subacromial, patellar tendon, Achilles, plantar fascia, hip joint, ankle joint, image guidance, injection accuracy
 
@@ -36,11 +36,11 @@ Position Dr. Nitin's practice as a precision-care destination for orthopedic inj
 
 ## 5. SEO title
 
-`Ultrasound-Guided Orthopedic Injections in Bengaluru | Precision Joint Care | Dr. Nitin`
+`Ultrasound-Guided Orthopedic Injections in Bengaluru | Precision Joint Care | Dr. Nitin N Sunku`
 
 ## 6. Meta description
 
-`Ultrasound-guided orthopedic injections by Dr. Nitin in Electronic City and Attibele, Bengaluru. Real-time imaging for safer, more accurate knee, shoulder, hip, and tendon injections. Better targeting, better outcomes. Book a consultation.`
+`Ultrasound-guided orthopedic injections by Dr. Nitin N Sunku in Attibele and HSR Layout, Bengaluru. Real-time imaging for safer, more accurate knee, shoulder, hip, and tendon injections. Better targeting, better outcomes. Book a consultation.`
 
 ---
 
@@ -50,10 +50,10 @@ Position Dr. Nitin's practice as a precision-care destination for orthopedic inj
 
 **H1:** Ultrasound-Guided Orthopedic Injections — Precision Where It Matters
 
-**Sub-headline:** Real-time imaging means the medication or regenerative material reaches *exactly* the right structure inside your joint or tendon. Performed by Dr. Nitin in Electronic City and Attibele, Bengaluru.
+**Sub-headline:** Real-time imaging means the medication or regenerative material reaches *exactly* the right structure inside your joint or tendon. Performed by Dr. Nitin N Sunku in Attibele and HSR Layout, Bengaluru.
 
 **Primary CTA:** Book a Consultation
-**Secondary CTA:** WhatsApp Dr. Nitin's Team
+**Secondary CTA:** WhatsApp Dr. Nitin N Sunku's Team
 
 ---
 
@@ -118,7 +118,7 @@ This is especially important for:
 
 ---
 
-### Conditions Dr. Nitin treats with ultrasound-guided injections
+### Conditions Dr. Nitin N Sunku treats with ultrasound-guided injections
 
 Joint and soft-tissue conditions that often benefit:
 
@@ -159,7 +159,7 @@ Fluoroscopy is also a valid form of guidance, especially for spine procedures. F
 3. **Decision** — the right type of injection is recommended (HA, GFC, corticosteroid in select cases, viscosupplementation, etc.).
 4. **Sterile preparation** — the area is cleaned; gel and a sterile probe cover are used.
 5. **Local anaesthetic** as needed.
-6. **Needle placement under live imaging** — Dr. Nitin watches the needle reach the exact target.
+6. **Needle placement under live imaging** — Dr. Nitin N Sunku watches the needle reach the exact target.
 7. **Injection** — the medication is delivered slowly and confirmed visibly on screen.
 8. **Brief observation** — short rest, then home.
 9. **Aftercare instructions** — written do's and don'ts.
@@ -189,13 +189,13 @@ Total visit time: typically **30–60 minutes**.
 
 ---
 
-### Why patients choose Dr. Nitin for image-guided injections
+### Why patients choose Dr. Nitin N Sunku for image-guided injections
 
 - **Specialised regenerative & non-surgical orthopedic focus**
 - **Real-time ultrasound capability in clinic**
 - **Sterile, standardised technique**
 - **Honest discussion** of when image guidance changes outcomes — and when it isn't necessary
-- **Two convenient Bengaluru locations** — Electronic City and Attibele
+- **Two convenient Bengaluru locations** — Attibele and HSR Layout
 - **Combined diagnostic + therapeutic visits** save time
 
 ---
@@ -203,7 +203,7 @@ Total visit time: typically **30–60 minutes**.
 ### Final CTA block
 
 **Headline:** Want a more accurate, safer injection — not just any injection?
-**Sub-line:** Book a consultation with Dr. Nitin in Electronic City or Attibele. Bring your prior reports and we'll review them with you.
+**Sub-line:** Book a consultation with Dr. Nitin N Sunku in Attibele or HSR Layout. Bring your prior reports and we'll review them with you.
 
 **Buttons:**
 - 📅 Book Consultation
@@ -230,7 +230,7 @@ No. Ultrasound uses sound waves, not radiation. It is safe for repeated use.
 Because it improves accuracy, reduces the risk of hitting the wrong structure, and tends to give better and longer-lasting relief — particularly for tendons, small joints, and deep targets like the hip.
 
 **Q6. Will I always need ultrasound guidance for my injection?**
-Not necessarily. For some straightforward cases, landmark injection is acceptable. Dr. Nitin will recommend ultrasound guidance where it meaningfully improves accuracy or safety.
+Not necessarily. For some straightforward cases, landmark injection is acceptable. Dr. Nitin N Sunku will recommend ultrasound guidance where it meaningfully improves accuracy or safety.
 
 **Q7. Is ultrasound guidance safer?**
 Yes. By visualising blood vessels and nerves, the operator can plan a safer needle path.
@@ -260,7 +260,7 @@ It depends on what was injected. Corticosteroids can give relief within days, wh
 Pregnant women may be candidates for certain non-medication procedures; this is decided case by case in coordination with their obstetrician. Children are referred where age-appropriate.
 
 **Q16. What if my pain doesn't respond?**
-Dr. Nitin will reassess your diagnosis, imaging, and lifestyle factors and discuss alternatives — including different therapies, combination treatments, or surgical referral when truly indicated.
+Dr. Nitin N Sunku will reassess your diagnosis, imaging, and lifestyle factors and discuss alternatives — including different therapies, combination treatments, or surgical referral when truly indicated.
 
 **Q17. Are diabetic patients eligible?**
 Generally yes, with controlled sugars. Special caution may be needed if corticosteroids are being considered.
@@ -296,7 +296,7 @@ You can book online, call the clinic, or message us on WhatsApp. We serve Electr
 - **MedicalProcedure** — "Ultrasound-Guided Orthopedic Injection".
 - **MedicalWebPage** — about: MedicalProcedure (Image-Guided Injection).
 - **FAQPage** — all 20 FAQs.
-- **Physician** — Dr. Nitin.
+- **Physician** — Dr. Nitin N Sunku.
 - **LocalBusiness / MedicalClinic** — both locations.
 - **BreadcrumbList** — Home › Treatments › Ultrasound-Guided Injections.
 

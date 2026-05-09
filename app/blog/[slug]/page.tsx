@@ -308,6 +308,111 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         };
     }
 
+    // ─── Treatment cluster posts (regenerative, OA, knee pain, tendon, shoulder, sports) ───
+    if (params.slug === "prp-vs-gfc-for-knee-pain") {
+        return {
+            title: { absolute: "PRP vs GFC for Knee Pain: What's the Real Difference?" },
+            description:
+                "PRP vs GFC for knee pain explained — how each regenerative injection works, who benefits, and how Dr. Nitin N Sunku decides between them in Bengaluru.",
+        };
+    }
+
+    if (params.slug === "what-is-regenerative-orthopedic-medicine") {
+        return {
+            title: { absolute: "What Is Regenerative Orthopedic Medicine? A Patient's Guide" },
+            description:
+                "Regenerative orthopedic medicine in plain language — what it is, how it works, who benefits, and what it can and cannot do for joint and tendon pain.",
+        };
+    }
+
+    if (params.slug === "knee-replacement-alternatives-non-surgical-options") {
+        return {
+            title: { absolute: "Knee Replacement Alternatives: Real Non-Surgical Options" },
+            description:
+                "Real, evidence-based alternatives to knee replacement — physiotherapy, HA, GFC, ultrasound-guided injections, and a structured second-opinion guide.",
+        };
+    }
+
+    if (params.slug === "early-signs-of-knee-osteoarthritis") {
+        return {
+            title: { absolute: "Early Signs of Knee Osteoarthritis: 10 Symptoms to Watch For" },
+            description:
+                "The earliest signs of knee OA you shouldn't ignore — morning stiffness, clicks, swelling, stair pain. Catch it early and protect your knees for decades.",
+        };
+    }
+
+    if (params.slug === "can-knee-oa-be-managed-without-surgery") {
+        return {
+            title: { absolute: "Can Knee OA Be Managed Without Surgery? An Honest Answer" },
+            description:
+                "For many patients, yes. The honest picture of what works for knee osteoarthritis without surgery, what doesn't, and where the line really sits.",
+        };
+    }
+
+    if (params.slug === "best-treatments-for-knee-pain-after-40") {
+        return {
+            title: { absolute: "Best Treatments for Knee Pain After 40: A Practical Guide" },
+            description:
+                "Knee pain after 40? A practical, evidence-based guide to the best non-surgical treatments — exercise, weight, HA, GFC, ultrasound-guided injections.",
+        };
+    }
+
+    if (params.slug === "best-exercises-for-knee-osteoarthritis") {
+        return {
+            title: { absolute: "Best Exercises for Knee Osteoarthritis: Safe Home Routine" },
+            description:
+                "Safe, effective home exercises for knee osteoarthritis — a step-by-step routine to build strength, reduce pain, and protect your knees from worsening.",
+        };
+    }
+
+    if (params.slug === "weight-loss-and-knee-pain") {
+        return {
+            title: { absolute: "Weight Loss and Knee Pain: How Much Difference Does It Make?" },
+            description:
+                "How much can weight loss help your knees? The honest math, mechanics, and a knee-friendly weight strategy from Dr. Nitin N Sunku in Bengaluru.",
+        };
+    }
+
+    if (params.slug === "tendinopathy-treatment-non-surgical-care") {
+        return {
+            title: { absolute: "Tendinopathy Treatment: Modern Non-Surgical Care" },
+            description:
+                "Modern non-surgical care for chronic tendon pain — tennis elbow, jumper's knee, Achilles, plantar fasciitis. How regenerative care and ultrasound change outcomes.",
+        };
+    }
+
+    if (params.slug === "shoulder-pain-injections-precision-care") {
+        return {
+            title: { absolute: "Shoulder Pain Injections: Precision Non-Surgical Care" },
+            description:
+                "Ultrasound-guided shoulder injections for rotator cuff, bursitis, frozen shoulder, AC joint, and biceps tendon problems. Precision, image-guided care in Bengaluru.",
+        };
+    }
+
+    if (params.slug === "sports-injury-regenerative-treatments") {
+        return {
+            title: { absolute: "Sports Injury Regenerative Treatments: Faster, Smarter Recovery" },
+            description:
+                "Modern regenerative care for sports injuries — GFC, PRP, ultrasound-guided injections, and rehab. Get back to your sport faster and reduce re-injury.",
+        };
+    }
+
+    if (params.slug === "cartilage-degeneration-explained") {
+        return {
+            title: { absolute: "Cartilage Degeneration Explained — In Plain English" },
+            description:
+                "Knee cartilage degeneration explained simply — what causes it, how it progresses, and what modern non-surgical treatments can and cannot do.",
+        };
+    }
+
+    if (params.slug === "benefits-of-ultrasound-guided-injections") {
+        return {
+            title: { absolute: "Benefits of Ultrasound-Guided Injections — Why Precision Matters" },
+            description:
+                "Why ultrasound-guided injections deliver better, safer results — accuracy, safety, comfort, and outcomes vs traditional landmark injections.",
+        };
+    }
+
     const post = blogPosts.find((p) => p.slug === params.slug);
     if (!post) return {};
 

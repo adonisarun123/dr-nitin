@@ -25,11 +25,11 @@ Patients hoping to avoid surgery; second-opinion seekers; family caregivers rese
 
 ## 5. SEO title
 
-`Can Knee OA Be Managed Without Surgery? An Honest Answer | Dr. Nitin, Bengaluru`
+`Can Knee OA Be Managed Without Surgery? An Honest Answer | Dr. Nitin N Sunku, Bengaluru`
 
 ## 6. Meta description
 
-`Can knee osteoarthritis be managed without surgery? An honest, evidence-based guide by Dr. Nitin (Electronic City & Attibele, Bengaluru). When non-surgical care works — and when surgery is the right call.`
+`Can knee osteoarthritis be managed without surgery? An honest, evidence-based guide by Dr. Nitin N Sunku (Attibele & HSR Layout, Bengaluru). When non-surgical care works — and when surgery is the right call.`
 
 ---
 
@@ -155,7 +155,7 @@ Reduce intensity; switch to gentle range-of-motion; use ice.
 Weight optimisation, strengthening, sensible activity, and regular follow-up.
 
 **Q10. How do I book a non-surgical consultation in Bengaluru?**
-At Dr. Nitin's clinics in Electronic City and Attibele.
+At Dr. Nitin N Sunku's clinics in Attibele and HSR Layout.
 
 ---
 

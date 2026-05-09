@@ -29,11 +29,11 @@ Capture early-stage symptom searches, educate readers, and convert into early-in
 
 ## 5. SEO title
 
-`Early Signs of Knee Osteoarthritis — Symptoms to Watch For | Dr. Nitin, Bengaluru`
+`Early Signs of Knee Osteoarthritis — Symptoms to Watch For | Dr. Nitin N Sunku, Bengaluru`
 
 ## 6. Meta description
 
-`The earliest signs of knee osteoarthritis explained by Dr. Nitin in Electronic City and Attibele, Bengaluru. Learn what symptoms matter, when to act, and which non-surgical options are most effective in early OA.`
+`The earliest signs of knee osteoarthritis explained by Dr. Nitin N Sunku in Attibele and HSR Layout, Bengaluru. Learn what symptoms matter, when to act, and which non-surgical options are most effective in early OA.`
 
 ---
 
@@ -137,7 +137,7 @@ You rarely need surgery at this stage.
 ### Final CTA
 
 **Headline:** Catching it early changes the entire story.
-Book an early-OA assessment in Electronic City or Attibele.
+Book an early-OA assessment in Attibele or HSR Layout.
 
 - 📅 Book a Consultation
 - 💬 WhatsApp the Clinic

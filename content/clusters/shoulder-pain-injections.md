@@ -6,7 +6,7 @@
 
 ## 1. Page goal
 
-Capture shoulder-pain searches, position Dr. Nitin's clinic for ultrasound-guided shoulder injections, and convert into consultations.
+Capture shoulder-pain searches, position Dr. Nitin N Sunku's clinic for ultrasound-guided shoulder injections, and convert into consultations.
 
 ## 2. Target audience
 
@@ -28,11 +28,11 @@ Capture shoulder-pain searches, position Dr. Nitin's clinic for ultrasound-guide
 
 ## 5. SEO title
 
-`Shoulder Pain Injections in Bengaluru — Ultrasound-Guided & Regenerative | Dr. Nitin`
+`Shoulder Pain Injections in Bengaluru — Ultrasound-Guided & Regenerative | Dr. Nitin N Sunku`
 
 ## 6. Meta description
 
-`Precision ultrasound-guided shoulder injections for rotator cuff, bursitis, frozen shoulder, AC joint, and biceps tendon problems. By Dr. Nitin in Electronic City and Attibele, Bengaluru. Book a consultation.`
+`Precision ultrasound-guided shoulder injections for rotator cuff, bursitis, frozen shoulder, AC joint, and biceps tendon problems. By Dr. Nitin N Sunku in Attibele and HSR Layout, Bengaluru. Book a consultation.`
 
 ---
 
@@ -106,13 +106,13 @@ Total visit: **30–60 minutes**.
 
 ---
 
-### Why patients choose Dr. Nitin for shoulder care
+### Why patients choose Dr. Nitin N Sunku for shoulder care
 
 - Real-time ultrasound capability in clinic
 - Experience across the spectrum of shoulder pathologies
 - Image-guided precision for safety and outcomes
 - Coordinated rehab partners
-- Two convenient Bengaluru locations — Electronic City and Attibele
+- Two convenient Bengaluru locations — Attibele and HSR Layout
 
 ---
 
@@ -156,7 +156,7 @@ Yes. Rehab is the foundation of shoulder recovery.
 Many partial tears can be managed non-operatively, especially in older patients. Each case is individualised.
 
 **Q10. Where in Bengaluru can I get this care?**
-At Dr. Nitin's clinics in Electronic City and Attibele.
+At Dr. Nitin N Sunku's clinics in Attibele and HSR Layout.
 
 ---
 

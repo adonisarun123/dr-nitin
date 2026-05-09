@@ -6,7 +6,7 @@
 
 ## 1. Page goal
 
-Convert searchers comparing image-guided vs landmark injections. Reinforce Dr. Nitin's authority on precision injection care. Drive traffic to ultrasound, GFC, and HA pillars.
+Convert searchers comparing image-guided vs landmark injections. Reinforce Dr. Nitin N Sunku's authority on precision injection care. Drive traffic to ultrasound, GFC, and HA pillars.
 
 ## 2. Target audience
 
@@ -28,11 +28,11 @@ Convert searchers comparing image-guided vs landmark injections. Reinforce Dr. N
 
 ## 5. SEO title
 
-`Benefits of Ultrasound-Guided Orthopedic Injections | Why Precision Matters | Dr. Nitin, Bengaluru`
+`Benefits of Ultrasound-Guided Orthopedic Injections | Why Precision Matters | Dr. Nitin N Sunku, Bengaluru`
 
 ## 6. Meta description
 
-`Why ultrasound-guided injections deliver better, safer results — explained simply by Dr. Nitin (Electronic City and Attibele, Bengaluru). Accuracy, safety, comfort, and outcome differences vs traditional landmark injections.`
+`Why ultrasound-guided injections deliver better, safer results — explained simply by Dr. Nitin N Sunku (Attibele and HSR Layout, Bengaluru). Accuracy, safety, comfort, and outcome differences vs traditional landmark injections.`
 
 ---
 
@@ -95,7 +95,7 @@ For some straightforward, large-target injections (e.g., a clearly accessible kn
 ### Final CTA
 
 **Headline:** A more accurate injection — not just any injection.
-Book an evaluation in Electronic City or Attibele.
+Book an evaluation in Attibele or HSR Layout.
 
 - 📅 Book a Consultation
 - 💬 WhatsApp the Clinic
@@ -132,7 +132,7 @@ Certain non-medication procedures may be considered with obstetric coordination;
 For many soft-tissue diagnoses, ultrasound is highly informative. MRI is added when deeper or structural detail is needed.
 
 **Q10. Where can I get image-guided injections in Bengaluru?**
-At Dr. Nitin's clinics in Electronic City and Attibele.
+At Dr. Nitin N Sunku's clinics in Attibele and HSR Layout.
 
 ---
 

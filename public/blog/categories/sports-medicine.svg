@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Sports Medicine — Dr. Nitin N Sunku">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022C22"/>
+      <stop offset="55%" stop-color="#065F46"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="42" height="42" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="rgba(255,255,255,0.07)"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(600 285)" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <circle cx="-30" cy="-90" r="22" fill="white" opacity="0.9"/>
+    <path d="M-30 -60 L-15 -10 L 25 5 L 60 50 L 50 95" stroke-width="8" fill="none"/>
+    <path d="M-15 -10 L-50 25 L-90 35" stroke-width="8" fill="none"/>
+    <path d="M-50 25 L-30 70 L-65 110" stroke-width="8" fill="none"/>
+    <path d="M-180 50 L-120 50" stroke-width="4" opacity="0.6"/>
+    <path d="M-200 80 L-150 80" stroke-width="4" opacity="0.4"/>
+  </g>
+  <text x="60" y="540" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="34" font-weight="700" fill="white" letter-spacing="0.5">Sports Medicine</text>
+  <text x="60" y="582" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="20" fill="white" opacity="0.7">Dr. Nitin N Sunku · Attibele &amp; HSR Layout, Bengaluru</text>
+</svg>

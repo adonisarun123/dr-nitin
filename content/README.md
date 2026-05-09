@@ -1,13 +1,13 @@
-# Dr. Nitin — Orthopedic & Regenerative Medicine Content Library
+# Dr. Nitin N Sunku — Orthopedic & Regenerative Medicine Content Library
 
-This folder contains the SEO-optimized, conversion-focused content suite for Dr. Nitin's orthopedic practice in **Electronic City and Attibele, Bengaluru**.
+This folder contains the SEO-optimized, conversion-focused content suite for Dr. Nitin N Sunku's orthopedic practice in **Attibele and HSR Layout, Bengaluru**.
 
 ## Content architecture
 
 ```
 content/
-├── pillars/        # High-intent conversion + ranking pages
-└── clusters/       # Educational supporting pages that link to pillars
+├── pillars/ # High-intent conversion + ranking pages
+└── clusters/ # Educational supporting pages that link to pillars
 ```
 
 ## Pillar pages (5)
@@ -53,9 +53,9 @@ Every file contains, in this order:
 
 ## Author / E-E-A-T defaults
 
-- **Author**: Dr. Nitin, MBBS, MS (Orthopaedics), Fellowship in Regenerative Orthopedic Medicine *(placeholder — replace with final credentials, registration number, and years of experience)*
+- **Author**: Dr. Nitin N Sunku, MBBS, MS (Orthopaedics), Fellowship in Regenerative Orthopedic Medicine *(placeholder — replace with final credentials, registration number, and years of experience)*
 - **Locations**: Electronic City, Bengaluru and Attibele, Bengaluru
-- **Reviewed by**: Dr. Nitin (or assigned medical reviewer)
+- **Reviewed by**: Dr. Nitin N Sunku (or assigned medical reviewer)
 - **Last updated**: Use ISO date in each page's schema
 
 ## Brand voice

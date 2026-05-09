@@ -26,11 +26,11 @@ OA patients, early-stage patients, post-injection patients, family caregivers se
 
 ## 5. SEO title
 
-`Best Exercises for Knee Osteoarthritis — Safe Home Routine | Dr. Nitin, Bengaluru`
+`Best Exercises for Knee Osteoarthritis — Safe Home Routine | Dr. Nitin N Sunku, Bengaluru`
 
 ## 6. Meta description
 
-`Safe, effective exercises for knee osteoarthritis you can do at home. Step-by-step guide by Dr. Nitin (Electronic City and Attibele, Bengaluru) to build strength, reduce pain, and protect your knees.`
+`Safe, effective exercises for knee osteoarthritis you can do at home. Step-by-step guide by Dr. Nitin N Sunku (Attibele and HSR Layout, Bengaluru) to build strength, reduce pain, and protect your knees.`
 
 ---
 
@@ -152,7 +152,7 @@ A clinical assessment may add HA injections, GFC, or other targeted care to your
 ### Final CTA
 
 **Headline:** Want a personalised, OA-safe rehab programme?
-Book an assessment with Dr. Nitin in Electronic City or Attibele.
+Book an assessment with Dr. Nitin N Sunku in Attibele or HSR Layout.
 
 - 📅 Book a Consultation
 - 💬 WhatsApp the Clinic
@@ -189,7 +189,7 @@ Most yoga is fine; deep squat poses and prolonged kneeling may need to be modifi
 Yes — and this combination usually delivers better results than either alone.
 
 **Q10. How do I get a personalised plan?**
-Visit Dr. Nitin's clinic in Electronic City or Attibele for an assessment and rehab pathway.
+Visit Dr. Nitin N Sunku's clinic in Attibele or HSR Layout for an assessment and rehab pathway.
 
 ---
 

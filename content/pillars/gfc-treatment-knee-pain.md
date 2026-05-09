@@ -1,4 +1,4 @@
-# GFC Treatment for Knee Pain in Electronic City & Attibele, Bengaluru
+# GFC Treatment for Knee Pain in Attibele & HSR Layout, Bengaluru
 
 > **Pillar #2 — Regenerative therapy conversion page**
 
@@ -20,11 +20,11 @@ Educate patients on Growth Factor Concentrate (GFC) therapy as an advanced regen
 
 - **Search intent**: Mid-funnel commercial + informational
 - **Primary keywords**:
-  - GFC treatment for knee pain in Bengaluru
-  - GFC injection knee Electronic City
-  - growth factor concentrate therapy Attibele
-  - GFC regenerative therapy knee Bengaluru
-  - GFC vs PRP knee
+ - GFC treatment for knee pain in Bengaluru
+ - GFC injection knee Electronic City
+ - growth factor concentrate therapy Attibele
+ - GFC regenerative therapy knee Bengaluru
+ - GFC vs PRP knee
 - **Secondary keywords**: regenerative medicine for knee, regenerative orthopedic Bengaluru, growth factor injection knee pain, advanced PRP, knee cartilage support
 - **Semantic / NLP entities**: growth factors, PDGF, TGF-β, VEGF, IGF, autologous, platelets, regenerative medicine, intra-articular, knee osteoarthritis, ultrasound-guided injection, daycare procedure
 
@@ -36,11 +36,11 @@ Educate patients on Growth Factor Concentrate (GFC) therapy as an advanced regen
 
 ## 5. SEO title
 
-`GFC Treatment for Knee Pain in Bengaluru | Growth Factor Concentrate Therapy | Dr. Nitin`
+`GFC Treatment for Knee Pain in Bengaluru | Growth Factor Concentrate Therapy | Dr. Nitin N Sunku`
 
 ## 6. Meta description
 
-`Advanced GFC (Growth Factor Concentrate) therapy for knee pain and osteoarthritis at Dr. Nitin's clinics in Electronic City and Attibele, Bengaluru. A modern regenerative alternative to PRP. Learn the procedure, benefits, recovery and FAQs.`
+`Advanced GFC (Growth Factor Concentrate) therapy for knee pain and osteoarthritis at Dr. Nitin N Sunku's clinics in Attibele and HSR Layout, Bengaluru. A modern regenerative alternative to PRP. Learn the procedure, benefits, recovery and FAQs.`
 
 ---
 
@@ -50,10 +50,10 @@ Educate patients on Growth Factor Concentrate (GFC) therapy as an advanced regen
 
 **H1:** GFC Therapy for Knee Pain — Advanced Regenerative Care in Bengaluru
 
-**Sub-headline:** Reduce knee pain, support joint health, and stay active longer — with Growth Factor Concentrate therapy delivered by Dr. Nitin in Electronic City and Attibele.
+**Sub-headline:** Reduce knee pain, support joint health, and stay active longer — with Growth Factor Concentrate therapy delivered by Dr. Nitin N Sunku in Attibele and HSR Layout.
 
 **Primary CTA:** Book a GFC Consultation
-**Secondary CTA:** WhatsApp Dr. Nitin's Team
+**Secondary CTA:** WhatsApp Dr. Nitin N Sunku's Team
 
 **Hero supporting line:** A modern, daycare regenerative procedure using a concentrated dose of your own healing growth factors.
 
@@ -119,7 +119,7 @@ Outcomes vary patient to patient — early-grade OA, healthier weight, and bette
 
 ---
 
-### Step-by-step procedure at Dr. Nitin's clinic
+### Step-by-step procedure at Dr. Nitin N Sunku's clinic
 
 1. **Pre-procedure check** — vitals, brief examination, confirmation that you are well-hydrated and have eaten a light meal.
 2. **Blood draw (10–20 ml)** — a small blood sample is taken from your arm, just like a routine blood test.
@@ -173,8 +173,8 @@ Eligibility is always confirmed after clinical examination and imaging.
 ### Recovery and aftercare
 
 - **First 24–72 hours:** Mild soreness, warmth, or swelling at the injection site is normal. Use ice as advised.
-- **Activity:** Light walking is encouraged. Avoid heavy gym, running, long stair-climbing, or deep squats for 3–5 days, depending on Dr. Nitin's specific advice.
-- **Medications:** Avoid anti-inflammatory medications (NSAIDs) for a short period if Dr. Nitin instructs you to, since they may blunt the regenerative response.
+- **Activity:** Light walking is encouraged. Avoid heavy gym, running, long stair-climbing, or deep squats for 3–5 days, depending on Dr. Nitin N Sunku's specific advice.
+- **Medications:** Avoid anti-inflammatory medications (NSAIDs) for a short period if Dr. Nitin N Sunku instructs you to, since they may blunt the regenerative response.
 - **Hydration & nutrition:** Stay well-hydrated; eat balanced meals with adequate protein.
 - **Physiotherapy:** Begin or continue your prescribed strengthening programme as advised.
 - **Onset of relief:** Most patients begin noticing improvement around **2–4 weeks**, with peak benefit typically by **6–12 weeks**.
@@ -186,7 +186,7 @@ Eligibility is always confirmed after clinical examination and imaging.
 
 - **Many patients** experience meaningful pain reduction and better mobility for several months.
 - **Some patients** require a planned series of 2–3 sessions, spaced as advised.
-- **A minority** may not respond as hoped — in which case Dr. Nitin will discuss alternative pathways including HA, lifestyle changes, or, when truly indicated, surgical referral.
+- **A minority** may not respond as hoped — in which case Dr. Nitin N Sunku will discuss alternative pathways including HA, lifestyle changes, or, when truly indicated, surgical referral.
 - **Long-term comfort** depends on weight, muscle strength, lifestyle, and follow-up — not the injection alone.
 
 ---
@@ -218,13 +218,13 @@ The clinic team will share a **transparent, written cost estimate** before you p
 
 ---
 
-### Why choose Dr. Nitin for GFC therapy
+### Why choose Dr. Nitin N Sunku for GFC therapy
 
 - Specialised focus on **regenerative orthopedic medicine**
 - Use of **ultrasound guidance** for precise delivery
 - **Sterile, standardised** preparation protocol
 - **Honest counselling** — we tell you when you are *not* a candidate
-- **Two convenient locations** — Electronic City and Attibele, Bengaluru
+- **Two convenient locations** — Attibele and HSR Layout, Bengaluru
 - **Coordinated rehab** with trusted physiotherapy partners
 - **Pillar treatment philosophy:** GFC is one tool — combined with HA, ultrasound-guided injections, and lifestyle care, your plan is built around *your* knee, not a template
 
@@ -237,7 +237,7 @@ The clinic team will share a **transparent, written cost estimate** before you p
 
 **Buttons:**
 - 📅 Book a GFC Consultation
-- 💬 WhatsApp Dr. Nitin's Team
+- 💬 WhatsApp Dr. Nitin N Sunku's Team
 - 📞 Call the Clinic
 
 ---
@@ -272,7 +272,7 @@ No. GFC is a supportive regenerative therapy. It can help reduce pain and improv
 For many early-to-moderate OA patients, GFC and a comprehensive non-surgical plan can delay or avoid surgery. For severe OA, surgery may still be the better option.
 
 **Q10. Can GFC be combined with HA injections?**
-Yes — combination therapy is often used. Dr. Nitin will recommend the most appropriate sequence.
+Yes — combination therapy is often used. Dr. Nitin N Sunku will recommend the most appropriate sequence.
 
 **Q11. Is ultrasound guidance always used?**
 Ultrasound guidance is used wherever it improves accuracy and safety, especially for tendons and small target areas. For straightforward knee joint injections, a landmark technique may sometimes be sufficient.
@@ -281,7 +281,7 @@ Ultrasound guidance is used wherever it improves accuracy and safety, especially
 Light walking is encouraged. Avoid heavy gym, running, deep squats, or long stair climbing for 3–5 days.
 
 **Q13. Can I take painkillers after GFC?**
-Paracetamol is usually fine. Avoid anti-inflammatory medications (NSAIDs) for the duration Dr. Nitin advises, as they may interfere with the regenerative response.
+Paracetamol is usually fine. Avoid anti-inflammatory medications (NSAIDs) for the duration Dr. Nitin N Sunku advises, as they may interfere with the regenerative response.
 
 **Q14. Can diabetic patients undergo GFC?**
 Generally yes, provided sugars are reasonably controlled. Each case is reviewed individually.
@@ -290,7 +290,7 @@ Generally yes, provided sugars are reasonably controlled. Each case is reviewed 
 Age alone is not a barrier. Suitability depends on OA grade, overall health, and goals. Many seniors benefit.
 
 **Q16. What investigations are needed before GFC?**
-Usually a recent X-ray, basic blood tests, and sometimes an MRI or in-clinic ultrasound. Dr. Nitin will tell you exactly what is needed.
+Usually a recent X-ray, basic blood tests, and sometimes an MRI or in-clinic ultrasound. Dr. Nitin N Sunku will tell you exactly what is needed.
 
 **Q17. Is one knee or both treated together?**
 Either is possible. If both knees are painful, we usually treat both, often in the same visit.
@@ -326,9 +326,9 @@ You can book online, call the clinic, or message us on WhatsApp. We serve Electr
 ## 10. Suggested schema
 
 - **MedicalProcedure** — name: "Growth Factor Concentrate (GFC) Therapy", procedureType: "Therapeutic", bodyLocation: "Knee", howPerformed (steps).
-- **MedicalWebPage** — about: MedicalCondition (Knee Osteoarthritis); reviewedBy: Dr. Nitin.
+- **MedicalWebPage** — about: MedicalCondition (Knee Osteoarthritis); reviewedBy: Dr. Nitin N Sunku.
 - **FAQPage** — wrap all 20 FAQs.
-- **Physician** — Dr. Nitin block.
+- **Physician** — Dr. Nitin N Sunku block.
 - **LocalBusiness / MedicalClinic** — both locations.
 - **BreadcrumbList** — Home › Treatments › GFC for Knee Pain.
 
