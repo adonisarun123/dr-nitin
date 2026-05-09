@@ -9,18 +9,23 @@ export const metadata: Metadata = {
 
 const samples = [
     {
+        slug: "full-bold",
+        label: "Direction B — Full bold modern homepage (active)",
+        desc: "Hero, stats, treatments grid, about teaser, locations, page header — all in the dark/cyan bold modern language. Full preview of the system.",
+    },
+    {
         slug: "hero-b",
-        label: "Direction B — Bold modern hero (active)",
-        desc: "Dark slate canvas, large display headline with gradient accent, pill buttons, stat strip, glowing photo halo. Compared against the current live hero.",
+        label: "Direction B — Bold modern hero only",
+        desc: "Side-by-side: bold hero on top, current live hero below.",
     },
     {
         slug: "full-editorial",
         label: "Direction A — Full editorial homepage (rejected)",
-        desc: "Hero, stats, treatments grid, about teaser, locations, page header — all in editorial-clinical style. Kept as reference.",
+        desc: "Editorial-clinical full system. Kept as reference.",
     },
     {
         slug: "hero-a",
-        label: "Direction A — Hero only, side-by-side with current (rejected)",
+        label: "Direction A — Editorial hero only (rejected)",
         desc: "Side-by-side: editorial hero on top, current live hero below.",
     },
 ];
