@@ -669,7 +669,7 @@ export const treatmentClusterPosts = [
             "Modern, non-surgical care for chronic tendon pain — tennis elbow, jumper's knee, Achilles, plantar fasciitis. How regenerative care and image guidance change the picture.",
         date: PUBLISH_DATE,
         category: "Tendon Care",
-        image: "https://images.unsplash.com/photo-1571019613540-996a2d80024e?w=1200&h=630&fit=crop&q=80&auto=format",
+        image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>Tendinopathy in plain language</h2>
       <p>A <strong>tendon</strong> is the strong, rope-like tissue that connects muscle to bone. When a tendon is overused, mechanically stressed, or injured, it can develop <strong>tendinopathy</strong> — a chronic, usually low-grade, painful condition. Despite the popular term "tendinitis," in chronic cases the problem is often less about classical inflammation and more about degenerative changes in the tendon itself.</p>
