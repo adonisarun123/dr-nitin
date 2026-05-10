@@ -46,7 +46,7 @@ export default function TestimonialsPage() {
                         className="absolute -top-32 left-1/2 -translate-x-1/2 h-72 w-[600px] rounded-full bg-cyan-500/25 blur-[110px] pointer-events-none"
                     />
                     <div className="relative max-w-2xl mx-auto">
-                        <h2 className="font-heading font-bold text-3xl lg:text-[2.5rem] tracking-[-0.025em] leading-[1.1]">
+                        <h2 className="font-heading font-bold text-3xl lg:text-[2.5rem] tracking-[-0.025em] leading-[1.1] text-white">
                             Ready to write{" "}
                             <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-blue-400 bg-clip-text text-transparent">
                                 your story?
