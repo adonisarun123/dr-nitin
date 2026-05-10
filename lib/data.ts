@@ -2212,6 +2212,7 @@ export const blogPosts = [
     excerpt: "Meniscus tears are among the most common knee injuries seen in active adults. The meniscus is a C-shaped cartilage that cushions the knee and helps with smooth ",
     date: "Mar 26, 2024",
     category: "Sports Medicine",
+    image: "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1200&h=630&fit=crop&q=80&auto=format",
     content: `
       <p>Meniscus tears are among the most common knee injuries seen in active adults. The meniscus is a C-shaped cartilage that cushions the knee and helps with smooth movement. When it is damaged, knee pain, swelling, and restricted mobility can quickly follow. Meniscus injuries also frequently occur alongside ligament issues such as ACL reconstruction surgery and meniscus repair, especially in athletes who experience high-impact movements. Understanding what causes these tears can help prevent injury and support early treatment — a crucial aspect of meniscus and ACL recovery.</p>
       
@@ -2251,6 +2252,7 @@ export const blogPosts = [
     excerpt: "A posterior cruciate ligament tear affects one of the main ligaments that stabilizes the knee.",
     date: "Feb 27, 2024",
     category: "Sports Medicine",
+    image: "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=1200&h=630&fit=crop&q=80&auto=format",
     content: `
       <p>A posterior cruciate ligament tear affects one of the main ligaments that stabilizes the knee.</p>
       

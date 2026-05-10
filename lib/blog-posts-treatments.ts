@@ -34,7 +34,7 @@ export const treatmentClusterPosts = [
             "PRP and GFC both come from your own blood, but they're not the same. A clear, patient-friendly comparison of how each regenerative injection works, who benefits, and how to choose.",
         date: PUBLISH_DATE,
         category: "Regenerative Medicine",
-        image: "/blog/categories/regenerative-medicine.svg",
+        image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <p>If you have been researching non-surgical treatments for knee pain, tendinopathy, or a sports injury, you have probably come across two names: <strong>PRP (Platelet-Rich Plasma)</strong> and <strong>GFC (Growth Factor Concentrate)</strong>. Both are regenerative injection therapies prepared from your own blood. Both aim to reduce pain and support tissue health. So — what's actually different, and which one might suit you?</p>
 
@@ -114,7 +114,7 @@ export const treatmentClusterPosts = [
             "Regenerative orthopedic medicine in plain language — what it is, how it works, who benefits, and what it can and cannot do for joint and tendon pain.",
         date: PUBLISH_DATE,
         category: "Regenerative Medicine",
-        image: "/blog/categories/regenerative-medicine.svg",
+        image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>A simple definition</h2>
       <p>Regenerative medicine is a branch of modern healthcare that uses the body's own biological signals — cells, growth factors, and supportive proteins — to help reduce pain, modulate inflammation, and support the health of damaged tissues.</p>
@@ -206,7 +206,7 @@ export const treatmentClusterPosts = [
             "Real, evidence-based alternatives to knee replacement — physiotherapy, HA, GFC, ultrasound-guided injections, and lifestyle care. An honest second-opinion guide.",
         date: PUBLISH_DATE,
         category: "Knee Pain",
-        image: "/blog/categories/knee-pain.svg",
+        image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <p>Many patients arrive at the clinic carrying an MRI report and a recommendation: "knee replacement." Some are convinced they have no choice. Others are looking for a second opinion. Almost all are scared.</p>
       <p>The message is simple:</p>
@@ -283,7 +283,7 @@ export const treatmentClusterPosts = [
             "Catching knee OA early gives you more options and better outcomes. The 10 earliest signs to watch for, and what to do about each.",
         date: PUBLISH_DATE,
         category: "Osteoarthritis",
-        image: "/blog/categories/osteoarthritis.svg",
+        image: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>Why early signs matter</h2>
       <p>Knee osteoarthritis (OA) rarely arrives suddenly. It often whispers for months or years before it shouts. Patients who recognise these whispers early have more options, better outcomes, and a much higher chance of avoiding surgery.</p>
@@ -357,7 +357,7 @@ export const treatmentClusterPosts = [
             "Yes — for many patients, knee osteoarthritis can be managed without surgery. Here's the honest picture of what works, what doesn't, and where the line really sits.",
         date: PUBLISH_DATE,
         category: "Osteoarthritis",
-        image: "/blog/categories/osteoarthritis.svg",
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>The short, honest answer</h2>
       <p><strong>Yes — for many patients, knee osteoarthritis can be managed without surgery.</strong> Specifically, most patients with mild-to-moderate OA (KL grades 1–3) can experience meaningful pain relief and improved mobility with a structured non-surgical plan.</p>
@@ -428,7 +428,7 @@ export const treatmentClusterPosts = [
             "Knee pain after 40? A practical, evidence-based guide to the best non-surgical treatments — exercise, weight, HA, GFC, ultrasound-guided injections.",
         date: PUBLISH_DATE,
         category: "Knee Pain",
-        image: "/blog/categories/knee-pain.svg",
+        image: "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>Why knee pain shows up in your 40s</h2>
       <p>Your 40s are the decade where many silent factors begin to add up: subtle cartilage changes, less daily activity, gradual weight gain, weaker hip and thigh muscles, and old injuries you forgot about. The knee absorbs all of it.</p>
@@ -492,7 +492,7 @@ export const treatmentClusterPosts = [
             "Safe, effective exercises for knee osteoarthritis you can do at home. A practical step-by-step routine to build strength, reduce pain, and protect your knees.",
         date: PUBLISH_DATE,
         category: "Osteoarthritis",
-        image: "/blog/categories/osteoarthritis.svg",
+        image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>Why exercise matters in knee OA</h2>
       <p>Many patients believe rest is best. The opposite is closer to the truth: <strong>strong muscles around the knee are your single most reliable, drug-free pain reducer</strong>. Done correctly, exercise reduces pain, improves function, and slows progression.</p>
@@ -589,7 +589,7 @@ export const treatmentClusterPosts = [
             "How much can weight loss really help your knee pain? An honest, practical guide to the math, the mechanics, and how to build a knee-friendly plan.",
         date: PUBLISH_DATE,
         category: "Knee Pain",
-        image: "/blog/categories/knee-pain.svg",
+        image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>The simple, surprising math</h2>
       <p>Each kilogram of body weight places approximately 3–4 kg of additional load across the knee while walking — and 5–7 kg or more on stairs and during squats.</p>
@@ -669,7 +669,7 @@ export const treatmentClusterPosts = [
             "Modern, non-surgical care for chronic tendon pain — tennis elbow, jumper's knee, Achilles, plantar fasciitis. How regenerative care and image guidance change the picture.",
         date: PUBLISH_DATE,
         category: "Tendon Care",
-        image: "/blog/categories/tendon-care.svg",
+        image: "https://images.unsplash.com/photo-1571019613540-996a2d80024e?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>Tendinopathy in plain language</h2>
       <p>A <strong>tendon</strong> is the strong, rope-like tissue that connects muscle to bone. When a tendon is overused, mechanically stressed, or injured, it can develop <strong>tendinopathy</strong> — a chronic, usually low-grade, painful condition. Despite the popular term "tendinitis," in chronic cases the problem is often less about classical inflammation and more about degenerative changes in the tendon itself.</p>
@@ -744,7 +744,7 @@ export const treatmentClusterPosts = [
             "Precision ultrasound-guided shoulder injections for rotator cuff, bursitis, frozen shoulder, AC joint, and biceps tendon problems.",
         date: PUBLISH_DATE,
         category: "Shoulder Care",
-        image: "/blog/categories/shoulder-care.svg",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>Why the shoulder needs precision</h2>
       <p>The shoulder is one of the most mobile joints in the body — and one of the most complex. Its small structures (subacromial bursa, rotator cuff tendons, biceps tendon sheath, AC joint) sit close to nerves and blood vessels.</p>
@@ -817,7 +817,7 @@ export const treatmentClusterPosts = [
             "Modern regenerative care for sports injuries — GFC, PRP, ultrasound-guided injections, and rehab. Get back to your sport faster, smarter.",
         date: PUBLISH_DATE,
         category: "Sports Medicine",
-        image: "/blog/categories/sports-medicine.svg",
+        image: "https://images.unsplash.com/photo-1486218119243-13883505764c?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>Why sports injuries deserve a smarter approach</h2>
       <p>Sports injuries — even "minor" ones — alter your tissue, your training, and sometimes your motivation. The wrong approach (too little care, too much rest, or repeated steroid shots) can prolong the problem. The right approach speeds recovery and reduces the chance of recurrence.</p>
@@ -890,7 +890,7 @@ export const treatmentClusterPosts = [
             "Cartilage degeneration in your knee, explained simply. What causes it, how it progresses, and what modern non-surgical treatments can — and cannot — do.",
         date: PUBLISH_DATE,
         category: "Osteoarthritis",
-        image: "/blog/categories/osteoarthritis.svg",
+        image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>What is cartilage?</h2>
       <p><strong>Articular cartilage</strong> is the smooth, white, slippery covering at the ends of bones inside a joint. Healthy cartilage:</p>
@@ -977,7 +977,7 @@ export const treatmentClusterPosts = [
             "Why ultrasound-guided injections deliver better, safer results. Accuracy, safety, comfort, and outcome differences vs traditional landmark injections.",
         date: PUBLISH_DATE,
         category: "Regenerative Medicine",
-        image: "/blog/categories/regenerative-medicine.svg",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
       <h2>A simple way to think about it</h2>
       <p>Imagine you're trying to drop a coin into a small slot — eyes open vs eyes closed. Both can work; one is much more reliable.</p>
