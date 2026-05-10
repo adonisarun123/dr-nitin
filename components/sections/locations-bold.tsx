@@ -1,62 +1,46 @@
 import { ArrowUpRight, Phone, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const locations = [
     {
         name: "Raghava Multispeciality Hospital",
-        area: "Attibele",
-        addressLines: [
-            "39, Sarjapura–Attibele Road",
-            "opposite Syndicate Bank, Anekal",
-            "Bengaluru, Karnataka 562107",
-        ],
+        address:
+            "39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal, Bengaluru, Karnataka 562107",
         phone: "+91-9980031006",
         mapLink:
             "https://www.google.com/maps/place/Raghava+Multispeciality+Hospital/data=!4m2!3m1!1s0x0:0xaeb4c2023a37fea6?sa=X&ved=1t:2428&ictx=111",
-        serves: "Anekal · Bommasandra · Chandapura · Hosur Road · Electronic City",
     },
     {
         name: "Health Nest Hospital",
-        area: "HSR Layout",
-        addressLines: [
-            "1162, 24th Main Road",
-            "Sector 2, HSR Layout",
-            "Bengaluru, Karnataka 560102",
-        ],
+        address:
+            "1162, 24th Main Rd Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
         phone: "+91-9449031003",
         mapLink:
             "https://www.google.com/maps/place/Health+Nest+Hospital/data=!4m2!3m1!1s0x0:0x13399aca4c9e0a68?sa=X&ved=1t:2428&ictx=111",
-        serves: "HSR Layout · Koramangala · BTM Layout · Sarjapur Road · Bellandur",
     },
 ];
 
 /**
- * Bold modern "Visit us" — direction B.
- * Cards use dark surfaces with cyan/blue glow accents; pill button for
- * directions; phone link in monospace-ish prominence.
+ * Bold modern "Visit Us" — direction B.
+ * Original copy preserved (headline, subhead, addresses, phone numbers).
+ * Cards rendered as dark surfaces for high-contrast moment.
  */
 export function LocationsBold() {
     return (
         <section className="relative py-24 lg:py-32 bg-slate-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="max-w-3xl mb-14 lg:mb-16">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-medium text-slate-700 mb-5">
-                        <MapPin className="h-3.5 w-3.5 text-cyan-500" aria-hidden />
-                        Visit us
-                    </div>
+                <div className="text-center max-w-2xl mx-auto mb-14 lg:mb-16">
                     <h2 className="font-heading font-bold text-4xl lg:text-[3rem] tracking-[-0.03em] text-slate-950 leading-[1.05]">
-                        Two clinics across{" "}
                         <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
-                            South Bengaluru.
+                            Visit Us
                         </span>
                     </h2>
-                    <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-                        Most consultations are anchored at Raghava Multispeciality
-                        Hospital, Attibele. Health Nest Hospital, HSR Layout, supports
-                        follow-up and consults closer to the city.
+                    <p className="mt-5 text-lg text-slate-600 leading-relaxed">
+                        Consult Dr. Nitin at these convenient locations in Bengaluru.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
+                <div className="grid md:grid-cols-2 gap-5 lg:gap-6 max-w-4xl mx-auto">
                     {locations.map((loc) => (
                         <article
                             key={loc.name}
@@ -72,54 +56,42 @@ export function LocationsBold() {
                             />
 
                             <div className="relative">
-                                <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm px-3 py-1 text-[11px] uppercase tracking-[0.18em] font-semibold text-cyan-200 mb-4">
-                                    {loc.area}
+                                <div className="inline-flex items-center justify-center h-12 w-12 rounded-2xl bg-cyan-500/15 border border-cyan-400/20 mb-6">
+                                    <MapPin className="h-6 w-6 text-cyan-300" aria-hidden />
                                 </div>
 
-                                <h3 className="font-heading font-bold text-2xl lg:text-3xl tracking-[-0.02em] leading-tight mb-5 text-white">
+                                <h3 className="font-heading font-bold text-xl lg:text-[1.5rem] tracking-[-0.02em] leading-tight mb-4 text-white">
                                     {loc.name}
                                 </h3>
 
-                                <address className="not-italic text-blue-100/80 leading-relaxed mb-6">
-                                    {loc.addressLines.map((line, i) => (
-                                        <span key={i} className="block">
-                                            {line}
-                                        </span>
-                                    ))}
-                                </address>
+                                <p className="text-blue-100/80 leading-relaxed mb-6 flex-grow">
+                                    {loc.address}
+                                </p>
 
-                                <div className="grid sm:grid-cols-2 gap-4 mb-7 pt-5 border-t border-white/10">
-                                    <div>
-                                        <div className="text-[11px] uppercase tracking-[0.18em] text-cyan-300 font-semibold mb-1.5">
-                                            Telephone
-                                        </div>
+                                <div className="space-y-3 w-full pt-5 border-t border-white/10">
+                                    <a
+                                        href={`tel:${loc.phone}`}
+                                        className="inline-flex items-center gap-3 text-white font-medium hover:text-cyan-200 transition-colors"
+                                    >
+                                        <Phone className="h-5 w-5 text-cyan-300" aria-hidden />
+                                        {loc.phone}
+                                    </a>
+
+                                    <Button
+                                        variant="outline"
+                                        className="w-full mt-2 rounded-full border-white/25 bg-white/5 text-white hover:bg-white hover:text-slate-950 hover:translate-y-0"
+                                        asChild
+                                    >
                                         <a
-                                            href={`tel:${loc.phone}`}
-                                            className="inline-flex items-center gap-2 text-white font-semibold hover:text-cyan-200 transition-colors"
+                                            href={loc.mapLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                         >
-                                            <Phone className="h-4 w-4" aria-hidden />
-                                            {loc.phone}
+                                            Get Directions
+                                            <ArrowUpRight className="ml-2 h-4 w-4" aria-hidden />
                                         </a>
-                                    </div>
-                                    <div>
-                                        <div className="text-[11px] uppercase tracking-[0.18em] text-cyan-300 font-semibold mb-1.5">
-                                            Service area
-                                        </div>
-                                        <p className="text-sm text-blue-100/80 leading-snug">
-                                            {loc.serves}
-                                        </p>
-                                    </div>
+                                    </Button>
                                 </div>
-
-                                <a
-                                    href={loc.mapLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="self-start inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-950 hover:bg-cyan-100 transition-colors"
-                                >
-                                    Open in Google Maps
-                                    <ArrowUpRight className="h-4 w-4" aria-hidden />
-                                </a>
                             </div>
                         </article>
                     ))}

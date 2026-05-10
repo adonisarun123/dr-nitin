@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Award, BookOpen, Heart } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
@@ -67,7 +67,7 @@ export default function AboutPage() {
     return (
         <main className="min-h-screen">
             <JsonLd data={doctorSchema} />
-            <PageHeader
+            <PageHeaderBold
                 title="Nurturing Mobility. Empowering Active Lives."
                 description="Dr. Nitin Sunku believes in evidence-based, personalized orthopedic care that prioritizes your long-term joint health."
             />

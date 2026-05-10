@@ -23,9 +23,9 @@ export function TreatmentsGridBold() {
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <FadeIn className="max-w-3xl mb-14 lg:mb-20">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-medium text-slate-700 mb-5">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-700 mb-5">
                         <Sparkles className="h-3.5 w-3.5 text-cyan-500" aria-hidden />
-                        Non-surgical · regenerative
+                        Non-Surgical · Regenerative
                     </div>
                     <h2
                         id="home-treatments-bold-heading"
@@ -33,12 +33,12 @@ export function TreatmentsGridBold() {
                     >
                         Modern, non-surgical{" "}
                         <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
-                            orthopedic care.
+                            orthopedic treatments.
                         </span>
                     </h2>
                     <p className="mt-6 text-lg text-slate-600 leading-relaxed">
                         Pain reduction, better mobility, and a real plan to delay or avoid
-                        surgery where medically appropriate. Two clinics in Bengaluru,
+                        surgery where medically appropriate — at Attibele and HSR Layout,
                         serving Electronic City and South Bengaluru.
                     </p>
                 </FadeIn>

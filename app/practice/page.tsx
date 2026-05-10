@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ListChecks } from "lucide-react";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { Button } from "@/components/ui/button";
 import { siteOrigin } from "@/lib/site-url";
 import { practicePostalAddress, siteConfig } from "@/lib/data";
@@ -37,7 +37,7 @@ export default function PracticeOverviewPage() {
         <main className="min-h-screen pb-20 bg-white">
             <JsonLd data={physicianSchema} />
 
-            <PageHeader
+            <PageHeaderBold
                 title="Practice Overview"
                 description="A short guide to the practice — what we treat, where you'll be seen, and how to prepare for your visit."
             />

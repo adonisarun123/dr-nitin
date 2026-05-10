@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { blogPosts } from "@/lib/data";
 import { ArrowRight, Calendar } from "lucide-react";
 
@@ -15,7 +15,7 @@ export default function BlogPage() {
 
     return (
         <main className="min-h-screen pb-20">
-            <PageHeader
+            <PageHeaderBold
                 title="Ortho Blog"
                 description="Expert insights, tips, and updates from Dr. Nitin Sunku on orthopedic health and sports medicine."
             />

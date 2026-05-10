@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { servicesData } from "@/lib/data";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
     return (
         <main className="min-h-screen pb-20">
-            <PageHeader
+            <PageHeaderBold
                 title="Comprehensive Orthopedic Services"
                 description="Primary care at Raghava Multispeciality, Attibele, on Sarjapura–Attibele Road—sports injuries, joint replacement, fractures, and arthroscopy. Additional sessions at Health Nest Hospital, HSR Layout, for patients from nearby areas."
             />

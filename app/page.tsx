@@ -1,11 +1,11 @@
 import { Metadata } from "next";
-import { Hero } from "@/components/sections/hero";
-import { Stats } from "@/components/sections/stats";
-import { ServicesGrid } from "@/components/sections/services";
-import { TreatmentsGrid } from "@/components/sections/treatments";
+import { HeroBold } from "@/components/sections/hero-bold";
+import { StatsBold } from "@/components/sections/stats-bold";
+import { ServicesGridBold } from "@/components/sections/services-bold";
+import { TreatmentsGridBold } from "@/components/sections/treatments-bold";
 import { Testimonials } from "@/components/sections/testimonials";
-import { AboutTeaser } from "@/components/sections/about-teaser";
-import { Locations } from "@/components/sections/locations";
+import { AboutTeaserBold } from "@/components/sections/about-teaser-bold";
+import { LocationsBold } from "@/components/sections/locations-bold";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig, practicePostalAddress } from "@/lib/data";
 import { siteOrigin } from "@/lib/site-url";
@@ -38,13 +38,13 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <JsonLd data={physicianSchema} />
-      <Hero />
-      <FadeIn delay={0.2}><Stats /></FadeIn>
-      <TreatmentsGrid />
-      <ServicesGrid />
+      <HeroBold />
+      <FadeIn delay={0.2}><StatsBold /></FadeIn>
+      <TreatmentsGridBold />
+      <ServicesGridBold />
       <FadeIn delay={0.2}><Testimonials /></FadeIn>
-      <FadeIn delay={0.2}><AboutTeaser /></FadeIn>
-      <FadeIn delay={0.2}><Locations /></FadeIn>
+      <FadeIn delay={0.2}><AboutTeaserBold /></FadeIn>
+      <FadeIn delay={0.2}><LocationsBold /></FadeIn>
 
       <section
         className="bg-slate-50 border-t border-slate-200 py-16 lg:py-20"

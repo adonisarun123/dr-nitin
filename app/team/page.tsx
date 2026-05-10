@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { teamData } from "@/lib/data";
 import { FadeIn } from "@/components/animations/fade-in";
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function TeamPage() {
     return (
         <main className="min-h-screen pb-20">
-            <PageHeader
+            <PageHeaderBold
                 title="Meet Our Team"
                 description="Dedicated professionals committed to getting you back to your best."
             />

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <main className="min-h-screen pb-20">
-            <PageHeader
+            <PageHeaderBold
                 title="Get in Touch"
                 description="Ready to get moving again? Book an appointment or visit us at our clinic."
             />

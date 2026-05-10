@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHeaderBold } from "@/components/ui/page-header-bold";
 
 export const metadata: Metadata = {
     title: {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function TermsPage() {
     return (
         <main className="min-h-screen pb-20">
-            <PageHeader title="Terms of Service" description="Last updated: December 2024" />
+            <PageHeaderBold title="Terms of Service" description="Last updated: December 2024" />
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12 max-w-4xl text-gray-800 space-y-6 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mt-8 [&_h2]:mb-3">
                 <h2>1. Agreement to terms</h2>
                 <p>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { FadeIn } from "@/components/animations/fade-in";
 import { treatments, SERVICE_AREAS_LINE } from "@/lib/treatments";
 import { siteOrigin } from "@/lib/site-url";
@@ -31,7 +31,7 @@ export default function TreatmentsIndexPage() {
         <main className="min-h-screen pb-20">
             <JsonLd data={itemListSchema} />
 
-            <PageHeader
+            <PageHeaderBold
                 title="Non-Surgical & Regenerative Orthopedic Treatments"
                 description="Pain reduction, mobility restoration, and a real plan to delay or avoid surgery where medically appropriate. Dr. Nitin N Sunku, Attibele and HSR Layout."
             />
