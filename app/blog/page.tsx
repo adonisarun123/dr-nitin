@@ -1,86 +1,105 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { PageHeaderBold } from "@/components/ui/page-header-bold";
+import { Button } from "@/components/ui/button";
+import { BlogGrid } from "@/components/blog/blog-grid";
 import { blogPosts } from "@/lib/data";
-import { ArrowRight, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Orthopedic & Sports Medicine Blog",
-    description: "Read expert blogs by Dr Nitin N Sunku on orthopedic care, sports injuries, knee pain, joint health and recovery tips for patients.",
+    description:
+        "Read expert blogs by Dr Nitin N Sunku on orthopedic care, sports injuries, knee pain, joint health and recovery tips for patients.",
 };
 
 export default function BlogPage() {
-    const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    const sortedPosts = [...blogPosts].sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
 
     return (
-        <main className="min-h-screen pb-20">
+        <main className="min-h-screen pb-20 bg-slate-50/40">
             <PageHeaderBold
                 title="Ortho Blog"
                 description="Expert insights, tips, and updates from Dr. Nitin Sunku on orthopedic health and sports medicine."
             />
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-4xl space-y-4 text-gray-700 leading-relaxed text-base">
-                <p>
-                    Articles are organised by topic—knee ligaments, meniscus, shoulder pain, spine symptoms,
-                    running injuries, joint replacement, and recovery after sports trauma. Skim the excerpts
-                    below to find a guide that matches your question, then read the full post for structured
-                    explanations you can discuss with Dr. Nitin N Sunku during a consultation in HSR Layout or
-                    Attibele. New guides are added when common themes emerge from clinic discussions.
-                </p>
-                <p>
-                    Most long-form pieces are written for adults in Bengaluru who want clearer language before
-                    they commit to time off work or sport for treatment. You will see repeated themes: how
-                    imaging is used, when keyhole surgery is discussed, what physiotherapy usually involves,
-                    and how return-to-run or return-to-court timelines are staged. None of this replaces your own
-                    examination.
-                </p>
-                <p>
-                    If you live closer to Attibele, Anekal, Electronic City, or Sarjapura Road, plan around
-                    Raghava Multispeciality as the main hub. If HSR, Koramangala, BTM, or Bellandur is easier on
-                    a given week, ask about Health Nest when you use the contact page so the team can suggest the
-                    right slot.
-                </p>
-            </div>
-
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {sortedPosts.map((post) => (
-                        <article key={post.slug} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-shadow flex flex-col h-full">
-                            <div className="aspect-video relative w-full overflow-hidden">
-                                <Image
-                                    src={("image" in post && post.image) || "/blog_image.jpg"}
-                                    alt={post.title}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <div className="p-6 flex flex-col flex-grow">
-                                <div className="flex items-center gap-4 text-xs text-gray-500 mb-3">
-                                    <span className="flex items-center gap-1"><Calendar className="h-3 w-3" /> {post.date}</span>
-                                    <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-full font-medium">{post.category}</span>
-                                </div>
-
-                                <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                                    <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
-                                        {post.title}
-                                    </Link>
-                                </h2>
-
-                                <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
-                                    {post.excerpt}
-                                </p>
-
-                                <div className="mt-auto">
-                                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center font-bold text-primary hover:text-primary/80 transition-colors">
-                                        Read Article <ArrowRight className="ml-2 h-4 w-4" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </article>
-                    ))}
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10 max-w-3xl">
+                <div className="space-y-4 text-slate-700 leading-relaxed text-base">
+                    <p>
+                        Articles are organised by topic — knee ligaments, meniscus,
+                        shoulder pain, spine symptoms, running injuries, joint replacement,
+                        and recovery after sports trauma. Skim the excerpts below to find a
+                        guide that matches your question, then read the full post for
+                        structured explanations you can discuss with Dr. Nitin N Sunku
+                        during a consultation in HSR Layout or Attibele. New guides are
+                        added when common themes emerge from clinic discussions.
+                    </p>
+                    <p>
+                        Most long-form pieces are written for adults in Bengaluru who want
+                        clearer language before they commit to time off work or sport for
+                        treatment. You will see repeated themes: how imaging is used, when
+                        keyhole surgery is discussed, what physiotherapy usually involves,
+                        and how return-to-run or return-to-court timelines are staged. None
+                        of this replaces your own examination.
+                    </p>
                 </div>
             </div>
+
+            {/* Interactive grid (featured + filter + cards) */}
+            <BlogGrid posts={sortedPosts} />
+
+            {/* ───────── Closing CTA ───────── */}
+            <section className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+                <div className="relative overflow-hidden rounded-3xl bg-slate-950 text-white p-10 lg:p-14">
+                    <div
+                        aria-hidden
+                        className="absolute -top-32 -right-20 h-72 w-72 rounded-full bg-cyan-500/25 blur-[100px] pointer-events-none"
+                    />
+                    <div
+                        aria-hidden
+                        className="absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-blue-500/20 blur-[100px] pointer-events-none"
+                    />
+                    <div className="relative grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                        <div className="lg:col-span-8">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm px-3 py-1 text-[11px] uppercase tracking-[0.18em] font-semibold text-cyan-200 mb-5">
+                                Have questions?
+                            </div>
+                            <h2 className="font-heading font-bold text-3xl lg:text-[2.5rem] tracking-[-0.025em] leading-[1.1] text-white">
+                                Reading is helpful.{" "}
+                                <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-blue-400 bg-clip-text text-transparent">
+                                    A consultation is better.
+                                </span>
+                            </h2>
+                            <p className="mt-5 text-blue-100/80 text-base lg:text-lg leading-relaxed max-w-xl">
+                                Bring your imaging, prior reports, and the questions you took
+                                away from these articles. Dr. Nitin N Sunku will review them
+                                and walk you through the right plan for your case.
+                            </p>
+                        </div>
+                        <div className="lg:col-span-4 flex flex-wrap lg:flex-col gap-3 lg:items-stretch">
+                            <Button
+                                size="lg"
+                                className="h-12 px-7 rounded-full bg-white text-slate-950 hover:bg-white/90 shadow-none hover:translate-y-0 font-semibold flex-1 lg:flex-none"
+                                asChild
+                            >
+                                <Link href="/contact">
+                                    Book a consultation
+                                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden />
+                                </Link>
+                            </Button>
+                            <Button
+                                size="lg"
+                                variant="outline"
+                                className="h-12 px-7 rounded-full border-white/25 bg-white/5 backdrop-blur-sm text-white hover:bg-white/10 hover:text-white shadow-none hover:translate-y-0 flex-1 lg:flex-none"
+                                asChild
+                            >
+                                <Link href="/treatments">Explore treatments</Link>
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 }
