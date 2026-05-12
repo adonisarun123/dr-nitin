@@ -20,15 +20,20 @@ export default function ContactPage() {
                 description="Ready to get moving again? Book an appointment or visit us at our clinic."
             />
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                 <p className="text-gray-700 leading-relaxed text-center max-w-3xl mx-auto mb-10">
-                    Use the appointment form for non-urgent enquiries, or call the hospital numbers listed
-                    beside each address if you prefer to speak with the front desk first. Please describe
-                    your main symptom, how long it has lasted, and any prior treatment so the team can suggest
-                    the right slot length. For emergencies—open fractures, loss of consciousness, new
-                    weakness after trauma—go to the nearest emergency department instead of waiting for an
-                    outpatient reply.
+                    Use the appointment form for non-urgent enquiries, or call the hospital
+                    numbers listed beside each address if you prefer to speak with the front
+                    desk first. Please describe your main symptom, how long it has lasted, and
+                    any prior treatment, so the team can book the right length of consultation
+                    for you.
                 </p>
+                <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-red-200 bg-red-50 px-5 py-4 text-sm leading-relaxed text-red-800">
+                    <strong className="font-semibold">In an emergency</strong> — such as an
+                    open fracture, loss of consciousness, or new weakness after trauma — please
+                    go to the nearest emergency department rather than waiting for an outpatient
+                    reply.
+                </div>
                 <div className="grid lg:grid-cols-2 gap-12">
 
                     {/* Contact Information Cards */}
