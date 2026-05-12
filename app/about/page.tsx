@@ -132,7 +132,7 @@ export default function AboutPage() {
                                 <div className="bg-green-50 p-4 rounded-xl">
                                     <Heart className="h-8 w-8 text-green-600 mb-2" />
                                     <h3 className="font-bold text-gray-900">10K+</h3>
-                                    <p className="text-sm text-gray-600">Happy Patients</p>
+                                    <p className="text-sm text-gray-600">Patients Consulted</p>
                                 </div>
                             </div>
 

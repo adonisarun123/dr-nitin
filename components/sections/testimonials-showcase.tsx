@@ -9,7 +9,7 @@ import { testimonialsData } from "@/lib/data";
  *
  * Layout, top to bottom:
  *   1. Featured pull-quote on a dark slate canvas with cyan/blue glows.
- *   2. Stats strip (5/5 average · 100% recommend · 4 conditions).
+ *   2. Stats strip (5/5 average · 100% recommend · 10K+ patients consulted).
  *   3. Auto-scrolling marquee, left → right, light cards.
  *   4. Auto-scrolling marquee, right → left, dark cards.
  *   5. Tilt-on-hover grid of all testimonials in full.
@@ -106,13 +106,13 @@ export function TestimonialsShowcase() {
                         </div>
                         <div className="text-center">
                             <div className="font-heading font-bold text-3xl lg:text-4xl tracking-[-0.03em] text-slate-900">
-                                {testimonialsData.length}
+                                10K
                                 <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
                                     +
                                 </span>
                             </div>
                             <div className="mt-2 text-[11px] uppercase tracking-[0.16em] font-semibold text-slate-500">
-                                Patient stories
+                                Patients consulted
                             </div>
                         </div>
                     </div>

@@ -16,8 +16,8 @@ const stats = [
     {
         id: 3,
         name: "Practice Locations",
-        value: "2+",
-        desc: "Health Nest & Raghava",
+        value: "2",
+        desc: "Attibele & HSR Layout",
         icon: MapPin,
     },
     {

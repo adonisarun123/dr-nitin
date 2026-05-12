@@ -102,7 +102,7 @@ export default function BookAppointmentPage() {
                         {/* Right Column: Text Content */}
                         <div className="text-center lg:text-left">
                             <div className="inline-block bg-blue-600 text-white rounded-full px-6 py-2 mb-6">
-                                <p className="text-sm font-medium">✓ Trusted by 1000+ Patients</p>
+                                <p className="text-sm font-medium">✓ Trusted by 10,000+ Patients</p>
                             </div>
 
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-blue-900">
