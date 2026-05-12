@@ -56,14 +56,11 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
-        console.log('🔵 Form submit triggered');
         e.preventDefault();
-        console.log('🔵 Default prevented');
         setIsSubmitting(true);
         setError("");
 
         try {
-            console.log('🔵 Starting submission...');
             // Add source suffix to identify leads from ads
             const submissionData = {
                 ...formData,
@@ -72,10 +69,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                 utm_params: getUTMParameters(),
             };
 
-            console.log('🔵 Submission data prepared:', { ...submissionData, phone: '***', email: '***' });
-
             // Send to API endpoint
-            console.log('🔵 Calling API...');
             const response = await fetch('/api/leads', {
                 method: 'POST',
                 headers: {
@@ -84,9 +78,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                 body: JSON.stringify(submissionData),
             });
 
-            console.log('🔵 API response status:', response.status);
             const result = await response.json();
-            console.log('🔵 API result:', result);
 
             if (!response.ok || !result.success) {
                 throw new Error(result.message || 'Failed to submit form');
@@ -111,10 +103,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
             // Redirect to thank you page
             router.push('/thank-you');
         } catch (err) {
-            console.error('🔴 Form submission error:', err);
-            console.error('🔴 Error details:', err instanceof Error ? err.message : 'Unknown error');
-            setError("Something went wrong. Please try again or call us directly.");
-            console.error("Form submission error:", err);
+            setError("Something went wrong. Please try again or call us directly at +91-9449031003.");
 
             // Track form error
             trackFormEvent('booking_form', 'error', {
@@ -268,7 +257,11 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
 
             {/* Error Message */}
             {error && (
-                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                <div
+                    role="alert"
+                    aria-live="assertive"
+                    className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg"
+                >
                     {error}
                 </div>
             )}
@@ -277,7 +270,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary-600 hover:bg-primary-700 text-black font-semibold py-4 px-6 rounded-lg transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2 shadow-lg"
+                className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-4 px-6 rounded-lg transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2 shadow-lg"
             >
                 {isSubmitting ? (
                     <>
@@ -286,7 +279,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     </>
                 ) : (
                     <>
-                        <Send className="w-5 h-5 text-black" />
+                        <Send className="w-5 h-5 text-white" />
                         Book Appointment
                     </>
                 )}

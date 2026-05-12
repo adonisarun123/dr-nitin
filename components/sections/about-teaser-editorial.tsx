@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const credentials: { label: string; value: string }[] = [
-    { label: "Education", value: "MBBS · MS Orthopaedics (Gold Medalist)" },
+    { label: "Education", value: "MBBS · MS Orthopedics (Gold Medalist)" },
     { label: "Fellowship", value: "Arthroscopy & Sports Medicine" },
     { label: "Sport", value: "Team Doctor — Bengaluru Football Club" },
     {
@@ -54,7 +54,7 @@ export function AboutTeaserEditorial() {
                         </h2>
 
                         <p className="text-lg text-gray-700 leading-relaxed mb-3">
-                            Dr. Nitin N Sunku is a fellowship-trained orthopaedic surgeon
+                            Dr. Nitin N Sunku is a fellowship-trained orthopedic surgeon
                             with a focus on arthroscopy, sports medicine, and modern
                             non-surgical care. His practice runs on a simple rule:
                             recommend surgery when it&apos;s clearly the right answer —

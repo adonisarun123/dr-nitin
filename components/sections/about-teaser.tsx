@@ -16,12 +16,12 @@ export function AboutTeaser() {
                     <div className="lg:w-1/2 order-1 lg:order-2">
                         <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">Meet Dr. Nitin N Sunku</h2>
                         <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                            Dr. Nitin is a fellowship-trained Orthopaedic Surgeon specializing in arthroscopy, sports medicine, and joint replacements. With experience at top institutes and as the Team Doctor for Bengaluru FC, he brings elite-level care to every patient.
+                            Dr. Nitin is a fellowship-trained Orthopedic Surgeon specializing in arthroscopy, sports medicine, and joint replacements. With experience at top institutes and as the Team Doctor for Bengaluru FC, he brings elite-level care to every patient.
                         </p>
 
                         <ul className="space-y-4 mb-8">
                             {[
-                                "MBBS & MS Orthopaedics (Gold Medalist)",
+                                "MBBS & MS Orthopedics (Gold Medalist)",
                                 "Fellowship in Arthroscopy & Sports Medicine",
                                 "Team Doctor - Bengaluru Football Club",
                                 "Visiting Consultant - Narayana Hrudayalaya & Manipal Hospital"

@@ -57,7 +57,7 @@ Convert high-intent local searchers (knee pain, OA, "alternative to knee replace
 
 **Sub-headline:** Modern regenerative and minimally invasive care designed to reduce knee pain, restore mobility, and help many patients delay or avoid knee replacement surgery.
 
-**Trust line:** Led by Dr. Nitin N Sunku, MS (Orthopaedics), with advanced training in regenerative orthopedic medicine. Clinics in Attibele and HSR Layout, Bengaluru.
+**Trust line:** Led by Dr. Nitin N Sunku, MS (Orthopedics), with advanced training in regenerative orthopedic medicine. Clinics in Attibele and HSR Layout, Bengaluru.
 
 **Primary CTA button:** Book a Consultation
 **Secondary CTA:** WhatsApp Dr. Nitin N Sunku's Team
@@ -320,7 +320,7 @@ Yes — including patellar tendinopathy, jumper's knee, IT band issues, and cert
 The only reliable way is a clinical evaluation with imaging review. Many patients who feel "too far gone" turn out to be excellent candidates for non-surgical care.
 
 **Q17. Are your clinics easy to reach from Hosur Road or Sarjapur?**
-Yes. The Attibele clinic is accessible from Hosur Road, and the Attibele clinic serves Anekal, Bommasandra, and Sarjapur extensions.
+Yes. The Attibele clinic is conveniently accessible from Hosur Road, Anekal, Bommasandra, and Chandapura. The HSR Layout clinic serves Koramangala, BTM Layout, Bellandur, and Sarjapur Road.
 
 **Q18. Do you accept insurance for these procedures?**
 Insurance coverage for regenerative therapies and injections varies by policy. The clinic team will help you check coverage and provide all required documentation.

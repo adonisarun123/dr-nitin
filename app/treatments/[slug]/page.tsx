@@ -184,7 +184,7 @@ export default function TreatmentDetailPage({
                         <div className="flex flex-wrap gap-3">
                             <Button size="lg" variant="white" className="font-semibold" asChild>
                                 <Link href="/contact">
-                                    <Calendar className="mr-2 h-4 w-4" /> Book a Consultation
+                                    <Calendar className="mr-2 h-4 w-4" /> Book Consultation
                                 </Link>
                             </Button>
                             <Button
@@ -273,7 +273,7 @@ export default function TreatmentDetailPage({
                                 <p className="text-blue-100 text-sm leading-relaxed mb-5">
                                     Bring any prior X-ray or MRI. We'll review your imaging,
                                     explain it in plain language, and walk you through the right
-                                    options for your knee.
+                                    options for your case.
                                 </p>
                                 <div className="space-y-3">
                                     <Button

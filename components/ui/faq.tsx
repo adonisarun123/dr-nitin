@@ -12,17 +12,44 @@ interface FAQItem {
 interface FAQProps {
     items: FAQItem[];
     title?: string;
+    /**
+     * When true (default), the component also emits FAQPage JSON-LD for the listed items
+     * so search engines can surface rich results. Disable when the page already emits a
+     * higher-level FAQPage schema that includes these items.
+     */
+    emitSchema?: boolean;
 }
 
-export function FAQ({ items, title = "Frequently Asked Questions" }: FAQProps) {
+export function FAQ({ items, title = "Frequently Asked Questions", emitSchema = true }: FAQProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggle = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
+    const faqSchema = emitSchema && items.length > 0 ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": items.map(({ question, answer }) => ({
+            "@type": "Question",
+            "name": question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": answer,
+            },
+        })),
+    } : null;
+
     return (
         <div className="mt-12">
+            {faqSchema && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c"),
+                    }}
+                />
+            )}
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{title}</h2>
             <div className="space-y-4">
                 {items.map((item, idx) => (

@@ -42,7 +42,7 @@ export function ServicesGrid() {
                                 </p>
 
                                 <div className="flex items-center text-primary font-semibold text-sm mt-auto">
-                                    Know more <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                    Learn more <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </div>
                             </Link>
                         </FadeIn>

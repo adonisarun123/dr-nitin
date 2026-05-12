@@ -3,23 +3,24 @@ import { PageHeaderBold } from "@/components/ui/page-header-bold";
 
 export const metadata: Metadata = {
     title: {
-        absolute: "Privacy Policy | Dr Nitin N Sunku Orthopedic Care",
+        absolute: "Privacy Policy | Dr. Nitin N Sunku Orthopedic Care",
     },
-    description: "Read the privacy policy of Dr Nitin N Sunku’s orthopedic and sports medicine services, ensuring secure and confidential handling of patient information.",
+    description: "Read the privacy policy of Dr. Nitin N Sunku’s orthopedic and sports medicine services, ensuring secure and confidential handling of patient information.",
 };
 
 export default function PrivacyPage() {
     return (
         <main className="min-h-screen pb-20">
-            <PageHeaderBold title="Privacy Policy" description="Last updated: December 2024" />
+            <PageHeaderBold title="Privacy Policy" description="Last updated: May 2026" />
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12 max-w-4xl text-gray-800 space-y-6 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mt-8 [&_h2]:mb-3">
                 <h2>1. Introduction</h2>
                 <p>
-                    This Privacy Policy describes how Dr. Nitin N. Sunku&apos;s practice website collects, uses,
+                    This Privacy Policy describes how Dr. Nitin N Sunku&apos;s practice website collects, uses,
                     stores, and protects information when you browse pages, submit forms, or communicate with
-                    the clinic electronically. By using the site you agree to the practices outlined here. If
-                    you disagree with any part, please avoid submitting personal data and contact the clinic
-                    through alternative channels.
+                    the clinic electronically. We aim to handle your data in line with India&apos;s Digital
+                    Personal Data Protection Act, 2023 (DPDPA). By using the site you agree to the practices
+                    outlined here. If you disagree with any part, please avoid submitting personal data and
+                    contact the clinic through alternative channels.
                 </p>
 
                 <h2>2. Data we collect</h2>

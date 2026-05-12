@@ -94,7 +94,7 @@ export function HeroEditorial() {
                                         Specialty
                                     </dt>
                                     <dd className="mt-1 font-editorial text-base lg:text-lg text-gray-900">
-                                        MS Orthopaedics
+                                        MS Orthopedics
                                     </dd>
                                 </div>
                                 <div>

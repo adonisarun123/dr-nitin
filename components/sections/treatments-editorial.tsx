@@ -53,7 +53,7 @@ export function TreatmentsGridEditorial() {
                                 </p>
 
                                 <div className="flex items-center text-blue-900 font-semibold text-sm pt-5 border-t border-gray-100 group-hover:border-blue-200 transition-colors">
-                                    Read treatment guide
+                                    Learn more
                                     <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                                 </div>
                             </Link>

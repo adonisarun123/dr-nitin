@@ -1,18 +1,32 @@
 import { treatmentClusterPosts } from "./blog-posts-treatments";
 
 export const siteConfig = {
-  name: "Dr. Nitin Sunku",
-  description: "Orthopedic & Sports Medicine Specialist in HSR Layout, Bangalore",
-  address: "1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
-  phone: "+91-9449031003",
+  name: "Dr. Nitin N Sunku",
+  description: "Dr. Nitin N Sunku — orthopedic & sports medicine specialist in Attibele and HSR Layout, Bengaluru. Arthroscopy, joint replacement, ACL care, regenerative & sports injury treatment.",
+  // Primary clinic is Attibele (Raghava Multispeciality Hospital); HSR Layout (Health Nest Hospital) is the secondary location.
+  address: "39, Sarjapura - Attibele Rd, opposite Canara Bank (formerly Syndicate Bank), Attibele, Bengaluru, Karnataka 562107",
+  // Secondary clinic address kept for reference / footer / contact display.
+  addressSecondary: "1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
+  phone: "+91-9980031006", // Attibele (Raghava) — primary clinic line
+  phoneSecondary: "+91-9449031003", // HSR Layout (Health Nest)
   email: "contact@drnitinsunku.com",
 };
 
-/** PostalAddress for JSON-LD (LocalBusiness / Physician provider). */
+/** PostalAddress for JSON-LD (primary clinic — Attibele / Raghava Multispeciality Hospital). */
 export const practicePostalAddress = {
   "@type": "PostalAddress" as const,
   streetAddress: siteConfig.address,
-  addressLocality: "Bengaluru",
+  addressLocality: "Attibele, Bengaluru",
+  addressRegion: "Karnataka",
+  postalCode: "562107",
+  addressCountry: "IN",
+};
+
+/** PostalAddress for the secondary HSR Layout clinic — used in clinic listings and JSON-LD @graph. */
+export const practicePostalAddressSecondary = {
+  "@type": "PostalAddress" as const,
+  streetAddress: siteConfig.addressSecondary,
+  addressLocality: "HSR Layout, Bengaluru",
   addressRegion: "Karnataka",
   postalCode: "560102",
   addressCountry: "IN",
@@ -38,7 +52,7 @@ export const servicesData = [
   {
     slug: "sports-medicine",
     title: "Sports Medicine",
-    shortDesc: "Specialized sports medicine care in Bangalore. Dr. Sunku treats sprains, fractures, ligament tears with personalized plans. Return to sport safely.",
+    shortDesc: "Specialized sports medicine care in Bengaluru. Dr. Sunku treats sprains, fractures, ligament tears with personalized plans. Return to sport safely.",
     fullDesc: "From sprains to complex ligament injuries, our sports medicine program is designed to get athletes back in the game with personalized treatment plans.",
     icon: "/icons/sports-medicine.png",
     color: "bg-green-50 text-green-600",
@@ -54,7 +68,7 @@ export const servicesData = [
   {
     slug: "hip-replacement",
     title: "Hip Replacement",
-    shortDesc: "Expert hip replacement surgeries in Bangalore. Dr. Sunku treats arthritis and hip fractures with advanced prostheses. Learn about surgery, recovery",
+    shortDesc: "Expert hip replacement surgeries in Bengaluru. Dr. Sunku treats arthritis and hip fractures with advanced prostheses. Learn about surgery, recovery",
     fullDesc: "Hip replacement surgery helps patients suffering from hip arthritis or fractures regain their quality of life with reduced pain and improved function.",
     icon: "/icons/hip-replacement.png",
     color: "bg-purple-50 text-purple-600",
@@ -70,7 +84,7 @@ export const servicesData = [
   {
     slug: "bone-fracture",
     title: "Bone Fracture",
-    shortDesc: "Expert bone fracture care in Bangalore. Dr. Sunku treats simple to complex breaks with casting, ORIF, intramedullary nails. Personalized rehab for full recovery.",
+    shortDesc: "Expert bone fracture care in Bengaluru. Dr. Sunku treats simple to complex breaks with casting, ORIF, intramedullary nails. Personalized rehab for full recovery.",
     fullDesc: "Rapid and precise treatment for fractures ensuring proper alignment and healing.",
     icon: "/icons/broken-bone.png",
     color: "bg-red-50 text-red-600",
@@ -78,7 +92,7 @@ export const servicesData = [
   {
     slug: "spine-care",
     title: "Spine Care",
-    shortDesc: "Comprehensive spine care in Attibele by Dr. Nitin Sunku — expert evaluation and non-surgical or surgical management of back pain and spinal disorders.",
+    shortDesc: "Comprehensive spine care in Attibele by Dr. Nitin N Sunku — expert evaluation and non-surgical or surgical management of back pain and spinal disorders.",
     fullDesc: "Comprehensive evaluation and non-surgical/surgical management of spinal conditions.",
     icon: "/icons/spinal-care.png",
     color: "bg-emerald-50 text-emerald-600",
@@ -90,13 +104,13 @@ export const teamData = [
     name: "Dr. Nitin N Sunku",
     role: "Orthopedic & Sports Medicine Specialist",
     qualifications: "MBBS, MS Ortho, Fellowship in Arthroscopy & Sports Medicine",
-    bio: "Dr. Nitin is the lead consultant with over 7 years of specialized experience. He is the Team Doctor for Bengaluru FC and consults at top hospitals in Bangalore.",
+    bio: "Dr. Nitin is the lead consultant with over 10 years of specialized experience. He is the Team Doctor for Bengaluru FC and consults at leading hospitals in Bengaluru.",
     image: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin.png"
   },
   {
     name: "Mr. Vijayan",
     role: "Senior Physiotherapist",
-    qualifications: "BPTh/BPT, MPTh/MPT (Musculoskeletal)",
+    qualifications: "BPT, MPT (Musculoskeletal)",
     bio: "Mr. Vijayan specializes in post-operative rehabilitation and sports injury recovery, ensuring patients regain full function quickly.",
     image: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/mr-vijayan-physiotherapist.png"
   }
@@ -105,7 +119,7 @@ export const teamData = [
 export const testimonialsData = [
   {
     id: 1,
-    name: "John Doe",
+    name: "Arjun R.",
     condition: "Ankle Sprain",
     quote: "Dr. Nitin was prompt, responsive and honest. He explained my ankle injury clearly and offered options instead of pushing unnecessary treatment.",
     rating: 5
@@ -121,14 +135,14 @@ export const testimonialsData = [
     id: 3,
     name: "Rajesh M.",
     condition: "Sports Injury",
-    quote: "Recovered fully after his prescribed physiotherapy. Highly recommended for any sports related injuries!",
+    quote: "Recovered fully after his prescribed physiotherapy. Highly recommended for any sports-related injuries!",
     rating: 5
   },
   {
     id: 4,
     name: "Priya S.",
     condition: "Back Pain",
-    quote: "Very approachable and explains condition in detail. Best ortho in HSR layout used.",
+    quote: "Very approachable and explains my condition in detail. Best ortho in HSR Layout.",
     rating: 5
   },
   {
@@ -150,13 +164,13 @@ export const blogPosts = [
     image: "https://ik.imagekit.io/M0nger/Types%20of%20Total%20Knee%20Replacement.jpg.jpeg",
     content: `
       <p>If chronic knee pain is stopping you from climbing stairs, walking to the market, or enjoying a simple evening stroll, you are not alone. Millions of people across India, and especially in rapidly growing urban centers like Bengaluru, deal with debilitating knee arthritis every year. When conservative treatments no longer offer relief, total knee replacement surgery becomes one of the most effective long-term solutions available.</p>
-      <p>But here's something most patients don't realize: "total knee replacement" is not a single, one-size-fits-all surgery. There are several distinct types of total knee replacement procedures, each designed for different patient needs, activity levels, and degrees of joint damage. Choosing the right type, in partnership with an experienced orthopaedic surgeon, can dramatically influence your recovery time, implant longevity, and quality of life post-surgery.</p>
+      <p>But here's something most patients don't realize: "total knee replacement" is not a single, one-size-fits-all surgery. There are several distinct types of total knee replacement procedures, each designed for different patient needs, activity levels, and degrees of joint damage. Choosing the right type, in partnership with an experienced orthopedic surgeon, can dramatically influence your recovery time, implant longevity, and quality of life post-surgery.</p>
       <p>This comprehensive guide will walk you through every major type of total knee replacement available today, explain how each one works, and help you understand which approach may be best suited for you.</p>
       
       <h2>What Is Total Knee Replacement (TKR)?</h2>
       <p>Total knee replacement, medically known as total knee arthroplasty (TKA), is a surgical procedure in which damaged cartilage and bone from the surfaces of the knee joint are removed and replaced with artificial components made of metal alloys, high-grade plastics (polyethylene), and polymers. These prosthetic parts recreate the smooth gliding surface of a healthy knee, eliminating the painful bone-on-bone contact caused by advanced arthritis or injury.</p>
       <p>The knee joint consists of three bones: the femur (thigh bone), the tibia (shin bone), and the patella (kneecap). In a total knee replacement, the damaged surfaces of all three compartments, medial (inner), lateral (outer), and patellofemoral (front), are resurfaced with implants.</p>
-      <p>According to the American Academy of Orthopaedic Surgeons (AAOS), more than 90% of modern total knee replacements are still functioning well 15 years after surgery, making it one of the most consistently successful procedures in all of orthopaedics.</p>
+      <p>According to the American Academy of Orthopaedic Surgeons (AAOS), more than 90% of modern total knee replacements are still functioning well 15 years after surgery, making it one of the most consistently successful procedures in all of orthopedics.</p>
       
       <h3>Common Conditions That Lead to Total Knee Replacement</h3>
       <ul>
@@ -207,7 +221,7 @@ export const blogPosts = [
       <p>It is important to note that while the incision is smaller, the internal extent of the procedure is the same, all three compartments are resurfaced. The outcomes and implant longevity are comparable to traditional TKR when performed by an experienced knee replacement surgeon.</p>
 
       <h3>3. Robotic-Assisted Total Knee Replacement</h3>
-      <p>Robotic-assisted total knee arthroplasty is one of the most significant advances in orthopaedic surgery in recent years. In this technique, the surgeon uses a robotic arm system (such as MAKO or ROSA) guided by preoperative 3D CT-scan data to perform bone cuts with extraordinary precision.</p>
+      <p>Robotic-assisted total knee arthroplasty is one of the most significant advances in orthopedic surgery in recent years. In this technique, the surgeon uses a robotic arm system (such as MAKO or ROSA) guided by preoperative 3D CT-scan data to perform bone cuts with extraordinary precision.</p>
       <p>The robotic system creates a patient-specific virtual model of the knee before surgery. During the procedure, it provides real-time haptic feedback, guiding the surgeon to stay within planned boundaries and achieve optimal implant alignment.</p>
       <strong>Key benefits:</strong>
       <ul>
@@ -289,7 +303,7 @@ export const blogPosts = [
         <li>Overall health status – cardiovascular and systemic health affects surgical risk</li>
         <li>Patient goals – desire to return to sports, daily activities, or specific functional milestones</li>
       </ul>
-      <p>An open and honest conversation with your orthopaedic surgeon is the most important step. You can start that conversation today by visiting our services page or exploring patient stories from people who have already walked this path.</p>
+      <p>An open and honest conversation with your orthopedic surgeon is the most important step. You can start that conversation today by visiting our services page or exploring patient stories from people who have already walked this path.</p>
 
       <h2>The Knee Replacement Procedure: What to Expect</h2>
       <strong>Before Surgery</strong>
@@ -321,7 +335,7 @@ export const blogPosts = [
 
       <h2>Knee Replacement in Bengaluru: Why Experience Matters</h2>
       <p>Total knee replacement outcomes are strongly correlated with the surgical volume and expertise of the operating surgeon. A high-volume knee replacement specialist brings refined technical skill, familiarity with complex cases, and access to the latest implant technologies.</p>
-      <p>Dr. Nitin N. Sunku is a fellowship-trained orthopaedic surgeon based in HSR Layout, Bengaluru, with specialized training in arthroscopy, sports medicine, and joint replacement. As Team Doctor for Bengaluru FC and Visiting Consultant at Narayana Hrudayalaya and Manipal Hospital, Dr. Nitin brings a high-performance, patient-centered approach to every procedure.</p>
+      <p>Dr. Nitin N Sunku is a fellowship-trained orthopedic surgeon based in HSR Layout, Bengaluru, with specialized training in arthroscopy, sports medicine, and joint replacement. As Team Doctor for Bengaluru FC and Visiting Consultant at Narayana Hrudayalaya and Manipal Hospital, Dr. Nitin brings a high-performance, patient-centered approach to every procedure.</p>
       <p>If you are experiencing persistent knee pain that limits your daily activities, we invite you to book a consultation. Our clinics are conveniently located at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal, serving patients across South Bengaluru, Electronic City, Attibele, Sarjapura, and surrounding areas.</p>
 
       <h2>Life After Total Knee Replacement</h2>
@@ -363,7 +377,7 @@ export const blogPosts = [
       <p>A: Yes, this is called bilateral simultaneous total knee replacement (BS-TKR). While it offers the advantage of a single anesthesia event and one combined recovery period, it is associated with higher surgical risks and demands greater cardiovascular reserve. Your surgeon will assess whether you are a suitable candidate based on your overall health, age, and the degree of bilateral arthritis.</p>
 
       <strong>Q7: What is revision knee replacement, and when is it needed?</strong>
-      <p>A: Revision knee replacement is performed when a primary knee replacement fails. Common reasons include implant loosening, infection, significant wear of the polyethylene spacer, instability, or periprosthetic fracture. Revision surgery is more complex than primary TKR and requires specialized implants and surgical expertise. If you are experiencing increasing pain or instability years after a knee replacement, consult your orthopaedic surgeon for evaluation.</p>
+      <p>A: Revision knee replacement is performed when a primary knee replacement fails. Common reasons include implant loosening, infection, significant wear of the polyethylene spacer, instability, or periprosthetic fracture. Revision surgery is more complex than primary TKR and requires specialized implants and surgical expertise. If you are experiencing increasing pain or instability years after a knee replacement, consult your orthopedic surgeon for evaluation.</p>
 
       <strong>Q8: What is the right age for total knee replacement surgery?</strong>
       <p>A: Total knee replacement is most commonly performed in patients between 60 and 80 years of age, but it is not strictly an age-dependent decision. The surgery is considered when knee pain and disability significantly affect quality of life and cannot be managed through conservative means. Younger patients can also undergo TKR, though implant wear over time is a greater consideration, and cementless or more durable implant options may be preferred.</p>
@@ -372,12 +386,12 @@ export const blogPosts = [
       <p>A: Modern pain management protocols, including multimodal analgesia, nerve blocks, and minimally invasive techniques, have significantly reduced post-operative pain compared to earlier generations of surgery. Most patients report manageable discomfort in the days after surgery, with pain levels decreasing progressively over the first few weeks. The key goal of TKR is, of course, to eliminate the chronic arthritic pain that was limiting your daily life.</p>
 
       <strong>Q10: Where can I get total knee replacement surgery in Bengaluru?</strong>
-      <p>A: Dr. Nitin N. Sunku performs total and partial knee replacement surgeries at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal, Bengaluru. To schedule a consultation, contact our team or call +91-9449031003.</p>
+      <p>A: Dr. Nitin N Sunku performs total and partial knee replacement surgeries at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal, Bengaluru. To schedule a consultation, contact our team or call +91-9449031003.</p>
 
-      <p><em>This article is intended for educational purposes only and does not constitute medical advice. Please consult a qualified orthopaedic surgeon to discuss your individual condition and treatment options.</em></p>
+      <p><em>This article is intended for educational purposes only and does not constitute medical advice. Please consult a qualified orthopedic surgeon to discuss your individual condition and treatment options.</em></p>
 
       <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-          <p class="font-bold text-lg mb-2">Author: Dr. Nitin N. Sunku, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
+          <p class="font-bold text-lg mb-2">Author: Dr. Nitin N Sunku, MS Orthopedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Consulting at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Bengaluru, Karnataka.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-white font-bold no-underline hover:bg-primary/90 h-10 px-4 py-2">
               Book appointment online or call +91-9449031003
@@ -388,20 +402,20 @@ export const blogPosts = [
   {
     slug: "arthroscopy-shoulder",
     title: "Arthroscopy Shoulder: Everything You Need to Know Before Your Surgery",
-    excerpt: "If you have been living with persistent shoulder pain, limited arm movement, or a shoulder injury that hasn't responded to rest and physiotherapy, your orthopaedic surgeon may have recommended shoulder arthroscopy. This minimally invasive procedure has transformed the way shoulder conditions are treated, offering faster recovery, smaller scars, and better outcomes compared to traditional open surgery.",
+    excerpt: "If you have been living with persistent shoulder pain, limited arm movement, or a shoulder injury that hasn't responded to rest and physiotherapy, your orthopedic surgeon may have recommended shoulder arthroscopy. This minimally invasive procedure has transformed the way shoulder conditions are treated, offering faster recovery, smaller scars, and better outcomes compared to traditional open surgery.",
     date: "Mar 2, 2026",
     category: "Shoulder Care",
     image: "https://ik.imagekit.io/M0nger/Arthroscopy%20Shoulder.jpg.jpeg",
     content: `
       <p>Shoulder pain, stiffness, or an injury that did not improve with rest and physiotherapy may lead your surgeon to suggest shoulder arthroscopy. This is a keyhole (minimally invasive) operation.</p>
       <p>Compared with open surgery, it often means less pain after the operation, smaller scars, and a quicker return to daily life or sport.</p>
-      <p>Dr. Nitin N. Sunku is a fellowship-trained arthroscopic surgeon in HSR Layout, Bengaluru. In this guide he explains what the procedure is, who it suits, what recovery is like, and when to seek specialist care.</p>
+      <p>Dr. Nitin N Sunku is a fellowship-trained arthroscopic surgeon in HSR Layout, Bengaluru. In this guide he explains what the procedure is, who it suits, what recovery is like, and when to seek specialist care.</p>
       <h2>What Is Shoulder Arthroscopy?</h2>
       <p>Shoulder arthroscopy is keyhole surgery. The surgeon passes a small camera (arthroscope) into the joint to see the inside of the shoulder on a screen.</p>
       <p>The word comes from Greek: “arthro” (joint) and “skopein” (to look). So it literally means to look inside the joint.</p>
       <p>One small cut is used for the camera. One to three extra small cuts allow fine instruments to treat torn tissue, bone spurs, or tight capsule as needed.</p>
       <p>Smaller cuts usually mean less soft-tissue damage than open surgery. Many patients have less pain after the operation, a lower wound risk, and a faster return to desk work, driving, or sport.</p>
-      <p>Shoulder arthroscopy is the second most common orthopaedic procedure globally, after knee arthroscopy, a testament to how widely trusted and effective it has become.</p>
+      <p>Shoulder arthroscopy is the second most common orthopedic procedure globally, after knee arthroscopy, a testament to how widely trusted and effective it has become.</p>
       <h2>Understanding the Shoulder Joint</h2>
       <p>Before exploring what arthroscopy treats, it helps to understand how complex your shoulder really is. The shoulder is the most mobile joint in the human body, capable of rotating in nearly every direction. It is made up of three bones:</p>
       <ul>
@@ -438,7 +452,7 @@ export const blogPosts = [
       <h3>9. Shoulder Fracture Assistance</h3>
       <p>For certain fractures, such as glenoid rim or tuberosity fractures, arthroscopy can assist in guiding and confirming the accuracy of fracture repair, minimizing the need for large incisions.</p>
       <h2>When Is Shoulder Arthroscopy Recommended?</h2>
-      <p>Not every shoulder condition requires surgery. Dr. Nitin Sunku always adopts a conservative-first approach, recommending surgery only when non-surgical methods have not provided adequate relief. Your surgeon may recommend arthroscopy when:</p>
+      <p>Not every shoulder condition requires surgery. Dr. Nitin N Sunku always adopts a conservative-first approach, recommending surgery only when non-surgical methods have not provided adequate relief. Your surgeon may recommend arthroscopy when:</p>
       <ul>
       <li>Shoulder pain persists for three or more months despite physiotherapy</li>
       <li>Anti-inflammatory medications and cortisone injections have provided only temporary relief</li>
@@ -515,7 +529,7 @@ export const blogPosts = [
       <li>Month 2–3: Progressive strengthening exercises begin. Shoulder mobility improves steadily. Many patients return to desk jobs or light work during this phase.</li>
       <li>Month 3–6: Return to sport or heavy physical work. Recovery from a simple procedure like bursectomy can be complete in as little as 6–8 weeks, while full rotator cuff repairs may require up to 6 months to achieve full strength.</li>
       </ul>
-      <p>Following your physiotherapy program diligently is the single most important factor in achieving a successful outcome. Dr. Nitin Sunku coordinates closely with experienced physiotherapists to provide a structured, personalised rehabilitation plan for every patient.</p>
+      <p>Following your physiotherapy program diligently is the single most important factor in achieving a successful outcome. Dr. Nitin N Sunku coordinates closely with experienced physiotherapists to provide a structured, personalised rehabilitation plan for every patient.</p>
       <h2>Risks and Complications: What You Should Know</h2>
       <p>Shoulder arthroscopy is a safe procedure, and serious complications are rare. However, as with any surgical procedure, some risks exist:</p>
       <ul>
@@ -527,10 +541,10 @@ export const blogPosts = [
       <li>Anaesthesia-related reactions</li>
       </ul>
       <p>Your surgeon will discuss your individual risk profile in detail during your pre-operative consultation.</p>
-      <h2>Why Choose Dr. Nitin N. Sunku for Your Shoulder Arthroscopy in Bengaluru?</h2>
-      <p>Dr. Nitin Sunku is a fellowship-trained arthroscopic surgeon with a track record of managing complex shoulder conditions across his two practice locations in HSR Layout and Anekal, Bengaluru. His qualifications include:</p>
+      <h2>Why Choose Dr. Nitin N Sunku for Your Shoulder Arthroscopy in Bengaluru?</h2>
+      <p>Dr. Nitin N Sunku is a fellowship-trained arthroscopic surgeon with a track record of managing complex shoulder conditions across his two practice locations in HSR Layout and Anekal, Bengaluru. His qualifications include:</p>
       <ul>
-      <li>MBBS & MS Orthopaedics – Gold Medalist</li>
+      <li>MBBS & MS Orthopedics – Gold Medalist</li>
       <li>Fellowship in Arthroscopy & Sports Medicine</li>
       <li>Team Doctor – Bengaluru FC – bringing elite-level sports injury management to everyday patients</li>
       <li>Visiting Consultant – Narayana Hrudayalaya & Manipal Hospital, Bengaluru</li>
@@ -552,7 +566,7 @@ export const blogPosts = [
       </ul>
       <h2>GEO Note: Shoulder Arthroscopy in Bengaluru</h2>
       <p>Shoulder injuries are increasingly common among Bengaluru's growing population of sports enthusiasts, IT professionals working long hours at desks, and active retirees. Conditions like frozen shoulder, rotator cuff tears, and shoulder impingement are frequently seen among cricket players, badminton enthusiasts, and gym-goers across HSR Layout, Koramangala, Electronic City, and surrounding areas.</p>
-      <p>Dr. Nitin Sunku's clinics in HSR Layout (Health Nest Hospital) and Anekal (Raghava Multispeciality Hospital) are equipped to handle the full spectrum of shoulder conditions, from initial diagnosis to post-surgical rehabilitation, making expert arthroscopic shoulder care accessible across South Bengaluru.</p>
+      <p>Dr. Nitin N Sunku's clinics in HSR Layout (Health Nest Hospital) and Anekal (Raghava Multispeciality Hospital) are equipped to handle the full spectrum of shoulder conditions, from initial diagnosis to post-surgical rehabilitation, making expert arthroscopic shoulder care accessible across South Bengaluru.</p>
       <p>You can also read more about ACL care and other joint procedures commonly treated alongside shoulder conditions in active individuals.</p>
       <h2>Resources</h2>
       <ul>
@@ -580,10 +594,10 @@ export const blogPosts = [
       <strong>Q9. Is shoulder arthroscopy safe?</strong>
       <p>Yes, shoulder arthroscopy is generally very safe. Serious complications are rare, the infection rate is below 1%, which is significantly lower than open surgery. Your surgeon will review your specific risk factors during your pre-operative consultation.</p>
       <strong>Q10. Where can I get shoulder arthroscopy done in Bengaluru?</strong>
-      <p>Dr. Nitin N. Sunku performs arthroscopic shoulder surgery at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal, Bengaluru. To book a consultation, contact us here.</p>
-      <p><em>Disclaimer: This article is for informational purposes only and does not constitute medical advice. Please consult a qualified orthopaedic surgeon for diagnosis and personalized treatment recommendations.</em></p>
+      <p>Dr. Nitin N Sunku performs arthroscopic shoulder surgery at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal, Bengaluru. To book a consultation, contact us here.</p>
+      <p><em>Disclaimer: This article is for informational purposes only and does not constitute medical advice. Please consult a qualified orthopedic surgeon for diagnosis and personalized treatment recommendations.</em></p>
       <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-          <p class="font-bold text-lg mb-2">Dr. Nitin N. Sunku, MBBS, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
+          <p class="font-bold text-lg mb-2">Dr. Nitin N Sunku, MBBS, MS Orthopedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <p class="mb-4 text-sm">📍 Health Nest Hospital, HSR Layout, Bengaluru | Raghava Multispeciality Hospital, Anekal.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
@@ -723,7 +737,7 @@ export const blogPosts = [
         <li>Progress load gradually and never jump a rehabilitation phase because you feel good for a few days.</li>
       </ul>
       
-      <h2>Booking an Appointment with Dr. Nitin Sunku in Bengaluru</h2>
+      <h2>Booking an Appointment with Dr. Nitin N Sunku in Bengaluru</h2>
       <p>If you are struggling with Achilles tendon pain and are not sure which phase of tendinopathy you are in or what treatment you need, a proper clinical assessment is the most important first step. Dr. Nitin N Sunku offers evidence-based, phase-specific management of Achilles tendinopathy for athletes, recreational exercisers, and active adults across Bengaluru.</p>
       <p>Book your appointment here: <a href="/contact">Book your appointment online</a></p>
       
@@ -763,7 +777,7 @@ export const blogPosts = [
         <li>A Treatment Algorithm for Managing Achilles Tendinopathy. PMC, British Journal of Sports Medicine. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2658946/" target="_blank" rel="noopener noreferrer">Open treatment algorithm article on PubMed Central</a></li>
       </ul>
       
-      <h2>Related Services at Dr. Nitin Sunku's Clinic</h2>
+      <h2>Related Services at Dr. Nitin N Sunku's Clinic</h2>
       <ul>
         <li><a href="/services/sports-medicine">Sports Medicine: Comprehensive Injury Management</a></li>
         <li><a href="/services/acl-care">ACL Care: Expert Arthroscopic Knee Ligament Treatment</a></li>
@@ -773,7 +787,7 @@ export const blogPosts = [
       </ul>
       
       <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-          <p class="font-bold text-lg mb-2">Dr. Nitin N. Sunku, MBBS, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
+          <p class="font-bold text-lg mb-2">Dr. Nitin N Sunku, MBBS, MS Orthopedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <p class="mb-4 text-sm">Dr. Nitin regularly manages athletes and active adults presenting with Achilles tendinopathy, tendon ruptures, and complex lower limb overuse injuries using a structured, evidence-based, phase-specific approach.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
@@ -812,7 +826,7 @@ export const blogPosts = [
       <p>Persistent symptoms that should prompt a medical evaluation include the knee giving way during routine activities, a feeling of looseness or instability, and recurring swelling after physical activity. If you are experiencing any of these symptoms, an accurate diagnosis using MRI imaging is essential before any treatment decision is made.</p>
 
       <h2>Treatment Options for ACL Tear in Patients Over 60</h2>
-      <p>When an older adult presents with an ACL tear, the treatment path is not automatically surgical or automatically conservative. A thorough assessment of multiple factors guides the decision. At our clinic in Bengaluru, Dr. Nitin Sunku evaluates each patient individually, considering their overall health, activity goals, knee stability, and the presence of any associated injuries such as meniscus tears or cartilage damage.</p>
+      <p>When an older adult presents with an ACL tear, the treatment path is not automatically surgical or automatically conservative. A thorough assessment of multiple factors guides the decision. At our clinic in Bengaluru, Dr. Nitin N Sunku evaluates each patient individually, considering their overall health, activity goals, knee stability, and the presence of any associated injuries such as meniscus tears or cartilage damage.</p>
 
       <h3>Option 1: Conservative (Non-Surgical) Treatment</h3>
       <p>Non-surgical care is a fair option for some people over 60. It usually means guided physiotherapy to strengthen the front and back of the thigh and the calf. A hinged brace can add support. Tablets or injections may ease pain and swelling for a time.</p>
@@ -902,10 +916,10 @@ export const blogPosts = [
       <h3>Arthritic Changes</h3>
       <p>The presence of mild to moderate osteoarthritis does not automatically exclude ACL reconstruction. In fact, restoring knee stability through surgery can slow the progression of cartilage wear. However, severe arthritis (Grade 4 on the Kellgren-Lawrence scale) is generally considered a contraindication to ACL reconstruction, as the joint is too compromised to benefit meaningfully. In such cases, total knee replacement may be the more effective solution.</p>
 
-      <h2>ACL Care in Bengaluru: Why Choose Dr. Nitin Sunku</h2>
+      <h2>ACL Care in Bengaluru: Why Choose Dr. Nitin N Sunku</h2>
       <p>Patients across HSR Layout, Anekal, and the wider Bengaluru region seeking expert management of ACL injuries in older adults can consult Dr. Nitin N Sunku at Health Nest Hospital and Raghava Multispeciality Hospital. As a fellowship-trained orthopedic and sports medicine specialist and the team doctor for Bengaluru FC, Dr. Nitin brings elite-level expertise to patients of all ages.</p>
       <p>His approach is grounded in evidence-based decision-making, not a one-size-fits-all protocol. Every patient over 60 presenting with a knee ligament injury receives a thorough evaluation of their activity goals, overall health status, and knee imaging before any surgical recommendation is made. Where conservative management is appropriate, a structured rehabilitation plan is prescribed. Where surgery offers the best long-term outcome, patients receive minimally invasive arthroscopic care with comprehensive support through every stage of recovery.</p>
-      <p>If you are over 60 and dealing with a knee that buckles, swells, or limits your daily life, do not assume your only option is to live with it. Book a consultation with Dr. Nitin Sunku in Bengaluru and get a clear, personalized answer: <a href="/contact">Book your consultation online</a></p>
+      <p>If you are over 60 and dealing with a knee that buckles, swells, or limits your daily life, do not assume your only option is to live with it. Book a consultation with Dr. Nitin N Sunku in Bengaluru and get a clear, personalized answer: <a href="/contact">Book your consultation online</a></p>
 
       <h2>Tips for Older Adults to Protect Knee Health and Prevent ACL Injuries</h2>
       <p>Prevention is always preferable to treatment. If you are an active adult over 60, these evidence-based measures can reduce your risk of ACL and other knee injuries:</p>
@@ -955,7 +969,7 @@ export const blogPosts = [
         <li>Management of ACL Rupture in Patients Aged 40 Years and Older. PMC, National Institutes of Health. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3225626/" target="_blank" rel="noopener noreferrer">Open ACL management in older adults on PubMed Central</a></li>
       </ul>
 
-      <h2>Related Services at Dr. Nitin Sunku's Clinic</h2>
+      <h2>Related Services at Dr. Nitin N Sunku's Clinic</h2>
       <ul>
         <li><a href="/services/acl-care">ACL Care: Expert Arthroscopic Reconstruction</a></li>
         <li><a href="/services/meniscal-care">Meniscal Care: Minimally Invasive Meniscus Treatment</a></li>
@@ -965,7 +979,7 @@ export const blogPosts = [
       </ul>
 
       <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-          <p class="font-bold text-lg mb-2">Dr. Nitin N. Sunku, MBBS, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
+          <p class="font-bold text-lg mb-2">Dr. Nitin N Sunku, MBBS, MS Orthopedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <p class="mb-4 text-sm">Dr. Nitin has performed ACL reconstructions, meniscal repairs, and joint replacements for patients across all age groups, including many patients over 60 who have returned to active, fulfilling lifestyles after surgery.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
@@ -984,7 +998,7 @@ export const blogPosts = [
     content: `
       <h2>Introduction</h2>
       
-      <p>ACL (Anterior Cruciate Ligament) reconstruction is one of the most commonly performed orthopaedic procedures in India, especially among athletes, young adults, and active individuals. Whether you play football, cricket, kabaddi, or simply took an unfortunate fall, the road to recovery after ACL surgery is long, typically nine to twelve months, and requires careful monitoring every step of the way.</p>
+      <p>ACL (Anterior Cruciate Ligament) reconstruction is one of the most commonly performed orthopedic procedures in India, especially among athletes, young adults, and active individuals. Whether you play football, cricket, kabaddi, or simply took an unfortunate fall, the road to recovery after ACL surgery is long, typically nine to twelve months, and requires careful monitoring every step of the way.</p>
       
       <p>While it is completely normal to experience pain, swelling, and stiffness in the days immediately after surgery, there are certain warning signs that should never be dismissed as "just part of healing." Recognizing the bad signs after ACL surgery early can be the difference between a smooth recovery and a serious setback that may require revision surgery.</p>
       
@@ -999,7 +1013,7 @@ export const blogPosts = [
         <li><strong>3–6 Months:</strong> Running, agility drills, and sport-specific training begin under physiotherapy supervision, provided healing is on track.</li>
         <li><strong>9–12 Months:</strong> Return to competitive sport, typically following a formal return-to-sport assessment.</li>
       </ul>
-      <p>Any significant deviation from this timeline, particularly the appearance of new or worsening symptoms, should prompt an immediate consultation with your orthopaedic surgeon.</p>
+      <p>Any significant deviation from this timeline, particularly the appearance of new or worsening symptoms, should prompt an immediate consultation with your orthopedic surgeon.</p>
 
       <h2>9 Bad Signs After ACL Surgery You Must Not Ignore</h2>
       
@@ -1010,7 +1024,7 @@ export const blogPosts = [
 
       <h3>2. Excessive or Rapidly Worsening Swelling</h3>
       <p>Some swelling is absolutely expected after ACL reconstruction, your body has undergone a significant procedure, and fluid accumulation is a normal part of the inflammatory healing cascade. However, swelling that suddenly increases after it had been improving, or swelling that is dramatically disproportionate compared to what your surgeon described as normal, is a warning sign.</p>
-      <p>Sudden, severe swelling, particularly in the thigh, calf, or behind the knee, can indicate a deep vein thrombosis (DVT), also called a blood clot. Blood clots are more common after orthopaedic procedures due to reduced mobility and changes in blood flow. Left untreated, a DVT can travel to the lungs (pulmonary embolism), which is life-threatening.</p>
+      <p>Sudden, severe swelling, particularly in the thigh, calf, or behind the knee, can indicate a deep vein thrombosis (DVT), also called a blood clot. Blood clots are more common after orthopedic procedures due to reduced mobility and changes in blood flow. Left untreated, a DVT can travel to the lungs (pulmonary embolism), which is life-threatening.</p>
       <p><strong>What to look for:</strong> Swelling in the calf accompanied by warmth, redness, and pain, this is a classic DVT presentation and demands emergency evaluation.</p>
 
       <h3>3. Increasing Redness, Warmth, and Discharge at the Incision Site</h3>
@@ -1046,7 +1060,7 @@ export const blogPosts = [
       <h3>9. Blood Clot Symptoms: Calf Pain, Redness, or Shortness of Breath</h3>
       <p>This cannot be overstated: if you develop sudden shortness of breath, chest pain, or feel your heart racing in the days or weeks after ACL surgery, call emergency services immediately. These may be symptoms of a pulmonary embolism, a blood clot that has traveled to the lungs, which is a life-threatening emergency.</p>
       <p>On a less critical but equally important level, watch for unexplained pain and swelling in the calf of the operated leg. This classic presentation of deep vein thrombosis should prompt same-day evaluation with an ultrasound.</p>
-      <p>To reduce the risk of blood clots, most orthopaedic surgeons recommend early mobilization, compression stockings, adequate hydration, and, in higher-risk patients, blood-thinning medications.</p>
+      <p>To reduce the risk of blood clots, most orthopedic surgeons recommend early mobilization, compression stockings, adequate hydration, and, in higher-risk patients, blood-thinning medications.</p>
 
       <h2>Red Flags in Your Rehabilitation Program: When Physio Is Going Wrong</h2>
       <p>Beyond physical symptoms, there are also warning signs within your rehabilitation program that indicate you are not on the right track. These are less dramatic but equally important for long-term outcomes:</p>
@@ -1057,7 +1071,7 @@ export const blogPosts = [
       </ul>
       <p>If your current rehabilitation provider is not addressing these areas, consider seeking a second opinion from an experienced sports medicine physiotherapist.</p>
 
-      <h2>When to See Dr. Nitin Sunku After ACL Surgery</h2>
+      <h2>When to See Dr. Nitin N Sunku After ACL Surgery</h2>
       <p>As a specialist in ACL care and arthroscopic knee surgery in Bengaluru, my approach has always been centered on patient education and proactive communication. I believe the best outcomes happen when patients feel empowered to recognize early warning signs and reach out without hesitation.</p>
       <p>You should call our clinic or visit us urgently if you experience:</p>
       <ul>
@@ -1070,7 +1084,7 @@ export const blogPosts = [
         <li>Chest pain or sudden difficulty breathing</li>
       </ul>
       <p>Our team at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal is equipped to evaluate ACL complications and provide timely intervention, whether that involves imaging, medication adjustment, physiotherapy modification, or surgical revision.</p>
-      <p>For patients across Bengaluru, including HSR Layout, Koramangala, BTM Layout, Electronic City, Sarjapur Road, and Anekal, early access to expert orthopaedic care can significantly alter the trajectory of your recovery.</p>
+      <p>For patients across Bengaluru, including HSR Layout, Koramangala, BTM Layout, Electronic City, Sarjapur Road, and Anekal, early access to expert orthopedic care can significantly alter the trajectory of your recovery.</p>
 
       <h2>How to Support Healthy ACL Recovery: What You Can Do at Home</h2>
       <p>Understanding bad signs is important, but so is knowing how to optimize your recovery on a daily basis. Here are evidence-based tips to support healing:</p>
@@ -1084,14 +1098,14 @@ export const blogPosts = [
       </ol>
 
       <h2>ACL Recovery in the Indian Context: What Bengaluru Patients Should Know</h2>
-      <p>In Bengaluru's active population, from IT professionals who play recreational football on weekends to young athletes training with Bengaluru FC's academy, ACL injuries are increasingly common. The combination of hard indoor court surfaces, inadequate warm-up routines, and a high desire to return to sport quickly creates a pattern that orthopaedic surgeons see regularly.</p>
+      <p>In Bengaluru's active population, from IT professionals who play recreational football on weekends to young athletes training with Bengaluru FC's academy, ACL injuries are increasingly common. The combination of hard indoor court surfaces, inadequate warm-up routines, and a high desire to return to sport quickly creates a pattern that orthopedic surgeons see regularly.</p>
       <p>What makes the Indian recovery context unique is that access to high-quality physiotherapy, compliance with post-operative restrictions, and awareness of warning signs can vary significantly. Patients who understand their recovery and feel confident communicating concerns to their surgical team consistently achieve better outcomes. This guide is written with that goal in mind.</p>
       <p>If you are scheduled for ACL surgery, or are currently recovering from one, visit our <a href="/services/sports-medicine">Sports Medicine</a> page to learn more about how we approach the full continuum of care, from diagnosis and surgery through rehabilitation and return to sport.</p>
 
       <h2>Resources</h2>
       <ul>
-        <li><a href="/services/acl-care">ACL Care, Dr. Nitin Sunku</a></li>
-        <li><a href="/services/sports-medicine">Sports Medicine, Dr. Nitin Sunku</a></li>
+        <li><a href="/services/acl-care">ACL Care, Dr. Nitin N Sunku</a></li>
+        <li><a href="/services/sports-medicine">Sports Medicine, Dr. Nitin N Sunku</a></li>
         <li><a href="/contact">Book an Appointment</a></li>
         <li>American Academy of Orthopaedic Surgeons (AAOS), ACL Reconstruction Guidelines: <a href="https://www.aaos.org" target="_blank" rel="noopener noreferrer">Visit the American Academy of Orthopaedic Surgeons website</a></li>
         <li>National Library of Medicine, ACL Graft Healing and Complications: <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener noreferrer">Search medical literature on PubMed</a></li>
@@ -1123,10 +1137,10 @@ export const blogPosts = [
       <strong>Q8. Is knee stiffness after ACL surgery a bad sign?</strong>
       <p>Some stiffness is expected, particularly in the first few weeks. However, if you are unable to fully straighten your knee by 2–3 weeks post-surgery, or if you cannot achieve 90 degrees of flexion by 4–6 weeks despite consistent therapy, this may indicate the development of arthrofibrosis (excessive scar tissue). This condition is best treated early and aggressively with physiotherapy, and sometimes requires a secondary surgical procedure.</p>
       
-      <p><em>This article is written for informational purposes and does not replace a personal consultation with a qualified orthopaedic surgeon. If you are experiencing any of the symptoms described above, please seek medical attention promptly.</em></p>
+      <p><em>This article is written for informational purposes and does not replace a personal consultation with a qualified orthopedic surgeon. If you are experiencing any of the symptoms described above, please seek medical attention promptly.</em></p>
       
       <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-          <p class="font-bold text-lg mb-2">Dr. Nitin N. Sunku, MBBS, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
+          <p class="font-bold text-lg mb-2">Dr. Nitin N Sunku, MBBS, MS Orthopedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
               Book appointment online or call +91-9449031003
@@ -1146,7 +1160,7 @@ export const blogPosts = [
       
       <p>Whether you’re a professional athlete, a weekend runner, or someone who enjoys gym workouts, sports injuries can strike unexpectedly. From sudden twists on the field to repetitive strain at the gym, active individuals often face issues with joints, muscles, tendons, or ligaments.</p>
       
-      <p>But why are sports injuries so common? And what’s the best way to treat them? In this blog, we’ll break it down and explain how expert orthopaedic care, like that provided by <strong>Dr. Nithin N</strong>, a sports medicine specialist in Bangalore, can help you recover faster and perform better.</p>
+      <p>But why are sports injuries so common? And what’s the best way to treat them? In this blog, we’ll break it down and explain how expert orthopedic care, like that provided by <strong>Dr. Nitin N Sunku</strong>, a sports medicine specialist in Bengaluru, can help you recover faster and perform better.</p>
       
       <h2>Understanding Common Sports Injuries</h2>
       
@@ -1180,9 +1194,9 @@ export const blogPosts = [
       <li>The <strong>level of activity</strong> and sports involvement</li>
       <li>The <strong>patient’s recovery goals</strong></li>
       </ul>
-      <h3>Dr. Nithin N’s Treatment Approach:</h3>
+      <h3>Dr. Nitin N Sunku’s Treatment Approach:</h3>
       
-      <p>As a trusted Orthopaedic doctor and sports medicine specialist, Dr. Nithin N provides a complete recovery journey from injury to peak performance.</p>
+      <p>As a trusted Orthopedic doctor and sports medicine specialist, Dr. Nitin N Sunku provides a complete recovery journey from injury to peak performance.</p>
       
       <p>1.  <strong>Accurate Diagnosis</strong></p>
       <p>*   Clinical examination</p>
@@ -1199,7 +1213,7 @@ export const blogPosts = [
       
       <p>Sports injuries don’t have to keep you off the field or away from the gym for long. Whether you’ve suffered an ACL tear, shoulder injury, or overuse strain, timely intervention is key.</p>
       
-      <strong>Dr. Nithin N</strong> offers expert diagnosis, tailored treatments, and advanced sports injury care to help you recover fully—and perform stronger than before.
+      <strong>Dr. Nitin N Sunku</strong> offers expert diagnosis, tailored treatments, and advanced sports injury care to help you recover fully—and perform stronger than before.
       
       <strong>Common Injuries Listed:</strong>
       <ul><li>ACL & Ligament Tears</li>
@@ -1208,7 +1222,7 @@ export const blogPosts = [
       <li>Rotator Cuff Tears</li>
       <li>Overuse Injuries (tennis elbow, shin splints, stress fractures)</li>
       </ul>
-      <strong>Treatment Approach (Dr. Nithin N's):</strong>
+      <strong>Treatment Approach (Dr. Nitin N Sunku's):</strong>
       <p>1.  <strong>Accurate Diagnosis:</strong> Clinical examination, Imaging (X-ray, MRI, ultrasound).</p>
       <p>2.  <strong>Personalised Treatment Plans:</strong></p>
       <p>*   Non-surgical: Rest, medication, physical therapy, PRP injections.</p>
@@ -1231,7 +1245,7 @@ export const blogPosts = [
       
       <p>The short answer is <strong>yes</strong> — in many cases, walking is still possible even with a torn ACL. But just because you can walk doesn’t mean the injury isn’t serious. In fact, ignoring it can lead to long-term complications that may affect your mobility and quality of life.</p>
       
-      <p>In this blog, we’ll help you understand what a torn ACL really means, what symptoms to look for, and how to treat it properly with the help of expert orthopaedic care in Bengaluru.</p>
+      <p>In this blog, we’ll help you understand what a torn ACL really means, what symptoms to look for, and how to treat it properly with the help of expert orthopedic care in Bengaluru.</p>
       
       <h2>What Is an ACL Tear?</h2>
       
@@ -1256,11 +1270,11 @@ export const blogPosts = [
       <li>A higher risk of <strong>early-onset knee arthritis</strong></li>
       <li>Loss of confidence in physical movement</li>
       </ul>
-      <p>That’s why it’s important to consult an orthopaedic specialist early and plan the right course of action.</p>
+      <p>That’s why it’s important to consult an orthopedic specialist early and plan the right course of action.</p>
       
       <h2>How We Treat ACL Tears in Bengaluru</h2>
       
-      <p>At our orthopaedic clinic in HSR Layout, Bengaluru, we offer <strong>customised treatment</strong> based on the severity of the tear, your lifestyle, and activity goals.</p>
+      <p>At our orthopedic clinic in HSR Layout, Bengaluru, we offer <strong>customised treatment</strong> based on the severity of the tear, your lifestyle, and activity goals.</p>
       
       <h3>Treatment Options Include:</h3>
       
@@ -1269,7 +1283,7 @@ export const blogPosts = [
       <li><strong>ACL Reconstruction Surgery</strong> for complete tears or high-demand patients (athletes, active individuals)</li>
       <li>Post-surgical <strong>rehabilitation</strong> for full functional recovery</li>
       </ul>
-      <p>As a <strong>sports medicine specialist</strong>, Dr. Nithin N focuses on helping active individuals return to their sport or daily routine — safely and with confidence.</p>
+      <p>As a <strong>sports medicine specialist</strong>, Dr. Nitin N Sunku focuses on helping active individuals return to their sport or daily routine — safely and with confidence.</p>
       
       <h2>Conclusion: Don’t Ignore Knee Instability</h2>
       
@@ -1282,7 +1296,7 @@ export const blogPosts = [
       <p>3.  <strong>Symptoms of Instability:</strong> Patients often report the knee "giving way," difficulty with twisting/pivoting, and ongoing swelling/instability.</p>
       <p>4.  <strong>Risks of Ignoring an ACL Tear (Key Advice):</strong> Untreated tears can lead to further damage (meniscus/cartilage), chronic knee instability, and a higher risk of early-onset knee arthritis.</p>
       <p>5.  <strong>Treatment Options (Key Advice):</strong> Treatment is customized and may include Bracing and Rest (for minor tears), Physiotherapy, ACL Reconstruction Surgery (for complete tears or high-demand patients), and Post-surgical rehabilitation.</p>
-      <p>6.  <strong>Overall Advice:</strong> It is crucial to get a proper diagnosis from an orthopaedic specialist early and not ignore knee instability to prevent long-term joint damage.</p>
+      <p>6.  <strong>Overall Advice:</strong> It is crucial to get a proper diagnosis from an orthopedic specialist early and not ignore knee instability to prevent long-term joint damage.</p>
     `
   },
   {
@@ -1297,7 +1311,7 @@ export const blogPosts = [
       
       <p>Ankle sprains are common but often misunderstood injuries. Whether you’re an athlete, a fitness enthusiast, or simply misstepped while walking, twisting your ankle can lead to pain, swelling, and difficulty moving around. The good news? With timely and expert care, you can recover fully and prevent it from happening again.</p>
       
-      <p>In this guide, we’ll walk you through everything you need to know about ankle sprains—what causes them, what symptoms to look for, and most importantly, how you can recover quickly under the expert care of <strong>Dr. Nithin N</strong>, a leading Orthopaedic specialist in Bangalore.</p>
+      <p>In this guide, we’ll walk you through everything you need to know about ankle sprains—what causes them, what symptoms to look for, and most importantly, how you can recover quickly under the expert care of <strong>Dr. Nitin N Sunku</strong>, a leading Orthopedic specialist in Bengaluru.</p>
       
       <h2>What Is An Ankle Sprain?</h2>
       
@@ -1330,11 +1344,11 @@ export const blogPosts = [
       
       <p>Many people think an ankle sprain will heal on its own. But untreated or poorly treated sprains can lead to long-term problems like chronic ankle instability, repeated injuries, or joint damage.</p>
       
-      <p>Early treatment not only reduces pain and swelling but also speeds up your return to daily activities and prevents future injuries. That’s why seeing a specialist like Dr. Nithin N is essential.</p>
+      <p>Early treatment not only reduces pain and swelling but also speeds up your return to daily activities and prevents future injuries. That’s why seeing a specialist like Dr. Nitin N Sunku is essential.</p>
       
-      <h2>Expert Care By Dr. Nithin N</h2>
+      <h2>Expert Care By Dr. Nitin N Sunku</h2>
       
-      <p>Dr. Nithin N is a highly experienced Orthopaedic doctor based in Bangalore, known for his personalized and patient-centric approach. He has successfully treated numerous ankle sprains, ranging from mild to severe cases.</p>
+      <p>Dr. Nitin N Sunku is a highly experienced Orthopedic doctor based in Bengaluru, known for his personalized and patient-centric approach. He has successfully treated numerous ankle sprains, ranging from mild to severe cases.</p>
       
       <h3>What To Expect During Your Visit:</h3>
       
@@ -1361,13 +1375,13 @@ export const blogPosts = [
       <li>Wear supportive footwear</li>
       <li>Follow physiotherapy routines consistently</li>
       </ul>
-      <strong>Note:</strong> Don’t return to sports or high-impact activities too soon. Always follow your orthopaedic specialist’s advice.
+      <strong>Note:</strong> Don’t return to sports or high-impact activities too soon. Always follow your orthopedic specialist’s advice.
       
       <h2>Conclusion: Start Your Recovery The Right Way</h2>
       
       <p>An ankle sprain can feel limiting, but with the right care, you’ll be walking comfortably again in no time. Ignoring symptoms or delaying treatment can lead to long-term problems, so it’s best to act quickly.</p>
       
-      <p>If you’re suffering from an ankle injury, <strong>Dr. Nithin N</strong> is here to guide you every step of the way with expert diagnosis, tailored treatment, and compassionate care. Whether you need rest, therapy, or advanced treatment options, you’ll receive the best care to get back on your feet—stronger than before.</p>
+      <p>If you’re suffering from an ankle injury, <strong>Dr. Nitin N Sunku</strong> is here to guide you every step of the way with expert diagnosis, tailored treatment, and compassionate care. Whether you need rest, therapy, or advanced treatment options, you’ll receive the best care to get back on your feet—stronger than before.</p>
     `
   },
   {
@@ -1378,7 +1392,7 @@ export const blogPosts = [
     category: "Sports Medicine",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-04.jpg?updatedAt=1766843021025",
     content: `
-      <h2>Dr. Nitin Sunku</h2>
+      <h2>Dr. Nitin N Sunku</h2>
       
       <p>Elbow pain when lifting, gripping, or typing? It might be <strong>Tennis Elbow</strong>.</p>
       
@@ -1401,7 +1415,7 @@ export const blogPosts = [
       <li>Shockwave therapy</li>
       <li>Minor procedures (in severe cases)</li>
       </ul>
-      <p>As an orthopaedic doctor and sports medicine specialist in HSR Layout, I provide personalised treatment plans for long-term relief and recovery.</p>
+      <p>As an orthopedic doctor and sports medicine specialist in HSR Layout, I provide personalised treatment plans for long-term relief and recovery.</p>
     `
   },
   {
@@ -1412,7 +1426,7 @@ export const blogPosts = [
     category: "Shoulder Care",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-05.jpg?updatedAt=1766843021099",
     content: `
-      <h2>Dr. Nitin Sunku</h2>
+      <h2>Dr. Nitin N Sunku</h2>
       
       <h3>Introduction</h3>
       
@@ -1444,7 +1458,7 @@ export const blogPosts = [
       </ul>
       <h3>What to Expect from the Procedure</h3>
       
-      <p>Shoulder replacement is a safe and effective surgical solution, especially when performed by an experienced orthopaedic specialist.</p>
+      <p>Shoulder replacement is a safe and effective surgical solution, especially when performed by an experienced orthopedic specialist.</p>
       
       <p>During the surgery:</p>
       
@@ -1454,9 +1468,9 @@ export const blogPosts = [
       </ul>
       <p>Most patients experience <strong>significant pain relief and improved shoulder function</strong> within a few months of surgery.</p>
       
-      <h3>Expert Shoulder Care in HSR Layout, Bangalore</h3>
+      <h3>Expert Shoulder Care in HSR Layout, Bengaluru</h3>
       
-      <p>At our clinic in <strong>HSR Layout, Bangalore</strong>, Dr. Nithin N offers <strong>comprehensive evaluation</strong> and <strong>advanced imaging</strong> to determine whether shoulder replacement is the right option for you.</p>
+      <p>At our clinic in <strong>HSR Layout, Bengaluru</strong>, Dr. Nitin N Sunku offers <strong>comprehensive evaluation</strong> and <strong>advanced imaging</strong> to determine whether shoulder replacement is the right option for you.</p>
       
       <p>#### Our Services Include:</p>
       
@@ -1467,7 +1481,7 @@ export const blogPosts = [
       </ul>
       <h3>Conclusion: Don’t Let Shoulder Pain Control Your Life</h3>
       
-      <p>If chronic shoulder pain is limiting your mobility and quality of life, and other treatments haven’t helped, <strong>shoulder replacement surgery</strong> could offer the long-term relief you need. With expert care from <strong>Dr. Nithin N</strong>, you can move forward confidently — and pain-free.</p>
+      <p>If chronic shoulder pain is limiting your mobility and quality of life, and other treatments haven’t helped, <strong>shoulder replacement surgery</strong> could offer the long-term relief you need. With expert care from <strong>Dr. Nitin N Sunku</strong>, you can move forward confidently — and pain-free.</p>
     `
   },
   {
@@ -1507,9 +1521,9 @@ export const blogPosts = [
       <li>Prevent further damage</li>
       <li>Delay or avoid the need for surgery</li>
       </ul>
-      <h2>Advanced Shoulder Care at Our Clinic in HSR Layout, Bangalore</h2>
+      <h2>Advanced Shoulder Care at Our Clinic in HSR Layout, Bengaluru</h2>
       
-      <p>At our orthopaedic clinic, <strong>Dr. Nithin N</strong>, a shoulder and sports injury specialist, offers <strong>comprehensive care for rotator cuff injuries</strong> — from accurate diagnosis to personalized recovery plans.</p>
+      <p>At our orthopedic clinic, <strong>Dr. Nitin N Sunku</strong>, a shoulder and sports injury specialist, offers <strong>comprehensive care for rotator cuff injuries</strong> — from accurate diagnosis to personalized recovery plans.</p>
       
       <h3>Treatment Options Include:</h3>
       
@@ -1524,7 +1538,7 @@ export const blogPosts = [
       
       <p>If your shoulder pain has been lingering or worsening, don’t wait for it to disrupt your life further. A rotator cuff injury, when addressed early, can be treated successfully — often without the need for surgery.</p>
       
-      <p>With Dr. Nithin N’s expertise in <strong>shoulder and sports injury care</strong>, you can expect precise diagnosis, personalized treatment, and compassionate follow-up care.</p>
+      <p>With Dr. Nitin N Sunku’s expertise in <strong>shoulder and sports injury care</strong>, you can expect precise diagnosis, personalized treatment, and compassionate follow-up care.</p>
       
       ***
       
@@ -1540,7 +1554,7 @@ export const blogPosts = [
   },
   {
     slug: "herniated-disc-pain-find-expert-relief-in-bangalore-with-dr-nithin-n",
-    title: "Herniated Disc Pain? Find Expert Relief in Bangalore with Dr. Nithin N",
+    title: "Herniated Disc Pain? Find Expert Relief in Bengaluru with Dr. Nitin N Sunku",
     excerpt: "Are you struggling with **back pain**, **numbness**, or **leg weakness** that’s affecting your daily routine? You might be dealing with a **herniated disc**—a c",
     date: "Jun 11, 2024",
     category: "Spine Health",
@@ -1550,7 +1564,7 @@ export const blogPosts = [
       
       <p>Are you struggling with <strong>back pain</strong>, <strong>numbness</strong>, or <strong>leg weakness</strong> that’s affecting your daily routine? You might be dealing with a <strong>herniated disc</strong>—a common spinal condition that can cause significant discomfort and impact your mobility.</p>
       
-      <p>The good news? Relief is possible with the right diagnosis and treatment. In this blog, we’ll help you understand what a herniated disc is, how it’s treated, and why consulting <strong>Dr. Nithin N</strong>, an experienced Orthopaedic specialist in Bangalore, can be your first step toward recovery.</p>
+      <p>The good news? Relief is possible with the right diagnosis and treatment. In this blog, we’ll help you understand what a herniated disc is, how it’s treated, and why consulting <strong>Dr. Nitin N Sunku</strong>, an experienced Orthopedic specialist in Bengaluru, can be your first step toward recovery.</p>
       
       <h2>What Is a Herniated Disc?</h2>
       
@@ -1577,9 +1591,9 @@ export const blogPosts = [
       <li>Restore your strength and mobility</li>
       <li>Help you avoid surgery in many cases</li>
       </ul>
-      <h2>Expert Herniated Disc Treatment by Dr. Nithin N</h2>
+      <h2>Expert Herniated Disc Treatment by Dr. Nitin N Sunku</h2>
       
-      <p>As an Orthopaedic and spine specialist based in <strong>HSR Layout, Bangalore</strong>, Dr. Nithin N offers advanced and personalized treatment for herniated discs. With a strong background in orthopaedic care and a patient-focused approach, he has helped many individuals regain their comfort and quality of life.</p>
+      <p>As an Orthopedic and spine specialist based in <strong>HSR Layout, Bengaluru</strong>, Dr. Nitin N Sunku offers advanced and personalized treatment for herniated discs. With a strong background in orthopedic care and a patient-focused approach, he has helped many individuals regain their comfort and quality of life.</p>
       
       <h3>Treatment Options</h3>
       
@@ -1592,12 +1606,12 @@ export const blogPosts = [
       </ul>
       <h2>Conclusion: Don’t Let Back Pain Limit You</h2>
       
-      <p>A herniated disc can affect your work, sleep, and daily activities—but it doesn’t have to be permanent. With timely care from a skilled orthopaedic specialist like <strong>Dr. Nithin N</strong>, you can regain control and return to a pain-free, active life.</p>
+      <p>A herniated disc can affect your work, sleep, and daily activities—but it doesn’t have to be permanent. With timely care from a skilled orthopedic specialist like <strong>Dr. Nitin N Sunku</strong>, you can regain control and return to a pain-free, active life.</p>
     `
   },
   {
     slug: "say-goodbye-to-tendonitis-pain-a-beginner-friendly-guide-to-relief-with-dr-nithin-n-in-bangalore",
-    title: "Say Goodbye to Tendonitis Pain: A Beginner-Friendly Guide to Relief with Dr. Nithin N in Bangalore",
+    title: "Say Goodbye to Tendonitis Pain: A Beginner-Friendly Guide to Relief with Dr. Nitin N Sunku in Bengaluru",
     excerpt: "Are you experiencing persistent pain, swelling, or stiffness in your joints that’s affecting your daily life? You may be suffering from **tendonitis**—a common ",
     date: "May 12, 2024",
     category: "Sports Medicine",
@@ -1605,7 +1619,7 @@ export const blogPosts = [
     content: `
       <h2>Introduction</h2>
       
-      <p>Are you experiencing persistent pain, swelling, or stiffness in your joints that’s affecting your daily life? You may be suffering from <strong>tendonitis</strong>—a common yet often overlooked condition that involves inflammation of the tendons. While it might start as mild discomfort, untreated tendonitis can lead to more serious joint issues. Fortunately, effective treatment is available. <strong>Dr. Nithin N</strong>, a leading Orthopaedic specialist in Bangalore, is here to guide you on the road to recovery with expert diagnosis and personalized care.</p>
+      <p>Are you experiencing persistent pain, swelling, or stiffness in your joints that’s affecting your daily life? You may be suffering from <strong>tendonitis</strong>—a common yet often overlooked condition that involves inflammation of the tendons. While it might start as mild discomfort, untreated tendonitis can lead to more serious joint issues. Fortunately, effective treatment is available. <strong>Dr. Nitin N Sunku</strong>, a leading Orthopedic specialist in Bengaluru, is here to guide you on the road to recovery with expert diagnosis and personalized care.</p>
       
       <h2>Understanding Tendonitis: Key Concepts Simplified</h2>
       
@@ -1629,8 +1643,8 @@ export const blogPosts = [
       <h3>4. Who is at Risk?</h3>
       <p>Tendonitis can affect anyone, but individuals who engage in repetitive tasks—athletes, fitness enthusiasts, or those with physically demanding jobs—are more likely to develop it. Even office workers are not immune, especially if ergonomic setups are poor.</p>
       
-      <h3>5. Expert Diagnosis and Treatment with Dr. Nithin N</h3>
-      <p>Dr. Nithin N offers a detailed and customized approach to treating tendonitis. His process includes:</p>
+      <h3>5. Expert Diagnosis and Treatment with Dr. Nitin N Sunku</h3>
+      <p>Dr. Nitin N Sunku offers a detailed and customized approach to treating tendonitis. His process includes:</p>
       <ul><li>Comprehensive physical examination and history review</li>
       <li>Advanced imaging tests (if required)</li>
       <li>Non-surgical treatments such as physiotherapy, medications, and rest</li>
@@ -1642,9 +1656,9 @@ export const blogPosts = [
       
       <h2>Conclusion: Take the First Step Toward a Pain-Free Life</h2>
       
-      <p>Tendonitis may feel like a minor issue at first, but it can impact your quality of life if left untreated. With the right guidance and care from Dr. Nithin N, recovery is well within reach. Whether you’re a working professional, athlete, or senior citizen, you don’t have to live with joint pain any longer.</p>
+      <p>Tendonitis may feel like a minor issue at first, but it can impact your quality of life if left untreated. With the right guidance and care from Dr. Nitin N Sunku, recovery is well within reach. Whether you’re a working professional, athlete, or senior citizen, you don’t have to live with joint pain any longer.</p>
       
-      <p>Schedule a consultation with Dr. Nithin N today and take your first confident step toward a pain-free, active lifestyle. Trust your recovery to one of Bangalore’s most experienced orthopaedic specialists.</p>
+      <p>Schedule a consultation with Dr. Nitin N Sunku today and take your first confident step toward a pain-free, active lifestyle. Trust your recovery to one of Bengaluru’s most experienced orthopedic specialists.</p>
     `
   },
   {
@@ -1706,7 +1720,7 @@ export const blogPosts = [
       </ul>
       <h2>Your Recovery Team in HSR Layout, Bengaluru</h2>
       
-      <p>At our clinic, we specialize in treating sports injuries with a complete recovery roadmap. As an <strong>orthopaedic and sports medicine specialist</strong>, I work closely with expert physiotherapists to create <strong>personalized rehab plans</strong> based on your sport, injury type, and fitness goals.</p>
+      <p>At our clinic, we specialize in treating sports injuries with a complete recovery roadmap. As an <strong>orthopedic and sports medicine specialist</strong>, I work closely with expert physiotherapists to create <strong>personalized rehab plans</strong> based on your sport, injury type, and fitness goals.</p>
       
       <p>Whether it’s a sprained ankle, torn ligament, or post-surgery recovery — we guide you from rest to return-to-play safely and effectively.</p>
       
@@ -1763,9 +1777,9 @@ export const blogPosts = [
       <li>Delay or prevent the need for joint surgery</li>
       <li>Support overall health and reduce inflammation</li>
       </ul>
-      <h2>How We Can Help in HSR Layout, Bangalore</h2>
+      <h2>How We Can Help in HSR Layout, Bengaluru</h2>
       
-      <p>If you’re experiencing joint pain and are concerned about the role of weight in your condition, <strong>Dr. Nithin N</strong>, Orthopaedic Specialist in HSR Layout, can help.</p>
+      <p>If you’re experiencing joint pain and are concerned about the role of weight in your condition, <strong>Dr. Nitin N Sunku</strong>, Orthopedic Specialist in HSR Layout, can help.</p>
       
       <h3>Our Approach Includes:</h3>
       
@@ -1784,15 +1798,15 @@ export const blogPosts = [
   {
     slug: "what-is-knee-arthroscopy-and-when-is-it-needed",
     title: "What is Knee Arthroscopy and When is it Needed?",
-    excerpt: "Knee arthroscopy is a minimally invasive surgical procedure that allows an orthopaedic surgeon to see inside the knee joint using a small camera.",
+    excerpt: "Knee arthroscopy is a minimally invasive surgical procedure that allows an orthopedic surgeon to see inside the knee joint using a small camera.",
     date: "Feb 15, 2024",
     category: "Knee Care",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-12.jpg?updatedAt=1766843020590",
     content: `
       <strong>Publication Date:</strong> August 31, 2025
-      <strong>Author:</strong> Dr. Nitin Sunku
+      <strong>Author:</strong> Dr. Nitin N Sunku
       
-      <p>Knee arthroscopy is a minimally invasive surgical procedure that allows an orthopaedic surgeon to see inside the knee joint using a small camera.</p>
+      <p>Knee arthroscopy is a minimally invasive surgical procedure that allows an orthopedic surgeon to see inside the knee joint using a small camera.</p>
       
       <p>This advanced technique helps diagnose and treat various knee problems with smaller incisions, less pain, and faster recovery compared to open surgery.</p>
       
@@ -1810,31 +1824,31 @@ export const blogPosts = [
       <li>Cleaning out infection or scar tissue in the knee</li>
       </ul>
       
-      <p>If you have persistent knee pain, swelling, locking, or instability that is not improving with non-surgical treatment, consult an experienced orthopaedic surgeon in your area. Early diagnosis and timely arthroscopy can help restore knee function and prevent further damage.</p>
+      <p>If you have persistent knee pain, swelling, locking, or instability that is not improving with non-surgical treatment, consult an experienced orthopedic surgeon in your area. Early diagnosis and timely arthroscopy can help restore knee function and prevent further damage.</p>
     `
   },
   {
     slug: "are-you-struggling-with-joint-pain-in-bangalore",
-    title: "Are you struggling with joint pain in Bangalore?",
-    excerpt: "Dr. Nithin N, a recognized expert in Orthopaedics, is dedicated to helping patients regain their mobility and improve their quality of life. Joint pain can sign",
+    title: "Are you struggling with joint pain in Bengaluru?",
+    excerpt: "Dr. Nitin N Sunku, a recognized expert in Orthopedics, is dedicated to helping patients regain their mobility and improve their quality of life. Joint pain can sign",
     date: "Jan 16, 2024",
     category: "Sports Medicine",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-13.jpg?updatedAt=1766843020638",
     content: `
-      <p>Dr. Nithin N, a recognized expert in Orthopaedics, is dedicated to helping patients regain their mobility and improve their quality of life. Joint pain can significantly impact daily activities, but with the right diagnosis and treatment plan, relief is possible.</p>
+      <p>Dr. Nitin N Sunku, a recognized expert in Orthopedics, is dedicated to helping patients regain their mobility and improve their quality of life. Joint pain can significantly impact daily activities, but with the right diagnosis and treatment plan, relief is possible.</p>
       
-      <p>Dr. Nithin N utilizes a compassionate approach, focusing on understanding each patient’s unique situation. With extensive experience in treating various joint conditions, Dr. Nithin N offers personalized care that may include physical therapy, medication management, or advanced surgical options when necessary.</p>
+      <p>Dr. Nitin N Sunku utilizes a compassionate approach, focusing on understanding each patient’s unique situation. With extensive experience in treating various joint conditions, Dr. Nitin N Sunku offers personalized care that may include physical therapy, medication management, or advanced surgical options when necessary.</p>
       
-      <p>Patients can benefit from Dr. Nithin N’s commitment to staying updated with the latest advancements in orthopaedic treatments, ensuring they receive the most effective care available. Whether dealing with arthritis, sports injuries, or age-related joint issues, Dr. Nithin N is here to guide patients on their journey to recovery.</p>
+      <p>Patients can benefit from Dr. Nitin N Sunku’s commitment to staying updated with the latest advancements in orthopedic treatments, ensuring they receive the most effective care available. Whether dealing with arthritis, sports injuries, or age-related joint issues, Dr. Nitin N Sunku is here to guide patients on their journey to recovery.</p>
       
-      <p>If joint pain is affecting your life, consider consulting with Dr. Nithin N in Bangalore. Take the first step towards a pain-free future and regain your active lifestyle. Your journey to better joint health starts here.</p>
+      <p>If joint pain is affecting your life, consider consulting with Dr. Nitin N Sunku in Bengaluru. Take the first step towards a pain-free future and regain your active lifestyle. Your journey to better joint health starts here.</p>
       
-      <p>The article, written by Dr. Nithin N, an Orthopaedics expert, provides the following key information and advice regarding joint pain:</p>
+      <p>The article, written by Dr. Nitin N Sunku, an Orthopedics expert, provides the following key information and advice regarding joint pain:</p>
       
       <ul><li><strong>Diagnosis and Treatment:</strong> Joint pain can be managed and relieved with the correct diagnosis and a personalized treatment plan.</li>
       <li><strong>Treatment Modalities:</strong> Personalized care for joint conditions may encompass <strong>physical therapy</strong>, <strong>medication management</strong>, or <strong>advanced surgical options</strong> when necessary.</li>
       <li><strong>Conditions Treated:</strong> The doctor specializes in treating various joint conditions, including <strong>arthritis</strong>, <strong>sports injuries</strong>, and <strong>age-related joint issues</strong>.</li>
-      <li><strong>Call to Action:</strong> Individuals struggling with joint pain are advised to consult with Dr. Nithin N in Bangalore to start their journey toward a pain-free and active lifestyle.</li>
+      <li><strong>Call to Action:</strong> Individuals struggling with joint pain are advised to consult with Dr. Nitin N Sunku in Bengaluru to start their journey toward a pain-free and active lifestyle.</li>
       </ul>
     `
   },
@@ -1861,7 +1875,7 @@ export const blogPosts = [
       <li>Avoiding activities that worsen pain</li>
       <li>Surgery if symptoms persist or the tear affects stability</li>
       </ul>
-      <p>A proper diagnosis and treatment plan from an orthopaedic specialist is important to protect your knee health and prevent long-term damage.</p>
+      <p>A proper diagnosis and treatment plan from an orthopedic specialist is important to protect your knee health and prevent long-term damage.</p>
     `
   },
   {
@@ -1882,7 +1896,7 @@ export const blogPosts = [
       
       <p>These platelets release growth factors that support healing and reduce inflammation.</p>
       
-      <p>A proper diagnosis and treatment plan from an orthopaedic specialist is important to protect your knee health and prevent long-term damage.</p>
+      <p>A proper diagnosis and treatment plan from an orthopedic specialist is important to protect your knee health and prevent long-term damage.</p>
       
       <h2>When PRP may help:</h2>
       
@@ -1900,7 +1914,7 @@ export const blogPosts = [
       </ul>
       <p>While PRP is not a cure for every condition, it can be highly effective in selected patients.</p>
       
-      <p>A proper diagnosis by an orthopaedic doctor in Bangalore is essential to decide if PRP injections are suitable for your joint pain.</p>
+      <p>A proper diagnosis by an orthopedic doctor in Bengaluru is essential to decide if PRP injections are suitable for your joint pain.</p>
     `
   },
   {
@@ -1939,7 +1953,7 @@ export const blogPosts = [
       </ul>
       <p>Every meniscus injury is different, and not all respond the same way to non-surgical care.</p>
       
-      <p>If you have ongoing knee pain or instability, consult an orthopaedic doctor in Bangalore.</p>
+      <p>If you have ongoing knee pain or instability, consult an orthopedic doctor in Bengaluru.</p>
       
       <p>A proper diagnosis through clinical examination and MRI will guide whether physiotherapy alone is enough, or if surgical repair is necessary to restore knee function.</p>
     `
@@ -1989,7 +2003,7 @@ export const blogPosts = [
       </ul>
       <strong>When to Consult a Doctor:</strong>
       
-      <p>If shin pain persists despite rest and home management, it is crucial to consult an orthopaedic doctor. Proper diagnosis is essential to rule out more serious conditions like <strong>stress fractures</strong> or other underlying causes, ensuring a treatment plan is tailored to your specific needs.</p>
+      <p>If shin pain persists despite rest and home management, it is crucial to consult an orthopedic doctor. Proper diagnosis is essential to rule out more serious conditions like <strong>stress fractures</strong> or other underlying causes, ensuring a treatment plan is tailored to your specific needs.</p>
     `
   },
   {
@@ -2018,7 +2032,7 @@ export const blogPosts = [
       
       <p>If symptoms persist, advanced options such as injections or minimally invasive surgery may be advised.</p>
       
-      <p>If you regularly feel hip pain when standing, consult an orthopaedic doctor in Bangalore for accurate diagnosis and a tailored treatment plan.</p>
+      <p>If you regularly feel hip pain when standing, consult an orthopedic doctor in Bengaluru for accurate diagnosis and a tailored treatment plan.</p>
       
       <p>Early evaluation helps prevent worsening and protects your joint health.</p>
       
@@ -2032,7 +2046,7 @@ export const blogPosts = [
       <p>3.  <strong>Warning Signs</strong>: Early signs like stiffness, catching, or swelling should not be ignored.</p>
       <p>4.  <strong>Conservative Treatments</strong>: Physiotherapy, posture correction, activity modification, and medication.</p>
       <p>5.  <strong>Advanced Options</strong>: Injections or minimally invasive surgery if symptoms persist.</p>
-      <p>6.  <strong>Recommendation</strong>: Consult an orthopaedic doctor for accurate diagnosis and a tailored treatment plan, as early evaluation helps prevent worsening and protects joint health.</p>
+      <p>6.  <strong>Recommendation</strong>: Consult an orthopedic doctor for accurate diagnosis and a tailored treatment plan, as early evaluation helps prevent worsening and protects joint health.</p>
     `
   },
   {
@@ -2061,7 +2075,7 @@ export const blogPosts = [
       
       <p>Treatment options include rest, physiotherapy to strengthen stabilizing muscles, and in some cases, minimally invasive surgery to repair damaged tissues.</p>
       
-      <p>If you are facing shoulder pain or instability after a sports injury, consult an orthopaedic doctor in Bangalore for a proper evaluation and treatment plan.</p>
+      <p>If you are facing shoulder pain or instability after a sports injury, consult an orthopedic doctor in Bengaluru for a proper evaluation and treatment plan.</p>
       
       <p>Early care can prevent long-term damage and help you return safely to activity.</p>
     `
@@ -2096,7 +2110,7 @@ export const blogPosts = [
       
       <h2>Expert Knee Care in Bengaluru</h2>
       
-      <p>For expert knee evaluation, meniscus treatment, and advanced ligament care including ACL surgery, visit Dr. Nitin Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.</p>
+      <p>For expert knee evaluation, meniscus treatment, and advanced ligament care including ACL surgery, visit Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.</p>
     `
   },
   {
@@ -2133,7 +2147,7 @@ export const blogPosts = [
       
       <h2>Expert Spine & Joint Care in Bengaluru</h2>
       
-      <p>For comprehensive spine and joint assessment, visit Dr. Nitin Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru — your trusted expert for posture-related issues, joint pain, and spine conditions.</p>
+      <p>For comprehensive spine and joint assessment, visit Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru — your trusted expert for posture-related issues, joint pain, and spine conditions.</p>
     `
   },
   {
@@ -2243,7 +2257,7 @@ export const blogPosts = [
       <p>Recognizing these causes can help active adults protect their knees and seek timely care. <strong>Early treatment is especially important</strong> for anyone experiencing symptoms after a twisting injury or suspected ACL mid-substance tear, as combined injuries require specialized management to ensure smooth meniscus and ACL recovery.</p>
       
       ---
-      <p>*Note: The original article includes a call to action for Dr. Nitin Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.*</p>
+      <p>*Note: The original article includes a call to action for Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.*</p>
     `
   },
   {
@@ -2274,7 +2288,7 @@ export const blogPosts = [
       
       <strong>Early evaluation helps prevent long term instability.</strong>
       
-      <p>For accurate diagnosis and treatment, visit Dr Nitin Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.</p>
+      <p>For accurate diagnosis and treatment, visit Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.</p>
     `
   },
   {
@@ -2287,7 +2301,7 @@ export const blogPosts = [
     content: `
       <p>A meniscus tear can feel like the end of your active life. Whether you twisted your knee during a football match on Bengaluru's turf, stepped awkwardly while jogging on Cubbon Park's trails, or simply squatted wrong at the gym, the question that follows is almost always the same: How long will recovery take after meniscus tear surgery?</p>
       <p>The honest answer: it depends. Recovery time after meniscus surgery ranges from as little as 4–6 weeks for a partial meniscectomy to 4–6 months or more for a meniscus repair. But knowing the difference between these procedures, what each phase of recovery looks like, and what you can do to speed things along — that knowledge can make all the difference.</p>
-      <p>In this guide, Dr. Nitin N Sunku — a fellowship-trained orthopaedic and sports medicine specialist practising in HSR Layout and Attibele, Bengaluru — walks you through a realistic, evidence-based recovery roadmap tailored to Indian patients and activity levels.</p>
+      <p>In this guide, Dr. Nitin N Sunku — a fellowship-trained orthopedic and sports medicine specialist practising in HSR Layout and Attibele, Bengaluru — walks you through a realistic, evidence-based recovery roadmap tailored to Indian patients and activity levels.</p>
       
       <h2>Understanding the Meniscus and Why Surgery May Be Needed</h2>
       <p>Your knee has two menisci — the medial (inner) and lateral (outer) — each a C-shaped wedge of fibrocartilage that acts as a shock absorber, stabiliser, and load distributor between your femur (thigh bone) and tibia (shin bone). When this cartilage tears, it can cause pain, swelling, locking, and instability that prevents you from performing daily activities.</p>

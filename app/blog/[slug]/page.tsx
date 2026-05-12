@@ -4,6 +4,7 @@ import { blogPosts } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, User, Tag, Clock, ChevronRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
+import { siteOrigin } from "@/lib/site-url";
 import { ReadingProgress } from "@/components/blog/reading-progress";
 import { SocialShare } from "@/components/blog/social-share";
 import { AuthorBio } from "@/components/blog/author-bio";
@@ -67,7 +68,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     if (params.slug === "herniated-disc-pain-find-expert-relief-in-bangalore-with-dr-nithin-n") {
         return {
             title: {
-                absolute: "Herniated Disc Pain: Expert Insights from Dr. Nitin Sunku",
+                absolute: "Herniated Disc Pain: Expert Insights from Dr. Nitin N Sunku",
             },
             description: "Learn what causes herniated disc pain, common symptoms, diagnosis methods, and treatment options to manage pain and improve spine health.",
         };
@@ -87,7 +88,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             title: {
                 absolute: "Meniscus Tear: Can It Heal Without Surgery? | Dr. Sunku",
             },
-            description: "Discover when a meniscus tear can heal without surgery. Learn causes, healing factors, and treatment options from Dr. Nitin Sunku.",
+            description: "Discover when a meniscus tear can heal without surgery. Learn causes, healing factors, and treatment options from Dr. Nitin N Sunku.",
         };
     }
 
@@ -97,15 +98,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
                 absolute: "Can a Meniscus Tear Heal With Physiotherapy? | Dr. Sunku",
             },
             description: "Learn if a meniscus tear can heal with physiotherapy alone. Expert insights on recovery, exercises, and treatment options for better knee health.",
-        };
-    }
-
-    if (params.slug === "herniated-disc-pain-find-expert-relief-in-bangalore-with-dr-nithin-n") {
-        return {
-            title: {
-                absolute: "Herniated Disc Pain: Expert Insights from Dr. Nitin Sunku",
-            },
-            description: "Learn what causes herniated disc pain, common symptoms, diagnosis methods, and treatment options to manage pain and improve spine health.",
         };
     }
 
@@ -178,7 +170,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             title: {
                 absolute: "What Causes Tendonitis Pain? Symptoms & Treatment",
             },
-            description: "Beginner-friendly guide to tendonitis pain relief with expert tips from Dr. Nitin Sunku in Bangalore for faster recovery and better tendon health.",
+            description: "Beginner-friendly guide to tendonitis pain relief with expert tips from Dr. Nitin N Sunku in Bengaluru for faster recovery and better tendon health.",
         };
     }
 
@@ -187,7 +179,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             title: {
                 absolute: "Struggling with joint pain: Causes, Relief & Treatments",
             },
-            description: "Explore common joint pain causes, symptoms, and effective relief options in Bangalore to improve mobility and comfort.",
+            description: "Explore common joint pain causes, symptoms, and effective relief options in Bengaluru to improve mobility and comfort.",
         };
     }
 
@@ -433,22 +425,57 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
     const wordCount = post.content.split(/\s+/).length;
     const readingTime = Math.ceil(wordCount / 200);
 
+    // Normalise the human-readable date string to ISO 8601 for schema.org consumers.
+    // Falls back to the original string if parsing fails (older posts use formats like "Mar 2, 2026").
+    const parsedDate = new Date(post.date);
+    const isoDate = Number.isNaN(parsedDate.getTime())
+        ? post.date
+        : parsedDate.toISOString().split("T")[0];
+
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "MedicalWebPage",
         "headline": post.title,
         "description": post.excerpt,
+        "image": post.image ? [post.image] : undefined,
+        "url": `${siteOrigin}/blog/${post.slug}`,
         "author": {
-            "@type": "Person",
-            "name": "Dr. Nitin N Sunku"
+            "@type": "Physician",
+            "name": "Dr. Nitin N Sunku",
+            "url": `${siteOrigin}/about`,
+            "medicalSpecialty": ["Orthopedic", "SportsMedicine"],
         },
-        "datePublished": post.date,
+        "publisher": {
+            "@type": "Organization",
+            "name": "Dr. Nitin N Sunku Orthopedics",
+            "logo": {
+                "@type": "ImageObject",
+                "url": `${siteOrigin}/logo.png`,
+            },
+        },
+        "datePublished": isoDate,
+        "dateModified": isoDate,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `${siteOrigin}/blog/${post.slug}`,
+        },
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${siteOrigin}/` },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${siteOrigin}/blog` },
+            { "@type": "ListItem", "position": 3, "name": post.title, "item": `${siteOrigin}/blog/${post.slug}` }
+        ]
     };
 
     return (
         <main className="min-h-screen pb-20 bg-white">
             <ReadingProgress />
             <JsonLd data={articleSchema} />
+            <JsonLd data={breadcrumbSchema} />
 
             {/* Immersive Hero Section */}
             <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20 lg:py-32 overflow-hidden">
@@ -516,7 +543,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
                                 for your doctor.
                             </p>
                             <p>
-                                Dr. Nitin N Sunku is a consultant orthopaedic and sports medicine surgeon. He
+                                Dr. Nitin N Sunku is a consultant orthopedic and sports medicine surgeon. He
                                 sees patients at <strong>Raghava Multispeciality Hospital, Attibele</strong>, on
                                 Sarjapura–Attibele Road, and at <strong>Health Nest Hospital, HSR Layout</strong>,
                                 Bengaluru. If pain is rapidly worsening, you cannot bear weight, you develop

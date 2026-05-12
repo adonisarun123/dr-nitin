@@ -976,6 +976,7 @@ export const treatments: Treatment[] = [
             "precise knee injection Bengaluru",
         ],
         procedureName: "Ultrasound-Guided Orthopedic Injection",
+        bodyLocation: "Multiple Joints",
         color: "bg-violet-50 text-violet-600",
         icon: "Crosshair",
         sections: [
@@ -1447,6 +1448,7 @@ export const treatments: Treatment[] = [
             "sports injury rehab Electronic City",
         ],
         procedureName: "Sports Injury Management",
+        bodyLocation: "Sports",
         color: "bg-sky-50 text-sky-600",
         icon: "Zap",
         sections: [

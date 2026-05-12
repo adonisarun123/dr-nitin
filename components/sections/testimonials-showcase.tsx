@@ -20,7 +20,7 @@ import { testimonialsData } from "@/lib/data";
  * Original testimonial copy is preserved verbatim.
  */
 export function TestimonialsShowcase() {
-    const featured = testimonialsData[0]; // John Doe — longest, most descriptive
+    const featured = testimonialsData[0]; // Arjun R. — longest, most descriptive
 
     // For seamless infinite scroll the array is duplicated; the keyframe shifts
     // -50% so when the first half ends, the second half is exactly in place.

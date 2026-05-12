@@ -10,10 +10,10 @@ import { JsonLd } from "@/components/seo/json-ld";
 export const metadata: Metadata = {
     title: {
         absolute:
-            "Practice Overview — Dr. Nitin N Sunku Orthopedic & Sports Medicine, Bengaluru",
+            "Practice Overview | Dr. Nitin N Sunku Orthopedics, Bengaluru",
     },
     description:
-        "About the practice — Dr. Nitin N Sunku, consultant orthopaedic surgeon and sports medicine specialist in Bengaluru. Locations at Raghava Multispeciality Hospital (Attibele) and Health Nest Hospital (HSR Layout). Conditions treated, what to bring, and how appointments work.",
+        "Dr. Nitin N Sunku — consultant orthopedic surgeon in Bengaluru. Locations at Raghava Hospital (Attibele) and Health Nest Hospital (HSR Layout). Conditions & visits.",
     alternates: { canonical: `${siteOrigin}/practice` },
 };
 
@@ -49,10 +49,10 @@ export default function PracticeOverviewPage() {
                             id="practice-overview-heading"
                             className="text-2xl lg:text-3xl font-heading font-bold text-gray-900 mb-4"
                         >
-                            Orthopaedic and sports medicine care in Bengaluru
+                            Orthopedic and sports medicine care in Bengaluru
                         </h2>
                         <p>
-                            Dr. Nitin N. Sunku is a consultant orthopaedic surgeon and
+                            Dr. Nitin N Sunku is a consultant orthopedic surgeon and
                             sports medicine specialist. His day-to-day work spans knee and
                             shoulder arthroscopy, ACL and other ligament injuries, meniscus
                             tears, cartilage-friendly repair options when suitable, hip and

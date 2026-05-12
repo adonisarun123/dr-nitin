@@ -6,7 +6,7 @@ const stats = [
     {
         id: 3,
         name: "Practice locations",
-        value: "Two",
+        value: "2",
         desc: "Attibele · HSR Layout",
         icon: MapPin,
     },

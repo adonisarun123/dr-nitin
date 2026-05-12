@@ -6,7 +6,7 @@ const locations = [
         area: "Attibele",
         addressLines: [
             "39, Sarjapura–Attibele Road",
-            "opposite Syndicate Bank, Anekal",
+            "opposite Canara Bank (formerly Syndicate Bank), Attibele",
             "Bengaluru, Karnataka 562107",
         ],
         phone: "+91-9980031006",

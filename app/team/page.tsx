@@ -6,9 +6,9 @@ import { FadeIn } from "@/components/animations/fade-in";
 
 export const metadata: Metadata = {
     title: {
-        absolute: "Our Medical Team | Dr Nitin N Sunku Orthopedic Care",
+        absolute: "Our Medical Team | Dr. Nitin N Sunku Orthopedic Care",
     },
-    description: "Meet the medical team supporting Dr Nitin N Sunku, delivering expert orthopedic and sports medicine care with a patient-focused approach.",
+    description: "Meet the medical team supporting Dr. Nitin N Sunku, delivering expert orthopedic and sports medicine care with a patient-focused approach.",
 };
 
 export default function TeamPage() {
@@ -21,10 +21,10 @@ export default function TeamPage() {
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-3xl text-center">
                 <p className="text-gray-700 leading-relaxed">
-                    The profiles below introduce clinicians and staff who support orthopaedic consultations,
+                    The profiles below introduce clinicians and staff who support orthopedic consultations,
                     scheduling, and perioperative education. Together they help maintain short waiting times,
                     coordinate investigations, and ensure you understand home exercises or wound care before
-                    discharge. Leadership of the surgical team rests with Dr. Nitin N. Sunku; reach him through
+                    discharge. Leadership of the surgical team rests with Dr. Nitin N Sunku; reach him through
                     the same contact channels listed site-wide.
                 </p>
             </div>

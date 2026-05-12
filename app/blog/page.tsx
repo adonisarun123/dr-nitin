@@ -9,7 +9,7 @@ import { blogPosts } from "@/lib/data";
 export const metadata: Metadata = {
     title: "Orthopedic & Sports Medicine Blog",
     description:
-        "Read expert blogs by Dr Nitin N Sunku on orthopedic care, sports injuries, knee pain, joint health and recovery tips for patients.",
+        "Read expert blogs by Dr. Nitin N Sunku on orthopedic care, sports injuries, knee pain, joint health and recovery tips for patients.",
 };
 
 export default function BlogPage() {
@@ -21,7 +21,7 @@ export default function BlogPage() {
         <main className="min-h-screen pb-20 bg-slate-50/40">
             <PageHeaderBold
                 title="Ortho Blog"
-                description="Expert insights, tips, and updates from Dr. Nitin Sunku on orthopedic health and sports medicine."
+                description="Expert insights, tips, and updates from Dr. Nitin N Sunku on orthopedic health and sports medicine."
             />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10 max-w-3xl">

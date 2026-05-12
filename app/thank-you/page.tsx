@@ -35,7 +35,7 @@ export default function ThankYouPage() {
 
                     <FadeIn delay={0.2}>
                         <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 tracking-tight text-white">
-                            THANK YOU FOR <br /> REACHING OUT!
+                            Thank you for reaching out
                         </h1>
                     </FadeIn>
 
@@ -67,8 +67,8 @@ export default function ThankYouPage() {
                                             <Mail className="h-5 w-5 text-blue-600" />
                                         </div>
                                         <div>
-                                            <p className="font-semibold text-gray-900">Confirmation Sent</p>
-                                            <p className="text-sm text-gray-600">A confirmation of your request has been sent to your email.</p>
+                                            <p className="font-semibold text-gray-900">Request Received</p>
+                                            <p className="text-sm text-gray-600">If you provided an email address, a confirmation has been sent to your inbox.</p>
                                         </div>
                                     </li>
                                     <li className="flex items-start gap-4">
@@ -108,22 +108,32 @@ export default function ThankYouPage() {
                             {/* Contact Summary */}
                             <div className="bg-gray-50 rounded-xl p-8 border border-gray-200/50">
                                 <h3 className="text-lg font-bold text-gray-900 mb-6">Need Immediate Help?</h3>
-                                <div className="space-y-6">
+                                <div className="space-y-5">
                                     <div>
-                                        <p className="text-sm text-gray-500 uppercase tracking-wider font-bold mb-2">Our Clinic</p>
-                                        <p className="text-gray-700 font-medium text-sm leading-relaxed">
+                                        <p className="text-xs text-gray-500 uppercase tracking-wider font-bold mb-2">
+                                            Raghava Multispeciality Hospital · Attibele
+                                        </p>
+                                        <p className="text-gray-700 text-sm leading-relaxed mb-1">
                                             {siteConfig.address}
                                         </p>
-                                    </div>
-                                    <div>
-                                        <p className="text-sm text-gray-500 uppercase tracking-wider font-bold mb-2">Call/WhatsApp</p>
-                                        <a href={`tel:${siteConfig.phone}`} className="text-blue-600 font-bold text-xl hover:text-blue-700 transition-colors">
+                                        <a href={`tel:${siteConfig.phone}`} className="text-blue-600 font-bold hover:text-blue-700 transition-colors">
                                             {siteConfig.phone}
                                         </a>
                                     </div>
                                     <div className="pt-4 border-t border-gray-200">
+                                        <p className="text-xs text-gray-500 uppercase tracking-wider font-bold mb-2">
+                                            Health Nest Hospital · HSR Layout
+                                        </p>
+                                        <p className="text-gray-700 text-sm leading-relaxed mb-1">
+                                            {siteConfig.addressSecondary}
+                                        </p>
+                                        <a href={`tel:${siteConfig.phoneSecondary}`} className="text-blue-600 font-bold hover:text-blue-700 transition-colors">
+                                            {siteConfig.phoneSecondary}
+                                        </a>
+                                    </div>
+                                    <div className="pt-4 border-t border-gray-200">
                                         <p className="text-sm text-gray-600 italic">
-                                            "Building Stronger Joints, One Patient at a Time."
+                                            &ldquo;Building stronger joints, one patient at a time.&rdquo;
                                         </p>
                                     </div>
                                 </div>

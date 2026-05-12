@@ -14,7 +14,30 @@
  *   blog detail page.
  */
 
-const PUBLISH_DATE = "May 8, 2026";
+/**
+ * Publish dates are staggered across the 4-week window April 6 – May 4, 2026 so search
+ * engines don't see all cluster posts dropped on a single day (a soft signal of automated
+ * content). Dates use ISO 8601 (YYYY-MM-DD) so they can be parsed and emitted as
+ * schema.org `datePublished` / `dateModified` correctly.
+ *
+ * Order roughly matches the array order below (Pillar #1's most-supportive clusters
+ * publish first), so the editorial cadence reads naturally.
+ */
+const PUBLISH_DATES = [
+    "2026-04-06", // 1  PRP vs GFC
+    "2026-04-09", // 2  Exercises for knee OA
+    "2026-04-13", // 3  What is regenerative medicine
+    "2026-04-15", // 4  Sports injury regenerative
+    "2026-04-17", // 5  Weight loss & knee pain
+    "2026-04-20", // 6  Can OA be managed without surgery
+    "2026-04-22", // 7  Knee replacement alternatives
+    "2026-04-24", // 8  Early signs of OA
+    "2026-04-27", // 9  Cartilage degeneration
+    "2026-04-29", // 10 Tendinopathy treatment
+    "2026-05-01", // 11 Best treatments knee pain after 40
+    "2026-05-04", // 12 Benefits of ultrasound-guided injections
+    "2026-05-04", // 13 Shoulder pain injections
+];
 
 /** Common closing CTA used at the bottom of each cluster post. */
 const CLOSING_CTA = `
@@ -32,7 +55,7 @@ export const treatmentClusterPosts = [
         title: "PRP vs GFC for Knee Pain — What's the Real Difference?",
         excerpt:
             "PRP and GFC both come from your own blood, but they're not the same. A clear, patient-friendly comparison of how each regenerative injection works, who benefits, and how to choose.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[0],
         category: "Regenerative Medicine",
         image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -112,7 +135,7 @@ export const treatmentClusterPosts = [
         title: "What Is Regenerative Orthopedic Medicine? A Patient's Guide",
         excerpt:
             "Regenerative orthopedic medicine in plain language — what it is, how it works, who benefits, and what it can and cannot do for joint and tendon pain.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[1],
         category: "Regenerative Medicine",
         image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -204,7 +227,7 @@ export const treatmentClusterPosts = [
         title: "Knee Replacement Alternatives: Real Non-Surgical Options That Work",
         excerpt:
             "Real, evidence-based alternatives to knee replacement — physiotherapy, HA, GFC, ultrasound-guided injections, and lifestyle care. An honest second-opinion guide.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[2],
         category: "Knee Pain",
         image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -281,7 +304,7 @@ export const treatmentClusterPosts = [
         title: "Early Signs of Knee Osteoarthritis — What to Look For",
         excerpt:
             "Catching knee OA early gives you more options and better outcomes. The 10 earliest signs to watch for, and what to do about each.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[3],
         category: "Osteoarthritis",
         image: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -355,7 +378,7 @@ export const treatmentClusterPosts = [
         title: "Can Knee Osteoarthritis Be Managed Without Surgery? An Honest Answer",
         excerpt:
             "Yes — for many patients, knee osteoarthritis can be managed without surgery. Here's the honest picture of what works, what doesn't, and where the line really sits.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[4],
         category: "Osteoarthritis",
         image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -426,7 +449,7 @@ export const treatmentClusterPosts = [
         title: "Best Treatments for Knee Pain After 40 — A Practical Guide",
         excerpt:
             "Knee pain after 40? A practical, evidence-based guide to the best non-surgical treatments — exercise, weight, HA, GFC, ultrasound-guided injections.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[5],
         category: "Knee Pain",
         image: "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -490,7 +513,7 @@ export const treatmentClusterPosts = [
         title: "Best Exercises for Knee Osteoarthritis — Safe Home Routine",
         excerpt:
             "Safe, effective exercises for knee osteoarthritis you can do at home. A practical step-by-step routine to build strength, reduce pain, and protect your knees.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[6],
         category: "Osteoarthritis",
         image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -587,7 +610,7 @@ export const treatmentClusterPosts = [
         title: "Weight Loss and Knee Pain — How Much Difference Does It Make?",
         excerpt:
             "How much can weight loss really help your knee pain? An honest, practical guide to the math, the mechanics, and how to build a knee-friendly plan.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[7],
         category: "Knee Pain",
         image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -667,7 +690,7 @@ export const treatmentClusterPosts = [
         title: "Tendinopathy Treatment — Modern Non-Surgical Care",
         excerpt:
             "Modern, non-surgical care for chronic tendon pain — tennis elbow, jumper's knee, Achilles, plantar fasciitis. How regenerative care and image guidance change the picture.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[8],
         category: "Tendon Care",
         image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -742,7 +765,7 @@ export const treatmentClusterPosts = [
         title: "Shoulder Pain Injections — Precision, Non-Surgical Care",
         excerpt:
             "Precision ultrasound-guided shoulder injections for rotator cuff, bursitis, frozen shoulder, AC joint, and biceps tendon problems.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[9],
         category: "Shoulder Care",
         image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -815,7 +838,7 @@ export const treatmentClusterPosts = [
         title: "Sports Injury Regenerative Treatments — Faster, Smarter Recovery",
         excerpt:
             "Modern regenerative care for sports injuries — GFC, PRP, ultrasound-guided injections, and rehab. Get back to your sport faster, smarter.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[10],
         category: "Sports Medicine",
         image: "https://images.unsplash.com/photo-1486218119243-13883505764c?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -888,7 +911,7 @@ export const treatmentClusterPosts = [
         title: "Cartilage Degeneration Explained — In Plain English",
         excerpt:
             "Cartilage degeneration in your knee, explained simply. What causes it, how it progresses, and what modern non-surgical treatments can — and cannot — do.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[11],
         category: "Osteoarthritis",
         image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `
@@ -975,7 +998,7 @@ export const treatmentClusterPosts = [
         title: "Benefits of Ultrasound-Guided Injections — Why Precision Changes Outcomes",
         excerpt:
             "Why ultrasound-guided injections deliver better, safer results. Accuracy, safety, comfort, and outcome differences vs traditional landmark injections.",
-        date: PUBLISH_DATE,
+        date: PUBLISH_DATES[12],
         category: "Regenerative Medicine",
         image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=630&fit=crop&q=80&auto=format",
         content: `

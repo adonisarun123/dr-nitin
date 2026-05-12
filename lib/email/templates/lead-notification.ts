@@ -2,7 +2,7 @@ import { LeadInput } from '@/lib/types/lead';
 
 export function generateLeadNotificationEmail(lead: LeadInput): { html: string; text: string } {
     const formattedDate = lead.preferredDate
-        ? new Date(lead.preferredDate).toLocaleDateString('en-US', {
+        ? new Date(lead.preferredDate).toLocaleDateString('en-IN', {
             weekday: 'long',
             year: 'numeric',
             month: 'long',
@@ -112,7 +112,7 @@ export function generateLeadNotificationEmail(lead: LeadInput): { html: string; 
         
         <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
             <p style="color: #999; font-size: 12px; margin: 5px 0;">
-                This email was sent from your booking form at ${process.env.APP_NAME || 'Dr. Nitin Sunku - Orthopedic Clinic'}
+                This email was sent from your booking form at ${process.env.APP_NAME || 'Dr. Nitin N Sunku - Orthopedic Clinic'}
             </p>
             <p style="color: #999; font-size: 12px; margin: 5px 0;">
                 Timestamp: ${new Date().toLocaleString()}
@@ -145,7 +145,7 @@ ${lead.submittedAt ? `Submitted at: ${new Date(lead.submittedAt).toLocaleString(
 ACTION REQUIRED: Please contact this lead within 24 hours for best conversion rates.
 
 ---
-This email was sent from your booking form at ${process.env.APP_NAME || 'Dr. Nitin Sunku - Orthopedic Clinic'}
+This email was sent from your booking form at ${process.env.APP_NAME || 'Dr. Nitin N Sunku - Orthopedic Clinic'}
 Timestamp: ${new Date().toLocaleString()}
   `;
 

@@ -68,8 +68,8 @@ export function HeroBold() {
 
                         <FadeIn delay={0.18}>
                             <p className="text-lg lg:text-xl text-blue-100/80 leading-relaxed max-w-2xl">
-                                Top-rated orthopedic surgeon in HSR Layout, specializing in
-                                arthroscopy, sports injuries, joint replacement, and
+                                Trusted orthopedic surgeon in Attibele & HSR Layout, Bengaluru —
+                                specializing in arthroscopy, sports injuries, joint replacement, and
                                 compassionate, evidence-based care.
                             </p>
                         </FadeIn>
@@ -113,7 +113,7 @@ export function HeroBold() {
                                     <Star className="h-4 w-4 fill-yellow-300" aria-hidden />
                                     <Star className="h-4 w-4 fill-yellow-300" aria-hidden />
                                 </span>
-                                <span>5/5 · Top-rated orthopedic doctor in HSR Layout</span>
+                                <span>Patient-rated · Consultations in HSR Layout & Attibele, Bengaluru</span>
                             </div>
                         </FadeIn>
                     </div>

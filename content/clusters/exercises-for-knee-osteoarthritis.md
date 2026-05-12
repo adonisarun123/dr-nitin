@@ -106,7 +106,7 @@ Aim for **3 sessions per week**. Each session takes about **20 minutes**. Always
 #### 10. Closing walk
 - 5 minutes of relaxed walking to finish.
 
-> If you have post-injection day, recent surgery, or severe pain, modify or skip — and always follow your physiotherapist's specific advice.
+> If you are within a post-injection window, recovering from recent surgery, or experiencing severe pain, modify or skip these exercises — and always follow your physiotherapist's specific advice.
 
 ---
 

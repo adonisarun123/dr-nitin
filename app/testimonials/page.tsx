@@ -7,10 +7,10 @@ import { TestimonialsShowcase } from "@/components/sections/testimonials-showcas
 
 export const metadata: Metadata = {
     title: {
-        absolute: "Patient Testimonials | Dr Nitin N Sunku Orthopedic",
+        absolute: "Patient Testimonials | Dr. Nitin N Sunku Orthopedic",
     },
     description:
-        "Read real patient testimonials of Dr Nitin N Sunku, trusted orthopedic & sports medicine specialist known for expert care and recovery outcomes.",
+        "Read real patient testimonials of Dr. Nitin N Sunku, trusted orthopedic & sports medicine specialist known for expert care and recovery outcomes.",
 };
 
 export default function TestimonialsPage() {
@@ -31,6 +31,12 @@ export default function TestimonialsPage() {
                     general health; use these stories as encouragement rather than a
                     guarantee of results. New patients can book through the contact page
                     to discuss expectations in person.
+                </p>
+                <p className="mt-5 text-sm text-gray-500 italic max-w-2xl mx-auto">
+                    <strong className="not-italic font-semibold text-gray-700">Disclaimer:</strong>{" "}
+                    Individual results may vary. The testimonials shared here are personal
+                    experiences and are not a guarantee, warranty, or prediction regarding
+                    the outcome of any specific treatment.
                 </p>
             </div>
 

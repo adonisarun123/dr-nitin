@@ -1,36 +1,17 @@
 import Script from 'next/script';
-import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
 
 export default function BookAppointmentLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
-    const GA_MEASUREMENT_ID = 'GT-K8MTGRQ9';
+    // Note: Google Analytics (GT-K8MTGRQ9) and WhatsAppFloat are already
+    // mounted in the root layout (app/layout.tsx). Avoid duplicating them
+    // here to prevent double page_views and a stacked floating button.
     const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
     return (
         <>
-            {/* Google Analytics 4 */}
-            {GA_MEASUREMENT_ID && (
-                <>
-                    <Script
-                        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-                        strategy="afterInteractive"
-                    />
-                    <Script id="google-analytics" strategy="afterInteractive">
-                        {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}', {
-                page_path: window.location.pathname,
-              });
-            `}
-                    </Script>
-                </>
-            )}
-
             {/* Meta Pixel */}
             {META_PIXEL_ID && (
                 <Script id="meta-pixel" strategy="afterInteractive">
@@ -50,7 +31,6 @@ export default function BookAppointmentLayout({
             )}
 
             {children}
-            <WhatsAppFloat />
         </>
     );
 }

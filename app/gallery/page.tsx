@@ -5,9 +5,9 @@ import { FadeIn } from "@/components/animations/fade-in";
 
 export const metadata: Metadata = {
     title: {
-        absolute: "Clinic & Treatment Gallery | Dr Nitin N Sunku Ortho",
+        absolute: "Clinic & Treatment Gallery | Dr. Nitin N Sunku Ortho",
     },
-    description: "Explore clinic, treatment and patient care gallery of Dr Nitin N Sunku, experienced orthopedic & sports medicine specialist in Attibele.",
+    description: "Explore clinic, treatment and patient care gallery of Dr. Nitin N Sunku, experienced orthopedic & sports medicine specialist in Attibele.",
 };
 
 export default function GalleryPage() {
@@ -45,7 +45,7 @@ export default function GalleryPage() {
         {
             src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-sunil-chhetri.png",
             alt: "Dr. Nitin with Sunil Chhetri",
-            caption: "Dr. Nitin with Indian football captain Sunil Chhetri - Team Doctor for Bengaluru FC",
+            caption: "Dr. Nitin with Indian football legend Sunil Chhetri during his role as Team Doctor for Bengaluru FC",
             location: "Bengaluru FC"
         }
     ];
@@ -60,7 +60,7 @@ export default function GalleryPage() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-4xl">
                 <div className="text-gray-700 leading-relaxed space-y-4 text-base">
                     <p>
-                        The photographs below document real consulting and waiting areas used for orthopaedic
+                        The photographs below document real consulting and waiting areas used for orthopedic
                         and sports medicine appointments. You will see reception and waiting spaces designed
                         for comfort during busy clinic hours, private examination rooms where gait, range of
                         motion, and swelling are checked systematically, and modern consultation rooms suited to

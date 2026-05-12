@@ -7,7 +7,7 @@ export function Footer() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-4 gap-12 mb-12">
                     <div>
-                        <h3 className="text-2xl font-heading font-bold text-white mb-6">Dr. Nitin Sunku</h3>
+                        <h3 className="text-2xl font-heading font-bold text-white mb-6">Dr. Nitin N Sunku</h3>
                         <p className="text-blue-100 mb-6">
                             Expert orthopedic care specializing in arthroscopy, sports injuries, and joint replacements. Restoring mobility, empowering lives.
                         </p>
@@ -48,8 +48,11 @@ export function Footer() {
                                 <MapPin className="h-5 w-5 text-orange-400 shrink-0 mt-1" />
                                 <div>
                                     <p className="font-semibold text-white mb-1">Raghava Multispeciality Hospital</p>
-                                    <span className="text-sm text-blue-100">39, Sarjapura - Attibele Rd, opposite syndicate bank, Attibele, Bengaluru</span>
-                                    <p className="text-sm mt-1 text-blue-100">📞 <a href="tel:+919980031006" className="hover:text-orange-400 transition-colors">+91-9980031006</a></p>
+                                    <span className="text-sm text-blue-100">39, Sarjapura - Attibele Rd, opposite Canara Bank (formerly Syndicate Bank), Attibele, Bengaluru</span>
+                                    <p className="text-sm mt-1 text-blue-100 inline-flex items-center gap-1.5">
+                                        <Phone className="h-3.5 w-3.5 text-orange-400" aria-hidden />
+                                        <a href="tel:+919980031006" className="hover:text-orange-400 transition-colors">+91-9980031006</a>
+                                    </p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
@@ -57,12 +60,11 @@ export function Footer() {
                                 <div>
                                     <p className="font-semibold text-white mb-1">Health Nest Hospital</p>
                                     <span className="text-sm text-blue-100">1162, 24th Main Rd Sector 2, HSR Layout, Bengaluru</span>
-                                    <p className="text-sm mt-1 text-blue-100">📞 <a href="tel:+919449031003" className="hover:text-orange-400 transition-colors">+91-9449031003</a></p>
+                                    <p className="text-sm mt-1 text-blue-100 inline-flex items-center gap-1.5">
+                                        <Phone className="h-3.5 w-3.5 text-orange-400" aria-hidden />
+                                        <a href="tel:+919449031003" className="hover:text-orange-400 transition-colors">+91-9449031003</a>
+                                    </p>
                                 </div>
-                            </li>
-                            <li className="flex items-center gap-3">
-                                <Phone className="h-5 w-5 text-orange-400" />
-                                <a href="tel:+919449031003" className="text-blue-100 hover:text-orange-400 transition-colors">+91-9449031003</a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="h-5 w-5 text-orange-400" />
@@ -73,7 +75,7 @@ export function Footer() {
                 </div>
 
                 <div className="border-t border-blue-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-blue-200">
-                    <p>© {new Date().getFullYear()} Dr. Nitin Sunku. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Dr. Nitin N Sunku. All rights reserved.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <Link href="/privacy-policy" className="hover:text-orange-400 transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="hover:text-orange-400 transition-colors">Terms of Service</Link>

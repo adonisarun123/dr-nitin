@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const locations = [
     {
         name: "Raghava Multispeciality Hospital",
-        address: "39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal, Bengaluru, Karnataka 562107",
+        address: "39, Sarjapura - Attibele Rd, opposite Canara Bank (formerly Syndicate Bank), Attibele, Bengaluru, Karnataka 562107",
         phone: "+91-9980031006",
         mapLink: "https://www.google.com/maps/place/Raghava+Multispeciality+Hospital/data=!4m2!3m1!1s0x0:0xaeb4c2023a37fea6?sa=X&ved=1t:2428&ictx=111",
     },
@@ -22,7 +22,7 @@ export function Locations() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-heading font-bold text-gray-900">Visit Us</h2>
-                    <p className="mt-4 text-gray-600">Consult Dr. Nitin at these convenient locations in HSR Layout.</p>
+                    <p className="mt-4 text-gray-600">Consult Dr. Nitin at these convenient locations in Bengaluru.</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

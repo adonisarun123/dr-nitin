@@ -61,7 +61,7 @@ export async function sendEmail({
 }) {
     try {
         const info = await transporter.sendMail({
-            from: `"${process.env.APP_NAME || 'Dr. Nitin Sunku'}" <${process.env.FROM_EMAIL}>`,
+            from: `"${process.env.APP_NAME || 'Dr. Nitin N Sunku'}" <${process.env.FROM_EMAIL}>`,
             to,
             subject,
             text,

@@ -7,9 +7,9 @@ import { BookingForm } from "@/components/forms/booking-form";
 
 export const metadata: Metadata = {
     title: {
-        absolute: "Contact Dr Nitin N Sunku | Orthopedic Care in Attibele",
+        absolute: "Contact Dr. Nitin N Sunku | Orthopedic Care in Attibele",
     },
-    description: "Get in touch with Dr Nitin N Sunku, orthopedic & sports medicine specialist in Attibele for appointments, consultations, and expert joint care.",
+    description: "Get in touch with Dr. Nitin N Sunku, orthopedic & sports medicine specialist in Attibele for appointments, consultations, and expert joint care.",
 };
 
 export default function ContactPage() {
@@ -58,8 +58,11 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <strong className="block text-gray-900 mb-1">Raghava Multispeciality Hospital</strong>
-                                        <p className="text-gray-600">39, Sarjapura - Attibele Rd, opposite syndicate bank, Attibele, Bengaluru, Karnataka 562107</p>
-                                        <p className="text-gray-700 font-medium mt-1">📞 <a href="tel:+919980031006" className="hover:text-primary transition-colors">+91-9980031006</a></p>
+                                        <p className="text-gray-600">39, Sarjapura - Attibele Rd, opposite Canara Bank (formerly Syndicate Bank), Attibele, Bengaluru, Karnataka 562107</p>
+                                        <p className="text-gray-700 font-medium mt-1 inline-flex items-center gap-1.5">
+                                            <Phone className="h-4 w-4 text-primary" aria-hidden />
+                                            <a href="tel:+919980031006" className="hover:text-primary transition-colors">+91-9980031006</a>
+                                        </p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-4">
@@ -69,7 +72,10 @@ export default function ContactPage() {
                                     <div>
                                         <strong className="block text-gray-900 mb-1">Health Nest Hospital</strong>
                                         <p className="text-gray-600">1162, 24th Main Rd Sector 2, HSR Layout, Bengaluru, Karnataka 560102</p>
-                                        <p className="text-gray-700 font-medium mt-1">📞 <a href="tel:+919449031003" className="hover:text-primary transition-colors">+91-9449031003</a></p>
+                                        <p className="text-gray-700 font-medium mt-1 inline-flex items-center gap-1.5">
+                                            <Phone className="h-4 w-4 text-primary" aria-hidden />
+                                            <a href="tel:+919449031003" className="hover:text-primary transition-colors">+91-9449031003</a>
+                                        </p>
                                     </div>
                                 </li>
 
@@ -140,7 +146,7 @@ export default function ContactPage() {
                                 ></iframe>
                                 <p className="p-4 bg-gray-50 border-t border-gray-100 text-sm">
                                     <a
-                                        href="https://www.google.com/maps/search/?api=1&query=Health+Nest+Hospital+1162%2C+24th+Main+Rd%2C+Garden+Layout%2C+Sector+2+HSR+Layout%2C+Bangalore%2C+Karnataka+560102"
+                                        href="https://www.google.com/maps/search/?api=1&query=Health+Nest+Hospital+1162%2C+24th+Main+Rd%2C+Garden+Layout%2C+Sector+2+HSR+Layout%2C+Bengaluru%2C+Karnataka+560102"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="font-medium text-primary hover:underline"
@@ -157,7 +163,7 @@ export default function ContactPage() {
                 <div className="mt-16">
                     <FadeIn delay={0.5}>
                         <h2 className="text-3xl font-heading font-bold text-gray-900 text-center mb-4">Patient Testimonials</h2>
-                        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Hear from our patients about their recovery journey and experience with Dr. Nitin</p>
+                        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Hear from our patients about their recovery journey and experience with Dr. Nitin.</p>
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
                                 <iframe

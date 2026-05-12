@@ -70,7 +70,7 @@ export function TreatmentsGridBold() {
                                     </p>
 
                                     <div className="inline-flex items-center gap-2 text-blue-700 font-semibold text-sm">
-                                        Read treatment guide
+                                        Learn more
                                         <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                                     </div>
                                 </div>

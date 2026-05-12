@@ -4,7 +4,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const credentials = [
-    "MBBS & MS Orthopaedics (Gold Medalist)",
+    "MBBS & MS Orthopedics (Gold Medalist)",
     "Fellowship in Arthroscopy & Sports Medicine",
     "Team Doctor - Bengaluru Football Club",
     "Visiting Consultant - Narayana Hrudayalaya & Manipal Hospital",
@@ -46,7 +46,7 @@ export function AboutTeaserBold() {
                         </h2>
 
                         <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                            Dr. Nitin is a fellowship-trained Orthopaedic Surgeon
+                            Dr. Nitin is a fellowship-trained Orthopedic Surgeon
                             specializing in arthroscopy, sports medicine, and joint
                             replacements. With experience at top institutes and as the
                             Team Doctor for Bengaluru FC, he brings elite-level care to
