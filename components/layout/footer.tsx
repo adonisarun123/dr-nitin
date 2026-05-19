@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail } from "lucide-react";
+import { CLINICS, PRACTICE_EMAIL } from "@/lib/practice";
 
 export function Footer() {
     return (
@@ -44,31 +45,22 @@ export function Footer() {
                     <div>
                         <h4 className="text-lg font-bold text-white mb-6">Contact</h4>
                         <ul className="space-y-4">
-                            <li className="flex items-start gap-3">
-                                <MapPin className="h-5 w-5 text-orange-400 shrink-0 mt-1" />
-                                <div>
-                                    <p className="font-semibold text-white mb-1">Raghava Multispeciality Hospital</p>
-                                    <span className="text-sm text-blue-100">39, Sarjapura - Attibele Rd, opposite Canara Bank (formerly Syndicate Bank), Attibele, Bengaluru</span>
-                                    <p className="text-sm mt-1 text-blue-100 inline-flex items-center gap-1.5">
-                                        <Phone className="h-3.5 w-3.5 text-orange-400" aria-hidden />
-                                        <a href="tel:+919980031006" className="hover:text-orange-400 transition-colors">+91-9980031006</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <MapPin className="h-5 w-5 text-orange-400 shrink-0 mt-1" />
-                                <div>
-                                    <p className="font-semibold text-white mb-1">Health Nest Hospital</p>
-                                    <span className="text-sm text-blue-100">1162, 24th Main Rd Sector 2, HSR Layout, Bengaluru</span>
-                                    <p className="text-sm mt-1 text-blue-100 inline-flex items-center gap-1.5">
-                                        <Phone className="h-3.5 w-3.5 text-orange-400" aria-hidden />
-                                        <a href="tel:+919449031003" className="hover:text-orange-400 transition-colors">+91-9449031003</a>
-                                    </p>
-                                </div>
-                            </li>
+                            {CLINICS.map((c) => (
+                                <li key={c.id} className="flex items-start gap-3">
+                                    <MapPin className="h-5 w-5 text-orange-400 shrink-0 mt-1" />
+                                    <div>
+                                        <p className="font-semibold text-white mb-1">{c.name}</p>
+                                        <span className="text-sm text-blue-100">{c.address}</span>
+                                        <p className="text-sm mt-1 text-blue-100 inline-flex items-center gap-1.5">
+                                            <Phone className="h-3.5 w-3.5 text-orange-400" aria-hidden />
+                                            <a href={`tel:${c.phone}`} className="hover:text-orange-400 transition-colors">{c.phone}</a>
+                                        </p>
+                                    </div>
+                                </li>
+                            ))}
                             <li className="flex items-center gap-3">
                                 <Mail className="h-5 w-5 text-orange-400" />
-                                <span className="text-blue-100">contact@drnitinsunku.com</span>
+                                <span className="text-blue-100">{PRACTICE_EMAIL}</span>
                             </li>
                         </ul>
                     </div>

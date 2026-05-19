@@ -1,24 +1,6 @@
 import { ArrowUpRight, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const locations = [
-    {
-        name: "Raghava Multispeciality Hospital",
-        address:
-            "39, Sarjapura - Attibele Rd, opposite Canara Bank (formerly Syndicate Bank), Attibele, Bengaluru, Karnataka 562107",
-        phone: "+91-9980031006",
-        mapLink:
-            "https://www.google.com/maps/place/Raghava+Multispeciality+Hospital/data=!4m2!3m1!1s0x0:0xaeb4c2023a37fea6?sa=X&ved=1t:2428&ictx=111",
-    },
-    {
-        name: "Health Nest Hospital",
-        address:
-            "1162, 24th Main Rd Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
-        phone: "+91-9449031003",
-        mapLink:
-            "https://www.google.com/maps/place/Health+Nest+Hospital/data=!4m2!3m1!1s0x0:0x13399aca4c9e0a68?sa=X&ved=1t:2428&ictx=111",
-    },
-];
+import { CLINICS } from "@/lib/practice";
 
 /**
  * Bold modern "Visit Us" — direction B.
@@ -41,9 +23,9 @@ export function LocationsBold() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-5 lg:gap-6 max-w-4xl mx-auto">
-                    {locations.map((loc) => (
+                    {CLINICS.map((loc) => (
                         <article
-                            key={loc.name}
+                            key={loc.id}
                             className="relative rounded-3xl bg-slate-950 text-white p-7 lg:p-9 overflow-hidden flex flex-col"
                         >
                             <div

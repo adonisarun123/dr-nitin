@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Send, Loader2 } from "lucide-react";
 import { trackFormEvent, getUTMParameters } from "@/lib/analytics";
+import { PRIMARY_CLINIC } from "@/lib/practice";
 
 interface BookingFormProps {
     source?: string;
@@ -18,6 +19,9 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
         preferredLocation: "",
         preferredDate: "",
         message: "",
+        // Honeypot — kept blank in normal use. Bots that auto-fill all fields
+        // will populate this and be rejected by the /api/leads handler.
+        company: "",
     });
 
     const router = useRouter();
@@ -103,7 +107,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
             // Redirect to thank you page
             router.push('/thank-you');
         } catch (err) {
-            setError("Something went wrong. Please try again or call us directly at +91-9449031003.");
+            setError(`Something went wrong. Please try again or call us directly at ${PRIMARY_CLINIC.phone}.`);
 
             // Track form error
             trackFormEvent('booking_form', 'error', {
@@ -252,6 +256,32 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none resize-none"
                     placeholder="Tell us more about your condition or any specific concerns..."
+                />
+            </div>
+
+            {/* Honeypot: must remain empty. Hidden from real users with
+                multiple defensive techniques (off-screen + aria-hidden +
+                tabindex + autocomplete=off) so screen readers also skip it. */}
+            <div
+                aria-hidden="true"
+                style={{
+                    position: "absolute",
+                    left: "-10000px",
+                    top: "auto",
+                    width: "1px",
+                    height: "1px",
+                    overflow: "hidden",
+                }}
+            >
+                <label htmlFor="company">Company (leave blank)</label>
+                <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.company}
+                    onChange={handleChange}
                 />
             </div>
 

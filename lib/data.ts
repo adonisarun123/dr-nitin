@@ -1,36 +1,31 @@
 import { treatmentClusterPosts } from "./blog-posts-treatments";
+import {
+  ATTIBELE_CLINIC,
+  HSR_CLINIC,
+  PRACTICE_EMAIL,
+  clinicPostalAddress,
+} from "./practice";
 
+/**
+ * Public site config. Clinic-specific fields are derived from `lib/practice.ts`
+ * (single source of truth). Do not hardcode clinic phone / address here.
+ */
 export const siteConfig = {
   name: "Dr. Nitin N Sunku",
-  description: "Dr. Nitin N Sunku — orthopedic & sports medicine specialist in Attibele and HSR Layout, Bengaluru. Arthroscopy, joint replacement, ACL care, regenerative & sports injury treatment.",
-  // Primary clinic is Attibele (Raghava Multispeciality Hospital); HSR Layout (Health Nest Hospital) is the secondary location.
-  address: "39, Sarjapura - Attibele Rd, opposite Canara Bank (formerly Syndicate Bank), Attibele, Bengaluru, Karnataka 562107",
-  // Secondary clinic address kept for reference / footer / contact display.
-  addressSecondary: "1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
-  phone: "+91-9980031006", // Attibele (Raghava) — primary clinic line
-  phoneSecondary: "+91-9449031003", // HSR Layout (Health Nest)
-  email: "contact@drnitinsunku.com",
-};
+  description:
+    "Dr. Nitin N Sunku — orthopedic & sports medicine specialist in Attibele and HSR Layout, Bengaluru. Arthroscopy, joint replacement, ACL care, regenerative & sports injury treatment.",
+  address: ATTIBELE_CLINIC.address,
+  addressSecondary: HSR_CLINIC.address,
+  phone: ATTIBELE_CLINIC.phone,
+  phoneSecondary: HSR_CLINIC.phone,
+  email: PRACTICE_EMAIL,
+} as const;
 
 /** PostalAddress for JSON-LD (primary clinic — Attibele / Raghava Multispeciality Hospital). */
-export const practicePostalAddress = {
-  "@type": "PostalAddress" as const,
-  streetAddress: siteConfig.address,
-  addressLocality: "Attibele, Bengaluru",
-  addressRegion: "Karnataka",
-  postalCode: "562107",
-  addressCountry: "IN",
-};
+export const practicePostalAddress = clinicPostalAddress(ATTIBELE_CLINIC);
 
 /** PostalAddress for the secondary HSR Layout clinic — used in clinic listings and JSON-LD @graph. */
-export const practicePostalAddressSecondary = {
-  "@type": "PostalAddress" as const,
-  streetAddress: siteConfig.addressSecondary,
-  addressLocality: "HSR Layout, Bengaluru",
-  addressRegion: "Karnataka",
-  postalCode: "560102",
-  addressCountry: "IN",
-};
+export const practicePostalAddressSecondary = clinicPostalAddress(HSR_CLINIC);
 
 export const servicesData = [
   {
@@ -2221,8 +2216,13 @@ export const blogPosts = [
     `
   },
   {
-    slug: "common-causes-of-meniscus-tears-in-active-adults",
-    title: "Common Causes of Meniscus Tears in Active Adults",
+    // Renamed from "common-causes-of-meniscus-tears-in-active-adults" to avoid
+    // a slug collision with the longer Apr 2024 rewrite above. The two posts
+    // have meaningfully different content (this one focuses on the
+    // ACL-reconstruction-and-meniscus-repair combination angle), so keeping
+    // both is the right call rather than deleting one.
+    slug: "common-causes-of-meniscus-tears-and-acl-injuries",
+    title: "Common Causes of Meniscus Tears in Active Adults (with ACL focus)",
     excerpt: "Meniscus tears are among the most common knee injuries seen in active adults. The meniscus is a C-shaped cartilage that cushions the knee and helps with smooth ",
     date: "Mar 26, 2024",
     category: "Sports Medicine",
@@ -2630,6 +2630,591 @@ export const blogPosts = [
       <h3>Frequently Asked Questions (FAQs)</h3>
       <p><strong>Can I walk?</strong><br/>Yes, on flat surfaces, but avoid stairs or long distances initially.</p>
       <p><strong>Is cycling safe?</strong><br/>Stationary cycling is one of the safest options when set up correctly.</p>
+    `
+  },
+  {
+    slug: "red-light-therapy-for-acl-tear",
+    title: "Red Light Therapy for ACL Tear: What the Evidence Says and How It Fits Your Recovery",
+    excerpt: "Does red light therapy (photobiomodulation) actually help an ACL tear? An evidence-based look at mechanism, timing, dosing, and how it fits into structured ACL rehabilitation in Bengaluru.",
+    date: "May 12, 2026",
+    category: "Sports Medicine",
+    image: "https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <p>If you have recently torn your ACL, you are probably searching for anything that can help you heal faster, hurt less, and get back to sport or daily life without unnecessary delay. One name keeps coming up in sports medicine circles and online forums alike: <strong>red light therapy</strong>. But does it actually work for an ACL tear, or is it just the latest wellness trend dressed up in clinical language?</p>
+
+      <p>As an orthopaedic surgeon based in Bengaluru who manages ACL injuries every week, the honest answer is: red light therapy (also called <strong>photobiomodulation, PBM</strong>, or <strong>low-level laser therapy, LLLT</strong>) does have a growing body of evidence behind it. It is not a replacement for surgery or structured physiotherapy. Used correctly and at the right stage of recovery, it can be a genuinely useful adjunct that helps manage pain, reduce swelling, and support tissue repair.</p>
+
+      <h2>What Is an ACL Tear and Why Is Recovery So Challenging?</h2>
+      <p>The anterior cruciate ligament (ACL) is one of four key ligaments in the knee. It prevents the tibia from sliding forward relative to the femur and plays a major role in rotational stability — which is why ACL injuries are so common in sports that involve sudden direction changes such as football, basketball, badminton, and kabaddi.</p>
+      <p>When the ACL tears, several problems occur at once: bleeding inside the joint, loss of ligament structural integrity, cellular energy depletion, and a runaway inflammatory cascade. What makes ACL recovery uniquely difficult is that ligament tissue has very poor blood supply. Without adequate blood flow, the cells that repair the ligament cannot get the oxygen, glucose, and growth factors they need. This is why a complete ACL tear rarely heals on its own and typically requires arthroscopic reconstruction followed by 6 to 12 months of structured rehabilitation.</p>
+
+      <h2>What Is Red Light Therapy (Photobiomodulation)?</h2>
+      <p>Red light therapy uses specific wavelengths of red and near-infrared (NIR) light, typically between 630 and 880 nanometres, to stimulate biological activity inside cells. Unlike ultraviolet light (which damages DNA) or infrared heat (which only warms surface tissue), red and NIR light penetrate several centimetres into the skin and reach muscle, tendon, and ligament tissue underneath.</p>
+      <p>The primary target is the mitochondria. When the light hits a photoreceptor protein called <strong>cytochrome c oxidase</strong>, it triggers a cascade of beneficial changes: more ATP production, reduced oxidative stress, modulated inflammation, and increased release of growth factors that drive healing.</p>
+      <h3>Key Wavelengths Used in Practice</h3>
+      <ul>
+        <li><strong>Red light (630–670 nm):</strong> reaches superficial tissue, strong anti-inflammatory effect, promotes collagen synthesis.</li>
+        <li><strong>Near-infrared (800–1064 nm):</strong> penetrates deeper, ideal for reaching joint structures and ligament tissue.</li>
+        <li><strong>Combination devices</strong> using both wavelengths simultaneously are now the most common in clinical and home settings.</li>
+      </ul>
+
+      <h2>How Red Light Therapy Helps an ACL Tear</h2>
+      <h3>1. Boosting cellular energy (ATP)</h3>
+      <p>Photobiomodulation stimulates the mitochondria to produce more ATP. This surge of cellular energy accelerates cell proliferation, migration, and tissue remodelling — all essential steps in ligament healing.</p>
+      <h3>2. Regulating inflammation</h3>
+      <p>Inflammation after an ACL tear is necessary in the first few days, but harmful when prolonged. Red light therapy reduces pro-inflammatory signalling (TNF-alpha, IL-6) while increasing anti-inflammatory cytokines (IL-10), helping a controlled and effective response rather than one that runs out of control.</p>
+      <h3>3. Stimulating collagen production</h3>
+      <p>Red light therapy stimulates fibroblasts to deposit more organised collagen fibres rather than disorganised scar tissue. This matters because disorganised scar is weaker and more prone to re-injury.</p>
+      <h3>4. Improving local blood flow</h3>
+      <p>PBM stimulates the release of nitric oxide, dilating blood vessels, and promotes <strong>angiogenesis</strong> — the formation of new capillaries. Both effects improve the supply of oxygen and nutrients to the injured site.</p>
+      <h3>5. Drug-free pain management</h3>
+      <p>Red light therapy blocks certain pain signals by modulating ion channels and stimulates endorphin release. For patients who want to reduce reliance on NSAIDs or opioids during recovery, this can be a meaningful benefit.</p>
+
+      <h2>What Does the Research Actually Show?</h2>
+      <p>The strongest data comes from studies on general ligament and tendon healing, cartilage protection, and post-surgical pain reduction. ACL-specific evidence is growing but is not yet as large as the evidence for, say, low back pain or plantar fasciitis. Published studies using wavelengths around 804–850 nm consistently report lower pain scores, reduced swelling at three months post-injury, and less need for opioid analgesics in treated groups.</p>
+      <p>A 2022 study in <em>Physiological Research</em> examined LLLT for post-surgical knee contracture and found significant improvements in joint mobility and tissue flexibility. Ongoing clinical trials are specifically looking at photobiomodulation as a post-ACL reconstruction adjunct. The emerging consensus is that red light therapy is a credible adjunct with a sound mechanism and a reasonable evidence base — not a cure, but no longer something to dismiss.</p>
+
+      <h2>When and How to Use Red Light Therapy During ACL Recovery</h2>
+      <h3>Phase 1: Acute phase (Days 1–14 after injury or surgery)</h3>
+      <p>Swelling, pain, and haemarthrosis peak in this window. Red light therapy can help modulate inflammation and reduce pain — but if you have had surgery, get explicit clearance from your surgeon before applying any device near fresh incisions.</p>
+      <h3>Phase 2: Subacute and early rehabilitation (Weeks 2–6)</h3>
+      <p>The most productive window. Apply red light therapy <strong>before</strong> rehab sessions to improve tissue pliability and reduce pain enough to allow more effective exercise, and <strong>after</strong> sessions to limit post-exercise soreness.</p>
+      <h3>Phase 3: Progressive strengthening and return to sport (Months 2–9)</h3>
+      <p>During harder phases — quadriceps strengthening, neuromuscular training, plyometrics, sport-specific drills — PBM supports collagen maturation and helps keep inflammation from becoming an obstacle to training.</p>
+      <h3>Practical session guidelines</h3>
+      <ul>
+        <li><strong>Session length:</strong> 10 to 20 minutes per session.</li>
+        <li><strong>Frequency:</strong> 3 to 5 sessions per week during active rehabilitation.</li>
+        <li><strong>Distance:</strong> a few centimetres from skin surface (follow manufacturer guidance).</li>
+        <li><strong>Wavelength:</strong> prioritise devices with both red (630–670 nm) and NIR (800–850 nm) for knee and ligament injuries.</li>
+        <li>Do not apply directly over active infection, malignancy, or fresh surgical wounds without medical clearance.</li>
+      </ul>
+
+      <h2>Combining Red Light Therapy With Other ACL Strategies</h2>
+      <p>Red light therapy works best as part of a comprehensive plan. It complements <strong>structured physiotherapy</strong> by reducing the pain and stiffness that limit engagement with rehab. There is preliminary evidence suggesting that combining <strong>PRP injections</strong> with red light therapy may offer additive benefits — PRP delivers concentrated growth factors while PBM enhances cellular uptake of those signals. For patients undergoing <strong>ACL reconstruction surgery</strong>, PBM can play a useful role both pre-operatively (improving tissue quality) and throughout post-operative rehab.</p>
+
+      <h2>Is Red Light Therapy Safe?</h2>
+      <p>Photobiomodulation has an excellent safety profile. It is non-ionising, non-thermal at therapeutic doses, and non-invasive. Do not apply red light over known cancer sites, over the eyes without protective goggles, over a foetus during pregnancy, or over fresh surgical wounds without clearance. If you are on photosensitising medications, consult your doctor first.</p>
+      <p>The main practical limitations are these: PBM does not replace the structural work of physiotherapy and exercise, it cannot regenerate a completely torn ligament without surgical reconstruction, the quality of consumer devices varies enormously, and the optimal ACL-specific protocol is still being refined.</p>
+
+      <h2>ACL Care in Bengaluru: What to Expect</h2>
+      <p>If you are recovering from an ACL tear in Bengaluru and want to use red light therapy as part of your plan, do not start it without guidance from your treating orthopaedic surgeon. The phase of your recovery, the severity of your tear, and whether you have had surgery all matter.</p>
+      <p>Dr. Nitin N Sunku consults at <strong>Raghava Multispeciality Hospital, Attibele</strong> and <strong>Health Nest Hospital, HSR Layout</strong>, taking a conservative-first, evidence-based approach. To understand whether your knee injury is an ACL tear, or to get a second opinion on your current management plan, you can book an appointment online.</p>
+
+      <h2>Quick Reference</h2>
+      <p><strong>Benefits:</strong> increases ATP production; regulates inflammation; stimulates organised collagen deposition; promotes angiogenesis; drug-free pain relief; reduces post-exercise soreness during intensive rehab.</p>
+      <p><strong>Limitations:</strong> not a substitute for ACL reconstruction in complete tears; requires a clinically validated device with appropriate wavelengths and power output; must be timed correctly within rehabilitation; ACL-specific protocol research is still maturing.</p>
+
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>Can red light therapy heal a completely torn ACL without surgery?</strong><br/>No. A complete ACL rupture cannot regenerate the original fibres on its own. For complete tears, arthroscopic ACL reconstruction remains the standard of care. Red light therapy serves as an adjunct, not a replacement.</p>
+      <p><strong>When can I start red light therapy after ACL surgery?</strong><br/>Usually from week two or three post-operatively, once the incision has closed and there is no sign of infection — but always with surgeon clearance. Never apply directly over a fresh surgical wound or staples.</p>
+      <p><strong>Is red light therapy safe to use at home for ACL recovery?</strong><br/>Yes, if you choose a device with clinically validated wavelengths (630–670 nm red and 800–850 nm NIR) and adequate power output, follow the manufacturer's distance/duration guidance, wear eye protection, and use it as part of a plan supervised by your surgeon and physiotherapist.</p>
+      <p><strong>How many sessions before I see results?</strong><br/>Most patients report noticeable pain reduction and reduced swelling within 2–3 weeks of consistent use (3–5 sessions/week). Tissue-level benefits like improved collagen organisation are cumulative over months.</p>
+      <p><strong>Can red light therapy help without surgery?</strong><br/>For partial ACL tears managed conservatively, or for swelling and pain after any acute knee injury, PBM can help modulate inflammation and reduce discomfort. A proper diagnosis comes first — do not self-treat a knee injury without knowing what you are dealing with.</p>
+
+      <p><em>Educational content only. Always consult a qualified orthopaedic surgeon before adding any adjunct therapy to your ACL rehabilitation plan.</em></p>
+    `
+  },
+  {
+    slug: "titanium-vs-johnson-vs-ceramic-knee-replacement",
+    title: "Titanium vs Johnson vs Ceramic Knee Replacement: Which Implant Is Right for You?",
+    excerpt: "A patient-friendly comparison of titanium, Johnson/DePuy (cobalt-chrome), and ceramic/Oxinium knee implants — wear, biocompatibility, registry data, cost, and who each one suits in Bangalore.",
+    date: "May 14, 2026",
+    category: "Knee Surgery",
+    image: "https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <p>When your orthopaedic surgeon tells you that you need a knee replacement, the conversation rarely stops at "yes" or "no". A follow-up question almost always arrives: <strong>which implant should I choose?</strong></p>
+      <p>For patients in Bangalore and across India, three categories dominate most online searches: <strong>titanium knee replacement</strong>, <strong>Johnson knee replacement</strong> (referring to DePuy Synthes, the orthopaedic division of Johnson and Johnson), and <strong>ceramic knee replacement</strong> (including Oxinium oxidised zirconium options). Each has genuine strengths. Each has trade-offs. The "best" choice is almost always patient-specific.</p>
+
+      <h2>The Three-Part Anatomy of Any Knee Implant</h2>
+      <p>Every total knee replacement has three main components:</p>
+      <ol>
+        <li><strong>Femoral component:</strong> a metal cap that fits over the end of the thigh bone. Material choice has the greatest impact here on wear performance.</li>
+        <li><strong>Tibial component:</strong> a flat metal tray fixed to the top of the shin bone, with a polyethylene insert on top that acts as the new cartilage.</li>
+        <li><strong>Patellar component:</strong> a polyethylene dome that replaces the undersurface of the kneecap (sometimes left untouched).</li>
+      </ol>
+      <p>When people talk about a "titanium", "ceramic" or "Johnson" knee, they are mostly referring to the material used in the femoral component and tibial tray, and the fixation method. The polyethylene insert is common to most systems but its quality varies between generations.</p>
+
+      <h2>What Is a Titanium Knee Replacement?</h2>
+      <p>Titanium alloys (most commonly <strong>Ti6Al4V</strong>) have been used in orthopaedic surgery for decades. Key reasons:</p>
+      <ul>
+        <li><strong>Biocompatibility:</strong> titanium is naturally inert and rarely triggers immune reactions — a strong choice for patients with metal sensitivities.</li>
+        <li><strong>Elastic modulus closer to bone:</strong> more natural load distribution, reducing stress shielding.</li>
+        <li><strong>Osseointegration:</strong> titanium surfaces can be coated with hydroxyapatite, encouraging bone to grow directly into the implant — useful for cementless designs.</li>
+        <li><strong>Lower density:</strong> roughly one-third the weight of an equivalent cobalt-chromium implant.</li>
+      </ul>
+      <p><strong>Best for:</strong> patients with known nickel allergies, younger and more active patients, and those where cementless fixation is preferred. <strong>Limitations:</strong> pure titanium is softer than cobalt-chrome — so the articulating femoral surface may show slightly higher wear over time. Many titanium-based systems therefore use a titanium tibial base plate but a harder alloy or ceramic-coated femoral surface. Titanium implants also cost more than standard cobalt-chrome.</p>
+
+      <h2>What Is a Johnson Knee Replacement? (DePuy Synthes)</h2>
+      <p>When patients ask about a "Johnson knee replacement", they almost always mean implants made by <strong>DePuy Synthes</strong>, the orthopaedic division of Johnson and Johnson. DePuy is one of the world's largest joint-replacement manufacturers, and their products are widely used across India.</p>
+      <p>Current flagship knee systems include:</p>
+      <ul>
+        <li><strong>ATTUNE Knee System</strong> — the primary platform for total and revision knee replacement.</li>
+        <li><strong>PFC Sigma</strong> — an older but extensively tracked design with long registry data.</li>
+        <li><strong>VELYS Robotic-Assisted Solution</strong> — imageless robotic guidance with FDA clearance for unicompartmental knee arthroplasty.</li>
+      </ul>
+      <p><strong>Material composition:</strong> The ATTUNE femoral component is primarily <strong>cobalt-chromium-molybdenum (CoCr)</strong>. The tibial tray is titanium-based with a porous coating. The polyethylene insert uses UHMWPE, with cross-linked versions for improved wear resistance. Some DePuy systems also offer Oxinium femoral surfaces.</p>
+      <p><strong>Why widely prescribed:</strong> decade-plus registry longevity data (Australian AOANJRR, UK NJR), surgeon familiarity with the instrumentation, broad range across total/partial/revision/robotic, and the VELYS robotic option for sub-millimetre placement precision. <strong>Limitation:</strong> the CoCr femoral surface contains nickel, which can cause reactions in patients with confirmed nickel hypersensitivity.</p>
+
+      <h2>What Is a Ceramic Knee Replacement?</h2>
+      <p>"Ceramic" in knee replacement does not mean fragile. It covers a spectrum of modern materials with a hard, smooth, scratch-resistant surface.</p>
+      <h3>1. Oxinium (Oxidised Zirconium)</h3>
+      <p>Made by Smith and Nephew, Oxinium is a zirconium-niobium alloy (97.5% zirconium, 2.5% niobium) whose surface is transformed into zirconium oxide ceramic through heat oxidation. The result is a <strong>metal core</strong> (strong and fracture-resistant) with a <strong>true ceramic surface</strong> (hard, smooth, biocompatible, nickel-free). Oxinium produces significantly less polyethylene wear debris in laboratory simulations and competitive long-term revision rates in registry data.</p>
+      <h3>2. Full ceramic implants (alumina/zirconia composite)</h3>
+      <p>Some European manufacturers produce fully metal-free ceramic total knee systems. An 8-year prospective study in <em>Scientific Reports</em> found highly comparable clinical outcomes to metallic counterparts. These remain niche options, primarily for patients with extreme metal sensitivity.</p>
+      <h3>3. Titanium nitride (TiN) and TiNbN coatings</h3>
+      <p>Ceramic coatings applied to a standard metal substrate. A medium-term study found no significant differences in clinical outcomes or revision rates compared to conventional cobalt-chrome at 6.5 years, with survivorship of 96% in both groups.</p>
+      <p><strong>The key advantage:</strong> the femoral component rubs against polyethylene thousands of times a day. Smoother, harder ceramic surfaces produce fewer wear particles — meaning less inflammatory response and theoretically a longer-lasting implant. This matters most for younger, more active patients. <strong>Limitations:</strong> ceramic implants cost significantly more than standard cobalt-chrome, and pure ceramic components carry a small fracture risk — which is why the metal-core-with-ceramic-surface design (Oxinium) has become more popular than fully ceramic constructs.</p>
+
+      <h2>Head-to-Head Comparison</h2>
+      <p><strong>Wear resistance:</strong> titanium moderate, CoCr good, ceramic/Oxinium excellent.</p>
+      <p><strong>Nickel content:</strong> titanium negligible, CoCr present, ceramic/Oxinium none.</p>
+      <p><strong>Long-term registry data:</strong> CoCr extensive (15+ years), Oxinium growing (20+ years), titanium limited compared to CoCr.</p>
+      <p><strong>Best for:</strong> titanium — allergy patients, cementless fixation; CoCr — most standard total knee patients; Oxinium — younger or more active patients, allergy patients who want a fracture-resistant design.</p>
+      <p><strong>Cost (India):</strong> CoCr moderate, titanium higher, Oxinium premium.</p>
+
+      <h2>Factors That Matter More Than Material</h2>
+      <p>Implant material is one factor among many in determining your outcome. Research consistently shows that <strong>surgical precision</strong> (alignment, bone cuts, ligament balancing), <strong>surgeon experience with a specific system</strong>, <strong>patient selection</strong> (total vs partial, cemented vs cementless, sizing), <strong>post-operative rehabilitation</strong>, and <strong>lifestyle factors</strong> (weight, activity, follow-up adherence) are all more predictive of long-term function than whether the femoral component is CoCr or Oxinium.</p>
+
+      <h2>Who Should Choose Which Implant?</h2>
+      <p><strong>Consider titanium-based or ceramic if:</strong> you have a confirmed nickel/CoCr allergy, you are under 60 and concerned about long-term wear, you lead an active lifestyle, or your surgeon recommends cementless fixation.</p>
+      <p><strong>Consider standard Johnson/DePuy CoCr if:</strong> you are 60+ with moderate activity, robotic precision matters and your surgeon uses VELYS, premium implant cost is a concern, or you have no metal allergies.</p>
+      <p><strong>Consider Oxinium (ceramic-surfaced) if:</strong> you want a metal core (strength) with a ceramic surface (low wear, nickel-free), you are young and active with potentially 25+ years of implant use ahead, or you have metal hypersensitivity but still want a fracture-resistant implant.</p>
+
+      <h2>What About Partial Knee Replacement?</h2>
+      <p>Yes, material still matters — but a partial (unicompartmental) replacement resurfaces only the damaged compartment. The same materials (CoCr, titanium, Oxinium) are available. Partial replacement, when correctly indicated, typically offers faster recovery, less blood loss, and a more natural knee feel — but requires very precise patient selection starting with weight-bearing X-rays and clinical examination.</p>
+
+      <h2>Knee Replacement in Bangalore: What a Good Consultation Covers</h2>
+      <ul>
+        <li>Full weight-bearing X-rays of both knees.</li>
+        <li>Clinical examination — range of motion, ligament stability, muscle strength, deformity.</li>
+        <li>Discussion of <strong>your activity goals</strong>, not just pain relief.</li>
+        <li>Honest conversation about implant options and cost implications.</li>
+        <li>Review of co-morbidities (diabetes, hypertension, cardiac history) affecting surgical risk.</li>
+      </ul>
+      <p>Dr. Nitin Sunku sees knee replacement patients at <strong>Raghava Multispeciality Hospital, Attibele</strong> (easily accessible from Electronic City, Bommasandra, Chandapura, Jigani, and Anekal) and <strong>Health Nest Hospital, HSR Layout</strong> (for patients from Koramangala, BTM Layout, Bellandur, and the HSR corridor).</p>
+
+      <h2>Recovery: Different Based on Implant Type?</h2>
+      <p>In most cases, no. Recovery is driven by surgical approach, pre-operative fitness, and rehabilitation quality — not the material composition of the femoral component.</p>
+      <ul>
+        <li><strong>Day 1–2:</strong> walking with a walker, physiotherapy begins.</li>
+        <li><strong>Week 2:</strong> targeting 0–90° knee flexion, wound review.</li>
+        <li><strong>Week 6–8:</strong> walking without aids for most patients.</li>
+        <li><strong>Month 3:</strong> most daily activities resumed.</li>
+        <li><strong>Month 6:</strong> functional target achieved; low-impact exercise (swimming, cycling) appropriate.</li>
+        <li><strong>Month 12+:</strong> full recovery, implant integration complete.</li>
+      </ul>
+
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>Is a ceramic knee replacement better than a titanium one?</strong><br/>Not categorically. Oxinium offers superior wear resistance and is nickel-free; titanium offers excellent biocompatibility and bone ingrowth for cementless fixation. The right choice depends on age, activity level, allergy status, and bone quality.</p>
+      <p><strong>What does "Johnson knee replacement" mean?</strong><br/>Implants made by DePuy Synthes, the orthopaedic division of Johnson and Johnson — primarily the ATTUNE and PFC Sigma systems in India.</p>
+      <p><strong>How long does a knee implant last?</strong><br/>Modern implants are expected to last 15–20 years in most patients. Oxinium and cross-linked polyethylene may extend this further, particularly in younger patients. Major systems show >95% survivorship at 10 years in Australian and UK registries.</p>
+      <p><strong>Can I have a knee replacement if I am allergic to metals?</strong><br/>Yes. Oxinium (zirconium-niobium), titanium-based, and fully ceramic systems are all options. Always disclose known allergies during pre-operative assessment.</p>
+      <p><strong>Is robotic knee replacement better than conventional?</strong><br/>Robotic systems enable more precise alignment and can reduce outlier cases. But it is a tool in the surgeon's hands — a skilled surgeon with a well-understood conventional technique can achieve excellent results too. Robotic surgery adds cost; not every patient requires it.</p>
+      <p><strong>What is Oxinium?</strong><br/>Smith and Nephew's brand for oxidised zirconium. A zirconium-niobium alloy whose surface is transformed into a ceramic oxide layer by heat. The hybrid metal-core/ceramic-surface design addresses pure ceramic's fracture risk while keeping the low-wear benefits.</p>
+      <p><strong>Does the implant material affect recovery time?</strong><br/>Generally no. Recovery is determined by surgical approach, fitness, pain management, and physiotherapy compliance.</p>
+
+      <p><em>Educational content. Implant pricing in India is subject to NPPA price ceilings; your surgeon and hospital will provide a written estimate before surgery. Always consult a qualified orthopaedic surgeon before any surgical decision.</em></p>
+    `
+  },
+  {
+    slug: "anterior-cruciate-ligament-origin-and-insertion",
+    title: "Anterior Cruciate Ligament Origin and Insertion: Complete Anatomy Guide",
+    excerpt: "Where the ACL begins, where it ends, the two functional bundles, and how this anatomy directly shapes diagnosis, reconstruction technique, and rehabilitation in Bengaluru.",
+    date: "May 16, 2026",
+    category: "Sports Medicine",
+    image: "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <p>When a patient walks into our clinic in Bengaluru with knee pain after a football collision or a sudden pivot on the basketball court, one of the first structures we evaluate is the <strong>anterior cruciate ligament (ACL)</strong>. Most patients have heard of an ACL tear but have little understanding of where this ligament actually sits, where it begins, and where it ends inside the knee. That knowledge gap matters clinically — because the ACL's origin and insertion directly determine how surgeons place bone tunnels during reconstruction, which graft angle restores natural mechanics, and how physiotherapists design loading protocols.</p>
+
+      <h2>What Is the ACL?</h2>
+      <p>The ACL is one of four main stabilising ligaments of the knee joint. It sits inside the joint capsule, within the intercondylar notch — the hollow space between the two rounded ends of the femur. The word <em>cruciate</em> comes from the Latin <em>crux</em>, meaning cross — because the ACL and its partner, the PCL, cross each other when viewed from the front.</p>
+      <p>The ACL is roughly 3–4 cm long and about 10 mm wide at its midpoint. It is composed primarily of Type I collagen fibres arranged in slightly twisted bundles — a design that distributes load across the ligament at different knee angles.</p>
+
+      <h2>ACL Origin and Insertion: Exact Anatomical Points</h2>
+      <h3>Femoral Origin (where the ACL begins)</h3>
+      <p>The ACL originates from the <strong>posteromedial surface of the lateral femoral condyle</strong>, inside the intercondylar notch — the inner wall of the outer bony knob at the end of the femur, positioned toward the back of the notch and slightly oval in shape.</p>
+      <ul>
+        <li>Sits posterior to the centre of rotation of the knee joint.</li>
+        <li>Footprint is oval, approximately <strong>18 mm long and 11 mm wide</strong>.</li>
+        <li>The <strong>resident's ridge</strong> — a bony prominence along the condyle — marks the anterior border of the footprint and is a key intraoperative landmark.</li>
+      </ul>
+      <h3>Tibial Insertion (where the ACL ends)</h3>
+      <p>The ACL inserts into the <strong>anterior intercondylar area of the tibial plateau</strong>, anterolaterally to the medial tibial eminence.</p>
+      <ul>
+        <li>Centre of the tibial insertion lies roughly <strong>7–8 mm anterior to the PCL</strong>.</li>
+        <li>Footprint spans approximately <strong>13–16 mm long and 10–11 mm wide</strong>.</li>
+        <li>A portion of the lateral meniscus anterior horn attachment overlaps the posterior edge of the ACL tibial footprint.</li>
+        <li>The insertion area is larger than the femoral footprint, giving the ACL a slightly fan-shaped profile at the tibia.</li>
+      </ul>
+      <p>Understanding these exact measurements is why ACL reconstruction at our clinic begins with careful preoperative planning using MRI to measure each patient's individual insertion dimensions before a single incision is made.</p>
+
+      <h2>Course of the ACL Through the Knee</h2>
+      <p>From its tibial insertion, the ACL runs <em>superiorly, posteriorly, and laterally</em> to reach the femoral condyle. As it travels through the intercondylar notch, it passes anterior to the PCL, and the two ligaments cross in an X pattern — hence the cruciate name.</p>
+      <p>The ligament is intra-articular (inside the joint) but extrasynovial (outside the synovial membrane). A synovial fold wraps around it, providing blood supply from branches of the <strong>middle genicular artery</strong>. This vascular envelope is thin, which partly explains why a complete ACL tear has a limited capacity to heal on its own.</p>
+
+      <h2>The Two Functional Bundles</h2>
+      <h3>1. Anteromedial (AM) Bundle</h3>
+      <ul>
+        <li>Originates from the proximal and anterior portion of the femoral footprint; inserts into the anteromedial aspect of the tibial footprint.</li>
+        <li>Becomes <strong>taut as the knee flexes beyond 30°</strong>.</li>
+        <li>Primary restraint against <strong>anterior tibial translation</strong>.</li>
+        <li>Remains moderately lax in full extension.</li>
+      </ul>
+      <h3>2. Posterolateral (PL) Bundle</h3>
+      <ul>
+        <li>Originates from the distal and posterior portion of the femoral footprint; inserts into the posterolateral part of the tibial footprint.</li>
+        <li>Taut in full extension or near extension.</li>
+        <li>Key contributor to <strong>rotational stability</strong>, particularly resisting internal tibial rotation.</li>
+        <li>Becomes lax beyond 30–40° flexion.</li>
+      </ul>
+      <p>The interplay between these bundles is why the <strong>pivot-shift test</strong> — which stresses the knee in slight flexion — provokes instability in ACL-deficient knees even when the anterior drawer test is equivocal.</p>
+
+      <h2>Biomechanical Functions</h2>
+      <ul>
+        <li><strong>Resisting anterior tibial translation:</strong> prevents the tibia from sliding forward on a stationary femur.</li>
+        <li><strong>Controlling internal tibial rotation:</strong> especially in the 0–30° flexion range.</li>
+        <li><strong>Limiting knee hyperextension:</strong> secondary check when the knee is forced beyond straight.</li>
+        <li><strong>Proprioceptive feedback:</strong> mechanoreceptors sense joint position and velocity — a function partially lost after injury that must be retrained.</li>
+      </ul>
+      <p>Because the femoral origin sits posterior to the knee's centre of rotation, the ACL becomes taut as the knee extends. This is the anatomical reason why straightening the knee (a blocked tackle, unexpected deceleration) combined with a rotational force creates the highest risk of ACL rupture.</p>
+
+      <h2>Why Origin and Insertion Matter for Reconstruction</h2>
+      <p>For patients considering surgery, the accuracy of bone tunnel placement — guided by knowledge of the ACL's true origin and insertion — is the single most important surgical variable. Misplaced tunnels, even by a few millimetres, lead to abnormal knee mechanics, higher re-tear rates, and accelerated cartilage wear.</p>
+      <h3>Anatomic vs Non-Anatomic Reconstruction</h3>
+      <p>Older transtibial techniques often placed the femoral tunnel too anteriorly, producing a vertical graft that restored anterior translation reasonably well but failed to control rotation. Patients continued to report a give-way feeling during pivoting. Modern <strong>anatomic ACL reconstruction</strong> — the technique used in our practice — places each tunnel at the centre of the native ACL footprint via an independent anteromedial portal. The result is a more oblique graft that replicates the native ligament's orientation and restores both translational and rotational stability.</p>
+      <h3>Single-Bundle vs Double-Bundle</h3>
+      <p>Double-bundle reconstruction places two grafts to reconstruct both AM and PL bundles independently. It requires sufficient footprint space and is technically more demanding. For most patients — especially those with a tibial insertion width under 14 mm — a well-placed single-bundle anatomic reconstruction at the centre of the footprint achieves excellent outcomes.</p>
+
+      <h2>Connecting Anatomy to Injury Mechanism</h2>
+      <p>Common ACL injury mechanisms in our Bengaluru patient population:</p>
+      <ul>
+        <li>Sudden deceleration with a planting and cutting motion (football, kabaddi, basketball).</li>
+        <li>Landing from a jump with the knee slightly bent and internally rotated.</li>
+        <li>Direct contact causing forced valgus and rotation at the knee.</li>
+        <li>Hyperextension — kicking and missing, or landing awkwardly.</li>
+      </ul>
+
+      <h2>Symptoms and Diagnosis</h2>
+      <ul>
+        <li>A popping sound or sensation at the time of injury.</li>
+        <li>Rapid knee swelling within hours (haemarthrosis).</li>
+        <li>Feeling that the knee gave way or buckled.</li>
+        <li>Inability to continue the sport or activity.</li>
+        <li>Persistent instability during walking, turning, or stair use.</li>
+      </ul>
+      <p>The <strong>Lachman test</strong> (anterior tibial translation at 30° flexion) and the <strong>pivot-shift test</strong> (rotational instability) are the most reliable bedside indicators. MRI confirms the diagnosis and identifies concurrent injuries — meniscus tears, the classic bone bruise pattern at the lateral femoral condyle and posterior lateral tibia, and chondral damage.</p>
+
+      <h2>Treatment Options</h2>
+      <h3>Non-operative</h3>
+      <p>A structured physiotherapy programme focused on quadriceps and hamstring strengthening, proprioception retraining, and activity modification can allow older, less active patients to live comfortably without an intact ACL.</p>
+      <h3>Arthroscopic ACL Reconstruction</h3>
+      <p>For active patients, athletes, and anyone with ongoing instability, arthroscopic reconstruction is the gold standard. Recovery phases:</p>
+      <ul>
+        <li><strong>Weeks 1–4:</strong> pain and swelling management, range of motion, quadriceps activation.</li>
+        <li><strong>Months 1–3:</strong> progressive strengthening, straight-line jogging.</li>
+        <li><strong>Months 3–6:</strong> sport-specific drills, agility and cutting movements.</li>
+        <li><strong>Months 6–9:</strong> return-to-sport testing including hop tests and isokinetic strength assessment.</li>
+      </ul>
+
+      <h2>Injury Prevention</h2>
+      <p>Knowledge of the ACL's origin, insertion, and biomechanical role informs prevention. Neuromuscular training programmes — such as <strong>FIFA 11+</strong> — target the exact movement patterns that overload the ACL: landing mechanics, single-leg stability, hamstring strengthening, and jump-landing feedback.</p>
+
+      <h2>Associated Structures</h2>
+      <ul>
+        <li><strong>Lateral meniscus:</strong> more commonly injured acutely with the ACL.</li>
+        <li><strong>Medial meniscus:</strong> more often damaged in chronic ACL-deficient knees.</li>
+        <li><strong>MCL:</strong> the unhappy triad of ACL, MCL, and medial meniscus injuries with valgus-rotation mechanisms.</li>
+        <li><strong>Articular cartilage:</strong> bone bruising is nearly universal in acute ACL tears.</li>
+        <li><strong>Anterolateral ligament (ALL):</strong> contributes to rotational stability alongside the ACL.</li>
+      </ul>
+
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>What is the exact origin of the ACL?</strong><br/>The posteromedial surface of the lateral femoral condyle, inside the intercondylar notch. Oval footprint roughly 18 mm long and 11 mm wide.</p>
+      <p><strong>Where does the ACL insert on the tibia?</strong><br/>The anterior intercondylar area of the tibial plateau, anterolaterally to the medial tibial eminence. Fan-shaped footprint roughly 13–16 mm long.</p>
+      <p><strong>What are the two bundles?</strong><br/>The anteromedial (AM) bundle — primary restraint against forward tibial translation, tight in flexion — and the posterolateral (PL) bundle — primary contributor to rotational stability, tight near full extension.</p>
+      <p><strong>Does the ACL have good blood supply?</strong><br/>No. The middle genicular artery branches supply enough for normal maintenance but not enough to drive meaningful healing after a complete tear. This is why complete tears in active, unstable knees generally require reconstruction.</p>
+      <p><strong>Why does origin and insertion matter for surgery?</strong><br/>Accurate tunnel placement at the native footprint is the cornerstone of successful reconstruction. Non-anatomic positions cause abnormal graft tension, poor rotational control, and higher re-injury rates.</p>
+      <p><strong>How do I know if I have torn my ACL?</strong><br/>A pop at the moment of injury, rapid swelling within hours, a sense the knee gave way, and ongoing instability are typical. A Lachman test and MRI confirm the diagnosis.</p>
+      <p><strong>Is reconstruction always necessary?</strong><br/>No. Older, less active patients or those with partial tears who commit to structured rehabilitation can achieve satisfactory function without surgery. Young active patients and those with symptomatic instability typically benefit from reconstruction.</p>
+
+      <p><em>Educational content. Individual clinical decisions should always be made in consultation with a qualified orthopaedic surgeon after a full examination.</em></p>
+    `
+  },
+  {
+    slug: "anterolateral-meniscus-tear-and-root-tear",
+    title: "Anterolateral Meniscus Tear and Anterior Lateral Meniscus Root Tear: What You Need to Know",
+    excerpt: "Outer knee pain after a twist or after ACL surgery? A specialist guide to anterolateral meniscus tears, root avulsions, diagnosis pitfalls, and modern arthroscopic root repair in Bengaluru.",
+    date: "May 18, 2026",
+    category: "Meniscal Care",
+    image: "https://images.unsplash.com/photo-1583912267550-d6c2ac3196c0?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <p>A sudden twist during a football match, a deep squat at the gym, or an awkward landing from a jump. These are the moments that can cause an <strong>anterolateral meniscus tear</strong> or, in more serious cases, an <strong>anterior lateral meniscus root tear</strong> — two closely related knee injuries that are often misdiagnosed, under-reported, and misunderstood by patients and even some general practitioners.</p>
+
+      <h2>The Lateral Meniscus and Its Root Attachments</h2>
+      <p>The knee contains two C-shaped fibrocartilaginous structures called menisci. The lateral meniscus sits on the outer side of the knee, between the femur and tibia. It covers a larger portion of the tibial surface than the medial meniscus and plays a critical role in load distribution, shock absorption, and joint stability.</p>
+      <p>Each meniscus has an anterior horn and a posterior horn. At both ends, strong ligament-like <strong>root attachments</strong> anchor the meniscus securely to the tibial plateau. These roots allow the meniscus to function as a complete ring under compression, transmitting <strong>50–70%</strong> of the body's weight across the tibiofemoral joint. When the anterior root of the lateral meniscus is torn, the meniscus loses its ability to distribute load — the result closely mimics what happens when the entire lateral meniscus is surgically removed, which accelerates joint deterioration and early-onset osteoarthritis.</p>
+
+      <h2>Anterolateral Tear vs Anterior Lateral Root Tear: What's the Difference?</h2>
+      <h3>Anterolateral Meniscus Tear</h3>
+      <p>A tear in the anterolateral zone of the lateral meniscus — the front and outer portion. Patterns can be horizontal, longitudinal, radial, or complex. Common after a direct blow to the outer knee, a rotational injury, or alongside an ACL rupture. Symptoms: outer knee pain, joint line tenderness, swelling, clicking or catching.</p>
+      <h3>Anterior Lateral Meniscus Root Tear</h3>
+      <p>A specific subtype involving the insertion point of the anterior horn into the tibial bone. The root sits in front of the intercondylar eminence, <strong>just beneath the footprint of the ACL tibial tunnel</strong>. Research shows that during ACL reconstruction, inadvertent damage to the anterior lateral meniscus root can occur in <strong>up to 18%</strong> of cases, particularly in patients with smaller anatomical structures. A complete root tear effectively converts the lateral meniscus into a functionally open ring — dramatically increasing tibiofemoral contact pressures.</p>
+
+      <h2>Common Causes and Risk Factors</h2>
+      <h3>Acute causes</h3>
+      <ul>
+        <li>ACL rupture with simultaneous rotational injury (the most common cause in young, active individuals).</li>
+        <li>High-energy tibial plateau fractures.</li>
+        <li>Sudden deep squatting or pivoting under load.</li>
+        <li>Contact sports injuries — football, basketball, kabaddi, wrestling.</li>
+        <li>Landing awkwardly from a jump or a misstep on uneven ground.</li>
+        <li>Iatrogenic injury during ACL reconstruction (tunnel drilling near the anterior root footprint).</li>
+      </ul>
+      <h3>Degenerative and chronic causes</h3>
+      <ul>
+        <li>Repeated high-flexion postures common in Indian daily activities — sitting cross-legged, squatting, Indian-style toilets.</li>
+        <li>Age-related fibrocartilage degeneration over 40.</li>
+        <li>Chronic ACL-deficient knee left untreated for years.</li>
+        <li>Occupations requiring prolonged kneeling or crouching.</li>
+      </ul>
+
+      <h2>Symptoms You Should Not Ignore</h2>
+      <ul>
+        <li>Outer (lateral) knee pain that worsens with weight-bearing, squatting, or twisting.</li>
+        <li>Swelling along the outer joint line within 24–48 hours of injury.</li>
+        <li>Clicking, popping, or catching when bending or straightening the knee.</li>
+        <li>A feeling of the knee "giving way" during change-of-direction movements.</li>
+        <li>Stiffness when trying to fully straighten or deeply bend the knee.</li>
+        <li>Pain reproduced when pressing along the lateral joint line.</li>
+        <li>In root tears, palpable extrusion of the meniscus at the outer joint margin.</li>
+      </ul>
+      <p>Not every click or outer knee pain is a meniscus tear. A proper clinical evaluation by a sports medicine specialist is essential.</p>
+
+      <h2>How It's Diagnosed</h2>
+      <h3>Clinical examination</h3>
+      <ul>
+        <li><strong>McMurray test</strong> — rotating the tibia while flexing the knee to reproduce clicking or pain.</li>
+        <li><strong>Thessaly test</strong> — weight-bearing on a single leg while rotating the knee at 20° flexion.</li>
+        <li>Joint line tenderness palpation along the lateral joint line.</li>
+        <li>Dial test and pivot shift assessment when ACL injury is also suspected.</li>
+      </ul>
+      <h3>MRI imaging — the gold standard</h3>
+      <p>An anterior lateral meniscus root tear typically appears on MRI as a full-thickness signal disruption within 9 mm of the central root attachment. Key signs include the <strong>"ghost sign"</strong> (absence of the root on expected sagittal slices), <strong>meniscal extrusion</strong> on coronal views, and subchondral bone oedema.</p>
+      <h3>Diagnostic arthroscopy</h3>
+      <p>Where MRI is inconclusive or the clinical picture does not match imaging, diagnostic arthroscopy allows direct visualisation of the meniscus and root — particularly useful when planning surgical repair.</p>
+
+      <h2>Classification of Root Tears</h2>
+      <ul>
+        <li><strong>Type 1:</strong> stable radial tear within 9 mm of root centre, partial attachment intact.</li>
+        <li><strong>Type 2:</strong> complete radial tear at or within the root zone.</li>
+        <li><strong>Type 3:</strong> bucket-handle tear with a root component.</li>
+        <li><strong>Type 4:</strong> complex degenerative tear involving the root.</li>
+        <li><strong>Type 5:</strong> bony avulsion of the root from the tibial attachment.</li>
+      </ul>
+
+      <h2>Treatment Options</h2>
+      <h3>Non-surgical management</h3>
+      <p>Stable, partial tears with good tissue quality — particularly in the peripheral vascular zone — can sometimes be managed without surgery. Options include activity modification, targeted physiotherapy, anti-inflammatory medication, bracing, and selected corticosteroid or hyaluronic acid injections. However, <strong>complete root tears causing meniscal extrusion are unlikely to heal on their own</strong>.</p>
+      <h3>Arthroscopic root repair</h3>
+      <p>The gold-standard surgical technique for complete anterior lateral meniscus root tears. The goal is to anatomically reattach the avulsed root back to its native tibial footprint, restoring meniscal biomechanics and protecting the articular cartilage.</p>
+      <ul>
+        <li><strong>Transtibial reinsertion:</strong> sutures pass through the detached root and a bone tunnel drilled in the tibia, then tied over a button or cortical fixation. Biomechanically the most effective at restoring tibiofemoral contact area.</li>
+        <li><strong>Suture anchor repair:</strong> for anterior horn tears (not root avulsions), suture anchors placed at the anterolateral edge of the tibial plateau secure the horn directly to bone.</li>
+        <li><strong>All-inside PCL fixation technique:</strong> for posterior lateral root tears coexisting with anterior pathology in complex combined injuries.</li>
+      </ul>
+      <h3>Partial meniscectomy — a last resort</h3>
+      <p>When root or anterior horn tissue is severely degenerated or fragmented, partial meniscectomy may be necessary. While it relieves mechanical symptoms, it does not restore normal biomechanics. For young patients especially, every effort is made to preserve meniscal tissue before considering removal.</p>
+
+      <h2>Recovery Timeline After Root Repair</h2>
+      <h3>Phase 1: Weeks 0–6 — protection</h3>
+      <ul>
+        <li>Non-weight-bearing or partial weight-bearing with crutches for 4–6 weeks.</li>
+        <li>Knee brace restricting range of motion (typically 0–90°).</li>
+        <li>Gentle quadriceps activation, straight leg raises, ankle pumps.</li>
+        <li>Swelling management with ice, elevation, and compression.</li>
+      </ul>
+      <h3>Phase 2: Weeks 6–12 — progressive loading</h3>
+      <ul>
+        <li>Gradual return to full weight-bearing.</li>
+        <li>Progressive range of motion to full flexion.</li>
+        <li>Closed-chain strengthening — mini squats, leg press, step-ups.</li>
+        <li>Pool-based rehabilitation to reduce joint stress.</li>
+      </ul>
+      <h3>Phase 3: Months 3–6 — functional rehabilitation</h3>
+      <ul>
+        <li>Sport-specific agility drills, running, change-of-direction training.</li>
+        <li>Balance and proprioception work to restore joint coordination.</li>
+        <li>Return-to-sport criteria: symmetrical strength, no swelling, no pain.</li>
+      </ul>
+      <p>Full return to competitive sport typically occurs between 4 and 6 months after surgery, depending on the sport and the individual.</p>
+
+      <h2>What Happens If a Root Tear Is Left Untreated?</h2>
+      <p>An untreated complete root tear causes the meniscus to extrude outward under body weight rather than distributing load evenly. Animal studies show early degenerative changes in tibiofemoral cartilage within months. In humans, the risk of tibiofemoral osteoarthritis rises measurably over 3–5 years. In younger patients, this accelerated degeneration can mean the difference between a career cut short and many more years of active sport. In middle-aged patients, it may push the knee replacement timeline significantly earlier than would otherwise be expected.</p>
+
+      <h2>When Should You See a Doctor?</h2>
+      <ul>
+        <li>Outer knee pain after a sports injury or twisting movement that does not improve within 1–2 weeks.</li>
+        <li>An MRI report mentioning anterior horn lateral meniscus tear, root tear, meniscal extrusion, or ghost sign.</li>
+        <li>Persistent clicking, locking, or giving way of the knee.</li>
+        <li>Knee pain that recurs after ACL surgery on the same side.</li>
+        <li>Progressive outer knee pain in an active adult over 40 without a clear history of injury.</li>
+      </ul>
+
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>What exactly is an anterior lateral meniscus root tear?</strong><br/>A disruption of the ligamentous attachment that anchors the front portion of the lateral meniscus to the tibia. The meniscus loses its ability to function as a load-distributing ring, increasing pressure on the knee cartilage and the risk of early osteoarthritis.</p>
+      <p><strong>How is this different from a regular meniscus tear?</strong><br/>A regular tear refers to any disruption within the body of the meniscal tissue. A root tear specifically disrupts the bony anchor of the meniscus — compromising the entire structural integrity of the cartilage.</p>
+      <p><strong>Can it heal without surgery?</strong><br/>Partial or minor anterior horn tears in the vascular zone may heal with conservative management. Complete root tears rarely heal on their own — surgical root reinsertion is generally recommended for active individuals.</p>
+      <p><strong>What is the recovery time after root repair?</strong><br/>Most patients are non-weight-bearing for 4–6 weeks, followed by progressive physiotherapy over 3–6 months. Return to competitive sport is typically 4–6 months.</p>
+      <p><strong>Is a root tear commonly missed on MRI?</strong><br/>Yes. The ghost sign, meniscal extrusion of 3 mm or more, and subchondral bone oedema should raise suspicion. An experienced reader is essential.</p>
+      <p><strong>Can a root tear occur during ACL surgery?</strong><br/>Yes. The anterior lateral meniscus root sits very close to the ACL tibial tunnel. Iatrogenic root damage is documented in up to 18% of ACL reconstructions in some studies, particularly in patients with smaller skeletal anatomy.</p>
+      <p><strong>What are the long-term risks if untreated?</strong><br/>Progressive tibiofemoral cartilage damage, meniscal extrusion, and early-onset knee osteoarthritis. The risk of requiring knee replacement is meaningfully increased — especially in younger, active patients.</p>
+
+      <p><em>Educational content. If you have been diagnosed with or suspect an anterolateral meniscus tear or anterior lateral meniscus root tear, seek a specialist evaluation. Book a consultation at Health Nest Hospital, HSR Layout or Raghava Multispeciality Hospital, Attibele.</em></p>
+    `
+  },
+  {
+    slug: "natural-alternatives-to-hip-replacement",
+    title: "Natural Alternatives to Hip Replacement Surgery: An Evidence-Based Doctor's Guide",
+    excerpt: "A conservative-first, evidence-backed guide to non-surgical hip care — physiotherapy, weight management, PRP, hyaluronic acid, hip arthroscopy, and when replacement really does become necessary.",
+    date: "May 19, 2026",
+    category: "Hip & Joint",
+    image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <p>If you have been told you need a hip replacement — or are worried that recommendation is coming — you are not alone. Every year, tens of thousands of Indians undergo total hip arthroplasty, and the number is rising. But surgery is not always the first step. At Dr. Nitin N Sunku's orthopaedic practice in Bengaluru, a <strong>conservative-first philosophy</strong> means surgery is recommended only when the benefits clearly outweigh the risks — and non-operative care is always explored first.</p>
+
+      <h2>Why Patients Seek Alternatives to Hip Replacement</h2>
+      <p>Total hip arthroplasty involves removing the damaged femoral head and acetabulum and replacing them with artificial implants. For the right patient at the right stage of disease, it is life-changing. But it carries real risks and real limitations that make many patients — especially under 60 — hesitant to proceed:</p>
+      <ul>
+        <li>Risk of infection, blood clots, or nerve injury.</li>
+        <li>Implant loosening or wear over time, potentially requiring revision within 15–20 years.</li>
+        <li>Long rehabilitation period (typically 3–6 months to full function).</li>
+        <li>Desire to preserve the natural joint for as long as possible.</li>
+        <li>Preference for non-invasive or minimally invasive treatments.</li>
+        <li>Younger patients worried about outliving the implant.</li>
+      </ul>
+
+      <h2>Who Is a Good Candidate for Non-Surgical Hip Treatment?</h2>
+      <ul>
+        <li><strong>Stage of arthritis:</strong> early to moderate (Kellgren–Lawrence Grade 1–2) is typically more amenable than advanced Grade 3–4.</li>
+        <li><strong>Age and activity level:</strong> younger, active patients benefit more from joint-preservation strategies.</li>
+        <li><strong>Cause of hip pain:</strong> bursitis, tendinopathy, mild impingement (FAI), or early avascular necrosis can often be managed without replacement.</li>
+        <li><strong>Overall health:</strong> patients with conditions raising surgical risk are better candidates for conservative care.</li>
+        <li><strong>Goals:</strong> a patient who wants to resume recreational walking has different needs than a professional athlete.</li>
+      </ul>
+
+      <h2>The Best Natural and Non-Surgical Alternatives</h2>
+      <h3>1. Targeted physiotherapy and exercise rehabilitation</h3>
+      <p>Physiotherapy is the cornerstone of hip pain management. A structured programme strengthens the glutes, hip flexors, and core — the muscles that support and stabilise the joint. Key exercises:</p>
+      <ul>
+        <li>Hip abductor strengthening (clamshells, side-lying leg raises) to reduce compressive load.</li>
+        <li>Aquatic therapy — water buoyancy offloads the hip while allowing full range of motion.</li>
+        <li>Stationary cycling — low-impact aerobic activity that preserves cartilage health.</li>
+        <li>Proprioceptive training — improves joint sense and reduces instability.</li>
+        <li>Stretching — hip flexor and piriformis stretching reduces muscle-related pain.</li>
+      </ul>
+      <p>Evidence supports physiotherapy as <strong>first-line treatment</strong> for hip osteoarthritis. A well-designed programme often delays or eliminates the need for surgery, sometimes by years. Pre-surgical "prehabilitation" also leads to significantly faster recovery if surgery does eventually become necessary.</p>
+      <h3>2. Weight management and lifestyle modification</h3>
+      <p>The hip joint bears approximately 3–5 times your body weight with every step. Even modest weight loss of 5–10 kg can translate to a 15–50 kg reduction in joint load during walking. Combining a balanced anti-inflammatory diet (rich in omega-3s, turmeric, antioxidants) with a supervised low-impact exercise programme produces measurable improvements in pain and function.</p>
+      <h3>3. Activity modification and assistive devices</h3>
+      <ul>
+        <li>Switch from running to swimming or cycling for exercise.</li>
+        <li>Use a well-fitted walking stick or cane (held on the <em>opposite</em> side to the painful hip) — clinically proven to reduce joint load by up to 25%.</li>
+        <li>Ergonomic furniture — raised toilet seats, chair cushions, vehicle seat wedges reduce painful hip flexion.</li>
+        <li>Avoid deep squatting, cross-legged sitting, and stair overuse during flare-ups.</li>
+      </ul>
+      <h3>4. Medications and supplements</h3>
+      <ul>
+        <li><strong>NSAIDs</strong> — reduce pain and inflammation but carry cardiovascular and GI risks with long-term use.</li>
+        <li><strong>Topical diclofenac gel</strong> — effective surface-level relief with minimal systemic side effects.</li>
+        <li><strong>Glucosamine and chondroitin</strong> — evidence is mixed; safe for long-term use.</li>
+        <li><strong>Curcumin (turmeric)</strong> — emerging evidence of anti-inflammatory benefit comparable to NSAIDs in some studies.</li>
+        <li><strong>Vitamin D and calcium</strong> — important for bone density around the joint.</li>
+        <li><strong>Omega-3 fatty acids</strong> — anti-inflammatory properties that may slow arthritic progression.</li>
+      </ul>
+      <h3>5. Corticosteroid injections</h3>
+      <p>Intra-articular corticosteroid injections can provide 3–6 months of pain relief — useful during flare-ups or as a bridge to allow effective physiotherapy. Repeated injections (>3–4 per year) may accelerate cartilage breakdown, so they are used judiciously.</p>
+      <h3>6. Hyaluronic acid (viscosupplementation)</h3>
+      <p>HA injections restore lubrication that drops as arthritis progresses. Better established for knee than hip, but emerging evidence supports hip use in early-to-moderate disease. A course of 3–5 injections over several weeks can provide months of relief for some patients.</p>
+      <h3>7. PRP (Platelet-Rich Plasma) therapy</h3>
+      <p>PRP is prepared from your own blood, centrifuged to concentrate platelet growth factors (PDGF, TGF-β, VEGF, IGF-1), and injected into the hip joint under image guidance. Multiple systematic reviews show meaningful improvements in pain and function for hip osteoarthritis. Effects typically begin at 4–6 weeks and last 6–12 months or longer. Best results in early-to-moderate arthritis (Grade 1–3). Can be safely repeated.</p>
+      <h3>8. Hip arthroscopy</h3>
+      <p>For specific conditions — femoroacetabular impingement (FAI), labral tears, loose bodies — hip arthroscopy is a minimally invasive option that preserves the native joint with no implants. Two or three small incisions, camera-guided. Recovery measured in weeks, not months. Particularly relevant for younger patients (20s–40s) with structural problems nowhere near needing replacement.</p>
+      <h3>9. Bracing and orthotics</h3>
+      <p>Hip unloader braces can redistribute mechanical forces away from the most damaged part of the joint. Foot orthotics correcting gait abnormalities can reduce transmitted forces up the kinetic chain into the hip.</p>
+      <h3>10. Thermal therapy and TENS</h3>
+      <p>Heat improves soft tissue extensibility and reduces morning stiffness. Cold reduces post-activity swelling. TENS modulates pain signals without medication. Self-managed adjuncts that meaningfully improve day-to-day quality of life.</p>
+
+      <h2>A Word on "Natural" Supplements and Unproven Therapies</h2>
+      <p>Patients ask about magnotherapy, acupuncture, homeopathic preparations, and herbal compounds such as Boswellia, devil's claw, and willow bark. Some — like <strong>Boswellia serrata</strong> extract — have genuinely promising anti-inflammatory data. Others lack meaningful clinical trials. If a low-risk complementary therapy provides relief and does not interfere with your main treatment, there is no harm in continuing it. But do not let unproven therapies replace proven ones, and be wary of expensive protocols marketed as guaranteed surgery alternatives.</p>
+
+      <h2>When Hip Replacement Becomes Necessary</h2>
+      <p>It would be dishonest to suggest surgery can always be avoided. Clear signals that hip replacement is the appropriate next step include:</p>
+      <ul>
+        <li>Severe, persistent pain not relieved by any combination of measures above.</li>
+        <li>End-stage osteoarthritis (Kellgren–Lawrence Grade 4) with near-complete joint space loss.</li>
+        <li>Significant deformity — hip flexion contracture, leg length discrepancy.</li>
+        <li>Avascular necrosis with femoral head collapse (Stage III or IV).</li>
+        <li>Hip fracture in older patients where fixation is not appropriate.</li>
+        <li>Quality of life severely impacted — unable to walk more than 100 m, cannot sleep due to pain.</li>
+      </ul>
+      <p>When non-operative measures have been optimised and these signs are present, hip replacement produces excellent, well-documented outcomes — over 95% patient satisfaction in appropriately selected candidates.</p>
+
+      <h2>What to Expect at a Bengaluru Assessment</h2>
+      <p>Dr. Nitin N Sunku sees hip pain patients at <strong>Raghava Multispeciality Hospital, Attibele</strong> (suitable for patients from South Bengaluru, Electronic City, Chandapura, Jigani, Bommasandra) and <strong>Health Nest Hospital, HSR Layout</strong> (for follow-up and consultations from Koramangala, BTM, Bellandur, and the HSR corridor).</p>
+      <p><strong>What to bring:</strong></p>
+      <ul>
+        <li>Any existing X-rays or MRI reports (hard copy or on your phone).</li>
+        <li>A list of all medications and supplements.</li>
+        <li>A brief note of your three main goals (e.g. "sleep without pain", "walk my daughter to school", "get back to badminton").</li>
+        <li>Comfortable clothing and footwear that allows the hip to be examined.</li>
+      </ul>
+
+      <h2>Building Your Non-Surgical Hip Care Plan</h2>
+      <h3>Phase 1 — Reduce pain and inflammation (Weeks 1–4)</h3>
+      <ul>
+        <li>Activity modification + walking aid if needed.</li>
+        <li>Topical anti-inflammatory gel or short-course oral NSAIDs.</li>
+        <li>Ice or heat therapy as appropriate.</li>
+        <li>Corticosteroid injection if pain is severe and limiting rehabilitation.</li>
+      </ul>
+      <h3>Phase 2 — Restore strength and mobility (Weeks 4–12)</h3>
+      <ul>
+        <li>Supervised physiotherapy three times per week.</li>
+        <li>Aquatic therapy or stationary cycling.</li>
+        <li>Proprioception and balance training.</li>
+        <li>Dietary review and weight management plan if indicated.</li>
+      </ul>
+      <h3>Phase 3 — Maintain and protect (ongoing)</h3>
+      <ul>
+        <li>Daily home exercise programme.</li>
+        <li>PRP injection series if moderate arthritis persists.</li>
+        <li>Regular orthopaedic review every 6–12 months.</li>
+        <li>Reassessment of surgical suitability if symptoms progress.</li>
+      </ul>
+
+      <h2>Joint Health Habits for the Long Term</h2>
+      <ul>
+        <li>Maintain a healthy body weight — the single most modifiable risk factor for hip arthritis progression.</li>
+        <li>At least 150 minutes per week of low-impact aerobic activity (swimming, cycling, walking on flat ground).</li>
+        <li>Strengthen the hip and core regularly — weak glutes increase joint load.</li>
+        <li>Avoid prolonged sitting — stand and move every 30–45 minutes.</li>
+        <li>Wear well-cushioned, supportive footwear.</li>
+        <li>Stay hydrated — cartilage is 70–80% water.</li>
+        <li>Consider annual orthopaedic check-ups if you have a family history of hip arthritis or have had previous hip injuries.</li>
+      </ul>
+
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>Can hip arthritis be treated without surgery?</strong><br/>Yes — particularly in early to moderate stages (Grade 1–3). A combination of physiotherapy, weight management, activity modification, anti-inflammatory measures, and regenerative injections like PRP can significantly reduce pain and improve function for years.</p>
+      <p><strong>What is the most effective non-surgical treatment for hip pain?</strong><br/>There is no single "most effective" treatment — it depends on the underlying cause. For osteoarthritis, physiotherapy combined with weight management has the strongest evidence. Structural problems (labral tears, FAI) may need arthroscopy. Inflammatory components may benefit from PRP. An orthopaedic assessment determines the right combination.</p>
+      <p><strong>How long can I delay hip replacement?</strong><br/>Varies enormously. Some patients manage conservatively for 5, 10, or 15+ years. Others find conservative measures provide limited relief beyond 12–18 months. The goal is not simply to delay surgery — it is to improve your quality of life with the most appropriate treatment at each stage.</p>
+      <p><strong>Is PRP therapy available in Bengaluru for hip pain?</strong><br/>Yes. Dr. Nitin Sunku evaluates patients for PRP suitability during consultation, assessing imaging and symptom severity.</p>
+      <p><strong>What exercises should I avoid with hip arthritis?</strong><br/>High-impact activities — running on hard surfaces, deep squatting, jump training, heavy weightlifting, and contact sports during flare-ups. Low-impact alternatives (swimming, cycling, elliptical, flat walking) are generally beneficial.</p>
+      <p><strong>Can young patients (under 50) avoid hip replacement entirely?</strong><br/>Many can significantly delay — and in some cases avoid — replacement through hip arthroscopy for structural problems, physiotherapy, PRP, and lifestyle modification. Because modern implants last 15–20 years, younger patients face the prospect of revision later in life, making joint-preservation strategies especially worthwhile.</p>
+      <p><strong>Is hyaluronic acid effective for hip osteoarthritis?</strong><br/>Evidence is less robust than for the knee, but some studies show meaningful short-to-medium-term relief in appropriately selected patients with early-to-moderate disease.</p>
+      <p><strong>What are the risks of delaying surgery when it is clearly indicated?</strong><br/>Progressive deformity, further muscle weakness, increased surgical difficulty, and prolonged suffering. A good surgeon will be honest about when non-surgical options have been exhausted.</p>
+
+      <p><em>Educational content. All treatment decisions should be made in consultation with a qualified orthopaedic surgeon following clinical examination and, where appropriate, imaging.</em></p>
     `
   },
   ...treatmentClusterPosts,

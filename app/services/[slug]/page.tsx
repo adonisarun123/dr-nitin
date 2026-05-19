@@ -6,6 +6,7 @@ import { FAQ } from "@/components/ui/faq";
 import { CheckCircle, Phone, ArrowLeft, ArrowRight, MapPin, Calendar as CalendarIcon, Clock, ShieldCheck } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
 import { servicesData, siteConfig, practicePostalAddress } from "@/lib/data";
+import { serviceSeoOverrides } from "@/lib/seo-overrides";
 import { siteOrigin } from "@/lib/site-url";
 
 // Generate static params for all services
@@ -16,69 +17,22 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-    if (params.slug === "sports-medicine") {
+    // Per-slug SEO overrides live in lib/seo-overrides.ts.
+    const override = serviceSeoOverrides[params.slug];
+    if (override) {
         return {
-            title: "Sports Medicine & Injury Care – Dr. Nitin N Sunku",
-            description: "Specialized sports medicine care in Bengaluru. Dr. Sunku treats sprains, fractures, ligament tears with personalized plans. Return to sport safely.",
+            title: override.title,
+            description: override.description,
+            alternates: { canonical: `${siteOrigin}/services/${params.slug}` },
         };
     }
-
-    if (params.slug === "acl-care") {
-        return {
-            title: "ACL Tear Care & Surgery – Dr. Nitin N Sunku Orthopedics",
-            description: "Expert ACL tear diagnosis and arthroscopic reconstruction by Dr. Sunku. Learn causes, symptoms, treatment, recovery.",
-        };
-    }
-
-    if (params.slug === "knee-replacement") {
-        return {
-            title: "Knee Replacement Surgery – Dr. Nitin N Sunku Orthopedics",
-            description: "Advanced total & partial knee replacements by Dr. Sunku. Relieve arthritis pain, restore mobility. Learn about surgery, recovery",
-        };
-    }
-
-    if (params.slug === "meniscal-care") {
-        return {
-            title: "Meniscus Tear Treatment – Dr. Nitin N Sunku Orthopedics",
-            description: "Specialized meniscus tear care: arthroscopic repair or partial meniscectomy by Dr. Sunku. Learn causes, symptoms, recovery",
-        };
-    }
-
-    if (params.slug === "hip-replacement") {
-        return {
-            title: "Hip Replacement Surgery – Dr. Nitin N Sunku Orthopedics",
-            description: "Expert hip replacement surgeries in Bengaluru. Dr. Sunku treats arthritis and hip fractures with advanced prostheses. Learn about surgery, recovery (3-6 months)",
-        };
-    }
-
-    if (params.slug === "shoulder-care") {
-        return {
-            title: "Shoulder Care & Surgery – Dr. Nitin N Sunku",
-            description: "Comprehensive shoulder pain treatment by Dr. Sunku. We manage rotator cuff tears, impingement, instability, frozen shoulder with personalized care.",
-        };
-    }
-
-    if (params.slug === "bone-fracture") {
-        return {
-            title: "Bone Fracture Treatment – Dr. Nitin N Sunku",
-            description: "Expert bone fracture care in Bengaluru. Dr. Sunku treats simple to complex breaks with casting, ORIF, intramedullary nails. Personalized rehab for full recovery.",
-        };
-    }
-
-    if (params.slug === "spine-care") {
-        return {
-            title: "Spine Care Treatment in Attibele | Dr. Nitin N Sunku",
-            description: "Comprehensive spine care in Attibele by Dr. Nitin N Sunku — expert evaluation and non-surgical or surgical management of back pain and spinal disorders.",
-        };
-    }
-
 
     const service = servicesData.find((s) => s.slug === params.slug);
     if (!service) return {};
-
     return {
         title: `${service.title} Treatment in HSR Layout`,
         description: service.shortDesc,
+        alternates: { canonical: `${siteOrigin}/services/${service.slug}` },
     };
 }
 

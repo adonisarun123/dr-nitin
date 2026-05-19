@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Poppins, Lora } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig, practicePostalAddress, practicePostalAddressSecondary } from "@/lib/data";
+import { siteConfig } from "@/lib/data";
+import {
+    ATTIBELE_CLINIC,
+    HSR_CLINIC,
+    clinicOpeningHoursSpec,
+    clinicPostalAddress,
+} from "@/lib/practice";
 import { siteOrigin } from "@/lib/site-url";
 import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
+import { GA_MEASUREMENT_ID } from "@/lib/gtag";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const poppins = Poppins({
@@ -16,13 +23,9 @@ const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins"
 });
-// Editorial serif used by the new "editorial clinical" hero (direction A).
-const lora = Lora({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-lora",
-  display: "swap",
-});
+// (Lora editorial serif was previously loaded for design-direction-A samples,
+// which are no longer shipped. Re-add here if the editorial direction is ever
+// revived.)
 
 export const metadata: Metadata = {
   title: {
@@ -70,6 +73,22 @@ export default function RootLayout({
 }>) {
   // Root-level JSON-LD: a @graph with the practice's Physician + two MedicalClinic locations.
   // The Physician is the primary entity; both clinics are linked via `worksFor` / `affiliation`.
+  // Clinic data is driven from lib/practice.ts so addresses, hours, phones, and areaServed
+  // can never drift between schema and on-page content.
+  const clinicNodes = [ATTIBELE_CLINIC, HSR_CLINIC].map((c) => ({
+    "@type": "MedicalClinic",
+    "@id": `${siteOrigin}/#clinic-${c.id}`,
+    "name": `Dr. Nitin N Sunku Orthopedics — ${c.name} (${c.shortLocality})`,
+    "url": `${siteOrigin}/practice`,
+    "logo": `${siteOrigin}/logo.png`,
+    "image": `${siteOrigin}/og-image.jpg`,
+    "address": clinicPostalAddress(c),
+    "telephone": c.phone,
+    "medicalSpecialty": ["Orthopedic", "SportsMedicine"],
+    "areaServed": c.areaServed,
+    "openingHoursSpecification": clinicOpeningHoursSpec(c),
+  }));
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -83,105 +102,42 @@ export default function RootLayout({
         "telephone": siteConfig.phone,
         "email": siteConfig.email,
         "knowsLanguage": ["en", "kn", "hi"],
-        "worksFor": [
-          { "@id": `${siteOrigin}/#clinic-attibele` },
-          { "@id": `${siteOrigin}/#clinic-hsr` }
-        ],
-        "sameAs": [
-          "https://www.google.com/maps/place/Raghava+Multispeciality+Hospital/data=!4m2!3m1!1s0x0:0xaeb4c2023a37fea6",
-          "https://www.google.com/maps/place/Health+Nest+Hospital/data=!4m2!3m1!1s0x0:0x13399aca4c9e0a68"
-        ]
+        "worksFor": clinicNodes.map((c) => ({ "@id": c["@id"] })),
+        "sameAs": [ATTIBELE_CLINIC.sameAs, HSR_CLINIC.sameAs],
       },
-      {
-        "@type": "MedicalClinic",
-        "@id": `${siteOrigin}/#clinic-attibele`,
-        "name": "Dr. Nitin N Sunku Orthopedics — Raghava Multispeciality Hospital (Attibele)",
-        "url": `${siteOrigin}/practice`,
-        "logo": `${siteOrigin}/logo.png`,
-        "image": `${siteOrigin}/og-image.jpg`,
-        "address": practicePostalAddress,
-        "telephone": siteConfig.phone,
-        "medicalSpecialty": ["Orthopedic", "SportsMedicine"],
-        "areaServed": [
-          "Attibele",
-          "Anekal",
-          "Bommasandra",
-          "Chandapura",
-          "Hosur Road",
-          "Electronic City"
-        ],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday"
-            ],
-            "opens": "10:00",
-            "closes": "18:00"
-          }
-        ]
-      },
-      {
-        "@type": "MedicalClinic",
-        "@id": `${siteOrigin}/#clinic-hsr`,
-        "name": "Dr. Nitin N Sunku Orthopedics — Health Nest Hospital (HSR Layout)",
-        "url": `${siteOrigin}/practice`,
-        "logo": `${siteOrigin}/logo.png`,
-        "image": `${siteOrigin}/og-image.jpg`,
-        "address": practicePostalAddressSecondary,
-        "telephone": siteConfig.phoneSecondary,
-        "medicalSpecialty": ["Orthopedic", "SportsMedicine"],
-        "areaServed": [
-          "HSR Layout",
-          "Koramangala",
-          "BTM Layout",
-          "Bellandur",
-          "Sarjapur Road"
-        ],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday"
-            ],
-            "opens": "10:00",
-            "closes": "20:00"
-          }
-        ]
-      }
-    ]
+      ...clinicNodes,
+    ],
   };
 
   return (
     <html lang="en-IN">
       <head>
-        {/* Google Tag (gtag.js) */}
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=GT-K8MTGRQ9"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'GT-K8MTGRQ9');
-          `}
-        </Script>
+        {/*
+          Google tag (gtag.js).
+          ID is read from NEXT_PUBLIC_GA_MEASUREMENT_ID at build time
+          (lib/gtag.ts). If the ID starts with `GT-`/`GTM-` it's a Google
+          Tag Manager container — ensure a GA4 configuration tag is
+          configured inside it, or switch to a GA4 `G-…` measurement ID.
+        */}
+        {GA_MEASUREMENT_ID ? (
+          <>
+            <Script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        ) : null}
       </head>
-      <body className={cn(inter.variable, poppins.variable, lora.variable, "font-sans bg-background text-text-primary")}>
+      <body className={cn(inter.variable, poppins.variable, "font-sans bg-background text-text-primary")}>
         <JsonLd data={organizationSchema} />
         <Header />
         {children}

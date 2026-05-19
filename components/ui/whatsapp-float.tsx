@@ -2,12 +2,12 @@
 
 import { MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
-import { siteConfig } from "@/lib/data";
+import { PRIMARY_CLINIC } from "@/lib/practice";
 
 export function WhatsAppFloat() {
     const [isVisible, setIsVisible] = useState(false);
-    // Derive WhatsApp number from siteConfig so changing the primary clinic number updates this too.
-    const phoneNumber = siteConfig.phone.replace(/[^0-9]/g, "");
+    // Derived from PRIMARY_CLINIC (Attibele) — single source of truth in lib/practice.ts.
+    const phoneNumber = PRIMARY_CLINIC.phoneDigits;
     const message = "Hi, I would like to book an appointment with Dr. Nitin N Sunku";
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
