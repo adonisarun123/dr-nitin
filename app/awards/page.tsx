@@ -295,7 +295,7 @@ export default function AwardsPage() {
                         className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-cyan-500/15 blur-3xl pointer-events-none"
                     />
                     <div className="relative">
-                        <h2 className="text-2xl lg:text-3xl font-heading font-bold mb-3">
+                        <h2 className="text-2xl lg:text-3xl font-heading font-bold mb-3 text-white">
                             Ready to plan your visit?
                         </h2>
                         <p className="text-blue-100/80 mb-6 max-w-2xl">
