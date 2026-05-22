@@ -72,7 +72,7 @@ export default function AboutPage() {
                 description="Dr. Nitin N Sunku believes in evidence-based, personalized orthopedic care that prioritizes your long-term joint health."
             />
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl -mt-6 pb-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl pt-12 pb-8">
                 <div className="space-y-4 text-gray-700 leading-relaxed text-base">
                     <p>
                         This page summarises Dr. Nitin N Sunku&apos;s training philosophy and the clinical
