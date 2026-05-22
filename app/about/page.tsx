@@ -116,7 +116,13 @@ export default function AboutPage() {
                                     He completed his <strong>MBBS</strong> from <em>Rajarajeshwari Medical College & Hospital</em> and his <strong>MS in Orthopedics</strong> from <em>Bangalore Medical College & Research Institute</em>. He has further pursued advanced <strong>fellowship training in Arthroscopy, Joint Replacement, and Sports Medicine</strong>, enabling him to manage complex musculoskeletal conditions with precision.
                                 </p>
                                 <p>
-                                    <strong>Academic Author featured in Springer's internationally acclaimed textbook Atlas of Arthroscopy.</strong>
+                                    <strong>Academic Author featured in Springer&apos;s internationally acclaimed textbook Atlas of Arthroscopy.</strong>{" "}
+                                    <Link
+                                        href="/awards"
+                                        className="text-primary underline-offset-2 hover:underline font-medium"
+                                    >
+                                        See all awards & accolades →
+                                    </Link>
                                 </p>
                                 <p>
                                     Dr. Sunku believes in a <strong>conservative-first approach</strong>, prioritising non-surgical treatments whenever possible. When surgery is required, he employs <strong>minimally invasive and arthroscopic techniques</strong> designed to minimise pain, reduce recovery time, and help patients return to normal life faster.

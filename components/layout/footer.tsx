@@ -26,6 +26,7 @@ export function Footer() {
                             <li><Link href="/about" className="text-blue-100 hover:text-orange-400 transition-colors">About Dr. Nitin</Link></li>
                             <li><Link href="/services" className="text-blue-100 hover:text-orange-400 transition-colors">Services</Link></li>
                             <li><Link href="/practice" className="text-blue-100 hover:text-orange-400 transition-colors">Practice overview</Link></li>
+                            <li><Link href="/awards" className="text-blue-100 hover:text-orange-400 transition-colors">Awards & Accolades</Link></li>
                             <li><Link href="/testimonials" className="text-blue-100 hover:text-orange-400 transition-colors">Patient Stories</Link></li>
                             <li><Link href="/blog" className="text-blue-100 hover:text-orange-400 transition-colors">Blog</Link></li>
                             <li><Link href="/contact" className="text-blue-100 hover:text-orange-400 transition-colors">Book Appointment</Link></li>
