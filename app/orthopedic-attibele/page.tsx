@@ -32,6 +32,7 @@ import { TrackedWhatsApp } from "@/components/analytics/tracked-whatsapp";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ATTIBELE_CLINIC } from "@/lib/practice";
 import { siteOrigin } from "@/lib/site-url";
+import { LockBodyOverflow } from "./lock-body-overflow";
 
 // ---------- SEO ----------
 export const metadata: Metadata = {
@@ -190,8 +191,9 @@ const stats = [
 // ---------- PAGE ----------
 export default function OrthopedicAttibeleLandingPage() {
     return (
-        <main className="min-h-screen bg-white overflow-x-hidden max-w-[100vw]">
+        <main className="min-h-screen bg-white w-full overflow-x-clip">
             <HideNavigation />
+            <LockBodyOverflow />
             <LandingPageTracker />
 
             {/* ============= TOP NAV ============= */}
@@ -414,7 +416,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight break-words">
                                     Real Stories.
                                     <br />
-                                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1 inline-block">
+                                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                                         Real Recovery.
                                     </span>
                                 </h2>
@@ -540,7 +542,7 @@ export default function OrthopedicAttibeleLandingPage() {
                             </span>
                             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
                                 Comprehensive{" "}
-                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1 inline-block">
+                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                                     Orthopedic Care
                                 </span>
                             </h2>
@@ -603,7 +605,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                 </span>
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-[1.15] break-words">
                                     Dedicated to Your{" "}
-                                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1 inline-block">
+                                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                                         Mobility &amp; Well-being
                                     </span>
                                 </h2>
@@ -714,7 +716,7 @@ export default function OrthopedicAttibeleLandingPage() {
                             </span>
                             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
                                 Your Health.{" "}
-                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1 inline-block">
+                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                                     Our Priority.
                                 </span>
                             </h2>
@@ -812,17 +814,17 @@ export default function OrthopedicAttibeleLandingPage() {
                             </span>
                             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
                                 Easy to Find,{" "}
-                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1 inline-block">
+                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                                     Easy to Reach
                                 </span>
                             </h2>
                         </div>
                     </FadeIn>
 
-                    <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-stretch">
-                        <FadeIn direction="right">
-                            <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-3xl p-5 sm:p-6 md:p-8 border border-blue-100 shadow-sm h-full break-words">
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-5 leading-tight">
+                    <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-stretch w-full">
+                        <FadeIn className="min-w-0 w-full">
+                            <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-3xl p-5 sm:p-6 md:p-8 border border-blue-100 shadow-sm h-full break-words w-full max-w-full overflow-hidden">
+                                <h3 className="text-base sm:text-lg md:text-2xl font-bold text-blue-900 mb-5 leading-tight break-words hyphens-auto">
                                     Raghava Multispeciality Hospital, Attibele
                                 </h3>
                                 <div className="space-y-4 text-gray-700">
@@ -878,7 +880,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                 </div>
                             </div>
                         </FadeIn>
-                        <FadeIn direction="left" delay={0.1}>
+                        <FadeIn delay={0.1} className="min-w-0 w-full">
                             <div className="aspect-video lg:aspect-auto lg:h-full w-full max-w-full rounded-3xl overflow-hidden border border-gray-200 shadow-lg min-h-[280px]">
                                 <iframe
                                     src={ATTIBELE_CLINIC.mapEmbedSrc}
