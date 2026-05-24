@@ -190,7 +190,7 @@ const stats = [
 // ---------- PAGE ----------
 export default function OrthopedicAttibeleLandingPage() {
     return (
-        <main className="min-h-screen bg-white overflow-x-hidden">
+        <main className="min-h-screen bg-white overflow-x-hidden max-w-[100vw]">
             <HideNavigation />
             <LandingPageTracker />
 
@@ -253,9 +253,9 @@ export default function OrthopedicAttibeleLandingPage() {
                                     Same-Day Appointments Available
                                 </span>
 
-                                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.05] tracking-tight mb-4">
+                                <h1 className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.05] tracking-tight mb-4 break-words">
                                     <span className="block">Dr. Nitin</span>
-                                    <span className="block bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                                    <span className="block bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1">
                                         N Sunku
                                     </span>
                                 </h1>
@@ -403,7 +403,7 @@ export default function OrthopedicAttibeleLandingPage() {
             </section>
 
             {/* ============= VIDEO TESTIMONIAL ============= */}
-            <section className="bg-gradient-to-b from-white to-blue-50/40 py-14 md:py-20">
+            <section className="bg-gradient-to-b from-white to-blue-50/40 py-14 md:py-20 overflow-hidden">
                 <div className="container mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
                         <FadeIn direction="right">
@@ -411,10 +411,10 @@ export default function OrthopedicAttibeleLandingPage() {
                                 <span className="inline-block text-xs font-bold text-blue-700 uppercase tracking-widest mb-3">
                                     ★ Patient Video Testimonial
                                 </span>
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight break-words">
                                     Real Stories.
                                     <br />
-                                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1 inline-block">
                                         Real Recovery.
                                     </span>
                                 </h2>
@@ -457,7 +457,7 @@ export default function OrthopedicAttibeleLandingPage() {
             </section>
 
             {/* ============= GOOGLE REVIEWS ============= */}
-            <section id="reviews" className="bg-white py-14 md:py-20">
+            <section id="reviews" className="bg-white py-14 md:py-20 overflow-hidden">
                 <div className="container mx-auto px-4 max-w-7xl">
                     <FadeIn>
                         <div className="text-center mb-12">
@@ -467,7 +467,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                 </span>
                                 <span className="text-xs font-bold text-blue-700 uppercase tracking-wider">Google Reviews</span>
                             </div>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
                                 What Our Patients Say
                             </h2>
                             <div className="flex items-center justify-center gap-2 text-gray-600">
@@ -531,16 +531,16 @@ export default function OrthopedicAttibeleLandingPage() {
             </section>
 
             {/* ============= SERVICES ============= */}
-            <section id="services" className="bg-gradient-to-b from-blue-50/60 to-white py-14 md:py-20">
+            <section id="services" className="bg-gradient-to-b from-blue-50/60 to-white py-14 md:py-20 overflow-hidden">
                 <div className="container mx-auto px-4 max-w-7xl">
                     <FadeIn>
                         <div className="text-center mb-12">
                             <span className="inline-block text-xs font-bold text-blue-700 uppercase tracking-widest mb-3">
                                 — Our Services —
                             </span>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
                                 Comprehensive{" "}
-                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1 inline-block">
                                     Orthopedic Care
                                 </span>
                             </h2>
@@ -573,6 +573,8 @@ export default function OrthopedicAttibeleLandingPage() {
 
             {/* ============= ABOUT + BOOKING CARD ============= */}
             <section id="about" className="bg-white py-14 md:py-20 relative overflow-hidden">
+                {/* overflow-hidden is intentional here — prevents FadeIn x-axis translate
+                    and the absolute-positioned decorative orb from creating horizontal scroll */}
                 <div aria-hidden className="absolute top-0 right-0 w-72 h-72 bg-blue-100/40 rounded-full blur-3xl"></div>
                 <div className="container mx-auto px-4 max-w-7xl relative z-10">
                     <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
@@ -599,9 +601,9 @@ export default function OrthopedicAttibeleLandingPage() {
                                 <span className="inline-block text-xs font-bold text-blue-700 uppercase tracking-widest mb-3">
                                     — About Dr. Nitin N Sunku —
                                 </span>
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-[1.15]">
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-[1.15] break-words">
                                     Dedicated to Your{" "}
-                                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1 inline-block">
                                         Mobility &amp; Well-being
                                     </span>
                                 </h2>
@@ -703,16 +705,16 @@ export default function OrthopedicAttibeleLandingPage() {
             </section>
 
             {/* ============= WHY CHOOSE US ============= */}
-            <section className="bg-gradient-to-br from-gray-50 via-blue-50/40 to-white py-14 md:py-20">
+            <section className="bg-gradient-to-br from-gray-50 via-blue-50/40 to-white py-14 md:py-20 overflow-hidden">
                 <div className="container mx-auto px-4 max-w-7xl">
                     <FadeIn>
                         <div className="text-center mb-12">
                             <span className="inline-block text-xs font-bold text-blue-700 uppercase tracking-widest mb-3">
                                 — Why Choose Us —
                             </span>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
                                 Your Health.{" "}
-                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1 inline-block">
                                     Our Priority.
                                 </span>
                             </h2>
@@ -722,19 +724,19 @@ export default function OrthopedicAttibeleLandingPage() {
                         </div>
                     </FadeIn>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
                         {whyChoose.map(({ title, description, Icon }, idx) => (
                             <FadeIn key={title} delay={idx * 0.06}>
-                                <div className="group bg-white rounded-2xl p-5 md:p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
-                                    <div className="flex items-start gap-3 md:gap-4">
-                                        <div className="w-11 h-11 md:w-12 md:h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center flex-shrink-0 group-hover:from-blue-600 group-hover:to-blue-800 transition-colors">
+                                <div className="group bg-white rounded-2xl p-4 sm:p-5 md:p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center flex-shrink-0 group-hover:from-blue-600 group-hover:to-blue-800 transition-colors">
                                             <Icon className="w-5 h-5 md:w-6 md:h-6 text-blue-700 group-hover:text-white transition-colors" />
                                         </div>
-                                        <div>
-                                            <h3 className="font-bold text-gray-900 text-sm md:text-base mb-1 leading-tight">
+                                        <div className="min-w-0 flex-1">
+                                            <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-1 leading-tight">
                                                 {title}
                                             </h3>
-                                            <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                                            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                                                 {description}
                                             </p>
                                         </div>
@@ -747,7 +749,7 @@ export default function OrthopedicAttibeleLandingPage() {
             </section>
 
             {/* ============= BOOKING FORM ============= */}
-            <section id="booking-form" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 py-16 md:py-24 overflow-hidden">
+            <section id="booking-form" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 py-12 sm:py-16 md:py-24 overflow-hidden">
                 <div aria-hidden className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
                 <div aria-hidden className="absolute -top-32 -left-32 w-96 h-96 bg-cyan-300/20 rounded-full blur-3xl"></div>
                 <div aria-hidden className="absolute -bottom-32 -right-32 w-96 h-96 bg-indigo-300/20 rounded-full blur-3xl"></div>
@@ -760,7 +762,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                                     Same-Day Appointments
                                 </span>
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight">
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight break-words">
                                     Book Your Appointment
                                 </h2>
                                 <p className="text-base md:text-lg text-blue-100 max-w-md mx-auto">
@@ -801,16 +803,16 @@ export default function OrthopedicAttibeleLandingPage() {
             </section>
 
             {/* ============= LOCATION ============= */}
-            <section className="bg-white py-14 md:py-20">
+            <section className="bg-white py-14 md:py-20 overflow-hidden">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <FadeIn>
                         <div className="text-center mb-10">
                             <span className="inline-block text-xs font-bold text-blue-700 uppercase tracking-widest mb-3">
                                 — Visit Our Clinic —
                             </span>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
                                 Easy to Find,{" "}
-                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1 inline-block">
                                     Easy to Reach
                                 </span>
                             </h2>
@@ -819,8 +821,8 @@ export default function OrthopedicAttibeleLandingPage() {
 
                     <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-stretch">
                         <FadeIn direction="right">
-                            <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-3xl p-6 md:p-8 border border-blue-100 shadow-sm h-full">
-                                <h3 className="text-xl md:text-2xl font-bold text-blue-900 mb-5">
+                            <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-3xl p-5 sm:p-6 md:p-8 border border-blue-100 shadow-sm h-full break-words">
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-5 leading-tight">
                                     Raghava Multispeciality Hospital, Attibele
                                 </h3>
                                 <div className="space-y-4 text-gray-700">
@@ -828,16 +830,16 @@ export default function OrthopedicAttibeleLandingPage() {
                                         <span className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
                                             <MapPin className="w-5 h-5 text-blue-700" />
                                         </span>
-                                        <div>
+                                        <div className="min-w-0 flex-1">
                                             <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Address</p>
-                                            <p className="text-sm leading-relaxed">{ATTIBELE_CLINIC.address}</p>
+                                            <p className="text-sm leading-relaxed break-words">{ATTIBELE_CLINIC.address}</p>
                                         </div>
                                     </div>
                                     <div className="flex gap-3">
                                         <span className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
                                             <Clock className="w-5 h-5 text-blue-700" />
                                         </span>
-                                        <div>
+                                        <div className="min-w-0 flex-1">
                                             <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Hours</p>
                                             {ATTIBELE_CLINIC.hours.map((h) => (
                                                 <p key={h.label} className="text-sm">
@@ -850,7 +852,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                         <span className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
                                             <Phone className="w-5 h-5 text-blue-700" />
                                         </span>
-                                        <div>
+                                        <div className="min-w-0 flex-1">
                                             <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Phone</p>
                                             <TrackedCall
                                                 phone={PHONE}
@@ -877,13 +879,11 @@ export default function OrthopedicAttibeleLandingPage() {
                             </div>
                         </FadeIn>
                         <FadeIn direction="left" delay={0.1}>
-                            <div className="aspect-video lg:aspect-auto lg:h-full w-full rounded-3xl overflow-hidden border border-gray-200 shadow-lg min-h-[300px]">
+                            <div className="aspect-video lg:aspect-auto lg:h-full w-full max-w-full rounded-3xl overflow-hidden border border-gray-200 shadow-lg min-h-[280px]">
                                 <iframe
                                     src={ATTIBELE_CLINIC.mapEmbedSrc}
-                                    width="100%"
-                                    height="100%"
                                     loading="lazy"
-                                    style={{ border: 0 }}
+                                    style={{ border: 0, width: "100%", height: "100%", display: "block" }}
                                     referrerPolicy="no-referrer-when-downgrade"
                                     title="Raghava Multispeciality Hospital, Attibele — Map"
                                 />
