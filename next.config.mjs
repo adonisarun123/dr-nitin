@@ -17,6 +17,18 @@ const nextConfig = {
         contentDispositionType: 'attachment',
         contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     },
+    async redirects() {
+        return [
+            // Old single-clinic ad landing page → new dual-clinic landing page.
+            // 301 (permanent) so existing Google/Meta ad URLs, backlinks, and
+            // any indexed entries transfer ranking signals to the new slug.
+            {
+                source: '/orthopedic-attibele',
+                destination: '/best-orthopedic-doctor',
+                permanent: true,
+            },
+        ];
+    },
 };
 
 export default nextConfig;

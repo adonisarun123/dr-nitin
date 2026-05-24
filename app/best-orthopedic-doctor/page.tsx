@@ -31,47 +31,54 @@ import { TrackedButton } from "@/components/analytics/tracked-button";
 import { TrackedCall } from "@/components/analytics/tracked-call";
 import { TrackedWhatsApp } from "@/components/analytics/tracked-whatsapp";
 import { FadeIn } from "@/components/animations/fade-in";
-import { ATTIBELE_CLINIC } from "@/lib/practice";
+import { ATTIBELE_CLINIC, CLINICS } from "@/lib/practice";
 import { siteOrigin } from "@/lib/site-url";
 import { LockBodyOverflow } from "./lock-body-overflow";
 
 // ---------- SEO ----------
 export const metadata: Metadata = {
     title:
-        "Best Orthopedic Doctor in Attibele | Dr. Nitin N Sunku — Same-Day Appointment",
+        "Best Orthopedic Doctor in Attibele & HSR Layout | Dr. Nitin N Sunku — Same-Day Appointment",
     description:
-        "Dr. Nitin N Sunku — leading Orthopedic & Sports Medicine Specialist at Raghava Multispeciality Hospital, Attibele. Knee pain, joint replacement, sports injury, arthroscopy & fracture care. Same-day appointments available. Call +91-9980031006.",
-    alternates: { canonical: `${siteOrigin}/orthopedic-attibele` },
+        "Dr. Nitin N Sunku — leading Orthopedic & Sports Medicine Specialist with clinics in Attibele (Raghava Multispeciality Hospital) and HSR Layout (Health Nest Hospital), Bengaluru. Knee pain, joint replacement, sports injury, arthroscopy & fracture care. Same-day appointments available.",
+    alternates: { canonical: `${siteOrigin}/best-orthopedic-doctor` },
     keywords: [
+        "best orthopedic doctor Bengaluru",
         "orthopedic doctor Attibele",
+        "orthopedic doctor HSR Layout",
         "best ortho doctor Attibele",
-        "knee pain doctor Attibele",
-        "joint replacement Attibele",
-        "sports injury Attibele",
-        "arthroscopy surgeon Attibele",
-        "Raghava Multispeciality Hospital",
+        "best ortho doctor HSR Layout",
+        "knee pain doctor Bengaluru",
+        "joint replacement Bengaluru",
+        "sports injury doctor Bengaluru",
+        "arthroscopy surgeon Bengaluru",
+        "Raghava Multispeciality Hospital Attibele",
+        "Health Nest Hospital HSR Layout",
         "Dr. Nitin N Sunku",
-        "bone doctor Attibele",
         "orthopedic surgeon Anekal",
         "ortho doctor Bommasandra",
-        "ortho doctor Chandapura",
+        "ortho doctor Koramangala",
         "knee surgeon Electronic City",
+        "knee surgeon BTM Layout",
     ],
     openGraph: {
-        title: "Best Orthopedic Doctor in Attibele — Dr. Nitin N Sunku",
+        title: "Best Orthopedic Doctor — Attibele & HSR Layout | Dr. Nitin N Sunku",
         description:
-            "Same-day orthopedic appointments at Raghava Multispeciality Hospital, Attibele. Knee, joint, sports injury & fracture care.",
-        url: `${siteOrigin}/orthopedic-attibele`,
+            "Same-day orthopedic appointments at our Attibele & HSR Layout clinics. Knee, joint, sports injury, arthroscopy & fracture care.",
+        url: `${siteOrigin}/best-orthopedic-doctor`,
         type: "website",
     },
     robots: { index: true, follow: true },
 };
 
 // ---------- DATA ----------
-const PHONE = ATTIBELE_CLINIC.phone;
-const PHONE_DIGITS = ATTIBELE_CLINIC.phoneDigits;
+// Attibele is the primary phone (its line is staffed full-time for inbound
+// ad leads). The page surfaces both clinics so the patient can choose, but
+// the hero CTA points at Attibele to keep call-attribution clean.
+const PRIMARY_PHONE = ATTIBELE_CLINIC.phone;
+const PRIMARY_PHONE_DIGITS = ATTIBELE_CLINIC.phoneDigits;
 const WHATSAPP_MESSAGE =
-    "Hi Dr. Nitin, I would like to book an appointment at the Attibele clinic.";
+    "Hi Dr. Nitin, I would like to book an appointment.";
 
 const services = [
     {
@@ -179,7 +186,7 @@ const whyChoose = [
     },
     {
         title: "Convenient Location",
-        description: "Easy access from Anekal, Bommasandra & E-City.",
+        description: "Two clinics — Attibele & HSR Layout — easy access from across south Bengaluru.",
         Icon: MapPin,
     },
     {
@@ -237,7 +244,7 @@ export default function OrthopedicAttibeleLandingPage() {
                         Book Now
                     </TrackedButton>
                     <TrackedCall
-                        phone={PHONE}
+                        phone={PRIMARY_PHONE}
                         location="Top Nav Mobile"
                         className="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-md"
                     >
@@ -274,11 +281,24 @@ export default function OrthopedicAttibeleLandingPage() {
                                     Orthopedic &amp; Sports Medicine Specialist
                                 </p>
                                 <p className="text-base sm:text-lg text-gray-600 mb-6 max-w-xl leading-relaxed">
-                                    Trusted orthopedic doctor in{" "}
-                                    <strong className="text-gray-900">Attibele, Bengaluru</strong> —
+                                    Trusted orthopedic doctor with clinics in{" "}
+                                    <strong className="text-gray-900">Attibele</strong> &amp;{" "}
+                                    <strong className="text-gray-900">HSR Layout</strong>, Bengaluru —
                                     arthroscopy, sports injuries, joint replacement, and
                                     compassionate evidence-based care.
                                 </p>
+
+                                {/* Two-clinic chips */}
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    <span className="inline-flex items-center gap-1.5 bg-blue-50 border border-blue-200 text-blue-800 rounded-lg px-3 py-1.5 text-xs sm:text-sm font-semibold">
+                                        <MapPin className="w-3.5 h-3.5" />
+                                        Attibele Clinic
+                                    </span>
+                                    <span className="inline-flex items-center gap-1.5 bg-indigo-50 border border-indigo-200 text-indigo-800 rounded-lg px-3 py-1.5 text-xs sm:text-sm font-semibold">
+                                        <MapPin className="w-3.5 h-3.5" />
+                                        HSR Layout Clinic
+                                    </span>
+                                </div>
 
                                 {/* Trust pills */}
                                 <div className="flex flex-wrap gap-2 mb-7">
@@ -310,7 +330,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                         <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                                     </TrackedButton>
                                     <TrackedWhatsApp
-                                        phoneDigits={PHONE_DIGITS}
+                                        phoneDigits={PRIMARY_PHONE_DIGITS}
                                         message={WHATSAPP_MESSAGE}
                                         location="Hero"
                                         className="inline-flex items-center justify-center gap-2 bg-white border-2 border-emerald-500 text-emerald-700 hover:bg-emerald-50 font-semibold px-6 py-4 rounded-xl shadow-sm transition-all"
@@ -322,7 +342,7 @@ export default function OrthopedicAttibeleLandingPage() {
 
                                 {/* Phone */}
                                 <TrackedCall
-                                    phone={PHONE}
+                                    phone={PRIMARY_PHONE}
                                     location="Hero"
                                     className="inline-flex items-center gap-3 group"
                                 >
@@ -332,7 +352,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                     <div>
                                         <p className="text-[11px] text-gray-500 leading-tight">Call directly</p>
                                         <p className="text-lg sm:text-xl font-bold text-blue-900 leading-tight">
-                                            {PHONE}
+                                            {PRIMARY_PHONE}
                                         </p>
                                     </div>
                                 </TrackedCall>
@@ -646,9 +666,9 @@ export default function OrthopedicAttibeleLandingPage() {
                                     </div>
                                     <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-xl p-3 md:p-4 border border-orange-100 text-center">
                                         <Hospital className="w-5 h-5 md:w-6 md:h-6 mx-auto text-orange-700 mb-2" />
-                                        <p className="text-xs md:text-sm font-bold text-orange-900 leading-tight">Attibele</p>
+                                        <p className="text-xs md:text-sm font-bold text-orange-900 leading-tight">2 Clinics</p>
                                         <p className="text-[10px] md:text-[11px] text-gray-600 mt-1 leading-tight">
-                                            Raghava Hospital
+                                            Attibele &amp; HSR Layout
                                         </p>
                                     </div>
                                 </div>
@@ -673,7 +693,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                     </p>
 
                                     <TrackedCall
-                                        phone={PHONE}
+                                        phone={PRIMARY_PHONE}
                                         location="About Card"
                                         className="flex items-center gap-3 bg-white/15 hover:bg-white/25 backdrop-blur rounded-xl px-4 py-3 mb-3 transition w-full"
                                     >
@@ -682,12 +702,12 @@ export default function OrthopedicAttibeleLandingPage() {
                                         </span>
                                         <div className="flex-1 text-left">
                                             <p className="text-[11px] text-blue-100">Call directly</p>
-                                            <p className="font-bold text-base leading-tight">{PHONE}</p>
+                                            <p className="font-bold text-base leading-tight">{PRIMARY_PHONE}</p>
                                         </div>
                                     </TrackedCall>
 
                                     <TrackedWhatsApp
-                                        phoneDigits={PHONE_DIGITS}
+                                        phoneDigits={PRIMARY_PHONE_DIGITS}
                                         message={WHATSAPP_MESSAGE}
                                         location="About Card"
                                         className="flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 rounded-xl px-4 py-3 mb-5 transition w-full shadow-lg shadow-emerald-500/30"
@@ -704,7 +724,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                     <div className="flex items-start gap-2 text-sm text-blue-100 border-t border-white/20 pt-4">
                                         <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                         <span className="leading-relaxed">
-                                            Raghava Multispeciality Hospital, Attibele, Bengaluru
+                                            Consultations at our <strong className="text-white">Attibele</strong> &amp; <strong className="text-white">HSR Layout</strong> clinics, Bengaluru
                                         </span>
                                     </div>
                                 </div>
@@ -783,22 +803,22 @@ export default function OrthopedicAttibeleLandingPage() {
 
                         <FadeIn delay={0.1}>
                             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border border-white/50">
-                                <BookingForm source="ads-attibele" />
+                                <BookingForm source="ads-best-orthopedic" />
                             </div>
                         </FadeIn>
 
                         <FadeIn delay={0.2}>
                             <div className="mt-8 grid sm:grid-cols-2 gap-3">
                                 <TrackedCall
-                                    phone={PHONE}
+                                    phone={PRIMARY_PHONE}
                                     location="Booking Section"
                                     className="inline-flex items-center justify-center gap-2 bg-white/95 hover:bg-white text-blue-700 font-semibold px-5 py-3.5 rounded-xl shadow-lg transition"
                                 >
                                     <Phone className="w-5 h-5" />
-                                    Call {PHONE}
+                                    Call {PRIMARY_PHONE}
                                 </TrackedCall>
                                 <TrackedWhatsApp
-                                    phoneDigits={PHONE_DIGITS}
+                                    phoneDigits={PRIMARY_PHONE_DIGITS}
                                     message={WHATSAPP_MESSAGE}
                                     location="Booking Section"
                                     className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-5 py-3.5 rounded-xl shadow-lg shadow-emerald-500/30 transition"
@@ -812,93 +832,158 @@ export default function OrthopedicAttibeleLandingPage() {
                 </div>
             </section>
 
-            {/* ============= LOCATION ============= */}
+            {/* ============= LOCATIONS (BOTH CLINICS) ============= */}
             <section className="bg-white py-14 md:py-20 overflow-hidden">
-                <div className="container mx-auto px-4 max-w-6xl">
+                <div className="container mx-auto px-4 max-w-7xl">
                     <FadeIn>
-                        <div className="text-center mb-10">
+                        <div className="text-center mb-10 md:mb-14">
                             <span className="inline-block text-xs font-bold text-blue-700 uppercase tracking-widest mb-3">
-                                — Visit Our Clinic —
+                                — Visit Our Clinics —
                             </span>
                             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
-                                Easy to Find,{" "}
+                                Two Locations.{" "}
                                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                                    Easy to Reach
+                                    One Trusted Doctor.
                                 </span>
                             </h2>
+                            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                                Choose the clinic closest to you — Attibele or HSR Layout. Same expert care, same evidence-based treatments.
+                            </p>
                         </div>
                     </FadeIn>
 
-                    <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-stretch w-full">
-                        <FadeIn className="min-w-0 w-full">
-                            <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-3xl p-5 sm:p-6 md:p-8 border border-blue-100 shadow-sm h-full break-words w-full max-w-full overflow-hidden">
-                                <h3 className="text-base sm:text-lg md:text-2xl font-bold text-blue-900 mb-5 leading-tight break-words hyphens-auto">
-                                    Raghava Multispeciality Hospital, Attibele
-                                </h3>
-                                <div className="space-y-4 text-gray-700">
-                                    <div className="flex gap-3">
-                                        <span className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
-                                            <MapPin className="w-5 h-5 text-blue-700" />
-                                        </span>
-                                        <div className="min-w-0 flex-1">
-                                            <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Address</p>
-                                            <p className="text-sm leading-relaxed break-words">{ATTIBELE_CLINIC.address}</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-3">
-                                        <span className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
-                                            <Clock className="w-5 h-5 text-blue-700" />
-                                        </span>
-                                        <div className="min-w-0 flex-1">
-                                            <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Hours</p>
-                                            {ATTIBELE_CLINIC.hours.map((h) => (
-                                                <p key={h.label} className="text-sm">
-                                                    {h.label}: <span className="font-medium">{h.display}</span>
+                    {/* Both clinics — stacked on mobile/tablet, side-by-side on desktop */}
+                    <div className="space-y-10 lg:space-y-14">
+                        {CLINICS.map((clinic, idx) => {
+                            // Visual theming — primary clinic uses blue, secondary uses indigo
+                            const isPrimary = clinic.id === "attibele";
+                            const themeBorder = isPrimary ? "border-blue-100" : "border-indigo-100";
+                            const themeBg = isPrimary
+                                ? "from-blue-50 via-white to-indigo-50"
+                                : "from-indigo-50 via-white to-blue-50";
+                            const themeIconBg = isPrimary ? "bg-blue-100" : "bg-indigo-100";
+                            const themeIcon = isPrimary ? "text-blue-700" : "text-indigo-700";
+                            const themeText = isPrimary ? "text-blue-700" : "text-indigo-700";
+                            const themeTitle = isPrimary ? "text-blue-900" : "text-indigo-900";
+                            const themePill = isPrimary
+                                ? "border-blue-200 text-blue-700"
+                                : "border-indigo-200 text-indigo-700";
+
+                            return (
+                                <FadeIn key={clinic.id} delay={idx * 0.1}>
+                                    <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-stretch w-full">
+                                        {/* Clinic info card */}
+                                        <div className={`bg-gradient-to-br ${themeBg} rounded-3xl p-5 sm:p-6 md:p-8 border ${themeBorder} shadow-sm h-full break-words w-full max-w-full overflow-hidden ${idx % 2 === 1 ? "lg:order-2" : ""}`}>
+                                            <div className="flex items-start justify-between gap-3 mb-5">
+                                                <div className="min-w-0">
+                                                    <span className={`inline-block text-[10px] font-bold ${themeText} uppercase tracking-widest mb-1`}>
+                                                        Clinic {idx + 1} · {clinic.shortLocality}
+                                                    </span>
+                                                    <h3 className={`text-base sm:text-lg md:text-2xl font-bold ${themeTitle} leading-tight break-words hyphens-auto`}>
+                                                        {clinic.name}
+                                                    </h3>
+                                                </div>
+                                                {isPrimary && (
+                                                    <span className="inline-flex items-center gap-1 bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase tracking-wider rounded-full px-2 py-1 flex-shrink-0">
+                                                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                        Primary
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <div className="space-y-4 text-gray-700">
+                                                <div className="flex gap-3">
+                                                    <span className={`w-10 h-10 rounded-xl ${themeIconBg} flex items-center justify-center flex-shrink-0`}>
+                                                        <MapPin className={`w-5 h-5 ${themeIcon}`} />
+                                                    </span>
+                                                    <div className="min-w-0 flex-1">
+                                                        <p className={`text-xs font-semibold ${themeText} uppercase tracking-wide mb-1`}>Address</p>
+                                                        <p className="text-sm leading-relaxed break-words">{clinic.address}</p>
+                                                    </div>
+                                                </div>
+                                                <div className="flex gap-3">
+                                                    <span className={`w-10 h-10 rounded-xl ${themeIconBg} flex items-center justify-center flex-shrink-0`}>
+                                                        <Clock className={`w-5 h-5 ${themeIcon}`} />
+                                                    </span>
+                                                    <div className="min-w-0 flex-1">
+                                                        <p className={`text-xs font-semibold ${themeText} uppercase tracking-wide mb-1`}>Hours</p>
+                                                        {clinic.hours.map((h) => (
+                                                            <p key={h.label} className="text-sm">
+                                                                {h.label}: <span className="font-medium">{h.display}</span>
+                                                            </p>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                                <div className="flex gap-3">
+                                                    <span className={`w-10 h-10 rounded-xl ${themeIconBg} flex items-center justify-center flex-shrink-0`}>
+                                                        <Phone className={`w-5 h-5 ${themeIcon}`} />
+                                                    </span>
+                                                    <div className="min-w-0 flex-1">
+                                                        <p className={`text-xs font-semibold ${themeText} uppercase tracking-wide mb-1`}>Phone</p>
+                                                        <TrackedCall
+                                                            phone={clinic.phone}
+                                                            location={`Clinic Card — ${clinic.shortLocality}`}
+                                                            className={`${themeText} hover:opacity-80 font-bold text-base`}
+                                                        >
+                                                            {clinic.phone}
+                                                        </TrackedCall>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Per-clinic CTA row */}
+                                            <div className="mt-6 grid sm:grid-cols-2 gap-3">
+                                                <TrackedCall
+                                                    phone={clinic.phone}
+                                                    location={`Clinic Card CTA — ${clinic.shortLocality}`}
+                                                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-4 py-3 rounded-xl shadow-lg shadow-blue-500/30 transition text-sm"
+                                                >
+                                                    <Phone className="w-4 h-4" />
+                                                    Call
+                                                </TrackedCall>
+                                                <TrackedWhatsApp
+                                                    phoneDigits={clinic.phoneDigits}
+                                                    message={`Hi Dr. Nitin, I would like to book an appointment at the ${clinic.shortLocality} clinic.`}
+                                                    location={`Clinic Card CTA — ${clinic.shortLocality}`}
+                                                    className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-4 py-3 rounded-xl shadow-lg shadow-emerald-500/30 transition text-sm"
+                                                >
+                                                    <MessageCircle className="w-4 h-4" />
+                                                    WhatsApp
+                                                </TrackedWhatsApp>
+                                            </div>
+
+                                            <div className={`mt-6 pt-5 border-t ${themeBorder}`}>
+                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                                                    Serving patients from
                                                 </p>
-                                            ))}
+                                                <div className="flex flex-wrap gap-1.5">
+                                                    {clinic.areaServed.map((area) => (
+                                                        <span
+                                                            key={area}
+                                                            className={`inline-block bg-white border ${themePill} text-xs font-medium px-2.5 py-1 rounded-full`}
+                                                        >
+                                                            {area}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Map */}
+                                        <div className={`min-w-0 w-full ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
+                                            <div className="aspect-video lg:aspect-auto lg:h-full w-full max-w-full rounded-3xl overflow-hidden border border-gray-200 shadow-lg min-h-[280px]">
+                                                <iframe
+                                                    src={clinic.mapEmbedSrc}
+                                                    loading="lazy"
+                                                    style={{ border: 0, width: "100%", height: "100%", display: "block" }}
+                                                    referrerPolicy="no-referrer-when-downgrade"
+                                                    title={`${clinic.name}, ${clinic.shortLocality} — Map`}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="flex gap-3">
-                                        <span className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
-                                            <Phone className="w-5 h-5 text-blue-700" />
-                                        </span>
-                                        <div className="min-w-0 flex-1">
-                                            <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Phone</p>
-                                            <TrackedCall
-                                                phone={PHONE}
-                                                location="Clinic Card"
-                                                className="text-blue-700 hover:text-blue-800 font-bold text-base"
-                                            >
-                                                {PHONE}
-                                            </TrackedCall>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="mt-6 pt-5 border-t border-blue-100">
-                                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                                        Serving patients from
-                                    </p>
-                                    <div className="flex flex-wrap gap-1.5">
-                                        {ATTIBELE_CLINIC.areaServed.map((area) => (
-                                            <span key={area} className="inline-block bg-white border border-blue-200 text-blue-700 text-xs font-medium px-2.5 py-1 rounded-full">
-                                                {area}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </FadeIn>
-                        <FadeIn delay={0.1} className="min-w-0 w-full">
-                            <div className="aspect-video lg:aspect-auto lg:h-full w-full max-w-full rounded-3xl overflow-hidden border border-gray-200 shadow-lg min-h-[280px]">
-                                <iframe
-                                    src={ATTIBELE_CLINIC.mapEmbedSrc}
-                                    loading="lazy"
-                                    style={{ border: 0, width: "100%", height: "100%", display: "block" }}
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title="Raghava Multispeciality Hospital, Attibele — Map"
-                                />
-                            </div>
-                        </FadeIn>
+                                </FadeIn>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -932,12 +1017,12 @@ export default function OrthopedicAttibeleLandingPage() {
                             Book Appointment
                         </TrackedButton>
                         <TrackedCall
-                            phone={PHONE}
+                            phone={PRIMARY_PHONE}
                             location="Bottom Bar"
                             className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-5 py-3.5 rounded-xl shadow-lg shadow-emerald-500/30 transition"
                         >
                             <Phone className="w-5 h-5" />
-                            {PHONE}
+                            {PRIMARY_PHONE}
                         </TrackedCall>
                     </div>
                 </div>
@@ -946,7 +1031,7 @@ export default function OrthopedicAttibeleLandingPage() {
             {/* ============= MOBILE STICKY CTA ============= */}
             <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 grid grid-cols-3 bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
                 <TrackedCall
-                    phone={PHONE}
+                    phone={PRIMARY_PHONE}
                     location="Mobile Sticky"
                     className="flex flex-col items-center justify-center gap-0.5 py-3 bg-gradient-to-br from-blue-600 to-blue-700 text-white text-[11px] font-semibold"
                 >
@@ -954,7 +1039,7 @@ export default function OrthopedicAttibeleLandingPage() {
                     Call
                 </TrackedCall>
                 <TrackedWhatsApp
-                    phoneDigits={PHONE_DIGITS}
+                    phoneDigits={PRIMARY_PHONE_DIGITS}
                     message={WHATSAPP_MESSAGE}
                     location="Mobile Sticky"
                     className="flex flex-col items-center justify-center gap-0.5 py-3 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white text-[11px] font-semibold"
