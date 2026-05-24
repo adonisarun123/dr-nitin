@@ -20,6 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/contact',
         '/privacy-policy',
         '/terms',
+        // Local-intent ads landing page (Attibele). Targets long-tail local
+        // queries ("orthopedic doctor attibele") that don't compete with
+        // /book-appointment or the homepage.
+        '/orthopedic-attibele',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
