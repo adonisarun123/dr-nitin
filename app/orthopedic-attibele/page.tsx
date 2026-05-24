@@ -21,6 +21,7 @@ import {
     Zap,
     UserCheck,
     Brain,
+    Syringe,
 } from "lucide-react";
 
 import { BookingForm } from "@/components/forms/booking-form";
@@ -114,6 +115,13 @@ const services = [
         Icon: Heart,
         color: "from-pink-500 to-pink-600",
         bg: "bg-pink-50",
+    },
+    {
+        title: "Regenerative Treatments",
+        description: "PRP & advanced therapies to heal naturally.",
+        Icon: Syringe,
+        color: "from-teal-500 to-teal-600",
+        bg: "bg-teal-50",
     },
 ];
 
@@ -552,7 +560,7 @@ export default function OrthopedicAttibeleLandingPage() {
                         </div>
                     </FadeIn>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-5">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3 md:gap-5">
                         {services.map(({ title, description, Icon, color, bg }, idx) => (
                             <FadeIn key={title} delay={idx * 0.05}>
                                 <div className="group relative bg-white rounded-2xl p-4 md:p-6 border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full overflow-hidden">
