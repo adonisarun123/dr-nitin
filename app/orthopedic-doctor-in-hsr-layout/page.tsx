@@ -472,7 +472,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                     <iframe
                                         width="100%"
                                         height="100%"
-                                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                        src="https://www.youtube.com/embed/XFDLO_nR6x4"
                                         title="Patient testimonial 2 — Dr. Nitin N Sunku"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -490,7 +490,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                     <iframe
                                         width="100%"
                                         height="100%"
-                                        src="https://www.youtube.com/embed/9bZkp7q19f0"
+                                        src="https://www.youtube.com/embed/En4AzvR6U_4"
                                         title="Patient testimonial 3 — Dr. Nitin N Sunku"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -666,10 +666,10 @@ export default function OrthopedicAttibeleLandingPage() {
                                     — About Dr. Nitin N Sunku —
                                 </span>
                                 <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
-                                    Dr. Nitin N Sunku is a trusted orthopedic doctor in HSR Layout and Bengaluru, specializing in sports injuries, arthroscopy, joint replacement, trauma care, and advanced orthopedic treatments. With over 10 years of experience, he is known for delivering evidence-based, patient-focused care using minimally invasive and arthroscopic techniques for faster recovery and long-term results.
+                                    What sets Dr. Nitin apart is his commitment to conservative-first treatment approach, exploring all non-surgical options before recommending surgery. His expertise in advanced arthroscopic techniques ensures that when surgery is necessary, patients benefit from smaller incisions, reduced pain, and faster rehabilitation.
                                 </p>
                                 <p className="text-base text-gray-600 mb-6 leading-relaxed">
-                                    Patients searching for an orthopedic doctor near me or orthopedic doctor Bangalore trust Dr. Sunku for expert care in knee pain, shoulder injuries, fractures, arthritis, ligament injuries, and sports medicine. He currently serves as Team Doctor for Bengaluru Football Club and consults at leading hospitals in Bengaluru.
+                                    As an academic contributor to Springer's internationally acclaimed textbook "Atlas of Arthroscopy," Dr. Sunku stays at the forefront of orthopedic innovations. His dual role as a clinician and educator ensures that every patient receives care based on the latest evidence-based practices and global best standards.
                                 </p>
 
                                 {/* Credentials */}
