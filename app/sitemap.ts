@@ -20,10 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/contact',
         '/privacy-policy',
         '/terms',
-        // High-intent ads landing page covering both clinics (Attibele +
-        // HSR Layout). Targets "best orthopedic doctor"-style queries that
-        // don't compete with /book-appointment or the homepage.
-        '/best-orthopedic-doctor',
+        // Local-intent ads landing page (HSR Layout). Targets long-tail local
+        // queries ("orthopedic doctor HSR Layout") that don't compete with
+        // /book-appointment or the homepage.
+        '/orthopedic-doctor-in-hsr-layout',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
