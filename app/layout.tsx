@@ -74,7 +74,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // Root-level JSON-LD: a @graph with the practice's Physician + two MedicalClinic locations.
-  // The Physician is the primary entity; both clinics are linked via `worksFor` / `affiliation`.
+  // The Physician is the primary entity; both clinics are linked via `affiliation`.
+  // (`worksFor` is a Person-only property and is invalid on Physician, which is a
+  // MedicalBusiness subtype — `affiliation` is the correct MedicalOrganization link.)
   // Clinic data is driven from lib/practice.ts so addresses, hours, phones, and areaServed
   // can never drift between schema and on-page content.
   const clinicNodes = [ATTIBELE_CLINIC, HSR_CLINIC].map((c) => ({
@@ -103,8 +105,9 @@ export default function RootLayout({
         "medicalSpecialty": ["Orthopedic", "SportsMedicine"],
         "telephone": siteConfig.phone,
         "email": siteConfig.email,
+        "address": clinicPostalAddress(ATTIBELE_CLINIC),
         "knowsLanguage": ["en", "kn", "hi"],
-        "worksFor": clinicNodes.map((c) => ({ "@id": c["@id"] })),
+        "affiliation": clinicNodes.map((c) => ({ "@id": c["@id"] })),
         "sameAs": [ATTIBELE_CLINIC.sameAs, HSR_CLINIC.sameAs],
       },
       ...clinicNodes,

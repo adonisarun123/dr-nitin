@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/animations/fade-in";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteOrigin } from "@/lib/site-url";
+import { practicePostalAddress } from "@/lib/data";
 
 export const metadata: Metadata = {
     title: {
@@ -74,6 +75,7 @@ export default function AwardsPage() {
         "@type": "Physician",
         name: "Dr. Nitin N Sunku",
         url: `${siteOrigin}/awards`,
+        address: practicePostalAddress,
         award: [
             "Academic Author featured in Springer's Atlas of Arthroscopy",
             "Team Doctor, Bengaluru Football Club",

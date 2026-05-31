@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { blogPosts } from "@/lib/data";
+import { blogPosts, practicePostalAddress } from "@/lib/data";
 import { blogSeoOverrides } from "@/lib/seo-overrides";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, User, Tag, Clock, ChevronRight } from "lucide-react";
@@ -66,6 +66,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
         "name": "Dr. Nitin N Sunku",
         "url": `${siteOrigin}/about`,
         "medicalSpecialty": ["Orthopedic", "SportsMedicine"],
+        "address": practicePostalAddress,
     };
 
     const publisherNode = {
