@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { testimonialsData } from "@/lib/data";
 
@@ -30,17 +27,13 @@ export function TestimonialsShowcase() {
         <>
             {/* ───────── 1. Featured quote on dark surface ───────── */}
             <section className="relative overflow-hidden bg-slate-950 text-white py-20 lg:py-28">
-                <motion.div
+                <div
                     aria-hidden
-                    animate={{ opacity: [0.35, 0.55, 0.35] }}
-                    transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute -top-32 -right-20 h-[500px] w-[500px] rounded-full bg-cyan-500/25 blur-[110px] pointer-events-none"
+                    className="hero-blob-pulse absolute -top-32 -right-20 h-[500px] w-[500px] rounded-full bg-cyan-500/25 blur-[110px] pointer-events-none"
                 />
-                <motion.div
+                <div
                     aria-hidden
-                    animate={{ opacity: [0.2, 0.4, 0.2] }}
-                    transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                    className="absolute -bottom-40 -left-20 h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-[110px] pointer-events-none"
+                    className="hero-blob-pulse-slow absolute -bottom-40 -left-20 h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-[110px] pointer-events-none"
                 />
 
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -240,21 +233,10 @@ export function TestimonialsShowcase() {
                         className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
                         style={{ perspective: "1000px" }}
                     >
-                        {testimonialsData.map((t, i) => (
-                            <motion.article
+                        {testimonialsData.map((t) => (
+                            <article
                                 key={t.id}
-                                initial={{ opacity: 0, y: 24 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, amount: 0.2 }}
-                                transition={{ duration: 0.5, delay: i * 0.08 }}
-                                whileHover={{
-                                    rotateY: 4,
-                                    rotateX: -3,
-                                    scale: 1.02,
-                                    transition: { duration: 0.25 },
-                                }}
-                                style={{ transformStyle: "preserve-3d" }}
-                                className="relative bg-white p-7 rounded-3xl border border-slate-200 hover:border-cyan-300 hover:shadow-[0_24px_48px_-24px_rgba(8,145,178,0.35)] transition-colors duration-300 flex flex-col"
+                                className="relative bg-white p-7 rounded-3xl border border-slate-200 hover:border-cyan-300 hover:shadow-[0_24px_48px_-24px_rgba(8,145,178,0.35)] hover:-translate-y-1 transition-all duration-300 flex flex-col"
                             >
                                 <div className="flex gap-0.5 text-yellow-500 mb-4">
                                     {Array.from({ length: t.rating }).map((_, j) => (
@@ -289,7 +271,7 @@ export function TestimonialsShowcase() {
                                         </div>
                                     </div>
                                 </footer>
-                            </motion.article>
+                            </article>
                         ))}
                     </div>
                 </div>

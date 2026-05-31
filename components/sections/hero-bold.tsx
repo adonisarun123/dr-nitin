@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { ArrowRight, Phone, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/animations/fade-in";
@@ -18,17 +17,13 @@ export function HeroBold() {
             aria-labelledby="hero-bold-heading"
             className="relative overflow-hidden bg-slate-950 text-white pt-20 pb-24 lg:pt-28 lg:pb-32"
         >
-            <motion.div
+            <div
                 aria-hidden
-                animate={{ opacity: [0.45, 0.65, 0.45] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-40 -right-32 h-[640px] w-[640px] rounded-full bg-blue-500/30 blur-[120px] pointer-events-none"
+                className="hero-blob-pulse absolute -top-40 -right-32 h-[640px] w-[640px] rounded-full bg-blue-500/30 blur-[120px] pointer-events-none"
             />
-            <motion.div
+            <div
                 aria-hidden
-                animate={{ opacity: [0.25, 0.45, 0.25] }}
-                transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-40 -left-40 h-[640px] w-[640px] rounded-full bg-cyan-500/20 blur-[120px] pointer-events-none"
+                className="hero-blob-pulse-slow absolute -bottom-40 -left-40 h-[640px] w-[640px] rounded-full bg-cyan-500/20 blur-[120px] pointer-events-none"
             />
             <div
                 aria-hidden

@@ -24,3 +24,31 @@
     @apply font-heading text-text-primary;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Decorative hero background blob pulse.
+   Replaces the previous framer-motion opacity loops so the homepage hero
+   no longer ships the framer-motion runtime. Honours reduced-motion.
+--------------------------------------------------------------------------- */
+@keyframes hero-blob-pulse {
+  0%, 100% { opacity: 0.45; }
+  50%      { opacity: 0.65; }
+}
+@keyframes hero-blob-pulse-slow {
+  0%, 100% { opacity: 0.25; }
+  50%      { opacity: 0.45; }
+}
+.hero-blob-pulse {
+  opacity: 0.45;
+  animation: hero-blob-pulse 7s ease-in-out infinite;
+}
+.hero-blob-pulse-slow {
+  opacity: 0.25;
+  animation: hero-blob-pulse-slow 9s ease-in-out infinite 1s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob-pulse,
+  .hero-blob-pulse-slow {
+    animation: none;
+  }
+}

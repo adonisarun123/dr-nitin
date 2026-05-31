@@ -1387,30 +1387,55 @@ export const blogPosts = [
     category: "Sports Medicine",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-04.jpg?updatedAt=1766843021025",
     content: `
-      <h2>Dr. Nitin N Sunku</h2>
-      
-      <p>Elbow pain when lifting, gripping, or typing? It might be <strong>Tennis Elbow</strong>.</p>
-      
-      <strong>Tennis Elbow (lateral epicondylitis)</strong> is a common condition caused by overuse of the forearm muscles — not just in tennis players, but also in gym-goers, office workers, and manual laborers.
-      
-      <h3>Symptoms</h3>
-      
-      <p>Symptoms often include:</p>
-      <ul><li>Pain on the outer part of the elbow</li>
-      <li>Weakness in the grip</li>
-      <li>Discomfort during daily tasks</li>
+      <p>Elbow pain when lifting, gripping, or typing is one of the most common complaints I see in clinic — and in most cases it points to <strong>Tennis Elbow</strong>. The good news is that the large majority of patients recover fully with the right, structured non-surgical care.</p>
+
+      <p><strong>Tennis Elbow (lateral epicondylitis)</strong> is caused by overuse and micro-tearing of the tendons that attach the forearm muscles to the bony bump on the outer side of the elbow. Despite the name, it affects far more than tennis players — gym-goers, office workers who type or use a mouse for long hours, cooks, carpenters, plumbers, and new parents lifting a growing baby are all frequently affected. It typically develops gradually rather than from a single injury.</p>
+
+      <h2>What Causes Tennis Elbow?</h2>
+
+      <p>The condition develops when the extensor tendons (especially the extensor carpi radialis brevis) are repeatedly loaded beyond what they can recover from. Common triggers include:</p>
+      <ul>
+        <li>Repetitive gripping, twisting, or wrist extension at work or in sport</li>
+        <li>A sudden increase in activity — for example, starting a new gym routine or a home renovation project</li>
+        <li>Poor technique or unsuitable equipment (racquet grip size, mouse position, tool handles)</li>
+        <li>Age-related reduction in tendon elasticity, most common between 35 and 55</li>
       </ul>
-      <h3>Progression and Treatment</h3>
-      
-      <p>Without proper care, the condition can worsen and limit hand and arm function.</p>
-      
-      <strong>Treatment options</strong> range from:
-      <ul><li>Physiotherapy</li>
-      <li>Braces</li>
-      <li>Shockwave therapy</li>
-      <li>Minor procedures (in severe cases)</li>
+
+      <h2>Symptoms to Watch For</h2>
+
+      <p>Symptoms often build up over weeks and may include:</p>
+      <ul>
+        <li>Pain and tenderness on the outer part of the elbow, sometimes radiating into the forearm</li>
+        <li>Pain that worsens with gripping, lifting, shaking hands, or turning a doorknob</li>
+        <li>Weakness in the grip, or dropping objects unexpectedly</li>
+        <li>Stiffness in the morning that eases as the arm warms up</li>
       </ul>
-      <p>As an orthopedic doctor and sports medicine specialist in HSR Layout, I provide personalised treatment plans for long-term relief and recovery.</p>
+
+      <h2>How It Is Diagnosed</h2>
+
+      <p>In most cases a careful history and physical examination are enough to confirm tennis elbow. I check for tenderness over the outer elbow and perform simple resisted-movement tests that reproduce the pain. Imaging is not usually required, but an ultrasound or MRI may be ordered when the diagnosis is unclear, symptoms have lasted several months, or we need to rule out other causes such as nerve entrapment or arthritis.</p>
+
+      <h2>Progression and Why Early Care Matters</h2>
+
+      <p>Without proper care, the condition can become chronic and limit hand and arm function, making everyday tasks frustrating. Early, guided treatment shortens recovery and reduces the chance of a long-standing problem.</p>
+
+      <h2>Treatment Options</h2>
+
+      <p>Treatment is almost always non-surgical and is tailored to the severity and duration of your symptoms:</p>
+      <ul>
+        <li><strong>Activity modification and relative rest</strong> — avoiding the specific movements that aggravate the tendon while staying otherwise active</li>
+        <li><strong>Physiotherapy</strong> — progressive eccentric strengthening of the forearm is the single most effective treatment for most patients</li>
+        <li><strong>Counterforce braces</strong> — to offload the tendon during activity</li>
+        <li><strong>Shockwave therapy</strong> — useful for stubborn cases that have not settled with exercise</li>
+        <li><strong>Ultrasound-guided injections</strong> — including PRP (platelet-rich plasma) in selected cases to support tendon healing</li>
+        <li><strong>Minor surgical release</strong> — reserved for the small number of patients whose symptoms persist beyond 6–12 months despite full conservative treatment</li>
+      </ul>
+
+      <h2>Self-Care You Can Start Today</h2>
+
+      <p>While waiting to be assessed, you can ease symptoms by applying ice for 10–15 minutes after activity, avoiding heavy gripping, checking your desk and mouse setup, and gently stretching the forearm. Avoid pushing through sharp pain, which usually sets recovery back.</p>
+
+      <p>As an orthopedic doctor and sports medicine specialist consulting in HSR Layout and Attibele, Bengaluru, I provide personalised treatment plans for tennis elbow focused on long-term relief and a safe return to work and sport. If your elbow pain has lasted more than a few weeks or is interfering with daily tasks, an early evaluation is worthwhile.</p>
     `
   },
   {
@@ -1798,28 +1823,39 @@ export const blogPosts = [
     category: "Knee Care",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-12.jpg?updatedAt=1766843020590",
     content: `
-      <strong>Publication Date:</strong> August 31, 2025
-      <strong>Author:</strong> Dr. Nitin N Sunku
-      
-      <p>Knee arthroscopy is a minimally invasive surgical procedure that allows an orthopedic surgeon to see inside the knee joint using a small camera.</p>
-      
-      <p>This advanced technique helps diagnose and treat various knee problems with smaller incisions, less pain, and faster recovery compared to open surgery.</p>
-      
-      <p>During the procedure, a thin tube with a camera (arthroscope) is inserted into the knee. The surgeon can then view the joint on a screen and use specialised instruments to repair or remove damaged tissues.</p>
-      
-      <h2>Knee Arthroscopy is Commonly Recommended For:</h2>
-      
+      <p>Knee arthroscopy is a minimally invasive surgical procedure that allows an orthopedic surgeon to look inside the knee joint using a small camera. It is one of the most commonly performed and trusted knee procedures worldwide, used both to diagnose problems precisely and to treat them in the same sitting.</p>
+
+      <p>This advanced technique addresses many knee problems through small "keyhole" incisions, which means less tissue damage, less pain, lower infection risk, and a faster recovery compared with traditional open surgery. Most arthroscopic knee procedures are performed as day-care or short-stay surgery.</p>
+
+      <h2>How the Procedure Works</h2>
+
+      <p>During arthroscopy, a thin tube containing a camera and light (the arthroscope) is inserted through a small incision, while sterile fluid gently expands the joint for a clear view. The surgeon watches a magnified, high-definition image of the inside of your knee on a screen and uses fine specialised instruments through one or two additional small incisions to repair or remove damaged tissue. The whole operation is usually carried out under spinal or general anaesthesia and often takes under an hour.</p>
+
+      <h2>Conditions Knee Arthroscopy Can Treat</h2>
+
       <p>Knee arthroscopy is commonly recommended for a variety of conditions, including:</p>
-      
-      <ul><li>Meniscus tears</li>
-      <li>Damaged cartilage</li>
-      <li>Removal of loose bone or cartilage fragments</li>
-      <li>ACL or PCL ligament reconstruction</li>
-      <li>Treating inflamed joint lining (synovitis)</li>
-      <li>Cleaning out infection or scar tissue in the knee</li>
+      <ul>
+        <li><strong>Meniscus tears</strong> — repairing or trimming torn cartilage</li>
+        <li><strong>Damaged articular cartilage</strong> — smoothing or treating cartilage defects</li>
+        <li><strong>Loose fragments</strong> — removing loose pieces of bone or cartilage causing catching or locking</li>
+        <li><strong>ACL or PCL reconstruction</strong> — rebuilding torn knee ligaments</li>
+        <li><strong>Synovitis</strong> — treating an inflamed joint lining</li>
+        <li><strong>Infection or scar tissue</strong> — washing out the joint or releasing stiffness</li>
       </ul>
-      
-      <p>If you have persistent knee pain, swelling, locking, or instability that is not improving with non-surgical treatment, consult an experienced orthopedic surgeon in your area. Early diagnosis and timely arthroscopy can help restore knee function and prevent further damage.</p>
+
+      <h2>When Is Knee Arthroscopy Needed?</h2>
+
+      <p>Surgery is rarely the first step. Arthroscopy is usually considered when you have persistent knee pain, swelling, locking, catching, or instability that has not improved with non-surgical treatment such as physiotherapy, activity modification, and medication. It may also be recommended sooner when imaging clearly shows a mechanical problem — like a displaced meniscus tear or a torn ligament — that will not settle on its own.</p>
+
+      <h2>Recovery and Rehabilitation</h2>
+
+      <p>Recovery depends on what was done. After a simple procedure such as a partial meniscectomy, many patients walk the same day and return to desk work within one to two weeks. After a ligament reconstruction or meniscus repair, recovery is more gradual and structured physiotherapy over several months is essential to restore strength, motion, and confidence. Following your rehabilitation plan closely is the single biggest factor in a good long-term outcome.</p>
+
+      <h2>What Makes Arthroscopy a Good Option</h2>
+
+      <p>Because it preserves healthy tissue and avoids large incisions, arthroscopy typically means smaller scars, less post-operative pain, lower complication rates, and an earlier return to daily life and sport. Early, accurate treatment also helps protect the joint from further wear that can lead to arthritis.</p>
+
+      <p>If you have ongoing knee symptoms that are not improving, an evaluation with an experienced orthopedic surgeon will clarify whether arthroscopy is right for you. Early diagnosis and timely treatment help restore knee function and prevent further damage. Dr. Nitin N Sunku offers arthroscopic knee surgery at his clinics in Attibele and HSR Layout, Bengaluru.</p>
     `
   },
   {
@@ -1855,22 +1891,48 @@ export const blogPosts = [
     category: "Knee Care",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-14.jpg?updatedAt=1766843020684",
     content: `
-      <p>A meniscus tear is a common knee injury that affects the cartilage acting as a cushion between your thigh bone and shin bone.</p>
-      
-      <p>Whether it can heal without surgery depends on the type, size, and location of the tear.</p>
-      
-      <p>Small tears on the outer edge of the meniscus often have a better blood supply and may heal with rest, physiotherapy, and activity modification.</p>
-      
-      <p>Larger or complex tears, especially in areas with poor blood supply, may not heal fully and could require surgical repair.</p>
-      
-      <h2>Your Doctor May Recommend:</h2>
-      
-      <ul><li>Rest, ice, compression, and elevation</li>
-      <li>Physiotherapy to strengthen surrounding muscles</li>
-      <li>Avoiding activities that worsen pain</li>
-      <li>Surgery if symptoms persist or the tear affects stability</li>
+      <p>A meniscus tear is one of the most common knee injuries I treat. The meniscus is a C-shaped piece of cartilage that sits between your thigh bone (femur) and shin bone (tibia), acting as a shock absorber and helping to spread load evenly across the joint. Each knee has two — an inner (medial) and outer (lateral) meniscus.</p>
+
+      <p>The question patients ask most often is whether the tear can heal without surgery. The honest answer is: it depends. Whether a meniscus tear can heal on its own is determined chiefly by the <strong>type, size, location, and your activity demands</strong> — not by a single rule that applies to everyone.</p>
+
+      <h2>Why Location Matters So Much</h2>
+
+      <p>The meniscus has a limited blood supply. Only the outer third — sometimes called the "red zone" — receives enough blood to heal naturally. The inner two-thirds (the "white zone") has very little blood flow, so tears there rarely heal on their own.</p>
+      <ul>
+        <li><strong>Tears in the outer red zone</strong> often have a genuine chance of healing with rest, physiotherapy, and activity modification.</li>
+        <li><strong>Tears in the inner white zone</strong>, and larger or complex tears, are far less likely to heal fully and may need surgical repair or trimming.</li>
       </ul>
-      <p>A proper diagnosis and treatment plan from an orthopedic specialist is important to protect your knee health and prevent long-term damage.</p>
+
+      <h2>Types of Tears That Respond to Non-Surgical Care</h2>
+
+      <p>Conservative (non-surgical) treatment is often successful for small, stable tears, degenerative tears in older adults, and partial tears where the knee is not locking or giving way. Many people in these groups return to normal activity without ever needing an operation.</p>
+
+      <h2>What Non-Surgical Treatment Involves</h2>
+
+      <p>If your tear is suitable for conservative management, the plan usually includes:</p>
+      <ul>
+        <li><strong>RICE</strong> in the early phase — rest, ice, compression, and elevation to settle swelling</li>
+        <li><strong>Physiotherapy</strong> to strengthen the quadriceps, hamstrings, and hip muscles that support and protect the knee</li>
+        <li><strong>Activity modification</strong> — temporarily avoiding deep squatting, twisting, and high-impact loading</li>
+        <li><strong>Anti-inflammatory measures</strong> and, in selected cases, an ultrasound-guided injection to control pain</li>
+        <li><strong>A gradual return-to-activity programme</strong> once strength and control are restored</li>
+      </ul>
+
+      <h2>When Surgery Becomes the Better Option</h2>
+
+      <p>Surgery — usually a minimally invasive arthroscopic repair or partial meniscectomy — is considered when:</p>
+      <ul>
+        <li>The knee locks, catches, or gives way</li>
+        <li>Pain and swelling persist despite several weeks of dedicated physiotherapy</li>
+        <li>The tear is large, displaced (such as a bucket-handle tear), or affects knee stability</li>
+        <li>There is an associated ligament injury such as an ACL tear</li>
+      </ul>
+
+      <p>Modern arthroscopy allows tears to be repaired through small incisions, preserving as much of the natural meniscus as possible — which is important for protecting the knee from early arthritis later in life.</p>
+
+      <h2>The Bottom Line</h2>
+
+      <p>Some meniscus tears heal well without surgery, while others do not — and trying to "push through" the wrong type of tear can cause further damage. A proper diagnosis, usually combining a clinical examination with an MRI, is the only reliable way to know which path is right for you. If you have ongoing knee pain, swelling, or instability, an evaluation with an orthopedic specialist in Bengaluru will protect your long-term knee health and prevent avoidable damage.</p>
     `
   },
   {
@@ -1881,76 +1943,96 @@ export const blogPosts = [
     category: "Sports Medicine",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-15.jpg?updatedAt=1766843020681",
     content: `
-      <p>Chronic joint pain — whether in the knee, shoulder, hip, or ankle — can limit daily activities and affect quality of life.</p>
-      
-      <p>Many patients now ask about Platelet-Rich Plasma (PRP) injections as a treatment option.</p>
-      
-      <h2>What is PRP?</h2>
-      
-      <p>PRP uses a small amount of your own blood, which is processed to concentrate platelets.</p>
-      
-      <p>These platelets release growth factors that support healing and reduce inflammation.</p>
-      
-      <p>A proper diagnosis and treatment plan from an orthopedic specialist is important to protect your knee health and prevent long-term damage.</p>
-      
-      <h2>When PRP may help:</h2>
-      
-      <ul><li>Osteoarthritis in the knee or hip</li>
-      <li>Tendon injuries such as tennis elbow</li>
-      <li>Cartilage damage from wear and tear</li>
-      <li>Sports-related joint pain that does not improve with rest or physiotherapy</li>
+      <p>Chronic joint pain — whether in the knee, shoulder, hip, or ankle — can limit daily activities and slowly erode quality of life. When rest, medication, and physiotherapy have not given lasting relief, many patients ask about Platelet-Rich Plasma (PRP) injections as a treatment option, and whether they really work.</p>
+
+      <h2>What Is PRP?</h2>
+
+      <p>PRP is a regenerative treatment made from your own blood. A small sample is taken and spun in a centrifuge to separate and concentrate the platelets — the cells responsible for healing. This concentrated plasma, rich in growth factors, is then injected precisely into the affected joint or tendon, often under ultrasound guidance for accuracy.</p>
+
+      <p>The growth factors released by these platelets are thought to stimulate the body's natural repair processes, reduce inflammation, and improve the local healing environment. Because PRP comes from your own body, the risk of an allergic or rejection reaction is very low.</p>
+
+      <h2>How PRP Treatment Works in Practice</h2>
+
+      <p>The procedure is done in the clinic and usually takes under an hour. After your blood is drawn and processed, the injection itself takes only a few minutes. Most patients go home the same day. Some soreness at the injection site for a day or two is normal, and any improvement is gradual — typically building over several weeks as healing progresses, rather than offering instant pain relief.</p>
+
+      <h2>When PRP May Help</h2>
+
+      <ul>
+        <li>Mild to moderate osteoarthritis in the knee or hip</li>
+        <li>Tendon injuries such as tennis elbow, golfer's elbow, or patellar tendinopathy</li>
+        <li>Cartilage damage from wear and tear</li>
+        <li>Sports-related joint and tendon pain that has not improved with rest or physiotherapy</li>
       </ul>
-      <h2>Benefits of PRP therapy:</h2>
-      
-      <ul><li>Uses your body’s natural healing process</li>
-      <li>Minimally invasive, non-surgical option</li>
-      <li>Can reduce pain and improve joint mobility</li>
-      <li>Helps delay or avoid major surgery in some cases</li>
+
+      <h2>Benefits of PRP Therapy</h2>
+
+      <ul>
+        <li>Uses your body's own natural healing process</li>
+        <li>Minimally invasive, non-surgical option performed in clinic</li>
+        <li>Can reduce pain and improve joint mobility</li>
+        <li>May help delay or avoid major surgery in selected cases</li>
+        <li>Low risk of reaction because it uses your own blood</li>
       </ul>
-      <p>While PRP is not a cure for every condition, it can be highly effective in selected patients.</p>
-      
-      <p>A proper diagnosis by an orthopedic doctor in Bengaluru is essential to decide if PRP injections are suitable for your joint pain.</p>
+
+      <h2>What PRP Cannot Do</h2>
+
+      <p>It is important to have realistic expectations. PRP is not a cure for every condition, and it cannot reverse advanced arthritis or replace a worn-out joint. It tends to work best in early-to-moderate disease and in tendon problems. Results vary from person to person, and more than one session is sometimes needed. For severe joint damage, options such as joint replacement may give more reliable results — which is exactly why proper assessment matters.</p>
+
+      <h2>Is PRP Right for You?</h2>
+
+      <p>A proper diagnosis by an orthopedic specialist is essential before deciding on PRP. The right treatment depends on the exact cause and stage of your joint pain, your age, your activity goals, and what has already been tried. If you are struggling with chronic joint pain in Bengaluru, an evaluation with Dr. Nitin N Sunku at his Attibele or HSR Layout clinic will clarify whether PRP injections are a suitable part of your treatment plan.</p>
     `
   },
   {
     slug: "can-a-meniscus-tear-heal-with-physiotherapy-alone",
-    title: "Untitled",
+    title: "Can a Meniscus Tear Heal with Physiotherapy Alone?",
     excerpt: "A meniscus tear is a common knee injury that affects the cartilage acting as a cushion between the thigh bone and shin bone.",
     date: "Oct 19, 2024",
     category: "Knee Care",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-16.jpg?updatedAt=1766843020600",
     content: `
-      <p>A meniscus tear is a common knee injury that affects the cartilage acting as a cushion between the thigh bone and shin bone.</p>
-      
-      <p>Patients often ask if physiotherapy alone can heal it, without surgery. The answer depends on the type and severity of the tear.</p>
-      
-      <h2>When Physiotherapy Can Be Effective:</h2>
-      
-      <p>Physiotherapy alone may be sufficient for:</p>
-      <ul><li>Small or partial tears.</li>
-      <li>Tears on the outer edge of the meniscus (where blood supply is better).</li>
-      <li>Symptoms that improve with rest and exercise therapy.</li>
+      <p>A meniscus tear is a common knee injury affecting the cartilage that cushions the joint between your thigh bone and shin bone. One of the most frequent questions I hear is whether physiotherapy alone can heal the tear and help patients avoid surgery. The answer depends on the type, size, and location of the tear — and on how your knee responds over the first few weeks of treatment.</p>
+
+      <p>It helps to understand one key fact: the meniscus has a good blood supply only in its outer rim. Tissue with blood flow can heal; tissue without it generally cannot. This is why where the tear sits often matters more than how it feels.</p>
+
+      <h2>When Physiotherapy Alone Can Be Effective</h2>
+
+      <p>A well-designed physiotherapy programme — without surgery — may be sufficient for:</p>
+      <ul>
+        <li>Small or partial tears</li>
+        <li>Tears on the outer edge of the meniscus, where blood supply supports natural healing</li>
+        <li>Degenerative tears in older adults, where the goal is to manage symptoms rather than repair the tear</li>
+        <li>Knees that are not locking or giving way, and where symptoms steadily improve with rest and exercise therapy</li>
       </ul>
-      <h2>How Physiotherapy Supports Healing:</h2>
-      
-      <p>Physiotherapy helps by:</p>
-      <ul><li>Reducing swelling and inflammation.</li>
-      <li>Strengthening the quadriceps and hamstrings.</li>
-      <li>Improving joint stability and mobility.</li>
-      <li>Teaching safe movements to protect the knee.</li>
+
+      <h2>How Physiotherapy Supports Recovery</h2>
+
+      <p>Even when the tear itself does not fully "knit back together," physiotherapy can settle symptoms and restore function by:</p>
+      <ul>
+        <li>Reducing swelling and inflammation in the early phase</li>
+        <li>Strengthening the quadriceps, hamstrings, and hip muscles that share load with the meniscus</li>
+        <li>Improving joint stability, balance, and range of motion</li>
+        <li>Retraining safe movement patterns to protect the knee during daily life and sport</li>
+        <li>Gradually rebuilding confidence and activity tolerance</li>
       </ul>
-      <h2>When Surgery May Be Needed:</h2>
-      
-      <p>Surgery is typically recommended for:</p>
-      <ul><li>Large or complex tears.</li>
-      <li>Persistent pain, swelling, or knee locking despite physiotherapy.</li>
-      <li>Associated ligament injuries such as ACL tears.</li>
+
+      <h2>What a Typical Programme Looks Like</h2>
+
+      <p>Treatment usually progresses in stages: first calming pain and swelling, then restoring full motion, then building strength, and finally returning to sport-specific or work-specific activity. Most patients who are suitable for conservative care notice meaningful improvement within six to twelve weeks of consistent effort. Commitment to the home exercise plan is what makes the difference.</p>
+
+      <h2>When Surgery May Be Needed</h2>
+
+      <p>Surgery — typically a minimally invasive arthroscopic repair or partial meniscectomy — is generally recommended when:</p>
+      <ul>
+        <li>The tear is large, complex, or displaced (such as a bucket-handle tear)</li>
+        <li>Pain, swelling, or knee locking persists despite a dedicated course of physiotherapy</li>
+        <li>The knee repeatedly catches or gives way</li>
+        <li>There is an associated ligament injury such as an ACL tear</li>
       </ul>
-      <p>Every meniscus injury is different, and not all respond the same way to non-surgical care.</p>
-      
-      <p>If you have ongoing knee pain or instability, consult an orthopedic doctor in Bengaluru.</p>
-      
-      <p>A proper diagnosis through clinical examination and MRI will guide whether physiotherapy alone is enough, or if surgical repair is necessary to restore knee function.</p>
+
+      <h2>The Takeaway</h2>
+
+      <p>Every meniscus injury is different, and not all respond the same way to non-surgical care. Trying physiotherapy is often a reasonable first step for the right type of tear — but pushing through symptoms with the wrong type can make matters worse. A proper diagnosis through clinical examination and MRI will guide whether physiotherapy alone is enough, or whether surgical repair is needed to restore knee function. If you have ongoing knee pain or instability, an evaluation with an orthopedic doctor in Bengaluru is the safest way to protect your knee.</p>
     `
   },
   {
@@ -2052,27 +2134,40 @@ export const blogPosts = [
     category: "Sports Medicine",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-19.jpg?updatedAt=1766843020592",
     content: `
-      <p>Shoulder instability is a common problem athletes face after injuries.</p>
-      
-      <p>The shoulder is the most mobile joint in the body, but this mobility comes at the cost of stability.</p>
-      
-      <p>After a fall, collision, or sudden movement, the supporting structures can be stretched or torn, leading to instability.</p>
-      
-      <h2>Here are common reasons your shoulder may feel unstable:</h2>
-      
-      <strong>Ligament or capsule injury</strong> – These tissues hold the shoulder in place. If they are overstretched, the joint may feel loose.
-      
-      <strong>Labral tear</strong> – The labrum is a cartilage rim that deepens the socket. A tear here often causes repeated slipping or clicking.
-      
-      <strong>Rotator cuff weakness</strong> – These muscles stabilize the joint. Injury or weakness makes the shoulder more likely to shift.
-      
-      <strong>Recurrent dislocations</strong> – Once the shoulder slips out, it is more prone to repeat instability, especially in young athletes.
-      
-      <p>Treatment options include rest, physiotherapy to strengthen stabilizing muscles, and in some cases, minimally invasive surgery to repair damaged tissues.</p>
-      
-      <p>If you are facing shoulder pain or instability after a sports injury, consult an orthopedic doctor in Bengaluru for a proper evaluation and treatment plan.</p>
-      
-      <p>Early care can prevent long-term damage and help you return safely to activity.</p>
+      <p>Shoulder instability is a common problem athletes face after an injury, and it can be unsettling — the joint feels loose, slips, or seems like it might "pop out," especially during overhead movements. Understanding why this happens is the first step toward treating it properly and returning to sport safely.</p>
+
+      <p>The shoulder is the most mobile joint in the body, which lets you throw, swim, lift, and reach in almost any direction. But that remarkable range of motion comes at a cost: the shoulder relies on soft tissues — ligaments, the joint capsule, the labrum, and the rotator cuff muscles — rather than a deep bony socket to stay in place. After a fall, collision, throwing injury, or sudden forceful movement, these supporting structures can be stretched or torn, leaving the joint unstable.</p>
+
+      <h2>Common Reasons Your Shoulder May Feel Unstable</h2>
+
+      <ul>
+        <li><strong>Ligament or capsule injury</strong> — these tissues hold the head of the shoulder in its socket. If they are overstretched, the joint can feel loose and "give way."</li>
+        <li><strong>Labral tear</strong> — the labrum is a rim of cartilage that deepens the socket and anchors the ligaments. A tear here (such as a Bankart or SLAP lesion) often causes repeated slipping, clicking, or a catching sensation.</li>
+        <li><strong>Rotator cuff weakness</strong> — these four muscles actively centre and stabilise the joint. Injury or weakness allows the shoulder to shift abnormally.</li>
+        <li><strong>Recurrent dislocations</strong> — once a shoulder has fully dislocated, the supporting tissues are damaged and it becomes much more prone to dislocating again, particularly in young athletes under 25.</li>
+      </ul>
+
+      <h2>Symptoms to Look Out For</h2>
+
+      <p>Beyond the feeling of looseness, shoulder instability can cause pain with specific positions (especially the arm raised and rotated outward), a sense of apprehension or fear that the shoulder will slip, clicking or clunking, numbness or tingling down the arm after an episode, and reduced strength or confidence in overhead activities.</p>
+
+      <h2>How It Is Diagnosed</h2>
+
+      <p>Diagnosis begins with a detailed history of how the injury happened and a physical examination, including specific stability and apprehension tests. Imaging such as X-rays helps rule out bony injury, while an MRI (sometimes with contrast) shows labral and ligament tears clearly. This combined assessment identifies exactly which structures are involved.</p>
+
+      <h2>Treatment Options</h2>
+
+      <p>Treatment is tailored to the cause, your age, and your activity level:</p>
+      <ul>
+        <li><strong>Rest and activity modification</strong> in the early phase to allow irritated tissues to settle</li>
+        <li><strong>Physiotherapy</strong> to strengthen the rotator cuff and shoulder-blade muscles, restoring dynamic stability — this is the cornerstone of treatment for many patients</li>
+        <li><strong>A guided return-to-sport programme</strong> focused on control and technique</li>
+        <li><strong>Minimally invasive (arthroscopic) surgery</strong> to repair a torn labrum or tighten stretched ligaments, recommended for recurrent dislocations or when physiotherapy does not restore stability</li>
+      </ul>
+
+      <h2>Why Early Care Matters</h2>
+
+      <p>Each episode of instability can cause further damage to the labrum and cartilage, and repeated dislocations raise the long-term risk of shoulder arthritis. Addressing the problem early gives the best chance of a stable, pain-free shoulder. If you are facing shoulder pain or instability after a sports injury, consult an orthopedic and sports medicine specialist in Bengaluru for a proper evaluation and treatment plan. Early care can prevent long-term damage and help you return safely to activity.</p>
     `
   },
   {
@@ -2268,27 +2363,33 @@ export const blogPosts = [
     category: "Sports Medicine",
     image: "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=1200&h=630&fit=crop&q=80&auto=format",
     content: `
-      <p>A posterior cruciate ligament tear affects one of the main ligaments that stabilizes the knee.</p>
-      
-      <p>The PCL helps keep the shinbone from moving backward and supports knee balance during walking, bending, and sudden movements.</p>
-      
-      <p>When this ligament is injured, the knee may feel unstable and painful, especially during weight bearing activities.</p>
-      
+      <p>A posterior cruciate ligament (PCL) tear affects one of the main ligaments that stabilises the knee. Although it is less common and often less talked about than an ACL tear, a PCL injury can still cause significant problems if it is missed or left untreated.</p>
+
+      <p>The PCL is a strong band of tissue deep inside the knee. Its main job is to keep the shinbone (tibia) from sliding too far backward relative to the thighbone (femur), and it helps control balance and stability during walking, bending, climbing stairs, and sudden movements. When this ligament is injured, the knee may feel unstable, painful, or "loose," especially during weight-bearing activities and when going downhill or down stairs.</p>
+
+      <h2>How Common PCL Tears Are</h2>
+
+      <p>PCL injuries often occur alongside other knee injuries — such as damage to other ligaments, the meniscus, or cartilage — particularly in high-energy accidents. Isolated PCL tears do happen, but a thorough assessment is important because combined injuries change the treatment plan.</p>
+
       <h2>Causes of a PCL Tear</h2>
-      
-      <ul><li><strong>Direct impact to the knee:</strong> A strong blow to the front of the knee, often during sports or accidents, can push the shinbone backward and injure the PCL.</li>
-      <li><strong>Sports strain:</strong> High-impact sports such as football, basketball, and tennis place repeated stress on the knee, increasing the risk of meniscus damage. Athletes with combined injuries often require both ACL reconstruction and meniscus repair for full knee stability.</li>
-      <li><strong>Falling on a bent knee:</strong> Landing hard on a flexed knee can strain or tear the ligament.</li>
-      <li><strong>Sudden twisting movements:</strong> Quick changes in direction during sports can overload the ligament.</li>
-      <li><strong>Motor vehicle injuries:</strong> A sudden force from the dashboard hitting the knee can cause a PCL tear.</li>
-      <li><strong>Severe hyperextension:</strong> Stretching the knee too far backward may damage the ligament.</li>
+
+      <ul>
+        <li><strong>Direct impact to the front of the knee:</strong> A strong blow to the front of the shin or knee can push the shinbone backward and tear the PCL.</li>
+        <li><strong>The "dashboard injury":</strong> In a road accident, the bent knee striking the dashboard drives the shinbone backward — a classic cause of PCL tears.</li>
+        <li><strong>Falling on a bent knee:</strong> Landing hard on a flexed knee, with the foot pointed down, can strain or tear the ligament.</li>
+        <li><strong>Sports collisions and twisting:</strong> High-impact and pivoting sports such as football, basketball, and hockey can overload the ligament during tackles, awkward landings, or sudden changes in direction.</li>
+        <li><strong>Severe hyperextension:</strong> Forcing the knee too far backward can damage the PCL.</li>
       </ul>
-      
-      <p>PCL tears may cause swelling, pain, and difficulty walking or bending the knee.</p>
-      
-      <strong>Early evaluation helps prevent long term instability.</strong>
-      
-      <p>For accurate diagnosis and treatment, visit Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.</p>
+
+      <h2>Symptoms of a PCL Tear</h2>
+
+      <p>PCL tears may cause swelling that develops over hours, pain at the back of the knee, stiffness, a feeling of instability, and difficulty walking, squatting, or bending the knee. Symptoms can be surprisingly mild at first, which is one reason these injuries are sometimes overlooked.</p>
+
+      <h2>Diagnosis and Treatment</h2>
+
+      <p>Diagnosis involves a clinical examination — including a posterior drawer test — supported by X-rays and an MRI to confirm the tear and check for associated injuries. Many isolated, low-grade PCL tears are treated successfully without surgery, using bracing and a focused physiotherapy programme that strengthens the quadriceps to support the knee. Higher-grade tears, combined ligament injuries, or persistent instability may need surgical reconstruction.</p>
+
+      <p><strong>Early evaluation helps prevent long-term instability</strong> and reduces the risk of cartilage wear and arthritis later. For accurate diagnosis and treatment, consult Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist, at his clinics in HSR Layout and Attibele, Bengaluru.</p>
     `
   },
   {
