@@ -1,34 +1,40 @@
 import { Metadata } from "next";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { BookingForm } from "@/components/forms/booking-form";
+import { CLINICS, PRACTICE_EMAIL } from "@/lib/practice";
 
 export const metadata: Metadata = {
     title: {
-        absolute: "Contact Dr Nitin N Sunku | Orthopedic Care in Attibele",
+        absolute: "Contact Dr. Nitin N Sunku | Orthopedic Care in Attibele",
     },
-    description: "Get in touch with Dr Nitin N Sunku, orthopedic & sports medicine specialist in Attibele for appointments, consultations, and expert joint care.",
+    description: "Get in touch with Dr. Nitin N Sunku, orthopedic & sports medicine specialist in Attibele for appointments, consultations, and expert joint care.",
 };
 
 export default function ContactPage() {
     return (
         <main className="min-h-screen pb-20">
-            <PageHeader
+            <PageHeaderBold
                 title="Get in Touch"
                 description="Ready to get moving again? Book an appointment or visit us at our clinic."
             />
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                 <p className="text-gray-700 leading-relaxed text-center max-w-3xl mx-auto mb-10">
-                    Use the appointment form for non-urgent enquiries, or call the hospital numbers listed
-                    beside each address if you prefer to speak with the front desk first. Please describe
-                    your main symptom, how long it has lasted, and any prior treatment so the team can suggest
-                    the right slot length. For emergencies—open fractures, loss of consciousness, new
-                    weakness after trauma—go to the nearest emergency department instead of waiting for an
-                    outpatient reply.
+                    Use the appointment form for non-urgent enquiries, or call the hospital
+                    numbers listed beside each address if you prefer to speak with the front
+                    desk first. Please describe your main symptom, how long it has lasted, and
+                    any prior treatment, so the team can book the right length of consultation
+                    for you.
                 </p>
+                <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-red-200 bg-red-50 px-5 py-4 text-sm leading-relaxed text-red-800">
+                    <strong className="font-semibold">In an emergency</strong> — such as an
+                    open fracture, loss of consciousness, or new weakness after trauma — please
+                    go to the nearest emergency department rather than waiting for an outpatient
+                    reply.
+                </div>
                 <div className="grid lg:grid-cols-2 gap-12">
 
                     {/* Contact Information Cards */}
@@ -37,11 +43,18 @@ export default function ContactPage() {
                             <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                                 <Clock className="h-6 w-6 text-primary" /> Consulting Hours
                             </h3>
-                            <div className="space-y-4 text-gray-600">
-                                <div className="flex justify-between border-b border-gray-50 pb-2">
-                                    <span>Monday - Saturday</span>
-                                    <span className="font-semibold text-gray-900">9:00 AM - 9:00 PM</span>
-                                </div>
+                            <div className="space-y-5 text-gray-600">
+                                {CLINICS.map((c) => (
+                                    <div key={c.id}>
+                                        <p className="font-semibold text-gray-900 mb-2">{c.name}</p>
+                                        {c.hours.map((h) => (
+                                            <div key={h.label} className="flex justify-between border-b border-gray-50 pb-2">
+                                                <span>{h.label}</span>
+                                                <span className="font-semibold text-gray-900">{h.display}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ))}
                                 <div className="flex justify-between border-b border-gray-50 pb-2">
                                     <span>Sunday</span>
                                     <span className="font-semibold text-gray-900">By Appointment</span>
@@ -52,34 +65,28 @@ export default function ContactPage() {
                         <FadeIn delay={0.2} className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
                             <h3 className="text-xl font-bold text-gray-900 mb-6">Contact Info</h3>
                             <ul className="space-y-6">
-                                <li className="flex items-start gap-4">
-                                    <div className="bg-blue-50 p-3 rounded-xl shrink-0">
-                                        <MapPin className="h-6 w-6 text-primary" />
-                                    </div>
-                                    <div>
-                                        <strong className="block text-gray-900 mb-1">Raghava Multispeciality Hospital</strong>
-                                        <p className="text-gray-600">39, Sarjapura - Attibele Rd, opposite syndicate bank, Attibele, Bengaluru, Karnataka 562107</p>
-                                        <p className="text-gray-700 font-medium mt-1">📞 <a href="tel:+919980031006" className="hover:text-primary transition-colors">+91-9980031006</a></p>
-                                    </div>
-                                </li>
-                                <li className="flex items-start gap-4">
-                                    <div className="bg-blue-50 p-3 rounded-xl shrink-0">
-                                        <MapPin className="h-6 w-6 text-primary" />
-                                    </div>
-                                    <div>
-                                        <strong className="block text-gray-900 mb-1">Health Nest Hospital</strong>
-                                        <p className="text-gray-600">1162, 24th Main Rd Sector 2, HSR Layout, Bengaluru, Karnataka 560102</p>
-                                        <p className="text-gray-700 font-medium mt-1">📞 <a href="tel:+919449031003" className="hover:text-primary transition-colors">+91-9449031003</a></p>
-                                    </div>
-                                </li>
-
+                                {CLINICS.map((c) => (
+                                    <li key={c.id} className="flex items-start gap-4">
+                                        <div className="bg-blue-50 p-3 rounded-xl shrink-0">
+                                            <MapPin className="h-6 w-6 text-primary" />
+                                        </div>
+                                        <div>
+                                            <strong className="block text-gray-900 mb-1">{c.name}</strong>
+                                            <p className="text-gray-600">{c.address}</p>
+                                            <p className="text-gray-700 font-medium mt-1 inline-flex items-center gap-1.5">
+                                                <Phone className="h-4 w-4 text-primary" aria-hidden />
+                                                <a href={`tel:${c.phone}`} className="hover:text-primary transition-colors">{c.phone}</a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                ))}
                                 <li className="flex items-center gap-4">
                                     <div className="bg-indigo-50 p-3 rounded-xl shrink-0">
                                         <Mail className="h-6 w-6 text-indigo-600" />
                                     </div>
                                     <div>
                                         <strong className="block text-gray-900 mb-1">Email</strong>
-                                        <p className="text-gray-600">contact@drnitinsunku.com</p>
+                                        <p className="text-gray-600">{PRACTICE_EMAIL}</p>
                                     </div>
                                 </li>
                             </ul>
@@ -101,54 +108,32 @@ export default function ContactPage() {
                     <FadeIn delay={0.4}>
                         <h2 className="text-3xl font-heading font-bold text-gray-900 text-center mb-12">Find Us on Map</h2>
                         <div className="grid md:grid-cols-2 gap-8">
-                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
-                                <h3 className="bg-primary text-white p-4 font-semibold">Raghava Multispeciality Hospital</h3>
-                                <iframe
-                                    src="https://maps.google.com/maps?q=Sri+Raghava+Childrens+and+General+Hospital+Attibele+Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                    width="100%"
-                                    height="300"
-                                    style={{ border: 0 }}
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title="Map showing Raghava Multispeciality Hospital, Attibele"
-                                    className="filter group-hover:brightness-90 transition-all duration-300"
-                                ></iframe>
-                                <p className="p-4 bg-gray-50 border-t border-gray-100 text-sm">
-                                    <a
-                                        href="https://maps.app.goo.gl/82xv2KzEU7GUjT357"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="font-medium text-primary hover:underline"
-                                    >
-                                        Open Raghava Multispeciality Hospital in Google Maps
-                                    </a>
-                                </p>
-                            </div>
-                            <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
-                                <h3 className="bg-primary text-white p-4 font-semibold">Health Nest Hospital</h3>
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0!2d77.64!3d12.91!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzM2LjAiTiA3N8KwMzgnMjQuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
-                                    width="100%"
-                                    height="300"
-                                    style={{ border: 0 }}
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title="Map showing Health Nest Hospital, HSR Layout"
-                                    className="filter group-hover:brightness-90 transition-all duration-300"
-                                ></iframe>
-                                <p className="p-4 bg-gray-50 border-t border-gray-100 text-sm">
-                                    <a
-                                        href="https://www.google.com/maps/search/?api=1&query=Health+Nest+Hospital+1162%2C+24th+Main+Rd%2C+Garden+Layout%2C+Sector+2+HSR+Layout%2C+Bangalore%2C+Karnataka+560102"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="font-medium text-primary hover:underline"
-                                    >
-                                        Open Health Nest Hospital in Google Maps
-                                    </a>
-                                </p>
-                            </div>
+                            {CLINICS.map((c) => (
+                                <div key={c.id} className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                                    <h3 className="bg-primary text-white p-4 font-semibold">{c.name}</h3>
+                                    <iframe
+                                        src={c.mapEmbedSrc}
+                                        width="100%"
+                                        height="300"
+                                        style={{ border: 0 }}
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                        title={`Map showing ${c.name}, ${c.shortLocality}`}
+                                        className="filter group-hover:brightness-90 transition-all duration-300"
+                                    ></iframe>
+                                    <p className="p-4 bg-gray-50 border-t border-gray-100 text-sm">
+                                        <a
+                                            href={c.mapLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="font-medium text-primary hover:underline"
+                                        >
+                                            Open {c.name} in Google Maps
+                                        </a>
+                                    </p>
+                                </div>
+                            ))}
                         </div>
                     </FadeIn>
                 </div>
@@ -157,7 +142,7 @@ export default function ContactPage() {
                 <div className="mt-16">
                     <FadeIn delay={0.5}>
                         <h2 className="text-3xl font-heading font-bold text-gray-900 text-center mb-4">Patient Testimonials</h2>
-                        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Hear from our patients about their recovery journey and experience with Dr. Nitin</p>
+                        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Hear from our patients about their recovery journey and experience with Dr. Nitin.</p>
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100">
                                 <iframe

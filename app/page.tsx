@@ -1,10 +1,11 @@
 import { Metadata } from "next";
-import { Hero } from "@/components/sections/hero";
-import { Stats } from "@/components/sections/stats";
-import { ServicesGrid } from "@/components/sections/services";
+import { HeroBold } from "@/components/sections/hero-bold";
+import { StatsBold } from "@/components/sections/stats-bold";
+import { ServicesGridBold } from "@/components/sections/services-bold";
+import { TreatmentsGridBold } from "@/components/sections/treatments-bold";
 import { Testimonials } from "@/components/sections/testimonials";
-import { AboutTeaser } from "@/components/sections/about-teaser";
-import { Locations } from "@/components/sections/locations";
+import { AboutTeaserBold } from "@/components/sections/about-teaser-bold";
+import { LocationsBold } from "@/components/sections/locations-bold";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig, practicePostalAddress } from "@/lib/data";
 import { siteOrigin } from "@/lib/site-url";
@@ -12,7 +13,7 @@ import { FadeIn } from "@/components/animations/fade-in";
 
 export const metadata: Metadata = {
   title: "Dr. Nitin N Sunku | Orthopedic & Sports Medicine Specialist",
-  description: "Consult Dr Nitin N Sunku, trusted orthopedic & sports medicine surgeon for joint pain, fractures, ligament injuries and advanced orthopedic care.",
+  description: "Consult Dr. Nitin N Sunku, trusted orthopedic & sports medicine surgeon for joint pain, fractures, ligament injuries and advanced orthopedic care.",
 };
 
 export default function Home() {
@@ -37,12 +38,13 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <JsonLd data={physicianSchema} />
-      <Hero />
-      <FadeIn delay={0.2}><Stats /></FadeIn>
-      <ServicesGrid />
+      <HeroBold />
+      <FadeIn delay={0.2}><StatsBold /></FadeIn>
+      <TreatmentsGridBold />
+      <ServicesGridBold />
       <FadeIn delay={0.2}><Testimonials /></FadeIn>
-      <FadeIn delay={0.2}><AboutTeaser /></FadeIn>
-      <FadeIn delay={0.2}><Locations /></FadeIn>
+      <FadeIn delay={0.2}><AboutTeaserBold /></FadeIn>
+      <FadeIn delay={0.2}><LocationsBold /></FadeIn>
 
       <section
         className="bg-slate-50 border-t border-slate-200 py-16 lg:py-20"
@@ -50,12 +52,12 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <h2 id="home-practice-overview" className="text-2xl lg:text-3xl font-heading font-bold text-gray-900 mb-6">
-            Evidence-based orthopaedic care for every stage of recovery
+            Evidence-based orthopedic care for every stage of recovery
           </h2>
           <div className="space-y-4 text-gray-700 text-base lg:text-lg leading-relaxed">
             <p>
-              Choosing an orthopaedic surgeon is about trust, clear communication, and a plan that fits your
-              lifestyle. Dr. Nitin N. Sunku combines fellowship-level training in arthroscopy and sports
+              Choosing an orthopedic surgeon is about trust, clear communication, and a plan that fits your
+              lifestyle. Dr. Nitin N Sunku combines fellowship-level training in arthroscopy and sports
               medicine with a conservative-first mindset: surgery is recommended when the benefits clearly
               outweigh the risks, and non-operative care—including activity modification, targeted
               physiotherapy, injections where appropriate, and bracing—is explored whenever it can deliver a

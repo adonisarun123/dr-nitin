@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { servicesData, blogPosts } from '@/lib/data'
+import { treatments } from '@/lib/treatments'
 import { siteOrigin } from '@/lib/site-url'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -8,7 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const routes = [
         '',
         '/about',
+        '/practice',
+        '/awards',
         '/services',
+        '/treatments',
         '/testimonials',
         '/gallery',
         '/team',
@@ -16,6 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/contact',
         '/privacy-policy',
         '/terms',
+        // Local-intent ads landing page (HSR Layout). Targets long-tail local
+        // queries ("orthopedic doctor HSR Layout") that don't compete with
+        // /book-appointment or the homepage.
+        '/orthopedic-doctor-in-hsr-layout',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
@@ -30,6 +38,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }))
 
+    const treatmentRoutes = treatments.map((treatment) => ({
+        url: `${baseUrl}/treatments/${treatment.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.9,
+    }))
+
     const blogRoutes = blogPosts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug}`,
         lastModified: new Date(),
@@ -37,5 +52,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
     }))
 
-    return [...routes, ...serviceRoutes, ...blogRoutes]
+    return [...routes, ...serviceRoutes, ...treatmentRoutes, ...blogRoutes]
 }

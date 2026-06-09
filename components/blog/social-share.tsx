@@ -1,9 +1,14 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Twitter, Linkedin, Facebook, Link2 } from "lucide-react";
-import { motion } from "framer-motion";
 
+/**
+ * Social share buttons.
+ *
+ * Rewritten off framer-motion — the only animation was a hover lift
+ * (`whileHover={{ y: -3 }}`), now done with a pure CSS `hover:-translate-y-[3px]`
+ * + transition. Removes framer-motion from this component's bundle.
+ */
 export function SocialShare({ title, slug }: { title: string; slug: string }) {
     const url = `https://drnitinsunku.com/blog/${slug}`;
     const encodedTitle = encodeURIComponent(title);
@@ -20,28 +25,29 @@ export function SocialShare({ title, slug }: { title: string; slug: string }) {
         // Could add toast here
     };
 
+    const lift =
+        "transition-transform duration-200 ease-out hover:-translate-y-[3px]";
+
     return (
         <div className="flex lg:flex-col gap-4 items-center">
             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest hidden lg:block mb-2">Share</p>
             {shareLinks.map((link, idx) => (
-                <motion.a
+                <a
                     key={idx}
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ y: -3 }}
-                    className={`bg-white p-3 rounded-full shadow-sm border border-gray-100 text-gray-500 transition-colors ${link.color}`}
+                    className={`bg-white p-3 rounded-full shadow-sm border border-gray-100 text-gray-500 ${lift} ${link.color}`}
                 >
                     <link.icon className="h-5 w-5" />
-                </motion.a>
+                </a>
             ))}
-            <motion.button
+            <button
                 onClick={copyToClipboard}
-                whileHover={{ y: -3 }}
-                className="bg-white p-3 rounded-full shadow-sm border border-gray-100 text-gray-500 hover:text-gray-900 transition-colors"
+                className={`bg-white p-3 rounded-full shadow-sm border border-gray-100 text-gray-500 hover:text-gray-900 ${lift}`}
             >
                 <Link2 className="h-5 w-5" />
-            </motion.button>
+            </button>
         </div>
     );
 }

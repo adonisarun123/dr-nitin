@@ -1,16 +1,27 @@
 import { z } from 'zod';
 
-// Zod schema for form validation
+// Zod schema for form validation.
+//
+// Length limits are deliberate: they keep abusive payloads small (cheaper email
+// sends, less log noise) and make it harder to smuggle long phishing copy via
+// the `message` field. Tweak if a legitimate use case appears.
 export const leadSchema = z.object({
-    name: z.string().min(1, 'Name is required'),
+    name: z.string().min(1, 'Name is required').max(120, 'Name too long'),
     phone: z.string().regex(/^[0-9]{10}$/, 'Phone must be 10 digits'),
-    email: z.string().email('Invalid email').optional().or(z.literal('')),
-    condition: z.string().min(1, 'Condition is required'),
-    preferredLocation: z.string().min(1, 'Preferred location is required'),
+    email: z.string().email('Invalid email').max(254, 'Email too long').optional().or(z.literal('')),
+    condition: z.string().min(1, 'Condition is required').max(120, 'Condition too long'),
+    preferredLocation: z.string().min(1, 'Preferred location is required').max(60, 'Location too long'),
     preferredDate: z.string().optional(),
-    message: z.string().optional(),
-    source: z.string().default('website'),
+    message: z.string().max(2000, 'Message too long').optional(),
+    source: z.string().max(60).default('website'),
     submittedAt: z.string().optional(),
+    /**
+     * Honeypot. Real users never see or fill this field, so any non-empty
+     * value indicates a bot. We accept the payload at validation time and
+     * silently drop it in the handler (returning a 200 so the bot can't
+     * probe for behaviour).
+     */
+    company: z.string().max(200).optional(),
 });
 
 export type LeadInput = z.infer<typeof leadSchema>;

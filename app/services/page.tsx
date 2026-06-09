@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { servicesData } from "@/lib/data";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
@@ -9,13 +9,13 @@ import { FadeIn } from "@/components/animations/fade-in";
 export const metadata: Metadata = {
     title: "Orthopedic & Sports Medicine Services",
     description:
-        "Orthopaedic and sports medicine services in Attibele with Dr Nitin N Sunku—ACL, meniscus, joint replacement, fractures, and spine symptoms. Consultations also at HSR Layout for patients across South Bengaluru.",
+        "Orthopedic and sports medicine services in Attibele with Dr. Nitin N Sunku—ACL, meniscus, joint replacement, fractures, and spine symptoms. Consultations also at HSR Layout for patients across South Bengaluru.",
 };
 
 export default function ServicesPage() {
     return (
         <main className="min-h-screen pb-20">
-            <PageHeader
+            <PageHeaderBold
                 title="Comprehensive Orthopedic Services"
                 description="Primary care at Raghava Multispeciality, Attibele, on Sarjapura–Attibele Road—sports injuries, joint replacement, fractures, and arthroscopy. Additional sessions at Health Nest Hospital, HSR Layout, for patients from nearby areas."
             />
@@ -33,7 +33,7 @@ export default function ServicesPage() {
                         examination.
                     </p>
                     <p>
-                        Dr. Nitin N. Sunku also holds sessions at <strong>Health Nest Hospital, HSR Layout</strong>{" "}
+                        Dr. Nitin N Sunku also holds sessions at <strong>Health Nest Hospital, HSR Layout</strong>{" "}
                         (24th Main, Sector 2) for follow-up, pre-operative review, and patients who live closer to
                         HSR, Koramangala, BTM Layout, or Bellandur. If you are unsure which site suits you best,
                         mention your location when you use the{" "}
@@ -65,16 +65,16 @@ export default function ServicesPage() {
                                     />
                                 </div>
 
-                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                                <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                                     {service.title}
-                                </h3>
+                                </h2>
 
                                 <p className="text-gray-500 mb-6 flex-grow leading-relaxed">
                                     {service.shortDesc}
                                 </p>
 
                                 <div className="flex items-center text-primary font-semibold text-sm mt-auto">
-                                    View Details <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                    Learn more <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </div>
                             </Link>
                         </FadeIn>

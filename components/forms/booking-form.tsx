@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Send, Loader2 } from "lucide-react";
 import { trackFormEvent, getUTMParameters } from "@/lib/analytics";
+import { PRIMARY_CLINIC } from "@/lib/practice";
 
 interface BookingFormProps {
     source?: string;
@@ -18,6 +19,9 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
         preferredLocation: "",
         preferredDate: "",
         message: "",
+        // Honeypot — kept blank in normal use. Bots that auto-fill all fields
+        // will populate this and be rejected by the /api/leads handler.
+        company: "",
     });
 
     const router = useRouter();
@@ -56,14 +60,11 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
-        console.log('🔵 Form submit triggered');
         e.preventDefault();
-        console.log('🔵 Default prevented');
         setIsSubmitting(true);
         setError("");
 
         try {
-            console.log('🔵 Starting submission...');
             // Add source suffix to identify leads from ads
             const submissionData = {
                 ...formData,
@@ -72,10 +73,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                 utm_params: getUTMParameters(),
             };
 
-            console.log('🔵 Submission data prepared:', { ...submissionData, phone: '***', email: '***' });
-
             // Send to API endpoint
-            console.log('🔵 Calling API...');
             const response = await fetch('/api/leads', {
                 method: 'POST',
                 headers: {
@@ -84,9 +82,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                 body: JSON.stringify(submissionData),
             });
 
-            console.log('🔵 API response status:', response.status);
             const result = await response.json();
-            console.log('🔵 API result:', result);
 
             if (!response.ok || !result.success) {
                 throw new Error(result.message || 'Failed to submit form');
@@ -111,10 +107,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
             // Redirect to thank you page
             router.push('/thank-you');
         } catch (err) {
-            console.error('🔴 Form submission error:', err);
-            console.error('🔴 Error details:', err instanceof Error ? err.message : 'Unknown error');
-            setError("Something went wrong. Please try again or call us directly.");
-            console.error("Form submission error:", err);
+            setError(`Something went wrong. Please try again or call us directly at ${PRIMARY_CLINIC.phone}.`);
 
             // Track form error
             trackFormEvent('booking_form', 'error', {
@@ -266,9 +259,39 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                 />
             </div>
 
+            {/* Honeypot: must remain empty. Hidden from real users with
+                multiple defensive techniques (off-screen + aria-hidden +
+                tabindex + autocomplete=off) so screen readers also skip it. */}
+            <div
+                aria-hidden="true"
+                style={{
+                    position: "absolute",
+                    left: "-10000px",
+                    top: "auto",
+                    width: "1px",
+                    height: "1px",
+                    overflow: "hidden",
+                }}
+            >
+                <label htmlFor="company">Company (leave blank)</label>
+                <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.company}
+                    onChange={handleChange}
+                />
+            </div>
+
             {/* Error Message */}
             {error && (
-                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                <div
+                    role="alert"
+                    aria-live="assertive"
+                    className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg"
+                >
                     {error}
                 </div>
             )}
@@ -277,7 +300,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary-600 hover:bg-primary-700 text-black font-semibold py-4 px-6 rounded-lg transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2 shadow-lg"
+                className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-4 px-6 rounded-lg transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2 shadow-lg"
             >
                 {isSubmitting ? (
                     <>
@@ -286,7 +309,7 @@ export function BookingForm({ source = "website" }: BookingFormProps) {
                     </>
                 ) : (
                     <>
-                        <Send className="w-5 h-5 text-black" />
+                        <Send className="w-5 h-5 text-white" />
                         Book Appointment
                     </>
                 )}

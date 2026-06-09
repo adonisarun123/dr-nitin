@@ -1,3 +1,5 @@
+import { GA_MEASUREMENT_ID } from './gtag';
+
 // Analytics event types
 export type AnalyticsEvent = {
     action: string;
@@ -39,9 +41,9 @@ export const trackEvent = (event: AnalyticsEvent) => {
 
 // Track page views
 export const trackPageView = (url: string, title?: string) => {
-    // Google Analytics 4
+    // Google Analytics 4 (id is configurable via NEXT_PUBLIC_GA_MEASUREMENT_ID)
     if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('config', 'GT-K8MTGRQ9', {
+        (window as any).gtag('config', GA_MEASUREMENT_ID, {
             page_path: url,
             page_title: title,
         });
@@ -59,10 +61,10 @@ export const trackPageView = (url: string, title?: string) => {
 
 // Track conversions
 export const trackConversion = (conversionType: 'lead' | 'contact' | 'phone_click', metadata?: Record<string, any>) => {
-    // Google Analytics 4
+    // Google Analytics 4 / Google Tag Manager (id is configurable)
     if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'conversion', {
-            send_to: 'GT-K8MTGRQ9',
+            send_to: GA_MEASUREMENT_ID,
             conversion_type: conversionType,
             ...metadata,
         });
@@ -100,8 +102,11 @@ export const trackFormEvent = (
         },
     });
 
-    // Track lead conversion on form submission
-    if (eventType === 'submit' || eventType === 'success') {
+    // Track lead conversion ONLY on `success` (server confirmed the lead).
+    // Firing on both `submit` and `success` previously caused duplicate Lead
+    // events on every form, which inflated Meta / Google Ads optimisation
+    // signals and distorted conversion-rate reporting.
+    if (eventType === 'success') {
         trackConversion('lead', {
             form_name: formName,
             ...metadata,

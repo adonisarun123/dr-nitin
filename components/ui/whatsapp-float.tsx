@@ -2,11 +2,13 @@
 
 import { MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
+import { PRIMARY_CLINIC } from "@/lib/practice";
 
 export function WhatsAppFloat() {
     const [isVisible, setIsVisible] = useState(false);
-    const phoneNumber = "919449031003"; // +91-9449031003 in international format without + and -
-    const message = "Hi, I would like to book an appointment with Dr. Nitin Sunku";
+    // Derived from PRIMARY_CLINIC (Attibele) — single source of truth in lib/practice.ts.
+    const phoneNumber = PRIMARY_CLINIC.phoneDigits;
+    const message = "Hi, I would like to book an appointment with Dr. Nitin N Sunku";
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
     useEffect(() => {
@@ -34,10 +36,6 @@ export function WhatsAppFloat() {
                     <MessageCircle className="h-7 w-7" strokeWidth={2} />
                 </div>
 
-                {/* Notification Badge */}
-                <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center animate-bounce">
-                    1
-                </div>
             </div>
 
             {/* Tooltip */}

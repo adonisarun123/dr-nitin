@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Stethoscope, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/lib/data";
 
 const navigation = [
     { name: "Home", href: "/" },
@@ -39,7 +40,7 @@ export function Header() {
                         <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
                             <img
                                 src="/dr-nitin-sunku-logo.svg"
-                                alt="Dr. Nitin Sunku - Orthopedic & Sports Medicine Specialist"
+                                alt="Dr. Nitin N Sunku - Orthopedic & Sports Medicine Specialist"
                                 className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
                             />
                         </Link>
@@ -86,11 +87,11 @@ export function Header() {
                     {/* Desktop CTAs */}
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center gap-3">
                         <a
-                            href="tel:+919449031003"
+                            href={`tel:${siteConfig.phone}`}
                             className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-blue-100 hover:text-white transition-colors rounded-lg hover:bg-blue-700 whitespace-nowrap"
                         >
                             <Phone className="h-4 w-4" />
-                            <span>+91-9449031003</span>
+                            <span>{siteConfig.phone}</span>
                         </a>
                         <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300">
                             <Link href="/contact">Book Appointment</Link>
@@ -115,7 +116,7 @@ export function Header() {
                                 <Stethoscope className="h-5 w-5 text-white" />
                             </div>
                             <span className="text-lg font-heading font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                                Dr. Nitin Sunku
+                                Dr. Nitin N Sunku
                             </span>
                         </Link>
                         <button
@@ -153,13 +154,13 @@ export function Header() {
                             <div className="py-6 space-y-4">
                                 <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Contact</h3>
                                 <a
-                                    href="tel:+919449031003"
+                                    href={`tel:${siteConfig.phone}`}
                                     className="flex items-center gap-3 text-gray-700 hover:text-primary transition-colors"
                                 >
                                     <div className="bg-green-50 p-2 rounded-lg">
                                         <Phone className="h-5 w-5 text-green-600" />
                                     </div>
-                                    <span className="font-medium">+91-9449031003</span>
+                                    <span className="font-medium">{siteConfig.phone}</span>
                                 </a>
                                 <a
                                     href="mailto:contact@drnitinsunku.com"

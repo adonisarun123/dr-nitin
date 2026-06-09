@@ -1,20 +1,31 @@
-export const siteConfig = {
-  name: "Dr. Nitin Sunku",
-  description: "Orthopedic & Sports Medicine Specialist in HSR Layout, Bangalore",
-  address: "1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
-  phone: "+91-9449031003",
-  email: "contact@drnitinsunku.com",
-};
+import { treatmentClusterPosts } from "./blog-posts-treatments";
+import {
+  ATTIBELE_CLINIC,
+  HSR_CLINIC,
+  PRACTICE_EMAIL,
+  clinicPostalAddress,
+} from "./practice";
 
-/** PostalAddress for JSON-LD (LocalBusiness / Physician provider). */
-export const practicePostalAddress = {
-  "@type": "PostalAddress" as const,
-  streetAddress: siteConfig.address,
-  addressLocality: "Bengaluru",
-  addressRegion: "Karnataka",
-  postalCode: "560102",
-  addressCountry: "IN",
-};
+/**
+ * Public site config. Clinic-specific fields are derived from `lib/practice.ts`
+ * (single source of truth). Do not hardcode clinic phone / address here.
+ */
+export const siteConfig = {
+  name: "Dr. Nitin N Sunku",
+  description:
+    "Dr. Nitin N Sunku — orthopedic & sports medicine specialist in Attibele and HSR Layout, Bengaluru. Arthroscopy, joint replacement, ACL care, regenerative & sports injury treatment.",
+  address: ATTIBELE_CLINIC.address,
+  addressSecondary: HSR_CLINIC.address,
+  phone: ATTIBELE_CLINIC.phone,
+  phoneSecondary: HSR_CLINIC.phone,
+  email: PRACTICE_EMAIL,
+} as const;
+
+/** PostalAddress for JSON-LD (primary clinic — Attibele / Raghava Multispeciality Hospital). */
+export const practicePostalAddress = clinicPostalAddress(ATTIBELE_CLINIC);
+
+/** PostalAddress for the secondary HSR Layout clinic — used in clinic listings and JSON-LD @graph. */
+export const practicePostalAddressSecondary = clinicPostalAddress(HSR_CLINIC);
 
 export const servicesData = [
   {
@@ -36,7 +47,7 @@ export const servicesData = [
   {
     slug: "sports-medicine",
     title: "Sports Medicine",
-    shortDesc: "Specialized sports medicine care in Bangalore. Dr. Sunku treats sprains, fractures, ligament tears with personalized plans. Return to sport safely.",
+    shortDesc: "Specialized sports medicine care in Bengaluru. Dr. Sunku treats sprains, fractures, ligament tears with personalized plans. Return to sport safely.",
     fullDesc: "From sprains to complex ligament injuries, our sports medicine program is designed to get athletes back in the game with personalized treatment plans.",
     icon: "/icons/sports-medicine.png",
     color: "bg-green-50 text-green-600",
@@ -52,7 +63,7 @@ export const servicesData = [
   {
     slug: "hip-replacement",
     title: "Hip Replacement",
-    shortDesc: "Expert hip replacement surgeries in Bangalore. Dr. Sunku treats arthritis and hip fractures with advanced prostheses. Learn about surgery, recovery",
+    shortDesc: "Expert hip replacement surgeries in Bengaluru. Dr. Sunku treats arthritis and hip fractures with advanced prostheses. Learn about surgery, recovery",
     fullDesc: "Hip replacement surgery helps patients suffering from hip arthritis or fractures regain their quality of life with reduced pain and improved function.",
     icon: "/icons/hip-replacement.png",
     color: "bg-purple-50 text-purple-600",
@@ -68,7 +79,7 @@ export const servicesData = [
   {
     slug: "bone-fracture",
     title: "Bone Fracture",
-    shortDesc: "Expert bone fracture care in Bangalore. Dr. Sunku treats simple to complex breaks with casting, ORIF, intramedullary nails. Personalized rehab for full recovery.",
+    shortDesc: "Expert bone fracture care in Bengaluru. Dr. Sunku treats simple to complex breaks with casting, ORIF, intramedullary nails. Personalized rehab for full recovery.",
     fullDesc: "Rapid and precise treatment for fractures ensuring proper alignment and healing.",
     icon: "/icons/broken-bone.png",
     color: "bg-red-50 text-red-600",
@@ -76,7 +87,7 @@ export const servicesData = [
   {
     slug: "spine-care",
     title: "Spine Care",
-    shortDesc: "Comprehensive spine care in Attibele by Dr. Nitin Sunku — expert evaluation and non-surgical or surgical management of back pain and spinal disorders.",
+    shortDesc: "Comprehensive spine care in Attibele by Dr. Nitin N Sunku — expert evaluation and non-surgical or surgical management of back pain and spinal disorders.",
     fullDesc: "Comprehensive evaluation and non-surgical/surgical management of spinal conditions.",
     icon: "/icons/spinal-care.png",
     color: "bg-emerald-50 text-emerald-600",
@@ -88,13 +99,13 @@ export const teamData = [
     name: "Dr. Nitin N Sunku",
     role: "Orthopedic & Sports Medicine Specialist",
     qualifications: "MBBS, MS Ortho, Fellowship in Arthroscopy & Sports Medicine",
-    bio: "Dr. Nitin is the lead consultant with over 7 years of specialized experience. He is the Team Doctor for Bengaluru FC and consults at top hospitals in Bangalore.",
+    bio: "Dr. Nitin is the lead consultant with over 10 years of specialized experience. He is the Team Doctor for Bengaluru FC and consults at leading hospitals in Bengaluru.",
     image: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin.png"
   },
   {
     name: "Mr. Vijayan",
     role: "Senior Physiotherapist",
-    qualifications: "BPTh/BPT, MPTh/MPT (Musculoskeletal)",
+    qualifications: "BPT, MPT (Musculoskeletal)",
     bio: "Mr. Vijayan specializes in post-operative rehabilitation and sports injury recovery, ensuring patients regain full function quickly.",
     image: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/mr-vijayan-physiotherapist.png"
   }
@@ -103,7 +114,7 @@ export const teamData = [
 export const testimonialsData = [
   {
     id: 1,
-    name: "John Doe",
+    name: "Arjun R.",
     condition: "Ankle Sprain",
     quote: "Dr. Nitin was prompt, responsive and honest. He explained my ankle injury clearly and offered options instead of pushing unnecessary treatment.",
     rating: 5
@@ -119,14 +130,14 @@ export const testimonialsData = [
     id: 3,
     name: "Rajesh M.",
     condition: "Sports Injury",
-    quote: "Recovered fully after his prescribed physiotherapy. Highly recommended for any sports related injuries!",
+    quote: "Recovered fully after his prescribed physiotherapy. Highly recommended for any sports-related injuries!",
     rating: 5
   },
   {
     id: 4,
     name: "Priya S.",
     condition: "Back Pain",
-    quote: "Very approachable and explains condition in detail. Best ortho in HSR layout used.",
+    quote: "Very approachable and explains my condition in detail. Best ortho in HSR Layout.",
     rating: 5
   },
   {
@@ -148,13 +159,13 @@ export const blogPosts = [
     image: "https://ik.imagekit.io/M0nger/Types%20of%20Total%20Knee%20Replacement.jpg.jpeg",
     content: `
       <p>If chronic knee pain is stopping you from climbing stairs, walking to the market, or enjoying a simple evening stroll, you are not alone. Millions of people across India, and especially in rapidly growing urban centers like Bengaluru, deal with debilitating knee arthritis every year. When conservative treatments no longer offer relief, total knee replacement surgery becomes one of the most effective long-term solutions available.</p>
-      <p>But here's something most patients don't realize: "total knee replacement" is not a single, one-size-fits-all surgery. There are several distinct types of total knee replacement procedures, each designed for different patient needs, activity levels, and degrees of joint damage. Choosing the right type, in partnership with an experienced orthopaedic surgeon, can dramatically influence your recovery time, implant longevity, and quality of life post-surgery.</p>
+      <p>But here's something most patients don't realize: "total knee replacement" is not a single, one-size-fits-all surgery. There are several distinct types of total knee replacement procedures, each designed for different patient needs, activity levels, and degrees of joint damage. Choosing the right type, in partnership with an experienced orthopedic surgeon, can dramatically influence your recovery time, implant longevity, and quality of life post-surgery.</p>
       <p>This comprehensive guide will walk you through every major type of total knee replacement available today, explain how each one works, and help you understand which approach may be best suited for you.</p>
       
       <h2>What Is Total Knee Replacement (TKR)?</h2>
       <p>Total knee replacement, medically known as total knee arthroplasty (TKA), is a surgical procedure in which damaged cartilage and bone from the surfaces of the knee joint are removed and replaced with artificial components made of metal alloys, high-grade plastics (polyethylene), and polymers. These prosthetic parts recreate the smooth gliding surface of a healthy knee, eliminating the painful bone-on-bone contact caused by advanced arthritis or injury.</p>
       <p>The knee joint consists of three bones: the femur (thigh bone), the tibia (shin bone), and the patella (kneecap). In a total knee replacement, the damaged surfaces of all three compartments, medial (inner), lateral (outer), and patellofemoral (front), are resurfaced with implants.</p>
-      <p>According to the American Academy of Orthopaedic Surgeons (AAOS), more than 90% of modern total knee replacements are still functioning well 15 years after surgery, making it one of the most consistently successful procedures in all of orthopaedics.</p>
+      <p>According to the American Academy of Orthopaedic Surgeons (AAOS), more than 90% of modern total knee replacements are still functioning well 15 years after surgery, making it one of the most consistently successful procedures in all of orthopedics.</p>
       
       <h3>Common Conditions That Lead to Total Knee Replacement</h3>
       <ul>
@@ -205,7 +216,7 @@ export const blogPosts = [
       <p>It is important to note that while the incision is smaller, the internal extent of the procedure is the same, all three compartments are resurfaced. The outcomes and implant longevity are comparable to traditional TKR when performed by an experienced knee replacement surgeon.</p>
 
       <h3>3. Robotic-Assisted Total Knee Replacement</h3>
-      <p>Robotic-assisted total knee arthroplasty is one of the most significant advances in orthopaedic surgery in recent years. In this technique, the surgeon uses a robotic arm system (such as MAKO or ROSA) guided by preoperative 3D CT-scan data to perform bone cuts with extraordinary precision.</p>
+      <p>Robotic-assisted total knee arthroplasty is one of the most significant advances in orthopedic surgery in recent years. In this technique, the surgeon uses a robotic arm system (such as MAKO or ROSA) guided by preoperative 3D CT-scan data to perform bone cuts with extraordinary precision.</p>
       <p>The robotic system creates a patient-specific virtual model of the knee before surgery. During the procedure, it provides real-time haptic feedback, guiding the surgeon to stay within planned boundaries and achieve optimal implant alignment.</p>
       <strong>Key benefits:</strong>
       <ul>
@@ -287,7 +298,7 @@ export const blogPosts = [
         <li>Overall health status – cardiovascular and systemic health affects surgical risk</li>
         <li>Patient goals – desire to return to sports, daily activities, or specific functional milestones</li>
       </ul>
-      <p>An open and honest conversation with your orthopaedic surgeon is the most important step. You can start that conversation today by visiting our services page or exploring patient stories from people who have already walked this path.</p>
+      <p>An open and honest conversation with your orthopedic surgeon is the most important step. You can start that conversation today by visiting our services page or exploring patient stories from people who have already walked this path.</p>
 
       <h2>The Knee Replacement Procedure: What to Expect</h2>
       <strong>Before Surgery</strong>
@@ -319,7 +330,7 @@ export const blogPosts = [
 
       <h2>Knee Replacement in Bengaluru: Why Experience Matters</h2>
       <p>Total knee replacement outcomes are strongly correlated with the surgical volume and expertise of the operating surgeon. A high-volume knee replacement specialist brings refined technical skill, familiarity with complex cases, and access to the latest implant technologies.</p>
-      <p>Dr. Nitin N. Sunku is a fellowship-trained orthopaedic surgeon based in HSR Layout, Bengaluru, with specialized training in arthroscopy, sports medicine, and joint replacement. As Team Doctor for Bengaluru FC and Visiting Consultant at Narayana Hrudayalaya and Manipal Hospital, Dr. Nitin brings a high-performance, patient-centered approach to every procedure.</p>
+      <p>Dr. Nitin N Sunku is a fellowship-trained orthopedic surgeon based in HSR Layout, Bengaluru, with specialized training in arthroscopy, sports medicine, and joint replacement. As Team Doctor for Bengaluru FC and Visiting Consultant at Narayana Hrudayalaya and Manipal Hospital, Dr. Nitin brings a high-performance, patient-centered approach to every procedure.</p>
       <p>If you are experiencing persistent knee pain that limits your daily activities, we invite you to book a consultation. Our clinics are conveniently located at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal, serving patients across South Bengaluru, Electronic City, Attibele, Sarjapura, and surrounding areas.</p>
 
       <h2>Life After Total Knee Replacement</h2>
@@ -361,7 +372,7 @@ export const blogPosts = [
       <p>A: Yes, this is called bilateral simultaneous total knee replacement (BS-TKR). While it offers the advantage of a single anesthesia event and one combined recovery period, it is associated with higher surgical risks and demands greater cardiovascular reserve. Your surgeon will assess whether you are a suitable candidate based on your overall health, age, and the degree of bilateral arthritis.</p>
 
       <strong>Q7: What is revision knee replacement, and when is it needed?</strong>
-      <p>A: Revision knee replacement is performed when a primary knee replacement fails. Common reasons include implant loosening, infection, significant wear of the polyethylene spacer, instability, or periprosthetic fracture. Revision surgery is more complex than primary TKR and requires specialized implants and surgical expertise. If you are experiencing increasing pain or instability years after a knee replacement, consult your orthopaedic surgeon for evaluation.</p>
+      <p>A: Revision knee replacement is performed when a primary knee replacement fails. Common reasons include implant loosening, infection, significant wear of the polyethylene spacer, instability, or periprosthetic fracture. Revision surgery is more complex than primary TKR and requires specialized implants and surgical expertise. If you are experiencing increasing pain or instability years after a knee replacement, consult your orthopedic surgeon for evaluation.</p>
 
       <strong>Q8: What is the right age for total knee replacement surgery?</strong>
       <p>A: Total knee replacement is most commonly performed in patients between 60 and 80 years of age, but it is not strictly an age-dependent decision. The surgery is considered when knee pain and disability significantly affect quality of life and cannot be managed through conservative means. Younger patients can also undergo TKR, though implant wear over time is a greater consideration, and cementless or more durable implant options may be preferred.</p>
@@ -370,12 +381,12 @@ export const blogPosts = [
       <p>A: Modern pain management protocols, including multimodal analgesia, nerve blocks, and minimally invasive techniques, have significantly reduced post-operative pain compared to earlier generations of surgery. Most patients report manageable discomfort in the days after surgery, with pain levels decreasing progressively over the first few weeks. The key goal of TKR is, of course, to eliminate the chronic arthritic pain that was limiting your daily life.</p>
 
       <strong>Q10: Where can I get total knee replacement surgery in Bengaluru?</strong>
-      <p>A: Dr. Nitin N. Sunku performs total and partial knee replacement surgeries at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal, Bengaluru. To schedule a consultation, contact our team or call +91-9449031003.</p>
+      <p>A: Dr. Nitin N Sunku performs total and partial knee replacement surgeries at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal, Bengaluru. To schedule a consultation, contact our team or call +91-9449031003.</p>
 
-      <p><em>This article is intended for educational purposes only and does not constitute medical advice. Please consult a qualified orthopaedic surgeon to discuss your individual condition and treatment options.</em></p>
+      <p><em>This article is intended for educational purposes only and does not constitute medical advice. Please consult a qualified orthopedic surgeon to discuss your individual condition and treatment options.</em></p>
 
       <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-          <p class="font-bold text-lg mb-2">Author: Dr. Nitin N. Sunku, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
+          <p class="font-bold text-lg mb-2">Author: Dr. Nitin N Sunku, MS Orthopedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Consulting at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Bengaluru, Karnataka.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-white font-bold no-underline hover:bg-primary/90 h-10 px-4 py-2">
               Book appointment online or call +91-9449031003
@@ -386,20 +397,20 @@ export const blogPosts = [
   {
     slug: "arthroscopy-shoulder",
     title: "Arthroscopy Shoulder: Everything You Need to Know Before Your Surgery",
-    excerpt: "If you have been living with persistent shoulder pain, limited arm movement, or a shoulder injury that hasn't responded to rest and physiotherapy, your orthopaedic surgeon may have recommended shoulder arthroscopy. This minimally invasive procedure has transformed the way shoulder conditions are treated, offering faster recovery, smaller scars, and better outcomes compared to traditional open surgery.",
+    excerpt: "If you have been living with persistent shoulder pain, limited arm movement, or a shoulder injury that hasn't responded to rest and physiotherapy, your orthopedic surgeon may have recommended shoulder arthroscopy. This minimally invasive procedure has transformed the way shoulder conditions are treated, offering faster recovery, smaller scars, and better outcomes compared to traditional open surgery.",
     date: "Mar 2, 2026",
     category: "Shoulder Care",
     image: "https://ik.imagekit.io/M0nger/Arthroscopy%20Shoulder.jpg.jpeg",
     content: `
       <p>Shoulder pain, stiffness, or an injury that did not improve with rest and physiotherapy may lead your surgeon to suggest shoulder arthroscopy. This is a keyhole (minimally invasive) operation.</p>
       <p>Compared with open surgery, it often means less pain after the operation, smaller scars, and a quicker return to daily life or sport.</p>
-      <p>Dr. Nitin N. Sunku is a fellowship-trained arthroscopic surgeon in HSR Layout, Bengaluru. In this guide he explains what the procedure is, who it suits, what recovery is like, and when to seek specialist care.</p>
+      <p>Dr. Nitin N Sunku is a fellowship-trained arthroscopic surgeon in HSR Layout, Bengaluru. In this guide he explains what the procedure is, who it suits, what recovery is like, and when to seek specialist care.</p>
       <h2>What Is Shoulder Arthroscopy?</h2>
       <p>Shoulder arthroscopy is keyhole surgery. The surgeon passes a small camera (arthroscope) into the joint to see the inside of the shoulder on a screen.</p>
       <p>The word comes from Greek: “arthro” (joint) and “skopein” (to look). So it literally means to look inside the joint.</p>
       <p>One small cut is used for the camera. One to three extra small cuts allow fine instruments to treat torn tissue, bone spurs, or tight capsule as needed.</p>
       <p>Smaller cuts usually mean less soft-tissue damage than open surgery. Many patients have less pain after the operation, a lower wound risk, and a faster return to desk work, driving, or sport.</p>
-      <p>Shoulder arthroscopy is the second most common orthopaedic procedure globally, after knee arthroscopy, a testament to how widely trusted and effective it has become.</p>
+      <p>Shoulder arthroscopy is the second most common orthopedic procedure globally, after knee arthroscopy, a testament to how widely trusted and effective it has become.</p>
       <h2>Understanding the Shoulder Joint</h2>
       <p>Before exploring what arthroscopy treats, it helps to understand how complex your shoulder really is. The shoulder is the most mobile joint in the human body, capable of rotating in nearly every direction. It is made up of three bones:</p>
       <ul>
@@ -436,7 +447,7 @@ export const blogPosts = [
       <h3>9. Shoulder Fracture Assistance</h3>
       <p>For certain fractures, such as glenoid rim or tuberosity fractures, arthroscopy can assist in guiding and confirming the accuracy of fracture repair, minimizing the need for large incisions.</p>
       <h2>When Is Shoulder Arthroscopy Recommended?</h2>
-      <p>Not every shoulder condition requires surgery. Dr. Nitin Sunku always adopts a conservative-first approach, recommending surgery only when non-surgical methods have not provided adequate relief. Your surgeon may recommend arthroscopy when:</p>
+      <p>Not every shoulder condition requires surgery. Dr. Nitin N Sunku always adopts a conservative-first approach, recommending surgery only when non-surgical methods have not provided adequate relief. Your surgeon may recommend arthroscopy when:</p>
       <ul>
       <li>Shoulder pain persists for three or more months despite physiotherapy</li>
       <li>Anti-inflammatory medications and cortisone injections have provided only temporary relief</li>
@@ -513,7 +524,7 @@ export const blogPosts = [
       <li>Month 2–3: Progressive strengthening exercises begin. Shoulder mobility improves steadily. Many patients return to desk jobs or light work during this phase.</li>
       <li>Month 3–6: Return to sport or heavy physical work. Recovery from a simple procedure like bursectomy can be complete in as little as 6–8 weeks, while full rotator cuff repairs may require up to 6 months to achieve full strength.</li>
       </ul>
-      <p>Following your physiotherapy program diligently is the single most important factor in achieving a successful outcome. Dr. Nitin Sunku coordinates closely with experienced physiotherapists to provide a structured, personalised rehabilitation plan for every patient.</p>
+      <p>Following your physiotherapy program diligently is the single most important factor in achieving a successful outcome. Dr. Nitin N Sunku coordinates closely with experienced physiotherapists to provide a structured, personalised rehabilitation plan for every patient.</p>
       <h2>Risks and Complications: What You Should Know</h2>
       <p>Shoulder arthroscopy is a safe procedure, and serious complications are rare. However, as with any surgical procedure, some risks exist:</p>
       <ul>
@@ -525,10 +536,10 @@ export const blogPosts = [
       <li>Anaesthesia-related reactions</li>
       </ul>
       <p>Your surgeon will discuss your individual risk profile in detail during your pre-operative consultation.</p>
-      <h2>Why Choose Dr. Nitin N. Sunku for Your Shoulder Arthroscopy in Bengaluru?</h2>
-      <p>Dr. Nitin Sunku is a fellowship-trained arthroscopic surgeon with a track record of managing complex shoulder conditions across his two practice locations in HSR Layout and Anekal, Bengaluru. His qualifications include:</p>
+      <h2>Why Choose Dr. Nitin N Sunku for Your Shoulder Arthroscopy in Bengaluru?</h2>
+      <p>Dr. Nitin N Sunku is a fellowship-trained arthroscopic surgeon with a track record of managing complex shoulder conditions across his two practice locations in HSR Layout and Anekal, Bengaluru. His qualifications include:</p>
       <ul>
-      <li>MBBS & MS Orthopaedics – Gold Medalist</li>
+      <li>MBBS & MS Orthopedics – Gold Medalist</li>
       <li>Fellowship in Arthroscopy & Sports Medicine</li>
       <li>Team Doctor – Bengaluru FC – bringing elite-level sports injury management to everyday patients</li>
       <li>Visiting Consultant – Narayana Hrudayalaya & Manipal Hospital, Bengaluru</li>
@@ -550,7 +561,7 @@ export const blogPosts = [
       </ul>
       <h2>GEO Note: Shoulder Arthroscopy in Bengaluru</h2>
       <p>Shoulder injuries are increasingly common among Bengaluru's growing population of sports enthusiasts, IT professionals working long hours at desks, and active retirees. Conditions like frozen shoulder, rotator cuff tears, and shoulder impingement are frequently seen among cricket players, badminton enthusiasts, and gym-goers across HSR Layout, Koramangala, Electronic City, and surrounding areas.</p>
-      <p>Dr. Nitin Sunku's clinics in HSR Layout (Health Nest Hospital) and Anekal (Raghava Multispeciality Hospital) are equipped to handle the full spectrum of shoulder conditions, from initial diagnosis to post-surgical rehabilitation, making expert arthroscopic shoulder care accessible across South Bengaluru.</p>
+      <p>Dr. Nitin N Sunku's clinics in HSR Layout (Health Nest Hospital) and Anekal (Raghava Multispeciality Hospital) are equipped to handle the full spectrum of shoulder conditions, from initial diagnosis to post-surgical rehabilitation, making expert arthroscopic shoulder care accessible across South Bengaluru.</p>
       <p>You can also read more about ACL care and other joint procedures commonly treated alongside shoulder conditions in active individuals.</p>
       <h2>Resources</h2>
       <ul>
@@ -578,10 +589,10 @@ export const blogPosts = [
       <strong>Q9. Is shoulder arthroscopy safe?</strong>
       <p>Yes, shoulder arthroscopy is generally very safe. Serious complications are rare, the infection rate is below 1%, which is significantly lower than open surgery. Your surgeon will review your specific risk factors during your pre-operative consultation.</p>
       <strong>Q10. Where can I get shoulder arthroscopy done in Bengaluru?</strong>
-      <p>Dr. Nitin N. Sunku performs arthroscopic shoulder surgery at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal, Bengaluru. To book a consultation, contact us here.</p>
-      <p><em>Disclaimer: This article is for informational purposes only and does not constitute medical advice. Please consult a qualified orthopaedic surgeon for diagnosis and personalized treatment recommendations.</em></p>
+      <p>Dr. Nitin N Sunku performs arthroscopic shoulder surgery at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal, Bengaluru. To book a consultation, contact us here.</p>
+      <p><em>Disclaimer: This article is for informational purposes only and does not constitute medical advice. Please consult a qualified orthopedic surgeon for diagnosis and personalized treatment recommendations.</em></p>
       <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-          <p class="font-bold text-lg mb-2">Dr. Nitin N. Sunku, MBBS, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
+          <p class="font-bold text-lg mb-2">Dr. Nitin N Sunku, MBBS, MS Orthopedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <p class="mb-4 text-sm">📍 Health Nest Hospital, HSR Layout, Bengaluru | Raghava Multispeciality Hospital, Anekal.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
@@ -721,7 +732,7 @@ export const blogPosts = [
         <li>Progress load gradually and never jump a rehabilitation phase because you feel good for a few days.</li>
       </ul>
       
-      <h2>Booking an Appointment with Dr. Nitin Sunku in Bengaluru</h2>
+      <h2>Booking an Appointment with Dr. Nitin N Sunku in Bengaluru</h2>
       <p>If you are struggling with Achilles tendon pain and are not sure which phase of tendinopathy you are in or what treatment you need, a proper clinical assessment is the most important first step. Dr. Nitin N Sunku offers evidence-based, phase-specific management of Achilles tendinopathy for athletes, recreational exercisers, and active adults across Bengaluru.</p>
       <p>Book your appointment here: <a href="/contact">Book your appointment online</a></p>
       
@@ -761,7 +772,7 @@ export const blogPosts = [
         <li>A Treatment Algorithm for Managing Achilles Tendinopathy. PMC, British Journal of Sports Medicine. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2658946/" target="_blank" rel="noopener noreferrer">Open treatment algorithm article on PubMed Central</a></li>
       </ul>
       
-      <h2>Related Services at Dr. Nitin Sunku's Clinic</h2>
+      <h2>Related Services at Dr. Nitin N Sunku's Clinic</h2>
       <ul>
         <li><a href="/services/sports-medicine">Sports Medicine: Comprehensive Injury Management</a></li>
         <li><a href="/services/acl-care">ACL Care: Expert Arthroscopic Knee Ligament Treatment</a></li>
@@ -771,7 +782,7 @@ export const blogPosts = [
       </ul>
       
       <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-          <p class="font-bold text-lg mb-2">Dr. Nitin N. Sunku, MBBS, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
+          <p class="font-bold text-lg mb-2">Dr. Nitin N Sunku, MBBS, MS Orthopedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <p class="mb-4 text-sm">Dr. Nitin regularly manages athletes and active adults presenting with Achilles tendinopathy, tendon ruptures, and complex lower limb overuse injuries using a structured, evidence-based, phase-specific approach.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
@@ -810,7 +821,7 @@ export const blogPosts = [
       <p>Persistent symptoms that should prompt a medical evaluation include the knee giving way during routine activities, a feeling of looseness or instability, and recurring swelling after physical activity. If you are experiencing any of these symptoms, an accurate diagnosis using MRI imaging is essential before any treatment decision is made.</p>
 
       <h2>Treatment Options for ACL Tear in Patients Over 60</h2>
-      <p>When an older adult presents with an ACL tear, the treatment path is not automatically surgical or automatically conservative. A thorough assessment of multiple factors guides the decision. At our clinic in Bengaluru, Dr. Nitin Sunku evaluates each patient individually, considering their overall health, activity goals, knee stability, and the presence of any associated injuries such as meniscus tears or cartilage damage.</p>
+      <p>When an older adult presents with an ACL tear, the treatment path is not automatically surgical or automatically conservative. A thorough assessment of multiple factors guides the decision. At our clinic in Bengaluru, Dr. Nitin N Sunku evaluates each patient individually, considering their overall health, activity goals, knee stability, and the presence of any associated injuries such as meniscus tears or cartilage damage.</p>
 
       <h3>Option 1: Conservative (Non-Surgical) Treatment</h3>
       <p>Non-surgical care is a fair option for some people over 60. It usually means guided physiotherapy to strengthen the front and back of the thigh and the calf. A hinged brace can add support. Tablets or injections may ease pain and swelling for a time.</p>
@@ -900,10 +911,10 @@ export const blogPosts = [
       <h3>Arthritic Changes</h3>
       <p>The presence of mild to moderate osteoarthritis does not automatically exclude ACL reconstruction. In fact, restoring knee stability through surgery can slow the progression of cartilage wear. However, severe arthritis (Grade 4 on the Kellgren-Lawrence scale) is generally considered a contraindication to ACL reconstruction, as the joint is too compromised to benefit meaningfully. In such cases, total knee replacement may be the more effective solution.</p>
 
-      <h2>ACL Care in Bengaluru: Why Choose Dr. Nitin Sunku</h2>
+      <h2>ACL Care in Bengaluru: Why Choose Dr. Nitin N Sunku</h2>
       <p>Patients across HSR Layout, Anekal, and the wider Bengaluru region seeking expert management of ACL injuries in older adults can consult Dr. Nitin N Sunku at Health Nest Hospital and Raghava Multispeciality Hospital. As a fellowship-trained orthopedic and sports medicine specialist and the team doctor for Bengaluru FC, Dr. Nitin brings elite-level expertise to patients of all ages.</p>
       <p>His approach is grounded in evidence-based decision-making, not a one-size-fits-all protocol. Every patient over 60 presenting with a knee ligament injury receives a thorough evaluation of their activity goals, overall health status, and knee imaging before any surgical recommendation is made. Where conservative management is appropriate, a structured rehabilitation plan is prescribed. Where surgery offers the best long-term outcome, patients receive minimally invasive arthroscopic care with comprehensive support through every stage of recovery.</p>
-      <p>If you are over 60 and dealing with a knee that buckles, swells, or limits your daily life, do not assume your only option is to live with it. Book a consultation with Dr. Nitin Sunku in Bengaluru and get a clear, personalized answer: <a href="/contact">Book your consultation online</a></p>
+      <p>If you are over 60 and dealing with a knee that buckles, swells, or limits your daily life, do not assume your only option is to live with it. Book a consultation with Dr. Nitin N Sunku in Bengaluru and get a clear, personalized answer: <a href="/contact">Book your consultation online</a></p>
 
       <h2>Tips for Older Adults to Protect Knee Health and Prevent ACL Injuries</h2>
       <p>Prevention is always preferable to treatment. If you are an active adult over 60, these evidence-based measures can reduce your risk of ACL and other knee injuries:</p>
@@ -953,7 +964,7 @@ export const blogPosts = [
         <li>Management of ACL Rupture in Patients Aged 40 Years and Older. PMC, National Institutes of Health. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3225626/" target="_blank" rel="noopener noreferrer">Open ACL management in older adults on PubMed Central</a></li>
       </ul>
 
-      <h2>Related Services at Dr. Nitin Sunku's Clinic</h2>
+      <h2>Related Services at Dr. Nitin N Sunku's Clinic</h2>
       <ul>
         <li><a href="/services/acl-care">ACL Care: Expert Arthroscopic Reconstruction</a></li>
         <li><a href="/services/meniscal-care">Meniscal Care: Minimally Invasive Meniscus Treatment</a></li>
@@ -963,7 +974,7 @@ export const blogPosts = [
       </ul>
 
       <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-          <p class="font-bold text-lg mb-2">Dr. Nitin N. Sunku, MBBS, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
+          <p class="font-bold text-lg mb-2">Dr. Nitin N Sunku, MBBS, MS Orthopedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <p class="mb-4 text-sm">Dr. Nitin has performed ACL reconstructions, meniscal repairs, and joint replacements for patients across all age groups, including many patients over 60 who have returned to active, fulfilling lifestyles after surgery.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
@@ -982,7 +993,7 @@ export const blogPosts = [
     content: `
       <h2>Introduction</h2>
       
-      <p>ACL (Anterior Cruciate Ligament) reconstruction is one of the most commonly performed orthopaedic procedures in India, especially among athletes, young adults, and active individuals. Whether you play football, cricket, kabaddi, or simply took an unfortunate fall, the road to recovery after ACL surgery is long, typically nine to twelve months, and requires careful monitoring every step of the way.</p>
+      <p>ACL (Anterior Cruciate Ligament) reconstruction is one of the most commonly performed orthopedic procedures in India, especially among athletes, young adults, and active individuals. Whether you play football, cricket, kabaddi, or simply took an unfortunate fall, the road to recovery after ACL surgery is long, typically nine to twelve months, and requires careful monitoring every step of the way.</p>
       
       <p>While it is completely normal to experience pain, swelling, and stiffness in the days immediately after surgery, there are certain warning signs that should never be dismissed as "just part of healing." Recognizing the bad signs after ACL surgery early can be the difference between a smooth recovery and a serious setback that may require revision surgery.</p>
       
@@ -997,7 +1008,7 @@ export const blogPosts = [
         <li><strong>3–6 Months:</strong> Running, agility drills, and sport-specific training begin under physiotherapy supervision, provided healing is on track.</li>
         <li><strong>9–12 Months:</strong> Return to competitive sport, typically following a formal return-to-sport assessment.</li>
       </ul>
-      <p>Any significant deviation from this timeline, particularly the appearance of new or worsening symptoms, should prompt an immediate consultation with your orthopaedic surgeon.</p>
+      <p>Any significant deviation from this timeline, particularly the appearance of new or worsening symptoms, should prompt an immediate consultation with your orthopedic surgeon.</p>
 
       <h2>9 Bad Signs After ACL Surgery You Must Not Ignore</h2>
       
@@ -1008,7 +1019,7 @@ export const blogPosts = [
 
       <h3>2. Excessive or Rapidly Worsening Swelling</h3>
       <p>Some swelling is absolutely expected after ACL reconstruction, your body has undergone a significant procedure, and fluid accumulation is a normal part of the inflammatory healing cascade. However, swelling that suddenly increases after it had been improving, or swelling that is dramatically disproportionate compared to what your surgeon described as normal, is a warning sign.</p>
-      <p>Sudden, severe swelling, particularly in the thigh, calf, or behind the knee, can indicate a deep vein thrombosis (DVT), also called a blood clot. Blood clots are more common after orthopaedic procedures due to reduced mobility and changes in blood flow. Left untreated, a DVT can travel to the lungs (pulmonary embolism), which is life-threatening.</p>
+      <p>Sudden, severe swelling, particularly in the thigh, calf, or behind the knee, can indicate a deep vein thrombosis (DVT), also called a blood clot. Blood clots are more common after orthopedic procedures due to reduced mobility and changes in blood flow. Left untreated, a DVT can travel to the lungs (pulmonary embolism), which is life-threatening.</p>
       <p><strong>What to look for:</strong> Swelling in the calf accompanied by warmth, redness, and pain, this is a classic DVT presentation and demands emergency evaluation.</p>
 
       <h3>3. Increasing Redness, Warmth, and Discharge at the Incision Site</h3>
@@ -1044,7 +1055,7 @@ export const blogPosts = [
       <h3>9. Blood Clot Symptoms: Calf Pain, Redness, or Shortness of Breath</h3>
       <p>This cannot be overstated: if you develop sudden shortness of breath, chest pain, or feel your heart racing in the days or weeks after ACL surgery, call emergency services immediately. These may be symptoms of a pulmonary embolism, a blood clot that has traveled to the lungs, which is a life-threatening emergency.</p>
       <p>On a less critical but equally important level, watch for unexplained pain and swelling in the calf of the operated leg. This classic presentation of deep vein thrombosis should prompt same-day evaluation with an ultrasound.</p>
-      <p>To reduce the risk of blood clots, most orthopaedic surgeons recommend early mobilization, compression stockings, adequate hydration, and, in higher-risk patients, blood-thinning medications.</p>
+      <p>To reduce the risk of blood clots, most orthopedic surgeons recommend early mobilization, compression stockings, adequate hydration, and, in higher-risk patients, blood-thinning medications.</p>
 
       <h2>Red Flags in Your Rehabilitation Program: When Physio Is Going Wrong</h2>
       <p>Beyond physical symptoms, there are also warning signs within your rehabilitation program that indicate you are not on the right track. These are less dramatic but equally important for long-term outcomes:</p>
@@ -1055,7 +1066,7 @@ export const blogPosts = [
       </ul>
       <p>If your current rehabilitation provider is not addressing these areas, consider seeking a second opinion from an experienced sports medicine physiotherapist.</p>
 
-      <h2>When to See Dr. Nitin Sunku After ACL Surgery</h2>
+      <h2>When to See Dr. Nitin N Sunku After ACL Surgery</h2>
       <p>As a specialist in ACL care and arthroscopic knee surgery in Bengaluru, my approach has always been centered on patient education and proactive communication. I believe the best outcomes happen when patients feel empowered to recognize early warning signs and reach out without hesitation.</p>
       <p>You should call our clinic or visit us urgently if you experience:</p>
       <ul>
@@ -1068,7 +1079,7 @@ export const blogPosts = [
         <li>Chest pain or sudden difficulty breathing</li>
       </ul>
       <p>Our team at Health Nest Hospital, HSR Layout and Raghava Multispeciality Hospital, Anekal is equipped to evaluate ACL complications and provide timely intervention, whether that involves imaging, medication adjustment, physiotherapy modification, or surgical revision.</p>
-      <p>For patients across Bengaluru, including HSR Layout, Koramangala, BTM Layout, Electronic City, Sarjapur Road, and Anekal, early access to expert orthopaedic care can significantly alter the trajectory of your recovery.</p>
+      <p>For patients across Bengaluru, including HSR Layout, Koramangala, BTM Layout, Electronic City, Sarjapur Road, and Anekal, early access to expert orthopedic care can significantly alter the trajectory of your recovery.</p>
 
       <h2>How to Support Healthy ACL Recovery: What You Can Do at Home</h2>
       <p>Understanding bad signs is important, but so is knowing how to optimize your recovery on a daily basis. Here are evidence-based tips to support healing:</p>
@@ -1082,14 +1093,14 @@ export const blogPosts = [
       </ol>
 
       <h2>ACL Recovery in the Indian Context: What Bengaluru Patients Should Know</h2>
-      <p>In Bengaluru's active population, from IT professionals who play recreational football on weekends to young athletes training with Bengaluru FC's academy, ACL injuries are increasingly common. The combination of hard indoor court surfaces, inadequate warm-up routines, and a high desire to return to sport quickly creates a pattern that orthopaedic surgeons see regularly.</p>
+      <p>In Bengaluru's active population, from IT professionals who play recreational football on weekends to young athletes training with Bengaluru FC's academy, ACL injuries are increasingly common. The combination of hard indoor court surfaces, inadequate warm-up routines, and a high desire to return to sport quickly creates a pattern that orthopedic surgeons see regularly.</p>
       <p>What makes the Indian recovery context unique is that access to high-quality physiotherapy, compliance with post-operative restrictions, and awareness of warning signs can vary significantly. Patients who understand their recovery and feel confident communicating concerns to their surgical team consistently achieve better outcomes. This guide is written with that goal in mind.</p>
       <p>If you are scheduled for ACL surgery, or are currently recovering from one, visit our <a href="/services/sports-medicine">Sports Medicine</a> page to learn more about how we approach the full continuum of care, from diagnosis and surgery through rehabilitation and return to sport.</p>
 
       <h2>Resources</h2>
       <ul>
-        <li><a href="/services/acl-care">ACL Care, Dr. Nitin Sunku</a></li>
-        <li><a href="/services/sports-medicine">Sports Medicine, Dr. Nitin Sunku</a></li>
+        <li><a href="/services/acl-care">ACL Care, Dr. Nitin N Sunku</a></li>
+        <li><a href="/services/sports-medicine">Sports Medicine, Dr. Nitin N Sunku</a></li>
         <li><a href="/contact">Book an Appointment</a></li>
         <li>American Academy of Orthopaedic Surgeons (AAOS), ACL Reconstruction Guidelines: <a href="https://www.aaos.org" target="_blank" rel="noopener noreferrer">Visit the American Academy of Orthopaedic Surgeons website</a></li>
         <li>National Library of Medicine, ACL Graft Healing and Complications: <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener noreferrer">Search medical literature on PubMed</a></li>
@@ -1121,10 +1132,10 @@ export const blogPosts = [
       <strong>Q8. Is knee stiffness after ACL surgery a bad sign?</strong>
       <p>Some stiffness is expected, particularly in the first few weeks. However, if you are unable to fully straighten your knee by 2–3 weeks post-surgery, or if you cannot achieve 90 degrees of flexion by 4–6 weeks despite consistent therapy, this may indicate the development of arthrofibrosis (excessive scar tissue). This condition is best treated early and aggressively with physiotherapy, and sometimes requires a secondary surgical procedure.</p>
       
-      <p><em>This article is written for informational purposes and does not replace a personal consultation with a qualified orthopaedic surgeon. If you are experiencing any of the symptoms described above, please seek medical attention promptly.</em></p>
+      <p><em>This article is written for informational purposes and does not replace a personal consultation with a qualified orthopedic surgeon. If you are experiencing any of the symptoms described above, please seek medical attention promptly.</em></p>
       
       <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-          <p class="font-bold text-lg mb-2">Dr. Nitin N. Sunku, MBBS, MS Orthopaedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
+          <p class="font-bold text-lg mb-2">Dr. Nitin N Sunku, MBBS, MS Orthopedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
           <p class="mb-4">Team Doctor, Bengaluru FC. Visiting Consultant, Narayana Hrudayalaya & Manipal Hospital, Bengaluru.</p>
           <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
               Book appointment online or call +91-9449031003
@@ -1144,7 +1155,7 @@ export const blogPosts = [
       
       <p>Whether you’re a professional athlete, a weekend runner, or someone who enjoys gym workouts, sports injuries can strike unexpectedly. From sudden twists on the field to repetitive strain at the gym, active individuals often face issues with joints, muscles, tendons, or ligaments.</p>
       
-      <p>But why are sports injuries so common? And what’s the best way to treat them? In this blog, we’ll break it down and explain how expert orthopaedic care, like that provided by <strong>Dr. Nithin N</strong>, a sports medicine specialist in Bangalore, can help you recover faster and perform better.</p>
+      <p>But why are sports injuries so common? And what’s the best way to treat them? In this blog, we’ll break it down and explain how expert orthopedic care, like that provided by <strong>Dr. Nitin N Sunku</strong>, a sports medicine specialist in Bengaluru, can help you recover faster and perform better.</p>
       
       <h2>Understanding Common Sports Injuries</h2>
       
@@ -1178,9 +1189,9 @@ export const blogPosts = [
       <li>The <strong>level of activity</strong> and sports involvement</li>
       <li>The <strong>patient’s recovery goals</strong></li>
       </ul>
-      <h3>Dr. Nithin N’s Treatment Approach:</h3>
+      <h3>Dr. Nitin N Sunku’s Treatment Approach:</h3>
       
-      <p>As a trusted Orthopaedic doctor and sports medicine specialist, Dr. Nithin N provides a complete recovery journey from injury to peak performance.</p>
+      <p>As a trusted Orthopedic doctor and sports medicine specialist, Dr. Nitin N Sunku provides a complete recovery journey from injury to peak performance.</p>
       
       <p>1.  <strong>Accurate Diagnosis</strong></p>
       <p>*   Clinical examination</p>
@@ -1197,7 +1208,7 @@ export const blogPosts = [
       
       <p>Sports injuries don’t have to keep you off the field or away from the gym for long. Whether you’ve suffered an ACL tear, shoulder injury, or overuse strain, timely intervention is key.</p>
       
-      <strong>Dr. Nithin N</strong> offers expert diagnosis, tailored treatments, and advanced sports injury care to help you recover fully—and perform stronger than before.
+      <strong>Dr. Nitin N Sunku</strong> offers expert diagnosis, tailored treatments, and advanced sports injury care to help you recover fully—and perform stronger than before.
       
       <strong>Common Injuries Listed:</strong>
       <ul><li>ACL & Ligament Tears</li>
@@ -1206,7 +1217,7 @@ export const blogPosts = [
       <li>Rotator Cuff Tears</li>
       <li>Overuse Injuries (tennis elbow, shin splints, stress fractures)</li>
       </ul>
-      <strong>Treatment Approach (Dr. Nithin N's):</strong>
+      <strong>Treatment Approach (Dr. Nitin N Sunku's):</strong>
       <p>1.  <strong>Accurate Diagnosis:</strong> Clinical examination, Imaging (X-ray, MRI, ultrasound).</p>
       <p>2.  <strong>Personalised Treatment Plans:</strong></p>
       <p>*   Non-surgical: Rest, medication, physical therapy, PRP injections.</p>
@@ -1229,7 +1240,7 @@ export const blogPosts = [
       
       <p>The short answer is <strong>yes</strong> — in many cases, walking is still possible even with a torn ACL. But just because you can walk doesn’t mean the injury isn’t serious. In fact, ignoring it can lead to long-term complications that may affect your mobility and quality of life.</p>
       
-      <p>In this blog, we’ll help you understand what a torn ACL really means, what symptoms to look for, and how to treat it properly with the help of expert orthopaedic care in Bengaluru.</p>
+      <p>In this blog, we’ll help you understand what a torn ACL really means, what symptoms to look for, and how to treat it properly with the help of expert orthopedic care in Bengaluru.</p>
       
       <h2>What Is an ACL Tear?</h2>
       
@@ -1254,11 +1265,11 @@ export const blogPosts = [
       <li>A higher risk of <strong>early-onset knee arthritis</strong></li>
       <li>Loss of confidence in physical movement</li>
       </ul>
-      <p>That’s why it’s important to consult an orthopaedic specialist early and plan the right course of action.</p>
+      <p>That’s why it’s important to consult an orthopedic specialist early and plan the right course of action.</p>
       
       <h2>How We Treat ACL Tears in Bengaluru</h2>
       
-      <p>At our orthopaedic clinic in HSR Layout, Bengaluru, we offer <strong>customised treatment</strong> based on the severity of the tear, your lifestyle, and activity goals.</p>
+      <p>At our orthopedic clinic in HSR Layout, Bengaluru, we offer <strong>customised treatment</strong> based on the severity of the tear, your lifestyle, and activity goals.</p>
       
       <h3>Treatment Options Include:</h3>
       
@@ -1267,7 +1278,7 @@ export const blogPosts = [
       <li><strong>ACL Reconstruction Surgery</strong> for complete tears or high-demand patients (athletes, active individuals)</li>
       <li>Post-surgical <strong>rehabilitation</strong> for full functional recovery</li>
       </ul>
-      <p>As a <strong>sports medicine specialist</strong>, Dr. Nithin N focuses on helping active individuals return to their sport or daily routine — safely and with confidence.</p>
+      <p>As a <strong>sports medicine specialist</strong>, Dr. Nitin N Sunku focuses on helping active individuals return to their sport or daily routine — safely and with confidence.</p>
       
       <h2>Conclusion: Don’t Ignore Knee Instability</h2>
       
@@ -1280,7 +1291,7 @@ export const blogPosts = [
       <p>3.  <strong>Symptoms of Instability:</strong> Patients often report the knee "giving way," difficulty with twisting/pivoting, and ongoing swelling/instability.</p>
       <p>4.  <strong>Risks of Ignoring an ACL Tear (Key Advice):</strong> Untreated tears can lead to further damage (meniscus/cartilage), chronic knee instability, and a higher risk of early-onset knee arthritis.</p>
       <p>5.  <strong>Treatment Options (Key Advice):</strong> Treatment is customized and may include Bracing and Rest (for minor tears), Physiotherapy, ACL Reconstruction Surgery (for complete tears or high-demand patients), and Post-surgical rehabilitation.</p>
-      <p>6.  <strong>Overall Advice:</strong> It is crucial to get a proper diagnosis from an orthopaedic specialist early and not ignore knee instability to prevent long-term joint damage.</p>
+      <p>6.  <strong>Overall Advice:</strong> It is crucial to get a proper diagnosis from an orthopedic specialist early and not ignore knee instability to prevent long-term joint damage.</p>
     `
   },
   {
@@ -1295,7 +1306,7 @@ export const blogPosts = [
       
       <p>Ankle sprains are common but often misunderstood injuries. Whether you’re an athlete, a fitness enthusiast, or simply misstepped while walking, twisting your ankle can lead to pain, swelling, and difficulty moving around. The good news? With timely and expert care, you can recover fully and prevent it from happening again.</p>
       
-      <p>In this guide, we’ll walk you through everything you need to know about ankle sprains—what causes them, what symptoms to look for, and most importantly, how you can recover quickly under the expert care of <strong>Dr. Nithin N</strong>, a leading Orthopaedic specialist in Bangalore.</p>
+      <p>In this guide, we’ll walk you through everything you need to know about ankle sprains—what causes them, what symptoms to look for, and most importantly, how you can recover quickly under the expert care of <strong>Dr. Nitin N Sunku</strong>, a leading Orthopedic specialist in Bengaluru.</p>
       
       <h2>What Is An Ankle Sprain?</h2>
       
@@ -1328,11 +1339,11 @@ export const blogPosts = [
       
       <p>Many people think an ankle sprain will heal on its own. But untreated or poorly treated sprains can lead to long-term problems like chronic ankle instability, repeated injuries, or joint damage.</p>
       
-      <p>Early treatment not only reduces pain and swelling but also speeds up your return to daily activities and prevents future injuries. That’s why seeing a specialist like Dr. Nithin N is essential.</p>
+      <p>Early treatment not only reduces pain and swelling but also speeds up your return to daily activities and prevents future injuries. That’s why seeing a specialist like Dr. Nitin N Sunku is essential.</p>
       
-      <h2>Expert Care By Dr. Nithin N</h2>
+      <h2>Expert Care By Dr. Nitin N Sunku</h2>
       
-      <p>Dr. Nithin N is a highly experienced Orthopaedic doctor based in Bangalore, known for his personalized and patient-centric approach. He has successfully treated numerous ankle sprains, ranging from mild to severe cases.</p>
+      <p>Dr. Nitin N Sunku is a highly experienced Orthopedic doctor based in Bengaluru, known for his personalized and patient-centric approach. He has successfully treated numerous ankle sprains, ranging from mild to severe cases.</p>
       
       <h3>What To Expect During Your Visit:</h3>
       
@@ -1359,13 +1370,13 @@ export const blogPosts = [
       <li>Wear supportive footwear</li>
       <li>Follow physiotherapy routines consistently</li>
       </ul>
-      <strong>Note:</strong> Don’t return to sports or high-impact activities too soon. Always follow your orthopaedic specialist’s advice.
+      <strong>Note:</strong> Don’t return to sports or high-impact activities too soon. Always follow your orthopedic specialist’s advice.
       
       <h2>Conclusion: Start Your Recovery The Right Way</h2>
       
       <p>An ankle sprain can feel limiting, but with the right care, you’ll be walking comfortably again in no time. Ignoring symptoms or delaying treatment can lead to long-term problems, so it’s best to act quickly.</p>
       
-      <p>If you’re suffering from an ankle injury, <strong>Dr. Nithin N</strong> is here to guide you every step of the way with expert diagnosis, tailored treatment, and compassionate care. Whether you need rest, therapy, or advanced treatment options, you’ll receive the best care to get back on your feet—stronger than before.</p>
+      <p>If you’re suffering from an ankle injury, <strong>Dr. Nitin N Sunku</strong> is here to guide you every step of the way with expert diagnosis, tailored treatment, and compassionate care. Whether you need rest, therapy, or advanced treatment options, you’ll receive the best care to get back on your feet—stronger than before.</p>
     `
   },
   {
@@ -1376,30 +1387,55 @@ export const blogPosts = [
     category: "Sports Medicine",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-04.jpg?updatedAt=1766843021025",
     content: `
-      <h2>Dr. Nitin Sunku</h2>
-      
-      <p>Elbow pain when lifting, gripping, or typing? It might be <strong>Tennis Elbow</strong>.</p>
-      
-      <strong>Tennis Elbow (lateral epicondylitis)</strong> is a common condition caused by overuse of the forearm muscles — not just in tennis players, but also in gym-goers, office workers, and manual laborers.
-      
-      <h3>Symptoms</h3>
-      
-      <p>Symptoms often include:</p>
-      <ul><li>Pain on the outer part of the elbow</li>
-      <li>Weakness in the grip</li>
-      <li>Discomfort during daily tasks</li>
+      <p>Elbow pain when lifting, gripping, or typing is one of the most common complaints I see in clinic — and in most cases it points to <strong>Tennis Elbow</strong>. The good news is that the large majority of patients recover fully with the right, structured non-surgical care.</p>
+
+      <p><strong>Tennis Elbow (lateral epicondylitis)</strong> is caused by overuse and micro-tearing of the tendons that attach the forearm muscles to the bony bump on the outer side of the elbow. Despite the name, it affects far more than tennis players — gym-goers, office workers who type or use a mouse for long hours, cooks, carpenters, plumbers, and new parents lifting a growing baby are all frequently affected. It typically develops gradually rather than from a single injury.</p>
+
+      <h2>What Causes Tennis Elbow?</h2>
+
+      <p>The condition develops when the extensor tendons (especially the extensor carpi radialis brevis) are repeatedly loaded beyond what they can recover from. Common triggers include:</p>
+      <ul>
+        <li>Repetitive gripping, twisting, or wrist extension at work or in sport</li>
+        <li>A sudden increase in activity — for example, starting a new gym routine or a home renovation project</li>
+        <li>Poor technique or unsuitable equipment (racquet grip size, mouse position, tool handles)</li>
+        <li>Age-related reduction in tendon elasticity, most common between 35 and 55</li>
       </ul>
-      <h3>Progression and Treatment</h3>
-      
-      <p>Without proper care, the condition can worsen and limit hand and arm function.</p>
-      
-      <strong>Treatment options</strong> range from:
-      <ul><li>Physiotherapy</li>
-      <li>Braces</li>
-      <li>Shockwave therapy</li>
-      <li>Minor procedures (in severe cases)</li>
+
+      <h2>Symptoms to Watch For</h2>
+
+      <p>Symptoms often build up over weeks and may include:</p>
+      <ul>
+        <li>Pain and tenderness on the outer part of the elbow, sometimes radiating into the forearm</li>
+        <li>Pain that worsens with gripping, lifting, shaking hands, or turning a doorknob</li>
+        <li>Weakness in the grip, or dropping objects unexpectedly</li>
+        <li>Stiffness in the morning that eases as the arm warms up</li>
       </ul>
-      <p>As an orthopaedic doctor and sports medicine specialist in HSR Layout, I provide personalised treatment plans for long-term relief and recovery.</p>
+
+      <h2>How It Is Diagnosed</h2>
+
+      <p>In most cases a careful history and physical examination are enough to confirm tennis elbow. I check for tenderness over the outer elbow and perform simple resisted-movement tests that reproduce the pain. Imaging is not usually required, but an ultrasound or MRI may be ordered when the diagnosis is unclear, symptoms have lasted several months, or we need to rule out other causes such as nerve entrapment or arthritis.</p>
+
+      <h2>Progression and Why Early Care Matters</h2>
+
+      <p>Without proper care, the condition can become chronic and limit hand and arm function, making everyday tasks frustrating. Early, guided treatment shortens recovery and reduces the chance of a long-standing problem.</p>
+
+      <h2>Treatment Options</h2>
+
+      <p>Treatment is almost always non-surgical and is tailored to the severity and duration of your symptoms:</p>
+      <ul>
+        <li><strong>Activity modification and relative rest</strong> — avoiding the specific movements that aggravate the tendon while staying otherwise active</li>
+        <li><strong>Physiotherapy</strong> — progressive eccentric strengthening of the forearm is the single most effective treatment for most patients</li>
+        <li><strong>Counterforce braces</strong> — to offload the tendon during activity</li>
+        <li><strong>Shockwave therapy</strong> — useful for stubborn cases that have not settled with exercise</li>
+        <li><strong>Ultrasound-guided injections</strong> — including PRP (platelet-rich plasma) in selected cases to support tendon healing</li>
+        <li><strong>Minor surgical release</strong> — reserved for the small number of patients whose symptoms persist beyond 6–12 months despite full conservative treatment</li>
+      </ul>
+
+      <h2>Self-Care You Can Start Today</h2>
+
+      <p>While waiting to be assessed, you can ease symptoms by applying ice for 10–15 minutes after activity, avoiding heavy gripping, checking your desk and mouse setup, and gently stretching the forearm. Avoid pushing through sharp pain, which usually sets recovery back.</p>
+
+      <p>As an orthopedic doctor and sports medicine specialist consulting in HSR Layout and Attibele, Bengaluru, I provide personalised treatment plans for tennis elbow focused on long-term relief and a safe return to work and sport. If your elbow pain has lasted more than a few weeks or is interfering with daily tasks, an early evaluation is worthwhile.</p>
     `
   },
   {
@@ -1410,7 +1446,7 @@ export const blogPosts = [
     category: "Shoulder Care",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-05.jpg?updatedAt=1766843021099",
     content: `
-      <h2>Dr. Nitin Sunku</h2>
+      <h2>Dr. Nitin N Sunku</h2>
       
       <h3>Introduction</h3>
       
@@ -1442,7 +1478,7 @@ export const blogPosts = [
       </ul>
       <h3>What to Expect from the Procedure</h3>
       
-      <p>Shoulder replacement is a safe and effective surgical solution, especially when performed by an experienced orthopaedic specialist.</p>
+      <p>Shoulder replacement is a safe and effective surgical solution, especially when performed by an experienced orthopedic specialist.</p>
       
       <p>During the surgery:</p>
       
@@ -1452,9 +1488,9 @@ export const blogPosts = [
       </ul>
       <p>Most patients experience <strong>significant pain relief and improved shoulder function</strong> within a few months of surgery.</p>
       
-      <h3>Expert Shoulder Care in HSR Layout, Bangalore</h3>
+      <h3>Expert Shoulder Care in HSR Layout, Bengaluru</h3>
       
-      <p>At our clinic in <strong>HSR Layout, Bangalore</strong>, Dr. Nithin N offers <strong>comprehensive evaluation</strong> and <strong>advanced imaging</strong> to determine whether shoulder replacement is the right option for you.</p>
+      <p>At our clinic in <strong>HSR Layout, Bengaluru</strong>, Dr. Nitin N Sunku offers <strong>comprehensive evaluation</strong> and <strong>advanced imaging</strong> to determine whether shoulder replacement is the right option for you.</p>
       
       <p>#### Our Services Include:</p>
       
@@ -1465,7 +1501,7 @@ export const blogPosts = [
       </ul>
       <h3>Conclusion: Don’t Let Shoulder Pain Control Your Life</h3>
       
-      <p>If chronic shoulder pain is limiting your mobility and quality of life, and other treatments haven’t helped, <strong>shoulder replacement surgery</strong> could offer the long-term relief you need. With expert care from <strong>Dr. Nithin N</strong>, you can move forward confidently — and pain-free.</p>
+      <p>If chronic shoulder pain is limiting your mobility and quality of life, and other treatments haven’t helped, <strong>shoulder replacement surgery</strong> could offer the long-term relief you need. With expert care from <strong>Dr. Nitin N Sunku</strong>, you can move forward confidently — and pain-free.</p>
     `
   },
   {
@@ -1505,9 +1541,9 @@ export const blogPosts = [
       <li>Prevent further damage</li>
       <li>Delay or avoid the need for surgery</li>
       </ul>
-      <h2>Advanced Shoulder Care at Our Clinic in HSR Layout, Bangalore</h2>
+      <h2>Advanced Shoulder Care at Our Clinic in HSR Layout, Bengaluru</h2>
       
-      <p>At our orthopaedic clinic, <strong>Dr. Nithin N</strong>, a shoulder and sports injury specialist, offers <strong>comprehensive care for rotator cuff injuries</strong> — from accurate diagnosis to personalized recovery plans.</p>
+      <p>At our orthopedic clinic, <strong>Dr. Nitin N Sunku</strong>, a shoulder and sports injury specialist, offers <strong>comprehensive care for rotator cuff injuries</strong> — from accurate diagnosis to personalized recovery plans.</p>
       
       <h3>Treatment Options Include:</h3>
       
@@ -1522,7 +1558,7 @@ export const blogPosts = [
       
       <p>If your shoulder pain has been lingering or worsening, don’t wait for it to disrupt your life further. A rotator cuff injury, when addressed early, can be treated successfully — often without the need for surgery.</p>
       
-      <p>With Dr. Nithin N’s expertise in <strong>shoulder and sports injury care</strong>, you can expect precise diagnosis, personalized treatment, and compassionate follow-up care.</p>
+      <p>With Dr. Nitin N Sunku’s expertise in <strong>shoulder and sports injury care</strong>, you can expect precise diagnosis, personalized treatment, and compassionate follow-up care.</p>
       
       ***
       
@@ -1538,7 +1574,7 @@ export const blogPosts = [
   },
   {
     slug: "herniated-disc-pain-find-expert-relief-in-bangalore-with-dr-nithin-n",
-    title: "Herniated Disc Pain? Find Expert Relief in Bangalore with Dr. Nithin N",
+    title: "Herniated Disc Pain? Find Expert Relief in Bengaluru with Dr. Nitin N Sunku",
     excerpt: "Are you struggling with **back pain**, **numbness**, or **leg weakness** that’s affecting your daily routine? You might be dealing with a **herniated disc**—a c",
     date: "Jun 11, 2024",
     category: "Spine Health",
@@ -1548,7 +1584,7 @@ export const blogPosts = [
       
       <p>Are you struggling with <strong>back pain</strong>, <strong>numbness</strong>, or <strong>leg weakness</strong> that’s affecting your daily routine? You might be dealing with a <strong>herniated disc</strong>—a common spinal condition that can cause significant discomfort and impact your mobility.</p>
       
-      <p>The good news? Relief is possible with the right diagnosis and treatment. In this blog, we’ll help you understand what a herniated disc is, how it’s treated, and why consulting <strong>Dr. Nithin N</strong>, an experienced Orthopaedic specialist in Bangalore, can be your first step toward recovery.</p>
+      <p>The good news? Relief is possible with the right diagnosis and treatment. In this blog, we’ll help you understand what a herniated disc is, how it’s treated, and why consulting <strong>Dr. Nitin N Sunku</strong>, an experienced Orthopedic specialist in Bengaluru, can be your first step toward recovery.</p>
       
       <h2>What Is a Herniated Disc?</h2>
       
@@ -1575,9 +1611,9 @@ export const blogPosts = [
       <li>Restore your strength and mobility</li>
       <li>Help you avoid surgery in many cases</li>
       </ul>
-      <h2>Expert Herniated Disc Treatment by Dr. Nithin N</h2>
+      <h2>Expert Herniated Disc Treatment by Dr. Nitin N Sunku</h2>
       
-      <p>As an Orthopaedic and spine specialist based in <strong>HSR Layout, Bangalore</strong>, Dr. Nithin N offers advanced and personalized treatment for herniated discs. With a strong background in orthopaedic care and a patient-focused approach, he has helped many individuals regain their comfort and quality of life.</p>
+      <p>As an Orthopedic and spine specialist based in <strong>HSR Layout, Bengaluru</strong>, Dr. Nitin N Sunku offers advanced and personalized treatment for herniated discs. With a strong background in orthopedic care and a patient-focused approach, he has helped many individuals regain their comfort and quality of life.</p>
       
       <h3>Treatment Options</h3>
       
@@ -1590,12 +1626,12 @@ export const blogPosts = [
       </ul>
       <h2>Conclusion: Don’t Let Back Pain Limit You</h2>
       
-      <p>A herniated disc can affect your work, sleep, and daily activities—but it doesn’t have to be permanent. With timely care from a skilled orthopaedic specialist like <strong>Dr. Nithin N</strong>, you can regain control and return to a pain-free, active life.</p>
+      <p>A herniated disc can affect your work, sleep, and daily activities—but it doesn’t have to be permanent. With timely care from a skilled orthopedic specialist like <strong>Dr. Nitin N Sunku</strong>, you can regain control and return to a pain-free, active life.</p>
     `
   },
   {
     slug: "say-goodbye-to-tendonitis-pain-a-beginner-friendly-guide-to-relief-with-dr-nithin-n-in-bangalore",
-    title: "Say Goodbye to Tendonitis Pain: A Beginner-Friendly Guide to Relief with Dr. Nithin N in Bangalore",
+    title: "Say Goodbye to Tendonitis Pain: A Beginner-Friendly Guide to Relief with Dr. Nitin N Sunku in Bengaluru",
     excerpt: "Are you experiencing persistent pain, swelling, or stiffness in your joints that’s affecting your daily life? You may be suffering from **tendonitis**—a common ",
     date: "May 12, 2024",
     category: "Sports Medicine",
@@ -1603,7 +1639,7 @@ export const blogPosts = [
     content: `
       <h2>Introduction</h2>
       
-      <p>Are you experiencing persistent pain, swelling, or stiffness in your joints that’s affecting your daily life? You may be suffering from <strong>tendonitis</strong>—a common yet often overlooked condition that involves inflammation of the tendons. While it might start as mild discomfort, untreated tendonitis can lead to more serious joint issues. Fortunately, effective treatment is available. <strong>Dr. Nithin N</strong>, a leading Orthopaedic specialist in Bangalore, is here to guide you on the road to recovery with expert diagnosis and personalized care.</p>
+      <p>Are you experiencing persistent pain, swelling, or stiffness in your joints that’s affecting your daily life? You may be suffering from <strong>tendonitis</strong>—a common yet often overlooked condition that involves inflammation of the tendons. While it might start as mild discomfort, untreated tendonitis can lead to more serious joint issues. Fortunately, effective treatment is available. <strong>Dr. Nitin N Sunku</strong>, a leading Orthopedic specialist in Bengaluru, is here to guide you on the road to recovery with expert diagnosis and personalized care.</p>
       
       <h2>Understanding Tendonitis: Key Concepts Simplified</h2>
       
@@ -1627,8 +1663,8 @@ export const blogPosts = [
       <h3>4. Who is at Risk?</h3>
       <p>Tendonitis can affect anyone, but individuals who engage in repetitive tasks—athletes, fitness enthusiasts, or those with physically demanding jobs—are more likely to develop it. Even office workers are not immune, especially if ergonomic setups are poor.</p>
       
-      <h3>5. Expert Diagnosis and Treatment with Dr. Nithin N</h3>
-      <p>Dr. Nithin N offers a detailed and customized approach to treating tendonitis. His process includes:</p>
+      <h3>5. Expert Diagnosis and Treatment with Dr. Nitin N Sunku</h3>
+      <p>Dr. Nitin N Sunku offers a detailed and customized approach to treating tendonitis. His process includes:</p>
       <ul><li>Comprehensive physical examination and history review</li>
       <li>Advanced imaging tests (if required)</li>
       <li>Non-surgical treatments such as physiotherapy, medications, and rest</li>
@@ -1640,9 +1676,9 @@ export const blogPosts = [
       
       <h2>Conclusion: Take the First Step Toward a Pain-Free Life</h2>
       
-      <p>Tendonitis may feel like a minor issue at first, but it can impact your quality of life if left untreated. With the right guidance and care from Dr. Nithin N, recovery is well within reach. Whether you’re a working professional, athlete, or senior citizen, you don’t have to live with joint pain any longer.</p>
+      <p>Tendonitis may feel like a minor issue at first, but it can impact your quality of life if left untreated. With the right guidance and care from Dr. Nitin N Sunku, recovery is well within reach. Whether you’re a working professional, athlete, or senior citizen, you don’t have to live with joint pain any longer.</p>
       
-      <p>Schedule a consultation with Dr. Nithin N today and take your first confident step toward a pain-free, active lifestyle. Trust your recovery to one of Bangalore’s most experienced orthopaedic specialists.</p>
+      <p>Schedule a consultation with Dr. Nitin N Sunku today and take your first confident step toward a pain-free, active lifestyle. Trust your recovery to one of Bengaluru’s most experienced orthopedic specialists.</p>
     `
   },
   {
@@ -1704,7 +1740,7 @@ export const blogPosts = [
       </ul>
       <h2>Your Recovery Team in HSR Layout, Bengaluru</h2>
       
-      <p>At our clinic, we specialize in treating sports injuries with a complete recovery roadmap. As an <strong>orthopaedic and sports medicine specialist</strong>, I work closely with expert physiotherapists to create <strong>personalized rehab plans</strong> based on your sport, injury type, and fitness goals.</p>
+      <p>At our clinic, we specialize in treating sports injuries with a complete recovery roadmap. As an <strong>orthopedic and sports medicine specialist</strong>, I work closely with expert physiotherapists to create <strong>personalized rehab plans</strong> based on your sport, injury type, and fitness goals.</p>
       
       <p>Whether it’s a sprained ankle, torn ligament, or post-surgery recovery — we guide you from rest to return-to-play safely and effectively.</p>
       
@@ -1761,9 +1797,9 @@ export const blogPosts = [
       <li>Delay or prevent the need for joint surgery</li>
       <li>Support overall health and reduce inflammation</li>
       </ul>
-      <h2>How We Can Help in HSR Layout, Bangalore</h2>
+      <h2>How We Can Help in HSR Layout, Bengaluru</h2>
       
-      <p>If you’re experiencing joint pain and are concerned about the role of weight in your condition, <strong>Dr. Nithin N</strong>, Orthopaedic Specialist in HSR Layout, can help.</p>
+      <p>If you’re experiencing joint pain and are concerned about the role of weight in your condition, <strong>Dr. Nitin N Sunku</strong>, Orthopedic Specialist in HSR Layout, can help.</p>
       
       <h3>Our Approach Includes:</h3>
       
@@ -1782,57 +1818,68 @@ export const blogPosts = [
   {
     slug: "what-is-knee-arthroscopy-and-when-is-it-needed",
     title: "What is Knee Arthroscopy and When is it Needed?",
-    excerpt: "Knee arthroscopy is a minimally invasive surgical procedure that allows an orthopaedic surgeon to see inside the knee joint using a small camera.",
+    excerpt: "Knee arthroscopy is a minimally invasive surgical procedure that allows an orthopedic surgeon to see inside the knee joint using a small camera.",
     date: "Feb 15, 2024",
     category: "Knee Care",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-12.jpg?updatedAt=1766843020590",
     content: `
-      <strong>Publication Date:</strong> August 31, 2025
-      <strong>Author:</strong> Dr. Nitin Sunku
-      
-      <p>Knee arthroscopy is a minimally invasive surgical procedure that allows an orthopaedic surgeon to see inside the knee joint using a small camera.</p>
-      
-      <p>This advanced technique helps diagnose and treat various knee problems with smaller incisions, less pain, and faster recovery compared to open surgery.</p>
-      
-      <p>During the procedure, a thin tube with a camera (arthroscope) is inserted into the knee. The surgeon can then view the joint on a screen and use specialised instruments to repair or remove damaged tissues.</p>
-      
-      <h2>Knee Arthroscopy is Commonly Recommended For:</h2>
-      
+      <p>Knee arthroscopy is a minimally invasive surgical procedure that allows an orthopedic surgeon to look inside the knee joint using a small camera. It is one of the most commonly performed and trusted knee procedures worldwide, used both to diagnose problems precisely and to treat them in the same sitting.</p>
+
+      <p>This advanced technique addresses many knee problems through small "keyhole" incisions, which means less tissue damage, less pain, lower infection risk, and a faster recovery compared with traditional open surgery. Most arthroscopic knee procedures are performed as day-care or short-stay surgery.</p>
+
+      <h2>How the Procedure Works</h2>
+
+      <p>During arthroscopy, a thin tube containing a camera and light (the arthroscope) is inserted through a small incision, while sterile fluid gently expands the joint for a clear view. The surgeon watches a magnified, high-definition image of the inside of your knee on a screen and uses fine specialised instruments through one or two additional small incisions to repair or remove damaged tissue. The whole operation is usually carried out under spinal or general anaesthesia and often takes under an hour.</p>
+
+      <h2>Conditions Knee Arthroscopy Can Treat</h2>
+
       <p>Knee arthroscopy is commonly recommended for a variety of conditions, including:</p>
-      
-      <ul><li>Meniscus tears</li>
-      <li>Damaged cartilage</li>
-      <li>Removal of loose bone or cartilage fragments</li>
-      <li>ACL or PCL ligament reconstruction</li>
-      <li>Treating inflamed joint lining (synovitis)</li>
-      <li>Cleaning out infection or scar tissue in the knee</li>
+      <ul>
+        <li><strong>Meniscus tears</strong> — repairing or trimming torn cartilage</li>
+        <li><strong>Damaged articular cartilage</strong> — smoothing or treating cartilage defects</li>
+        <li><strong>Loose fragments</strong> — removing loose pieces of bone or cartilage causing catching or locking</li>
+        <li><strong>ACL or PCL reconstruction</strong> — rebuilding torn knee ligaments</li>
+        <li><strong>Synovitis</strong> — treating an inflamed joint lining</li>
+        <li><strong>Infection or scar tissue</strong> — washing out the joint or releasing stiffness</li>
       </ul>
-      
-      <p>If you have persistent knee pain, swelling, locking, or instability that is not improving with non-surgical treatment, consult an experienced orthopaedic surgeon in your area. Early diagnosis and timely arthroscopy can help restore knee function and prevent further damage.</p>
+
+      <h2>When Is Knee Arthroscopy Needed?</h2>
+
+      <p>Surgery is rarely the first step. Arthroscopy is usually considered when you have persistent knee pain, swelling, locking, catching, or instability that has not improved with non-surgical treatment such as physiotherapy, activity modification, and medication. It may also be recommended sooner when imaging clearly shows a mechanical problem — like a displaced meniscus tear or a torn ligament — that will not settle on its own.</p>
+
+      <h2>Recovery and Rehabilitation</h2>
+
+      <p>Recovery depends on what was done. After a simple procedure such as a partial meniscectomy, many patients walk the same day and return to desk work within one to two weeks. After a ligament reconstruction or meniscus repair, recovery is more gradual and structured physiotherapy over several months is essential to restore strength, motion, and confidence. Following your rehabilitation plan closely is the single biggest factor in a good long-term outcome.</p>
+
+      <h2>What Makes Arthroscopy a Good Option</h2>
+
+      <p>Because it preserves healthy tissue and avoids large incisions, arthroscopy typically means smaller scars, less post-operative pain, lower complication rates, and an earlier return to daily life and sport. Early, accurate treatment also helps protect the joint from further wear that can lead to arthritis.</p>
+
+      <p>If you have ongoing knee symptoms that are not improving, an evaluation with an experienced orthopedic surgeon will clarify whether arthroscopy is right for you. Early diagnosis and timely treatment help restore knee function and prevent further damage. Dr. Nitin N Sunku offers arthroscopic knee surgery at his clinics in Attibele and HSR Layout, Bengaluru.</p>
     `
   },
   {
     slug: "are-you-struggling-with-joint-pain-in-bangalore",
-    title: "Are you struggling with joint pain in Bangalore?",
-    excerpt: "Dr. Nithin N, a recognized expert in Orthopaedics, is dedicated to helping patients regain their mobility and improve their quality of life. Joint pain can sign",
+    title: "Are you struggling with joint pain in Bengaluru?",
+    excerpt: "Dr. Nitin N Sunku, a recognized expert in Orthopedics, is dedicated to helping patients regain their mobility and improve their quality of life. Joint pain can sign",
     date: "Jan 16, 2024",
     category: "Sports Medicine",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-13.jpg?updatedAt=1766843020638",
     content: `
-      <p>Dr. Nithin N, a recognized expert in Orthopaedics, is dedicated to helping patients regain their mobility and improve their quality of life. Joint pain can significantly impact daily activities, but with the right diagnosis and treatment plan, relief is possible.</p>
+      <p>Dr. Nitin N Sunku, a recognized expert in Orthopedics, is dedicated to helping patients regain their mobility and improve their quality of life. Joint pain can significantly impact daily activities, but with the right diagnosis and treatment plan, relief is possible.</p>
       
-      <p>Dr. Nithin N utilizes a compassionate approach, focusing on understanding each patient’s unique situation. With extensive experience in treating various joint conditions, Dr. Nithin N offers personalized care that may include physical therapy, medication management, or advanced surgical options when necessary.</p>
+      <p>Dr. Nitin N Sunku utilizes a compassionate approach, focusing on understanding each patient’s unique situation. With extensive experience in treating various joint conditions, Dr. Nitin N Sunku offers personalized care that may include physical therapy, medication management, or advanced surgical options when necessary.</p>
       
-      <p>Patients can benefit from Dr. Nithin N’s commitment to staying updated with the latest advancements in orthopaedic treatments, ensuring they receive the most effective care available. Whether dealing with arthritis, sports injuries, or age-related joint issues, Dr. Nithin N is here to guide patients on their journey to recovery.</p>
+      <p>Patients can benefit from Dr. Nitin N Sunku’s commitment to staying updated with the latest advancements in orthopedic treatments, ensuring they receive the most effective care available. Whether dealing with arthritis, sports injuries, or age-related joint issues, Dr. Nitin N Sunku is here to guide patients on their journey to recovery.</p>
       
-      <p>If joint pain is affecting your life, consider consulting with Dr. Nithin N in Bangalore. Take the first step towards a pain-free future and regain your active lifestyle. Your journey to better joint health starts here.</p>
+      <p>If joint pain is affecting your life, consider consulting with Dr. Nitin N Sunku in Bengaluru. Take the first step towards a pain-free future and regain your active lifestyle. Your journey to better joint health starts here.</p>
       
-      <p>The article, written by Dr. Nithin N, an Orthopaedics expert, provides the following key information and advice regarding joint pain:</p>
+      <p>The article, written by Dr. Nitin N Sunku, an Orthopedics expert, provides the following key information and advice regarding joint pain:</p>
       
       <ul><li><strong>Diagnosis and Treatment:</strong> Joint pain can be managed and relieved with the correct diagnosis and a personalized treatment plan.</li>
       <li><strong>Treatment Modalities:</strong> Personalized care for joint conditions may encompass <strong>physical therapy</strong>, <strong>medication management</strong>, or <strong>advanced surgical options</strong> when necessary.</li>
       <li><strong>Conditions Treated:</strong> The doctor specializes in treating various joint conditions, including <strong>arthritis</strong>, <strong>sports injuries</strong>, and <strong>age-related joint issues</strong>.</li>
-      <li><strong>Call to Action:</strong> Individuals struggling with joint pain are advised to consult with Dr. Nithin N in Bangalore to start their journey toward a pain-free and active lifestyle.</li>
+      <li><strong>Call to Action:</strong> Individuals struggling with joint pain are advised to consult with Dr. Nitin N Sunku in Bengaluru to start their journey toward a pain-free and active lifestyle.</li>
       </ul>
     `
   },
@@ -1844,22 +1891,48 @@ export const blogPosts = [
     category: "Knee Care",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-14.jpg?updatedAt=1766843020684",
     content: `
-      <p>A meniscus tear is a common knee injury that affects the cartilage acting as a cushion between your thigh bone and shin bone.</p>
-      
-      <p>Whether it can heal without surgery depends on the type, size, and location of the tear.</p>
-      
-      <p>Small tears on the outer edge of the meniscus often have a better blood supply and may heal with rest, physiotherapy, and activity modification.</p>
-      
-      <p>Larger or complex tears, especially in areas with poor blood supply, may not heal fully and could require surgical repair.</p>
-      
-      <h2>Your Doctor May Recommend:</h2>
-      
-      <ul><li>Rest, ice, compression, and elevation</li>
-      <li>Physiotherapy to strengthen surrounding muscles</li>
-      <li>Avoiding activities that worsen pain</li>
-      <li>Surgery if symptoms persist or the tear affects stability</li>
+      <p>A meniscus tear is one of the most common knee injuries I treat. The meniscus is a C-shaped piece of cartilage that sits between your thigh bone (femur) and shin bone (tibia), acting as a shock absorber and helping to spread load evenly across the joint. Each knee has two — an inner (medial) and outer (lateral) meniscus.</p>
+
+      <p>The question patients ask most often is whether the tear can heal without surgery. The honest answer is: it depends. Whether a meniscus tear can heal on its own is determined chiefly by the <strong>type, size, location, and your activity demands</strong> — not by a single rule that applies to everyone.</p>
+
+      <h2>Why Location Matters So Much</h2>
+
+      <p>The meniscus has a limited blood supply. Only the outer third — sometimes called the "red zone" — receives enough blood to heal naturally. The inner two-thirds (the "white zone") has very little blood flow, so tears there rarely heal on their own.</p>
+      <ul>
+        <li><strong>Tears in the outer red zone</strong> often have a genuine chance of healing with rest, physiotherapy, and activity modification.</li>
+        <li><strong>Tears in the inner white zone</strong>, and larger or complex tears, are far less likely to heal fully and may need surgical repair or trimming.</li>
       </ul>
-      <p>A proper diagnosis and treatment plan from an orthopaedic specialist is important to protect your knee health and prevent long-term damage.</p>
+
+      <h2>Types of Tears That Respond to Non-Surgical Care</h2>
+
+      <p>Conservative (non-surgical) treatment is often successful for small, stable tears, degenerative tears in older adults, and partial tears where the knee is not locking or giving way. Many people in these groups return to normal activity without ever needing an operation.</p>
+
+      <h2>What Non-Surgical Treatment Involves</h2>
+
+      <p>If your tear is suitable for conservative management, the plan usually includes:</p>
+      <ul>
+        <li><strong>RICE</strong> in the early phase — rest, ice, compression, and elevation to settle swelling</li>
+        <li><strong>Physiotherapy</strong> to strengthen the quadriceps, hamstrings, and hip muscles that support and protect the knee</li>
+        <li><strong>Activity modification</strong> — temporarily avoiding deep squatting, twisting, and high-impact loading</li>
+        <li><strong>Anti-inflammatory measures</strong> and, in selected cases, an ultrasound-guided injection to control pain</li>
+        <li><strong>A gradual return-to-activity programme</strong> once strength and control are restored</li>
+      </ul>
+
+      <h2>When Surgery Becomes the Better Option</h2>
+
+      <p>Surgery — usually a minimally invasive arthroscopic repair or partial meniscectomy — is considered when:</p>
+      <ul>
+        <li>The knee locks, catches, or gives way</li>
+        <li>Pain and swelling persist despite several weeks of dedicated physiotherapy</li>
+        <li>The tear is large, displaced (such as a bucket-handle tear), or affects knee stability</li>
+        <li>There is an associated ligament injury such as an ACL tear</li>
+      </ul>
+
+      <p>Modern arthroscopy allows tears to be repaired through small incisions, preserving as much of the natural meniscus as possible — which is important for protecting the knee from early arthritis later in life.</p>
+
+      <h2>The Bottom Line</h2>
+
+      <p>Some meniscus tears heal well without surgery, while others do not — and trying to "push through" the wrong type of tear can cause further damage. A proper diagnosis, usually combining a clinical examination with an MRI, is the only reliable way to know which path is right for you. If you have ongoing knee pain, swelling, or instability, an evaluation with an orthopedic specialist in Bengaluru will protect your long-term knee health and prevent avoidable damage.</p>
     `
   },
   {
@@ -1870,76 +1943,96 @@ export const blogPosts = [
     category: "Sports Medicine",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-15.jpg?updatedAt=1766843020681",
     content: `
-      <p>Chronic joint pain — whether in the knee, shoulder, hip, or ankle — can limit daily activities and affect quality of life.</p>
-      
-      <p>Many patients now ask about Platelet-Rich Plasma (PRP) injections as a treatment option.</p>
-      
-      <h2>What is PRP?</h2>
-      
-      <p>PRP uses a small amount of your own blood, which is processed to concentrate platelets.</p>
-      
-      <p>These platelets release growth factors that support healing and reduce inflammation.</p>
-      
-      <p>A proper diagnosis and treatment plan from an orthopaedic specialist is important to protect your knee health and prevent long-term damage.</p>
-      
-      <h2>When PRP may help:</h2>
-      
-      <ul><li>Osteoarthritis in the knee or hip</li>
-      <li>Tendon injuries such as tennis elbow</li>
-      <li>Cartilage damage from wear and tear</li>
-      <li>Sports-related joint pain that does not improve with rest or physiotherapy</li>
+      <p>Chronic joint pain — whether in the knee, shoulder, hip, or ankle — can limit daily activities and slowly erode quality of life. When rest, medication, and physiotherapy have not given lasting relief, many patients ask about Platelet-Rich Plasma (PRP) injections as a treatment option, and whether they really work.</p>
+
+      <h2>What Is PRP?</h2>
+
+      <p>PRP is a regenerative treatment made from your own blood. A small sample is taken and spun in a centrifuge to separate and concentrate the platelets — the cells responsible for healing. This concentrated plasma, rich in growth factors, is then injected precisely into the affected joint or tendon, often under ultrasound guidance for accuracy.</p>
+
+      <p>The growth factors released by these platelets are thought to stimulate the body's natural repair processes, reduce inflammation, and improve the local healing environment. Because PRP comes from your own body, the risk of an allergic or rejection reaction is very low.</p>
+
+      <h2>How PRP Treatment Works in Practice</h2>
+
+      <p>The procedure is done in the clinic and usually takes under an hour. After your blood is drawn and processed, the injection itself takes only a few minutes. Most patients go home the same day. Some soreness at the injection site for a day or two is normal, and any improvement is gradual — typically building over several weeks as healing progresses, rather than offering instant pain relief.</p>
+
+      <h2>When PRP May Help</h2>
+
+      <ul>
+        <li>Mild to moderate osteoarthritis in the knee or hip</li>
+        <li>Tendon injuries such as tennis elbow, golfer's elbow, or patellar tendinopathy</li>
+        <li>Cartilage damage from wear and tear</li>
+        <li>Sports-related joint and tendon pain that has not improved with rest or physiotherapy</li>
       </ul>
-      <h2>Benefits of PRP therapy:</h2>
-      
-      <ul><li>Uses your body’s natural healing process</li>
-      <li>Minimally invasive, non-surgical option</li>
-      <li>Can reduce pain and improve joint mobility</li>
-      <li>Helps delay or avoid major surgery in some cases</li>
+
+      <h2>Benefits of PRP Therapy</h2>
+
+      <ul>
+        <li>Uses your body's own natural healing process</li>
+        <li>Minimally invasive, non-surgical option performed in clinic</li>
+        <li>Can reduce pain and improve joint mobility</li>
+        <li>May help delay or avoid major surgery in selected cases</li>
+        <li>Low risk of reaction because it uses your own blood</li>
       </ul>
-      <p>While PRP is not a cure for every condition, it can be highly effective in selected patients.</p>
-      
-      <p>A proper diagnosis by an orthopaedic doctor in Bangalore is essential to decide if PRP injections are suitable for your joint pain.</p>
+
+      <h2>What PRP Cannot Do</h2>
+
+      <p>It is important to have realistic expectations. PRP is not a cure for every condition, and it cannot reverse advanced arthritis or replace a worn-out joint. It tends to work best in early-to-moderate disease and in tendon problems. Results vary from person to person, and more than one session is sometimes needed. For severe joint damage, options such as joint replacement may give more reliable results — which is exactly why proper assessment matters.</p>
+
+      <h2>Is PRP Right for You?</h2>
+
+      <p>A proper diagnosis by an orthopedic specialist is essential before deciding on PRP. The right treatment depends on the exact cause and stage of your joint pain, your age, your activity goals, and what has already been tried. If you are struggling with chronic joint pain in Bengaluru, an evaluation with Dr. Nitin N Sunku at his Attibele or HSR Layout clinic will clarify whether PRP injections are a suitable part of your treatment plan.</p>
     `
   },
   {
     slug: "can-a-meniscus-tear-heal-with-physiotherapy-alone",
-    title: "Untitled",
+    title: "Can a Meniscus Tear Heal with Physiotherapy Alone?",
     excerpt: "A meniscus tear is a common knee injury that affects the cartilage acting as a cushion between the thigh bone and shin bone.",
     date: "Oct 19, 2024",
     category: "Knee Care",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-16.jpg?updatedAt=1766843020600",
     content: `
-      <p>A meniscus tear is a common knee injury that affects the cartilage acting as a cushion between the thigh bone and shin bone.</p>
-      
-      <p>Patients often ask if physiotherapy alone can heal it, without surgery. The answer depends on the type and severity of the tear.</p>
-      
-      <h2>When Physiotherapy Can Be Effective:</h2>
-      
-      <p>Physiotherapy alone may be sufficient for:</p>
-      <ul><li>Small or partial tears.</li>
-      <li>Tears on the outer edge of the meniscus (where blood supply is better).</li>
-      <li>Symptoms that improve with rest and exercise therapy.</li>
+      <p>A meniscus tear is a common knee injury affecting the cartilage that cushions the joint between your thigh bone and shin bone. One of the most frequent questions I hear is whether physiotherapy alone can heal the tear and help patients avoid surgery. The answer depends on the type, size, and location of the tear — and on how your knee responds over the first few weeks of treatment.</p>
+
+      <p>It helps to understand one key fact: the meniscus has a good blood supply only in its outer rim. Tissue with blood flow can heal; tissue without it generally cannot. This is why where the tear sits often matters more than how it feels.</p>
+
+      <h2>When Physiotherapy Alone Can Be Effective</h2>
+
+      <p>A well-designed physiotherapy programme — without surgery — may be sufficient for:</p>
+      <ul>
+        <li>Small or partial tears</li>
+        <li>Tears on the outer edge of the meniscus, where blood supply supports natural healing</li>
+        <li>Degenerative tears in older adults, where the goal is to manage symptoms rather than repair the tear</li>
+        <li>Knees that are not locking or giving way, and where symptoms steadily improve with rest and exercise therapy</li>
       </ul>
-      <h2>How Physiotherapy Supports Healing:</h2>
-      
-      <p>Physiotherapy helps by:</p>
-      <ul><li>Reducing swelling and inflammation.</li>
-      <li>Strengthening the quadriceps and hamstrings.</li>
-      <li>Improving joint stability and mobility.</li>
-      <li>Teaching safe movements to protect the knee.</li>
+
+      <h2>How Physiotherapy Supports Recovery</h2>
+
+      <p>Even when the tear itself does not fully "knit back together," physiotherapy can settle symptoms and restore function by:</p>
+      <ul>
+        <li>Reducing swelling and inflammation in the early phase</li>
+        <li>Strengthening the quadriceps, hamstrings, and hip muscles that share load with the meniscus</li>
+        <li>Improving joint stability, balance, and range of motion</li>
+        <li>Retraining safe movement patterns to protect the knee during daily life and sport</li>
+        <li>Gradually rebuilding confidence and activity tolerance</li>
       </ul>
-      <h2>When Surgery May Be Needed:</h2>
-      
-      <p>Surgery is typically recommended for:</p>
-      <ul><li>Large or complex tears.</li>
-      <li>Persistent pain, swelling, or knee locking despite physiotherapy.</li>
-      <li>Associated ligament injuries such as ACL tears.</li>
+
+      <h2>What a Typical Programme Looks Like</h2>
+
+      <p>Treatment usually progresses in stages: first calming pain and swelling, then restoring full motion, then building strength, and finally returning to sport-specific or work-specific activity. Most patients who are suitable for conservative care notice meaningful improvement within six to twelve weeks of consistent effort. Commitment to the home exercise plan is what makes the difference.</p>
+
+      <h2>When Surgery May Be Needed</h2>
+
+      <p>Surgery — typically a minimally invasive arthroscopic repair or partial meniscectomy — is generally recommended when:</p>
+      <ul>
+        <li>The tear is large, complex, or displaced (such as a bucket-handle tear)</li>
+        <li>Pain, swelling, or knee locking persists despite a dedicated course of physiotherapy</li>
+        <li>The knee repeatedly catches or gives way</li>
+        <li>There is an associated ligament injury such as an ACL tear</li>
       </ul>
-      <p>Every meniscus injury is different, and not all respond the same way to non-surgical care.</p>
-      
-      <p>If you have ongoing knee pain or instability, consult an orthopaedic doctor in Bangalore.</p>
-      
-      <p>A proper diagnosis through clinical examination and MRI will guide whether physiotherapy alone is enough, or if surgical repair is necessary to restore knee function.</p>
+
+      <h2>The Takeaway</h2>
+
+      <p>Every meniscus injury is different, and not all respond the same way to non-surgical care. Trying physiotherapy is often a reasonable first step for the right type of tear — but pushing through symptoms with the wrong type can make matters worse. A proper diagnosis through clinical examination and MRI will guide whether physiotherapy alone is enough, or whether surgical repair is needed to restore knee function. If you have ongoing knee pain or instability, an evaluation with an orthopedic doctor in Bengaluru is the safest way to protect your knee.</p>
     `
   },
   {
@@ -1987,7 +2080,7 @@ export const blogPosts = [
       </ul>
       <strong>When to Consult a Doctor:</strong>
       
-      <p>If shin pain persists despite rest and home management, it is crucial to consult an orthopaedic doctor. Proper diagnosis is essential to rule out more serious conditions like <strong>stress fractures</strong> or other underlying causes, ensuring a treatment plan is tailored to your specific needs.</p>
+      <p>If shin pain persists despite rest and home management, it is crucial to consult an orthopedic doctor. Proper diagnosis is essential to rule out more serious conditions like <strong>stress fractures</strong> or other underlying causes, ensuring a treatment plan is tailored to your specific needs.</p>
     `
   },
   {
@@ -2016,7 +2109,7 @@ export const blogPosts = [
       
       <p>If symptoms persist, advanced options such as injections or minimally invasive surgery may be advised.</p>
       
-      <p>If you regularly feel hip pain when standing, consult an orthopaedic doctor in Bangalore for accurate diagnosis and a tailored treatment plan.</p>
+      <p>If you regularly feel hip pain when standing, consult an orthopedic doctor in Bengaluru for accurate diagnosis and a tailored treatment plan.</p>
       
       <p>Early evaluation helps prevent worsening and protects your joint health.</p>
       
@@ -2030,7 +2123,7 @@ export const blogPosts = [
       <p>3.  <strong>Warning Signs</strong>: Early signs like stiffness, catching, or swelling should not be ignored.</p>
       <p>4.  <strong>Conservative Treatments</strong>: Physiotherapy, posture correction, activity modification, and medication.</p>
       <p>5.  <strong>Advanced Options</strong>: Injections or minimally invasive surgery if symptoms persist.</p>
-      <p>6.  <strong>Recommendation</strong>: Consult an orthopaedic doctor for accurate diagnosis and a tailored treatment plan, as early evaluation helps prevent worsening and protects joint health.</p>
+      <p>6.  <strong>Recommendation</strong>: Consult an orthopedic doctor for accurate diagnosis and a tailored treatment plan, as early evaluation helps prevent worsening and protects joint health.</p>
     `
   },
   {
@@ -2041,27 +2134,40 @@ export const blogPosts = [
     category: "Sports Medicine",
     image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-19.jpg?updatedAt=1766843020592",
     content: `
-      <p>Shoulder instability is a common problem athletes face after injuries.</p>
-      
-      <p>The shoulder is the most mobile joint in the body, but this mobility comes at the cost of stability.</p>
-      
-      <p>After a fall, collision, or sudden movement, the supporting structures can be stretched or torn, leading to instability.</p>
-      
-      <h2>Here are common reasons your shoulder may feel unstable:</h2>
-      
-      <strong>Ligament or capsule injury</strong> – These tissues hold the shoulder in place. If they are overstretched, the joint may feel loose.
-      
-      <strong>Labral tear</strong> – The labrum is a cartilage rim that deepens the socket. A tear here often causes repeated slipping or clicking.
-      
-      <strong>Rotator cuff weakness</strong> – These muscles stabilize the joint. Injury or weakness makes the shoulder more likely to shift.
-      
-      <strong>Recurrent dislocations</strong> – Once the shoulder slips out, it is more prone to repeat instability, especially in young athletes.
-      
-      <p>Treatment options include rest, physiotherapy to strengthen stabilizing muscles, and in some cases, minimally invasive surgery to repair damaged tissues.</p>
-      
-      <p>If you are facing shoulder pain or instability after a sports injury, consult an orthopaedic doctor in Bangalore for a proper evaluation and treatment plan.</p>
-      
-      <p>Early care can prevent long-term damage and help you return safely to activity.</p>
+      <p>Shoulder instability is a common problem athletes face after an injury, and it can be unsettling — the joint feels loose, slips, or seems like it might "pop out," especially during overhead movements. Understanding why this happens is the first step toward treating it properly and returning to sport safely.</p>
+
+      <p>The shoulder is the most mobile joint in the body, which lets you throw, swim, lift, and reach in almost any direction. But that remarkable range of motion comes at a cost: the shoulder relies on soft tissues — ligaments, the joint capsule, the labrum, and the rotator cuff muscles — rather than a deep bony socket to stay in place. After a fall, collision, throwing injury, or sudden forceful movement, these supporting structures can be stretched or torn, leaving the joint unstable.</p>
+
+      <h2>Common Reasons Your Shoulder May Feel Unstable</h2>
+
+      <ul>
+        <li><strong>Ligament or capsule injury</strong> — these tissues hold the head of the shoulder in its socket. If they are overstretched, the joint can feel loose and "give way."</li>
+        <li><strong>Labral tear</strong> — the labrum is a rim of cartilage that deepens the socket and anchors the ligaments. A tear here (such as a Bankart or SLAP lesion) often causes repeated slipping, clicking, or a catching sensation.</li>
+        <li><strong>Rotator cuff weakness</strong> — these four muscles actively centre and stabilise the joint. Injury or weakness allows the shoulder to shift abnormally.</li>
+        <li><strong>Recurrent dislocations</strong> — once a shoulder has fully dislocated, the supporting tissues are damaged and it becomes much more prone to dislocating again, particularly in young athletes under 25.</li>
+      </ul>
+
+      <h2>Symptoms to Look Out For</h2>
+
+      <p>Beyond the feeling of looseness, shoulder instability can cause pain with specific positions (especially the arm raised and rotated outward), a sense of apprehension or fear that the shoulder will slip, clicking or clunking, numbness or tingling down the arm after an episode, and reduced strength or confidence in overhead activities.</p>
+
+      <h2>How It Is Diagnosed</h2>
+
+      <p>Diagnosis begins with a detailed history of how the injury happened and a physical examination, including specific stability and apprehension tests. Imaging such as X-rays helps rule out bony injury, while an MRI (sometimes with contrast) shows labral and ligament tears clearly. This combined assessment identifies exactly which structures are involved.</p>
+
+      <h2>Treatment Options</h2>
+
+      <p>Treatment is tailored to the cause, your age, and your activity level:</p>
+      <ul>
+        <li><strong>Rest and activity modification</strong> in the early phase to allow irritated tissues to settle</li>
+        <li><strong>Physiotherapy</strong> to strengthen the rotator cuff and shoulder-blade muscles, restoring dynamic stability — this is the cornerstone of treatment for many patients</li>
+        <li><strong>A guided return-to-sport programme</strong> focused on control and technique</li>
+        <li><strong>Minimally invasive (arthroscopic) surgery</strong> to repair a torn labrum or tighten stretched ligaments, recommended for recurrent dislocations or when physiotherapy does not restore stability</li>
+      </ul>
+
+      <h2>Why Early Care Matters</h2>
+
+      <p>Each episode of instability can cause further damage to the labrum and cartilage, and repeated dislocations raise the long-term risk of shoulder arthritis. Addressing the problem early gives the best chance of a stable, pain-free shoulder. If you are facing shoulder pain or instability after a sports injury, consult an orthopedic and sports medicine specialist in Bengaluru for a proper evaluation and treatment plan. Early care can prevent long-term damage and help you return safely to activity.</p>
     `
   },
   {
@@ -2094,7 +2200,7 @@ export const blogPosts = [
       
       <h2>Expert Knee Care in Bengaluru</h2>
       
-      <p>For expert knee evaluation, meniscus treatment, and advanced ligament care including ACL surgery, visit Dr. Nitin Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.</p>
+      <p>For expert knee evaluation, meniscus treatment, and advanced ligament care including ACL surgery, visit Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.</p>
     `
   },
   {
@@ -2131,7 +2237,7 @@ export const blogPosts = [
       
       <h2>Expert Spine & Joint Care in Bengaluru</h2>
       
-      <p>For comprehensive spine and joint assessment, visit Dr. Nitin Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru — your trusted expert for posture-related issues, joint pain, and spine conditions.</p>
+      <p>For comprehensive spine and joint assessment, visit Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru — your trusted expert for posture-related issues, joint pain, and spine conditions.</p>
     `
   },
   {
@@ -2205,11 +2311,17 @@ export const blogPosts = [
     `
   },
   {
-    slug: "common-causes-of-meniscus-tears-in-active-adults",
-    title: "Common Causes of Meniscus Tears in Active Adults",
+    // Renamed from "common-causes-of-meniscus-tears-in-active-adults" to avoid
+    // a slug collision with the longer Apr 2024 rewrite above. The two posts
+    // have meaningfully different content (this one focuses on the
+    // ACL-reconstruction-and-meniscus-repair combination angle), so keeping
+    // both is the right call rather than deleting one.
+    slug: "common-causes-of-meniscus-tears-and-acl-injuries",
+    title: "Common Causes of Meniscus Tears in Active Adults (with ACL focus)",
     excerpt: "Meniscus tears are among the most common knee injuries seen in active adults. The meniscus is a C-shaped cartilage that cushions the knee and helps with smooth ",
     date: "Mar 26, 2024",
     category: "Sports Medicine",
+    image: "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1200&h=630&fit=crop&q=80&auto=format",
     content: `
       <p>Meniscus tears are among the most common knee injuries seen in active adults. The meniscus is a C-shaped cartilage that cushions the knee and helps with smooth movement. When it is damaged, knee pain, swelling, and restricted mobility can quickly follow. Meniscus injuries also frequently occur alongside ligament issues such as ACL reconstruction surgery and meniscus repair, especially in athletes who experience high-impact movements. Understanding what causes these tears can help prevent injury and support early treatment — a crucial aspect of meniscus and ACL recovery.</p>
       
@@ -2240,7 +2352,7 @@ export const blogPosts = [
       <p>Recognizing these causes can help active adults protect their knees and seek timely care. <strong>Early treatment is especially important</strong> for anyone experiencing symptoms after a twisting injury or suspected ACL mid-substance tear, as combined injuries require specialized management to ensure smooth meniscus and ACL recovery.</p>
       
       ---
-      <p>*Note: The original article includes a call to action for Dr. Nitin Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.*</p>
+      <p>*Note: The original article includes a call to action for Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.*</p>
     `
   },
   {
@@ -2249,28 +2361,35 @@ export const blogPosts = [
     excerpt: "A posterior cruciate ligament tear affects one of the main ligaments that stabilizes the knee.",
     date: "Feb 27, 2024",
     category: "Sports Medicine",
+    image: "https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=1200&h=630&fit=crop&q=80&auto=format",
     content: `
-      <p>A posterior cruciate ligament tear affects one of the main ligaments that stabilizes the knee.</p>
-      
-      <p>The PCL helps keep the shinbone from moving backward and supports knee balance during walking, bending, and sudden movements.</p>
-      
-      <p>When this ligament is injured, the knee may feel unstable and painful, especially during weight bearing activities.</p>
-      
+      <p>A posterior cruciate ligament (PCL) tear affects one of the main ligaments that stabilises the knee. Although it is less common and often less talked about than an ACL tear, a PCL injury can still cause significant problems if it is missed or left untreated.</p>
+
+      <p>The PCL is a strong band of tissue deep inside the knee. Its main job is to keep the shinbone (tibia) from sliding too far backward relative to the thighbone (femur), and it helps control balance and stability during walking, bending, climbing stairs, and sudden movements. When this ligament is injured, the knee may feel unstable, painful, or "loose," especially during weight-bearing activities and when going downhill or down stairs.</p>
+
+      <h2>How Common PCL Tears Are</h2>
+
+      <p>PCL injuries often occur alongside other knee injuries — such as damage to other ligaments, the meniscus, or cartilage — particularly in high-energy accidents. Isolated PCL tears do happen, but a thorough assessment is important because combined injuries change the treatment plan.</p>
+
       <h2>Causes of a PCL Tear</h2>
-      
-      <ul><li><strong>Direct impact to the knee:</strong> A strong blow to the front of the knee, often during sports or accidents, can push the shinbone backward and injure the PCL.</li>
-      <li><strong>Sports strain:</strong> High-impact sports such as football, basketball, and tennis place repeated stress on the knee, increasing the risk of meniscus damage. Athletes with combined injuries often require both ACL reconstruction and meniscus repair for full knee stability.</li>
-      <li><strong>Falling on a bent knee:</strong> Landing hard on a flexed knee can strain or tear the ligament.</li>
-      <li><strong>Sudden twisting movements:</strong> Quick changes in direction during sports can overload the ligament.</li>
-      <li><strong>Motor vehicle injuries:</strong> A sudden force from the dashboard hitting the knee can cause a PCL tear.</li>
-      <li><strong>Severe hyperextension:</strong> Stretching the knee too far backward may damage the ligament.</li>
+
+      <ul>
+        <li><strong>Direct impact to the front of the knee:</strong> A strong blow to the front of the shin or knee can push the shinbone backward and tear the PCL.</li>
+        <li><strong>The "dashboard injury":</strong> In a road accident, the bent knee striking the dashboard drives the shinbone backward — a classic cause of PCL tears.</li>
+        <li><strong>Falling on a bent knee:</strong> Landing hard on a flexed knee, with the foot pointed down, can strain or tear the ligament.</li>
+        <li><strong>Sports collisions and twisting:</strong> High-impact and pivoting sports such as football, basketball, and hockey can overload the ligament during tackles, awkward landings, or sudden changes in direction.</li>
+        <li><strong>Severe hyperextension:</strong> Forcing the knee too far backward can damage the PCL.</li>
       </ul>
-      
-      <p>PCL tears may cause swelling, pain, and difficulty walking or bending the knee.</p>
-      
-      <strong>Early evaluation helps prevent long term instability.</strong>
-      
-      <p>For accurate diagnosis and treatment, visit Dr Nitin Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.</p>
+
+      <h2>Symptoms of a PCL Tear</h2>
+
+      <p>PCL tears may cause swelling that develops over hours, pain at the back of the knee, stiffness, a feeling of instability, and difficulty walking, squatting, or bending the knee. Symptoms can be surprisingly mild at first, which is one reason these injuries are sometimes overlooked.</p>
+
+      <h2>Diagnosis and Treatment</h2>
+
+      <p>Diagnosis involves a clinical examination — including a posterior drawer test — supported by X-rays and an MRI to confirm the tear and check for associated injuries. Many isolated, low-grade PCL tears are treated successfully without surgery, using bracing and a focused physiotherapy programme that strengthens the quadriceps to support the knee. Higher-grade tears, combined ligament injuries, or persistent instability may need surgical reconstruction.</p>
+
+      <p><strong>Early evaluation helps prevent long-term instability</strong> and reduces the risk of cartilage wear and arthritis later. For accurate diagnosis and treatment, consult Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist, at his clinics in HSR Layout and Attibele, Bengaluru.</p>
     `
   },
   {
@@ -2283,7 +2402,7 @@ export const blogPosts = [
     content: `
       <p>A meniscus tear can feel like the end of your active life. Whether you twisted your knee during a football match on Bengaluru's turf, stepped awkwardly while jogging on Cubbon Park's trails, or simply squatted wrong at the gym, the question that follows is almost always the same: How long will recovery take after meniscus tear surgery?</p>
       <p>The honest answer: it depends. Recovery time after meniscus surgery ranges from as little as 4–6 weeks for a partial meniscectomy to 4–6 months or more for a meniscus repair. But knowing the difference between these procedures, what each phase of recovery looks like, and what you can do to speed things along — that knowledge can make all the difference.</p>
-      <p>In this guide, Dr. Nitin N Sunku — a fellowship-trained orthopaedic and sports medicine specialist practising in HSR Layout and Attibele, Bengaluru — walks you through a realistic, evidence-based recovery roadmap tailored to Indian patients and activity levels.</p>
+      <p>In this guide, Dr. Nitin N Sunku — a fellowship-trained orthopedic and sports medicine specialist practising in HSR Layout and Attibele, Bengaluru — walks you through a realistic, evidence-based recovery roadmap tailored to Indian patients and activity levels.</p>
       
       <h2>Understanding the Meniscus and Why Surgery May Be Needed</h2>
       <p>Your knee has two menisci — the medial (inner) and lateral (outer) — each a C-shaped wedge of fibrocartilage that acts as a shock absorber, stabiliser, and load distributor between your femur (thigh bone) and tibia (shin bone). When this cartilage tears, it can cause pain, swelling, locking, and instability that prevents you from performing daily activities.</p>
@@ -2615,6 +2734,7 @@ export const blogPosts = [
     `
   },
   {
+<<<<<<< HEAD
     slug: "bilateral-total-knee-replacement",
     title: "Bilateral Total Knee Replacement: What Patients in Bengaluru Need to Know Before Deciding",
     excerpt: "Considering bilateral total knee replacement in Bengaluru? Dr. Nitin N Sunku explains the procedure, simultaneous vs. staged options, recovery timeline, risks, and who is the right candidate.",
@@ -3352,4 +3472,591 @@ export const blogPosts = [
       <p><em>About the Author<br/>Dr. Nitin N Sunku is a fellowship-trained Orthopedic and Sports Medicine Surgeon, MBBS and MS Orthopedics (Gold Medalist), with specialist fellowship training in arthroscopy and sports medicine. He is the Team Doctor for Bengaluru FC and a visiting consultant at Narayana Hrudayalaya and Manipal Hospital. He consults at Raghava Multispeciality Hospital, Attibele, and Health Nest Hospital, HSR Layout, Bengaluru. To book a consultation, call +91-9980031006 or visit drnitinsunkuortho.com/contact.</em></p>
     `
   }
+=======
+    slug: "red-light-therapy-for-acl-tear",
+    title: "Red Light Therapy for ACL Tear: What the Evidence Says and How It Fits Your Recovery",
+    excerpt: "Does red light therapy (photobiomodulation) actually help an ACL tear? An evidence-based look at mechanism, timing, dosing, and how it fits into structured ACL rehabilitation in Bengaluru.",
+    date: "May 12, 2026",
+    category: "Sports Medicine",
+    image: "https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <p>If you have recently torn your ACL, you are probably searching for anything that can help you heal faster, hurt less, and get back to sport or daily life without unnecessary delay. One name keeps coming up in sports medicine circles and online forums alike: <strong>red light therapy</strong>. But does it actually work for an ACL tear, or is it just the latest wellness trend dressed up in clinical language?</p>
+
+      <p>As an orthopaedic surgeon based in Bengaluru who manages ACL injuries every week, the honest answer is: red light therapy (also called <strong>photobiomodulation, PBM</strong>, or <strong>low-level laser therapy, LLLT</strong>) does have a growing body of evidence behind it. It is not a replacement for surgery or structured physiotherapy. Used correctly and at the right stage of recovery, it can be a genuinely useful adjunct that helps manage pain, reduce swelling, and support tissue repair.</p>
+
+      <h2>What Is an ACL Tear and Why Is Recovery So Challenging?</h2>
+      <p>The anterior cruciate ligament (ACL) is one of four key ligaments in the knee. It prevents the tibia from sliding forward relative to the femur and plays a major role in rotational stability — which is why ACL injuries are so common in sports that involve sudden direction changes such as football, basketball, badminton, and kabaddi.</p>
+      <p>When the ACL tears, several problems occur at once: bleeding inside the joint, loss of ligament structural integrity, cellular energy depletion, and a runaway inflammatory cascade. What makes ACL recovery uniquely difficult is that ligament tissue has very poor blood supply. Without adequate blood flow, the cells that repair the ligament cannot get the oxygen, glucose, and growth factors they need. This is why a complete ACL tear rarely heals on its own and typically requires arthroscopic reconstruction followed by 6 to 12 months of structured rehabilitation.</p>
+
+      <h2>What Is Red Light Therapy (Photobiomodulation)?</h2>
+      <p>Red light therapy uses specific wavelengths of red and near-infrared (NIR) light, typically between 630 and 880 nanometres, to stimulate biological activity inside cells. Unlike ultraviolet light (which damages DNA) or infrared heat (which only warms surface tissue), red and NIR light penetrate several centimetres into the skin and reach muscle, tendon, and ligament tissue underneath.</p>
+      <p>The primary target is the mitochondria. When the light hits a photoreceptor protein called <strong>cytochrome c oxidase</strong>, it triggers a cascade of beneficial changes: more ATP production, reduced oxidative stress, modulated inflammation, and increased release of growth factors that drive healing.</p>
+      <h3>Key Wavelengths Used in Practice</h3>
+      <ul>
+        <li><strong>Red light (630–670 nm):</strong> reaches superficial tissue, strong anti-inflammatory effect, promotes collagen synthesis.</li>
+        <li><strong>Near-infrared (800–1064 nm):</strong> penetrates deeper, ideal for reaching joint structures and ligament tissue.</li>
+        <li><strong>Combination devices</strong> using both wavelengths simultaneously are now the most common in clinical and home settings.</li>
+      </ul>
+
+      <h2>How Red Light Therapy Helps an ACL Tear</h2>
+      <h3>1. Boosting cellular energy (ATP)</h3>
+      <p>Photobiomodulation stimulates the mitochondria to produce more ATP. This surge of cellular energy accelerates cell proliferation, migration, and tissue remodelling — all essential steps in ligament healing.</p>
+      <h3>2. Regulating inflammation</h3>
+      <p>Inflammation after an ACL tear is necessary in the first few days, but harmful when prolonged. Red light therapy reduces pro-inflammatory signalling (TNF-alpha, IL-6) while increasing anti-inflammatory cytokines (IL-10), helping a controlled and effective response rather than one that runs out of control.</p>
+      <h3>3. Stimulating collagen production</h3>
+      <p>Red light therapy stimulates fibroblasts to deposit more organised collagen fibres rather than disorganised scar tissue. This matters because disorganised scar is weaker and more prone to re-injury.</p>
+      <h3>4. Improving local blood flow</h3>
+      <p>PBM stimulates the release of nitric oxide, dilating blood vessels, and promotes <strong>angiogenesis</strong> — the formation of new capillaries. Both effects improve the supply of oxygen and nutrients to the injured site.</p>
+      <h3>5. Drug-free pain management</h3>
+      <p>Red light therapy blocks certain pain signals by modulating ion channels and stimulates endorphin release. For patients who want to reduce reliance on NSAIDs or opioids during recovery, this can be a meaningful benefit.</p>
+
+      <h2>What Does the Research Actually Show?</h2>
+      <p>The strongest data comes from studies on general ligament and tendon healing, cartilage protection, and post-surgical pain reduction. ACL-specific evidence is growing but is not yet as large as the evidence for, say, low back pain or plantar fasciitis. Published studies using wavelengths around 804–850 nm consistently report lower pain scores, reduced swelling at three months post-injury, and less need for opioid analgesics in treated groups.</p>
+      <p>A 2022 study in <em>Physiological Research</em> examined LLLT for post-surgical knee contracture and found significant improvements in joint mobility and tissue flexibility. Ongoing clinical trials are specifically looking at photobiomodulation as a post-ACL reconstruction adjunct. The emerging consensus is that red light therapy is a credible adjunct with a sound mechanism and a reasonable evidence base — not a cure, but no longer something to dismiss.</p>
+
+      <h2>When and How to Use Red Light Therapy During ACL Recovery</h2>
+      <h3>Phase 1: Acute phase (Days 1–14 after injury or surgery)</h3>
+      <p>Swelling, pain, and haemarthrosis peak in this window. Red light therapy can help modulate inflammation and reduce pain — but if you have had surgery, get explicit clearance from your surgeon before applying any device near fresh incisions.</p>
+      <h3>Phase 2: Subacute and early rehabilitation (Weeks 2–6)</h3>
+      <p>The most productive window. Apply red light therapy <strong>before</strong> rehab sessions to improve tissue pliability and reduce pain enough to allow more effective exercise, and <strong>after</strong> sessions to limit post-exercise soreness.</p>
+      <h3>Phase 3: Progressive strengthening and return to sport (Months 2–9)</h3>
+      <p>During harder phases — quadriceps strengthening, neuromuscular training, plyometrics, sport-specific drills — PBM supports collagen maturation and helps keep inflammation from becoming an obstacle to training.</p>
+      <h3>Practical session guidelines</h3>
+      <ul>
+        <li><strong>Session length:</strong> 10 to 20 minutes per session.</li>
+        <li><strong>Frequency:</strong> 3 to 5 sessions per week during active rehabilitation.</li>
+        <li><strong>Distance:</strong> a few centimetres from skin surface (follow manufacturer guidance).</li>
+        <li><strong>Wavelength:</strong> prioritise devices with both red (630–670 nm) and NIR (800–850 nm) for knee and ligament injuries.</li>
+        <li>Do not apply directly over active infection, malignancy, or fresh surgical wounds without medical clearance.</li>
+      </ul>
+
+      <h2>Combining Red Light Therapy With Other ACL Strategies</h2>
+      <p>Red light therapy works best as part of a comprehensive plan. It complements <strong>structured physiotherapy</strong> by reducing the pain and stiffness that limit engagement with rehab. There is preliminary evidence suggesting that combining <strong>PRP injections</strong> with red light therapy may offer additive benefits — PRP delivers concentrated growth factors while PBM enhances cellular uptake of those signals. For patients undergoing <strong>ACL reconstruction surgery</strong>, PBM can play a useful role both pre-operatively (improving tissue quality) and throughout post-operative rehab.</p>
+
+      <h2>Is Red Light Therapy Safe?</h2>
+      <p>Photobiomodulation has an excellent safety profile. It is non-ionising, non-thermal at therapeutic doses, and non-invasive. Do not apply red light over known cancer sites, over the eyes without protective goggles, over a foetus during pregnancy, or over fresh surgical wounds without clearance. If you are on photosensitising medications, consult your doctor first.</p>
+      <p>The main practical limitations are these: PBM does not replace the structural work of physiotherapy and exercise, it cannot regenerate a completely torn ligament without surgical reconstruction, the quality of consumer devices varies enormously, and the optimal ACL-specific protocol is still being refined.</p>
+
+      <h2>ACL Care in Bengaluru: What to Expect</h2>
+      <p>If you are recovering from an ACL tear in Bengaluru and want to use red light therapy as part of your plan, do not start it without guidance from your treating orthopaedic surgeon. The phase of your recovery, the severity of your tear, and whether you have had surgery all matter.</p>
+      <p>Dr. Nitin N Sunku consults at <strong>Raghava Multispeciality Hospital, Attibele</strong> and <strong>Health Nest Hospital, HSR Layout</strong>, taking a conservative-first, evidence-based approach. To understand whether your knee injury is an ACL tear, or to get a second opinion on your current management plan, you can book an appointment online.</p>
+
+      <h2>Quick Reference</h2>
+      <p><strong>Benefits:</strong> increases ATP production; regulates inflammation; stimulates organised collagen deposition; promotes angiogenesis; drug-free pain relief; reduces post-exercise soreness during intensive rehab.</p>
+      <p><strong>Limitations:</strong> not a substitute for ACL reconstruction in complete tears; requires a clinically validated device with appropriate wavelengths and power output; must be timed correctly within rehabilitation; ACL-specific protocol research is still maturing.</p>
+
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>Can red light therapy heal a completely torn ACL without surgery?</strong><br/>No. A complete ACL rupture cannot regenerate the original fibres on its own. For complete tears, arthroscopic ACL reconstruction remains the standard of care. Red light therapy serves as an adjunct, not a replacement.</p>
+      <p><strong>When can I start red light therapy after ACL surgery?</strong><br/>Usually from week two or three post-operatively, once the incision has closed and there is no sign of infection — but always with surgeon clearance. Never apply directly over a fresh surgical wound or staples.</p>
+      <p><strong>Is red light therapy safe to use at home for ACL recovery?</strong><br/>Yes, if you choose a device with clinically validated wavelengths (630–670 nm red and 800–850 nm NIR) and adequate power output, follow the manufacturer's distance/duration guidance, wear eye protection, and use it as part of a plan supervised by your surgeon and physiotherapist.</p>
+      <p><strong>How many sessions before I see results?</strong><br/>Most patients report noticeable pain reduction and reduced swelling within 2–3 weeks of consistent use (3–5 sessions/week). Tissue-level benefits like improved collagen organisation are cumulative over months.</p>
+      <p><strong>Can red light therapy help without surgery?</strong><br/>For partial ACL tears managed conservatively, or for swelling and pain after any acute knee injury, PBM can help modulate inflammation and reduce discomfort. A proper diagnosis comes first — do not self-treat a knee injury without knowing what you are dealing with.</p>
+
+      <p><em>Educational content only. Always consult a qualified orthopaedic surgeon before adding any adjunct therapy to your ACL rehabilitation plan.</em></p>
+    `
+  },
+  {
+    slug: "titanium-vs-johnson-vs-ceramic-knee-replacement",
+    title: "Titanium vs Johnson vs Ceramic Knee Replacement: Which Implant Is Right for You?",
+    excerpt: "A patient-friendly comparison of titanium, Johnson/DePuy (cobalt-chrome), and ceramic/Oxinium knee implants — wear, biocompatibility, registry data, cost, and who each one suits in Bangalore.",
+    date: "May 14, 2026",
+    category: "Knee Surgery",
+    image: "https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <p>When your orthopaedic surgeon tells you that you need a knee replacement, the conversation rarely stops at "yes" or "no". A follow-up question almost always arrives: <strong>which implant should I choose?</strong></p>
+      <p>For patients in Bangalore and across India, three categories dominate most online searches: <strong>titanium knee replacement</strong>, <strong>Johnson knee replacement</strong> (referring to DePuy Synthes, the orthopaedic division of Johnson and Johnson), and <strong>ceramic knee replacement</strong> (including Oxinium oxidised zirconium options). Each has genuine strengths. Each has trade-offs. The "best" choice is almost always patient-specific.</p>
+
+      <h2>The Three-Part Anatomy of Any Knee Implant</h2>
+      <p>Every total knee replacement has three main components:</p>
+      <ol>
+        <li><strong>Femoral component:</strong> a metal cap that fits over the end of the thigh bone. Material choice has the greatest impact here on wear performance.</li>
+        <li><strong>Tibial component:</strong> a flat metal tray fixed to the top of the shin bone, with a polyethylene insert on top that acts as the new cartilage.</li>
+        <li><strong>Patellar component:</strong> a polyethylene dome that replaces the undersurface of the kneecap (sometimes left untouched).</li>
+      </ol>
+      <p>When people talk about a "titanium", "ceramic" or "Johnson" knee, they are mostly referring to the material used in the femoral component and tibial tray, and the fixation method. The polyethylene insert is common to most systems but its quality varies between generations.</p>
+
+      <h2>What Is a Titanium Knee Replacement?</h2>
+      <p>Titanium alloys (most commonly <strong>Ti6Al4V</strong>) have been used in orthopaedic surgery for decades. Key reasons:</p>
+      <ul>
+        <li><strong>Biocompatibility:</strong> titanium is naturally inert and rarely triggers immune reactions — a strong choice for patients with metal sensitivities.</li>
+        <li><strong>Elastic modulus closer to bone:</strong> more natural load distribution, reducing stress shielding.</li>
+        <li><strong>Osseointegration:</strong> titanium surfaces can be coated with hydroxyapatite, encouraging bone to grow directly into the implant — useful for cementless designs.</li>
+        <li><strong>Lower density:</strong> roughly one-third the weight of an equivalent cobalt-chromium implant.</li>
+      </ul>
+      <p><strong>Best for:</strong> patients with known nickel allergies, younger and more active patients, and those where cementless fixation is preferred. <strong>Limitations:</strong> pure titanium is softer than cobalt-chrome — so the articulating femoral surface may show slightly higher wear over time. Many titanium-based systems therefore use a titanium tibial base plate but a harder alloy or ceramic-coated femoral surface. Titanium implants also cost more than standard cobalt-chrome.</p>
+
+      <h2>What Is a Johnson Knee Replacement? (DePuy Synthes)</h2>
+      <p>When patients ask about a "Johnson knee replacement", they almost always mean implants made by <strong>DePuy Synthes</strong>, the orthopaedic division of Johnson and Johnson. DePuy is one of the world's largest joint-replacement manufacturers, and their products are widely used across India.</p>
+      <p>Current flagship knee systems include:</p>
+      <ul>
+        <li><strong>ATTUNE Knee System</strong> — the primary platform for total and revision knee replacement.</li>
+        <li><strong>PFC Sigma</strong> — an older but extensively tracked design with long registry data.</li>
+        <li><strong>VELYS Robotic-Assisted Solution</strong> — imageless robotic guidance with FDA clearance for unicompartmental knee arthroplasty.</li>
+      </ul>
+      <p><strong>Material composition:</strong> The ATTUNE femoral component is primarily <strong>cobalt-chromium-molybdenum (CoCr)</strong>. The tibial tray is titanium-based with a porous coating. The polyethylene insert uses UHMWPE, with cross-linked versions for improved wear resistance. Some DePuy systems also offer Oxinium femoral surfaces.</p>
+      <p><strong>Why widely prescribed:</strong> decade-plus registry longevity data (Australian AOANJRR, UK NJR), surgeon familiarity with the instrumentation, broad range across total/partial/revision/robotic, and the VELYS robotic option for sub-millimetre placement precision. <strong>Limitation:</strong> the CoCr femoral surface contains nickel, which can cause reactions in patients with confirmed nickel hypersensitivity.</p>
+
+      <h2>What Is a Ceramic Knee Replacement?</h2>
+      <p>"Ceramic" in knee replacement does not mean fragile. It covers a spectrum of modern materials with a hard, smooth, scratch-resistant surface.</p>
+      <h3>1. Oxinium (Oxidised Zirconium)</h3>
+      <p>Made by Smith and Nephew, Oxinium is a zirconium-niobium alloy (97.5% zirconium, 2.5% niobium) whose surface is transformed into zirconium oxide ceramic through heat oxidation. The result is a <strong>metal core</strong> (strong and fracture-resistant) with a <strong>true ceramic surface</strong> (hard, smooth, biocompatible, nickel-free). Oxinium produces significantly less polyethylene wear debris in laboratory simulations and competitive long-term revision rates in registry data.</p>
+      <h3>2. Full ceramic implants (alumina/zirconia composite)</h3>
+      <p>Some European manufacturers produce fully metal-free ceramic total knee systems. An 8-year prospective study in <em>Scientific Reports</em> found highly comparable clinical outcomes to metallic counterparts. These remain niche options, primarily for patients with extreme metal sensitivity.</p>
+      <h3>3. Titanium nitride (TiN) and TiNbN coatings</h3>
+      <p>Ceramic coatings applied to a standard metal substrate. A medium-term study found no significant differences in clinical outcomes or revision rates compared to conventional cobalt-chrome at 6.5 years, with survivorship of 96% in both groups.</p>
+      <p><strong>The key advantage:</strong> the femoral component rubs against polyethylene thousands of times a day. Smoother, harder ceramic surfaces produce fewer wear particles — meaning less inflammatory response and theoretically a longer-lasting implant. This matters most for younger, more active patients. <strong>Limitations:</strong> ceramic implants cost significantly more than standard cobalt-chrome, and pure ceramic components carry a small fracture risk — which is why the metal-core-with-ceramic-surface design (Oxinium) has become more popular than fully ceramic constructs.</p>
+
+      <h2>Head-to-Head Comparison</h2>
+      <p><strong>Wear resistance:</strong> titanium moderate, CoCr good, ceramic/Oxinium excellent.</p>
+      <p><strong>Nickel content:</strong> titanium negligible, CoCr present, ceramic/Oxinium none.</p>
+      <p><strong>Long-term registry data:</strong> CoCr extensive (15+ years), Oxinium growing (20+ years), titanium limited compared to CoCr.</p>
+      <p><strong>Best for:</strong> titanium — allergy patients, cementless fixation; CoCr — most standard total knee patients; Oxinium — younger or more active patients, allergy patients who want a fracture-resistant design.</p>
+      <p><strong>Cost (India):</strong> CoCr moderate, titanium higher, Oxinium premium.</p>
+
+      <h2>Factors That Matter More Than Material</h2>
+      <p>Implant material is one factor among many in determining your outcome. Research consistently shows that <strong>surgical precision</strong> (alignment, bone cuts, ligament balancing), <strong>surgeon experience with a specific system</strong>, <strong>patient selection</strong> (total vs partial, cemented vs cementless, sizing), <strong>post-operative rehabilitation</strong>, and <strong>lifestyle factors</strong> (weight, activity, follow-up adherence) are all more predictive of long-term function than whether the femoral component is CoCr or Oxinium.</p>
+
+      <h2>Who Should Choose Which Implant?</h2>
+      <p><strong>Consider titanium-based or ceramic if:</strong> you have a confirmed nickel/CoCr allergy, you are under 60 and concerned about long-term wear, you lead an active lifestyle, or your surgeon recommends cementless fixation.</p>
+      <p><strong>Consider standard Johnson/DePuy CoCr if:</strong> you are 60+ with moderate activity, robotic precision matters and your surgeon uses VELYS, premium implant cost is a concern, or you have no metal allergies.</p>
+      <p><strong>Consider Oxinium (ceramic-surfaced) if:</strong> you want a metal core (strength) with a ceramic surface (low wear, nickel-free), you are young and active with potentially 25+ years of implant use ahead, or you have metal hypersensitivity but still want a fracture-resistant implant.</p>
+
+      <h2>What About Partial Knee Replacement?</h2>
+      <p>Yes, material still matters — but a partial (unicompartmental) replacement resurfaces only the damaged compartment. The same materials (CoCr, titanium, Oxinium) are available. Partial replacement, when correctly indicated, typically offers faster recovery, less blood loss, and a more natural knee feel — but requires very precise patient selection starting with weight-bearing X-rays and clinical examination.</p>
+
+      <h2>Knee Replacement in Bangalore: What a Good Consultation Covers</h2>
+      <ul>
+        <li>Full weight-bearing X-rays of both knees.</li>
+        <li>Clinical examination — range of motion, ligament stability, muscle strength, deformity.</li>
+        <li>Discussion of <strong>your activity goals</strong>, not just pain relief.</li>
+        <li>Honest conversation about implant options and cost implications.</li>
+        <li>Review of co-morbidities (diabetes, hypertension, cardiac history) affecting surgical risk.</li>
+      </ul>
+      <p>Dr. Nitin Sunku sees knee replacement patients at <strong>Raghava Multispeciality Hospital, Attibele</strong> (easily accessible from Electronic City, Bommasandra, Chandapura, Jigani, and Anekal) and <strong>Health Nest Hospital, HSR Layout</strong> (for patients from Koramangala, BTM Layout, Bellandur, and the HSR corridor).</p>
+
+      <h2>Recovery: Different Based on Implant Type?</h2>
+      <p>In most cases, no. Recovery is driven by surgical approach, pre-operative fitness, and rehabilitation quality — not the material composition of the femoral component.</p>
+      <ul>
+        <li><strong>Day 1–2:</strong> walking with a walker, physiotherapy begins.</li>
+        <li><strong>Week 2:</strong> targeting 0–90° knee flexion, wound review.</li>
+        <li><strong>Week 6–8:</strong> walking without aids for most patients.</li>
+        <li><strong>Month 3:</strong> most daily activities resumed.</li>
+        <li><strong>Month 6:</strong> functional target achieved; low-impact exercise (swimming, cycling) appropriate.</li>
+        <li><strong>Month 12+:</strong> full recovery, implant integration complete.</li>
+      </ul>
+
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>Is a ceramic knee replacement better than a titanium one?</strong><br/>Not categorically. Oxinium offers superior wear resistance and is nickel-free; titanium offers excellent biocompatibility and bone ingrowth for cementless fixation. The right choice depends on age, activity level, allergy status, and bone quality.</p>
+      <p><strong>What does "Johnson knee replacement" mean?</strong><br/>Implants made by DePuy Synthes, the orthopaedic division of Johnson and Johnson — primarily the ATTUNE and PFC Sigma systems in India.</p>
+      <p><strong>How long does a knee implant last?</strong><br/>Modern implants are expected to last 15–20 years in most patients. Oxinium and cross-linked polyethylene may extend this further, particularly in younger patients. Major systems show >95% survivorship at 10 years in Australian and UK registries.</p>
+      <p><strong>Can I have a knee replacement if I am allergic to metals?</strong><br/>Yes. Oxinium (zirconium-niobium), titanium-based, and fully ceramic systems are all options. Always disclose known allergies during pre-operative assessment.</p>
+      <p><strong>Is robotic knee replacement better than conventional?</strong><br/>Robotic systems enable more precise alignment and can reduce outlier cases. But it is a tool in the surgeon's hands — a skilled surgeon with a well-understood conventional technique can achieve excellent results too. Robotic surgery adds cost; not every patient requires it.</p>
+      <p><strong>What is Oxinium?</strong><br/>Smith and Nephew's brand for oxidised zirconium. A zirconium-niobium alloy whose surface is transformed into a ceramic oxide layer by heat. The hybrid metal-core/ceramic-surface design addresses pure ceramic's fracture risk while keeping the low-wear benefits.</p>
+      <p><strong>Does the implant material affect recovery time?</strong><br/>Generally no. Recovery is determined by surgical approach, fitness, pain management, and physiotherapy compliance.</p>
+
+      <p><em>Educational content. Implant pricing in India is subject to NPPA price ceilings; your surgeon and hospital will provide a written estimate before surgery. Always consult a qualified orthopaedic surgeon before any surgical decision.</em></p>
+    `
+  },
+  {
+    slug: "anterior-cruciate-ligament-origin-and-insertion",
+    title: "Anterior Cruciate Ligament Origin and Insertion: Complete Anatomy Guide",
+    excerpt: "Where the ACL begins, where it ends, the two functional bundles, and how this anatomy directly shapes diagnosis, reconstruction technique, and rehabilitation in Bengaluru.",
+    date: "May 16, 2026",
+    category: "Sports Medicine",
+    image: "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <p>When a patient walks into our clinic in Bengaluru with knee pain after a football collision or a sudden pivot on the basketball court, one of the first structures we evaluate is the <strong>anterior cruciate ligament (ACL)</strong>. Most patients have heard of an ACL tear but have little understanding of where this ligament actually sits, where it begins, and where it ends inside the knee. That knowledge gap matters clinically — because the ACL's origin and insertion directly determine how surgeons place bone tunnels during reconstruction, which graft angle restores natural mechanics, and how physiotherapists design loading protocols.</p>
+
+      <h2>What Is the ACL?</h2>
+      <p>The ACL is one of four main stabilising ligaments of the knee joint. It sits inside the joint capsule, within the intercondylar notch — the hollow space between the two rounded ends of the femur. The word <em>cruciate</em> comes from the Latin <em>crux</em>, meaning cross — because the ACL and its partner, the PCL, cross each other when viewed from the front.</p>
+      <p>The ACL is roughly 3–4 cm long and about 10 mm wide at its midpoint. It is composed primarily of Type I collagen fibres arranged in slightly twisted bundles — a design that distributes load across the ligament at different knee angles.</p>
+
+      <h2>ACL Origin and Insertion: Exact Anatomical Points</h2>
+      <h3>Femoral Origin (where the ACL begins)</h3>
+      <p>The ACL originates from the <strong>posteromedial surface of the lateral femoral condyle</strong>, inside the intercondylar notch — the inner wall of the outer bony knob at the end of the femur, positioned toward the back of the notch and slightly oval in shape.</p>
+      <ul>
+        <li>Sits posterior to the centre of rotation of the knee joint.</li>
+        <li>Footprint is oval, approximately <strong>18 mm long and 11 mm wide</strong>.</li>
+        <li>The <strong>resident's ridge</strong> — a bony prominence along the condyle — marks the anterior border of the footprint and is a key intraoperative landmark.</li>
+      </ul>
+      <h3>Tibial Insertion (where the ACL ends)</h3>
+      <p>The ACL inserts into the <strong>anterior intercondylar area of the tibial plateau</strong>, anterolaterally to the medial tibial eminence.</p>
+      <ul>
+        <li>Centre of the tibial insertion lies roughly <strong>7–8 mm anterior to the PCL</strong>.</li>
+        <li>Footprint spans approximately <strong>13–16 mm long and 10–11 mm wide</strong>.</li>
+        <li>A portion of the lateral meniscus anterior horn attachment overlaps the posterior edge of the ACL tibial footprint.</li>
+        <li>The insertion area is larger than the femoral footprint, giving the ACL a slightly fan-shaped profile at the tibia.</li>
+      </ul>
+      <p>Understanding these exact measurements is why ACL reconstruction at our clinic begins with careful preoperative planning using MRI to measure each patient's individual insertion dimensions before a single incision is made.</p>
+
+      <h2>Course of the ACL Through the Knee</h2>
+      <p>From its tibial insertion, the ACL runs <em>superiorly, posteriorly, and laterally</em> to reach the femoral condyle. As it travels through the intercondylar notch, it passes anterior to the PCL, and the two ligaments cross in an X pattern — hence the cruciate name.</p>
+      <p>The ligament is intra-articular (inside the joint) but extrasynovial (outside the synovial membrane). A synovial fold wraps around it, providing blood supply from branches of the <strong>middle genicular artery</strong>. This vascular envelope is thin, which partly explains why a complete ACL tear has a limited capacity to heal on its own.</p>
+
+      <h2>The Two Functional Bundles</h2>
+      <h3>1. Anteromedial (AM) Bundle</h3>
+      <ul>
+        <li>Originates from the proximal and anterior portion of the femoral footprint; inserts into the anteromedial aspect of the tibial footprint.</li>
+        <li>Becomes <strong>taut as the knee flexes beyond 30°</strong>.</li>
+        <li>Primary restraint against <strong>anterior tibial translation</strong>.</li>
+        <li>Remains moderately lax in full extension.</li>
+      </ul>
+      <h3>2. Posterolateral (PL) Bundle</h3>
+      <ul>
+        <li>Originates from the distal and posterior portion of the femoral footprint; inserts into the posterolateral part of the tibial footprint.</li>
+        <li>Taut in full extension or near extension.</li>
+        <li>Key contributor to <strong>rotational stability</strong>, particularly resisting internal tibial rotation.</li>
+        <li>Becomes lax beyond 30–40° flexion.</li>
+      </ul>
+      <p>The interplay between these bundles is why the <strong>pivot-shift test</strong> — which stresses the knee in slight flexion — provokes instability in ACL-deficient knees even when the anterior drawer test is equivocal.</p>
+
+      <h2>Biomechanical Functions</h2>
+      <ul>
+        <li><strong>Resisting anterior tibial translation:</strong> prevents the tibia from sliding forward on a stationary femur.</li>
+        <li><strong>Controlling internal tibial rotation:</strong> especially in the 0–30° flexion range.</li>
+        <li><strong>Limiting knee hyperextension:</strong> secondary check when the knee is forced beyond straight.</li>
+        <li><strong>Proprioceptive feedback:</strong> mechanoreceptors sense joint position and velocity — a function partially lost after injury that must be retrained.</li>
+      </ul>
+      <p>Because the femoral origin sits posterior to the knee's centre of rotation, the ACL becomes taut as the knee extends. This is the anatomical reason why straightening the knee (a blocked tackle, unexpected deceleration) combined with a rotational force creates the highest risk of ACL rupture.</p>
+
+      <h2>Why Origin and Insertion Matter for Reconstruction</h2>
+      <p>For patients considering surgery, the accuracy of bone tunnel placement — guided by knowledge of the ACL's true origin and insertion — is the single most important surgical variable. Misplaced tunnels, even by a few millimetres, lead to abnormal knee mechanics, higher re-tear rates, and accelerated cartilage wear.</p>
+      <h3>Anatomic vs Non-Anatomic Reconstruction</h3>
+      <p>Older transtibial techniques often placed the femoral tunnel too anteriorly, producing a vertical graft that restored anterior translation reasonably well but failed to control rotation. Patients continued to report a give-way feeling during pivoting. Modern <strong>anatomic ACL reconstruction</strong> — the technique used in our practice — places each tunnel at the centre of the native ACL footprint via an independent anteromedial portal. The result is a more oblique graft that replicates the native ligament's orientation and restores both translational and rotational stability.</p>
+      <h3>Single-Bundle vs Double-Bundle</h3>
+      <p>Double-bundle reconstruction places two grafts to reconstruct both AM and PL bundles independently. It requires sufficient footprint space and is technically more demanding. For most patients — especially those with a tibial insertion width under 14 mm — a well-placed single-bundle anatomic reconstruction at the centre of the footprint achieves excellent outcomes.</p>
+
+      <h2>Connecting Anatomy to Injury Mechanism</h2>
+      <p>Common ACL injury mechanisms in our Bengaluru patient population:</p>
+      <ul>
+        <li>Sudden deceleration with a planting and cutting motion (football, kabaddi, basketball).</li>
+        <li>Landing from a jump with the knee slightly bent and internally rotated.</li>
+        <li>Direct contact causing forced valgus and rotation at the knee.</li>
+        <li>Hyperextension — kicking and missing, or landing awkwardly.</li>
+      </ul>
+
+      <h2>Symptoms and Diagnosis</h2>
+      <ul>
+        <li>A popping sound or sensation at the time of injury.</li>
+        <li>Rapid knee swelling within hours (haemarthrosis).</li>
+        <li>Feeling that the knee gave way or buckled.</li>
+        <li>Inability to continue the sport or activity.</li>
+        <li>Persistent instability during walking, turning, or stair use.</li>
+      </ul>
+      <p>The <strong>Lachman test</strong> (anterior tibial translation at 30° flexion) and the <strong>pivot-shift test</strong> (rotational instability) are the most reliable bedside indicators. MRI confirms the diagnosis and identifies concurrent injuries — meniscus tears, the classic bone bruise pattern at the lateral femoral condyle and posterior lateral tibia, and chondral damage.</p>
+
+      <h2>Treatment Options</h2>
+      <h3>Non-operative</h3>
+      <p>A structured physiotherapy programme focused on quadriceps and hamstring strengthening, proprioception retraining, and activity modification can allow older, less active patients to live comfortably without an intact ACL.</p>
+      <h3>Arthroscopic ACL Reconstruction</h3>
+      <p>For active patients, athletes, and anyone with ongoing instability, arthroscopic reconstruction is the gold standard. Recovery phases:</p>
+      <ul>
+        <li><strong>Weeks 1–4:</strong> pain and swelling management, range of motion, quadriceps activation.</li>
+        <li><strong>Months 1–3:</strong> progressive strengthening, straight-line jogging.</li>
+        <li><strong>Months 3–6:</strong> sport-specific drills, agility and cutting movements.</li>
+        <li><strong>Months 6–9:</strong> return-to-sport testing including hop tests and isokinetic strength assessment.</li>
+      </ul>
+
+      <h2>Injury Prevention</h2>
+      <p>Knowledge of the ACL's origin, insertion, and biomechanical role informs prevention. Neuromuscular training programmes — such as <strong>FIFA 11+</strong> — target the exact movement patterns that overload the ACL: landing mechanics, single-leg stability, hamstring strengthening, and jump-landing feedback.</p>
+
+      <h2>Associated Structures</h2>
+      <ul>
+        <li><strong>Lateral meniscus:</strong> more commonly injured acutely with the ACL.</li>
+        <li><strong>Medial meniscus:</strong> more often damaged in chronic ACL-deficient knees.</li>
+        <li><strong>MCL:</strong> the unhappy triad of ACL, MCL, and medial meniscus injuries with valgus-rotation mechanisms.</li>
+        <li><strong>Articular cartilage:</strong> bone bruising is nearly universal in acute ACL tears.</li>
+        <li><strong>Anterolateral ligament (ALL):</strong> contributes to rotational stability alongside the ACL.</li>
+      </ul>
+
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>What is the exact origin of the ACL?</strong><br/>The posteromedial surface of the lateral femoral condyle, inside the intercondylar notch. Oval footprint roughly 18 mm long and 11 mm wide.</p>
+      <p><strong>Where does the ACL insert on the tibia?</strong><br/>The anterior intercondylar area of the tibial plateau, anterolaterally to the medial tibial eminence. Fan-shaped footprint roughly 13–16 mm long.</p>
+      <p><strong>What are the two bundles?</strong><br/>The anteromedial (AM) bundle — primary restraint against forward tibial translation, tight in flexion — and the posterolateral (PL) bundle — primary contributor to rotational stability, tight near full extension.</p>
+      <p><strong>Does the ACL have good blood supply?</strong><br/>No. The middle genicular artery branches supply enough for normal maintenance but not enough to drive meaningful healing after a complete tear. This is why complete tears in active, unstable knees generally require reconstruction.</p>
+      <p><strong>Why does origin and insertion matter for surgery?</strong><br/>Accurate tunnel placement at the native footprint is the cornerstone of successful reconstruction. Non-anatomic positions cause abnormal graft tension, poor rotational control, and higher re-injury rates.</p>
+      <p><strong>How do I know if I have torn my ACL?</strong><br/>A pop at the moment of injury, rapid swelling within hours, a sense the knee gave way, and ongoing instability are typical. A Lachman test and MRI confirm the diagnosis.</p>
+      <p><strong>Is reconstruction always necessary?</strong><br/>No. Older, less active patients or those with partial tears who commit to structured rehabilitation can achieve satisfactory function without surgery. Young active patients and those with symptomatic instability typically benefit from reconstruction.</p>
+
+      <p><em>Educational content. Individual clinical decisions should always be made in consultation with a qualified orthopaedic surgeon after a full examination.</em></p>
+    `
+  },
+  {
+    slug: "anterolateral-meniscus-tear-and-root-tear",
+    title: "Anterolateral Meniscus Tear and Anterior Lateral Meniscus Root Tear: What You Need to Know",
+    excerpt: "Outer knee pain after a twist or after ACL surgery? A specialist guide to anterolateral meniscus tears, root avulsions, diagnosis pitfalls, and modern arthroscopic root repair in Bengaluru.",
+    date: "May 18, 2026",
+    category: "Meniscal Care",
+    image: "https://images.unsplash.com/photo-1583912267550-d6c2ac3196c0?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <p>A sudden twist during a football match, a deep squat at the gym, or an awkward landing from a jump. These are the moments that can cause an <strong>anterolateral meniscus tear</strong> or, in more serious cases, an <strong>anterior lateral meniscus root tear</strong> — two closely related knee injuries that are often misdiagnosed, under-reported, and misunderstood by patients and even some general practitioners.</p>
+
+      <h2>The Lateral Meniscus and Its Root Attachments</h2>
+      <p>The knee contains two C-shaped fibrocartilaginous structures called menisci. The lateral meniscus sits on the outer side of the knee, between the femur and tibia. It covers a larger portion of the tibial surface than the medial meniscus and plays a critical role in load distribution, shock absorption, and joint stability.</p>
+      <p>Each meniscus has an anterior horn and a posterior horn. At both ends, strong ligament-like <strong>root attachments</strong> anchor the meniscus securely to the tibial plateau. These roots allow the meniscus to function as a complete ring under compression, transmitting <strong>50–70%</strong> of the body's weight across the tibiofemoral joint. When the anterior root of the lateral meniscus is torn, the meniscus loses its ability to distribute load — the result closely mimics what happens when the entire lateral meniscus is surgically removed, which accelerates joint deterioration and early-onset osteoarthritis.</p>
+
+      <h2>Anterolateral Tear vs Anterior Lateral Root Tear: What's the Difference?</h2>
+      <h3>Anterolateral Meniscus Tear</h3>
+      <p>A tear in the anterolateral zone of the lateral meniscus — the front and outer portion. Patterns can be horizontal, longitudinal, radial, or complex. Common after a direct blow to the outer knee, a rotational injury, or alongside an ACL rupture. Symptoms: outer knee pain, joint line tenderness, swelling, clicking or catching.</p>
+      <h3>Anterior Lateral Meniscus Root Tear</h3>
+      <p>A specific subtype involving the insertion point of the anterior horn into the tibial bone. The root sits in front of the intercondylar eminence, <strong>just beneath the footprint of the ACL tibial tunnel</strong>. Research shows that during ACL reconstruction, inadvertent damage to the anterior lateral meniscus root can occur in <strong>up to 18%</strong> of cases, particularly in patients with smaller anatomical structures. A complete root tear effectively converts the lateral meniscus into a functionally open ring — dramatically increasing tibiofemoral contact pressures.</p>
+
+      <h2>Common Causes and Risk Factors</h2>
+      <h3>Acute causes</h3>
+      <ul>
+        <li>ACL rupture with simultaneous rotational injury (the most common cause in young, active individuals).</li>
+        <li>High-energy tibial plateau fractures.</li>
+        <li>Sudden deep squatting or pivoting under load.</li>
+        <li>Contact sports injuries — football, basketball, kabaddi, wrestling.</li>
+        <li>Landing awkwardly from a jump or a misstep on uneven ground.</li>
+        <li>Iatrogenic injury during ACL reconstruction (tunnel drilling near the anterior root footprint).</li>
+      </ul>
+      <h3>Degenerative and chronic causes</h3>
+      <ul>
+        <li>Repeated high-flexion postures common in Indian daily activities — sitting cross-legged, squatting, Indian-style toilets.</li>
+        <li>Age-related fibrocartilage degeneration over 40.</li>
+        <li>Chronic ACL-deficient knee left untreated for years.</li>
+        <li>Occupations requiring prolonged kneeling or crouching.</li>
+      </ul>
+
+      <h2>Symptoms You Should Not Ignore</h2>
+      <ul>
+        <li>Outer (lateral) knee pain that worsens with weight-bearing, squatting, or twisting.</li>
+        <li>Swelling along the outer joint line within 24–48 hours of injury.</li>
+        <li>Clicking, popping, or catching when bending or straightening the knee.</li>
+        <li>A feeling of the knee "giving way" during change-of-direction movements.</li>
+        <li>Stiffness when trying to fully straighten or deeply bend the knee.</li>
+        <li>Pain reproduced when pressing along the lateral joint line.</li>
+        <li>In root tears, palpable extrusion of the meniscus at the outer joint margin.</li>
+      </ul>
+      <p>Not every click or outer knee pain is a meniscus tear. A proper clinical evaluation by a sports medicine specialist is essential.</p>
+
+      <h2>How It's Diagnosed</h2>
+      <h3>Clinical examination</h3>
+      <ul>
+        <li><strong>McMurray test</strong> — rotating the tibia while flexing the knee to reproduce clicking or pain.</li>
+        <li><strong>Thessaly test</strong> — weight-bearing on a single leg while rotating the knee at 20° flexion.</li>
+        <li>Joint line tenderness palpation along the lateral joint line.</li>
+        <li>Dial test and pivot shift assessment when ACL injury is also suspected.</li>
+      </ul>
+      <h3>MRI imaging — the gold standard</h3>
+      <p>An anterior lateral meniscus root tear typically appears on MRI as a full-thickness signal disruption within 9 mm of the central root attachment. Key signs include the <strong>"ghost sign"</strong> (absence of the root on expected sagittal slices), <strong>meniscal extrusion</strong> on coronal views, and subchondral bone oedema.</p>
+      <h3>Diagnostic arthroscopy</h3>
+      <p>Where MRI is inconclusive or the clinical picture does not match imaging, diagnostic arthroscopy allows direct visualisation of the meniscus and root — particularly useful when planning surgical repair.</p>
+
+      <h2>Classification of Root Tears</h2>
+      <ul>
+        <li><strong>Type 1:</strong> stable radial tear within 9 mm of root centre, partial attachment intact.</li>
+        <li><strong>Type 2:</strong> complete radial tear at or within the root zone.</li>
+        <li><strong>Type 3:</strong> bucket-handle tear with a root component.</li>
+        <li><strong>Type 4:</strong> complex degenerative tear involving the root.</li>
+        <li><strong>Type 5:</strong> bony avulsion of the root from the tibial attachment.</li>
+      </ul>
+
+      <h2>Treatment Options</h2>
+      <h3>Non-surgical management</h3>
+      <p>Stable, partial tears with good tissue quality — particularly in the peripheral vascular zone — can sometimes be managed without surgery. Options include activity modification, targeted physiotherapy, anti-inflammatory medication, bracing, and selected corticosteroid or hyaluronic acid injections. However, <strong>complete root tears causing meniscal extrusion are unlikely to heal on their own</strong>.</p>
+      <h3>Arthroscopic root repair</h3>
+      <p>The gold-standard surgical technique for complete anterior lateral meniscus root tears. The goal is to anatomically reattach the avulsed root back to its native tibial footprint, restoring meniscal biomechanics and protecting the articular cartilage.</p>
+      <ul>
+        <li><strong>Transtibial reinsertion:</strong> sutures pass through the detached root and a bone tunnel drilled in the tibia, then tied over a button or cortical fixation. Biomechanically the most effective at restoring tibiofemoral contact area.</li>
+        <li><strong>Suture anchor repair:</strong> for anterior horn tears (not root avulsions), suture anchors placed at the anterolateral edge of the tibial plateau secure the horn directly to bone.</li>
+        <li><strong>All-inside PCL fixation technique:</strong> for posterior lateral root tears coexisting with anterior pathology in complex combined injuries.</li>
+      </ul>
+      <h3>Partial meniscectomy — a last resort</h3>
+      <p>When root or anterior horn tissue is severely degenerated or fragmented, partial meniscectomy may be necessary. While it relieves mechanical symptoms, it does not restore normal biomechanics. For young patients especially, every effort is made to preserve meniscal tissue before considering removal.</p>
+
+      <h2>Recovery Timeline After Root Repair</h2>
+      <h3>Phase 1: Weeks 0–6 — protection</h3>
+      <ul>
+        <li>Non-weight-bearing or partial weight-bearing with crutches for 4–6 weeks.</li>
+        <li>Knee brace restricting range of motion (typically 0–90°).</li>
+        <li>Gentle quadriceps activation, straight leg raises, ankle pumps.</li>
+        <li>Swelling management with ice, elevation, and compression.</li>
+      </ul>
+      <h3>Phase 2: Weeks 6–12 — progressive loading</h3>
+      <ul>
+        <li>Gradual return to full weight-bearing.</li>
+        <li>Progressive range of motion to full flexion.</li>
+        <li>Closed-chain strengthening — mini squats, leg press, step-ups.</li>
+        <li>Pool-based rehabilitation to reduce joint stress.</li>
+      </ul>
+      <h3>Phase 3: Months 3–6 — functional rehabilitation</h3>
+      <ul>
+        <li>Sport-specific agility drills, running, change-of-direction training.</li>
+        <li>Balance and proprioception work to restore joint coordination.</li>
+        <li>Return-to-sport criteria: symmetrical strength, no swelling, no pain.</li>
+      </ul>
+      <p>Full return to competitive sport typically occurs between 4 and 6 months after surgery, depending on the sport and the individual.</p>
+
+      <h2>What Happens If a Root Tear Is Left Untreated?</h2>
+      <p>An untreated complete root tear causes the meniscus to extrude outward under body weight rather than distributing load evenly. Animal studies show early degenerative changes in tibiofemoral cartilage within months. In humans, the risk of tibiofemoral osteoarthritis rises measurably over 3–5 years. In younger patients, this accelerated degeneration can mean the difference between a career cut short and many more years of active sport. In middle-aged patients, it may push the knee replacement timeline significantly earlier than would otherwise be expected.</p>
+
+      <h2>When Should You See a Doctor?</h2>
+      <ul>
+        <li>Outer knee pain after a sports injury or twisting movement that does not improve within 1–2 weeks.</li>
+        <li>An MRI report mentioning anterior horn lateral meniscus tear, root tear, meniscal extrusion, or ghost sign.</li>
+        <li>Persistent clicking, locking, or giving way of the knee.</li>
+        <li>Knee pain that recurs after ACL surgery on the same side.</li>
+        <li>Progressive outer knee pain in an active adult over 40 without a clear history of injury.</li>
+      </ul>
+
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>What exactly is an anterior lateral meniscus root tear?</strong><br/>A disruption of the ligamentous attachment that anchors the front portion of the lateral meniscus to the tibia. The meniscus loses its ability to function as a load-distributing ring, increasing pressure on the knee cartilage and the risk of early osteoarthritis.</p>
+      <p><strong>How is this different from a regular meniscus tear?</strong><br/>A regular tear refers to any disruption within the body of the meniscal tissue. A root tear specifically disrupts the bony anchor of the meniscus — compromising the entire structural integrity of the cartilage.</p>
+      <p><strong>Can it heal without surgery?</strong><br/>Partial or minor anterior horn tears in the vascular zone may heal with conservative management. Complete root tears rarely heal on their own — surgical root reinsertion is generally recommended for active individuals.</p>
+      <p><strong>What is the recovery time after root repair?</strong><br/>Most patients are non-weight-bearing for 4–6 weeks, followed by progressive physiotherapy over 3–6 months. Return to competitive sport is typically 4–6 months.</p>
+      <p><strong>Is a root tear commonly missed on MRI?</strong><br/>Yes. The ghost sign, meniscal extrusion of 3 mm or more, and subchondral bone oedema should raise suspicion. An experienced reader is essential.</p>
+      <p><strong>Can a root tear occur during ACL surgery?</strong><br/>Yes. The anterior lateral meniscus root sits very close to the ACL tibial tunnel. Iatrogenic root damage is documented in up to 18% of ACL reconstructions in some studies, particularly in patients with smaller skeletal anatomy.</p>
+      <p><strong>What are the long-term risks if untreated?</strong><br/>Progressive tibiofemoral cartilage damage, meniscal extrusion, and early-onset knee osteoarthritis. The risk of requiring knee replacement is meaningfully increased — especially in younger, active patients.</p>
+
+      <p><em>Educational content. If you have been diagnosed with or suspect an anterolateral meniscus tear or anterior lateral meniscus root tear, seek a specialist evaluation. Book a consultation at Health Nest Hospital, HSR Layout or Raghava Multispeciality Hospital, Attibele.</em></p>
+    `
+  },
+  {
+    slug: "natural-alternatives-to-hip-replacement",
+    title: "Natural Alternatives to Hip Replacement Surgery: An Evidence-Based Doctor's Guide",
+    excerpt: "A conservative-first, evidence-backed guide to non-surgical hip care — physiotherapy, weight management, PRP, hyaluronic acid, hip arthroscopy, and when replacement really does become necessary.",
+    date: "May 19, 2026",
+    category: "Hip & Joint",
+    image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <p>If you have been told you need a hip replacement — or are worried that recommendation is coming — you are not alone. Every year, tens of thousands of Indians undergo total hip arthroplasty, and the number is rising. But surgery is not always the first step. At Dr. Nitin N Sunku's orthopaedic practice in Bengaluru, a <strong>conservative-first philosophy</strong> means surgery is recommended only when the benefits clearly outweigh the risks — and non-operative care is always explored first.</p>
+
+      <h2>Why Patients Seek Alternatives to Hip Replacement</h2>
+      <p>Total hip arthroplasty involves removing the damaged femoral head and acetabulum and replacing them with artificial implants. For the right patient at the right stage of disease, it is life-changing. But it carries real risks and real limitations that make many patients — especially under 60 — hesitant to proceed:</p>
+      <ul>
+        <li>Risk of infection, blood clots, or nerve injury.</li>
+        <li>Implant loosening or wear over time, potentially requiring revision within 15–20 years.</li>
+        <li>Long rehabilitation period (typically 3–6 months to full function).</li>
+        <li>Desire to preserve the natural joint for as long as possible.</li>
+        <li>Preference for non-invasive or minimally invasive treatments.</li>
+        <li>Younger patients worried about outliving the implant.</li>
+      </ul>
+
+      <h2>Who Is a Good Candidate for Non-Surgical Hip Treatment?</h2>
+      <ul>
+        <li><strong>Stage of arthritis:</strong> early to moderate (Kellgren–Lawrence Grade 1–2) is typically more amenable than advanced Grade 3–4.</li>
+        <li><strong>Age and activity level:</strong> younger, active patients benefit more from joint-preservation strategies.</li>
+        <li><strong>Cause of hip pain:</strong> bursitis, tendinopathy, mild impingement (FAI), or early avascular necrosis can often be managed without replacement.</li>
+        <li><strong>Overall health:</strong> patients with conditions raising surgical risk are better candidates for conservative care.</li>
+        <li><strong>Goals:</strong> a patient who wants to resume recreational walking has different needs than a professional athlete.</li>
+      </ul>
+
+      <h2>The Best Natural and Non-Surgical Alternatives</h2>
+      <h3>1. Targeted physiotherapy and exercise rehabilitation</h3>
+      <p>Physiotherapy is the cornerstone of hip pain management. A structured programme strengthens the glutes, hip flexors, and core — the muscles that support and stabilise the joint. Key exercises:</p>
+      <ul>
+        <li>Hip abductor strengthening (clamshells, side-lying leg raises) to reduce compressive load.</li>
+        <li>Aquatic therapy — water buoyancy offloads the hip while allowing full range of motion.</li>
+        <li>Stationary cycling — low-impact aerobic activity that preserves cartilage health.</li>
+        <li>Proprioceptive training — improves joint sense and reduces instability.</li>
+        <li>Stretching — hip flexor and piriformis stretching reduces muscle-related pain.</li>
+      </ul>
+      <p>Evidence supports physiotherapy as <strong>first-line treatment</strong> for hip osteoarthritis. A well-designed programme often delays or eliminates the need for surgery, sometimes by years. Pre-surgical "prehabilitation" also leads to significantly faster recovery if surgery does eventually become necessary.</p>
+      <h3>2. Weight management and lifestyle modification</h3>
+      <p>The hip joint bears approximately 3–5 times your body weight with every step. Even modest weight loss of 5–10 kg can translate to a 15–50 kg reduction in joint load during walking. Combining a balanced anti-inflammatory diet (rich in omega-3s, turmeric, antioxidants) with a supervised low-impact exercise programme produces measurable improvements in pain and function.</p>
+      <h3>3. Activity modification and assistive devices</h3>
+      <ul>
+        <li>Switch from running to swimming or cycling for exercise.</li>
+        <li>Use a well-fitted walking stick or cane (held on the <em>opposite</em> side to the painful hip) — clinically proven to reduce joint load by up to 25%.</li>
+        <li>Ergonomic furniture — raised toilet seats, chair cushions, vehicle seat wedges reduce painful hip flexion.</li>
+        <li>Avoid deep squatting, cross-legged sitting, and stair overuse during flare-ups.</li>
+      </ul>
+      <h3>4. Medications and supplements</h3>
+      <ul>
+        <li><strong>NSAIDs</strong> — reduce pain and inflammation but carry cardiovascular and GI risks with long-term use.</li>
+        <li><strong>Topical diclofenac gel</strong> — effective surface-level relief with minimal systemic side effects.</li>
+        <li><strong>Glucosamine and chondroitin</strong> — evidence is mixed; safe for long-term use.</li>
+        <li><strong>Curcumin (turmeric)</strong> — emerging evidence of anti-inflammatory benefit comparable to NSAIDs in some studies.</li>
+        <li><strong>Vitamin D and calcium</strong> — important for bone density around the joint.</li>
+        <li><strong>Omega-3 fatty acids</strong> — anti-inflammatory properties that may slow arthritic progression.</li>
+      </ul>
+      <h3>5. Corticosteroid injections</h3>
+      <p>Intra-articular corticosteroid injections can provide 3–6 months of pain relief — useful during flare-ups or as a bridge to allow effective physiotherapy. Repeated injections (>3–4 per year) may accelerate cartilage breakdown, so they are used judiciously.</p>
+      <h3>6. Hyaluronic acid (viscosupplementation)</h3>
+      <p>HA injections restore lubrication that drops as arthritis progresses. Better established for knee than hip, but emerging evidence supports hip use in early-to-moderate disease. A course of 3–5 injections over several weeks can provide months of relief for some patients.</p>
+      <h3>7. PRP (Platelet-Rich Plasma) therapy</h3>
+      <p>PRP is prepared from your own blood, centrifuged to concentrate platelet growth factors (PDGF, TGF-β, VEGF, IGF-1), and injected into the hip joint under image guidance. Multiple systematic reviews show meaningful improvements in pain and function for hip osteoarthritis. Effects typically begin at 4–6 weeks and last 6–12 months or longer. Best results in early-to-moderate arthritis (Grade 1–3). Can be safely repeated.</p>
+      <h3>8. Hip arthroscopy</h3>
+      <p>For specific conditions — femoroacetabular impingement (FAI), labral tears, loose bodies — hip arthroscopy is a minimally invasive option that preserves the native joint with no implants. Two or three small incisions, camera-guided. Recovery measured in weeks, not months. Particularly relevant for younger patients (20s–40s) with structural problems nowhere near needing replacement.</p>
+      <h3>9. Bracing and orthotics</h3>
+      <p>Hip unloader braces can redistribute mechanical forces away from the most damaged part of the joint. Foot orthotics correcting gait abnormalities can reduce transmitted forces up the kinetic chain into the hip.</p>
+      <h3>10. Thermal therapy and TENS</h3>
+      <p>Heat improves soft tissue extensibility and reduces morning stiffness. Cold reduces post-activity swelling. TENS modulates pain signals without medication. Self-managed adjuncts that meaningfully improve day-to-day quality of life.</p>
+
+      <h2>A Word on "Natural" Supplements and Unproven Therapies</h2>
+      <p>Patients ask about magnotherapy, acupuncture, homeopathic preparations, and herbal compounds such as Boswellia, devil's claw, and willow bark. Some — like <strong>Boswellia serrata</strong> extract — have genuinely promising anti-inflammatory data. Others lack meaningful clinical trials. If a low-risk complementary therapy provides relief and does not interfere with your main treatment, there is no harm in continuing it. But do not let unproven therapies replace proven ones, and be wary of expensive protocols marketed as guaranteed surgery alternatives.</p>
+
+      <h2>When Hip Replacement Becomes Necessary</h2>
+      <p>It would be dishonest to suggest surgery can always be avoided. Clear signals that hip replacement is the appropriate next step include:</p>
+      <ul>
+        <li>Severe, persistent pain not relieved by any combination of measures above.</li>
+        <li>End-stage osteoarthritis (Kellgren–Lawrence Grade 4) with near-complete joint space loss.</li>
+        <li>Significant deformity — hip flexion contracture, leg length discrepancy.</li>
+        <li>Avascular necrosis with femoral head collapse (Stage III or IV).</li>
+        <li>Hip fracture in older patients where fixation is not appropriate.</li>
+        <li>Quality of life severely impacted — unable to walk more than 100 m, cannot sleep due to pain.</li>
+      </ul>
+      <p>When non-operative measures have been optimised and these signs are present, hip replacement produces excellent, well-documented outcomes — over 95% patient satisfaction in appropriately selected candidates.</p>
+
+      <h2>What to Expect at a Bengaluru Assessment</h2>
+      <p>Dr. Nitin N Sunku sees hip pain patients at <strong>Raghava Multispeciality Hospital, Attibele</strong> (suitable for patients from South Bengaluru, Electronic City, Chandapura, Jigani, Bommasandra) and <strong>Health Nest Hospital, HSR Layout</strong> (for follow-up and consultations from Koramangala, BTM, Bellandur, and the HSR corridor).</p>
+      <p><strong>What to bring:</strong></p>
+      <ul>
+        <li>Any existing X-rays or MRI reports (hard copy or on your phone).</li>
+        <li>A list of all medications and supplements.</li>
+        <li>A brief note of your three main goals (e.g. "sleep without pain", "walk my daughter to school", "get back to badminton").</li>
+        <li>Comfortable clothing and footwear that allows the hip to be examined.</li>
+      </ul>
+
+      <h2>Building Your Non-Surgical Hip Care Plan</h2>
+      <h3>Phase 1 — Reduce pain and inflammation (Weeks 1–4)</h3>
+      <ul>
+        <li>Activity modification + walking aid if needed.</li>
+        <li>Topical anti-inflammatory gel or short-course oral NSAIDs.</li>
+        <li>Ice or heat therapy as appropriate.</li>
+        <li>Corticosteroid injection if pain is severe and limiting rehabilitation.</li>
+      </ul>
+      <h3>Phase 2 — Restore strength and mobility (Weeks 4–12)</h3>
+      <ul>
+        <li>Supervised physiotherapy three times per week.</li>
+        <li>Aquatic therapy or stationary cycling.</li>
+        <li>Proprioception and balance training.</li>
+        <li>Dietary review and weight management plan if indicated.</li>
+      </ul>
+      <h3>Phase 3 — Maintain and protect (ongoing)</h3>
+      <ul>
+        <li>Daily home exercise programme.</li>
+        <li>PRP injection series if moderate arthritis persists.</li>
+        <li>Regular orthopaedic review every 6–12 months.</li>
+        <li>Reassessment of surgical suitability if symptoms progress.</li>
+      </ul>
+
+      <h2>Joint Health Habits for the Long Term</h2>
+      <ul>
+        <li>Maintain a healthy body weight — the single most modifiable risk factor for hip arthritis progression.</li>
+        <li>At least 150 minutes per week of low-impact aerobic activity (swimming, cycling, walking on flat ground).</li>
+        <li>Strengthen the hip and core regularly — weak glutes increase joint load.</li>
+        <li>Avoid prolonged sitting — stand and move every 30–45 minutes.</li>
+        <li>Wear well-cushioned, supportive footwear.</li>
+        <li>Stay hydrated — cartilage is 70–80% water.</li>
+        <li>Consider annual orthopaedic check-ups if you have a family history of hip arthritis or have had previous hip injuries.</li>
+      </ul>
+
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>Can hip arthritis be treated without surgery?</strong><br/>Yes — particularly in early to moderate stages (Grade 1–3). A combination of physiotherapy, weight management, activity modification, anti-inflammatory measures, and regenerative injections like PRP can significantly reduce pain and improve function for years.</p>
+      <p><strong>What is the most effective non-surgical treatment for hip pain?</strong><br/>There is no single "most effective" treatment — it depends on the underlying cause. For osteoarthritis, physiotherapy combined with weight management has the strongest evidence. Structural problems (labral tears, FAI) may need arthroscopy. Inflammatory components may benefit from PRP. An orthopaedic assessment determines the right combination.</p>
+      <p><strong>How long can I delay hip replacement?</strong><br/>Varies enormously. Some patients manage conservatively for 5, 10, or 15+ years. Others find conservative measures provide limited relief beyond 12–18 months. The goal is not simply to delay surgery — it is to improve your quality of life with the most appropriate treatment at each stage.</p>
+      <p><strong>Is PRP therapy available in Bengaluru for hip pain?</strong><br/>Yes. Dr. Nitin Sunku evaluates patients for PRP suitability during consultation, assessing imaging and symptom severity.</p>
+      <p><strong>What exercises should I avoid with hip arthritis?</strong><br/>High-impact activities — running on hard surfaces, deep squatting, jump training, heavy weightlifting, and contact sports during flare-ups. Low-impact alternatives (swimming, cycling, elliptical, flat walking) are generally beneficial.</p>
+      <p><strong>Can young patients (under 50) avoid hip replacement entirely?</strong><br/>Many can significantly delay — and in some cases avoid — replacement through hip arthroscopy for structural problems, physiotherapy, PRP, and lifestyle modification. Because modern implants last 15–20 years, younger patients face the prospect of revision later in life, making joint-preservation strategies especially worthwhile.</p>
+      <p><strong>Is hyaluronic acid effective for hip osteoarthritis?</strong><br/>Evidence is less robust than for the knee, but some studies show meaningful short-to-medium-term relief in appropriately selected patients with early-to-moderate disease.</p>
+      <p><strong>What are the risks of delaying surgery when it is clearly indicated?</strong><br/>Progressive deformity, further muscle weakness, increased surgical difficulty, and prolonged suffering. A good surgeon will be honest about when non-surgical options have been exhausted.</p>
+
+      <p><em>Educational content. All treatment decisions should be made in consultation with a qualified orthopaedic surgeon following clinical examination and, where appropriate, imaging.</em></p>
+    `
+  },
+  ...treatmentClusterPosts,
+>>>>>>> 594ea7dd646e796c3b04e8ab304a3083d75fcf8e
 ];

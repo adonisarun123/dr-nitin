@@ -16,10 +16,10 @@ export function Testimonials() {
                             <footer className="mt-8">
                                 <div className="flex items-center gap-4">
                                     <div className="h-12 w-12 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-500">
-                                        JD
+                                        AR
                                     </div>
                                     <div>
-                                        <div className="font-bold text-gray-900">John Doe</div>
+                                        <div className="font-bold text-gray-900">Arjun R.</div>
                                         <div className="text-sm text-gray-500">Ankle Sprain Patient</div>
                                     </div>
                                 </div>

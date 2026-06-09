@@ -10,7 +10,22 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#2563EB", // Blue
+          // Full numeric scale aligned with Tailwind's blue palette so classes
+          // like `bg-primary-600`, `text-primary-100`, `ring-primary-500`
+          // resolve correctly. DEFAULT matches blue-600 to preserve the
+          // historical `bg-primary` / `text-primary` colour.
+          50: "#EFF6FF",
+          100: "#DBEAFE",
+          200: "#BFDBFE",
+          300: "#93C5FD",
+          400: "#60A5FA",
+          500: "#3B82F6",
+          600: "#2563EB",
+          700: "#1D4ED8",
+          800: "#1E40AF",
+          900: "#1E3A8A",
+          950: "#172554",
+          DEFAULT: "#2563EB",
           foreground: "#FFFFFF",
         },
         secondary: {

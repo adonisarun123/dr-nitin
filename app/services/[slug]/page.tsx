@@ -6,6 +6,8 @@ import { FAQ } from "@/components/ui/faq";
 import { CheckCircle, Phone, ArrowLeft, ArrowRight, MapPin, Calendar as CalendarIcon, Clock, ShieldCheck } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
 import { servicesData, siteConfig, practicePostalAddress } from "@/lib/data";
+import { serviceSeoOverrides } from "@/lib/seo-overrides";
+import { siteOrigin } from "@/lib/site-url";
 
 // Generate static params for all services
 export function generateStaticParams() {
@@ -15,69 +17,22 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-    if (params.slug === "sports-medicine") {
+    // Per-slug SEO overrides live in lib/seo-overrides.ts.
+    const override = serviceSeoOverrides[params.slug];
+    if (override) {
         return {
-            title: "Sports Medicine & Injury Care – Dr. Nitin Sunku",
-            description: "Specialized sports medicine care in Bangalore. Dr. Sunku treats sprains, fractures, ligament tears with personalized plans. Return to sport safely.",
+            title: override.title,
+            description: override.description,
+            alternates: { canonical: `${siteOrigin}/services/${params.slug}` },
         };
     }
-
-    if (params.slug === "acl-care") {
-        return {
-            title: "ACL Tear Care & Surgery – Dr. Nitin Sunku Orthopaedics",
-            description: "Expert ACL tear diagnosis and arthroscopic reconstruction by Dr. Sunku. Learn causes, symptoms, treatment, recovery.",
-        };
-    }
-
-    if (params.slug === "knee-replacement") {
-        return {
-            title: "Knee Replacement Surgery – Dr. Nitin Sunku Orthopedics",
-            description: "Advanced total & partial knee replacements by Dr. Sunku. Relieve arthritis pain, restore mobility. Learn about surgery, recovery",
-        };
-    }
-
-    if (params.slug === "meniscal-care") {
-        return {
-            title: "Meniscus Tear Treatment – Dr. Nitin Sunku Orthopedics",
-            description: "Specialized meniscus tear care: arthroscopic repair or partial meniscectomy by Dr. Sunku. Learn causes, symptoms, recovery",
-        };
-    }
-
-    if (params.slug === "hip-replacement") {
-        return {
-            title: "Hip Replacement Surgery – Dr. Nitin Sunku Orthopedics",
-            description: "Expert hip replacement surgeries in Bangalore. Dr. Sunku treats arthritis and hip fractures with advanced prostheses. Learn about surgery, recovery (3-6 months)",
-        };
-    }
-
-    if (params.slug === "shoulder-care") {
-        return {
-            title: "Shoulder Care & Surgery – Dr. Nitin Sunku",
-            description: "Comprehensive shoulder pain treatment by Dr. Sunku. We manage rotator cuff tears, impingement, instability, frozen shoulder with personalized care.",
-        };
-    }
-
-    if (params.slug === "bone-fracture") {
-        return {
-            title: "Bone Fracture Treatment – Dr. Nitin Sunku",
-            description: "Expert bone fracture care in Bangalore. Dr. Sunku treats simple to complex breaks with casting, ORIF, intramedullary nails. Personalized rehab for full recovery.",
-        };
-    }
-
-    if (params.slug === "spine-care") {
-        return {
-            title: "Spine Care Treatment in Attibele | Dr. Nitin Sunku",
-            description: "Comprehensive spine care in Attibele by Dr. Nitin Sunku — expert evaluation and non-surgical or surgical management of back pain and spinal disorders.",
-        };
-    }
-
 
     const service = servicesData.find((s) => s.slug === params.slug);
     if (!service) return {};
-
     return {
         title: `${service.title} Treatment in HSR Layout`,
         description: service.shortDesc,
+        alternates: { canonical: `${siteOrigin}/services/${service.slug}` },
     };
 }
 
@@ -88,22 +43,38 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         notFound();
     }
 
+    // MedicalProcedure is the correct schema.org type for an orthopedic service detail page
+    // (MedicalSpecialty is used to categorise a Physician, not to describe a single offering).
     const serviceSchema = {
         "@context": "https://schema.org",
-        "@type": "MedicalSpecialty",
+        "@type": "MedicalProcedure",
         "name": service.title,
         "description": service.shortDesc,
-        "provider": {
+        "procedureType": "https://schema.org/SurgicalProcedure",
+        "url": `${siteOrigin}/services/${service.slug}`,
+        "performer": {
             "@type": "Physician",
             "name": "Dr. Nitin N Sunku",
             "address": practicePostalAddress,
-            "telephone": siteConfig.phone
+            "telephone": siteConfig.phone,
+            "medicalSpecialty": ["Orthopedic", "SportsMedicine"]
         }
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${siteOrigin}/` },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": `${siteOrigin}/services` },
+            { "@type": "ListItem", "position": 3, "name": service.title, "item": `${siteOrigin}/services/${service.slug}` }
+        ]
     };
 
     return (
         <main className="min-h-screen">
             <JsonLd data={serviceSchema} />
+            <JsonLd data={breadcrumbSchema} />
             {/* Custom Header for Service Page */}
             <div className="bg-secondary/30 pt-16 pb-20 lg:pt-24 lg:pb-32">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -137,7 +108,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         An ACL (Anterior Cruciate Ligament) injury is one of the most common knee ligament injuries, especially among athletes and active individuals. The ACL plays a crucial role in maintaining knee stability during movement, pivoting, jumping, and sudden direction changes. When the ligament tears, it can lead to pain, swelling, instability, and difficulty walking or playing sports.
                                     </p>
                                     <p className="text-gray-600 leading-relaxed text-lg">
-                                        Our clinic offers comprehensive ACL care in Bangalore, including accurate diagnosis, non-surgical treatment, rehabilitation guidance, and advanced arthroscopic ACL reconstruction when required. Every treatment plan is customized based on age, lifestyle, activity level, and recovery goals.
+                                        Our clinic offers comprehensive ACL care in Bengaluru, including accurate diagnosis, non-surgical treatment, rehabilitation guidance, and advanced arthroscopic ACL reconstruction when required. Every treatment plan is customized based on age, lifestyle, activity level, and recovery goals.
                                     </p>
                                 </section>
 
@@ -228,14 +199,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     </h2>
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">Centred at Attibele, on Sarjapura–Attibele Road. Ideal for people in Anekal, Chandapura, Jigani, Bommasandra, and Electronic City.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 In-person Reviews <ArrowRight className="h-3 w-3" />
                                             </Link>
                                         </div>
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">HSR Layout (24th Main, Sector 2). Convenient for HSR, Koramangala, BTM Layout, and Bellandur residents.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 Follow-up Visits <ArrowRight className="h-3 w-3" />
@@ -276,7 +247,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         },
                                         {
                                             question: "What are possible complications or long-term outcomes?",
-                                            answer: "Complications are uncommon but include infection or blood clots. Proper rehab minimizes the risk of long-term knee arthritis. Most people regain good stability and function, with about 90% improving with treatment."
+                                            answer: "Complications are uncommon but include infection or blood clots. Proper rehab minimizes the risk of long-term knee arthritis. Most people regain good stability and function with appropriate treatment and rehabilitation."
                                         },
                                         {
                                             question: "When should I see a doctor after knee injury?",
@@ -286,10 +257,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book ACL Consultation in Bangalore</h2>
-                                    <p className="mb-8 opacity-90 leading-relaxed">Early diagnosis can prevent long-term damage. Consult Dr. Nitin Sunku, experienced orthopaedic specialist, for arthroscopic surgery and recovery guidance.</p>
+                                    <h2 className="text-2xl font-bold mb-4">Book ACL Consultation in Bengaluru</h2>
+                                    <p className="mb-8 opacity-90 leading-relaxed">Early diagnosis can prevent long-term damage. Consult Dr. Nitin N Sunku, experienced orthopedic specialist, for arthroscopic surgery and recovery guidance.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
-                                        <Link href="/contact">Book Appointment Today</Link>
+                                        <Link href="/contact">Book Consultation</Link>
                                     </Button>
                                 </div>
                             </>
@@ -300,7 +271,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         A meniscus tear is one of the most common knee injuries seen in athletes, active individuals, and older adults. The meniscus is a C-shaped cartilage in the knee that acts as a shock absorber, helping protect the joint and improve stability during movement. When torn, it can lead to pain, swelling, stiffness, locking, and difficulty bending or straightening the knee.
                                     </p>
                                     <p className="text-gray-600 leading-relaxed text-lg">
-                                        Our clinic offers comprehensive meniscal care in Bangalore, including accurate diagnosis, conservative treatment, rehabilitation guidance, and advanced arthroscopic meniscus surgery when needed. The goal of treatment is always to relieve pain, restore movement, and preserve healthy knee cartilage whenever possible.
+                                        Our clinic offers comprehensive meniscal care in Bengaluru, including accurate diagnosis, conservative treatment, rehabilitation guidance, and advanced arthroscopic meniscus surgery when needed. The goal of treatment is always to relieve pain, restore movement, and preserve healthy knee cartilage whenever possible.
                                     </p>
                                 </section>
 
@@ -401,14 +372,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     </h2>
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">Centred at Attibele, on Sarjapura–Attibele Road. Ideal for people in Anekal, Chandapura, Jigani, Bommasandra, and Electronic City.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 In-person Reviews <ArrowRight className="h-3 w-3" />
                                             </Link>
                                         </div>
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">HSR Layout (24th Main, Sector 2). Convenient for HSR, Koramangala, BTM Layout, and Bellandur residents.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 Follow-up Visits <ArrowRight className="h-3 w-3" />
@@ -467,10 +438,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book Meniscus Consultation in Bangalore</h2>
-                                    <p className="mb-8 opacity-90 leading-relaxed">If you have knee pain, locking, swelling, or suspect a cartilage injury, early treatment can help prevent further joint damage. Consult Dr. Nitin Sunku, experienced orthopaedic and sports injury specialist in Bangalore, for expert meniscus tear treatment, arthroscopic knee surgery, and complete recovery guidance.</p>
+                                    <h2 className="text-2xl font-bold mb-4">Book Meniscus Consultation in Bengaluru</h2>
+                                    <p className="mb-8 opacity-90 leading-relaxed">If you have knee pain, locking, swelling, or suspect a cartilage injury, early treatment can help prevent further joint damage. Consult Dr. Nitin N Sunku, experienced orthopedic and sports injury specialist in Bengaluru, for expert meniscus tear treatment, arthroscopic knee surgery, and complete recovery guidance.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
-                                        <Link href="/contact">Book Appointment Today</Link>
+                                        <Link href="/contact">Book Consultation</Link>
                                     </Button>
                                 </div>
                             </>
@@ -481,7 +452,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         Sports medicine focuses on the prevention, diagnosis, treatment, and rehabilitation of injuries related to sports, exercise, and active lifestyles. It is not only for professional athletes—anyone with a fitness-related injury, recurring pain, or movement limitation can benefit from specialized sports injury care.
                                     </p>
                                     <p className="text-gray-600 leading-relaxed text-lg">
-                                        Our clinic offers comprehensive sports medicine treatment in Bangalore for athletes, fitness enthusiasts, working professionals, and active individuals of all ages. From sprains and ligament tears to overuse injuries and rehabilitation, treatment is designed to help patients recover safely and return to activity with confidence.
+                                        Our clinic offers comprehensive sports medicine treatment in Bengaluru for athletes, fitness enthusiasts, working professionals, and active individuals of all ages. From sprains and ligament tears to overuse injuries and rehabilitation, treatment is designed to help patients recover safely and return to activity with confidence.
                                     </p>
                                 </section>
 
@@ -574,7 +545,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         Why Choose Our Clinic
                                     </h2>
                                     <p className="text-gray-700 leading-relaxed">
-                                        Dr. Sunku’s fellowship training and experience as a team physician (e.g. former pro sports doctor) bring elite-level expertise. He blends orthopaedic precision with sports science. We emphasize patient-first care: treatment plans are tailored to each patient’s goals (return to pro sports vs. recreational activity). Unlike some clinics, we highlight his specialized sports medicine credential. We also feature any cutting-edge diagnostics we use, and a collaborative team-based approach, similar to major centers. Our focus on education (explaining injury and recovery) and coordinated rehab sets us apart.
+                                        Dr. Sunku’s fellowship training and experience as a team physician (e.g. former pro sports doctor) bring elite-level expertise. He blends orthopedic precision with sports science. We emphasize patient-first care: treatment plans are tailored to each patient’s goals (return to pro sports vs. recreational activity). Unlike some clinics, we highlight his specialized sports medicine credential. We also feature any cutting-edge diagnostics we use, and a collaborative team-based approach, similar to major centers. Our focus on education (explaining injury and recovery) and coordinated rehab sets us apart.
                                     </p>
                                 </section>
 
@@ -623,14 +594,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     </h2>
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">Centred at Attibele, on Sarjapura–Attibele Road. Ideal for people in Anekal, Chandapura, Jigani, Bommasandra, and Electronic City.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 In-person Reviews <ArrowRight className="h-3 w-3" />
                                             </Link>
                                         </div>
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">HSR Layout (24th Main, Sector 2). Convenient for HSR, Koramangala, BTM Layout, and Bellandur residents.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 Follow-up Visits <ArrowRight className="h-3 w-3" />
@@ -697,10 +668,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book Sports Injury Consultation in Bangalore</h2>
-                                    <p className="mb-8 opacity-90 leading-relaxed">If you are dealing with a sports injury, recurring pain, reduced performance, or want a safe return-to-play plan, early treatment can speed recovery and prevent long-term issues. Consult Dr. Nitin Sunku, experienced orthopaedic and sports injury specialist in Bangalore, for expert sports medicine treatment, rehabilitation planning, and advanced injury care.</p>
+                                    <h2 className="text-2xl font-bold mb-4">Book Sports Injury Consultation in Bengaluru</h2>
+                                    <p className="mb-8 opacity-90 leading-relaxed">If you are dealing with a sports injury, recurring pain, reduced performance, or want a safe return-to-play plan, early treatment can speed recovery and prevent long-term issues. Consult Dr. Nitin N Sunku, experienced orthopedic and sports injury specialist in Bengaluru, for expert sports medicine treatment, rehabilitation planning, and advanced injury care.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
-                                        <Link href="/contact">Book Appointment Today</Link>
+                                        <Link href="/contact">Book Consultation</Link>
                                     </Button>
                                 </div>
                             </>
@@ -711,7 +682,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         Knee replacement is a highly effective treatment for severe knee arthritis and long-term joint damage that causes chronic pain, stiffness, and reduced mobility. When non-surgical treatments no longer provide relief, replacing the damaged joint surfaces can significantly improve comfort and movement.
                                     </p>
                                     <p className="text-gray-600 leading-relaxed text-lg">
-                                        Knee replacement is a proven solution for severe knee joint damage. In our clinic, we evaluate patients with chronic knee pain and advanced arthritis. Our goal is to relieve pain and improve mobility. Dr. Nitin Sunku offers both total and partial knee replacements using modern surgical techniques. Every plan starts with a thorough exam and X-ray/MRI to confirm the diagnosis. We tailor treatment to your needs—whether that means resurfacing a single compartment (partial replacement) or the entire knee. With Dr. Sunku’s sports-medicine background and fellowship training, patients regain function with a minimally invasive approach and expert aftercare.
+                                        Knee replacement is a proven solution for severe knee joint damage. In our clinic, we evaluate patients with chronic knee pain and advanced arthritis. Our goal is to relieve pain and improve mobility. Dr. Nitin N Sunku offers both total and partial knee replacements using modern surgical techniques. Every plan starts with a thorough exam and X-ray/MRI to confirm the diagnosis. We tailor treatment to your needs—whether that means resurfacing a single compartment (partial replacement) or the entire knee. With Dr. Sunku’s sports-medicine background and fellowship training, patients regain function with a minimally invasive approach and expert aftercare.
                                     </p>
                                 </section>
 
@@ -726,7 +697,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     <div className="grid gap-4">
                                         <div className="bg-primary/5 p-4 rounded-xl border border-primary/10">
                                             <h4 className="font-bold text-gray-900 mb-2">• Advanced Arthritis</h4>
-                                            <p className="text-gray-600 text-sm leading-relaxed">The most common indication for knee replacement is osteoarthritis, followed by rheumatoid or post-traumatic arthritis. Patients experience chronic knee pain (often less than 6 months) that worsens with activity, plus stiffness, swelling, and difficulty walking or climbing stairs.</p>
+                                            <p className="text-gray-600 text-sm leading-relaxed">The most common indication for knee replacement is osteoarthritis, followed by rheumatoid or post-traumatic arthritis. Patients experience chronic knee pain (typically lasting more than 6 months) that worsens with activity, plus stiffness, swelling, and difficulty walking or climbing stairs.</p>
                                         </div>
                                         <div className="bg-primary/5 p-4 rounded-xl border border-primary/10">
                                             <h4 className="font-bold text-gray-900 mb-2">• Failed Conservative Treatment</h4>
@@ -792,7 +763,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         Why Choose Our Clinic
                                     </h2>
                                     <p className="text-gray-700 leading-relaxed">
-                                        Dr. Sunku’s sports-med expertise and fellowship training bring a high level of precision to knee replacements. He serves as a former professional team physician, so he understands athletes’ recovery needs. Patients benefit from his experience in advanced arthroscopic and arthroplasty techniques. Our clinic emphasizes personalized care: we thoroughly explain options (total vs partial) and set realistic expectations. We also coordinate physical therapy and follow-up to ensure smooth recovery. Unlike generic centers, we highlight Dr. Sunku’s credentials and the clinic’s advanced implants. We emphasize trust, quality, and a track record of excellent outcomes.
+                                        Dr. Sunku’s sports-medicine expertise and fellowship training bring a high level of precision to knee replacements. As Team Doctor for Bengaluru FC, he understands the recovery needs of active patients and athletes alike. Patients benefit from his experience in advanced arthroscopic and arthroplasty techniques. Our clinic emphasizes personalized care: we thoroughly explain options (total vs partial) and set realistic expectations. We also coordinate physical therapy and follow-up to support a smooth recovery. We emphasize trust, transparent communication, and evidence-based surgical practice.
                                     </p>
                                 </section>
 
@@ -840,14 +811,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     </h2>
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">Centred at Attibele, on Sarjapura–Attibele Road. Ideal for people in Anekal, Chandapura, Jigani, Bommasandra, and Electronic City.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 In-person Reviews <ArrowRight className="h-3 w-3" />
                                             </Link>
                                         </div>
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">HSR Layout (24th Main, Sector 2). Convenient for HSR, Koramangala, BTM Layout, and Bellandur residents.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 Follow-up Visits <ArrowRight className="h-3 w-3" />
@@ -908,16 +879,16 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         },
                                         {
                                             question: "Why choose Dr. Sunku’s clinic for knee replacement?",
-                                            answer: "Dr. Sunku’s orthopaedic expertise (board-certified, fellowship-trained) and sports medicine background provide a precision approach to knee replacement. He and his team use advanced techniques tailored to each patient. We also prioritize a quick recovery: early mobilization, pain management, and rehab support. Combined with patient education and follow-up, our outcomes rival those of top centers."
+                                            answer: "Dr. Sunku’s orthopedic expertise (board-certified, fellowship-trained) and sports medicine background bring a precision approach to knee replacement. He and his team use advanced techniques tailored to each patient. We also prioritize a smooth recovery: early mobilization, pain management, and rehab support. Combined with patient education and follow-up, we aim for the best possible outcome for every patient."
                                         }
                                     ]}
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book Knee Replacement Consultation in Bangalore</h2>
-                                    <p className="mb-8 opacity-90 leading-relaxed">If knee pain is affecting your mobility, sleep, or daily life, early evaluation can help determine the best treatment option. Consult Dr. Nitin Sunku, experienced orthopaedic specialist in Bangalore, for expert total knee replacement, partial knee replacement, and complete recovery guidance.</p>
+                                    <h2 className="text-2xl font-bold mb-4">Book Knee Replacement Consultation in Bengaluru</h2>
+                                    <p className="mb-8 opacity-90 leading-relaxed">If knee pain is affecting your mobility, sleep, or daily life, early evaluation can help determine the best treatment option. Consult Dr. Nitin N Sunku, experienced orthopedic specialist in Bengaluru, for expert total knee replacement, partial knee replacement, and complete recovery guidance.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
-                                        <Link href="/contact">Book Appointment Today</Link>
+                                        <Link href="/contact">Book Consultation</Link>
                                     </Button>
                                 </div>
                             </>
@@ -928,7 +899,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         The hip is a large ball-and-socket joint, and when it is severely damaged, patients experience constant pain, stiffness, and difficulty walking or standing. Hip replacement surgery (also called hip arthroplasty) replaces the damaged joint surfaces with artificial components.
                                     </p>
                                     <p className="text-gray-600 leading-relaxed text-lg">
-                                        In our practice, Dr. Nitin Sunku evaluates each patient carefully—considering X-rays and health status—to determine the best timing and type of hip replacement. Whether total or partial, our goal is to relieve pain and restore mobility using modern techniques. We emphasize a patient-first philosophy: Dr. Sunku will discuss all options, prepare you thoroughly before surgery, and guide you through rehabilitation so you can return to everyday activities with greater ease and confidence.
+                                        In our practice, Dr. Nitin N Sunku evaluates each patient carefully—considering X-rays and health status—to determine the best timing and type of hip replacement. Whether total or partial, our goal is to relieve pain and restore mobility using modern techniques. We emphasize a patient-first philosophy: Dr. Sunku will discuss all options, prepare you thoroughly before surgery, and guide you through rehabilitation so you can return to everyday activities with greater ease and confidence.
                                     </p>
                                 </section>
 
@@ -1058,14 +1029,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     </h2>
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">Centred at Attibele, on Sarjapura–Attibele Road. Ideal for people in Anekal, Chandapura, Jigani, Bommasandra, and Electronic City.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 In-person Reviews <ArrowRight className="h-3 w-3" />
                                             </Link>
                                         </div>
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">HSR Layout (24th Main, Sector 2). Convenient for HSR, Koramangala, BTM Layout, and Bellandur residents.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 Follow-up Visits <ArrowRight className="h-3 w-3" />
@@ -1122,7 +1093,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         },
                                         {
                                             question: "How much does hip replacement cost?",
-                                            answer: "Exact cost is not listed on the site. It varies by hospital, implant type, and insurance. In Bangalore, total hip replacement costs are generally hospital-dependent; patients should contact billing for estimates. (In many cases, insurance covers medically necessary joint replacements.)"
+                                            answer: "Exact cost is not listed on the site. It varies by hospital, implant type, and insurance. In Bengaluru, total hip replacement costs are generally hospital-dependent; patients should contact billing for estimates. (In many cases, insurance covers medically necessary joint replacements.)"
                                         },
                                         {
                                             question: "Why choose our clinic for hip replacement?",
@@ -1132,10 +1103,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book Hip Replacement Consultation in Bangalore</h2>
-                                    <p className="mb-8 opacity-90 leading-relaxed">If hip pain is affecting your mobility, sleep, or daily life, early evaluation can help determine the best treatment option. Consult Dr. Nitin Sunku, experienced orthopaedic specialist in Bangalore, for expert total hip replacement, partial hip replacement, and complete recovery guidance.</p>
+                                    <h2 className="text-2xl font-bold mb-4">Book Hip Replacement Consultation in Bengaluru</h2>
+                                    <p className="mb-8 opacity-90 leading-relaxed">If hip pain is affecting your mobility, sleep, or daily life, early evaluation can help determine the best treatment option. Consult Dr. Nitin N Sunku, experienced orthopedic specialist in Bengaluru, for expert total hip replacement, partial hip replacement, and complete recovery guidance.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
-                                        <Link href="/contact">Book Appointment Today</Link>
+                                        <Link href="/contact">Book Consultation</Link>
                                     </Button>
                                 </div>
                             </>
@@ -1143,7 +1114,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                             <>
                                 <section className="space-y-6">
                                     <p className="text-gray-600 leading-relaxed text-lg">
-                                        Shoulder pain can significantly limit your daily life, whether from a sports injury, work strain, or arthritis. We offer advanced shoulder care to get you moving again. Whether it’s a rotator cuff tear, labrum injury, shoulder dislocation, or adhesive capsulitis (frozen shoulder), Dr. Nitin Sunku evaluates your condition with a thorough exam and, if needed, imaging like MRI.
+                                        Shoulder pain can significantly limit your daily life, whether from a sports injury, work strain, or arthritis. We offer advanced shoulder care to get you moving again. Whether it’s a rotator cuff tear, labrum injury, shoulder dislocation, or adhesive capsulitis (frozen shoulder), Dr. Nitin N Sunku evaluates your condition with a thorough exam and, if needed, imaging like MRI.
                                     </p>
                                     <p className="text-gray-600 leading-relaxed text-lg">
                                         He then recommends a personalized plan – often starting with rehabilitation and injections, and using minimally invasive arthroscopy if surgery is needed. The goal is clear: relieve pain, restore range of motion, and rebuild shoulder strength so you can return to the activities you love with confidence.
@@ -1279,14 +1250,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     </h2>
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">Centred at Attibele, on Sarjapura–Attibele Road. Ideal for people in Anekal, Chandapura, Jigani, Bommasandra, and Electronic City.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 In-person Reviews <ArrowRight className="h-3 w-3" />
                                             </Link>
                                         </div>
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">HSR Layout (24th Main, Sector 2). Convenient for HSR, Koramangala, BTM Layout, and Bellandur residents.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 Follow-up Visits <ArrowRight className="h-3 w-3" />
@@ -1349,10 +1320,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book Shoulder Consultation in Bangalore</h2>
-                                    <p className="mb-8 opacity-90 leading-relaxed">If shoulder pain is affecting your mobility, sleep, or daily life, early evaluation can help determine the best treatment option. Consult Dr. Nitin Sunku, experienced orthopaedic specialist in Bangalore, for expert shoulder treatment and complete recovery guidance.</p>
+                                    <h2 className="text-2xl font-bold mb-4">Book Shoulder Consultation in Bengaluru</h2>
+                                    <p className="mb-8 opacity-90 leading-relaxed">If shoulder pain is affecting your mobility, sleep, or daily life, early evaluation can help determine the best treatment option. Consult Dr. Nitin N Sunku, experienced orthopedic specialist in Bengaluru, for expert shoulder treatment and complete recovery guidance.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
-                                        <Link href="/contact">Book Appointment Today</Link>
+                                        <Link href="/contact">Book Consultation</Link>
                                     </Button>
                                 </div>
                             </>
@@ -1363,7 +1334,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         Broken bones can happen in accidents, falls, sports, or simply from weakened bone. When a fracture occurs, prompt evaluation and proper treatment are essential to ensure healing and restore function.
                                     </p>
                                     <p className="text-gray-600 leading-relaxed text-lg">
-                                        Our orthopedic team, led by Dr. Nitin Sunku, provides comprehensive fracture care for all ages: from applying casts and splints for simple fractures to performing surgical fixation (plates, screws, rods) for more complex breaks. We begin with careful assessment (physical exam and X-rays) to classify the fracture. Then we choose the least invasive effective treatment. Our goal is stable healing and early rehabilitation so patients can return to normal activities as quickly and safely as possible.
+                                        Our orthopedic team, led by Dr. Nitin N Sunku, provides comprehensive fracture care for all ages: from applying casts and splints for simple fractures to performing surgical fixation (plates, screws, rods) for more complex breaks. We begin with careful assessment (physical exam and X-rays) to classify the fracture. Then we choose the least invasive effective treatment. Our goal is stable healing and early rehabilitation so patients can return to normal activities as quickly and safely as possible.
                                     </p>
                                 </section>
 
@@ -1492,14 +1463,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     </h2>
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">Centred at Attibele, on Sarjapura–Attibele Road. Ideal for people in Anekal, Chandapura, Jigani, Bommasandra, and Electronic City.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 In-person Reviews <ArrowRight className="h-3 w-3" />
                                             </Link>
                                         </div>
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">HSR Layout (24th Main, Sector 2). Convenient for HSR, Koramangala, BTM Layout, and Bellandur residents.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 Follow-up Visits <ArrowRight className="h-3 w-3" />
@@ -1562,10 +1533,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book Bone Fracture Consultation in Bangalore</h2>
-                                    <p className="mb-8 opacity-90 leading-relaxed">If you suspect a fracture or require specialized trauma care, prompt evaluation is essential for proper healing. Consult Dr. Nitin Sunku, experienced orthopaedic specialist in Bangalore, for expert fracture treatment, casting, and advanced surgical care.</p>
+                                    <h2 className="text-2xl font-bold mb-4">Book Bone Fracture Consultation in Bengaluru</h2>
+                                    <p className="mb-8 opacity-90 leading-relaxed">If you suspect a fracture or require specialized trauma care, prompt evaluation is essential for proper healing. Consult Dr. Nitin N Sunku, experienced orthopedic specialist in Bengaluru, for expert fracture treatment, casting, and advanced surgical care.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
-                                        <Link href="/contact">Book Appointment Today</Link>
+                                        <Link href="/contact">Book Consultation</Link>
                                     </Button>
                                 </div>
                             </>
@@ -1576,7 +1547,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         The spine plays a vital role in supporting the body, maintaining posture, and protecting the spinal cord. When spinal problems develop, they can cause persistent back pain, nerve irritation, stiffness, and reduced mobility that interfere with everyday life. Spine conditions may arise from aging, injury, degenerative diseases, or poor posture.
                                     </p>
                                     <p className="text-gray-600 leading-relaxed text-lg">
-                                        At our clinic, Dr. Nitin Sunku provides comprehensive spine care focused on accurate diagnosis and personalized treatment. From conservative therapies such as physiotherapy and medication to advanced surgical solutions when necessary, our goal is to relieve pain, restore mobility, and improve long-term spinal health. Every treatment plan is tailored to the patient’s condition, lifestyle, and recovery goals.
+                                        At our clinic, Dr. Nitin N Sunku provides comprehensive spine care focused on accurate diagnosis and personalized treatment. From conservative therapies such as physiotherapy and medication to advanced surgical solutions when necessary, our goal is to relieve pain, restore mobility, and improve long-term spinal health. Every treatment plan is tailored to the patient’s condition, lifestyle, and recovery goals.
                                     </p>
                                 </section>
 
@@ -1650,7 +1621,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                             </ul>
                                         </div>
                                         <p className="text-gray-600 leading-relaxed text-sm italic mt-2">
-                                            Dr. Nitin Sunku carefully evaluates each patient’s condition and recommends the most appropriate treatment plan based on clinical findings and imaging results.
+                                            Dr. Nitin N Sunku carefully evaluates each patient’s condition and recommends the most appropriate treatment plan based on clinical findings and imaging results.
                                         </p>
                                     </div>
                                 </section>
@@ -1661,7 +1632,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         Why Choose Our Clinic
                                     </h2>
                                     <p className="text-gray-700 leading-relaxed">
-                                        Dr. Nitin Sunku has extensive experience in diagnosing and managing spine conditions affecting the neck and lower back. Every patient receives a customized care plan tailored to their symptoms and activity level. Treatment focuses not only on relieving pain but also on strengthening the spine and preventing recurrence. All treatments follow modern orthopedic guidelines and proven clinical techniques. Recovery programs are designed to restore mobility and help patients safely return to their daily activities.
+                                        Dr. Nitin N Sunku has extensive experience in diagnosing and managing spine conditions affecting the neck and lower back. Every patient receives a customized care plan tailored to their symptoms and activity level. Treatment focuses not only on relieving pain but also on strengthening the spine and preventing recurrence. All treatments follow modern orthopedic guidelines and proven clinical techniques. Recovery programs are designed to restore mobility and help patients safely return to their daily activities.
                                     </p>
                                 </section>
 
@@ -1705,14 +1676,14 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                     </h2>
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Raghava Multispeciality</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">Centred at Attibele, on Sarjapura–Attibele Road. Ideal for people in Anekal, Chandapura, Jigani, Bommasandra, and Electronic City.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 In-person Reviews <ArrowRight className="h-3 w-3" />
                                             </Link>
                                         </div>
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
-                                            <h4 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h4>
+                                            <h3 className="font-bold text-gray-900 mb-2">Health Nest Hospital</h3>
                                             <p className="text-gray-600 text-sm leading-relaxed mb-4">HSR Layout (24th Main, Sector 2). Convenient for HSR, Koramangala, BTM Layout, and Bellandur residents.</p>
                                             <Link href="/contact" className="text-primary font-bold text-xs uppercase tracking-wider flex items-center gap-1">
                                                 Follow-up Visits <ArrowRight className="h-3 w-3" />
@@ -1767,10 +1738,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book Spine Care Consultation in Bangalore</h2>
-                                    <p className="mb-8 opacity-90 leading-relaxed">If you are dealing with chronic back pain, sciatica, or herniated discs, proper evaluation is key to preventing long-term damage. Consult Dr. Nitin Sunku, experienced orthopaedic specialist in Bangalore, for comprehensive spine care, targeted therapies, and surgical options when needed.</p>
+                                    <h2 className="text-2xl font-bold mb-4">Book Spine Care Consultation in Bengaluru</h2>
+                                    <p className="mb-8 opacity-90 leading-relaxed">If you are dealing with chronic back pain, sciatica, or herniated discs, proper evaluation is key to preventing long-term damage. Consult Dr. Nitin N Sunku, experienced orthopedic specialist in Bengaluru, for comprehensive spine care, targeted therapies, and surgical options when needed.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
-                                        <Link href="/contact">Book Appointment Today</Link>
+                                        <Link href="/contact">Book Consultation</Link>
                                     </Button>
                                 </div>
                             </>
@@ -1782,7 +1753,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         {service.fullDesc}
                                     </p>
                                     <p className="text-gray-600 leading-relaxed mt-4">
-                                        Dr. Nitin Sunku uses a patient-first approach to diagnosis, combining clinical examination with advanced imaging only when necessary. Treatment plans are tailored to your specific goals, whether it's returning to professional sports or simply walking pain-free.
+                                        Dr. Nitin N Sunku uses a patient-first approach to diagnosis, combining clinical examination with advanced imaging only when necessary. Treatment plans are tailored to your specific goals, whether it's returning to professional sports or simply walking pain-free.
                                     </p>
                                 </div>
 
@@ -1839,9 +1810,9 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
             <section className="bg-[#2B58C9] text-white py-16 mt-20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl text-sm">
-                    <h2 className="text-xl font-bold mb-4 font-heading">Orthopaedic and sports medicine care in Bengaluru</h2>
+                    <h2 className="text-xl font-bold mb-4 font-heading">Orthopedic and sports medicine care in Bengaluru</h2>
                     <p className="mb-6 leading-relaxed text-blue-100">
-                        Dr. Nitin N. Sunku is a consultant orthopaedic surgeon and sports medicine specialist. His day-to-day work spans knee and shoulder arthroscopy, ACL and other ligament injuries, meniscus tears, cartilage-friendly repair options when suitable, hip and knee arthritis assessment, joint replacement when quality of life is clearly limited, fracture and trauma review, and spine symptom evaluation with a staged plan. Care is built around a clear history, a focused examination, imaging only when it changes management, and honest discussion of non-operative versus operative paths.
+                        Dr. Nitin N Sunku is a consultant orthopedic surgeon and sports medicine specialist. His day-to-day work spans knee and shoulder arthroscopy, ACL and other ligament injuries, meniscus tears, cartilage-friendly repair options when suitable, hip and knee arthritis assessment, joint replacement when quality of life is clearly limited, fracture and trauma review, and spine symptom evaluation with a staged plan. Care is built around a clear history, a focused examination, imaging only when it changes management, and honest discussion of non-operative versus operative paths.
                     </p>
 
                     <h3 className="text-lg font-bold mb-3 text-white font-heading">Where appointments take place</h3>

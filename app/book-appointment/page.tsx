@@ -3,28 +3,29 @@ import Image from "next/image";
 import { BookingForm } from "@/components/forms/booking-form";
 import { Phone, MapPin, Clock, Award, Heart, Users, CheckCircle } from "lucide-react";
 import { siteConfig } from "@/lib/data";
+import { CLINICS, PRIMARY_CLINIC } from "@/lib/practice";
 import { HideNavigation } from "@/components/ui/hide-navigation";
 import { LandingPageTracker } from "@/components/analytics/landing-page-tracker";
 import { TrackedButton } from "@/components/analytics/tracked-button";
 
 export const metadata: Metadata = {
-    title: "Book Appointment - Best Orthopaedic Doctor in HSR Layout & Attibele | Dr. Nitin Sunku",
-    description: "Book your appointment with Dr. Nitin Sunku, leading orthopaedic specialist in HSR Layout & Attibele. Expert in knee injuries, sports medicine, joint replacement & trauma care. Call +91-9449031003",
+    title: "Book Appointment - Best Orthopedic Doctor in Attibele & HSR Layout | Dr. Nitin N Sunku",
+    description: `Book your appointment with Dr. Nitin N Sunku, leading orthopedic specialist in Attibele & HSR Layout. Expert in knee injuries, sports medicine, joint replacement & trauma care. Call ${siteConfig.phone}`,
     keywords: [
-        "orthopaedic doctor HSR Layout",
-        "orthopaedic doctor Attibele",
-        "knee specialist Bangalore",
+        "orthopedic doctor HSR Layout",
+        "orthopedic doctor Attibele",
+        "knee specialist Bengaluru",
         "sports injury doctor",
         "joint replacement surgeon",
         "best ortho doctor near me",
         "knee pain treatment",
-        "ACL surgery Bangalore",
-        "Dr Nitin Sunku",
+        "ACL surgery Bengaluru",
+        "Dr. Nitin N Sunku",
         "bone doctor HSR Layout"
     ],
     openGraph: {
-        title: "Book Appointment - Best Orthopaedic Doctor in HSR Layout & Attibele",
-        description: "Expert orthopaedic care for knee injuries, sports medicine & joint problems. Book your consultation today.",
+        title: "Book Appointment - Best Orthopedic Doctor in HSR Layout & Attibele",
+        description: "Expert orthopedic care for knee injuries, sports medicine & joint problems. Book your consultation today.",
         type: "website",
     },
 };
@@ -58,27 +59,13 @@ export default function BookAppointmentPage() {
         },
         {
             icon: Award,
-            title: "Commitment to Modern Orthopaedic Practice",
+            title: "Commitment to Modern Orthopedic Practice",
             description: "Using latest techniques, implants, and evidence-based protocols for optimal outcomes"
         }
     ];
 
-    const locations = [
-        {
-            name: "Raghava Multispeciality Hospital",
-            address: "39, Sarjapura - Attibele Rd, opposite syndicate bank, Anekal",
-            city: "Bengaluru, Karnataka 562107",
-            timings: "Mon-Sat: 10:00 AM - 6:00 PM",
-            phone: "+91-9980031006"
-        },
-        {
-            name: "Health Nest Hospital",
-            address: "1162, 24th Main Rd Sector 2, HSR Layout",
-            city: "Bengaluru, Karnataka 560102",
-            timings: "Mon-Sat: 10:00 AM - 8:00 PM",
-            phone: "+91-9449031003"
-        }
-    ];
+    // Use the centralized clinic data so address/hours/phone stay in sync.
+    const heroPhone = PRIMARY_CLINIC.phone;
 
     return (
         <main className="min-h-screen">
@@ -92,7 +79,7 @@ export default function BookAppointmentPage() {
                         <div className="relative h-[400px] lg:h-[600px] w-full hidden lg:block">
                             <Image
                                 src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-lp"
-                                alt="Dr. Nitin Sunku"
+                                alt="Dr. Nitin N Sunku"
                                 fill
                                 className="object-contain object-center"
                                 priority
@@ -102,11 +89,11 @@ export default function BookAppointmentPage() {
                         {/* Right Column: Text Content */}
                         <div className="text-center lg:text-left">
                             <div className="inline-block bg-blue-600 text-white rounded-full px-6 py-2 mb-6">
-                                <p className="text-sm font-medium">✓ Trusted by 1000+ Patients</p>
+                                <p className="text-sm font-medium">✓ Trusted by 10,000+ Patients</p>
                             </div>
 
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-blue-900">
-                                Expert Orthopaedic Care in <span className="text-blue-700">HSR Layout & Attibele</span>
+                                Expert Orthopedic Care in <span className="text-blue-700">HSR Layout & Attibele</span>
                             </h1>
 
                             <p className="text-xl md:text-2xl mb-8 text-blue-800 font-light">
@@ -120,11 +107,11 @@ export default function BookAppointmentPage() {
                                 </div>
                                 <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
                                     <CheckCircle className="w-5 h-5 text-blue-600" />
-                                    <span className="text-sm font-medium text-blue-900">Insurance Accepted</span>
+                                    <span className="text-sm font-medium text-blue-900">Insurance Assistance</span>
                                 </div>
                                 <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
                                     <CheckCircle className="w-5 h-5 text-blue-600" />
-                                <span className="text-sm font-medium text-blue-900">10+ Years Experience</span>
+                                    <span className="text-sm font-medium text-blue-900">10+ Years Experience</span>
                                 </div>
                             </div>
 
@@ -132,7 +119,7 @@ export default function BookAppointmentPage() {
                             <div className="relative h-[300px] w-full mb-8 lg:hidden">
                                 <Image
                                     src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-lp"
-                                    alt="Dr. Nitin Sunku"
+                                    alt="Dr. Nitin N Sunku"
                                     fill
                                     className="object-contain object-center"
                                     priority
@@ -143,12 +130,12 @@ export default function BookAppointmentPage() {
                                 <TrackedButton
                                     buttonName="Call Now - Hero"
                                     buttonLocation="Hero Section"
-                                    href="tel:+919449031003"
+                                    href={`tel:${heroPhone}`}
                                     className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg w-full sm:w-auto justify-center"
-                                    metadata={{ phone_number: "+91-9449031003", cta_type: "phone" }}
+                                    metadata={{ phone_number: heroPhone, cta_type: "phone" }}
                                 >
                                     <Phone className="w-5 h-5" />
-                                    Call Now: +91-9449031003
+                                    Call Now: {heroPhone}
                                 </TrackedButton>
                                 <TrackedButton
                                     buttonName="Book Appointment - Hero"
@@ -170,10 +157,10 @@ export default function BookAppointmentPage() {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Why Choose Dr. Nitin Sunku?
+                            Why Choose Dr. Nitin N Sunku?
                         </h2>
                         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Comprehensive orthopaedic care with a patient-first approach
+                            Comprehensive orthopedic care with a patient-first approach
                         </p>
                     </div>
 
@@ -206,7 +193,7 @@ export default function BookAppointmentPage() {
                             Conditions We Treat
                         </h2>
                         <p className="text-lg text-gray-600">
-                            Expert care for a wide range of orthopaedic conditions
+                            Expert care for a wide range of orthopedic conditions
                         </p>
                     </div>
 
@@ -304,11 +291,11 @@ export default function BookAppointmentPage() {
                         <div className="mt-8 text-center">
                             <p className="text-gray-600 mb-4">Prefer to call?</p>
                             <a
-                                href="tel:+919449031003"
-                                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold text-xl"
+                                href={`tel:${heroPhone}`}
+                                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-semibold text-xl"
                             >
                                 <Phone className="w-5 h-5" />
-                                +91-9449031003
+                                {heroPhone}
                             </a>
                         </div>
                     </div>
@@ -328,9 +315,9 @@ export default function BookAppointmentPage() {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        {locations.map((location, index) => (
+                        {CLINICS.map((location) => (
                             <div
-                                key={index}
+                                key={location.id}
                                 className="bg-white rounded-xl p-8 shadow-md border border-gray-200"
                             >
                                 <h3 className="text-2xl font-bold text-center text-gray-900 bg-yellow-200 mb-6">
@@ -339,23 +326,28 @@ export default function BookAppointmentPage() {
 
                                 <div className="space-y-4">
                                     <div className="flex gap-3">
-                                        <MapPin className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" />
+                                        <MapPin className="w-5 h-5 text-blue-700 flex-shrink-0 mt-1" />
                                         <div>
                                             <p className="text-gray-800 font-medium">{location.address}</p>
-                                            <p className="text-gray-600">{location.city}</p>
                                         </div>
                                     </div>
 
                                     <div className="flex gap-3">
-                                        <Clock className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" />
-                                        <p className="text-gray-800">{location.timings}</p>
+                                        <Clock className="w-5 h-5 text-blue-700 flex-shrink-0 mt-1" />
+                                        <div>
+                                            {location.hours.map((h) => (
+                                                <p key={h.label} className="text-gray-800">
+                                                    {h.label}: {h.display}
+                                                </p>
+                                            ))}
+                                        </div>
                                     </div>
 
                                     <div className="flex gap-3">
-                                        <Phone className="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" />
+                                        <Phone className="w-5 h-5 text-blue-700 flex-shrink-0 mt-1" />
                                         <a
                                             href={`tel:${location.phone}`}
-                                            className="text-primary-600 hover:text-primary-700 font-medium"
+                                            className="text-blue-700 hover:text-blue-800 font-medium"
                                         >
                                             {location.phone}
                                         </a>
@@ -374,7 +366,7 @@ export default function BookAppointmentPage() {
                         Ready to Get Relief from Your Pain?
                     </h2>
                     <p className="text-xl mb-8 text-blue-800 max-w-2xl mx-auto">
-                        Don't let orthopaedic problems hold you back. Book your consultation today.
+                        Don't let orthopedic problems hold you back. Book your consultation today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <TrackedButton
@@ -389,12 +381,12 @@ export default function BookAppointmentPage() {
                         <TrackedButton
                             buttonName="Call Now - Final CTA"
                             buttonLocation="Final CTA Section"
-                            href="tel:+919449031003"
+                            href={`tel:${heroPhone}`}
                             className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
-                            metadata={{ phone_number: "+91-9449031003", cta_type: "phone" }}
+                            metadata={{ phone_number: heroPhone, cta_type: "phone" }}
                         >
                             <Phone className="w-5 h-5" />
-                            Call +91-9449031003
+                            Call {heroPhone}
                         </TrackedButton>
                     </div>
                 </div>

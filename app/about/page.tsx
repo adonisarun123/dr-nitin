@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Award, BookOpen, Heart } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
@@ -11,22 +11,22 @@ import { siteOrigin } from "@/lib/site-url";
 
 export const metadata: Metadata = {
     title: {
-        absolute: "About Dr Nitin N Sunku | Orthopedic Surgeon in Bengaluru",
+        absolute: "About Dr. Nitin N Sunku | Orthopedic Surgeon Bengaluru",
     },
     description:
-        "Know Dr Nitin N Sunku, experienced orthopedic surgeon in Bengaluru specializing in sports injuries, knee care, joint replacement and advanced treatment with over 10 years of focused practice.",
+        "Meet Dr. Nitin N Sunku, orthopedic surgeon in Bengaluru — sports injuries, knee care, joint replacement, arthroscopy. Over 10 years of focused practice.",
 };
 
 export default function AboutPage() {
     const doctorSchema = {
         "@context": "https://schema.org",
         "@type": "Physician",
-        "name": "Dr. Nitin N. Sunku",
+        "name": "Dr. Nitin N Sunku",
         "medicalSpecialty": [
             "Orthopedic",
             "Sports Medicine"
         ],
-        "description": "Dr. Nitin N. Sunku is a Consultant Orthopaedic Surgeon in Bengaluru specialising in sports injuries, knee disorders, arthroscopy, joint replacement and trauma care.",
+        "description": "Dr. Nitin N Sunku is a Consultant Orthopedic Surgeon in Bengaluru specialising in sports injuries, knee disorders, arthroscopy, joint replacement and trauma care.",
         "address": practicePostalAddress,
         "hasCredential": [
             {
@@ -41,7 +41,7 @@ export default function AboutPage() {
             {
                 "@type": "EducationalOccupationalCredential",
                 "credentialCategory": "Medical specialty degree",
-                "name": "MS Orthopaedics",
+                "name": "MS Orthopedics",
                 "recognizedBy": {
                     "@type": "CollegeOrUniversity",
                     "name": "Bangalore Medical College & Research Institute"
@@ -53,7 +53,7 @@ export default function AboutPage() {
             "Knee Arthroscopy",
             "Joint Replacement",
             "Trauma Care",
-            "Orthopaedic Surgery"
+            "Orthopedic Surgery"
         ],
         "memberOf": {
             "@type": "SportsOrganization",
@@ -67,15 +67,15 @@ export default function AboutPage() {
     return (
         <main className="min-h-screen">
             <JsonLd data={doctorSchema} />
-            <PageHeader
+            <PageHeaderBold
                 title="Nurturing Mobility. Empowering Active Lives."
-                description="Dr. Nitin Sunku believes in evidence-based, personalized orthopedic care that prioritizes your long-term joint health."
+                description="Dr. Nitin N Sunku believes in evidence-based, personalized orthopedic care that prioritizes your long-term joint health."
             />
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl -mt-6 pb-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl pt-12 pb-8">
                 <div className="space-y-4 text-gray-700 leading-relaxed text-base">
                     <p>
-                        This page summarises Dr. Nitin N. Sunku&apos;s training philosophy and the clinical
+                        This page summarises Dr. Nitin N Sunku&apos;s training philosophy and the clinical
                         themes that shape his practice across Bengaluru. You will read how conservative care is
                         balanced with modern arthroscopic and joint replacement techniques, why second opinions
                         are welcomed, and how follow-up is structured after surgery so that strength and range
@@ -98,7 +98,7 @@ export default function AboutPage() {
                         <FadeIn direction="right" className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gray-100 border border-gray-200 shadow-xl">
                             <Image
                                 src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin.png"
-                                alt="Dr. Nitin N Sunku - Orthopaedic Surgeon"
+                                alt="Dr. Nitin N Sunku - Orthopedic Surgeon"
                                 fill
                                 className="object-cover"
                                 priority
@@ -107,13 +107,22 @@ export default function AboutPage() {
 
                         <FadeIn delay={0.2}>
                             <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">Dr. Nitin N Sunku</h2>
-                            <p className="text-xl font-semibold text-primary mb-6">Consultant Orthopaedic Surgeon | Sports Injuries | Arthroscopy & Joint Care</p>
+                            <p className="text-xl font-semibold text-primary mb-6">Consultant Orthopedic Surgeon | Sports Injuries | Arthroscopy & Joint Care</p>
                             <div className="text-lg text-gray-600 space-y-4 mb-8">
                                 <p>
-                                    Dr. Nitin N. Sunku is a highly regarded <strong>Consultant Orthopaedic Surgeon in Bengaluru</strong>, known for his expertise in <strong>sports injuries, knee conditions, arthroscopy, joint replacement, and trauma care</strong>. With over <strong>10 years of focused orthopaedic experience</strong>, he combines advanced clinical skill with a patient-first philosophy to deliver reliable, long-term outcomes.
+                                    Dr. Nitin N Sunku is a highly regarded <strong>Consultant Orthopedic Surgeon in Bengaluru</strong>, known for his expertise in <strong>sports injuries, knee conditions, arthroscopy, joint replacement, and trauma care</strong>. With over <strong>10 years of focused orthopedic experience</strong>, he combines advanced clinical skill with a patient-first philosophy to deliver reliable, long-term outcomes.
                                 </p>
                                 <p>
-                                    He completed his <strong>MBBS</strong> from <em>Rajarajeshwari Medical College & Hospital</em> and his <strong>MS in Orthopaedics</strong> from <em>Bangalore Medical College & Research Institute</em>. He has further pursued advanced <strong>fellowship training in Arthroscopy, Joint Replacement, and Sports Medicine</strong>, enabling him to manage complex musculoskeletal conditions with precision.
+                                    He completed his <strong>MBBS</strong> from <em>Rajarajeshwari Medical College & Hospital</em> and his <strong>MS in Orthopedics</strong> from <em>Bangalore Medical College & Research Institute</em>. He has further pursued advanced <strong>fellowship training in Arthroscopy, Joint Replacement, and Sports Medicine</strong>, enabling him to manage complex musculoskeletal conditions with precision.
+                                </p>
+                                <p>
+                                    <strong>Academic Author featured in Springer&apos;s internationally acclaimed textbook Atlas of Arthroscopy.</strong>{" "}
+                                    <Link
+                                        href="/awards"
+                                        className="text-primary underline-offset-2 hover:underline font-medium"
+                                    >
+                                        See all awards & accolades →
+                                    </Link>
                                 </p>
                                 <p>
                                     Dr. Sunku believes in a <strong>conservative-first approach</strong>, prioritising non-surgical treatments whenever possible. When surgery is required, he employs <strong>minimally invasive and arthroscopic techniques</strong> designed to minimise pain, reduce recovery time, and help patients return to normal life faster.
@@ -132,7 +141,7 @@ export default function AboutPage() {
                                 <div className="bg-green-50 p-4 rounded-xl">
                                     <Heart className="h-8 w-8 text-green-600 mb-2" />
                                     <h3 className="font-bold text-gray-900">10K+</h3>
-                                    <p className="text-sm text-gray-600">Happy Patients</p>
+                                    <p className="text-sm text-gray-600">Patients Consulted</p>
                                 </div>
                             </div>
 
@@ -181,8 +190,8 @@ export default function AboutPage() {
                             },
                             {
                                 icon: "🚀",
-                                title: "Commitment to Modern Orthopaedic Practice",
-                                desc: "Continuously updated with advancements in orthopaedics and sports medicine."
+                                title: "Commitment to Modern Orthopedic Practice",
+                                desc: "Continuously updated with advancements in orthopedics and sports medicine."
                             },
                         ].map((value, idx) => (
                             <FadeIn key={value.title} delay={idx * 0.1} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 h-full">
