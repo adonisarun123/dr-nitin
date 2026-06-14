@@ -22,6 +22,36 @@ export interface SeoOverride {
 }
 
 export const blogSeoOverrides: Record<string, SeoOverride> = {
+    "best-orthopedic-surgeon-in-attibele": {
+        title: "Best Orthopedic Surgeon in Attibele | Dr. Nitin N Sunku",
+        description:
+            "Looking for the best orthopedic surgeon in Attibele? What to look for, conditions treated, first-visit cost, and how to book with Dr. Nitin N Sunku at Raghava Hospital.",
+    },
+    "knee-replacement-cost-in-bangalore": {
+        title: "Knee Replacement Cost in Bangalore 2026 | Honest Price Guide",
+        description:
+            "Knee replacement cost in Bangalore in 2026: realistic price ranges, what drives the cost, what's included, insurance and planning tips. Dr. Nitin N Sunku, Attibele.",
+    },
+    "surgery-vs-injections-for-knee-pain": {
+        title: "Surgery vs Injections for Knee Pain: Which Is Right? (2026)",
+        description:
+            "Knee surgery or injections like PRP and GFC? Compare cost, recovery, suitability and results to choose the right option. Guidance from Dr. Nitin N Sunku, Bengaluru.",
+    },
+    "prp-gfc-injection-cost-eligibility-bangalore": {
+        title: "PRP & GFC Knee Injection Cost & Eligibility in Bangalore 2026",
+        description:
+            "PRP and GFC knee injection cost in Bangalore, who is a good candidate, and what treatment involves. A practical 2026 guide with Dr. Nitin N Sunku, Attibele.",
+    },
+    "when-to-see-orthopedic-surgeon-for-joint-pain": {
+        title: "When to See an Orthopedic Surgeon for Knee or Joint Pain",
+        description:
+            "Red-flag signs that your knee, shoulder, hip or back pain needs an orthopedic surgeon — and when physiotherapy first is fine. Book in Attibele with Dr. Nitin N Sunku.",
+    },
+    "acl-surgery-cost-and-recovery-bangalore": {
+        title: "ACL Surgery in Bangalore 2026: Cost, Recovery & Return to Sport",
+        description:
+            "ACL reconstruction in Bangalore: 2026 cost, recovery timeline and return-to-sport milestones. Guidance from sports surgeon Dr. Nitin N Sunku, Bengaluru FC team doctor.",
+    },
     "types-of-total-knee-replacement": {
         title: "Types of Total Knee Replacement: A Complete Patient Guide",
         description:
