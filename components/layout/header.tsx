@@ -39,22 +39,22 @@ export function Header() {
                     aria-label="Global"
                 >
                     {/* Logo */}
-                    <div className="flex lg:flex-1">
-                        <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group" aria-label="Dr. Nitin N Sunku — Home">
-                            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-white/40 overflow-hidden shrink-0 transition-all duration-300 group-hover:scale-105">
+                    <div className="flex shrink-0">
+                        <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2.5 group" aria-label="Dr. Nitin N Sunku — Home">
+                            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-white/40 overflow-hidden shrink-0 transition-transform duration-300 group-hover:scale-105">
                                 <img
                                     src="https://ik.imagekit.io/vlries1el/dr%20nitin/dr-nitin-sunku-logo.svg"
                                     alt="Dr. Nitin N Sunku - Orthopedic & Sports Medicine Specialist"
-                                    className="h-12 w-12 object-contain"
-                                    width={48}
-                                    height={48}
+                                    className="h-11 w-11 object-contain"
+                                    width={44}
+                                    height={44}
                                 />
                             </span>
-                            <span className="flex flex-col leading-tight">
-                                <span className="font-heading text-base sm:text-lg font-bold text-white">
+                            <span className="hidden sm:flex flex-col leading-tight">
+                                <span className="font-heading text-sm xl:text-base font-bold text-white whitespace-nowrap">
                                     Dr. Nitin N Sunku
                                 </span>
-                                <span className="text-[10px] sm:text-xs font-medium text-blue-100 tracking-wide">
+                                <span className="hidden xl:block text-[11px] font-medium text-blue-100 tracking-wide whitespace-nowrap">
                                     Orthopedic &amp; Sports Medicine
                                 </span>
                             </span>
@@ -77,13 +77,13 @@ export function Header() {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex lg:gap-x-1">
+                    <div className="hidden lg:flex lg:items-center lg:gap-x-0.5 xl:gap-x-1">
                         {navigation.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.href}
                                 className={cn(
-                                    "relative px-3 py-2 text-sm font-semibold transition-all duration-200 rounded-lg group",
+                                    "relative whitespace-nowrap px-2.5 xl:px-3 py-2 text-sm font-semibold transition-all duration-200 rounded-lg group",
                                     isActive(item.href)
                                         ? "text-white bg-blue-800"
                                         : "text-blue-50 hover:text-white hover:bg-blue-700"
@@ -103,15 +103,15 @@ export function Header() {
                     </div>
 
                     {/* Desktop CTAs */}
-                    <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center gap-3">
+                    <div className="hidden lg:flex lg:items-center gap-2 xl:gap-3 shrink-0">
                         <a
                             href={`tel:${siteConfig.phone}`}
-                            className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-blue-50 hover:text-white transition-colors rounded-lg hover:bg-blue-700 whitespace-nowrap"
+                            className="hidden xl:flex items-center gap-2 px-3 py-2 text-sm font-semibold text-blue-50 hover:text-white transition-colors rounded-lg hover:bg-blue-700 whitespace-nowrap"
                         >
                             <Phone className="h-4 w-4" />
                             <span>{siteConfig.phone}</span>
                         </a>
-                        <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300">
+                        <Button asChild className="whitespace-nowrap bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300">
                             <Link href="/contact">Book Appointment</Link>
                         </Button>
                     </div>
