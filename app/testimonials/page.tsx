@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PageHeaderBold } from "@/components/ui/page-header-bold";
+import { PageInternalLinks } from "@/components/ui/page-internal-links";
 import { Button } from "@/components/ui/button";
 import { TestimonialsShowcase } from "@/components/sections/testimonials-showcase";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -120,6 +121,17 @@ export default function TestimonialsPage() {
                     </div>
                 </div>
             </section>
+
+            <PageInternalLinks
+                heading="Explore more"
+                links={[
+                    { label: "Treatments & services offered", href: "/services" },
+                    { label: "Meet Dr. Nitin N Sunku", href: "/about" },
+                    { label: "Regenerative & non-surgical treatments", href: "/treatments" },
+                    { label: "Clinic locations", href: "/practice" },
+                    { label: "Book an appointment", href: "/contact" },
+                ]}
+            />
         </main>
     );
 }

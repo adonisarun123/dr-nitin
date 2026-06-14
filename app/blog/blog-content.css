@@ -53,6 +53,14 @@
   @apply text-primary no-underline hover:text-blue-700 hover:underline transition-colors;
 }
 
+/* CTA button-style links (e.g. "Book appointment" in author box).
+   These anchors carry their own bg-primary + text-white utilities, but the
+   generic ".blog-content a" rule above was overriding the text colour and
+   making the white label invisible on the blue button. Restore it here. */
+.blog-content a.bg-primary {
+  @apply text-white no-underline hover:text-white hover:no-underline;
+}
+
 /* Blockquotes */
 .blog-content blockquote {
   @apply border-l-4 border-primary pl-6 italic text-gray-600 my-6;

@@ -10,6 +10,7 @@ import { ReadingProgress } from "@/components/blog/reading-progress";
 import { SocialShare } from "@/components/blog/social-share";
 import { AuthorBio } from "@/components/blog/author-bio";
 import { RelatedPosts } from "@/components/blog/related-posts";
+import { InternalLinksBlock } from "@/components/blog/internal-links-block";
 import { FadeIn } from "@/components/animations/fade-in";
 import "../blog-content.css";
 
@@ -229,6 +230,11 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
 
                             {/* Blog Content with Custom Styling */}
                             <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+                        </FadeIn>
+
+                        {/* Contextual interlinks (>=3 relevant internal links) */}
+                        <FadeIn delay={0.25}>
+                            <InternalLinksBlock slug={post.slug} />
                         </FadeIn>
 
                         {/* Author Bio */}

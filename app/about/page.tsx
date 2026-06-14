@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { PageHeaderBold } from "@/components/ui/page-header-bold";
+import { PageInternalLinks } from "@/components/ui/page-internal-links";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Award, BookOpen, Heart } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
@@ -398,6 +399,17 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+            <PageInternalLinks
+                heading="Continue exploring"
+                links={[
+                    { label: "Treatments & services", href: "/services" },
+                    { label: "Regenerative & non-surgical treatments", href: "/treatments" },
+                    { label: "Awards & recognition", href: "/awards" },
+                    { label: "Read patient testimonials", href: "/testimonials" },
+                    { label: "Read the orthopedic blog", href: "/blog" },
+                ]}
+            />
         </main>
     );
 }

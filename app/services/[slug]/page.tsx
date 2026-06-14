@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { servicesData, siteConfig, practicePostalAddress } from "@/lib/data";
 import { serviceSeoOverrides } from "@/lib/seo-overrides";
 import { siteOrigin } from "@/lib/site-url";
+import { getServiceLinks } from "@/lib/internal-links";
 
 // Generate static params for all services
 export function generateStaticParams() {
@@ -1807,6 +1808,28 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     </div>
                 </div>
             </div>
+
+            {/* Contextual interlinks (>=3 relevant internal links) */}
+            <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl mt-20">
+                <div className="rounded-2xl border border-blue-100 bg-blue-50/60 p-6 sm:p-8">
+                    <h2 className="mb-4 text-xl font-bold text-gray-900">
+                        Related treatments &amp; patient guides
+                    </h2>
+                    <ul className="grid gap-3 sm:grid-cols-2">
+                        {getServiceLinks(service.slug).map((link) => (
+                            <li key={link.href}>
+                                <Link
+                                    href={link.href}
+                                    className="group inline-flex items-start gap-2 font-medium text-primary hover:text-blue-700 hover:underline"
+                                >
+                                    <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-0.5" />
+                                    <span>{link.label}</span>
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </section>
 
             <section className="bg-[#2B58C9] text-white py-16 mt-20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl text-sm">

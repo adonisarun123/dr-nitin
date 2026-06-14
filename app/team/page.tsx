@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import { PageHeaderBold } from "@/components/ui/page-header-bold";
+import { PageInternalLinks } from "@/components/ui/page-internal-links";
 import { teamData } from "@/lib/data";
 import { FadeIn } from "@/components/animations/fade-in";
 import { siteOrigin } from "@/lib/site-url";
@@ -60,6 +61,17 @@ export default function TeamPage() {
                     ))}
                 </div>
             </div>
+
+            <PageInternalLinks
+                heading="Learn more about the practice"
+                links={[
+                    { label: "About Dr. Nitin N Sunku", href: "/about" },
+                    { label: "Treatments & services offered", href: "/services" },
+                    { label: "Regenerative & non-surgical treatments", href: "/treatments" },
+                    { label: "Clinic locations in Attibele & HSR Layout", href: "/practice" },
+                    { label: "Book an appointment", href: "/contact" },
+                ]}
+            />
         </main>
     );
 }

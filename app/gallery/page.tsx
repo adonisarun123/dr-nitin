@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import { PageHeaderBold } from "@/components/ui/page-header-bold";
+import { PageInternalLinks } from "@/components/ui/page-internal-links";
 import { FadeIn } from "@/components/animations/fade-in";
 import { siteOrigin } from "@/lib/site-url";
 
@@ -105,6 +106,17 @@ export default function GalleryPage() {
                     ))}
                 </div>
             </div>
+
+            <PageInternalLinks
+                heading="Explore the practice"
+                links={[
+                    { label: "Meet Dr. Nitin N Sunku & the team", href: "/team" },
+                    { label: "Our clinics & locations", href: "/practice" },
+                    { label: "Treatments we offer", href: "/treatments" },
+                    { label: "Patient testimonials", href: "/testimonials" },
+                    { label: "Book an appointment", href: "/contact" },
+                ]}
+            />
         </main>
     );
 }
