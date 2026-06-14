@@ -48,7 +48,16 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-blob-pulse,
-  .hero-blob-pulse-slow {
-    animation: none;
+  .hero-blob-pulse-slow,
+  .animate-scroll,
+  .animate-ping,
+  .animate-pulse {
+    animation: none !important;
+  }
+  /* Honor reduced-motion globally for transitions/scroll behaviour too. */
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
   }
 }

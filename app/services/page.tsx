@@ -5,11 +5,13 @@ import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { servicesData } from "@/lib/data";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
+import { siteOrigin } from "@/lib/site-url";
 
 export const metadata: Metadata = {
     title: "Orthopedic & Sports Medicine Services",
     description:
         "Orthopedic and sports medicine services in Attibele with Dr. Nitin N Sunku—ACL, meniscus, joint replacement, fractures, and spine symptoms. Consultations also at HSR Layout for patients across South Bengaluru.",
+    alternates: { canonical: `${siteOrigin}/services` },
 };
 
 export default function ServicesPage() {

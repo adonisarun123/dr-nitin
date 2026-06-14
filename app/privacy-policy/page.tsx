@@ -1,11 +1,13 @@
 import { Metadata } from "next";
 import { PageHeaderBold } from "@/components/ui/page-header-bold";
+import { siteOrigin } from "@/lib/site-url";
 
 export const metadata: Metadata = {
     title: {
         absolute: "Privacy Policy | Dr. Nitin N Sunku Orthopedic Care",
     },
     description: "Read the privacy policy of Dr. Nitin N Sunku’s orthopedic and sports medicine services, ensuring secure and confidential handling of patient information.",
+    alternates: { canonical: `${siteOrigin}/privacy-policy` },
 };
 
 export default function PrivacyPage() {

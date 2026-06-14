@@ -1,11 +1,13 @@
 import { Metadata } from "next";
 import { PageHeaderBold } from "@/components/ui/page-header-bold";
+import { siteOrigin } from "@/lib/site-url";
 
 export const metadata: Metadata = {
     title: {
         absolute: "Terms & Conditions | Dr. Nitin N Sunku Orthopedic Care",
     },
     description: "Read the terms and conditions for Dr. Nitin N Sunku’s orthopedic and sports medicine services, ensuring transparent and trustworthy patient care.",
+    alternates: { canonical: `${siteOrigin}/terms` },
 };
 
 export default function TermsPage() {

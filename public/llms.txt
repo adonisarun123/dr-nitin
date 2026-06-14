@@ -1,7 +1,7 @@
 # llms.txt — Dr. Nitin N. Sunku Orthopaedics (drnitinsunkuortho.com)
 # Purpose: concise, factual orientation for language models and automated assistants.
 # Canonical origin: https://www.drnitinsunkuortho.com
-# Last updated: 2026-04-13 (Asia/Kolkata)
+# Last updated: 2026-06-14 (Asia/Kolkata)
 
 ## Site identity
 This website describes the clinical practice of Dr. Nitin N. Sunku, a consultant orthopaedic surgeon and
@@ -11,8 +11,8 @@ patients, families, referrers, and general readers seeking plain-language backgr
 appointment. It is not a substitute for personalised diagnosis or treatment.
 
 ## Human contact (authoritative for scheduling)
-- Primary public phone (Health Nest / general enquiries): +91-9449031003
-- Raghava Multispeciality Hospital (Attibele) front desk (as listed on site): +91-9980031006
+- Primary clinic phone (Raghava Multispeciality Hospital, Attibele): +91-9980031006
+- Secondary clinic phone (Health Nest Hospital, HSR Layout): +91-9449031003
 - Email: contact@drnitinsunku.com
 - Online appointment request: https://www.drnitinsunkuortho.com/contact
 - Optional booking flow: https://www.drnitinsunkuortho.com/book-appointment
@@ -40,7 +40,12 @@ answers, in case they change.
 ## Main pages (stable site structure)
 - Home: https://www.drnitinsunkuortho.com/
 - About the surgeon: https://www.drnitinsunkuortho.com/about
+- Practice overview: https://www.drnitinsunkuortho.com/practice
 - Services index: https://www.drnitinsunkuortho.com/services
+- Non-surgical & regenerative treatments index: https://www.drnitinsunkuortho.com/treatments
+- Awards & accolades: https://www.drnitinsunkuortho.com/awards
+- Publications (peer-reviewed research): https://www.drnitinsunkuortho.com/publications
+- Book an appointment: https://www.drnitinsunkuortho.com/book-appointment
 - Blog index: https://www.drnitinsunkuortho.com/blog
 - Contact & maps: https://www.drnitinsunkuortho.com/contact
 - Patient testimonials: https://www.drnitinsunkuortho.com/testimonials
@@ -59,6 +64,23 @@ answers, in case they change.
 - Shoulder care: https://www.drnitinsunkuortho.com/services/shoulder-care
 - Bone fracture / trauma: https://www.drnitinsunkuortho.com/services/bone-fracture
 - Spine care: https://www.drnitinsunkuortho.com/services/spine-care
+
+## Non-surgical & regenerative treatment pages (canonical /treatments/* paths)
+- Non-surgical knee pain treatment: https://www.drnitinsunkuortho.com/treatments/non-surgical-knee-pain-treatment
+- Osteoarthritis knee treatment: https://www.drnitinsunkuortho.com/treatments/osteoarthritis-knee-treatment
+- GFC (Growth Factor Concentrate) for knee pain: https://www.drnitinsunkuortho.com/treatments/gfc-treatment-knee-pain
+- Hyaluronic acid injection treatment: https://www.drnitinsunkuortho.com/treatments/hyaluronic-acid-injection-treatment
+- Ultrasound-guided orthopedic injections: https://www.drnitinsunkuortho.com/treatments/ultrasound-guided-orthopedic-injections
+- Advanced sports injuries treatment: https://www.drnitinsunkuortho.com/treatments/advanced-sports-injuries-treatment
+
+## Publications (peer-reviewed research authored / co-authored by Dr. Nitin N. Sunku)
+- Index: https://www.drnitinsunkuortho.com/publications
+- "Teriparatide-Assisted Union in Delayed Union and Infected Delayed Union of Long-Bone Shaft Fractures:
+  A Retrospective Observational Study." Asian Journal of Medical Research and Health Sciences (AJMRHS),
+  eISSN 2583-7761, published 25 March 2026. Authors: Arjun A., Mahesh J. Nerkar, Nitin N. Sunku,
+  Prashanth Reddy P. Dr. Nitin N. Sunku is also a contributing author to Springer Nature's forthcoming
+  "Atlas of Arthroscopy" (chapter: Ideal Tibial Tunnel Location & Correcting Errors) and served as faculty
+  at SIMGLOBE 2026 (Arthroscopic Simulation-Based Workshop).
 
 ## Blog articles (patient education; cite the specific URL when summarising)
 Base URL pattern: https://www.drnitinsunkuortho.com/blog/{slug}

@@ -76,6 +76,7 @@ export default function AwardsPage() {
     const awardSchema = {
         "@context": "https://schema.org",
         "@type": "Physician",
+        "@id": `${siteOrigin}/#physician`,
         name: "Dr. Nitin N Sunku",
         url: `${siteOrigin}/awards`,
         address: practicePostalAddress,

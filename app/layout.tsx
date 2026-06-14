@@ -87,10 +87,18 @@ export default function RootLayout({
     "logo": `${siteOrigin}/logo.png`,
     "image": `${siteOrigin}/og-image.jpg`,
     "address": clinicPostalAddress(c),
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": c.geo.latitude,
+      "longitude": c.geo.longitude,
+    },
+    "hasMap": c.mapLink,
     "telephone": c.phone,
-    "medicalSpecialty": ["Orthopedic", "SportsMedicine"],
+    "priceRange": "₹₹",
+    "medicalSpecialty": "https://schema.org/Orthopedic",
     "areaServed": c.areaServed,
     "openingHoursSpecification": clinicOpeningHoursSpec(c),
+    "sameAs": c.sameAs,
   }));
 
   const organizationSchema = {
@@ -101,8 +109,15 @@ export default function RootLayout({
         "@id": `${siteOrigin}/#physician`,
         "name": "Dr. Nitin N Sunku",
         "url": `${siteOrigin}/about`,
-        "image": `${siteOrigin}/logo.png`,
-        "medicalSpecialty": ["Orthopedic", "SportsMedicine"],
+        "image": "https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin.png",
+        "medicalSpecialty": "https://schema.org/Orthopedic",
+        "knowsAbout": [
+          "Sports Medicine",
+          "Knee Arthroscopy",
+          "Joint Replacement",
+          "Arthroscopic Surgery",
+          "Trauma Care",
+        ],
         "telephone": siteConfig.phone,
         "email": siteConfig.email,
         "address": clinicPostalAddress(ATTIBELE_CLINIC),

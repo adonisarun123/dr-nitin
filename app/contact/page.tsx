@@ -5,12 +5,14 @@ import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { BookingForm } from "@/components/forms/booking-form";
 import { CLINICS, PRACTICE_EMAIL } from "@/lib/practice";
+import { siteOrigin } from "@/lib/site-url";
 
 export const metadata: Metadata = {
     title: {
         absolute: "Contact Dr. Nitin N Sunku | Orthopedic Care in Attibele",
     },
     description: "Get in touch with Dr. Nitin N Sunku, orthopedic & sports medicine specialist in Attibele for appointments, consultations, and expert joint care.",
+    alternates: { canonical: `${siteOrigin}/contact` },
 };
 
 export default function ContactPage() {
@@ -96,7 +98,7 @@ export default function ContactPage() {
                     {/* Contact Form */}
                     <FadeIn delay={0.3} className="bg-white p-8 lg:p-10 rounded-3xl shadow-xl border border-gray-100">
                         <h2 className="text-2xl font-bold text-gray-900 mb-2">Book an Appointment</h2>
-                        <p className="text-gray-600 mb-8">Fill out the form below and we'll get back to you shortly.</p>
+                        <p className="text-gray-600 mb-8">Fill out the form below and we&apos;ll get back to you shortly.</p>
 
                         <BookingForm source="website" />
                     </FadeIn>
@@ -152,6 +154,7 @@ export default function ContactPage() {
                                     title="Patient Testimonial 1"
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    loading="lazy"
                                     allowFullScreen
                                 ></iframe>
                             </div>
@@ -163,6 +166,7 @@ export default function ContactPage() {
                                     title="Patient Testimonial 2"
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    loading="lazy"
                                     allowFullScreen
                                 ></iframe>
                             </div>
@@ -174,6 +178,7 @@ export default function ContactPage() {
                                     title="Patient Testimonial 3"
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    loading="lazy"
                                     allowFullScreen
                                 ></iframe>
                             </div>
@@ -185,6 +190,7 @@ export default function ContactPage() {
                                     title="Patient Testimonial 4"
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    loading="lazy"
                                     allowFullScreen
                                 ></iframe>
                             </div>

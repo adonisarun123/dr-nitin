@@ -21,12 +21,15 @@ export default function PracticeOverviewPage() {
     const physicianSchema = {
         "@context": "https://schema.org",
         "@type": "Physician",
+        "@id": `${siteOrigin}/#physician`,
         name: "Dr. Nitin N Sunku",
-        medicalSpecialty: [
-            "Orthopedic",
-            "SportsMedicine",
-            "ArthroscopicSurgery",
-            "JointReplacement",
+        medicalSpecialty: "https://schema.org/Orthopedic",
+        knowsAbout: [
+            "Sports Medicine",
+            "Arthroscopic Surgery",
+            "Joint Replacement",
+            "Knee Arthroscopy",
+            "Trauma Care",
         ],
         address: practicePostalAddress,
         telephone: siteConfig.phone,

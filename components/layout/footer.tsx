@@ -13,10 +13,10 @@ export function Footer() {
                             Expert orthopedic care specializing in arthroscopy, sports injuries, and joint replacements. Restoring mobility, empowering lives.
                         </p>
                         <div className="flex gap-4">
-                            <Link href="https://www.instagram.com/dr.nitinsunku" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-orange-400 transition-colors"><Instagram className="h-5 w-5" /></Link>
-                            <Link href="https://www.facebook.com/share/18zdyd1tuD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-orange-400 transition-colors"><Facebook className="h-5 w-5" /></Link>
-                            <Link href="https://www.linkedin.com/in/dr-nitin-sunku-0b0170204" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-orange-400 transition-colors"><Linkedin className="h-5 w-5" /></Link>
-                            <Link href="https://www.youtube.com/@dr.nitinsunkuorthopedicsurgeon" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-orange-400 transition-colors"><Youtube className="h-5 w-5" /></Link>
+                            <Link href="https://www.instagram.com/dr.nitinsunku" target="_blank" rel="noopener noreferrer" aria-label="Follow Dr. Nitin N Sunku on Instagram" className="text-blue-100 hover:text-orange-400 transition-colors"><Instagram className="h-5 w-5" aria-hidden /></Link>
+                            <Link href="https://www.facebook.com/share/18zdyd1tuD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Follow Dr. Nitin N Sunku on Facebook" className="text-blue-100 hover:text-orange-400 transition-colors"><Facebook className="h-5 w-5" aria-hidden /></Link>
+                            <Link href="https://www.linkedin.com/in/dr-nitin-sunku-0b0170204" target="_blank" rel="noopener noreferrer" aria-label="Connect with Dr. Nitin N Sunku on LinkedIn" className="text-blue-100 hover:text-orange-400 transition-colors"><Linkedin className="h-5 w-5" aria-hidden /></Link>
+                            <Link href="https://www.youtube.com/@dr.nitinsunkuorthopedicsurgeon" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to Dr. Nitin N Sunku on YouTube" className="text-blue-100 hover:text-orange-400 transition-colors"><Youtube className="h-5 w-5" aria-hidden /></Link>
                         </div>
                     </div>
 

@@ -3,14 +3,16 @@ import Image from "next/image";
 import { BookingForm } from "@/components/forms/booking-form";
 import { Phone, MapPin, Clock, Award, Heart, Users, CheckCircle } from "lucide-react";
 import { siteConfig } from "@/lib/data";
+import { siteOrigin } from "@/lib/site-url";
 import { CLINICS, PRIMARY_CLINIC } from "@/lib/practice";
 import { HideNavigation } from "@/components/ui/hide-navigation";
 import { LandingPageTracker } from "@/components/analytics/landing-page-tracker";
 import { TrackedButton } from "@/components/analytics/tracked-button";
 
 export const metadata: Metadata = {
-    title: "Book Appointment - Best Orthopedic Doctor in Attibele & HSR Layout | Dr. Nitin N Sunku",
+    title: "Book an Orthopedic Appointment | Attibele & HSR Layout",
     description: `Book your appointment with Dr. Nitin N Sunku, leading orthopedic specialist in Attibele & HSR Layout. Expert in knee injuries, sports medicine, joint replacement & trauma care. Call ${siteConfig.phone}`,
+    alternates: { canonical: `${siteOrigin}/book-appointment` },
     keywords: [
         "orthopedic doctor HSR Layout",
         "orthopedic doctor Attibele",
@@ -241,7 +243,8 @@ export default function BookAppointmentPage() {
                                 title="Patient Testimonial 1"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
+                                loading="lazy"
+                                    allowFullScreen
                                 className="w-full h-full"
                             ></iframe>
                         </div>
@@ -253,7 +256,8 @@ export default function BookAppointmentPage() {
                                 title="Patient Testimonial 2"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
+                                loading="lazy"
+                                    allowFullScreen
                                 className="w-full h-full"
                             ></iframe>
                         </div>
@@ -265,7 +269,8 @@ export default function BookAppointmentPage() {
                                 title="Patient Testimonial 3"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
+                                loading="lazy"
+                                    allowFullScreen
                                 className="w-full h-full"
                             ></iframe>
                         </div>
@@ -280,7 +285,7 @@ export default function BookAppointmentPage() {
                                 Book Your Appointment
                             </h2>
                             <p className="text-lg text-gray-600">
-                                Fill out the form below and we'll get back to you within 24 hours
+                                Fill out the form below and we&apos;ll get back to you within 24 hours
                             </p>
                         </div>
 
@@ -366,7 +371,7 @@ export default function BookAppointmentPage() {
                         Ready to Get Relief from Your Pain?
                     </h2>
                     <p className="text-xl mb-8 text-blue-800 max-w-2xl mx-auto">
-                        Don't let orthopedic problems hold you back. Book your consultation today.
+                        Don&apos;t let orthopedic problems hold you back. Book your consultation today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <TrackedButton

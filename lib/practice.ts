@@ -60,6 +60,8 @@ export interface Clinic {
   mapLink: string;
   /** Schema.org `sameAs` link for the place */
   sameAs: string;
+  /** Geo coordinates for JSON-LD `GeoCoordinates` (local/Maps rich results) */
+  geo: { latitude: number; longitude: number };
   /** Areas served (used in JSON-LD `areaServed`) */
   areaServed: string[];
   /** Opening hours for both display and JSON-LD */
@@ -76,8 +78,8 @@ export const ATTIBELE_CLINIC: Clinic = {
     "39, Sarjapura - Attibele Rd, opposite Canara Bank (formerly Syndicate Bank), Attibele, Bengaluru, Karnataka 562107",
   postal: {
     streetAddress:
-      "39, Sarjapura - Attibele Rd, opposite Canara Bank (formerly Syndicate Bank), Attibele, Bengaluru, Karnataka 562107",
-    addressLocality: "Attibele, Bengaluru",
+      "39, Sarjapura - Attibele Rd, opposite Canara Bank (formerly Syndicate Bank), Attibele",
+    addressLocality: "Bengaluru",
     addressRegion: "Karnataka",
     postalCode: "562107",
     addressCountry: "IN",
@@ -90,6 +92,7 @@ export const ATTIBELE_CLINIC: Clinic = {
     "https://www.google.com/maps/place/Raghava+Multispeciality+Hospital/data=!4m2!3m1!1s0x0:0xaeb4c2023a37fea6?sa=X&ved=1t:2428&ictx=111",
   sameAs:
     "https://www.google.com/maps/place/Raghava+Multispeciality+Hospital/data=!4m2!3m1!1s0x0:0xaeb4c2023a37fea6",
+  geo: { latitude: 12.7889, longitude: 77.7715 },
   areaServed: [
     "Attibele",
     "Anekal",
@@ -126,8 +129,8 @@ export const HSR_CLINIC: Clinic = {
     "1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
   postal: {
     streetAddress:
-      "1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
-    addressLocality: "HSR Layout, Bengaluru",
+      "1162, 24th Main Rd, Garden Layout, Sector 2, HSR Layout",
+    addressLocality: "Bengaluru",
     addressRegion: "Karnataka",
     postalCode: "560102",
     addressCountry: "IN",
@@ -140,6 +143,7 @@ export const HSR_CLINIC: Clinic = {
     "https://www.google.com/maps/place/Health+Nest+Hospital/data=!4m2!3m1!1s0x0:0x13399aca4c9e0a68?sa=X&ved=1t:2428&ictx=111",
   sameAs:
     "https://www.google.com/maps/place/Health+Nest+Hospital/data=!4m2!3m1!1s0x0:0x13399aca4c9e0a68",
+  geo: { latitude: 12.9116, longitude: 77.6446 },
   areaServed: [
     "HSR Layout",
     "Koramangala",

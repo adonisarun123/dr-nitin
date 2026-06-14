@@ -5,11 +5,13 @@ import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { Button } from "@/components/ui/button";
 import { BlogGrid } from "@/components/blog/blog-grid";
 import { blogPosts } from "@/lib/data";
+import { siteOrigin } from "@/lib/site-url";
 
 export const metadata: Metadata = {
     title: "Orthopedic & Sports Medicine Blog",
     description:
         "Read expert blogs by Dr. Nitin N Sunku on orthopedic care, sports injuries, knee pain, joint health and recovery tips for patients.",
+    alternates: { canonical: `${siteOrigin}/blog` },
 };
 
 export default function BlogPage() {

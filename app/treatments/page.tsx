@@ -8,7 +8,7 @@ import { siteOrigin } from "@/lib/site-url";
 import { JsonLd } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
-    title: { absolute: "Non-Surgical & Regenerative Orthopedic Treatments in Bengaluru | Dr. Nitin N Sunku" },
+    title: { absolute: "Non-Surgical & Regenerative Orthopedic Treatments" },
     description:
         "Modern non-surgical and regenerative orthopedic treatments by Dr. Nitin N Sunku — GFC, hyaluronic acid, ultrasound-guided injections and complete osteoarthritis care. Clinics in Attibele and HSR Layout, serving Electronic City and South Bengaluru.",
     alternates: { canonical: `${siteOrigin}/treatments` },
@@ -42,7 +42,7 @@ export default function TreatmentsIndexPage() {
                         These treatment pages describe the modern, non-surgical and
                         regenerative options offered by Dr. Nitin N Sunku alongside the
                         existing surgical services. Each page explains the procedure in plain
-                        language, who is and isn't a good candidate, what recovery looks
+                        language, who is and isn&apos;t a good candidate, what recovery looks
                         like, and how the option fits into a broader plan combining
                         physiotherapy, weight management, and follow-up care.
                     </p>

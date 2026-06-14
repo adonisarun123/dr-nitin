@@ -33,7 +33,7 @@ export function Testimonials() {
                             <div className="flex text-yellow-500 mb-3">
                                 {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
                             </div>
-                            <p className="text-gray-700 mb-4">"Honest advice & no unnecessary scans. Dr. Nitin is truly patient-centric."</p>
+                            <p className="text-gray-700 mb-4">&quot;Honest advice & no unnecessary scans. Dr. Nitin is truly patient-centric.&quot;</p>
                             <div className="font-semibold text-gray-900">- Sarah K.</div>
                         </div>
 
@@ -41,7 +41,7 @@ export function Testimonials() {
                             <div className="flex text-yellow-500 mb-3">
                                 {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
                             </div>
-                            <p className="text-gray-700 mb-4">"Recovered fully after his prescribed physiotherapy. Highly recommended!"</p>
+                            <p className="text-gray-700 mb-4">&quot;Recovered fully after his prescribed physiotherapy. Highly recommended!&quot;</p>
                             <div className="font-semibold text-gray-900">- Rajesh M.</div>
                         </div>
 
@@ -49,7 +49,7 @@ export function Testimonials() {
                             <div className="flex text-yellow-500 mb-3">
                                 {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
                             </div>
-                            <p className="text-gray-700 mb-4">"Very approachable and explains condition in detail. Best ortho in HSR."</p>
+                            <p className="text-gray-700 mb-4">&quot;Very approachable and explains condition in detail. Best ortho in HSR.&quot;</p>
                             <div className="font-semibold text-gray-900">- Priya S.</div>
                         </div>
                     </div>

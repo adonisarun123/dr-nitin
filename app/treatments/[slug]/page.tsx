@@ -271,7 +271,7 @@ export default function TreatmentDetailPage({
                                     Book your consultation
                                 </h3>
                                 <p className="text-blue-100 text-sm leading-relaxed mb-5">
-                                    Bring any prior X-ray or MRI. We'll review your imaging,
+                                    Bring any prior X-ray or MRI. We&apos;ll review your imaging,
                                     explain it in plain language, and walk you through the right
                                     options for your case.
                                 </p>

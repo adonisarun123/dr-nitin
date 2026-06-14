@@ -27,9 +27,11 @@ export const metadata: Metadata = {
 type Publication = {
     title: string;
     authors: string;
+    authorList: string[];
     journal: string;
     journalDetail: string;
     date: string;
+    datePublished: string;
     type: string;
     abstract: string;
     pdf?: string;
@@ -41,9 +43,16 @@ const publications: Publication[] = [
             "Teriparatide-Assisted Union in Delayed Union and Infected Delayed Union of Long-Bone Shaft Fractures: A Retrospective Observational Study",
         authors:
             "Dr. Arjun A., Dr. Mahesh J. Nerkar, Dr. Nitin N. Sunku, Dr. Prashanth Reddy P.",
+        authorList: [
+            "Arjun A.",
+            "Mahesh J. Nerkar",
+            "Nitin N. Sunku",
+            "Prashanth Reddy P.",
+        ],
         journal: "Asian Journal of Medical Research and Health Sciences (AJMRHS)",
         journalDetail: "Original Research · eISSN 2583-7761 · CC BY-NC-SA 4.0",
         date: "25 March 2026",
+        datePublished: "2026-03-25",
         type: "Original Research",
         abstract:
             "A retrospective observational study of 50 adults with delayed union or infected delayed union of long-bone shaft fractures managed with stable fixation and teriparatide. Mean radiological union time from teriparatide start was 3.5 ± 0.6 months, with complete union from index surgery at 15.1 ± 1.8 months overall. The study concludes that teriparatide may support fracture healing in delayed union when mechanical stability is maintained, while open injuries and infected delayed union remain slower-healing subgroups.",
@@ -54,19 +63,30 @@ const publications: Publication[] = [
 export default function PublicationsPage() {
     const publicationSchema = {
         "@context": "https://schema.org",
-        "@type": "Physician",
-        name: "Dr. Nitin N Sunku",
-        url: `${siteOrigin}/publications`,
-        subjectOf: publications.map((p) => ({
-            "@type": "ScholarlyArticle",
-            headline: p.title,
-            author: p.authors,
-            datePublished: "2026-03-25",
-            isPartOf: {
-                "@type": "Periodical",
-                name: p.journal,
+        "@graph": [
+            {
+                "@type": "Physician",
+                "@id": `${siteOrigin}/#physician`,
+                name: "Dr. Nitin N Sunku",
+                url: `${siteOrigin}/publications`,
             },
-        })),
+            ...publications.map((p) => ({
+                "@type": "ScholarlyArticle",
+                headline: p.title,
+                name: p.title,
+                author: p.authorList.map((name) => ({
+                    "@type": "Person",
+                    name,
+                })),
+                datePublished: p.datePublished,
+                isPartOf: {
+                    "@type": "Periodical",
+                    name: p.journal,
+                    issn: "2583-7761",
+                },
+                ...(p.pdf ? { url: `${siteOrigin}${p.pdf}` } : {}),
+            })),
+        ],
     };
 
     return (

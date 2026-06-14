@@ -2,12 +2,14 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { FadeIn } from "@/components/animations/fade-in";
+import { siteOrigin } from "@/lib/site-url";
 
 export const metadata: Metadata = {
     title: {
         absolute: "Clinic & Treatment Gallery | Dr. Nitin N Sunku Ortho",
     },
     description: "Explore clinic, treatment and patient care gallery of Dr. Nitin N Sunku, experienced orthopedic & sports medicine specialist in Attibele.",
+    alternates: { canonical: `${siteOrigin}/gallery` },
 };
 
 export default function GalleryPage() {

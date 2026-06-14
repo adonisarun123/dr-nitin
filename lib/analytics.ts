@@ -185,5 +185,11 @@ export const getUTMParameters = () => {
     if (typeof window === 'undefined') return null;
 
     const stored = sessionStorage.getItem('utm_params');
-    return stored ? JSON.parse(stored) : null;
+    if (!stored) return null;
+    try {
+        return JSON.parse(stored);
+    } catch {
+        // Corrupted/edited sessionStorage value — fail soft rather than throw.
+        return null;
+    }
 };

@@ -24,7 +24,7 @@ const nextConfig = {
             // any indexed entries transfer ranking signals to the new slug.
             {
                 source: '/orthopedic-attibele',
-                destination: '/best-orthopedic-doctor',
+                destination: '/orthopedic-doctor-in-hsr-layout',
                 permanent: true,
             },
         ];

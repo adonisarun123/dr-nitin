@@ -15,17 +15,16 @@ export const metadata: Metadata = {
     },
     description:
         "Meet Dr. Nitin N Sunku, orthopedic surgeon in Bengaluru — sports injuries, knee care, joint replacement, arthroscopy. Over 10 years of focused practice.",
+    alternates: { canonical: `${siteOrigin}/about` },
 };
 
 export default function AboutPage() {
     const doctorSchema = {
         "@context": "https://schema.org",
         "@type": "Physician",
+        "@id": `${siteOrigin}/#physician`,
         "name": "Dr. Nitin N Sunku",
-        "medicalSpecialty": [
-            "Orthopedic",
-            "Sports Medicine"
-        ],
+        "medicalSpecialty": "https://schema.org/Orthopedic",
         "description": "Dr. Nitin N Sunku is a Consultant Orthopedic Surgeon in Bengaluru specialising in sports injuries, knee disorders, arthroscopy, joint replacement and trauma care.",
         "address": practicePostalAddress,
         "hasCredential": [
@@ -60,7 +59,10 @@ export default function AboutPage() {
             "name": "Bengaluru Football Club"
         },
         "sameAs": [
-            siteOrigin
+            "https://www.instagram.com/dr.nitinsunku",
+            "https://www.facebook.com/share/18zdyd1tuD/?mibextid=wwXIfr",
+            "https://www.linkedin.com/in/dr-nitin-sunku-0b0170204",
+            "https://www.youtube.com/@dr.nitinsunkuorthopedicsurgeon"
         ]
     };
 
@@ -101,7 +103,7 @@ export default function AboutPage() {
                                 alt="Dr. Nitin N Sunku - Orthopedic Surgeon"
                                 fill
                                 className="object-cover"
-                                priority
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                         </FadeIn>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from 'react';
-import { trackPageView, trackScrollDepth, trackTimeOnPage, captureUTMParameters } from '@/lib/analytics';
+import { trackPageView, trackScrollDepth, trackTimeOnPage, captureUTMParameters, trackEvent } from '@/lib/analytics';
 
 export function LandingPageTracker() {
     const scrollDepthTracked = useRef<Set<number>>(new Set());
@@ -17,8 +17,13 @@ export function LandingPageTracker() {
 
         // Track scroll depth
         const handleScroll = () => {
+            const scrollable =
+                document.documentElement.scrollHeight - window.innerHeight;
+            // Guard against pages shorter than the viewport (division by zero
+            // would yield Infinity and fire every milestone immediately).
+            if (scrollable <= 0) return;
             const scrollPercentage = Math.round(
-                (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+                (window.scrollY / scrollable) * 100
             );
 
             // Track at 25%, 50%, 75%, 100%
@@ -66,6 +71,3 @@ export function LandingPageTracker() {
 
     return null; // This component doesn't render anything
 }
-
-// Import trackEvent for exit intent
-import { trackEvent } from '@/lib/analytics';

@@ -14,25 +14,29 @@ import { FadeIn } from "@/components/animations/fade-in";
 export const metadata: Metadata = {
   title: "Dr. Nitin N Sunku | Orthopedic & Sports Medicine Specialist",
   description: "Consult Dr. Nitin N Sunku, trusted orthopedic & sports medicine surgeon for joint pain, fractures, ligament injuries and advanced orthopedic care.",
+  alternates: { canonical: `${siteOrigin}/` },
 };
 
 export default function Home() {
   const physicianSchema = {
     "@context": "https://schema.org",
     "@type": "Physician",
+    "@id": `${siteOrigin}/#physician`,
     "name": "Dr. Nitin N Sunku",
     "description": siteConfig.description,
     "url": `${siteOrigin}/`,
-    "medicalSpecialty": [
-      "Orthopedic",
-      "SportsMedicine",
-      "ArthroscopicSurgery",
-      "JointReplacement"
+    "medicalSpecialty": "https://schema.org/Orthopedic",
+    "knowsAbout": [
+      "Sports Medicine",
+      "Arthroscopic Surgery",
+      "Joint Replacement",
+      "Knee Arthroscopy",
+      "Trauma Care",
     ],
     "address": practicePostalAddress,
     "telephone": siteConfig.phone,
-    "image": `${siteOrigin}/doctor-placeholder.jpg`,
-    "priceRange": "$$",
+    "image": "https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin.png",
+    "priceRange": "₹₹",
   };
 
   return (

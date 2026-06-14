@@ -318,7 +318,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         </div>
                                         <div>
                                             <h3 className="text-xl font-bold text-primary mb-3">Surgical Management (Arthroscopic Repair or Meniscectomy)</h3>
-                                            <p className="text-gray-600 leading-relaxed">Dr. Sunku is skilled in minimally invasive knee arthroscopy. For repairable tears (often in the well-blooded outer third of the meniscus), we perform meniscus repair: suturing the tear to allow natural healing. This preserves the meniscus function. If repair is not possible (tear in the inner zone, or complex degenerative tears), we perform a partial meniscectomy: trimming away only the torn portion, smoothing the meniscus. Surgical treatments typically use two small incisions; a tiny camera (arthroscope) guides precise work. We take care to remove as little tissue as necessary, since "removing large portions of the meniscus will lead to expedited arthritis".</p>
+                                            <p className="text-gray-600 leading-relaxed">Dr. Sunku is skilled in minimally invasive knee arthroscopy. For repairable tears (often in the well-blooded outer third of the meniscus), we perform meniscus repair: suturing the tear to allow natural healing. This preserves the meniscus function. If repair is not possible (tear in the inner zone, or complex degenerative tears), we perform a partial meniscectomy: trimming away only the torn portion, smoothing the meniscus. Surgical treatments typically use two small incisions; a tiny camera (arthroscope) guides precise work. We take care to remove as little tissue as necessary, since &quot;removing large portions of the meniscus will lead to expedited arthritis&quot;.</p>
                                         </div>
                                         <div>
                                             <h3 className="text-xl font-bold text-primary mb-3">Postoperative Care</h3>
@@ -491,7 +491,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         </div>
                                     </div>
                                     <p className="mt-6 text-gray-700 leading-relaxed">
-                                        In short, Sports Medicine addresses any injury or condition that affects athletes' performance or health. We treat orthopedic injuries (sprains, tears, fractures), general conditions (asthma, hypertension in athletes), and focus on safe return-to-play.
+                                        In short, Sports Medicine addresses any injury or condition that affects athletes&apos; performance or health. We treat orthopedic injuries (sprains, tears, fractures), general conditions (asthma, hypertension in athletes), and focus on safe return-to-play.
                                     </p>
                                 </section>
 
@@ -1753,7 +1753,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                         {service.fullDesc}
                                     </p>
                                     <p className="text-gray-600 leading-relaxed mt-4">
-                                        Dr. Nitin N Sunku uses a patient-first approach to diagnosis, combining clinical examination with advanced imaging only when necessary. Treatment plans are tailored to your specific goals, whether it's returning to professional sports or simply walking pain-free.
+                                        Dr. Nitin N Sunku uses a patient-first approach to diagnosis, combining clinical examination with advanced imaging only when necessary. Treatment plans are tailored to your specific goals, whether it&apos;s returning to professional sports or simply walking pain-free.
                                     </p>
                                 </div>
 
@@ -1822,12 +1822,12 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
                     <h3 className="text-lg font-bold mb-3 text-white font-heading">Conditions and procedures people commonly ask about</h3>
                     <p className="mb-6 leading-relaxed text-blue-100">
-                        Typical questions cover ACL tears and post-injury instability, meniscus repair versus partial trimming, recurrent shoulder dislocation, rotator cuff tears and frozen shoulder, shoulder arthroscopy for impingement, tennis or golfer's elbow flare-ups, runner's knee and shin splints, Achilles and other tendon overuse problems, early to advanced hip and knee arthritis, partial and total knee replacement timing, hip replacement for arthritis and selected fractures, acute collarbone and ankle fractures, workplace and road traffic injuries, and back pain with or without leg symptoms when urgent red flags have been excluded. Sports medicine visits often blend training-load advice with targeted rehabilitation goals rather than rushing to surgery.
+                        Typical questions cover ACL tears and post-injury instability, meniscus repair versus partial trimming, recurrent shoulder dislocation, rotator cuff tears and frozen shoulder, shoulder arthroscopy for impingement, tennis or golfer&apos;s elbow flare-ups, runner&apos;s knee and shin splints, Achilles and other tendon overuse problems, early to advanced hip and knee arthritis, partial and total knee replacement timing, hip replacement for arthritis and selected fractures, acute collarbone and ankle fractures, workplace and road traffic injuries, and back pain with or without leg symptoms when urgent red flags have been excluded. Sports medicine visits often blend training-load advice with targeted rehabilitation goals rather than rushing to surgery.
                     </p>
 
                     <h3 className="text-lg font-bold mb-3 text-white font-heading">Before you attend</h3>
                     <p className="mb-6 leading-relaxed text-blue-100">
-                        Bring photo ID, insurance cards if applicable, a concise list of medicines and allergies, old MRI or X-ray reports on phone or paper, and footwear or clothing that lets the knee or shoulder be examined. Write down three goals—for example, "sleep without waking from knee pain," "jog five kilometres without swelling," or "lift my child safely." Those goals help prioritise whether bracing, injections, structured physiotherapy, arthroscopy, or joint replacement is discussed first.
+                        Bring photo ID, insurance cards if applicable, a concise list of medicines and allergies, old MRI or X-ray reports on phone or paper, and footwear or clothing that lets the knee or shoulder be examined. Write down three goals—for example, &quot;sleep without waking from knee pain,&quot; &quot;jog five kilometres without swelling,&quot; or &quot;lift my child safely.&quot; Those goals help prioritise whether bracing, injections, structured physiotherapy, arthroscopy, or joint replacement is discussed first.
                     </p>
 
                     <h3 className="text-lg font-bold mb-3 text-white font-heading">Using this website responsibly</h3>

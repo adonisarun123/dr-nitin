@@ -12,6 +12,9 @@ const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
+    { name: "Treatments", href: "/treatments" },
+    { name: "Awards", href: "/awards" },
+    { name: "Publications", href: "/publications" },
     { name: "Patient Stories", href: "/testimonials" },
     { name: "Gallery", href: "/gallery" },
     { name: "Team", href: "/team" },
@@ -52,6 +55,9 @@ export function Header() {
                             type="button"
                             className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-white hover:bg-blue-700 transition-colors"
                             onClick={() => setMobileMenuOpen(true)}
+                            aria-expanded={mobileMenuOpen}
+                            aria-controls="mobile-menu-panel"
+                            aria-label="Open main menu"
                         >
                             <span className="sr-only">Open main menu</span>
                             <Menu className="h-6 w-6" aria-hidden="true" />
@@ -68,7 +74,7 @@ export function Header() {
                                     "relative px-3 py-2 text-sm font-semibold transition-all duration-200 rounded-lg group",
                                     isActive(item.href)
                                         ? "text-white bg-blue-800"
-                                        : "text-blue-100 hover:text-white hover:bg-blue-700"
+                                        : "text-blue-50 hover:text-white hover:bg-blue-700"
                                 )}
                             >
                                 {item.name}
@@ -88,7 +94,7 @@ export function Header() {
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center gap-3">
                         <a
                             href={`tel:${siteConfig.phone}`}
-                            className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-blue-100 hover:text-white transition-colors rounded-lg hover:bg-blue-700 whitespace-nowrap"
+                            className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-blue-50 hover:text-white transition-colors rounded-lg hover:bg-blue-700 whitespace-nowrap"
                         >
                             <Phone className="h-4 w-4" />
                             <span>{siteConfig.phone}</span>
@@ -109,7 +115,7 @@ export function Header() {
                 />
 
                 {/* Menu Panel */}
-                <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm shadow-2xl">
+                <div id="mobile-menu-panel" className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm shadow-2xl">
                     <div className="flex items-center justify-between">
                         <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
                             <div className="bg-gradient-to-br from-blue-600 to-teal-500 p-2 rounded-lg">

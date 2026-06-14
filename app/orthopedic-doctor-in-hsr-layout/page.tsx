@@ -458,7 +458,8 @@ export default function OrthopedicAttibeleLandingPage() {
                                         title="Patient testimonial 1 — Dr. Nitin N Sunku"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
+                                        loading="lazy"
+                                    allowFullScreen
                                         className="w-full h-full"
                                     ></iframe>
                                 </div>
@@ -476,7 +477,8 @@ export default function OrthopedicAttibeleLandingPage() {
                                         title="Patient testimonial 2 — Dr. Nitin N Sunku"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
+                                        loading="lazy"
+                                    allowFullScreen
                                         className="w-full h-full"
                                     ></iframe>
                                 </div>
@@ -494,7 +496,8 @@ export default function OrthopedicAttibeleLandingPage() {
                                         title="Patient testimonial 3 — Dr. Nitin N Sunku"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
+                                        loading="lazy"
+                                    allowFullScreen
                                         className="w-full h-full"
                                     ></iframe>
                                 </div>
@@ -669,7 +672,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                     What sets Dr. Nitin apart is his commitment to conservative-first treatment approach, exploring all non-surgical options before recommending surgery. His expertise in advanced arthroscopic techniques ensures that when surgery is necessary, patients benefit from smaller incisions, reduced pain, and faster rehabilitation.
                                 </p>
                                 <p className="text-base text-gray-600 mb-6 leading-relaxed">
-                                    As an academic contributor to Springer's internationally acclaimed textbook "Atlas of Arthroscopy," Dr. Sunku stays at the forefront of orthopedic innovations. His dual role as a clinician and educator ensures that every patient receives care based on the latest evidence-based practices and global best standards.
+                                    As an academic contributor to Springer&apos;s internationally acclaimed textbook &quot;Atlas of Arthroscopy,&quot; Dr. Sunku stays at the forefront of orthopedic innovations. His dual role as a clinician and educator ensures that every patient receives care based on the latest evidence-based practices and global best standards.
                                 </p>
 
                                 {/* Credentials */}
