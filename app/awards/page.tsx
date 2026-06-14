@@ -30,6 +30,9 @@ export const metadata: Metadata = {
 const SPRINGER_IMAGE =
     "https://ik.imagekit.io/vlries1el/dr%20nitin/Dr-nitin-Springer.jpeg";
 
+const ATLAS_CERTIFICATE_IMAGE =
+    "https://ik.imagekit.io/vlries1el/dr%20nitin/atlas-of-arthroscopy-certificate.jpeg";
+
 const accolades = [
     {
         icon: BookOpen,
@@ -204,6 +207,33 @@ export default function AwardsPage() {
                             </div>
                         </FadeIn>
                     </div>
+
+                    {/* Honour certificate */}
+                    <FadeIn delay={0.2} className="mt-12 lg:mt-16">
+                        <div className="max-w-3xl mx-auto">
+                            <p className="text-center text-sm uppercase tracking-wide text-gray-500 mb-5">
+                                Certificate of acknowledgement from the Editors
+                            </p>
+                            <div className="relative rounded-3xl overflow-hidden bg-gray-100 border border-gray-200 shadow-2xl">
+                                <Image
+                                    src={ATLAS_CERTIFICATE_IMAGE}
+                                    alt="Certificate honouring Dr. Nitin N Sunku as author of the chapter 'Ideal Tibial Tunnel Location & Correcting Errors' in Springer Nature's Atlas of Arthroscopy"
+                                    width={1131}
+                                    height={1600}
+                                    className="w-full h-auto object-contain"
+                                    sizes="(max-width: 768px) 100vw, 768px"
+                                />
+                            </div>
+                            <p className="mt-4 text-center text-sm text-gray-600 leading-relaxed">
+                                Acknowledged by editors Dr. K N Subramanian, Dr. Saseendar
+                                Shanmugasundaram and Dr. David Figueroa for the chapter{" "}
+                                <em>&ldquo;Ideal Tibial Tunnel Location &amp; Correcting
+                                Errors&rdquo;</em> (co-authored with Dr. Madan Ballal and
+                                Dr. Tanveer Ahamed C) in the forthcoming Springer Nature
+                                publication <em>Atlas of Arthroscopy</em>.
+                            </p>
+                        </div>
+                    </FadeIn>
                 </div>
             </section>
 

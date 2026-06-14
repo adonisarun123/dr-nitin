@@ -153,8 +153,54 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            {/* Faculty — SIMGLOBE 2026 */}
+            <section className="py-16 lg:py-20 bg-gray-50 border-t border-gray-200">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                    <div className="grid lg:grid-cols-5 gap-10 items-center">
+                        <FadeIn delay={0.1} className="lg:col-span-3 order-2 lg:order-1">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3.5 py-1.5 text-xs font-medium text-blue-700 mb-4">
+                                <BookOpen className="h-3.5 w-3.5" aria-hidden />
+                                Faculty Appointment
+                            </div>
+                            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-gray-900 mb-4 leading-tight">
+                                Faculty at{" "}
+                                <span className="text-primary">SIMGLOBE 2026</span>{" "}
+                                — Arthroscopic Simulation-Based Workshop
+                            </h2>
+                            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                                Dr. Nitin N Sunku served as <strong>faculty at SIMGLOBE 2026</strong>,
+                                a global simulation summit, leading the{" "}
+                                <strong>Arthroscopic Simulation-Based Workshop</strong>. Teaching
+                                on simulation models lets surgeons rehearse precise arthroscopic
+                                technique in a controlled setting before applying it in the
+                                operating room.
+                            </p>
+                            <p className="text-gray-700 leading-relaxed">
+                                Contributing as faculty to hands-on training events reflects an
+                                ongoing commitment to surgical education and to keeping technique
+                                aligned with current best practice — the same standards that
+                                inform care in clinic.
+                            </p>
+                        </FadeIn>
+
+                        <FadeIn
+                            direction="left"
+                            className="lg:col-span-2 order-1 lg:order-2 relative w-full aspect-[3/4] rounded-3xl overflow-hidden bg-gray-100 border border-gray-200 shadow-xl"
+                        >
+                            <Image
+                                src="https://ik.imagekit.io/vlries1el/dr%20nitin/faculty-at-simglobe2026-dr_nitin.jpeg?updatedAt=1781432244004"
+                                alt="Dr. Nitin N Sunku as faculty at the SIMGLOBE 2026 Arthroscopic Simulation-Based Workshop"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 1024px) 100vw, 40vw"
+                            />
+                        </FadeIn>
+                    </div>
+                </div>
+            </section>
+
             {/* Expertise Cards */}
-            <section className="py-16 bg-gray-50 border-y border-gray-200">
+            <section className="py-16 bg-white border-y border-gray-200">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <FadeIn className="text-center max-w-2xl mx-auto mb-16">
                         <h2 className="text-3xl font-heading font-bold text-gray-900">Areas of Expertise</h2>
@@ -271,6 +317,15 @@ export default function AboutPage() {
                                         className="object-contain max-h-24"
                                     />
                                 </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="https://ik.imagekit.io/vlries1el/dr%20nitin/simglobe-logo.png"
+                                        alt="SIMGLOBE"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
 
                                 {/* Duplicate set for seamless loop */}
                                 <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
@@ -322,6 +377,15 @@ export default function AboutPage() {
                                     <Image
                                         src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/ISKSAA-logo.png"
                                         alt="ISKSAA"
+                                        width={192}
+                                        height={128}
+                                        className="object-contain max-h-24"
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 mx-8 flex items-center justify-center w-48 h-32">
+                                    <Image
+                                        src="https://ik.imagekit.io/vlries1el/dr%20nitin/simglobe-logo.png"
+                                        alt="SIMGLOBE"
                                         width={192}
                                         height={128}
                                         className="object-contain max-h-24"
