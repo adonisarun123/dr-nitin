@@ -212,7 +212,7 @@ export default function OrthopedicAttibeleLandingPage() {
                 <div className="container mx-auto px-4 flex items-center justify-between py-3">
                     <div className="flex items-center gap-2 min-w-0">
                         <img
-                            src="/dr-nitin-sunku-logo.svg"
+                            src="https://ik.imagekit.io/vlries1el/dr%20nitin/dr-nitin-sunku-logo.svg"
                             alt="Dr. Nitin N Sunku - Orthopedic & Sports Medicine Specialist"
                             className="h-10 sm:h-12 w-auto flex-shrink-0"
                         />

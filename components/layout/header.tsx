@@ -8,13 +8,13 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/data";
 
+// Awards & Publications intentionally live in the footer (Quick Links) rather
+// than the primary header nav, to keep the top navigation focused.
 const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Treatments", href: "/treatments" },
-    { name: "Awards", href: "/awards" },
-    { name: "Publications", href: "/publications" },
     { name: "Patient Stories", href: "/testimonials" },
     { name: "Gallery", href: "/gallery" },
     { name: "Team", href: "/team" },
@@ -40,12 +40,24 @@ export function Header() {
                 >
                     {/* Logo */}
                     <div className="flex lg:flex-1">
-                        <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
-                            <img
-                                src="/dr-nitin-sunku-logo.svg"
-                                alt="Dr. Nitin N Sunku - Orthopedic & Sports Medicine Specialist"
-                                className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
-                            />
+                        <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group" aria-label="Dr. Nitin N Sunku — Home">
+                            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-white/40 overflow-hidden shrink-0 transition-all duration-300 group-hover:scale-105">
+                                <img
+                                    src="https://ik.imagekit.io/vlries1el/dr%20nitin/dr-nitin-sunku-logo.svg"
+                                    alt="Dr. Nitin N Sunku - Orthopedic & Sports Medicine Specialist"
+                                    className="h-12 w-12 object-contain"
+                                    width={48}
+                                    height={48}
+                                />
+                            </span>
+                            <span className="flex flex-col leading-tight">
+                                <span className="font-heading text-base sm:text-lg font-bold text-white">
+                                    Dr. Nitin N Sunku
+                                </span>
+                                <span className="text-[10px] sm:text-xs font-medium text-blue-100 tracking-wide">
+                                    Orthopedic &amp; Sports Medicine
+                                </span>
+                            </span>
                         </Link>
                     </div>
 
