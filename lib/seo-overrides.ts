@@ -48,9 +48,9 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
             "Red-flag signs that your knee, shoulder, hip or back pain needs an orthopedic surgeon — and when physiotherapy first is fine. Book in Attibele with Dr. Nitin N Sunku.",
     },
     "acl-surgery-cost-and-recovery-bangalore": {
-        title: "ACL Surgery in Bangalore 2026: Cost, Recovery & Return to Sport",
+        title: "ACL Surgery in Bangalore 2026: Cost & ACL and Meniscus Surgery Recovery Timeline",
         description:
-            "ACL reconstruction in Bangalore: 2026 cost, recovery timeline and return-to-sport milestones. Guidance from sports surgeon Dr. Nitin N Sunku, Bengaluru FC team doctor.",
+            "ACL reconstruction in Bangalore 2026: cost, the ACL and meniscus surgery recovery timeline, and return-to-sport milestones. Sports surgeon Dr. Nitin N Sunku, Bengaluru FC team doctor.",
     },
     "types-of-total-knee-replacement": {
         title: "Types of Total Knee Replacement: A Complete Patient Guide",
@@ -98,9 +98,9 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
             "Learn if a meniscus tear can heal with physiotherapy alone. Expert insights on recovery, exercises, and treatment options for better knee health.",
     },
     "can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru": {
-        title: "Can You Walk With a Torn ACL? ACL Treatment in Bengaluru",
+        title: "Can You Walk With a Torn ACL? ACL Tear Recovery Time Without Surgery",
         description:
-            "Learn if you can walk with a torn ACL, common symptoms, and ACL treatment options in Bengaluru to support recovery and knee stability.",
+            "Can you walk with a torn ACL? Symptoms, ACL tear recovery time without surgery, and ACL treatment options in Bengaluru with Dr. Nitin N Sunku.",
     },
     "how-does-obesity-affect-joint-health": {
         title: "How Does Obesity Affect Joint Health? | Dr. Nitin N Sunku",
@@ -203,9 +203,9 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
             "Explore meniscus tear treatment options and understand whether repair, reconstruction, or surgery is best for recovery.",
     },
     "activities-to-avoid-with-a-tear-in-the-medial-meniscus": {
-        title: "Activities to Avoid with a Medial Meniscus Tear Recovery",
+        title: "Activities to Avoid with a Tear in the Medial Meniscus",
         description:
-            "Learn activities to avoid with a tear in the medial meniscus to prevent further injury and support safe and effective knee recovery.",
+            "A clear list of activities to avoid with a tear in the medial meniscus, signs you are overloading the knee, and safer alternatives for recovery.",
     },
 
     // ── Treatment cluster posts (regenerative, OA, knee pain, tendon, shoulder, sports) ──
@@ -274,6 +274,11 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         description:
             "Why ultrasound-guided injections deliver better, safer results — accuracy, safety, comfort, and outcomes vs traditional landmark injections.",
     },
+    "bmac-stem-cell-therapy-for-knee-pain": {
+        title: "Stem Cell Therapy for Knee Pain in India: BMAC Patient Guide",
+        description:
+            "Stem cell therapy for knee pain in India explained — how autologous BMAC works, who it suits, regulatory framework, and how it compares to PRP and GFC in Bengaluru.",
+    },
 
     // ── May 2026 batch ──
     "red-light-therapy-for-acl-tear": {
@@ -287,9 +292,9 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
             "Compare titanium, Johnson/DePuy (cobalt-chrome) and ceramic/Oxinium knee implants — wear, biocompatibility, registry data, cost, and who each suits in Bangalore.",
     },
     "anterior-cruciate-ligament-origin-and-insertion": {
-        title: "ACL Origin and Insertion: Complete Anatomy Guide for Patients",
+        title: "Anterior Cruciate Ligament Anatomy & Function: Origin, Insertion, ACL vs PCL",
         description:
-            "Where the ACL begins, where it ends, the two functional bundles, and how this anatomy shapes diagnosis, reconstruction technique, and rehab in Bengaluru.",
+            "Complete anterior cruciate ligament anatomy guide — origin, insertion, two bundles, and anterior and posterior cruciate ligament function explained for patients.",
     },
     "anterolateral-meniscus-tear-and-root-tear": {
         title: "Anterolateral Meniscus Tear & Root Tear: A Specialist Guide",
@@ -300,6 +305,123 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         title: "Natural Alternatives to Hip Replacement Surgery: A Doctor's Guide",
         description:
             "Conservative-first guide to non-surgical hip care — physiotherapy, weight management, PRP, hyaluronic acid, hip arthroscopy, and when replacement really is necessary.",
+    },
+
+    // ── Jun 2026 cost pillars ──
+    "spine-surgery-cost-in-india": {
+        title: "Spine Surgery Cost in India 2026: Real Ranges by a Surgeon",
+        description:
+            "Spine surgery cost in India in 2026, by procedure: discectomy, fusion, endoscopic & disc replacement. Honest rupee ranges, what's included, insurance tips.",
+    },
+    "hip-replacement-surgery-cost-india": {
+        title: "Hip Replacement Surgery Cost in India 2026 | Honest Guide",
+        description:
+            "Hip replacement surgery cost in India 2026: realistic ranges by implant tier, what's included, insurance reality and conservative alternatives. Dr. Nitin, Bengaluru.",
+    },
+
+    // ── Jul 2026 batch: conservative-care + cost pillars ──
+    "sciatica-treatment-without-surgery-india": {
+        title: "Sciatica Treatment Without Surgery in India | Dr. Nitin Sunku",
+        description:
+            "Looking for sciatica treatment without surgery in India? A Bengaluru spine specialist explains what works, what doesn't, and when surgery is genuinely needed.",
+    },
+    "hip-fracture-surgery-cost-india": {
+        title: "Hip Fracture Surgery Cost in India 2026 | Dr. Nitin N Sunku",
+        description:
+            "Hip fracture surgery cost in India in 2026: DHS, hip pinning, hemiarthroplasty & THR price ranges, insurance cover and what to do in the first 72 hours.",
+    },
+    "frozen-shoulder-treatment-without-surgery-india": {
+        title: "Frozen Shoulder Treatment Without Surgery in India | Dr Nitin",
+        description:
+            "Honest guide to frozen shoulder treatment without surgery in India — physiotherapy, steroid injection, hydrodilatation, costs and recovery timelines.",
+    },
+    "knee-replacement-exercises-to-avoid": {
+        title: "Knee Replacement Exercises to Avoid: A Surgeon's Guide 2026",
+        description:
+            "Bengaluru orthopedic surgeon Dr. Nitin Sunku lists knee replacement exercises to avoid, safe alternatives, and how restrictions ease over time after TKR.",
+    },
+
+    // ── Jul 09 2026 batch: spine + hip cluster fill ──
+    "lumbar-disc-herniation-surgery-india": {
+        title: "Lumbar Disc Herniation Surgery in India: Cost & Recovery",
+        description:
+            "Lumbar disc herniation surgery in India — types, cost ranges (₹1.5L–8L), recovery timeline, and when surgery is genuinely needed. Bengaluru spine surgeon.",
+    },
+    "hip-replacement-physiotherapy-exercises-india": {
+        title: "Hip Replacement Physiotherapy Exercises India | Home Plan",
+        description:
+            "Week-by-week hip replacement physiotherapy exercises for India patients. Precautions, daily routine, common mistakes & expert rehab guidance in Bengaluru.",
+    },
+    "total-hip-replacement-recovery-time-india": {
+        title: "Total Hip Replacement Recovery Time India: Week-by-Week",
+        description:
+            "Realistic total hip replacement recovery time in India — week-by-week timeline for work, driving, travel and sport from Bengaluru orthopedic Dr. Nitin.",
+    },
+
+    // ── Jul 16 2026 batch: knee surgery + spine fill ──
+    "advantages-and-disadvantages-of-robotic-knee-replacement": {
+        title: "Advantages & Disadvantages of Robotic Knee Replacement 2026",
+        description:
+            "Honest guide to robotic knee replacement pros and cons in India — precision, cost (₹3.5–6L), recovery, VELYS vs Mako, and when conventional wins.",
+    },
+    "knee-replacement-recovery-time-for-elderly": {
+        title: "Knee Replacement Recovery Time for Elderly | Dr. Nitin Sunku",
+        description:
+            "Honest guide to knee replacement recovery time for elderly patients in India — week-by-week timeline, risks, preparation, and outcomes for ages 65 to 85+.",
+    },
+    "endoscopic-spine-surgery-india": {
+        title: "Endoscopic Spine Surgery India: Cost, Types & Recovery 2026",
+        description:
+            "Endoscopic spine surgery in India — TESSYS, BESS, costs (₹2.5L–₹5.5L), recovery timeline, and who is a good candidate. Surgeon-written guide.",
+    },
+
+    // ── Jul 23 2026 batch: knee revision + cervical spine + shoulder cluster ──
+    "revision-knee-replacement-surgery-india": {
+        title: "Revision Knee Replacement in India: Cost, Recovery & Surgeon",
+        description:
+            "Revision knee replacement surgery in Bangalore by Dr. Nitin N Sunku. Causes of failed knee implants, cost, recovery, infection management & honest outcomes.",
+    },
+    "cervical-disc-replacement-india": {
+        title: "Cervical Disc Replacement India: ACDR vs ACDF, Cost & Recovery",
+        description:
+            "Cervical disc replacement in India — Bengaluru spine surgeon on ACDR vs ACDF fusion, who qualifies, Mobi-C & Prestige LP devices, cost, and honest recovery.",
+    },
+    "shoulder-replacement-surgery-india": {
+        title: "Shoulder Replacement Surgery India: Cost, Types & Recovery",
+        description:
+            "Anatomic vs reverse shoulder replacement in India: honest 2026 cost ranges, recovery timeline, and when surgery is truly needed. By Dr. Nitin N Sunku, Bengaluru.",
+    },
+    "rotator-cuff-surgery-cost-india": {
+        title: "Rotator Cuff Surgery Cost in India 2026 | Dr. Nitin Sunku",
+        description:
+            "Rotator cuff surgery cost in India 2026: arthroscopic repair ₹1.8L–5.5L, what drives price, which tears need surgery, recovery timeline & insurance.",
+    },
+
+    // ── Jul 30 2026 batch: shoulder + fracture + spine PT ──
+    "shoulder-arthroscopy-surgery-india": {
+        title: "Shoulder Arthroscopy Surgery India: Cost & Recovery Guide",
+        description:
+            "Honest guide to shoulder arthroscopy surgery in India — cost ranges, conditions treated, recovery timeline and surgeon checklist by Dr. Nitin N Sunku.",
+    },
+    "shoulder-dislocation-treatment-india": {
+        title: "Shoulder Dislocation Treatment India | Bankart & Latarjet",
+        description:
+            "Shoulder dislocation treatment in India by Dr. Nitin N Sunku, Bengaluru. Bankart repair, Latarjet, costs, recovery and when surgery is really needed.",
+    },
+    "stress-fracture-treatment-india": {
+        title: "Stress Fracture Treatment in India | Sports Medicine Guide",
+        description:
+            "Sports medicine guide to stress fracture treatment in India — diagnosis, recovery timeline, costs, and prevention. Consultations in Attibele & HSR Layout.",
+    },
+    "compression-fracture-spine-treatment-india": {
+        title: "Compression Fracture Spine Treatment India | Dr. Nitin Sunku",
+        description:
+            "Vertebral compression fracture in an elderly parent? A Bengaluru orthopedic surgeon explains conservative care, kyphoplasty, costs and recovery timelines.",
+    },
+    "lower-back-pain-physiotherapy-protocol-india": {
+        title: "Lower Back Pain Physiotherapy Protocol India | 4-Phase Plan",
+        description:
+            "Structured lower back pain physiotherapy protocol for India — 4 phases, exercises, timelines, red flags & cost from a Bengaluru orthopedic surgeon.",
     },
 };
 

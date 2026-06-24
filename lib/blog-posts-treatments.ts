@@ -1052,9 +1052,9 @@ export const treatmentClusterPosts = [
     // ───────────────────────────────────────────────────────────────────
     {
         slug: "bmac-stem-cell-therapy-for-knee-pain",
-        title: "BMAC and Stem Cell Therapy for Knee Pain — A Patient-Friendly Guide for Bengaluru",
+        title: "BMAC Stem Cell Therapy for Knee Pain in India: A Patient-Friendly Guide for Bengaluru",
         excerpt:
-            "BMAC (Bone Marrow Aspirate Concentrate) is one of the most talked-about regenerative options for knee arthritis and cartilage injuries. Here's what the science actually supports, who it suits, and how it compares to PRP and GFC.",
+            "Stem cell therapy for knee pain in India explained — BMAC (Bone Marrow Aspirate Concentrate) for knee arthritis and cartilage injuries, what the science supports, who it suits, and how it compares to PRP and GFC.",
         date: "2026-05-11",
         category: "Regenerative Medicine",
         image: "https://images.unsplash.com/photo-1559757175-08d62d566c25?w=1200&h=630&fit=crop&q=80&auto=format",
@@ -1085,6 +1085,9 @@ export const treatmentClusterPosts = [
       </ul>
 
       <p>If you would like a deeper side-by-side comparison of the blood-based options, the <a href="/blog/prp-vs-gfc-for-knee-pain">PRP vs GFC explainer</a> is a good place to start. For the broader picture of how these therapies fit together, see <a href="/blog/what-is-regenerative-orthopedic-medicine">What is Regenerative Orthopedic Medicine?</a>.</p>
+
+      <h2>Stem cell therapy for knee pain in India: what to know</h2>
+      <p><strong>Stem cell therapy for knee pain in India</strong> sits inside a specific regulatory framework that patients should understand before choosing a clinic. Autologous BMAC &mdash; where the patient's own bone marrow is aspirated, concentrated and re-injected in a single sitting &mdash; is generally permitted as part of orthopedic practice, because it uses minimally manipulated cells from the same patient. In contrast, <em>expanded</em> or <em>cultured</em> mesenchymal stem cell (MSC) therapies are tightly regulated by the <strong>CDSCO (Central Drugs Standard Control Organisation)</strong> and the ICMR's National Guidelines for Stem Cell Research, and are largely restricted to approved clinical trials. Patients should be cautious of unlicensed clinics offering &ldquo;stem cell&rdquo; injections that claim to regrow cartilage or cure end-stage arthritis &mdash; ask whether the procedure is autologous BMAC, who performs it, and how the cells are processed.</p>
 
       <h2>What conditions can BMAC help with?</h2>
       <p>In a carefully selected patient, BMAC may be considered for:</p>

@@ -26,6 +26,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // queries ("orthopedic doctor HSR Layout") that don't compete with
         // /book-appointment or the homepage.
         { path: '/orthopedic-doctor-in-hsr-layout', priority: 0.8 },
+        // Condition-specific ads landing page (knee pain). High commercial intent.
+        { path: '/knee-pain-bangalore', priority: 0.8 },
+        // Condition-specific ads landing page (sports injury). Leans on the Bengaluru FC team-doctor credential.
+        { path: '/sports-injury-doctor-bangalore', priority: 0.8 },
+        // Condition-specific ads landing page (back pain / spine). Conservative-first positioning.
+        { path: '/back-pain-bangalore', priority: 0.8 },
+        // Local-intent ads landing page for the Attibele primary clinic. Mirror of /orthopedic-doctor-in-hsr-layout for South Bengaluru catchment.
+        { path: '/orthopedic-doctor-attibele', priority: 0.8 },
         { path: '/privacy-policy', priority: 0.3 },
         { path: '/terms', priority: 0.3 },
     ]
