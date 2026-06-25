@@ -1,9 +1,6 @@
 import { Metadata } from "next";
-import Image from "next/image";
-import { BookingForm } from "@/components/forms/booking-form";
 import {
     Phone,
-    MapPin,
     Clock,
     Award,
     Activity,
@@ -12,12 +9,31 @@ import {
     ShieldCheck,
     Stethoscope,
     Trophy,
+    Star,
+    MessageCircle,
+    Calendar,
+    ChevronRight,
 } from "lucide-react";
+
+import { BookingForm } from "@/components/forms/booking-form";
 import { siteOrigin } from "@/lib/site-url";
 import { CLINICS, PRIMARY_CLINIC } from "@/lib/practice";
 import { HideNavigation } from "@/components/ui/hide-navigation";
 import { LandingPageTracker } from "@/components/analytics/landing-page-tracker";
 import { TrackedButton } from "@/components/analytics/tracked-button";
+import { TrackedCall } from "@/components/analytics/tracked-call";
+import { TrackedWhatsApp } from "@/components/analytics/tracked-whatsapp";
+import { FadeIn } from "@/components/animations/fade-in";
+import {
+    LandingNav,
+    StatsStrip,
+    GoogleReviews,
+    LocationsWithMaps,
+    FinalCtaStrip,
+    MobileStickyCTA,
+    LandingFooter,
+    HeroImage,
+} from "@/components/landing/landing-chrome";
 
 export const metadata: Metadata = {
     title: "Sports Injury Doctor Bangalore | Dr. Nitin N Sunku",
@@ -44,11 +60,16 @@ export const metadata: Metadata = {
             "Official Bengaluru FC team doctor. Fellowship-trained in arthroscopy & sports medicine. Same care for weekend athletes as for the pros.",
         type: "website",
     },
+    robots: { index: true, follow: true },
 };
 
-export default function SportsInjuryDoctorBangalorePage() {
-    const heroPhone = PRIMARY_CLINIC.phone;
+const CLINIC = PRIMARY_CLINIC;
+const PRIMARY_PHONE = CLINIC.phone;
+const PRIMARY_PHONE_DIGITS = CLINIC.phoneDigits;
+const WHATSAPP_MESSAGE =
+    "Hi Dr. Nitin, I would like to book a sports injury consultation.";
 
+export default function SportsInjuryDoctorBangalorePage() {
     const injuries = [
         "ACL Tear",
         "Meniscus Tear",
@@ -65,7 +86,7 @@ export default function SportsInjuryDoctorBangalorePage() {
             icon: Award,
             title: "Official Bengaluru FC Team Doctor",
             description:
-                "The orthopedic surgeon trusted by an I-League / ISL professional football club — handling pitch-side decisions, acute injuries and return-to-play calls.",
+                "The orthopedic surgeon trusted by an ISL professional football club — handling pitch-side decisions, acute injuries and return-to-play calls.",
         },
         {
             icon: Stethoscope,
@@ -81,7 +102,7 @@ export default function SportsInjuryDoctorBangalorePage() {
         },
         {
             icon: Clock,
-            title: "Rapid Diagnosis & On-Site Imaging Coordination",
+            title: "Rapid Diagnosis & Imaging Coordination",
             description:
                 "MRI and X-ray coordinated quickly so you have a clear diagnosis — and a clear plan — within days, not weeks.",
         },
@@ -93,7 +114,7 @@ export default function SportsInjuryDoctorBangalorePage() {
         },
         {
             icon: Users,
-            title: "Trusted by Competitive Athletes & Weekend Warriors Alike",
+            title: "Trusted by Athletes & Weekend Warriors",
             description:
                 "From national-level competitors to recreational runners, footballers and cricketers — the same standard of evidence-based care for every patient.",
         },
@@ -128,144 +149,142 @@ export default function SportsInjuryDoctorBangalorePage() {
     ];
 
     return (
-        <main className="min-h-screen">
+        <main className="min-h-screen bg-white w-full overflow-x-clip">
             <HideNavigation />
             <LandingPageTracker />
+            <LandingNav clinic={CLINIC} />
 
-            {/* Hero */}
-            <section className="relative bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 text-blue-900 py-12 md:py-20 overflow-hidden border-b-4 border-blue-600">
-                <div className="absolute inset-0 bg-[url('/patterns/medical-pattern.svg')] opacity-5"></div>
-                <div className="container mx-auto px-4 relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-                        {/* Left Column: Image */}
-                        <div className="relative h-[400px] lg:h-[600px] w-full hidden lg:block">
-                            <Image
-                                src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-lp"
-                                alt="Dr. Nitin N Sunku — Sports Injury Specialist & Bengaluru FC Team Doctor, Bangalore"
-                                fill
-                                className="object-contain object-center"
-                                priority
-                            />
-                        </div>
+            {/* ============= HERO ============= */}
+            <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+                <div aria-hidden className="absolute -top-32 -right-32 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl"></div>
+                <div aria-hidden className="absolute -bottom-32 -left-32 w-96 h-96 bg-indigo-200/40 rounded-full blur-3xl"></div>
+                <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-cyan-100/30 to-transparent rounded-full blur-3xl"></div>
 
-                        {/* Right Column: Text Content */}
-                        <div className="text-center lg:text-left">
-                            <div className="inline-block bg-blue-600 text-white rounded-full px-6 py-2 mb-6">
-                                <p className="text-sm font-medium">
-                                    ✓ Official Bengaluru FC Team Doctor
+                <div className="container mx-auto px-4 pt-10 pb-12 md:pt-16 md:pb-20 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center max-w-7xl mx-auto">
+                        <FadeIn direction="right">
+                            <div>
+                                <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur border border-blue-200 text-blue-700 text-xs sm:text-sm font-semibold rounded-full px-4 py-2 mb-5 shadow-sm">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                    Official Bengaluru FC Team Doctor
+                                </span>
+
+                                <h1 className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.05] tracking-tight mb-4 break-words">
+                                    <span className="block">Sports Injury Specialist</span>
+                                    <span className="block bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600 bg-clip-text text-transparent pb-1">
+                                        in Bangalore
+                                    </span>
+                                </h1>
+
+                                <p className="text-lg sm:text-xl md:text-2xl text-blue-800 font-semibold mb-4">
+                                    Dr. Nitin N Sunku — Orthopedic &amp; Sports Medicine Specialist
                                 </p>
-                            </div>
+                                <p className="text-base sm:text-lg text-gray-600 mb-6 max-w-xl leading-relaxed">
+                                    Fellowship-trained in arthroscopy &amp; sports medicine — the same care for weekend athletes as for the pros. From ACL and meniscus tears to shoulder and ankle injuries, with structured return-to-play protocols used at the professional level.
+                                </p>
 
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-blue-900">
-                                Sports Injury Specialist in{" "}
-                                <span className="text-blue-700">Bangalore</span>
-                            </h1>
-
-                            <p className="text-xl md:text-2xl mb-8 text-blue-800 font-light">
-                                Fellowship-trained in arthroscopy &amp; sports medicine —
-                                same care for weekend athletes as for the pros.
-                            </p>
-
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
-                                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
-                                    <CheckCircle className="w-5 h-5 text-blue-600" />
-                                    <span className="text-sm font-medium text-blue-900">
+                                <div className="flex flex-wrap gap-2 mb-7">
+                                    <span className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur border border-gray-200 rounded-full px-3 py-1.5 text-xs sm:text-sm font-medium text-gray-800 shadow-sm">
+                                        <CheckCircle className="w-3.5 h-3.5 text-emerald-600" />
                                         Bengaluru FC Team Doctor
                                     </span>
-                                </div>
-                                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
-                                    <CheckCircle className="w-5 h-5 text-blue-600" />
-                                    <span className="text-sm font-medium text-blue-900">
+                                    <span className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur border border-gray-200 rounded-full px-3 py-1.5 text-xs sm:text-sm font-medium text-gray-800 shadow-sm">
+                                        <CheckCircle className="w-3.5 h-3.5 text-emerald-600" />
                                         Fellowship-Trained
                                     </span>
-                                </div>
-                                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
-                                    <CheckCircle className="w-5 h-5 text-blue-600" />
-                                    <span className="text-sm font-medium text-blue-900">
-                                        Same-Day Appointments
+                                    <span className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur border border-gray-200 rounded-full px-3 py-1.5 text-xs sm:text-sm font-medium text-gray-800 shadow-sm">
+                                        <Star className="w-3.5 h-3.5 text-yellow-500 fill-yellow-500" />
+                                        Same-Day Slots
                                     </span>
                                 </div>
-                            </div>
 
-                            {/* Mobile Image */}
-                            <div className="relative h-[300px] w-full mb-8 lg:hidden">
-                                <Image
-                                    src="https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-lp"
-                                    alt="Dr. Nitin N Sunku — Sports Injury Specialist & Bengaluru FC Team Doctor, Bangalore"
-                                    fill
-                                    className="object-contain object-center"
-                                    priority
-                                />
-                            </div>
+                                <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                                    <TrackedButton
+                                        buttonName="Book Free Consultation - Hero"
+                                        buttonLocation="Hero"
+                                        href="#booking-form"
+                                        className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-6 py-4 rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all transform hover:-translate-y-0.5"
+                                        metadata={{ cta_type: "form_scroll", condition: "sports-injury" }}
+                                    >
+                                        <Calendar className="w-5 h-5" />
+                                        Book Free Consultation
+                                        <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                    </TrackedButton>
+                                    <TrackedWhatsApp
+                                        phoneDigits={PRIMARY_PHONE_DIGITS}
+                                        message={WHATSAPP_MESSAGE}
+                                        location="Hero"
+                                        className="inline-flex items-center justify-center gap-2 bg-white border-2 border-emerald-500 text-emerald-700 hover:bg-emerald-50 font-semibold px-6 py-4 rounded-xl shadow-sm transition-all"
+                                    >
+                                        <MessageCircle className="w-5 h-5" />
+                                        WhatsApp Us
+                                    </TrackedWhatsApp>
+                                </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                                <TrackedButton
-                                    buttonName="Call Now - Hero"
-                                    buttonLocation="Hero Section"
-                                    href={`tel:${heroPhone}`}
-                                    className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg w-full sm:w-auto justify-center"
-                                    metadata={{
-                                        phone_number: heroPhone,
-                                        cta_type: "phone",
-                                        condition: "sports-injury",
-                                    }}
-                                >
-                                    <Phone className="w-5 h-5" />
-                                    Call Now: {heroPhone}
-                                </TrackedButton>
-                                <TrackedButton
-                                    buttonName="Book Free Consultation - Hero"
-                                    buttonLocation="Hero Section"
-                                    href="#booking-form"
-                                    className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg w-full sm:w-auto justify-center"
-                                    metadata={{
-                                        cta_type: "form_scroll",
-                                        condition: "sports-injury",
-                                    }}
-                                >
-                                    Book Free Consultation
-                                </TrackedButton>
+                                <TrackedCall phone={PRIMARY_PHONE} location="Hero" className="inline-flex items-center gap-3 group">
+                                    <span className="w-11 h-11 bg-gradient-to-br from-blue-600 to-blue-800 group-hover:scale-110 transition-transform rounded-full flex items-center justify-center shadow-md">
+                                        <Phone className="w-5 h-5 text-white" />
+                                    </span>
+                                    <div>
+                                        <p className="text-[11px] text-gray-500 leading-tight">Call directly</p>
+                                        <p className="text-lg sm:text-xl font-bold text-blue-900 leading-tight">{PRIMARY_PHONE}</p>
+                                    </div>
+                                </TrackedCall>
                             </div>
-                        </div>
+                        </FadeIn>
+
+                        <FadeIn direction="left" delay={0.15}>
+                            <HeroImage alt="Dr. Nitin N Sunku — Sports Injury Specialist & Bengaluru FC Team Doctor, Bangalore" />
+                        </FadeIn>
                     </div>
                 </div>
             </section>
 
-            {/* Injuries We Treat */}
-            <section className="py-16 md:py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Sports Injuries We Treat
-                        </h2>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            From acute ligament tears to overuse injuries — specialist
-                            diagnosis and treatment for the full range of athletic injuries.
-                        </p>
-                    </div>
+            <StatsStrip />
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-                        {injuries.map((injury) => (
-                            <div
-                                key={injury}
-                                className="flex items-center gap-3 bg-white rounded-lg p-4 hover:bg-blue-50 transition-colors border border-gray-200"
-                            >
-                                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                                <span className="font-medium text-gray-800">
-                                    {injury}
+            {/* ============= INJURIES ============= */}
+            <section id="services" className="bg-gradient-to-b from-blue-50/60 to-white py-14 md:py-20 overflow-hidden">
+                <div className="container mx-auto px-4 max-w-7xl">
+                    <FadeIn>
+                        <div className="text-center mb-12">
+                            <span className="inline-block text-xs font-bold text-blue-700 uppercase tracking-widest mb-3">
+                                — Sports Injuries We Treat —
+                            </span>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
+                                From Acute Tears to{" "}
+                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                                    Overuse Injuries
                                 </span>
-                            </div>
+                            </h2>
+                            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                                Specialist diagnosis and treatment for the full range of athletic injuries.
+                            </p>
+                        </div>
+                    </FadeIn>
+
+                    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 max-w-6xl mx-auto">
+                        {injuries.map((injury, idx) => (
+                            <FadeIn key={injury} delay={idx * 0.05}>
+                                <div className="group flex items-center gap-3 bg-white rounded-2xl p-4 md:p-5 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+                                    <span className="w-9 h-9 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors">
+                                        <CheckCircle className="w-5 h-5 text-blue-700 group-hover:text-white transition-colors" />
+                                    </span>
+                                    <span className="font-semibold text-gray-800 text-sm md:text-base leading-tight">
+                                        {injury}
+                                    </span>
+                                </div>
+                            </FadeIn>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* The Bengaluru FC Connection */}
-            <section className="py-16 md:py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-5xl mx-auto">
+            {/* ============= BENGALURU FC CONNECTION (unique content) ============= */}
+            <section id="about" className="bg-white py-14 md:py-20 overflow-hidden">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <FadeIn>
                         <div className="bg-gradient-to-br from-blue-700 to-blue-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden">
-                            <div className="absolute -top-10 -right-10 opacity-10">
+                            <div aria-hidden className="absolute -top-10 -right-10 opacity-10">
                                 <Trophy className="w-64 h-64" />
                             </div>
                             <div className="relative z-10">
@@ -277,326 +296,220 @@ export default function SportsInjuryDoctorBangalorePage() {
                                 </div>
 
                                 <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                                    The orthopedic surgeon professional footballers trust —
-                                    available to you.
+                                    The orthopedic surgeon professional footballers trust — available to you.
                                 </h2>
 
                                 <p className="text-lg text-blue-50 leading-relaxed mb-6">
                                     Dr. Nitin serves as the official team doctor for{" "}
-                                    <strong className="text-white">Bengaluru FC</strong>, one
-                                    of India&apos;s top professional football clubs. That role
-                                    means making pitch-side calls on acute injuries, leading
-                                    diagnostic and surgical decisions for elite athletes, and
-                                    owning return-to-play clearance for players whose careers
-                                    depend on getting it right.
+                                    <strong className="text-white">Bengaluru FC</strong>, one of India&apos;s top professional football clubs. That role means making pitch-side calls on acute injuries, leading diagnostic and surgical decisions for elite athletes, and owning return-to-play clearance for players whose careers depend on getting it right.
                                 </p>
 
                                 <p className="text-lg text-blue-50 leading-relaxed mb-8">
-                                    For you, that translates into faster, sharper diagnosis,
-                                    confident judgement on whether you actually need surgery,
-                                    and a rehabilitation pathway built on protocols used at
-                                    the professional level — not generic advice.
+                                    For you, that translates into faster, sharper diagnosis, confident judgement on whether you actually need surgery, and a rehabilitation pathway built on protocols used at the professional level — not generic advice.
                                 </p>
 
                                 <div className="grid sm:grid-cols-2 gap-4 pt-6 border-t border-white/20">
                                     <div>
-                                        <p className="text-4xl font-bold text-white mb-1">
-                                            10+ years
-                                        </p>
-                                        <p className="text-blue-100">
-                                            treating athletes — from weekend warriors to
-                                            national-level competitors.
-                                        </p>
+                                        <p className="text-4xl font-bold text-white mb-1">10+ years</p>
+                                        <p className="text-blue-100">treating athletes — from weekend warriors to national-level competitors.</p>
                                     </div>
                                     <div>
-                                        <p className="text-4xl font-bold text-white mb-1">
-                                            Pitch-side to clinic
-                                        </p>
-                                        <p className="text-blue-100">
-                                            the same standard of acute injury care,
-                                            applied to every patient who walks in.
-                                        </p>
+                                        <p className="text-4xl font-bold text-white mb-1">Pitch-side to clinic</p>
+                                        <p className="text-blue-100">the same standard of acute injury care, applied to every patient who walks in.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </FadeIn>
                 </div>
             </section>
 
-            {/* Why Patients Choose Dr. Nitin */}
-            <section className="py-16 md:py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Why Patients Choose Dr. Nitin for Sports Injuries
-                        </h2>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Elite-level expertise, an athlete-first mindset, and a clear
-                            path back to the sport you love.
-                        </p>
-                    </div>
+            {/* ============= WHY CHOOSE ============= */}
+            <section className="bg-gradient-to-br from-gray-50 via-blue-50/40 to-white py-14 md:py-20 overflow-hidden">
+                <div className="container mx-auto px-4 max-w-7xl">
+                    <FadeIn>
+                        <div className="text-center mb-12">
+                            <span className="inline-block text-xs font-bold text-blue-700 uppercase tracking-widest mb-3">
+                                — Why Choose Dr. Nitin —
+                            </span>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
+                                Elite-Level Care.{" "}
+                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                                    Athlete-First Mindset.
+                                </span>
+                            </h2>
+                            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                                A clear path back to the sport you love.
+                            </p>
+                        </div>
+                    </FadeIn>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        {sellingPoints.map((point) => (
-                            <div
-                                key={point.title}
-                                className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow border border-gray-100"
-                            >
-                                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                                    <point.icon className="w-6 h-6 text-blue-700" />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+                        {sellingPoints.map((point, idx) => (
+                            <FadeIn key={point.title} delay={idx * 0.06}>
+                                <div className="group bg-white rounded-2xl p-5 md:p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+                                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-4 group-hover:from-blue-600 group-hover:to-blue-800 transition-colors">
+                                        <point.icon className="w-6 h-6 text-blue-700 group-hover:text-white transition-colors" />
+                                    </div>
+                                    <h3 className="font-bold text-gray-900 text-base md:text-lg mb-2 leading-tight">
+                                        {point.title}
+                                    </h3>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        {point.description}
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                                    {point.title}
-                                </h3>
-                                <p className="text-gray-600 leading-relaxed">
-                                    {point.description}
-                                </p>
-                            </div>
+                            </FadeIn>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Recovery Timelines */}
-            <section className="py-16 md:py-20 bg-blue-50">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
+            {/* ============= RECOVERY TIMELINES (unique content) ============= */}
+            <section className="bg-white py-14 md:py-20 overflow-hidden">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <FadeIn>
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+                            <span className="inline-block text-xs font-bold text-blue-700 uppercase tracking-widest mb-3">
+                                — Plan Your Return —
+                            </span>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 break-words">
                                 What&apos;s the Typical Recovery Timeline?
                             </h2>
-                            <p className="text-lg text-blue-800 max-w-2xl mx-auto">
-                                Indicative recovery windows so you can plan your return to
-                                sport. Your timeline depends on injury severity, fitness, and
-                                rehab adherence.
+                            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+                                Indicative recovery windows so you can plan your return to sport. Your timeline depends on injury severity, fitness, and rehab adherence.
                             </p>
                         </div>
+                    </FadeIn>
 
+                    <FadeIn delay={0.1}>
                         <div className="bg-white rounded-2xl shadow-md border border-blue-100 overflow-hidden">
                             {recoveryTimelines.map((row, idx) => (
                                 <div
                                     key={row.injury}
-                                    className={`p-6 ${idx !== recoveryTimelines.length - 1
-                                        ? "border-b border-blue-100"
-                                        : ""
-                                        }`}
+                                    className={`p-6 ${idx !== recoveryTimelines.length - 1 ? "border-b border-blue-100" : ""}`}
                                 >
                                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-2">
-                                        <p className="text-lg font-semibold text-gray-900">
-                                            {row.injury}
-                                        </p>
+                                        <p className="text-lg font-semibold text-gray-900">{row.injury}</p>
                                         <span className="inline-block bg-blue-100 text-blue-800 font-semibold rounded-full px-4 py-1 text-sm sm:text-base self-start sm:self-auto">
                                             {row.timeline}
                                         </span>
                                     </div>
-                                    <p className="text-sm text-gray-600 leading-relaxed">
-                                        {row.note}
-                                    </p>
+                                    <p className="text-sm text-gray-600 leading-relaxed">{row.note}</p>
                                 </div>
                             ))}
                         </div>
+                    </FadeIn>
 
-                        <p className="text-center text-sm text-blue-800 mt-6">
-                            Timelines are indicative — return-to-sport is always guided by
-                            strength testing and functional milestones, not the calendar
-                            alone.
-                        </p>
-                    </div>
+                    <p className="text-center text-sm text-gray-600 mt-6">
+                        Timelines are indicative — return-to-sport is always guided by strength testing and functional milestones, not the calendar alone.
+                    </p>
                 </div>
             </section>
 
-            {/* Video Testimonials */}
-            <section className="py-16 md:py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Patient Success Stories
-                        </h2>
-                        <p className="text-lg text-gray-600">
-                            Real patients sharing how they got back to the sport they love.
-                        </p>
-                    </div>
+            <GoogleReviews />
 
-                    <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                        <div className="aspect-[9/16] w-full max-w-[350px] mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/hNDU1Sx5gMc"
-                                title="Patient Testimonial 1"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                loading="lazy"
-                                allowFullScreen
-                                className="w-full h-full"
-                            ></iframe>
-                        </div>
-                        <div className="aspect-[9/16] w-full max-w-[350px] mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/XFDLO_nR6x4"
-                                title="Patient Testimonial 2"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                loading="lazy"
-                                allowFullScreen
-                                className="w-full h-full"
-                            ></iframe>
-                        </div>
-                        <div className="aspect-[9/16] w-full max-w-[350px] mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/swT9lwWwSbU"
-                                title="Patient Testimonial 3"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                loading="lazy"
-                                allowFullScreen
-                                className="w-full h-full"
-                            ></iframe>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Booking Form */}
-            <section id="booking-form" className="py-16 md:py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-2xl mx-auto">
-                        <div className="text-center mb-10">
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                                Book Your Sports Injury Consultation
+            {/* ============= VIDEO TESTIMONIALS ============= */}
+            <section className="bg-gradient-to-b from-white to-blue-50/40 py-14 md:py-20 overflow-hidden">
+                <div className="container mx-auto px-4 max-w-7xl">
+                    <FadeIn>
+                        <div className="text-center mb-12">
+                            <span className="inline-block text-xs font-bold text-blue-700 uppercase tracking-widest mb-3">
+                                ★ Patient Video Testimonials
+                            </span>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight break-words">
+                                Real Stories.{" "}
+                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                                    Back in the Game.
+                                </span>
                             </h2>
-                            <p className="text-lg text-gray-600">
-                                Tell us a little about your injury — we&apos;ll get back
-                                within 24 hours to confirm your appointment.
+                            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                                Real patients sharing how they got back to the sport they love.
                             </p>
                         </div>
+                    </FadeIn>
 
-                        <div className="bg-gray-50 rounded-2xl shadow-xl p-8 md:p-10 border border-gray-200">
-                            <BookingForm source="ads-sports-injury" />
-                        </div>
-
-                        <div className="mt-8 text-center">
-                            <p className="text-gray-600 mb-4">Prefer to call?</p>
-                            <a
-                                href={`tel:${heroPhone}`}
-                                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-semibold text-xl"
-                            >
-                                <Phone className="w-5 h-5" />
-                                {heroPhone}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Locations */}
-            <section className="py-16 md:py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Visit Us — Two Convenient Locations
-                        </h2>
-                        <p className="text-lg text-gray-600">
-                            Sports injury care in HSR Layout and Attibele, Bengaluru.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        {CLINICS.map((location) => (
-                            <div
-                                key={location.id}
-                                className="bg-white rounded-xl p-8 shadow-md border border-gray-200"
-                            >
-                                <h3 className="text-2xl font-bold text-center text-gray-900 bg-yellow-200 mb-6">
-                                    {location.name}
-                                </h3>
-
-                                <div className="space-y-4">
-                                    <div className="flex gap-3">
-                                        <MapPin className="w-5 h-5 text-blue-700 flex-shrink-0 mt-1" />
-                                        <div>
-                                            <p className="text-gray-800 font-medium">
-                                                {location.address}
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex gap-3">
-                                        <Clock className="w-5 h-5 text-blue-700 flex-shrink-0 mt-1" />
-                                        <div>
-                                            {location.hours.map((h) => (
-                                                <p
-                                                    key={h.label}
-                                                    className="text-gray-800"
-                                                >
-                                                    {h.label}: {h.display}
-                                                </p>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div className="flex gap-3">
-                                        <Phone className="w-5 h-5 text-blue-700 flex-shrink-0 mt-1" />
-                                        <a
-                                            href={`tel:${location.phone}`}
-                                            className="text-blue-700 hover:text-blue-800 font-medium"
-                                        >
-                                            {location.phone}
-                                        </a>
-                                    </div>
+                    <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                        {["hNDU1Sx5gMc", "XFDLO_nR6x4", "swT9lwWwSbU"].map((id, idx) => (
+                            <FadeIn key={id} delay={idx * 0.1}>
+                                <div className="aspect-[9/16] w-full max-w-[350px] mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white">
+                                    <iframe
+                                        width="100%"
+                                        height="100%"
+                                        src={`https://www.youtube.com/embed/${id}`}
+                                        title={`Patient testimonial ${idx + 1} — Dr. Nitin N Sunku`}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        loading="lazy"
+                                        allowFullScreen
+                                        className="w-full h-full"
+                                    ></iframe>
                                 </div>
-                            </div>
+                            </FadeIn>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Final CTA */}
-            <section className="py-16 bg-gradient-to-r from-blue-50 to-blue-100 border-t-4 border-blue-600">
-                <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-900">
-                        Don&apos;t Let a Sports Injury Sideline You
-                    </h2>
-                    <p className="text-xl mb-8 text-blue-800 max-w-2xl mx-auto">
-                        Get the same diagnostic precision and return-to-play planning
-                        trusted by professional athletes. Same-day appointments
-                        available.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <TrackedButton
-                            buttonName="Book Appointment - Final CTA"
-                            buttonLocation="Final CTA Section"
-                            href="#booking-form"
-                            className="inline-flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
-                            metadata={{
-                                cta_type: "form_scroll",
-                                condition: "sports-injury",
-                            }}
-                        >
-                            Book Free Consultation
-                        </TrackedButton>
-                        <TrackedButton
-                            buttonName="Call Now - Final CTA"
-                            buttonLocation="Final CTA Section"
-                            href={`tel:${heroPhone}`}
-                            className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
-                            metadata={{
-                                phone_number: heroPhone,
-                                cta_type: "phone",
-                                condition: "sports-injury",
-                            }}
-                        >
-                            <Phone className="w-5 h-5" />
-                            Call {heroPhone}
-                        </TrackedButton>
+            {/* ============= BOOKING FORM ============= */}
+            <section id="booking-form" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 py-12 sm:py-16 md:py-24 overflow-hidden">
+                <div aria-hidden className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "32px 32px" }}></div>
+                <div aria-hidden className="absolute -top-32 -left-32 w-96 h-96 bg-cyan-300/20 rounded-full blur-3xl"></div>
+                <div aria-hidden className="absolute -bottom-32 -right-32 w-96 h-96 bg-indigo-300/20 rounded-full blur-3xl"></div>
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="max-w-2xl mx-auto">
+                        <FadeIn>
+                            <div className="text-center mb-8 text-white">
+                                <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur border border-white/20 rounded-full px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-wider">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    Same-Day Appointments
+                                </span>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-tight break-words">
+                                    Book Your Sports Injury Consultation
+                                </h2>
+                                <p className="text-base md:text-lg text-blue-100 max-w-md mx-auto">
+                                    Tell us about your injury — our team will call you back within hours to confirm your slot.
+                                </p>
+                            </div>
+                        </FadeIn>
+
+                        <FadeIn delay={0.1}>
+                            <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border border-white/50">
+                                <BookingForm source="ads-sports-injury" />
+                            </div>
+                        </FadeIn>
+
+                        <FadeIn delay={0.2}>
+                            <div className="mt-8 grid sm:grid-cols-2 gap-3">
+                                <TrackedCall phone={PRIMARY_PHONE} location="Booking Section" className="inline-flex items-center justify-center gap-2 bg-white/95 hover:bg-white text-blue-700 font-semibold px-5 py-3.5 rounded-xl shadow-lg transition">
+                                    <Phone className="w-5 h-5" />
+                                    Call {PRIMARY_PHONE}
+                                </TrackedCall>
+                                <TrackedWhatsApp phoneDigits={PRIMARY_PHONE_DIGITS} message={WHATSAPP_MESSAGE} location="Booking Section" className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-5 py-3.5 rounded-xl shadow-lg shadow-emerald-500/30 transition">
+                                    <MessageCircle className="w-5 h-5" />
+                                    WhatsApp Us
+                                </TrackedWhatsApp>
+                            </div>
+                        </FadeIn>
                     </div>
                 </div>
             </section>
+
+            <LocationsWithMaps
+                clinics={CLINICS}
+                primaryId={CLINIC.id}
+                heading="Visit Us — Two Convenient Locations"
+                subheading="Sports injury care in HSR Layout and Attibele, Bengaluru."
+            />
+
+            <FinalCtaStrip
+                clinic={CLINIC}
+                title="Don't Let a Sports Injury Sideline You."
+                subtitle="Diagnostic precision trusted by professional athletes."
+            />
+
+            <MobileStickyCTA clinic={CLINIC} />
+            <LandingFooter clinic={CLINIC} />
         </main>
     );
 }
