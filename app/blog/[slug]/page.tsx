@@ -21,11 +21,52 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
+<<<<<<< HEAD
+    // Explicit overrides for the specific blog posts
+    if (params.slug === "anterior-and-posterior-cruciate-ligament") {
+        return {
+            title: {
+                absolute: "Anterior and Posterior Cruciate Ligament: Anatomy, Injuries, and the Right Treatment Path",
+            },
+            description: "Understand the anterior and posterior cruciate ligament (ACL and PCL), how each gets injured, how to tell them apart, and which treatments work. Expert guidance from Dr. Nitin N Sunku, orthopedic and sports medicine specialist in Bengaluru.",
+        };
+    }
+
+    if (params.slug === "advantages-and-disadvantages-of-robotic-knee-replacement") {
+        return {
+            title: {
+                absolute: "Advantages and Disadvantages of Robotic Knee Replacement: A Complete Patient Guide",
+            },
+            description: "Explore the real advantages and disadvantages of robotic knee replacement surgery. Dr. Nitin N Sunku explains precision, cost, recovery, and whether robot-assisted surgery is right for you in Bengaluru.",
+        };
+    }
+
+    if (params.slug === "asymptomatic-meniscus-tear") {
+        return {
+            title: {
+                absolute: "Asymptomatic Meniscus Tear: Symptoms, Causes, and Recovery Explained",
+            },
+            description: "Learn everything about an asymptomatic meniscus tear — what it is, why it happens, when symptoms appear, and how to recover safely. Expert insights from Dr. Nitin N Sunku, orthopedic surgeon in Bengaluru.",
+        };
+    }
+
+    if (params.slug === "bilateral-total-knee-replacement") {
+        return {
+            title: {
+                absolute: "Bilateral Total Knee Replacement: What Patients in Bengaluru Need to Know Before Deciding",
+            },
+            description: "Considering bilateral total knee replacement in Bengaluru? Dr. Nitin N Sunku explains the procedure, simultaneous vs. staged options, recovery timeline, risks, and who is the right candidate.",
+        };
+    }
+
+    if (params.slug === "types-of-total-knee-replacement") {
+=======
     // Per-slug SEO overrides live in lib/seo-overrides.ts so the route handler
     // stays focused on rendering. New posts that don't need an override will
     // fall through to the post's own title + excerpt.
     const override = blogSeoOverrides[params.slug];
     if (override) {
+>>>>>>> 594ea7dd646e796c3b04e8ab304a3083d75fcf8e
         return {
             title: { absolute: override.title },
             description: override.description,
