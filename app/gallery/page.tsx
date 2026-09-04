@@ -1,111 +1,134 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { PageInternalLinks } from "@/components/ui/page-internal-links";
-import { FadeIn } from "@/components/animations/fade-in";
+import { GalleryClient, type GalleryImage } from "@/components/gallery/gallery-client";
 import { siteOrigin } from "@/lib/site-url";
 
 export const metadata: Metadata = {
     title: {
         absolute: "Clinic & Treatment Gallery | Dr. Nitin N Sunku Ortho",
     },
-    description: "Explore clinic, treatment and patient care gallery of Dr. Nitin N Sunku, experienced orthopedic & sports medicine specialist in Attibele.",
+    description:
+        "Explore clinic, treatment and patient care gallery of Dr. Nitin N Sunku, experienced orthopedic & sports medicine specialist in Attibele.",
     alternates: { canonical: `${siteOrigin}/gallery` },
 };
 
-export default function GalleryPage() {
-    const images = [
-        {
-            src: "/hsr-waiting-area.jpg",
-            alt: "HSR Layout Clinic - Waiting Area",
-            caption: "Spacious and comfortable waiting area at Health Nest Hospital, HSR Layout",
-            location: "HSR Layout"
-        },
-        {
-            src: "/hsr-reception.jpg",
-            alt: "HSR Layout Clinic - Reception",
-            caption: "Modern reception desk with welcoming ambiance",
-            location: "HSR Layout"
-        },
-        {
-            src: "/hsr-examination-room.jpg",
-            alt: "HSR Layout Clinic - Examination Room",
-            caption: "Well-equipped examination room with state-of-the-art facilities",
-            location: "HSR Layout"
-        },
-        {
-            src: "/hsr-consultation-room.jpg",
-            alt: "HSR Layout Clinic - Consultation Room",
-            caption: "Private consultation room for personalized patient care",
-            location: "HSR Layout"
-        },
-        {
-            src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/health-nest-hospital.png",
-            alt: "Health Nest Hospital",
-            caption: "Health Nest Hospital, HSR Layout - Our state-of-the-art facility",
-            location: "HSR Layout"
-        },
-        {
-            src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-sunil-chhetri.png",
-            alt: "Dr. Nitin with Sunil Chhetri",
-            caption: "Dr. Nitin with Indian football legend Sunil Chhetri during his role as Team Doctor for Bengaluru FC",
-            location: "Bengaluru FC"
-        }
-    ];
+/** Preferred order for the category filter tabs. */
+const CATEGORY_ORDER = [
+    "Surgery & Procedures",
+    "Clinic & Facilities",
+    "Team & Community",
+];
 
+/**
+ * Arthroscopic knee surgery shoot (30 Jul), hosted on ImageKit as a contiguous
+ * DSC image sequence. Rather than hard-coding ~150 objects, we generate them
+ * from the numeric range and subtract the file numbers that don't exist in the
+ * folder (verified 404s). Keep the missing set in sync if the shoot is
+ * re-exported.
+ */
+const ARTHO_BASE =
+    "https://ik.imagekit.io/M0nger/Dr-nitin/Artho_Knee_30%20Jul_web";
+const ARTHO_RANGE = { start: 5658, end: 5836 };
+const ARTHO_MISSING = new Set<number>([
+    5666, 5671, 5703, 5804, 5811, 5813,
+    // 5734–5759 were not exported in this batch
+    ...Array.from({ length: 5759 - 5734 + 1 }, (_, i) => 5734 + i),
+]);
+
+const arthroImages: GalleryImage[] = [];
+for (let n = ARTHO_RANGE.start, i = 0; n <= ARTHO_RANGE.end; n++) {
+    if (ARTHO_MISSING.has(n)) continue;
+    i += 1;
+    const id = String(n).padStart(5, "0");
+    arthroImages.push({
+        src: `${ARTHO_BASE}/DSC${id}.webp`,
+        alt: `Knee arthroscopy surgery by Dr. Nitin N Sunku — procedure photo ${i}`,
+        caption:
+            "Arthroscopic knee surgery — minimally invasive procedure performed by Dr. Nitin N Sunku and the surgical team.",
+        category: "Surgery & Procedures",
+    });
+}
+
+/** Clinic facilities & community photos (locally hosted + ImageKit). */
+const practiceImages: GalleryImage[] = [
+    {
+        src: "/hsr-waiting-area.jpg",
+        alt: "HSR Layout Clinic - Waiting Area",
+        caption:
+            "Spacious and comfortable waiting area at Health Nest Hospital, HSR Layout.",
+        category: "Clinic & Facilities",
+    },
+    {
+        src: "/hsr-reception.jpg",
+        alt: "HSR Layout Clinic - Reception",
+        caption: "Modern reception desk with a welcoming ambiance.",
+        category: "Clinic & Facilities",
+    },
+    {
+        src: "/hsr-examination-room.jpg",
+        alt: "HSR Layout Clinic - Examination Room",
+        caption:
+            "Well-equipped examination room with state-of-the-art facilities.",
+        category: "Clinic & Facilities",
+    },
+    {
+        src: "/hsr-consultation-room.jpg",
+        alt: "HSR Layout Clinic - Consultation Room",
+        caption: "Private consultation room for personalized patient care.",
+        category: "Clinic & Facilities",
+    },
+    {
+        src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/health-nest-hospital.png",
+        alt: "Health Nest Hospital",
+        caption:
+            "Health Nest Hospital, HSR Layout — our state-of-the-art facility.",
+        category: "Clinic & Facilities",
+    },
+    {
+        src: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin-sunil-chhetri.png",
+        alt: "Dr. Nitin with Sunil Chhetri",
+        caption:
+            "Dr. Nitin with Indian football legend Sunil Chhetri during his role as Team Doctor for Bengaluru FC.",
+        category: "Team & Community",
+    },
+];
+
+// Surgery photos lead (matching the shoot the page was built around), followed
+// by the clinic & community context images.
+const images: GalleryImage[] = [...arthroImages, ...practiceImages];
+
+export default function GalleryPage() {
     return (
         <main className="min-h-screen pb-20">
             <PageHeaderBold
-                title="Gallery"
-                description="A glimpse into our clinic, advanced facilities, and patient-centered care environment."
+                eyebrow="Photo Gallery"
+                title="Inside Our"
+                titleAccent="Practice"
+                description="A glimpse into our surgical care, clinic facilities, and the patient-centered environment behind every treatment."
+                trail={[{ label: "Home", href: "/" }, { label: "Gallery" }]}
             />
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-4xl">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12 max-w-4xl">
                 <div className="text-gray-700 leading-relaxed space-y-4 text-base">
                     <p>
-                        The photographs below document real consulting and waiting areas used for orthopedic
-                        and sports medicine appointments. You will see reception and waiting spaces designed
-                        for comfort during busy clinic hours, private examination rooms where gait, range of
-                        motion, and swelling are checked systematically, and modern consultation rooms suited to
-                        reviewing imaging and consent discussions before any procedure.
+                        This gallery documents real orthopedic and sports medicine care — from arthroscopic
+                        knee surgery in the operating theatre to the consulting and waiting spaces where
+                        recovery begins. You will see the surgical precision applied during minimally invasive
+                        procedures, alongside private examination and consultation rooms designed for comfort
+                        and clear, unhurried discussion before any treatment.
                     </p>
                     <p>
                         Facilities are located at Health Nest Hospital in HSR Layout, Bengaluru, with
                         additional sessions at Raghava Multispeciality Hospital on Sarjapura–Attibele Road.
-                        Images may include team and community events where Dr. Sunku provides medical coverage;
-                        these highlight the same attention to detail applied to everyday patients recovering
-                        from injury or arthritis.
+                        Images may include surgical procedures, team, and community events where Dr. Sunku
+                        provides medical coverage; these reflect the same attention to detail applied to
+                        every patient recovering from injury or arthritis.
                     </p>
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {images.map((image, idx) => (
-                        <FadeIn key={idx} delay={idx * 0.1} className="group">
-                            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                                <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                                    <Image
-                                        src={image.src}
-                                        alt={image.alt}
-                                        fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    />
-                                </div>
-                                <div className="p-6">
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <span className="inline-block px-3 py-1 text-xs font-semibold text-primary bg-blue-50 rounded-full">
-                                            {image.location}
-                                        </span>
-                                    </div>
-                                    <p className="text-sm text-gray-700 leading-relaxed">{image.caption}</p>
-                                </div>
-                            </div>
-                        </FadeIn>
-                    ))}
-                </div>
-            </div>
+            <GalleryClient images={images} categoryOrder={CATEGORY_ORDER} />
 
             <PageInternalLinks
                 heading="Explore the practice"
