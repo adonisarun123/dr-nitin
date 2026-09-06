@@ -34,6 +34,7 @@ export function Footer() {
                             <li><Link href="/awards" className="text-blue-100 hover:text-orange-400 transition-colors">Awards & Accolades</Link></li>
                             <li><Link href="/publications" className="text-blue-100 hover:text-orange-400 transition-colors">Publications</Link></li>
                             <li><Link href="/testimonials" className="text-blue-100 hover:text-orange-400 transition-colors">Patient Stories</Link></li>
+                            <li><Link href="/gallery" className="text-blue-100 hover:text-orange-400 transition-colors">Gallery</Link></li>
                             <li><Link href="/blog" className="text-blue-100 hover:text-orange-400 transition-colors">Blog</Link></li>
                             <li><Link href="/contact" className="text-blue-100 hover:text-orange-400 transition-colors">Book Appointment</Link></li>
                         </ul>

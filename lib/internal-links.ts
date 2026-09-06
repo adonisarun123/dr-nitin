@@ -263,6 +263,20 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
     { label: "ACL Surgery service", href: "/services/acl-care" },
     { label: "Advanced sports injuries treatment", href: "/treatments/advanced-sports-injuries-treatment" },
   ],
+  "hairline-knee-healing-time": [
+    { label: "Stress fracture treatment in India", href: "/blog/stress-fracture-treatment-india" },
+    { label: "Hip fracture surgery cost in India", href: "/blog/hip-fracture-surgery-cost-india" },
+    { label: "ACL surgery cost & recovery in Bangalore", href: "/blog/acl-surgery-cost-and-recovery-bangalore" },
+    { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
+    { label: "Bone Fracture service", href: "/services/bone-fracture" },
+  ],
+  "bilateral-hip-replacement-surgery-in-india": [
+    { label: "Hip replacement surgery cost in India", href: "/blog/hip-replacement-surgery-cost-india" },
+    { label: "Anterior approach hip replacement in India", href: "/blog/anterior-approach-hip-replacement-in-india" },
+    { label: "Total hip replacement recovery time in India", href: "/blog/total-hip-replacement-recovery-time-india" },
+    { label: "Bilateral total knee replacement", href: "/blog/bilateral-total-knee-replacement" },
+    { label: "Hip Replacement service", href: "/services/hip-replacement" },
+  ],
 };
 
 /**
