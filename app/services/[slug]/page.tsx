@@ -196,7 +196,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 <section>
                                     <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                                         <MapPin className="h-8 w-8 text-primary" />
-                                        Where we see ACL Care Patients
+                                        Where we see ACL Surgery Patients
                                     </h2>
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
@@ -220,7 +220,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </section>
 
                                 <FAQ
-                                    title="ACL Care FAQ"
+                                    title="ACL Surgery FAQ"
                                     items={[
                                         {
                                             question: "What causes an ACL tear?",
@@ -393,7 +393,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </section>
 
                                 <FAQ
-                                    title="Meniscal Care FAQ"
+                                    title="Meniscus Tear Surgery FAQ"
                                     items={[
                                         {
                                             question: "What is a meniscus tear?",
@@ -1271,7 +1271,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </section>
 
                                 <FAQ
-                                    title="Shoulder Care FAQ"
+                                    title="Shoulder & Rotator Cuff Surgery FAQ"
                                     items={[
                                         {
                                             question: "What causes shoulder pain requiring specialist care?",
@@ -1484,7 +1484,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </section>
 
                                 <FAQ
-                                    title="Bone Fracture FAQ"
+                                    title="Fracture Treatment FAQ"
                                     items={[
                                         {
                                             question: "How are bone fractures diagnosed?",
@@ -1534,7 +1534,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book Bone Fracture Consultation in Bengaluru</h2>
+                                    <h2 className="text-2xl font-bold mb-4">Book Fracture Treatment Consultation in Bengaluru</h2>
                                     <p className="mb-8 opacity-90 leading-relaxed">If you suspect a fracture or require specialized trauma care, prompt evaluation is essential for proper healing. Consult Dr. Nitin N Sunku, experienced orthopedic specialist in Bengaluru, for expert fracture treatment, casting, and advanced surgical care.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
                                         <Link href="/contact">Book Consultation</Link>
@@ -1697,7 +1697,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </section>
 
                                 <FAQ
-                                    title="Spine Care FAQ"
+                                    title="Spine & Back Pain Treatment FAQ"
                                     items={[
                                         {
                                             question: "What causes spine problems?",
@@ -1739,7 +1739,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book Spine Care Consultation in Bengaluru</h2>
+                                    <h2 className="text-2xl font-bold mb-4">Book Spine & Back Pain Consultation in Bengaluru</h2>
                                     <p className="mb-8 opacity-90 leading-relaxed">If you are dealing with chronic back pain, sciatica, or herniated discs, proper evaluation is key to preventing long-term damage. Consult Dr. Nitin N Sunku, experienced orthopedic specialist in Bengaluru, for comprehensive spine care, targeted therapies, and surgical options when needed.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
                                         <Link href="/contact">Book Consultation</Link>

@@ -42,10 +42,10 @@ export function Footer() {
                     <div>
                         <h4 className="text-lg font-bold text-white mb-6">Services</h4>
                         <ul className="space-y-3">
-                            <li><Link href="/services/acl-care" className="text-blue-100 hover:text-orange-400 transition-colors">ACL Care</Link></li>
-                            <li><Link href="/services/knee-replacement" className="text-blue-100 hover:text-orange-400 transition-colors">Knee Replacement</Link></li>
+                            <li><Link href="/services/acl-care" className="text-blue-100 hover:text-orange-400 transition-colors">ACL Surgery</Link></li>
+                            <li><Link href="/services/knee-replacement" className="text-blue-100 hover:text-orange-400 transition-colors">Knee Replacement Surgery</Link></li>
                             <li><Link href="/services/sports-medicine" className="text-blue-100 hover:text-orange-400 transition-colors">Sports Medicine</Link></li>
-                            <li><Link href="/services/shoulder-care" className="text-blue-100 hover:text-orange-400 transition-colors">Shoulder Care</Link></li>
+                            <li><Link href="/services/shoulder-care" className="text-blue-100 hover:text-orange-400 transition-colors">Shoulder & Rotator Cuff Surgery</Link></li>
                         </ul>
                     </div>
 

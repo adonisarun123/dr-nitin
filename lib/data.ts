@@ -30,7 +30,7 @@ export const practicePostalAddressSecondary = clinicPostalAddress(HSR_CLINIC);
 export const servicesData = [
   {
     slug: "acl-care",
-    title: "ACL Care",
+    title: "ACL Surgery",
     shortDesc: "Expert diagnosis and arthroscopic reconstruction for ACL tears. Learn causes, symptoms, treatment, recovery.",
     fullDesc: "The Anterior Cruciate Ligament (ACL) is crucial for knee stability. Dr. Nitin specializes in arthroscopic ACL reconstruction, ensuring a safe return to sports and daily activities.",
     icon: "/icons/acl.png",
@@ -38,7 +38,7 @@ export const servicesData = [
   },
   {
     slug: "meniscal-care",
-    title: "Meniscal Care",
+    title: "Meniscus Tear Surgery",
     shortDesc: "Specialized meniscus tear care: arthroscopic repair or partial meniscectomy by Dr. Sunku. Learn causes, symptoms, recovery.",
     fullDesc: "Meniscus tears are common in athletes. We offer meniscus repair and partial meniscectomy using advanced arthroscopic techniques to preserve the knee joint.",
     icon: "/icons/meniscal-care.png",
@@ -54,7 +54,7 @@ export const servicesData = [
   },
   {
     slug: "knee-replacement",
-    title: "Knee Replacement",
+    title: "Knee Replacement Surgery",
     shortDesc: "Advanced total & partial knee replacements by Dr. Sunku. Relieve arthritis pain, restore mobility. Learn about surgery, recovery",
     fullDesc: "For severe arthritis, knee replacement surgery can restore mobility and eliminate pain. Dr. Nitin uses the latest implants and techniques for long-lasting results.",
     icon: "/icons/knee-replacement.png",
@@ -62,7 +62,7 @@ export const servicesData = [
   },
   {
     slug: "hip-replacement",
-    title: "Hip Replacement",
+    title: "Hip Replacement Surgery",
     shortDesc: "Expert hip replacement surgeries in Bengaluru. Dr. Sunku treats arthritis and hip fractures with advanced prostheses. Learn about surgery, recovery",
     fullDesc: "Hip replacement surgery helps patients suffering from hip arthritis or fractures regain their quality of life with reduced pain and improved function.",
     icon: "/icons/hip-replacement.png",
@@ -70,7 +70,7 @@ export const servicesData = [
   },
   {
     slug: "shoulder-care",
-    title: "Shoulder Care",
+    title: "Shoulder & Rotator Cuff Surgery",
     shortDesc: "Comprehensive shoulder pain treatment by Dr. Sunku. We manage rotator cuff tears, impingement, instability, frozen shoulder with personalized care.",
     fullDesc: "Shoulder pain can be debilitating. We treat rotator cuff tears, shoulder instability, and frozen shoulder with both conservative and surgical options.",
     icon: "/icons/shoulder-care.png",
@@ -78,7 +78,7 @@ export const servicesData = [
   },
   {
     slug: "bone-fracture",
-    title: "Bone Fracture",
+    title: "Fracture Treatment",
     shortDesc: "Expert bone fracture care in Bengaluru. Dr. Sunku treats simple to complex breaks with casting, ORIF, intramedullary nails. Personalized rehab for full recovery.",
     fullDesc: "Rapid and precise treatment for fractures ensuring proper alignment and healing.",
     icon: "/icons/broken-bone.png",
@@ -86,7 +86,7 @@ export const servicesData = [
   },
   {
     slug: "spine-care",
-    title: "Spine Care",
+    title: "Spine & Back Pain Treatment",
     shortDesc: "Comprehensive spine care in Attibele by Dr. Nitin N Sunku — expert evaluation and non-surgical or surgical management of back pain and spinal disorders.",
     fullDesc: "Comprehensive evaluation and non-surgical/surgical management of spinal conditions.",
     icon: "/icons/spinal-care.png",
@@ -2108,9 +2108,9 @@ export const blogPosts = [
       <h2>Related Services at Dr. Nitin N Sunku's Clinic</h2>
       <ul>
         <li><a href="/services/sports-medicine">Sports Medicine: Comprehensive Injury Management</a></li>
-        <li><a href="/services/acl-care">ACL Care: Expert Arthroscopic Knee Ligament Treatment</a></li>
-        <li><a href="/services/meniscal-care">Meniscal Care: Minimally Invasive Meniscus Treatment</a></li>
-        <li><a href="/services/shoulder-care">Shoulder Care: Rotator Cuff, Dislocation and Frozen Shoulder</a></li>
+        <li><a href="/services/acl-care">ACL Surgery: Expert Arthroscopic Knee Ligament Treatment</a></li>
+        <li><a href="/services/meniscal-care">Meniscus Tear Surgery: Minimally Invasive Meniscus Treatment</a></li>
+        <li><a href="/services/shoulder-care">Shoulder &amp; Rotator Cuff Surgery: Rotator Cuff, Dislocation and Frozen Shoulder</a></li>
         <li><a href="/blog">Read More from Our Blog</a></li>
       </ul>
       
@@ -2299,8 +2299,8 @@ export const blogPosts = [
 
       <h2>Related Services at Dr. Nitin N Sunku's Clinic</h2>
       <ul>
-        <li><a href="/services/acl-care">ACL Care: Expert Arthroscopic Reconstruction</a></li>
-        <li><a href="/services/meniscal-care">Meniscal Care: Minimally Invasive Meniscus Treatment</a></li>
+        <li><a href="/services/acl-care">ACL Surgery: Expert Arthroscopic Reconstruction</a></li>
+        <li><a href="/services/meniscal-care">Meniscus Tear Surgery: Minimally Invasive Meniscus Treatment</a></li>
         <li><a href="/services/knee-replacement">Knee Replacement: When the Whole Joint Needs Attention</a></li>
         <li><a href="/services/sports-medicine">Sports Medicine: Comprehensive Injury Management</a></li>
         <li><a href="/blog">Read More from Our Blog</a></li>
@@ -2432,7 +2432,7 @@ export const blogPosts = [
 
       <h2>Resources</h2>
       <ul>
-        <li><a href="/services/acl-care">ACL Care, Dr. Nitin N Sunku</a></li>
+        <li><a href="/services/acl-care">ACL Surgery, Dr. Nitin N Sunku</a></li>
         <li><a href="/services/sports-medicine">Sports Medicine, Dr. Nitin N Sunku</a></li>
         <li><a href="/contact">Book an Appointment</a></li>
         <li>American Academy of Orthopaedic Surgeons (AAOS), ACL Reconstruction Guidelines: <a href="https://www.aaos.org" target="_blank" rel="noopener noreferrer">Visit the American Academy of Orthopaedic Surgeons website</a></li>
