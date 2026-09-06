@@ -53,7 +53,7 @@ export function Header() {
         <>
             <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 backdrop-blur-lg shadow-lg border-b border-blue-900/50">
                 <nav
-                    className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
+                    className="mx-auto flex max-w-7xl items-center justify-between gap-4 p-4 lg:px-8"
                     aria-label="Global"
                 >
                     {/* Logo */}
@@ -95,70 +95,65 @@ export function Header() {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex md:items-center md:gap-x-0.5 xl:gap-x-1">
+                    <div className="hidden md:flex md:items-center md:gap-x-2 lg:gap-x-4 flex-1 justify-center max-w-3xl">
                         {navigation.map((item) => (
-                            <Fragment key={item.name}>
-                                <Link
-                                    href={item.href}
-                                    className={cn(
-                                        "relative whitespace-nowrap px-2.5 xl:px-3 py-2 text-sm font-semibold transition-all duration-200 rounded-lg group",
-                                        isActive(item.href)
-                                            ? "text-white bg-blue-800"
-                                            : "text-blue-50 hover:text-white hover:bg-blue-700"
-                                    )}
-                                >
-                                    {item.name}
-                                    <span
-                                        className={cn(
-                                            "absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 transition-all duration-300",
-                                            isActive(item.href)
-                                                ? "w-3/4"
-                                                : "w-0 group-hover:w-3/4"
-                                        )}
-                                    />
-                                </Link>
-
-                                {/* Conditions mega-menu sits directly after Treatments.
-                                    CSS-only (group-hover + focus-within) so it needs no
-                                    extra state and degrades to a plain link list without JS. */}
-                                {item.name === "Treatments" && (
-                                    <div className="relative group/mega">
-                                        <button
-                                            type="button"
-                                            aria-haspopup="true"
-                                            className="relative inline-flex items-center gap-1 whitespace-nowrap px-2.5 xl:px-3 py-2 text-sm font-semibold rounded-lg text-blue-50 hover:text-white hover:bg-blue-700 transition-all duration-200"
-                                        >
-                                            Conditions
-                                            <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover/mega:rotate-180" />
-                                        </button>
-
-                                        <div className="invisible opacity-0 group-hover/mega:visible group-hover/mega:opacity-100 focus-within:visible focus-within:opacity-100 transition-all duration-150 absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50">
-                                            <div className="w-[46rem] rounded-2xl bg-white shadow-2xl ring-1 ring-black/5 p-6 grid grid-cols-3 gap-6">
-                                                {megaMenu.map(({ heading, links }) => (
-                                                    <div key={heading}>
-                                                        <p className="text-[11px] font-bold uppercase tracking-widest text-blue-700 mb-3">
-                                                            {heading}
-                                                        </p>
-                                                        <ul className="space-y-1.5">
-                                                            {links.map((l) => (
-                                                                <li key={l.href}>
-                                                                    <Link
-                                                                        href={l.href}
-                                                                        className="block text-[13px] leading-snug text-gray-700 hover:text-blue-700 transition-colors"
-                                                                    >
-                                                                        {l.label}
-                                                                    </Link>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className={cn(
+                                    "relative whitespace-nowrap px-3 py-2.5 text-sm font-semibold transition-all duration-200 rounded-lg group block",
+                                    isActive(item.href)
+                                        ? "text-white bg-blue-800/50"
+                                        : "text-white hover:text-white hover:bg-blue-700/50"
                                 )}
-                            </Fragment>
+                            >
+                                {item.name}
+                                <span
+                                    className={cn(
+                                        "absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 transition-all duration-300",
+                                        isActive(item.href)
+                                            ? "w-3/4"
+                                            : "w-0 group-hover:w-3/4"
+                                    )}
+                                />
+                            </Link>
                         ))}
+                        
+                        {/* Conditions mega-menu as separate item */}
+                        <div className="relative group/mega">
+                            <button
+                                type="button"
+                                aria-haspopup="true"
+                                className="relative inline-flex items-center gap-1 whitespace-nowrap px-3 py-2.5 text-sm font-semibold rounded-lg text-white hover:text-white hover:bg-blue-700/50 transition-all duration-200"
+                            >
+                                Conditions
+                                <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover/mega:rotate-180" />
+                            </button>
+
+                            <div className="invisible opacity-0 group-hover/mega:visible group-hover/mega:opacity-100 focus-within:visible focus-within:opacity-100 transition-all duration-150 absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50">
+                                <div className="w-[46rem] rounded-2xl bg-white shadow-2xl ring-1 ring-black/5 p-6 grid grid-cols-3 gap-6">
+                                    {megaMenu.map(({ heading, links }) => (
+                                        <div key={heading}>
+                                            <p className="text-[11px] font-bold uppercase tracking-widest text-blue-700 mb-3">
+                                                {heading}
+                                            </p>
+                                            <ul className="space-y-1.5">
+                                                {links.map((l) => (
+                                                    <li key={l.href}>
+                                                        <Link
+                                                            href={l.href}
+                                                            className="block text-[13px] leading-snug text-gray-700 hover:text-blue-700 transition-colors"
+                                                        >
+                                                            {l.label}
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Desktop CTAs */}
