@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import {
     Phone,
     MapPin,
@@ -248,7 +249,11 @@ export default function OrthopedicAttibeleLandingPage() {
             {/* ============= TOP NAV ============= */}
             <nav className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
                 <div className="container mx-auto px-4 flex items-center justify-between py-3">
-                    <div className="flex items-center gap-2 min-w-0">
+                    <Link
+                        href="/"
+                        aria-label="Dr. Nitin N Sunku — Home"
+                        className="flex items-center gap-2 min-w-0 rounded-md transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+                    >
                         <img
                             src="https://ik.imagekit.io/vlries1el/dr%20nitin/dr-nitin-sunku-logo.svg"
                             alt="Dr. Nitin N Sunku - Bone Doctor & Orthopedic Specialist in HSR Layout"
@@ -262,7 +267,7 @@ export default function OrthopedicAttibeleLandingPage() {
                                 Orthopedic Specialist
                             </p>
                         </div>
-                    </div>
+                    </Link>
                     <div className="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-700">
                         <a href="#services" className="hover:text-blue-700 transition">Services</a>
                         <a href="#reviews" className="hover:text-blue-700 transition">Reviews</a>
