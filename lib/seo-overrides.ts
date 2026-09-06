@@ -539,6 +539,26 @@ export const serviceSeoOverrides: Record<string, SeoOverride> = {
         description:
             "Expert bone fracture care in Bengaluru. Dr. Sunku treats simple to complex breaks with casting, ORIF, intramedullary nails. Personalized rehab for full recovery.",
     },
+    "mpfl-patellar-dislocation": {
+        title: "MPFL Surgery & Kneecap Dislocation Treatment in Bangalore",
+        description:
+            "Recurrent kneecap dislocation treated by Dr. Nitin N Sunku, Bengaluru. MPFL reconstruction, patellar instability assessment, recovery timeline and when surgery is needed.",
+    },
+    "pcl-injury": {
+        title: "PCL Injury & PCL Reconstruction in Bangalore \u2014 Dr. Nitin N Sunku",
+        description:
+            "PCL tear treatment in Bengaluru. How PCL injuries differ from ACL tears, when bracing works, when reconstruction is needed, and realistic recovery timelines.",
+    },
+    "mcl-lcl-knee-ligament-injury": {
+        title: "MCL & LCL Knee Ligament Injury Treatment in Bangalore",
+        description:
+            "MCL and LCL tear treatment by Dr. Nitin N Sunku, Bengaluru. Grading, hinged bracing, why outer-side posterolateral corner injuries are urgent, and recovery times.",
+    },
+    "hip-impingement-fai": {
+        title: "Hip Impingement (FAI) & Hip Arthroscopy in Bangalore",
+        description:
+            "Femoroacetabular impingement and labral tear treatment in Bengaluru. Symptoms, why groin pain is misdiagnosed, non-surgical care first, and when hip arthroscopy helps.",
+    },
     "spine-care": {
         title: "Spine Care Treatment in Attibele | Dr. Nitin N Sunku",
         description:

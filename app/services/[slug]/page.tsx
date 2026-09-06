@@ -9,6 +9,8 @@ import { servicesData, siteConfig, practicePostalAddress } from "@/lib/data";
 import { serviceSeoOverrides } from "@/lib/seo-overrides";
 import { siteOrigin } from "@/lib/site-url";
 import { getServiceLinks } from "@/lib/internal-links";
+import { servicePageContent } from "@/lib/service-pages";
+import { ServiceBody } from "@/components/services/service-body";
 
 // Generate static params for all services
 export function generateStaticParams() {
@@ -102,7 +104,9 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 grid lg:grid-cols-3 gap-12">
 
                     <div className="lg:col-span-2 space-y-12">
-                        {service.slug === "acl-care" ? (
+                        {servicePageContent[service.slug] ? (
+                            <ServiceBody content={servicePageContent[service.slug]} />
+                        ) : service.slug === "acl-care" ? (
                             <>
                                 <section className="space-y-6">
                                     <p className="text-gray-600 leading-relaxed text-lg">
