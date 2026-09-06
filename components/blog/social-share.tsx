@@ -1,6 +1,6 @@
 "use client";
 
-import { Twitter, Linkedin, Facebook, Link2 } from "lucide-react";
+import { Share, Globe, Users, Link2 } from "lucide-react";
 import { siteOrigin } from "@/lib/site-url";
 
 /**
@@ -16,9 +16,9 @@ export function SocialShare({ title, slug }: { title: string; slug: string }) {
     const encodedUrl = encodeURIComponent(url);
 
     const shareLinks = [
-        { icon: Twitter, label: "Share on X (Twitter)", href: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`, color: "hover:text-blue-400" },
-        { icon: Linkedin, label: "Share on LinkedIn", href: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`, color: "hover:text-blue-700" },
-        { icon: Facebook, label: "Share on Facebook", href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`, color: "hover:text-blue-600" },
+        { icon: Share, label: "Share on X (Twitter)", href: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`, color: "hover:text-blue-400" },
+        { icon: Users, label: "Share on LinkedIn", href: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`, color: "hover:text-blue-700" },
+        { icon: Globe, label: "Share on Facebook", href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`, color: "hover:text-blue-600" },
     ];
 
     const copyToClipboard = () => {
