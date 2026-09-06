@@ -80,7 +80,7 @@ export function Header() {
                     </div>
 
                     {/* Mobile menu button */}
-                    <div className="flex lg:hidden">
+                    <div className="flex md:hidden">
                         <button
                             type="button"
                             className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-white hover:bg-blue-700 transition-colors"
@@ -95,7 +95,7 @@ export function Header() {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex lg:items-center lg:gap-x-0.5 xl:gap-x-1">
+                    <div className="hidden md:flex md:items-center md:gap-x-0.5 xl:gap-x-1">
                         {navigation.map((item) => (
                             <Fragment key={item.name}>
                                 <Link
@@ -162,7 +162,7 @@ export function Header() {
                     </div>
 
                     {/* Desktop CTAs */}
-                    <div className="hidden lg:flex lg:items-center gap-2 xl:gap-3 shrink-0">
+                    <div className="hidden md:flex md:items-center gap-2 xl:gap-3 shrink-0">
                         <a
                             href={`tel:${siteConfig.phone}`}
                             className="hidden xl:flex items-center gap-2 px-3 py-2 text-sm font-semibold text-blue-50 hover:text-white transition-colors rounded-lg hover:bg-blue-700 whitespace-nowrap"
@@ -178,7 +178,7 @@ export function Header() {
             </header>
 
             {/* Mobile menu - moved outside header to avoid backdrop-filter containing block issue */}
-            <div className={cn("lg:hidden", mobileMenuOpen ? "fixed inset-0 z-50" : "hidden")}>
+            <div className={cn("md:hidden", mobileMenuOpen ? "fixed inset-0 z-50" : "hidden")}>
                 {/* Backdrop */}
                 <div
                     className="fixed inset-0 bg-gray-900/50 backdrop-blur-sm z-40"
