@@ -205,7 +205,7 @@ const sellingPoints = [
         Icon: Hospital,
         title: "Day-Care Surgery in South Bengaluru",
         description:
-            "Arthroscopy is performed at Raghava Multispeciality Hospital, Attibele, with consultations and follow-up also available at Health Nest Hospital, HSR Layout Sector 2.",
+            "Arthroscopy is performed at Raghava Multispeciality Hospital, Attibele, and is also available at Manipal Hospital, Narayana Hrudayalaya and Sparsh Hospital. Consultations and follow-up are available at Health Nest Hospital, HSR Layout Sector 2.",
     },
 ];
 
