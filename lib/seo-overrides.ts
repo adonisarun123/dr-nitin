@@ -545,7 +545,7 @@ export const serviceSeoOverrides: Record<string, SeoOverride> = {
             "Recurrent kneecap dislocation treated by Dr. Nitin N Sunku, Bengaluru. MPFL reconstruction, patellar instability assessment, recovery timeline and when surgery is needed.",
     },
     "pcl-injury": {
-        title: "PCL Injury & PCL Reconstruction in Bangalore \u2014 Dr. Nitin N Sunku",
+        title: "PCL Injury & Reconstruction in Bangalore | Dr. Nitin",
         description:
             "PCL tear treatment in Bengaluru. How PCL injuries differ from ACL tears, when bracing works, when reconstruction is needed, and realistic recovery timelines.",
     },
