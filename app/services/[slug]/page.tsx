@@ -19,28 +19,39 @@ export function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+// Next.js 16: `params` is a Promise. The sync-access shim that Next 15 provided
+// was removed in 16, so reading `params.slug` directly yields undefined — which
+// made every lookup miss and every dynamic page fall through to notFound().
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
     // Per-slug SEO overrides live in lib/seo-overrides.ts.
-    const override = serviceSeoOverrides[params.slug];
+    const override = serviceSeoOverrides[slug];
     if (override) {
         return {
-            title: override.title,
+            // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
+            // template. Without it these titles rendered the brand twice, e.g.
+            // "ACL Tear Care & Surgery – Dr. Nitin N Sunku Orthopedics | Dr. Nitin N Sunku".
+            title: { absolute: override.title },
             description: override.description,
-            alternates: { canonical: `${siteOrigin}/services/${params.slug}` },
+            alternates: { canonical: `${siteOrigin}/services/${slug}` },
         };
     }
 
-    const service = servicesData.find((s) => s.slug === params.slug);
+    const service = servicesData.find((s) => s.slug === slug);
     if (!service) return {};
     return {
-        title: `${service.title} Treatment in HSR Layout`,
+        // Fallback for a service with no entry in serviceSeoOverrides. Also
+        // absolute, and geo-neutral — the previous hard-coded "in HSR Layout"
+        // was wrong for a site whose service pages target the Attibele hospital.
+        title: { absolute: `${service.title} in Bangalore | Dr. Nitin N Sunku` },
         description: service.shortDesc,
         alternates: { canonical: `${siteOrigin}/services/${service.slug}` },
     };
 }
 
-export default function ServiceDetailPage({ params }: { params: { slug: string } }) {
-    const service = servicesData.find((s) => s.slug === params.slug);
+export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const service = servicesData.find((s) => s.slug === slug);
 
     if (!service) {
         notFound();

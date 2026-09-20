@@ -28,12 +28,16 @@ export function generateStaticParams() {
     return treatments.map((t) => ({ slug: t.slug }));
 }
 
+// Next.js 16: `params` is a Promise. The sync-access shim that Next 15 provided
+// was removed in 16, so reading `params.slug` directly yields undefined — which
+// made every lookup miss and every dynamic page fall through to notFound().
 export async function generateMetadata({
     params,
 }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-    const t = getTreatmentBySlug(params.slug);
+    const { slug } = await params;
+    const t = getTreatmentBySlug(slug);
     if (!t) return {};
 
     const url = `${siteOrigin}/treatments/${t.slug}`;
@@ -51,12 +55,13 @@ export async function generateMetadata({
     };
 }
 
-export default function TreatmentDetailPage({
+export default async function TreatmentDetailPage({
     params,
 }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }) {
-    const t = getTreatmentBySlug(params.slug);
+    const { slug } = await params;
+    const t = getTreatmentBySlug(slug);
     if (!t) notFound();
 
     // ────────────────────────────────────────────────
