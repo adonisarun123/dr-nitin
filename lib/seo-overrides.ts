@@ -501,6 +501,37 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         description:
             "Structured lower back pain physiotherapy protocol for India — 4 phases, exercises, timelines, red flags & cost from a Bengaluru orthopedic surgeon.",
     },
+    // --- Sep 20, 2026 local-intent batch (Attibele / Electronic City corridor). ---
+    "two-wheeler-accident-hosur-road-first-hour-fracture-care": {
+        title: "Two-Wheeler Accident on Hosur Road: The First Hour",
+        description:
+            "Roadside do's and don'ts after a bike crash between Electronic City and Attibele, the injuries that hide behind a minor fall, and why the nearest hospital with X-ray and an orthopedic surgeon beats the biggest one in the city.",
+    },
+    "knee-pain-electronic-city-it-professionals": {
+        title: "Knee Pain in Electronic City IT Professionals",
+        description:
+            "Why knee pain on the office stairs starts at the desk, what the pattern means, why an MRI is the wrong first step, and the strengthening that fixes most of it.",
+    },
+    "weekend-cricket-badminton-injuries-electronic-city": {
+        title: "Weekend Cricket & Badminton Injuries: Electronic City Guide",
+        description:
+            "Hamstring, rotator cuff, ankle, Achilles and ACL injuries from the corporate leagues — what each feels like, what to do that weekend, and which need to be seen within the week.",
+    },
+    "how-to-choose-a-knee-replacement-hospital-near-electronic-city-attibele": {
+        title: "Choosing a Knee Replacement Hospital near Electronic City",
+        description:
+            "Six things that actually decide a knee replacement outcome — surgeon, implant, facilities, trips, itemised cost, honesty — and an honest comparison of Attibele versus a corporate chain.",
+    },
+    "industrial-injuries-bommasandra-jigani-attibele-orthopedic-care": {
+        title: "Industrial Injuries: Bommasandra–Jigani–Attibele Belt",
+        description:
+            "Hand, wrist, foot and back injuries from the industrial estates — why hand injuries cannot wait, the first hour on the shop floor, ESI and employer cover, and return to work.",
+    },
+    "local-hospital-vs-city-hospital-orthopedic-care-attibele": {
+        title: "Attibele vs City Hospital: When Local Orthopedic Care Is Right",
+        description:
+            "What a multispeciality hospital in Attibele handles well, what genuinely needs a city centre, where the corporate hospital is worse rather than just farther, and how to check a local surgeon.",
+    },
 };
 
 export const serviceSeoOverrides: Record<string, SeoOverride> = {

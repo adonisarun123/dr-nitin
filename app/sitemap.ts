@@ -7,7 +7,7 @@ import { siteOrigin } from '@/lib/site-url'
 // used `new Date()`, so every build claimed the entire site had just changed —
 // Google learns to distrust and ignore lastmod when it's always "now".
 // Bump this date only when site-wide content genuinely changes.
-const SITE_CONTENT_UPDATED = new Date('2026-08-12')
+const SITE_CONTENT_UPDATED = new Date('2026-09-20')
 
 /** Parse blog-post display dates like "Mar 2, 2026"; fall back to the site date. */
 function postDate(dateStr?: string): Date {
@@ -99,6 +99,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { path: '/hip-replacement-cost-bangalore', priority: 0.8 },
         { path: '/knee-arthroscopy-bangalore', priority: 0.8 },
         { path: '/frozen-shoulder-treatment-bangalore', priority: 0.8 },
+        // Sep 20 2026 batch: condition × locality money pages for the Attibele /
+        // Electronic City corridor (Vijaya Ortho competes on local condition
+        // pages; every condition page on this site was previously "-bangalore"),
+        // plus the hospital-branding joint replacement page for Attibele.
+        { path: '/knee-pain-treatment-electronic-city', priority: 0.8 },
+        { path: '/back-neck-pain-doctor-electronic-city', priority: 0.8 },
+        { path: '/sports-injury-clinic-electronic-city', priority: 0.8 },
+        { path: '/joint-replacement-hospital-attibele', priority: 0.8 },
         { path: '/privacy-policy', priority: 0.3 },
         { path: '/terms', priority: 0.3 },
     ]

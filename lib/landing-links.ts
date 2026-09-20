@@ -63,6 +63,11 @@ export const LOCATION_LINKS: LandingLink[] = [
     { label: "Electronic City", href: "/orthopedic-doctor-electronic-city" },
     { label: "Chandapura & Anekal", href: "/orthopedic-doctor-chandapura" },
     { label: "Near Hosur", href: "/orthopedic-doctor-near-hosur" },
+    // Sep 2026: condition × locality pages for the Attibele / Electronic City corridor.
+    { label: "Knee Pain · Electronic City", href: "/knee-pain-treatment-electronic-city" },
+    { label: "Back & Neck · Electronic City", href: "/back-neck-pain-doctor-electronic-city" },
+    { label: "Sports Injury · Electronic City", href: "/sports-injury-clinic-electronic-city" },
+    { label: "Joint Replacement · Attibele", href: "/joint-replacement-hospital-attibele" },
 ];
 
 /** Flat list — useful for link audits and tests. */
