@@ -29,8 +29,9 @@ export interface InternalLink {
  */
 const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
   {
-    keywords: ["knee-replacement", "total-knee", "titanium", "johnson", "ceramic"],
+    keywords: ["knee-replacement", "total-knee", "titanium", "johnson", "ceramic", "joint-replacement"],
     links: [
+      { label: "Knee & hip replacement hospital in Attibele", href: "/joint-replacement-hospital-attibele" },
       { label: "Knee replacement cost in Bangalore (2026 guide)", href: "/knee-replacement-cost-bangalore" },
       { label: "How long does a knee or hip replacement last?", href: "/blog/how-long-does-a-knee-or-hip-replacement-last" },
       { label: "Types of total knee replacement explained", href: "/blog/types-of-total-knee-replacement" },
@@ -84,8 +85,9 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["osteoarthritis", "obesity", "joint-pain", "joint-health", "arthritis"],
+    keywords: ["osteoarthritis", "obesity", "joint-pain", "joint-health", "arthritis", "knee-pain"],
     links: [
+      { label: "Knee pain treatment near Electronic City", href: "/knee-pain-treatment-electronic-city" },
       { label: "Arthritis treatment in Bangalore", href: "/arthritis-treatment-bangalore" },
       { label: "Osteoarthritis knee treatment", href: "/treatments/osteoarthritis-knee-treatment" },
       { label: "Non-surgical knee pain treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
@@ -94,8 +96,9 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["sports", "shin-splints", "achilles", "tendon", "tendinopathy", "tendonitis", "rehabilitation", "ankle", "elbow"],
+    keywords: ["sports", "shin-splints", "achilles", "tendon", "tendinopathy", "tendonitis", "rehabilitation", "ankle", "elbow", "cricket", "badminton"],
     links: [
+      { label: "Sports injury clinic near Electronic City", href: "/sports-injury-clinic-electronic-city" },
       { label: "Foot, heel & ankle pain specialist in Bangalore", href: "/foot-ankle-pain-bangalore" },
       { label: "Why does my heel hurt in the morning?", href: "/blog/why-does-my-heel-hurt-in-the-morning" },
       { label: "Sports Medicine service", href: "/services/sports-medicine" },
@@ -105,8 +108,9 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["spine", "posture", "herniated-disc", "back", "neck", "cervical"],
+    keywords: ["spine", "posture", "herniated-disc", "back", "neck", "cervical", "desk-job"],
     links: [
+      { label: "Back & neck pain doctor near Electronic City", href: "/back-neck-pain-doctor-electronic-city" },
       { label: "Slip disc treatment in Bangalore", href: "/slip-disc-treatment-bangalore" },
       { label: "How long does a slipped disc take to heal?", href: "/blog/how-long-does-a-slipped-disc-take-to-heal" },
       { label: "Neck pain specialist in Bangalore", href: "/neck-pain-bangalore" },
@@ -117,8 +121,9 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["vitamin-d", "calcium", "bone-health", "osteoporosis", "stress-fracture", "fracture"],
+    keywords: ["vitamin-d", "calcium", "bone-health", "osteoporosis", "stress-fracture", "fracture", "accident", "industrial"],
     links: [
+      { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
       { label: "Vitamin D & calcium deficiency in Indian adults", href: "/blog/vitamin-d-and-calcium-deficiency-bone-health-india" },
       { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
       { label: "Fracture Treatment service", href: "/services/bone-fracture" },
@@ -161,6 +166,50 @@ const GENERIC_LINKS: InternalLink[] = [
  * first; topical fallbacks fill any remaining slots up to 3–5 total.
  */
 const CURATED_LINKS: Record<string, InternalLink[]> = {
+  // --- Sep 20, 2026 local-intent batch. Each post feeds one of the four new
+  // Electronic City / Attibele money pages. ---
+  "two-wheeler-accident-hosur-road-first-hour-fracture-care": [
+    { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
+    { label: "Orthopedic doctor near Electronic City", href: "/orthopedic-doctor-electronic-city" },
+    { label: "Wrist fracture surgery recovery", href: "/blog/wrist-fracture-surgery-recovery-in-india" },
+    { label: "Industrial injuries in the Bommasandra–Jigani–Attibele belt", href: "/blog/industrial-injuries-bommasandra-jigani-attibele-orthopedic-care" },
+    { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
+  ],
+  "knee-pain-electronic-city-it-professionals": [
+    { label: "Knee pain treatment near Electronic City", href: "/knee-pain-treatment-electronic-city" },
+    { label: "Do I need a knee arthroscopy? MRI vs symptoms", href: "/blog/do-i-need-a-knee-arthroscopy-mri-vs-symptoms" },
+    { label: "Sports injury clinic near Electronic City", href: "/sports-injury-clinic-electronic-city" },
+    { label: "Knee pain specialist in Bangalore", href: "/knee-pain-bangalore" },
+    { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
+  ],
+  "weekend-cricket-badminton-injuries-electronic-city": [
+    { label: "Sports injury clinic near Electronic City", href: "/sports-injury-clinic-electronic-city" },
+    { label: "ACL reconstruction in Bangalore", href: "/acl-reconstruction-bangalore" },
+    { label: "Shoulder pain specialist in Bangalore", href: "/shoulder-pain-bangalore" },
+    { label: "Ankle sprain treatment", href: "/blog/ankle-sprain-treatment" },
+    { label: "Why rehabilitation is essential after a sports injury", href: "/blog/why-rehabilitation-is-essential-after-a-sports-injury" },
+  ],
+  "how-to-choose-a-knee-replacement-hospital-near-electronic-city-attibele": [
+    { label: "Knee & hip replacement hospital in Attibele", href: "/joint-replacement-hospital-attibele" },
+    { label: "Knee replacement cost in Bangalore (2026 guide)", href: "/knee-replacement-cost-bangalore" },
+    { label: "How long does a knee or hip replacement last?", href: "/blog/how-long-does-a-knee-or-hip-replacement-last" },
+    { label: "How cashless pre-authorisation works", href: "/blog/how-cashless-preauthorisation-works-orthopedic-surgery" },
+    { label: "Attibele vs city hospital: when local is right", href: "/blog/local-hospital-vs-city-hospital-orthopedic-care-attibele" },
+  ],
+  "industrial-injuries-bommasandra-jigani-attibele-orthopedic-care": [
+    { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
+    { label: "Orthopedic doctor in Attibele", href: "/orthopedic-doctor-attibele" },
+    { label: "Two-wheeler accident on Hosur Road: the first hour", href: "/blog/two-wheeler-accident-hosur-road-first-hour-fracture-care" },
+    { label: "Wrist fracture surgery recovery", href: "/blog/wrist-fracture-surgery-recovery-in-india" },
+    { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
+  ],
+  "local-hospital-vs-city-hospital-orthopedic-care-attibele": [
+    { label: "Orthopedic doctor in Attibele", href: "/orthopedic-doctor-attibele" },
+    { label: "Knee & hip replacement hospital in Attibele", href: "/joint-replacement-hospital-attibele" },
+    { label: "Orthopedic doctor near Electronic City", href: "/orthopedic-doctor-electronic-city" },
+    { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
+    { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
+  ],
   // --- Aug 12, 2026 knowledge batch. Each post is written to feed one of the
   // four new money pages; these curated links make that funnel explicit. ---
   "steroid-injection-vs-prp-for-joint-pain": [
