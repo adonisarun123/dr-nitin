@@ -326,6 +326,20 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
     { label: "Bilateral total knee replacement", href: "/blog/bilateral-total-knee-replacement" },
     { label: "Hip Replacement service", href: "/services/hip-replacement" },
   ],
+  "basic-science-of-meniscus-tear": [
+    { label: "Can a meniscus tear heal without surgery?", href: "/blog/can-a-meniscus-tear-heal-without-surgery" },
+    { label: "Bucket-handle meniscus tear explained", href: "/blog/bucket-handle-meniscus-tear" },
+    { label: "Meniscus flap tear: causes, symptoms, recovery", href: "/blog/meniscus-flap-tear-repair-causes-symptoms-recovery" },
+    { label: "Meniscal Care service", href: "/services/meniscal-care" },
+    { label: "Knee arthroscopy in Bangalore", href: "/knee-arthroscopy-bangalore" },
+  ],
+  "compression-fracture-spine-treatment": [
+    { label: "Compression fracture spine treatment cost in India", href: "/blog/compression-fracture-spine-treatment-india" },
+    { label: "Spine surgery cost in India", href: "/blog/spine-surgery-cost-in-india" },
+    { label: "4-phase lower back pain physiotherapy protocol", href: "/blog/lower-back-pain-physiotherapy-protocol-india" },
+    { label: "Hip fracture surgery cost in India", href: "/blog/hip-fracture-surgery-cost-india" },
+    { label: "Spine Care service", href: "/services/spine-care" },
+  ],
 };
 
 /**

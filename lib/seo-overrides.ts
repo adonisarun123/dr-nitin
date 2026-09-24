@@ -22,6 +22,17 @@ export interface SeoOverride {
 }
 
 export const blogSeoOverrides: Record<string, SeoOverride> = {
+    // --- Sep 24, 2026 knowledge batch ---
+    "basic-science-of-meniscus-tear": {
+        title: "Basic Science of Meniscus Tear: Anatomy, Biomechanics & Healing",
+        description:
+            "Understand the basic science of meniscus tear — anatomy, collagen structure, vascular zones, biomechanics and why healing potential differs by tear type. Expert guide by Dr. Nitin N Sunku.",
+    },
+    "compression-fracture-spine-treatment": {
+        title: "Compression Fracture Spine Treatment: Options, Recovery & When Surgery Helps",
+        description:
+            "A surgeon-led guide to compression fracture spine treatment — causes, red-flag symptoms, brace vs kyphoplasty, recovery timeline, and how to prevent a second fracture.",
+    },
     // --- Aug 12, 2026 knowledge batch ---
     "steroid-injection-vs-prp-for-joint-pain": {
         title: "Steroid Injection vs PRP: Which One, and When",
