@@ -340,6 +340,20 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
     { label: "Hip fracture surgery cost in India", href: "/blog/hip-fracture-surgery-cost-india" },
     { label: "Spine Care service", href: "/services/spine-care" },
   ],
+  "hip-replacement-surgery-risks-and-complications": [
+    { label: "Total hip replacement recovery time in India", href: "/blog/total-hip-replacement-recovery-time-india" },
+    { label: "Anterior approach hip replacement in India", href: "/blog/anterior-approach-hip-replacement-in-india" },
+    { label: "Hip replacement surgery cost in India", href: "/blog/hip-replacement-surgery-cost-india" },
+    { label: "Non-surgical alternatives to hip replacement", href: "/blog/natural-alternatives-to-hip-replacement" },
+    { label: "Hip Replacement service", href: "/services/hip-replacement" },
+  ],
+  "frozen-shoulder-treatment-without-surgery-in-india": [
+    { label: "Frozen shoulder and diabetes", href: "/blog/frozen-shoulder-and-diabetes" },
+    { label: "Shoulder pain injections: precision care", href: "/blog/shoulder-pain-injections-precision-care" },
+    { label: "Frozen shoulder treatment in Bangalore", href: "/frozen-shoulder-treatment-bangalore" },
+    { label: "Shoulder & rotator cuff care service", href: "/services/shoulder-care" },
+    { label: "Ultrasound-guided orthopedic injections", href: "/treatments/ultrasound-guided-orthopedic-injections" },
+  ],
 };
 
 /**

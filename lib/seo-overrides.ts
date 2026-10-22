@@ -22,6 +22,17 @@ export interface SeoOverride {
 }
 
 export const blogSeoOverrides: Record<string, SeoOverride> = {
+    // --- Oct 7, 2026 knowledge batch ---
+    "hip-replacement-surgery-risks-and-complications": {
+        title: "Hip Replacement Surgery Risks and Complications Explained",
+        description:
+            "Hip replacement surgery risks and complications explained by an orthopedic surgeon: infection, clots, dislocation, warning signs and how to lower your risk.",
+    },
+    "frozen-shoulder-treatment-without-surgery-in-india": {
+        title: "Frozen Shoulder Treatment Without Surgery in India: Stages & Recovery",
+        description:
+            "How frozen shoulder is treated without surgery in India — the three stages, physiotherapy, steroid injection vs hydrodilatation, recovery timeline and when surgery is needed.",
+    },
     // --- Sep 24, 2026 knowledge batch ---
     "basic-science-of-meniscus-tear": {
         title: "Basic Science of Meniscus Tear: Anatomy, Biomechanics & Healing",
