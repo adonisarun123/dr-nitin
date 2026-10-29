@@ -7,7 +7,7 @@ import { siteOrigin } from '@/lib/site-url'
 // used `new Date()`, so every build claimed the entire site had just changed —
 // Google learns to distrust and ignore lastmod when it's always "now".
 // Bump this date only when site-wide content genuinely changes.
-const SITE_CONTENT_UPDATED = new Date('2026-09-20')
+const SITE_CONTENT_UPDATED = new Date('2026-10-29')
 
 /** Parse blog-post display dates like "Mar 2, 2026"; fall back to the site date. */
 function postDate(dateStr?: string): Date {
