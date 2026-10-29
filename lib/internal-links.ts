@@ -166,6 +166,42 @@ const GENERIC_LINKS: InternalLink[] = [
  * first; topical fallbacks fill any remaining slots up to 3–5 total.
  */
 const CURATED_LINKS: Record<string, InternalLink[]> = {
+  // --- Oct 29, 2026 Chandapura / Attibele belt batch ---
+  "knee-pain-chandapura-anekal-causes-by-age": [
+    { label: "Orthopedic doctor for Chandapura & Anekal", href: "/orthopedic-doctor-chandapura" },
+    { label: "Knee pain specialist in Bangalore", href: "/knee-pain-bangalore" },
+    { label: "Non-surgical knee pain treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
+    { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
+    { label: "Knee & hip replacement hospital in Attibele", href: "/joint-replacement-hospital-attibele" },
+  ],
+  "back-neck-pain-two-wheeler-commute-chandapura-hosur-road": [
+    { label: "Back & neck pain doctor near Electronic City", href: "/back-neck-pain-doctor-electronic-city" },
+    { label: "Back pain specialist in Bangalore", href: "/back-pain-bangalore" },
+    { label: "Slip disc treatment in Bangalore", href: "/slip-disc-treatment-bangalore" },
+    { label: "Sciatica treatment without surgery", href: "/blog/sciatica-treatment-without-surgery-india" },
+    { label: "Neck pain specialist in Bangalore", href: "/neck-pain-bangalore" },
+  ],
+  "elderly-fall-hip-fracture-signs-surgery-48-hours-attibele": [
+    { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
+    { label: "Hip fracture surgery cost in India", href: "/blog/hip-fracture-surgery-cost-india" },
+    { label: "Vitamin D and calcium deficiency & bone health", href: "/blog/vitamin-d-and-calcium-deficiency-bone-health-india" },
+    { label: "Hip pain specialist in Bangalore", href: "/hip-pain-bangalore" },
+    { label: "Orthopedic doctor for Chandapura & Anekal", href: "/orthopedic-doctor-chandapura" },
+  ],
+  "joint-pain-after-chikungunya-viral-fever": [
+    { label: "Arthritis treatment in Bangalore", href: "/arthritis-treatment-bangalore" },
+    { label: "Orthopedic doctor for Chandapura & Anekal", href: "/orthopedic-doctor-chandapura" },
+    { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
+    { label: "Steroid injection vs PRP for joint pain", href: "/blog/steroid-injection-vs-prp-for-joint-pain" },
+    { label: "Foot & ankle pain specialist", href: "/foot-ankle-pain-bangalore" },
+  ],
+  "sprain-or-fracture-how-to-tell-when-you-need-an-x-ray": [
+    { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
+    { label: "Ankle sprain treatment", href: "/blog/ankle-sprain-treatment" },
+    { label: "Wrist fracture surgery recovery", href: "/blog/wrist-fracture-surgery-recovery-in-india" },
+    { label: "Foot & ankle pain specialist", href: "/foot-ankle-pain-bangalore" },
+    { label: "Orthopedic doctor for Chandapura & Anekal", href: "/orthopedic-doctor-chandapura" },
+  ],
   // --- Sep 20, 2026 local-intent batch. Each post feeds one of the four new
   // Electronic City / Attibele money pages. ---
   "two-wheeler-accident-hosur-road-first-hour-fracture-care": [

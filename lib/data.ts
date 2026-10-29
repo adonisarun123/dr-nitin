@@ -11218,4 +11218,307 @@ export const blogPosts = [
       <p>This article is general information. Any injury with a head, neck, chest or abdominal component, any open fracture, or any limb that is cold, pale or numb below an injury is an emergency and should go to the nearest casualty department by ambulance.</p>
     `,
   },
+  // --- Oct 29, 2026 Chandapura / Attibele belt batch ---
+  {
+        slug: "knee-pain-chandapura-anekal-causes-by-age",
+        title: "Knee Pain in Chandapura and Anekal: Common Causes by Age and When to See an Orthopedic Doctor",
+        excerpt: "Knee pain means different things at 25, 45 and 65. Here is how an orthopedic surgeon in Attibele sorts the likely cause by age and by where the knee hurts, what you can safely try at home first, and the signs that mean you should be examined rather than wait.",
+        date: "Oct 29, 2026",
+        category: "Knee Care",
+        image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&h=630&fit=crop&q=80&auto=format",
+        content: `
+      <p><strong>Short answer:</strong> in people under 30, knee pain is usually a sports or twisting injury to a ligament, meniscus or the kneecap. Between 30 and 45 it is most often pain behind the kneecap from weak thigh muscles, or an early meniscus tear. After 45, and especially in women after menopause, osteoarthritis becomes the leading cause. Knee pain that has lasted more than three or four weeks, or that comes with swelling, locking, giving way or fever, should be examined by an orthopedic doctor. For families in Chandapura, Anekal, Hennagara and Jigani, Dr. Nitin N Sunku sees knee patients at Raghava Multispeciality Hospital, Attibele, about 4 km and eight minutes from Chandapura circle.</p>
+
+      <h2>Why knee pain is so common on the Chandapura–Anekal belt</h2>
+
+      <p>The pattern in this part of Bengaluru is a little different from the IT corridors closer to the city. Many homes here are independent houses with steep internal staircases climbed twenty or thirty times a day. A lot of daily life still happens at floor level, from cooking to prayer to sitting with family, which means repeated deep knee bending. Many residents work standing shifts in the industrial units of Bommasandra, Jigani and Attibele. And almost everyone rides a two-wheeler, putting a foot down at every signal on Chandapura–Anekal Road and Hosur Road. None of this damages a healthy knee by itself, but it loads a knee that is already weak, overweight or arthritic every single day, which is why pain that starts small tends to keep growing.</p>
+
+      <h2>Knee pain by age: the most likely causes</h2>
+
+      <table>
+        <thead>
+          <tr><th>Age</th><th>Most likely cause</th><th>Typical clue</th><th>Sensible first step</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>15–30</td><td>ACL or meniscus tear, kneecap instability, patellar tendon pain</td><td>Started with a twist, pop or fall during sport; swelling within hours</td><td>Examination; MRI only if instability or locking</td></tr>
+          <tr><td>30–45</td><td>Pain behind the kneecap (patellofemoral pain), early degenerative meniscus tear</td><td>Worse on stairs, squatting and after long sitting; no clear injury</td><td>Quadriceps and hip strengthening for six to eight weeks</td></tr>
+          <tr><td>45–60</td><td>Early osteoarthritis, degenerative meniscus tear</td><td>Morning stiffness under 30 minutes, pain after standing, inner-knee ache</td><td>Standing X-ray, weight and strength programme</td></tr>
+          <tr><td>60+</td><td>Osteoarthritis, occasionally gout or calcium crystal arthritis</td><td>Bow-leg deformity, grinding, reduced walking distance</td><td>Staged treatment; replacement only when daily life is limited</td></tr>
+          <tr><td>Any age</td><td>Joint infection</td><td>Hot, red, very swollen knee with fever</td><td>Emergency — same day</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Where on the knee does it hurt?</h2>
+
+      <p>Location narrows the cause quickly. Pain at the <strong>front of the knee</strong>, around or behind the kneecap, points to patellofemoral pain or patellar tendon trouble. Pain along the <strong>inner side</strong> is the classic site of medial knee osteoarthritis and of degenerative meniscus tears, both very common in people over 45. Pain on the <strong>outer side</strong> in runners and cyclists is often the iliotibial band rubbing over the bone. Pain and fullness at the <strong>back of the knee</strong> is frequently a Baker's cyst, which is a sign of something else inside the joint rather than a problem on its own. Pain that is everywhere, with stiffness in both knees and other joints, makes an inflammatory or post-viral cause more likely.</p>
+
+      <h2>What you can safely try at home first</h2>
+
+      <p>For knee pain without injury, swelling or red flags, two to three weeks of sensible self-care is reasonable before seeing a doctor:</p>
+      <ul>
+        <li>Reduce, do not stop, the aggravating activity. Fewer trips up the stairs, a chair instead of the floor for a few weeks, and shorter standing spells where possible.</li>
+        <li>Start straight-leg raises and wall sits within comfort, ten repetitions twice a day. Weak quadriceps are behind a large share of knee pain at every age.</li>
+        <li>Use a cold pack for 15 minutes after activity if the knee is warm or puffy; heat helps stiffness.</li>
+        <li>Paracetamol is the safest short-term painkiller for most people. Avoid buying strong anti-inflammatory tablets or steroid courses over the counter.</li>
+        <li>Skip the knee caps and copper bands as a treatment; a soft support is fine for comfort but builds no strength.</li>
+      </ul>
+
+      <h2>Signs you should be examined, not wait</h2>
+      <ul>
+        <li>The knee swelled up within hours of a twist or fall.</li>
+        <li>It locks, catches or gives way under you.</li>
+        <li>You cannot straighten it fully or cannot bear weight.</li>
+        <li>It is hot and red, or you have a fever.</li>
+        <li>Pain wakes you at night, or has lasted more than three or four weeks despite rest.</li>
+        <li>Walking distance has shrunk to the point that it changes your day.</li>
+      </ul>
+
+      <h2>What happens at the first orthopedic visit</h2>
+
+      <p>Most knee problems are diagnosed by history and examination, with a standing X-ray when arthritis is suspected. An MRI is not routine. It is ordered when the examination suggests a ligament or meniscus tear that would change treatment, because MRI scans over 40 commonly show tears that are not the cause of the pain. The large majority of knee pain is treated without surgery, with a structured strengthening programme, weight management, and in selected cases an injection. The <a href="/treatments/non-surgical-knee-pain-treatment">non-surgical knee pain treatment</a> page explains these options, and <a href="/blog/surgery-vs-injections-for-knee-pain">surgery vs injections for knee pain</a> covers when each is appropriate. Knee replacement is reserved for advanced arthritis that has not responded and is limiting daily life; the <a href="/joint-replacement-hospital-attibele">joint replacement hospital in Attibele</a> page covers that pathway.</p>
+
+      <h2>Getting seen from Chandapura, Anekal and nearby</h2>
+
+      <p>Dr. Nitin N Sunku, a fellowship-trained orthopedic and sports medicine surgeon, runs his outpatient clinic at Raghava Multispeciality Hospital on Sarjapura–Attibele Road, Monday to Saturday, 10 am to 6 pm. From Chandapura circle it is roughly 4 km, about eight minutes by road; Anekal, Hennagara and Jigani are a short drive further. The hospital has in-house X-ray, so the examination and imaging usually happen in one visit. Directions and booking are on the <a href="/orthopedic-doctor-chandapura">orthopedic doctor for Chandapura and Anekal</a> page.</p>
+
+      <p>This article is general information and does not replace an examination. A knee that is hot, red and swollen with fever, or one that cannot bear weight after an injury, needs urgent assessment.</p>
+    `,
+  },
+  {
+        slug: "back-neck-pain-two-wheeler-commute-chandapura-hosur-road",
+        title: "Back and Neck Pain From Daily Two-Wheeler Commutes on Hosur Road: Causes, Fixes and When to Worry",
+        excerpt: "An hour a day on a two-wheeler between Chandapura, Attibele and Electronic City is a real load on the spine. Here is why riding causes back and neck pain, the bike and riding changes that actually help, the exercises worth doing, and the warning signs that need a doctor.",
+        date: "Oct 29, 2026",
+        category: "Spine Health",
+        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&h=630&fit=crop&q=80&auto=format",
+        content: `
+      <p><strong>Short answer:</strong> back and neck pain from two-wheeler commuting is usually mechanical strain, caused by repeated jolts from potholes and speed breakers, a fixed hunched or craned posture, a heavy backpack and the weight of the helmet. It improves with a better bike set-up, slowing fully for road breaks, moving the bag off your back, and a short daily strengthening routine. See an orthopedic or spine doctor if pain spreads below the knee, if you have numbness or weakness in a leg or arm, if pain lasts more than four to six weeks, or after any fall from the bike. Numbness around the groin or a change in bladder or bowel control is an emergency.</p>
+
+      <h2>Why the commute hurts</h2>
+
+      <p>A typical daily ride from Chandapura or Anekal to Electronic City, Bommasandra or HSR Layout is 40 to 90 minutes in stop-start traffic. Four things load the spine on that ride.</p>
+      <ul>
+        <li><strong>Jolts.</strong> Each pothole, unmarked speed breaker and broken patch sends an impact up through the seat into the lower back. Hundreds of them a week add up, and an unexpected hard jolt is one of the commonest triggers of an acute back spasm or a disc flare.</li>
+        <li><strong>Posture.</strong> Scooter riders tend to slump, rounding the lower back. Riders of sportier bikes lean forward and crane the neck up to see ahead. Either posture held for an hour fatigues the muscles that protect the spine.</li>
+        <li><strong>The backpack.</strong> A laptop bag on the back pulls the shoulders back and forward with every bump and forces the neck muscles to work throughout the ride.</li>
+        <li><strong>The helmet.</strong> A helmet is non-negotiable, but a heavy one on a forward-craned neck is a long lever on the neck muscles, which is why so many riders feel it at the base of the skull and between the shoulder blades.</li>
+      </ul>
+
+      <h2>The three patterns we see most</h2>
+
+      <h3>1. Mechanical low back pain</h3>
+      <p>An ache across the lower back, worse after the ride and on bending, better with movement and rest. No pain in the leg. This is muscle and joint strain and almost always settles with the changes below.</p>
+
+      <h3>2. Neck and upper back strain</h3>
+      <p>Stiffness at the base of the neck and between the shoulder blades, sometimes with headaches from the back of the head. Very common in riders who also spend the day at a laptop. The <a href="/blog/desk-job-back-and-neck-pain-bangalore-it-professionals">desk-job back and neck pain guide</a> covers the office side of the same problem.</p>
+
+      <h3>3. Sciatica from a disc</h3>
+      <p>Pain that travels from the buttock down the back or side of the leg, often below the knee, sometimes with tingling in the foot. This means a nerve root is irritated, most often by a slipped (herniated) disc. The jolting of a commute frequently aggravates it. Most cases still settle without surgery, as explained in <a href="/blog/sciatica-treatment-without-surgery-india">sciatica treatment without surgery</a>, but it should be assessed by a doctor.</p>
+
+      <h2>Fixes on the bike</h2>
+      <ul>
+        <li><strong>Check the rear suspension and tyre pressure.</strong> Worn shock absorbers and over-inflated tyres transmit far more of each jolt. A service is cheaper than a month of back pain.</li>
+        <li><strong>Sit tall, not slumped.</strong> Hips back on the seat, slight forward lean from the hips, elbows soft. Adjust mirrors so you see behind without craning the neck.</li>
+        <li><strong>Slow right down for speed breakers and potholes.</strong> The jolt, not the distance, is the injury. On the bad stretches of Hosur Road and Chandapura–Anekal Road, crossing breaks slowly makes a measurable difference.</li>
+        <li><strong>Get the bag off your back.</strong> A carrier, a tank bag or the storage under the seat all take the load off the spine and neck.</li>
+        <li><strong>Choose a well-fitting, lighter certified helmet.</strong> Never ride without one; a correct fit reduces wobble and neck effort.</li>
+        <li><strong>Break up long rides.</strong> If the ride is over an hour, a two-minute stop to stand and walk resets the muscles.</li>
+      </ul>
+
+      <h2>Ten minutes a day that protects the spine</h2>
+      <p>Riders whose core and upper back are strong get far less pain from the same commute. A simple routine done most days is enough: bird-dogs and glute bridges for the lower back, chin tucks and shoulder blade squeezes for the neck, and a gentle chest-opening stretch in a doorway. If any exercise sends pain down the leg, stop it and get assessed.</p>
+
+      <h2>Warning signs that need a doctor</h2>
+      <ul>
+        <li>Pain spreading below the knee or into the arm and hand.</li>
+        <li>Numbness, pins and needles or weakness in a leg, foot, arm or hand.</li>
+        <li><strong>Emergency:</strong> numbness around the groin or inner thighs, or new difficulty passing or controlling urine or stools.</li>
+        <li>Back or neck pain after a fall or collision, even if you walked away.</li>
+        <li>Pain at night, with fever, or with unexplained weight loss.</li>
+        <li>Pain that has not improved after four to six weeks of sensible care.</li>
+      </ul>
+
+      <h2>Getting assessed near Chandapura and Attibele</h2>
+      <p>Dr. Nitin N Sunku assesses back and neck pain at Raghava Multispeciality Hospital, Attibele, Monday to Saturday from 10 am to 6 pm, with in-house X-ray. An MRI is arranged when there are nerve symptoms or the pain is not settling, not as a first step for every backache. Treatment is usually physiotherapy-led, with medicines and, where needed, injections; surgery is reserved for a minority with persistent nerve compression. The <a href="/back-neck-pain-doctor-electronic-city">back and neck pain doctor near Electronic City</a> page and the <a href="/slip-disc-treatment-bangalore">slip disc treatment</a> page cover the options in detail.</p>
+
+      <p>This article is general information and does not replace an examination. Loss of bladder or bowel control, numbness in the groin area, or rapidly worsening leg weakness needs emergency care.</p>
+    `,
+  },
+  {
+        slug: "elderly-fall-hip-fracture-signs-surgery-48-hours-attibele",
+        title: "An Elderly Parent Fell at Home: Hip Fracture Signs and Why Surgery Within 48 Hours Matters",
+        excerpt: "A fall at home is the commonest way an elderly parent breaks a hip, and what the family does in the first day changes the outcome. Here are the signs of a hip fracture, what to do and not do before reaching hospital, why early surgery is safer than bed rest, and how to prevent the next fall.",
+        date: "Oct 29, 2026",
+        category: "Bone Fracture",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop&q=80&auto=format",
+        content: `
+      <p><strong>Short answer:</strong> if an older person falls and then has groin or hip pain, cannot stand or put weight on the leg, or the leg looks shorter and turned outward, assume a hip fracture until an X-ray proves otherwise. Do not try to make them walk. Keep them lying comfortably and get them to a hospital with X-ray and orthopedic cover. Almost every hip fracture in an elderly person is treated with surgery, and international guidelines recommend operating within 24 to 48 hours, because early surgery lets the patient sit and stand quickly and avoids the pneumonia, clots, bedsores and confusion that prolonged bed rest causes.</p>
+
+      <h2>How to recognise a hip fracture</h2>
+      <ul>
+        <li>Pain in the groin, outer hip or thigh after a fall, often a simple slip in the bathroom or a stumble at night.</li>
+        <li>Inability to stand, or severe pain on putting weight on the leg.</li>
+        <li>The injured leg looks <strong>shorter</strong> and the foot is <strong>turned outward</strong>.</li>
+        <li>Pain on any attempt to move the hip or roll the leg.</li>
+      </ul>
+      <p>Two cautions. First, some fractures are impacted and stable, and the person can still hobble; walking after a fall does not rule a fracture out. Second, people with dementia may not describe pain clearly; refusing to walk or new confusion after a fall can be the only clue.</p>
+
+      <h2>What to do in the first hour</h2>
+      <ul>
+        <li><strong>Do not force them to stand or walk</strong>, and do not let anyone massage or pull the leg. Traditional massage or bandaging before an X-ray can displace the fracture.</li>
+        <li>Keep them warm and lying in the most comfortable position, with a pillow between the knees if that helps.</li>
+        <li>Paracetamol is a reasonable painkiller if they can swallow safely. Avoid a heavy meal, as surgery may be planned soon.</li>
+        <li>Bring their list of medicines, especially blood thinners, diabetes and heart tablets, and any previous reports.</li>
+        <li>For transport, an ambulance on 108 is safest. If you use a car, recline the seat and move them as little as possible.</li>
+      </ul>
+
+      <h2>Why early surgery is safer than bed rest</h2>
+      <p>Families often hope that rest and traction will let the bone heal, especially when the patient is in their eighties. For hip fractures this is almost always the wrong choice. Weeks in bed bring chest infection, blood clots in the legs, pressure sores, muscle wasting, urinary infection and delirium, and many elderly patients never walk again. Surgery fixes or replaces the broken hip so the patient can sit out of bed the next day and begin walking with support within a day or two. That is why hip fracture guidelines, including those followed in the UK and adopted widely in India, set a target of surgery on the day of admission or the day after, and why delays beyond 48 hours are linked with more complications and higher mortality.</p>
+      <p>Age alone is rarely a reason not to operate. What matters is getting the patient medically fit quickly: correcting blood sugar, salts and haemoglobin, reviewing blood thinners and having the anaesthetist assess the heart and lungs. Elderly patients with serious heart or lung disease who are likely to need intensive care after surgery are referred to a centre with ICU backup; that decision is made openly with the family.</p>
+
+      <h2>Which operation?</h2>
+      <table>
+        <thead><tr><th>Fracture type</th><th>Where it breaks</th><th>Usual operation</th></tr></thead>
+        <tbody>
+          <tr><td>Femoral neck (displaced)</td><td>Just below the ball of the hip</td><td>Half hip replacement (hemiarthroplasty), or total hip replacement in fitter, active patients</td></tr>
+          <tr><td>Femoral neck (undisplaced)</td><td>Just below the ball, bone not shifted</td><td>Fixation with screws in selected patients</td></tr>
+          <tr><td>Intertrochanteric</td><td>Lower, across the bony bumps of the hip</td><td>Fixation with a nail or plate-and-screw device</td></tr>
+        </tbody>
+      </table>
+      <p>Approximate costs and what drives them are covered in the <a href="/blog/hip-fracture-surgery-cost-india">hip fracture surgery cost guide</a>. Most health insurance policies cover hip fracture surgery, and cashless pre-authorisation can usually be started on admission.</p>
+
+      <h2>After surgery: the first six weeks</h2>
+      <p>Physiotherapy starts the day after surgery, with sitting out of bed and standing with a walker. Most patients go home within a few days, using a walker and then a stick over the following weeks. At home, a raised toilet seat, a firm chair with arms and a clear path from bed to bathroom matter more than any gadget. One step that is often forgotten: a hip fracture after a simple fall means the bones are weak. Osteoporosis should be assessed and treated, with vitamin D, calcium and bone-strengthening medicine where appropriate, because the risk of a second fracture is high. The <a href="/blog/vitamin-d-and-calcium-deficiency-bone-health-india">vitamin D and calcium guide</a> explains why deficiency is so common in Indian adults.</p>
+
+      <h2>Preventing the next fall at home</h2>
+      <ul>
+        <li>Grab bars and an anti-slip mat in the bathroom, the single most common place for falls.</li>
+        <li>A night light on the route from bed to toilet.</li>
+        <li>Firm, closed footwear indoors instead of loose slippers on wet floors.</li>
+        <li>A handrail on both sides of internal staircases, common in independent houses around Chandapura and Anekal.</li>
+        <li>An eye check and a review of sleeping pills and blood pressure tablets that cause dizziness.</li>
+      </ul>
+
+      <h2>Hip fracture care near Chandapura and Attibele</h2>
+      <p>Raghava Multispeciality Hospital, Attibele, where Dr. Nitin N Sunku operates, has 24/7 casualty, in-house X-ray, an operating theatre and an in-patient ward, about eight minutes from Chandapura circle and close to Anekal, Hennagara and Sarjapura. That means an elderly patient can be X-rayed, assessed and prepared for surgery without a long journey into the city in pain. The <a href="/fracture-treatment-attibele">fracture and trauma care in Attibele</a> page has the details.</p>
+
+      <p>This article is general information and does not replace medical assessment. A fall with a head injury, loss of consciousness, chest pain or breathlessness needs emergency care first.</p>
+    `,
+  },
+  {
+        slug: "joint-pain-after-chikungunya-viral-fever",
+        title: "Joint Pain After Chikungunya or Viral Fever: How Long It Lasts and When to See an Orthopedic Doctor",
+        excerpt: "The fever settles in a week, but the joint pain stays for months. Here is why chikungunya and some other viral fevers cause lingering joint pain, how long it usually lasts, what helps and what to avoid, and when to see an orthopedic doctor or a rheumatologist.",
+        date: "Oct 29, 2026",
+        category: "Hip & Joint",
+        image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-13.jpg?updatedAt=1766843020638",
+        content: `
+      <p><strong>Short answer:</strong> chikungunya is the viral fever most likely to leave lasting joint pain. The pain typically affects both sides of the body, in the fingers, wrists, ankles and knees, with morning stiffness. For most people it fades over a few weeks, but a significant minority still have pain three months or more later, and some for a year. Dengue causes severe body and joint aches too, but they usually settle with the fever. During the fever, see a physician, use paracetamol and avoid anti-inflammatory painkillers until dengue is ruled out. See an orthopedic doctor when pain persists in one or a few joints, a joint stays swollen, a previously arthritic knee flares, or heel and tendon pain will not settle; see a rheumatologist when many joints stay swollen and stiff beyond about three months.</p>
+
+      <h2>Why some fevers leave joint pain behind</h2>
+      <p>The chikungunya virus, spread by the same Aedes mosquitoes as dengue, infects the tissues around joints and tendons and triggers strong inflammation there. In many people the immune response keeps the joints inflamed after the virus has gone. The months after the monsoon, when water collects in containers, tyres and construction sites across growing areas like Chandapura, Attibele and Anekal, are when these infections and the joint pain that follows tend to rise.</p>
+
+      <h2>The typical timeline</h2>
+      <table>
+        <thead><tr><th>Phase</th><th>When</th><th>What it feels like</th></tr></thead>
+        <tbody>
+          <tr><td>Acute</td><td>First 1–3 weeks</td><td>High fever, rash, severe joint pain in hands, wrists, ankles and knees; sometimes unable to grip or walk</td></tr>
+          <tr><td>Post-acute</td><td>3 weeks to 3 months</td><td>Fever gone; joint pain, stiffness and swelling that come and go, often worse in the morning or in cold weather</td></tr>
+          <tr><td>Chronic</td><td>Beyond 3 months</td><td>Persistent pain or stiffness in some people; may behave like inflammatory arthritis and needs specialist assessment</td></tr>
+        </tbody>
+      </table>
+      <p>People over 45, those with existing knee or hand arthritis, and those who had very severe joint pain in the first week are more likely to have pain that lasts.</p>
+
+      <h2>Medicines: what to be careful about</h2>
+      <ul>
+        <li><strong>During the fever, use paracetamol.</strong> Aspirin and anti-inflammatory painkillers such as ibuprofen and diclofenac should be avoided until a doctor has ruled out dengue, because they raise the risk of bleeding.</li>
+        <li><strong>Avoid self-started steroid courses</strong> or "pain injections" from a pharmacy. Steroids can mask the problem and cause a rebound flare when stopped. If they are needed, a doctor should prescribe and taper them.</li>
+        <li>After the acute phase, a short course of anti-inflammatories prescribed by your doctor is often helpful.</li>
+      </ul>
+
+      <h2>What genuinely helps in the weeks after</h2>
+      <ul>
+        <li><strong>Keep the joints moving.</strong> Gentle daily range-of-motion exercises for fingers, wrists, ankles and knees prevent stiffness from setting in. Rest makes post-viral joints stiffer.</li>
+        <li><strong>Warmth for stiffness, cold for a swollen joint.</strong> A warm-water soak for stiff hands in the morning works well for many people.</li>
+        <li><strong>Graded return to walking and work.</strong> Increase activity steadily rather than all at once.</li>
+        <li><strong>Physiotherapy</strong> for persistent stiffness, grip weakness or heel and ankle pain.</li>
+      </ul>
+
+      <h2>When to see an orthopedic doctor and when a rheumatologist</h2>
+      <p>The fever phase belongs to a general physician, who confirms the diagnosis and watches for dengue warning signs. After that, the right specialist depends on the pattern.</p>
+      <p><strong>See an orthopedic doctor</strong> if pain persists in one or two large joints, a knee or ankle stays swollen, an already arthritic knee has flared and is not settling, heel pain or Achilles pain persists, or you are unsure whether the pain is post-viral at all. An orthopedic examination and X-ray also rule out other causes, such as a meniscus tear, gout or osteoarthritis that was there before the fever. The <a href="/arthritis-treatment-bangalore">arthritis treatment</a> page explains how a flared arthritic knee is managed.</p>
+      <p><strong>See a rheumatologist</strong> if many small joints of the hands and feet remain swollen and stiff beyond about three months, because chronic chikungunya arthritis can behave like rheumatoid arthritis and may need disease-modifying medicines. An orthopedic doctor will refer you if this pattern emerges.</p>
+
+      <h2>Red flags that need prompt care</h2>
+      <ul>
+        <li>A single hot, red, very swollen joint, especially with a return of fever, which may be infection.</li>
+        <li>During the fever: bleeding gums, black stools, severe abdominal pain, persistent vomiting or drowsiness, which are dengue warning signs and need emergency care.</li>
+        <li>Weakness in the arms or legs, not just pain.</li>
+      </ul>
+
+      <h2>Getting assessed near Chandapura and Attibele</h2>
+      <p>Dr. Nitin N Sunku sees patients with persistent post-viral joint pain at Raghava Multispeciality Hospital, Attibele, Monday to Saturday, 10 am to 6 pm. The hospital has in-house X-ray and lab support, so blood tests and imaging can usually be done the same day. It is about eight minutes from Chandapura circle; see the <a href="/orthopedic-doctor-chandapura">orthopedic doctor for Chandapura and Anekal</a> page for directions.</p>
+
+      <p>This article is general information and does not replace medical assessment. Fever with bleeding, severe abdominal pain or drowsiness needs emergency care.</p>
+    `,
+  },
+  {
+        slug: "sprain-or-fracture-how-to-tell-when-you-need-an-x-ray",
+        title: "Sprain or Fracture? How to Tell at Home and When You Need an X-Ray",
+        excerpt: "Swelling, bruising and being able to wiggle your toes do not tell you whether a bone is broken. Here are the simple bedside rules doctors use to decide who needs an X-ray for an ankle, foot, knee or wrist injury, the injuries that are commonly missed, and first aid that helps rather than harms.",
+        date: "Oct 29, 2026",
+        category: "Bone Fracture",
+        image: "https://ik.imagekit.io/vlries1el/dr%20nitin/blog/blog%20banners-03.jpg?updatedAt=1766843021036",
+        content: `
+      <p><strong>Short answer:</strong> you cannot reliably tell a sprain from a fracture by swelling, bruising or whether you can move the joint. What predicts a fracture is pain when you press directly on specific points of bone, and being unable to take four steps. Doctors use validated checklists called the Ottawa rules for the ankle, foot and knee. Wrist injuries with tenderness at the base of the thumb, any injury in a child, and any fall in an older adult deserve a lower threshold for an X-ray. Get an X-ray the same day if the limb looks deformed, you cannot bear weight, or there is numbness, a cold limb or a wound over the injury.</p>
+
+      <h2>Myths that delay the right treatment</h2>
+      <ul>
+        <li><strong>"I can move it, so it isn't broken."</strong> Many fractures, including ankle, wrist and finger fractures, still allow movement.</li>
+        <li><strong>"The swelling is small."</strong> Some serious fractures swell very little at first, and some sprains swell dramatically.</li>
+        <li><strong>"It's just a sprain, a massage will set it right."</strong> Massage, oil rubbing or tight bandaging by a traditional bone-setter before an X-ray can displace a fracture, and very tight bandages can cut off blood supply.</li>
+      </ul>
+
+      <h2>Ankle and foot: the Ottawa rules</h2>
+      <p>An X-ray of the ankle is needed if there is pain around the ankle bones and any of these:</p>
+      <ul>
+        <li>Tenderness when pressing the back edge or tip of the bony bump on the outer side of the ankle (lower 6 cm of the fibula).</li>
+        <li>Tenderness at the back edge or tip of the bony bump on the inner side of the ankle.</li>
+        <li>Inability to take four steps, both straight after the injury and when examined.</li>
+      </ul>
+      <p>A foot X-ray is needed if there is midfoot pain and tenderness at the base of the fifth metatarsal (the bony bump halfway along the outer edge of the foot) or at the navicular bone on the inner midfoot, or if you cannot take four steps. If none apply, a fracture is very unlikely, and the injury can be treated as a sprain; the <a href="/blog/ankle-sprain-treatment">ankle sprain treatment guide</a> covers recovery.</p>
+
+      <h2>Knee: the Ottawa knee rules</h2>
+      <p>After a knee injury, an X-ray is advised if any one of these is present: age 55 or over; tenderness only over the kneecap; tenderness over the head of the fibula on the outer side just below the knee; inability to bend the knee to 90 degrees; or inability to take four steps. A knee that swells within hours of a twist, with a normal X-ray, can still have a ligament or meniscus tear, which needs an orthopedic examination rather than just rest.</p>
+
+      <h2>Wrist and hand: the injury that is most often missed</h2>
+      <p>After a fall on an outstretched hand, press the hollow at the base of the thumb on the back of the wrist (the anatomical snuffbox). Tenderness there suggests a <strong>scaphoid fracture</strong>, which often does not show on the first X-ray. Because a missed scaphoid fracture can fail to heal and lead to wrist arthritis, it is treated in a splint as a fracture until repeat imaging rules it out. Finger injuries that leave the finger bent, rotated or unable to straighten at the tip also need an X-ray, as tendon and joint injuries in the hand do badly if left. The <a href="/blog/wrist-fracture-surgery-recovery-in-india">wrist fracture recovery guide</a> explains treatment when a break is confirmed.</p>
+
+      <h2>Children and older adults: lower the threshold</h2>
+      <p>In children, ligaments are stronger than the growth plates at the ends of bones, so a "sprain" in a child is often actually a growth plate fracture. Any child who limps for more than a day or will not use an arm should be X-rayed. In adults over about 50, a wrist, hip, shoulder or spine fracture from a simple fall suggests osteoporosis, and the fracture is a warning to check bone health.</p>
+
+      <h2>First aid that helps</h2>
+      <ul>
+        <li><strong>Protect and rest</strong> the injured part; use a splint, a folded newspaper or a sling to keep it still on the way to hospital.</li>
+        <li><strong>Ice wrapped in a cloth</strong> for 15 to 20 minutes at a time, never directly on skin.</li>
+        <li><strong>Elevate</strong> the limb above heart level to reduce swelling.</li>
+        <li><strong>Remove rings, anklets and bangles</strong> early, before swelling makes it impossible.</li>
+        <li>Paracetamol for pain. No massage, no oil rubbing, no tight bandage.</li>
+      </ul>
+
+      <h2>Go the same day if</h2>
+      <ul>
+        <li>The limb looks bent, deformed or out of place.</li>
+        <li>You cannot bear any weight, or cannot use the hand at all.</li>
+        <li>There is a wound near the injury, or bone is visible.</li>
+        <li>Fingers or toes are numb, cold, pale or blue.</li>
+        <li>Pain is getting worse rather than better, especially under a bandage or plaster.</li>
+      </ul>
+
+      <h2>X-ray and fracture care near Chandapura and Attibele</h2>
+      <p>Raghava Multispeciality Hospital on Sarjapura–Attibele Road has in-house X-ray and 24/7 casualty, about eight minutes from Chandapura circle, with Anekal, Hennagara and Jigani a short drive away. Dr. Nitin N Sunku, orthopedic surgeon, reviews the X-ray and the examination together and decides between a support, a plaster or, when needed, surgical fixation. See the <a href="/fracture-treatment-attibele">fracture and trauma care in Attibele</a> page for details.</p>
+
+      <p>This article is general information and does not replace an examination. Any injury with a head, neck, chest or abdominal component, an open wound over a possible fracture, or a cold, pale or numb limb is an emergency.</p>
+    `,
+  },
 ];
