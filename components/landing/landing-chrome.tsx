@@ -673,6 +673,12 @@ export function LandingFooter({
                     Disclaimer: Information on this page is for general awareness and does
                     not replace medical advice. Please consult a qualified doctor.
                 </p>
+                <p className="mt-3 text-[11px] text-gray-500">
+                    Website by{" "}
+                    <a href="https://www.monkmantra.com" target="_blank" rel="noopener" className="text-gray-500 hover:text-gray-400 transition-colors">
+                        Monk Mantra
+                    </a>
+                </p>
             </div>
         </footer>
     );
