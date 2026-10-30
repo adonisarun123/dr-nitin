@@ -46,6 +46,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
       { label: "ACL surgery cost & recovery in Bangalore", href: "/blog/acl-surgery-cost-and-recovery-bangalore" },
       { label: "Can you walk with a torn ACL?", href: "/blog/can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru" },
       { label: "ACL Surgery service", href: "/services/acl-care" },
+      { label: "Artificial ligament ACL reconstruction", href: "/services/artificial-ligament-acl-reconstruction" },
       { label: "PCL Injury Treatment service", href: "/services/pcl-injury" },
       { label: "MCL & LCL Ligament Surgery service", href: "/services/mcl-lcl-knee-ligament-injury" },
       { label: "Bad signs after ACL surgery", href: "/blog/bad-signs-after-acl-surgery" },
@@ -405,6 +406,7 @@ const SERVICE_LINKS: Record<string, InternalLink[]> = {
     { label: "Can you walk with a torn ACL?", href: "/blog/can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru" },
     { label: "Advanced sports injuries treatment", href: "/treatments/advanced-sports-injuries-treatment" },
     { label: "Sports Medicine service", href: "/services/sports-medicine" },
+    { label: "Artificial ligament ACL reconstruction (Jewel ACL)", href: "/services/artificial-ligament-acl-reconstruction" },
   ],
   "meniscal-care": [
     { label: "Can a meniscus tear heal without surgery?", href: "/blog/can-a-meniscus-tear-heal-without-surgery" },
@@ -473,6 +475,13 @@ const SERVICE_LINKS: Record<string, InternalLink[]> = {
     { label: "Why do I feel pain in my hip when standing from a chair?", href: "/blog/why-do-i-feel-pain-in-my-hip-when-standing-from-a-chair" },
     { label: "Hip Replacement Surgery service", href: "/services/hip-replacement" },
     { label: "Ultrasound-guided orthopedic injections", href: "/treatments/ultrasound-guided-orthopedic-injections" },
+    { label: "Sports Medicine service", href: "/services/sports-medicine" },
+  ],
+  "artificial-ligament-acl-reconstruction": [
+    { label: "ACL Surgery service", href: "/services/acl-care" },
+    { label: "ACL reconstruction in Bangalore", href: "/acl-reconstruction-bangalore" },
+    { label: "ACL surgery cost & recovery in Bangalore", href: "/blog/acl-surgery-cost-and-recovery-bangalore" },
+    { label: "Bad signs after ACL surgery", href: "/blog/bad-signs-after-acl-surgery" },
     { label: "Sports Medicine service", href: "/services/sports-medicine" },
   ],
   "spine-care": [

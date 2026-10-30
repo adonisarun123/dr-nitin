@@ -637,6 +637,11 @@ export const serviceSeoOverrides: Record<string, SeoOverride> = {
         description:
             "Femoroacetabular impingement and labral tear treatment in Bengaluru. Symptoms, why groin pain is misdiagnosed, non-surgical care first, and when hip arthroscopy helps.",
     },
+    "artificial-ligament-acl-reconstruction": {
+        title: "Artificial Ligament ACL Surgery in Bangalore | Jewel ACL",
+        description:
+            "Tissue-sparing ACL reconstruction with the Jewel ACL artificial ligament in Bengaluru. How it compares with autografts, who is suitable, risks and recovery.",
+    },
     "spine-care": {
         title: "Spine Care Treatment in Attibele | Dr. Nitin N Sunku",
         description:
