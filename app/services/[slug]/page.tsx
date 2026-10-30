@@ -167,6 +167,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                         <div>
                                             <h3 className="text-xl font-bold text-primary mb-3">Surgical Management (Arthroscopic ACL Reconstruction)</h3>
                                             <p className="text-gray-600 leading-relaxed">Surgery is indicated for athletes or active patients whose ACL tears cause instability. We perform arthroscopic reconstruction – a minimally invasive procedure. The torn ACL is replaced with a graft (patient’s own tendon or a donor tendon) that is fixed with screws or buttons. If the tear is suitable, we may repair the ligament back to bone. Dr. Sunku and his team customize the graft choice (patellar tendon, hamstring tendon, or allograft) and technique based on patient factors. Throughout surgery, we look for and address any meniscus or cartilage injuries.</p>
+                                            <p className="text-gray-600 leading-relaxed mt-3">For suitable patients, we also offer a tissue-sparing option: reconstruction with an artificial ligament (Jewel ACL™), which restores stability without harvesting tendon from another part of the leg. Suitability is decided on examination and MRI. <Link href="/services/artificial-ligament-acl-reconstruction" className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">Learn about artificial ligament ACL reconstruction</Link>.</p>
                                         </div>
                                         <div>
                                             <h3 className="text-xl font-bold text-primary mb-3">Post-Op Care</h3>
@@ -255,7 +256,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                         },
                                         {
                                             question: "What happens during ACL reconstruction surgery?",
-                                            answer: "Done arthroscopically, the torn ligament is replaced by a graft: either your own tendon (patellar or hamstring) or a donor tendon. The graft is fixed with screws/buttons. It's usually an outpatient procedure, and you go home the same day."
+                                            answer: "Done arthroscopically, the torn ligament is replaced by a graft: either your own tendon (patellar or hamstring) or a donor tendon. For suitable patients, an artificial ligament (Jewel ACL) can be used instead, so no tendon is taken from your leg. The graft is fixed with screws/buttons. It's usually an outpatient procedure, and you go home the same day."
                                         },
                                         {
                                             question: "What is recovery time after ACL surgery?",
