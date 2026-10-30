@@ -117,6 +117,14 @@ export const servicesData = [
     color: "bg-sky-50 text-sky-600",
   },
   {
+    slug: "artificial-ligament-acl-reconstruction",
+    title: "Artificial Ligament ACL Reconstruction",
+    shortDesc: "Tissue-sparing ACL reconstruction with the Jewel ACL\u2122 artificial ligament for suitable patients \u2014 no tendon harvested from your leg, one site to heal.",
+    fullDesc: "An ACL reconstruction option that restores knee stability without taking healthy tendon from elsewhere in the leg. Suitability is decided on examination and MRI, alongside traditional autograft reconstruction.",
+    icon: "/icons/acl.png",
+    color: "bg-violet-50 text-violet-600",
+  },
+  {
     slug: "spine-care",
     title: "Spine & Back Pain Treatment",
     shortDesc: "Comprehensive spine care in Attibele by Dr. Nitin N Sunku — expert evaluation and non-surgical or surgical management of back pain and spinal disorders.",
