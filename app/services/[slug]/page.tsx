@@ -26,8 +26,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     // Per-slug SEO overrides live in lib/seo-overrides.ts.
     const override = serviceSeoOverrides[slug];
+    const serviceForMeta = servicesData.find((s) => s.slug === slug);
+    // Per-service share image. Next replaces (not merges) the layout's
+    // openGraph object, so the full set of fields is restated here.
+    const shareImage = serviceForMeta?.ogImage
+        ? {
+              openGraph: {
+                  type: "website" as const,
+                  locale: "en_IN",
+                  siteName: siteConfig.name,
+                  url: `${siteOrigin}/services/${slug}`,
+                  title: override?.title ?? serviceForMeta.title,
+                  description: override?.description ?? serviceForMeta.shortDesc,
+                  images: [{ url: serviceForMeta.ogImage, width: 1200, height: 630, alt: serviceForMeta.heroImageAlt ?? serviceForMeta.title }],
+              },
+              twitter: {
+                  card: "summary_large_image" as const,
+                  title: override?.title ?? serviceForMeta.title,
+                  description: override?.description ?? serviceForMeta.shortDesc,
+                  images: [serviceForMeta.ogImage],
+              },
+          }
+        : {};
     if (override) {
         return {
+            ...shareImage,
             // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
             // template. Without it these titles rendered the brand twice, e.g.
             // "ACL Tear Care & Surgery – Dr. Nitin N Sunku Orthopedics | Dr. Nitin N Sunku".
@@ -95,6 +118,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     <Link href="/services" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-primary mb-8">
                         <ArrowLeft className="mr-2 h-4 w-4" /> Back to Services
                     </Link>
+                    <div className={service.heroImage ? "grid lg:grid-cols-2 gap-10 lg:gap-14 items-center" : ""}>
                     <div className="max-w-4xl">
                         <div className={`inline-flex items-center justify-center p-3 rounded-2xl ${service.color} mb-6`}>
                             <Image
@@ -107,6 +131,20 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                         </div>
                         <h1 className="text-4xl lg:text-5xl font-heading font-bold text-gray-900 mb-6">{service.title}</h1>
                         <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">{service.shortDesc}</p>
+                    </div>
+                    {service.heroImage && (
+                        <div>
+                            <Image
+                                src={service.heroImage}
+                                alt={service.heroImageAlt ?? service.title}
+                                width={1200}
+                                height={900}
+                                priority
+                                sizes="(min-width: 1024px) 50vw, 100vw"
+                                className="w-full h-auto rounded-3xl shadow-xl ring-1 ring-white/60"
+                            />
+                        </div>
+                    )}
                     </div>
                 </div>
             </div>
