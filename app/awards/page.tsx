@@ -36,12 +36,15 @@ const ATLAS_CERTIFICATE_IMAGE =
 const SHOULDER_SUMMIT_IMAGE =
     "/events/bangalore-shoulder-summit-2026-dr-nitin-sunku.jpg";
 
+const SHOULDER_SUMMIT_CERTIFICATE_IMAGE =
+    "/events/bangalore-shoulder-summit-2026-faculty-certificate-dr-nitin-sunku.jpg";
+
 const accolades = [
     {
         icon: Stethoscope,
-        title: "Co-surgeon, Live Surgery — Bangalore Shoulder Summit 2026",
+        title: "Faculty & Live-Surgery Co-surgeon — Bangalore Shoulder Summit 2026",
         description:
-            "Invited co-surgeon for the live transosseous repair surgery at the Bangalore Shoulder Summit 2026, hosted by Manipal Hospitals on 1 November 2026.",
+            "Faculty at the Bangalore Shoulder Summit 2026 Masterclass and invited co-surgeon for its live transosseous repair surgery, hosted by Manipal Hospitals on 1 November 2026.",
     },
     {
         icon: BookOpen,
@@ -92,6 +95,7 @@ export default function AwardsPage() {
         award: [
             "Academic Author featured in Springer's Atlas of Arthroscopy",
             "Team Doctor, Bengaluru Football Club",
+            "Faculty, Bangalore Shoulder Summit 2026 Masterclass — Manipal Hospitals (Certificate of Appreciation)",
             "Co-surgeon, Live Surgery (Transosseous Repair), Bangalore Shoulder Summit 2026 — Manipal Hospitals",
             "Fellowship in Arthroscopy, Joint Replacement and Sports Medicine",
         ],
@@ -296,6 +300,32 @@ export default function AwardsPage() {
                             />
                         </FadeIn>
                     </div>
+
+                    {/* Faculty certificate */}
+                    <FadeIn delay={0.2} className="mt-12 lg:mt-16">
+                        <div className="max-w-2xl mx-auto">
+                            <p className="text-center text-sm uppercase tracking-wide text-gray-500 mb-5">
+                                Certificate of Appreciation — Faculty
+                            </p>
+                            <div className="relative rounded-3xl overflow-hidden bg-white border border-gray-200 shadow-2xl">
+                                <Image
+                                    src={SHOULDER_SUMMIT_CERTIFICATE_IMAGE}
+                                    alt="Certificate of Appreciation awarded to Dr. Nitin Sunku for his contribution as Faculty at the Bangalore Shoulder Summit 2026 Masterclass, Manipal Hospitals, Bengaluru, 1 November 2026"
+                                    width={1100}
+                                    height={1555}
+                                    className="w-full h-auto object-contain"
+                                    sizes="(max-width: 768px) 100vw, 672px"
+                                />
+                            </div>
+                            <p className="mt-4 text-center text-sm text-gray-600 leading-relaxed">
+                                Awarded by Manipal Hospitals and Smith+Nephew Academy in
+                                recognition of Dr. Sunku&rsquo;s contribution as{" "}
+                                <strong>Faculty</strong> at the Bangalore Shoulder Summit 2026
+                                Masterclass, held on 1 November 2026 in Bengaluru. Signed by
+                                Dr. Ayyappan V Nair, Organizing Chairman.
+                            </p>
+                        </div>
+                    </FadeIn>
                 </div>
             </section>
 

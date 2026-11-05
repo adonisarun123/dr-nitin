@@ -27,7 +27,21 @@ export const practicePostalAddress = clinicPostalAddress(ATTIBELE_CLINIC);
 /** PostalAddress for the secondary HSR Layout clinic — used in clinic listings and JSON-LD @graph. */
 export const practicePostalAddressSecondary = clinicPostalAddress(HSR_CLINIC);
 
-export const servicesData = [
+export type ServiceData = {
+  slug: string;
+  title: string;
+  shortDesc: string;
+  fullDesc: string;
+  icon: string;
+  color: string;
+  /** Optional illustration shown beside the H1 on /services/[slug]. */
+  heroImage?: string;
+  heroImageAlt?: string;
+  /** Optional 1200x630 share image for Open Graph / Twitter. */
+  ogImage?: string;
+};
+
+export const servicesData: ServiceData[] = [
   {
     slug: "acl-care",
     title: "ACL Surgery",
@@ -123,6 +137,9 @@ export const servicesData = [
     fullDesc: "An ACL reconstruction option that restores knee stability without taking healthy tendon from elsewhere in the leg. Suitability is decided on examination and MRI, alongside traditional autograft reconstruction.",
     icon: "/icons/acl.png",
     color: "bg-violet-50 text-violet-600",
+    heroImage: "/images/services/artificial-ligament-acl-reconstruction-hero.webp",
+    heroImageAlt: "Illustration of a knee joint with an artificial ACL ligament fixed through tunnels in the thigh bone and shin bone",
+    ogImage: "/images/services/artificial-ligament-acl-reconstruction-og.jpg",
   },
   {
     slug: "spine-care",
