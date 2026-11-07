@@ -160,11 +160,11 @@ export const teamData = [
     image: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/dr-nitin.png"
   },
   {
-    name: "Mr. Vijayan",
-    role: "Senior Physiotherapist",
-    qualifications: "BPT, MPT (Musculoskeletal)",
-    bio: "Mr. Vijayan specializes in post-operative rehabilitation and sports injury recovery, ensuring patients regain full function quickly.",
-    image: "https://ik.imagekit.io/surwahi/Arun/dr-nitin/mr-vijayan-physiotherapist.png"
+    name: "Dr. V C Priya",
+    role: "Physiotherapist",
+    qualifications: "BPT · 2 years' clinical experience in orthopaedic & neurological rehabilitation",
+    bio: "Dr. Priya handles post-surgical and chronic pain rehabilitation, building individualised plans with therapeutic exercise, manual therapy, joint mobilisation, dry needling, cupping, IASTM and electrotherapy (IFT, TENS, ultrasound). She speaks English, Tamil and Telugu.",
+    image: "/images/team/dr-vc-priya-physiotherapist.webp"
   }
 ];
 
