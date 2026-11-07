@@ -162,7 +162,7 @@ export const teamData = [
   {
     name: "Dr. V C Priya",
     role: "Physiotherapist",
-    qualifications: "Physiotherapy · 2 years' clinical experience in orthopaedic & neurological rehabilitation",
+    qualifications: "BPT · 2 years' clinical experience in orthopaedic & neurological rehabilitation",
     bio: "Dr. Priya handles post-surgical and chronic pain rehabilitation, building individualised plans with therapeutic exercise, manual therapy, joint mobilisation, dry needling, cupping, IASTM and electrotherapy (IFT, TENS, ultrasound). She speaks English, Tamil and Telugu.",
     image: "/images/team/dr-vc-priya-physiotherapist.webp"
   }
