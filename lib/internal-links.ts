@@ -29,8 +29,9 @@ export interface InternalLink {
  */
 const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
   {
-    keywords: ["knee-replacement", "total-knee", "titanium", "johnson", "ceramic"],
+    keywords: ["knee-replacement", "total-knee", "titanium", "johnson", "ceramic", "joint-replacement"],
     links: [
+      { label: "Knee & hip replacement hospital in Attibele", href: "/joint-replacement-hospital-attibele" },
       { label: "Knee replacement cost in Bangalore (2026 guide)", href: "/knee-replacement-cost-bangalore" },
       { label: "How long does a knee or hip replacement last?", href: "/blog/how-long-does-a-knee-or-hip-replacement-last" },
       { label: "Types of total knee replacement explained", href: "/blog/types-of-total-knee-replacement" },
@@ -39,12 +40,14 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["acl", "anterior-cruciate", "cruciate", "pcl"],
+    keywords: ["acl", "anterior-cruciate", "cruciate", "pcl", "mcl", "lcl", "collateral", "mpfl", "patellar", "kneecap"],
     links: [
       { label: "ACL reconstruction in Bangalore", href: "/acl-reconstruction-bangalore" },
       { label: "ACL surgery cost & recovery in Bangalore", href: "/blog/acl-surgery-cost-and-recovery-bangalore" },
       { label: "Can you walk with a torn ACL?", href: "/blog/can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru" },
-      { label: "ACL Care service", href: "/services/acl-care" },
+      { label: "ACL Surgery service", href: "/services/acl-care" },
+      { label: "PCL Injury Treatment service", href: "/services/pcl-injury" },
+      { label: "MCL & LCL Ligament Surgery service", href: "/services/mcl-lcl-knee-ligament-injury" },
       { label: "Bad signs after ACL surgery", href: "/blog/bad-signs-after-acl-surgery" },
     ],
   },
@@ -55,7 +58,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
       { label: "Do I need a knee arthroscopy? MRI vs symptoms", href: "/blog/do-i-need-a-knee-arthroscopy-mri-vs-symptoms" },
       { label: "Can a meniscus tear heal without surgery?", href: "/blog/can-a-meniscus-tear-heal-without-surgery" },
       { label: "Meniscus tear surgery recovery time", href: "/blog/meniscus-tear-surgery-recovery-time" },
-      { label: "Meniscal Care service", href: "/services/meniscal-care" },
+      { label: "Meniscus Tear Surgery service", href: "/services/meniscal-care" },
       { label: "Benefits of arthroscopic meniscus repair", href: "/blog/benefits-of-arthroscopic-meniscus-repair-surgery" },
     ],
   },
@@ -66,7 +69,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
       { label: "Frozen shoulder treatment in Bangalore", href: "/frozen-shoulder-treatment-bangalore" },
       { label: "Rotator cuff injury: how to treat shoulder pain", href: "/blog/rotator-cuff-injury-heres-how-to-treat-shoulder-pain-effectively" },
       { label: "When is shoulder replacement needed?", href: "/blog/when-is-shoulder-replacement-surgery-needed" },
-      { label: "Shoulder Care service", href: "/services/shoulder-care" },
+      { label: "Shoulder & Rotator Cuff Surgery service", href: "/services/shoulder-care" },
       { label: "Shoulder arthroscopy explained", href: "/blog/arthroscopy-shoulder" },
     ],
   },
@@ -82,8 +85,9 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["osteoarthritis", "obesity", "joint-pain", "joint-health", "arthritis"],
+    keywords: ["osteoarthritis", "obesity", "joint-pain", "joint-health", "arthritis", "knee-pain"],
     links: [
+      { label: "Knee pain treatment near Electronic City", href: "/knee-pain-treatment-electronic-city" },
       { label: "Arthritis treatment in Bangalore", href: "/arthritis-treatment-bangalore" },
       { label: "Osteoarthritis knee treatment", href: "/treatments/osteoarthritis-knee-treatment" },
       { label: "Non-surgical knee pain treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
@@ -92,8 +96,9 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["sports", "shin-splints", "achilles", "tendon", "tendinopathy", "tendonitis", "rehabilitation", "ankle", "elbow"],
+    keywords: ["sports", "shin-splints", "achilles", "tendon", "tendinopathy", "tendonitis", "rehabilitation", "ankle", "elbow", "cricket", "badminton"],
     links: [
+      { label: "Sports injury clinic near Electronic City", href: "/sports-injury-clinic-electronic-city" },
       { label: "Foot, heel & ankle pain specialist in Bangalore", href: "/foot-ankle-pain-bangalore" },
       { label: "Why does my heel hurt in the morning?", href: "/blog/why-does-my-heel-hurt-in-the-morning" },
       { label: "Sports Medicine service", href: "/services/sports-medicine" },
@@ -103,23 +108,25 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     ],
   },
   {
-    keywords: ["spine", "posture", "herniated-disc", "back", "neck", "cervical"],
+    keywords: ["spine", "posture", "herniated-disc", "back", "neck", "cervical", "desk-job"],
     links: [
+      { label: "Back & neck pain doctor near Electronic City", href: "/back-neck-pain-doctor-electronic-city" },
       { label: "Slip disc treatment in Bangalore", href: "/slip-disc-treatment-bangalore" },
       { label: "How long does a slipped disc take to heal?", href: "/blog/how-long-does-a-slipped-disc-take-to-heal" },
       { label: "Neck pain specialist in Bangalore", href: "/neck-pain-bangalore" },
-      { label: "Spine Care service", href: "/services/spine-care" },
+      { label: "Spine & Back Pain Treatment service", href: "/services/spine-care" },
       { label: "How posture affects spine and joint health", href: "/blog/how-posture-affects-spine-and-joint-health" },
       { label: "Herniated disc pain: expert relief in Bangalore", href: "/blog/herniated-disc-pain-find-expert-relief-in-bangalore-with-dr-nithin-n" },
       { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
     ],
   },
   {
-    keywords: ["vitamin-d", "calcium", "bone-health", "osteoporosis", "stress-fracture", "fracture"],
+    keywords: ["vitamin-d", "calcium", "bone-health", "osteoporosis", "stress-fracture", "fracture", "accident", "industrial"],
     links: [
+      { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
       { label: "Vitamin D & calcium deficiency in Indian adults", href: "/blog/vitamin-d-and-calcium-deficiency-bone-health-india" },
       { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
-      { label: "Bone Fracture service", href: "/services/bone-fracture" },
+      { label: "Fracture Treatment service", href: "/services/bone-fracture" },
       { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
     ],
   },
@@ -159,6 +166,50 @@ const GENERIC_LINKS: InternalLink[] = [
  * first; topical fallbacks fill any remaining slots up to 3–5 total.
  */
 const CURATED_LINKS: Record<string, InternalLink[]> = {
+  // --- Sep 20, 2026 local-intent batch. Each post feeds one of the four new
+  // Electronic City / Attibele money pages. ---
+  "two-wheeler-accident-hosur-road-first-hour-fracture-care": [
+    { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
+    { label: "Orthopedic doctor near Electronic City", href: "/orthopedic-doctor-electronic-city" },
+    { label: "Wrist fracture surgery recovery", href: "/blog/wrist-fracture-surgery-recovery-in-india" },
+    { label: "Industrial injuries in the Bommasandra–Jigani–Attibele belt", href: "/blog/industrial-injuries-bommasandra-jigani-attibele-orthopedic-care" },
+    { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
+  ],
+  "knee-pain-electronic-city-it-professionals": [
+    { label: "Knee pain treatment near Electronic City", href: "/knee-pain-treatment-electronic-city" },
+    { label: "Do I need a knee arthroscopy? MRI vs symptoms", href: "/blog/do-i-need-a-knee-arthroscopy-mri-vs-symptoms" },
+    { label: "Sports injury clinic near Electronic City", href: "/sports-injury-clinic-electronic-city" },
+    { label: "Knee pain specialist in Bangalore", href: "/knee-pain-bangalore" },
+    { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
+  ],
+  "weekend-cricket-badminton-injuries-electronic-city": [
+    { label: "Sports injury clinic near Electronic City", href: "/sports-injury-clinic-electronic-city" },
+    { label: "ACL reconstruction in Bangalore", href: "/acl-reconstruction-bangalore" },
+    { label: "Shoulder pain specialist in Bangalore", href: "/shoulder-pain-bangalore" },
+    { label: "Ankle sprain treatment", href: "/blog/ankle-sprain-treatment" },
+    { label: "Why rehabilitation is essential after a sports injury", href: "/blog/why-rehabilitation-is-essential-after-a-sports-injury" },
+  ],
+  "how-to-choose-a-knee-replacement-hospital-near-electronic-city-attibele": [
+    { label: "Knee & hip replacement hospital in Attibele", href: "/joint-replacement-hospital-attibele" },
+    { label: "Knee replacement cost in Bangalore (2026 guide)", href: "/knee-replacement-cost-bangalore" },
+    { label: "How long does a knee or hip replacement last?", href: "/blog/how-long-does-a-knee-or-hip-replacement-last" },
+    { label: "How cashless pre-authorisation works", href: "/blog/how-cashless-preauthorisation-works-orthopedic-surgery" },
+    { label: "Attibele vs city hospital: when local is right", href: "/blog/local-hospital-vs-city-hospital-orthopedic-care-attibele" },
+  ],
+  "industrial-injuries-bommasandra-jigani-attibele-orthopedic-care": [
+    { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
+    { label: "Orthopedic doctor in Attibele", href: "/orthopedic-doctor-attibele" },
+    { label: "Two-wheeler accident on Hosur Road: the first hour", href: "/blog/two-wheeler-accident-hosur-road-first-hour-fracture-care" },
+    { label: "Wrist fracture surgery recovery", href: "/blog/wrist-fracture-surgery-recovery-in-india" },
+    { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
+  ],
+  "local-hospital-vs-city-hospital-orthopedic-care-attibele": [
+    { label: "Orthopedic doctor in Attibele", href: "/orthopedic-doctor-attibele" },
+    { label: "Knee & hip replacement hospital in Attibele", href: "/joint-replacement-hospital-attibele" },
+    { label: "Orthopedic doctor near Electronic City", href: "/orthopedic-doctor-electronic-city" },
+    { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
+    { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
+  ],
   // --- Aug 12, 2026 knowledge batch. Each post is written to feed one of the
   // four new money pages; these curated links make that funnel explicit. ---
   "steroid-injection-vs-prp-for-joint-pain": [
@@ -179,7 +230,7 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
     { label: "Knee arthroscopy in Bangalore", href: "/knee-arthroscopy-bangalore" },
     { label: "Asymptomatic meniscus tear", href: "/blog/asymptomatic-meniscus-tear" },
     { label: "Can a meniscus tear heal without surgery?", href: "/blog/can-a-meniscus-tear-heal-without-surgery" },
-    { label: "Meniscal Care service", href: "/services/meniscal-care" },
+    { label: "Meniscus Tear Surgery service", href: "/services/meniscal-care" },
     { label: "Knee pain specialist in Bangalore", href: "/knee-pain-bangalore" },
   ],
   "frozen-shoulder-and-diabetes": [
@@ -187,7 +238,7 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
     { label: "Shoulder pain specialist in Bangalore", href: "/shoulder-pain-bangalore" },
     { label: "Frozen shoulder treatment without surgery", href: "/blog/frozen-shoulder-treatment-without-surgery-india" },
     { label: "Shoulder pain injections: precision care", href: "/blog/shoulder-pain-injections-precision-care" },
-    { label: "Shoulder Care service", href: "/services/shoulder-care" },
+    { label: "Shoulder & Rotator Cuff Surgery service", href: "/services/shoulder-care" },
   ],
   "how-cashless-preauthorisation-works-orthopedic-surgery": [
     { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
@@ -258,7 +309,7 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
   "acl-surgery-cost-and-recovery-bangalore": [
     { label: "Can you walk with a torn ACL?", href: "/blog/can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru" },
     { label: "Bad signs after ACL surgery", href: "/blog/bad-signs-after-acl-surgery" },
-    { label: "ACL Care service", href: "/services/acl-care" },
+    { label: "ACL Surgery service", href: "/services/acl-care" },
     { label: "Advanced sports injuries treatment", href: "/treatments/advanced-sports-injuries-treatment" },
   ],
   "hairline-knee-healing-time": [
@@ -337,13 +388,13 @@ const SERVICE_LINKS: Record<string, InternalLink[]> = {
     { label: "Can a meniscus tear heal without surgery?", href: "/blog/can-a-meniscus-tear-heal-without-surgery" },
     { label: "Meniscus tear surgery recovery time", href: "/blog/meniscus-tear-surgery-recovery-time" },
     { label: "Benefits of arthroscopic meniscus repair", href: "/blog/benefits-of-arthroscopic-meniscus-repair-surgery" },
-    { label: "ACL Care service", href: "/services/acl-care" },
+    { label: "ACL Surgery service", href: "/services/acl-care" },
   ],
   "sports-medicine": [
     { label: "Advanced sports injuries treatment", href: "/treatments/advanced-sports-injuries-treatment" },
     { label: "Why rehabilitation is essential after a sports injury", href: "/blog/why-rehabilitation-is-essential-after-a-sports-injury" },
     { label: "ACL surgery cost & recovery in Bangalore", href: "/blog/acl-surgery-cost-and-recovery-bangalore" },
-    { label: "Shoulder Care service", href: "/services/shoulder-care" },
+    { label: "Shoulder & Rotator Cuff Surgery service", href: "/services/shoulder-care" },
   ],
   "knee-replacement": [
     { label: "Knee replacement cost in Bangalore (2026)", href: "/knee-replacement-cost-bangalore" },
@@ -372,6 +423,34 @@ const SERVICE_LINKS: Record<string, InternalLink[]> = {
     { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
     { label: "Why rehabilitation is essential after a sports injury", href: "/blog/why-rehabilitation-is-essential-after-a-sports-injury" },
     { label: "Best orthopedic surgeon in Attibele", href: "/blog/best-orthopedic-surgeon-in-attibele" },
+    { label: "Sports Medicine service", href: "/services/sports-medicine" },
+  ],
+  "mpfl-patellar-dislocation": [
+    { label: "Knee arthroscopy in Bangalore", href: "/knee-arthroscopy-bangalore" },
+    { label: "ACL Surgery service", href: "/services/acl-care" },
+    { label: "MCL & LCL Ligament Surgery service", href: "/services/mcl-lcl-knee-ligament-injury" },
+    { label: "Knee pain specialist in Bangalore", href: "/knee-pain-bangalore" },
+    { label: "Sports Medicine service", href: "/services/sports-medicine" },
+  ],
+  "pcl-injury": [
+    { label: "ACL Surgery service", href: "/services/acl-care" },
+    { label: "What is a PCL tear and how it happens", href: "/blog/what-is-a-pcl-tear-and-how-it-happens" },
+    { label: "Anterior and posterior cruciate ligament explained", href: "/blog/anterior-and-posterior-cruciate-ligament" },
+    { label: "MCL & LCL Ligament Surgery service", href: "/services/mcl-lcl-knee-ligament-injury" },
+    { label: "Knee arthroscopy in Bangalore", href: "/knee-arthroscopy-bangalore" },
+  ],
+  "mcl-lcl-knee-ligament-injury": [
+    { label: "ACL Surgery service", href: "/services/acl-care" },
+    { label: "PCL Injury Treatment service", href: "/services/pcl-injury" },
+    { label: "Sports injury specialist in Bangalore", href: "/sports-injury-doctor-bangalore" },
+    { label: "Why rehabilitation is essential after a sports injury", href: "/blog/why-rehabilitation-is-essential-after-a-sports-injury" },
+    { label: "Knee pain specialist in Bangalore", href: "/knee-pain-bangalore" },
+  ],
+  "hip-impingement-fai": [
+    { label: "Hip pain specialist in Bangalore", href: "/hip-pain-bangalore" },
+    { label: "Why do I feel pain in my hip when standing from a chair?", href: "/blog/why-do-i-feel-pain-in-my-hip-when-standing-from-a-chair" },
+    { label: "Hip Replacement Surgery service", href: "/services/hip-replacement" },
+    { label: "Ultrasound-guided orthopedic injections", href: "/treatments/ultrasound-guided-orthopedic-injections" },
     { label: "Sports Medicine service", href: "/services/sports-medicine" },
   ],
   "spine-care": [

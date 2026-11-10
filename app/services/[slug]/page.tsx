@@ -9,6 +9,8 @@ import { servicesData, siteConfig, practicePostalAddress } from "@/lib/data";
 import { serviceSeoOverrides } from "@/lib/seo-overrides";
 import { siteOrigin } from "@/lib/site-url";
 import { getServiceLinks } from "@/lib/internal-links";
+import { servicePageContent } from "@/lib/service-pages";
+import { ServiceBody } from "@/components/services/service-body";
 
 // Generate static params for all services
 export function generateStaticParams() {
@@ -17,28 +19,39 @@ export function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+// Next.js 16: `params` is a Promise. The sync-access shim that Next 15 provided
+// was removed in 16, so reading `params.slug` directly yields undefined — which
+// made every lookup miss and every dynamic page fall through to notFound().
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
     // Per-slug SEO overrides live in lib/seo-overrides.ts.
-    const override = serviceSeoOverrides[params.slug];
+    const override = serviceSeoOverrides[slug];
     if (override) {
         return {
-            title: override.title,
+            // `absolute` opts out of the root layout's "%s | Dr. Nitin N Sunku"
+            // template. Without it these titles rendered the brand twice, e.g.
+            // "ACL Tear Care & Surgery – Dr. Nitin N Sunku Orthopedics | Dr. Nitin N Sunku".
+            title: { absolute: override.title },
             description: override.description,
-            alternates: { canonical: `${siteOrigin}/services/${params.slug}` },
+            alternates: { canonical: `${siteOrigin}/services/${slug}` },
         };
     }
 
-    const service = servicesData.find((s) => s.slug === params.slug);
+    const service = servicesData.find((s) => s.slug === slug);
     if (!service) return {};
     return {
-        title: `${service.title} Treatment in HSR Layout`,
+        // Fallback for a service with no entry in serviceSeoOverrides. Also
+        // absolute, and geo-neutral — the previous hard-coded "in HSR Layout"
+        // was wrong for a site whose service pages target the Attibele hospital.
+        title: { absolute: `${service.title} in Bangalore | Dr. Nitin N Sunku` },
         description: service.shortDesc,
         alternates: { canonical: `${siteOrigin}/services/${service.slug}` },
     };
 }
 
-export default function ServiceDetailPage({ params }: { params: { slug: string } }) {
-    const service = servicesData.find((s) => s.slug === params.slug);
+export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const service = servicesData.find((s) => s.slug === slug);
 
     if (!service) {
         notFound();
@@ -102,7 +115,9 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 grid lg:grid-cols-3 gap-12">
 
                     <div className="lg:col-span-2 space-y-12">
-                        {service.slug === "acl-care" ? (
+                        {servicePageContent[service.slug] ? (
+                            <ServiceBody content={servicePageContent[service.slug]} />
+                        ) : service.slug === "acl-care" ? (
                             <>
                                 <section className="space-y-6">
                                     <p className="text-gray-600 leading-relaxed text-lg">
@@ -196,7 +211,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 <section>
                                     <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                                         <MapPin className="h-8 w-8 text-primary" />
-                                        Where we see ACL Care Patients
+                                        Where we see ACL Surgery Patients
                                     </h2>
                                     <div className="grid sm:grid-cols-2 gap-6">
                                         <div className="p-6 rounded-2xl border border-gray-100 hover:border-primary/20 transition-colors">
@@ -220,7 +235,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </section>
 
                                 <FAQ
-                                    title="ACL Care FAQ"
+                                    title="ACL Surgery FAQ"
                                     items={[
                                         {
                                             question: "What causes an ACL tear?",
@@ -393,7 +408,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </section>
 
                                 <FAQ
-                                    title="Meniscal Care FAQ"
+                                    title="Meniscus Tear Surgery FAQ"
                                     items={[
                                         {
                                             question: "What is a meniscus tear?",
@@ -1271,7 +1286,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </section>
 
                                 <FAQ
-                                    title="Shoulder Care FAQ"
+                                    title="Shoulder & Rotator Cuff Surgery FAQ"
                                     items={[
                                         {
                                             question: "What causes shoulder pain requiring specialist care?",
@@ -1484,7 +1499,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </section>
 
                                 <FAQ
-                                    title="Bone Fracture FAQ"
+                                    title="Fracture Treatment FAQ"
                                     items={[
                                         {
                                             question: "How are bone fractures diagnosed?",
@@ -1534,7 +1549,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book Bone Fracture Consultation in Bengaluru</h2>
+                                    <h2 className="text-2xl font-bold mb-4">Book Fracture Treatment Consultation in Bengaluru</h2>
                                     <p className="mb-8 opacity-90 leading-relaxed">If you suspect a fracture or require specialized trauma care, prompt evaluation is essential for proper healing. Consult Dr. Nitin N Sunku, experienced orthopedic specialist in Bengaluru, for expert fracture treatment, casting, and advanced surgical care.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
                                         <Link href="/contact">Book Consultation</Link>
@@ -1697,7 +1712,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 </section>
 
                                 <FAQ
-                                    title="Spine Care FAQ"
+                                    title="Spine & Back Pain Treatment FAQ"
                                     items={[
                                         {
                                             question: "What causes spine problems?",
@@ -1739,7 +1754,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                                 />
 
                                 <div className="mt-12 bg-primary text-white p-8 rounded-3xl text-center">
-                                    <h2 className="text-2xl font-bold mb-4">Book Spine Care Consultation in Bengaluru</h2>
+                                    <h2 className="text-2xl font-bold mb-4">Book Spine & Back Pain Consultation in Bengaluru</h2>
                                     <p className="mb-8 opacity-90 leading-relaxed">If you are dealing with chronic back pain, sciatica, or herniated discs, proper evaluation is key to preventing long-term damage. Consult Dr. Nitin N Sunku, experienced orthopedic specialist in Bengaluru, for comprehensive spine care, targeted therapies, and surgical options when needed.</p>
                                     <Button className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-bold text-lg" asChild>
                                         <Link href="/contact">Book Consultation</Link>

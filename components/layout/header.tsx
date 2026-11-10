@@ -13,18 +13,25 @@ import {
     LOCATION_LINKS,
 } from "@/lib/landing-links";
 
-// Awards & Publications intentionally live in the footer (Quick Links) rather
-// than the primary header nav, to keep the top navigation focused.
+// Desktop header nav. Kept to 6 links + the Conditions mega-menu: any more and
+// the row overflows its flex track between the logo and the CTA, which made the
+// items visually collide on 1024–1280px viewports.
 const navigation = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Treatments", href: "/treatments" },
     { name: "Patient Stories", href: "/testimonials" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Team", href: "/team" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
+];
+
+// About / Gallery / Team live in the footer (Quick Links) and in the mobile
+// drawer, which has room for the full set. Awards & Publications are footer-only
+// for the same reason.
+const secondaryNavigation = [
+    { name: "About", href: "/about" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Team", href: "/team" },
 ];
 
 /**
@@ -53,7 +60,7 @@ export function Header() {
         <>
             <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 backdrop-blur-lg shadow-lg border-b border-blue-900/50">
                 <nav
-                    className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
+                    className="mx-auto flex max-w-7xl items-center justify-between gap-2 xl:gap-4 p-4 lg:px-6 xl:px-8"
                     aria-label="Global"
                 >
                     {/* Logo */}
@@ -95,16 +102,16 @@ export function Header() {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex lg:items-center lg:gap-x-0.5 xl:gap-x-1">
+                    <div className="hidden lg:flex lg:items-center justify-center gap-x-0.5 xl:gap-x-1.5">
                         {navigation.map((item) => (
                             <Fragment key={item.name}>
                                 <Link
                                     href={item.href}
                                     className={cn(
-                                        "relative whitespace-nowrap px-2.5 xl:px-3 py-2 text-sm font-semibold transition-all duration-200 rounded-lg group",
+                                        "relative whitespace-nowrap px-2 xl:px-3 py-2.5 text-sm font-semibold transition-all duration-200 rounded-lg group block",
                                         isActive(item.href)
-                                            ? "text-white bg-blue-800"
-                                            : "text-blue-50 hover:text-white hover:bg-blue-700"
+                                            ? "text-white bg-blue-800/50"
+                                            : "text-white hover:text-white hover:bg-blue-700/50"
                                     )}
                                 >
                                     {item.name}
@@ -126,7 +133,7 @@ export function Header() {
                                         <button
                                             type="button"
                                             aria-haspopup="true"
-                                            className="relative inline-flex items-center gap-1 whitespace-nowrap px-2.5 xl:px-3 py-2 text-sm font-semibold rounded-lg text-blue-50 hover:text-white hover:bg-blue-700 transition-all duration-200"
+                                            className="relative inline-flex items-center gap-1 whitespace-nowrap px-2 xl:px-3 py-2.5 text-sm font-semibold rounded-lg text-white hover:bg-blue-700/50 transition-all duration-200"
                                         >
                                             Conditions
                                             <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover/mega:rotate-180" />
@@ -210,7 +217,7 @@ export function Header() {
                         <div className="-my-6 divide-y divide-gray-200">
                             {/* Navigation Links */}
                             <div className="space-y-1 py-6">
-                                {navigation.map((item) => (
+                                {[...navigation, ...secondaryNavigation].map((item) => (
                                     <Link
                                         key={item.name}
                                         href={item.href}

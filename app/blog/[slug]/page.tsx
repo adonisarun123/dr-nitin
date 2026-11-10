@@ -20,20 +20,24 @@ export function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+// Next.js 16: `params` is a Promise. The sync-access shim that Next 15 provided
+// was removed in 16, so reading `params.slug` directly yields undefined — which
+// made every lookup miss and every dynamic page fall through to notFound().
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
     // Per-slug SEO overrides live in lib/seo-overrides.ts so the route handler
     // stays focused on rendering. New posts that don't need an override will
     // fall through to the post's own title + excerpt.
-    const override = blogSeoOverrides[params.slug];
+    const override = blogSeoOverrides[slug];
     if (override) {
         return {
             title: { absolute: override.title },
             description: override.description,
-            alternates: { canonical: `${siteOrigin}/blog/${params.slug}` },
+            alternates: { canonical: `${siteOrigin}/blog/${slug}` },
         };
     }
     // No override: fall back to the post's own title + excerpt.
-    const post = blogPosts.find((p) => p.slug === params.slug);
+    const post = blogPosts.find((p) => p.slug === slug);
     if (!post) return {};
     return {
         title: post.title,
@@ -42,8 +46,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
 }
 
-export default function BlogDetailPage({ params }: { params: { slug: string } }) {
-    const post = blogPosts.find((p) => p.slug === params.slug);
+export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const post = blogPosts.find((p) => p.slug === slug);
 
     if (!post) {
         notFound();
