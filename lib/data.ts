@@ -151,6 +151,477 @@ export const testimonialsData = [
 
 export const blogPosts = [
   {
+    slug: "acl-degeneration",
+    title: "ACL Degeneration: Causes, Symptoms & Treatment (Complete Guide)",
+    excerpt: "ACL degeneration is the gradual breakdown of the anterior cruciate ligament's fibres over time — caused by ageing, repeated stress, osteoarthritis, an old injury, or a build-up of jelly-like (mucoid) material inside the ligament, rather than one sudden tear. It typically causes a deep, dull knee ache, pain at the end of bending or straightening, stiffness and, in some people, a feeling that the knee is loose.",
+    date: "Nov 11, 2026",
+    category: "Sports Medicine",
+    image: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <h2>Quick Answer: What Is ACL Degeneration?</h2>
+      <p>ACL degeneration is the gradual breakdown of the anterior cruciate ligament's fibres over time, caused by ageing, repeated stress, osteoarthritis, an old injury, or a build-up of jelly-like (mucoid) material inside the ligament, rather than one sudden tear. It typically causes a deep, dull knee ache, pain at the end of bending or straightening, stiffness and, in some people, a feeling that the knee is loose. Treatment ranges from physiotherapy, weight management and activity changes to arthroscopic (keyhole) surgery when symptoms persist or the knee becomes unstable.</p>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Degeneration and a tear are different problems, and they are treated differently.</li>
+        <li>Standard X-rays usually look normal, so an MRI plus a hands-on knee examination is what confirms the diagnosis.</li>
+        <li>Many patients improve with 8 to 12 weeks of structured non-surgical care.</li>
+        <li>Surgery is reserved for persistent pain, blocked movement or true instability.</li>
+      </ul>
+
+      <h2>What Is ACL Degeneration?</h2>
+      <p>The anterior cruciate ligament (ACL) is a strong band of tissue that runs diagonally through the centre of your knee. Its main job is to stop the shin bone sliding forward under the thigh bone and to control rotation when you pivot, land or change direction. If you want the detailed anatomy, our guide to <a href="/blog/anterior-cruciate-ligament-origin-and-insertion">anterior cruciate ligament anatomy, origin and insertion</a> covers it step by step.</p>
+      <p>In a healthy ACL, collagen fibres sit in tight, organised bundles. In ACL degeneration, that organisation is lost. The fibres thin, fray, thicken abnormally or become infiltrated with other material. The ligament may still be physically in one piece, but it no longer behaves like a healthy ligament.</p>
+      <h3>Is ACL degeneration the same as an ACL tear?</h3>
+      <p>No. An ACL tear is usually a sudden event: a twist, a landing or a collision, often with a pop and rapid swelling. ACL degeneration is a slow process, and it often shows up without any dramatic injury. That said, the two can overlap. A long-standing degenerated ligament can eventually tear with a trivial twist, and a partially torn ligament that never healed can degenerate over the years. Our article on the <a href="/blog/anterior-and-posterior-cruciate-ligament">anterior and posterior cruciate ligaments</a> explains how each ligament is injured and how doctors tell them apart.</p>
+
+      <h2>Types of ACL Degeneration</h2>
+      <p>The phrase "ACL degeneration" is used for several different situations, and the right treatment depends on which one you have. Most online articles lump them together. We do not, because the distinction matters.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>What is happening</th>
+            <th>Who it usually affects</th>
+            <th>Typical clue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Age-related (attritional) wear</td><td>Fibres gradually thin and fray with ageing</td><td>Adults over 40 to 50</td><td>Mild ache, stiffness, often found incidentally on MRI</td></tr>
+          <tr><td>Mucoid degeneration</td><td>Jelly-like mucoid material builds up between the fibres, so the ACL looks thick and swollen</td><td>Active middle-aged adults, athletes</td><td>Pain at deep bending, sometimes a block to full straightening</td></tr>
+          <tr><td>Osteoarthritis-related degeneration</td><td>The ACL deteriorates alongside worn cartilage</td><td>People with knee arthritis</td><td>Joint-line pain, creaking, swelling after activity</td></tr>
+          <tr><td>Chronic ACL deficiency</td><td>An old tear or partial tear that never healed and has become attenuated</td><td>Past sports or twisting injuries</td><td>Giving way on pivoting or on uneven ground</td></tr>
+        </tbody>
+      </table>
+      <p>Mucoid degeneration of the ACL deserves a special mention. It is considered uncommon and probably under-diagnosed, and its exact cause is still not fully understood. On MRI, the ligament often appears diffusely thickened with increased signal, sometimes described as a "celery stalk" look, and small cysts may sit near its attachments.</p>
+
+      <h2>Causes and Risk Factors of ACL Degeneration</h2>
+      <p>There is rarely one single cause. Several factors usually combine.</p>
+      <h3>1. Ageing and natural wear</h3>
+      <p>Like tendons and cartilage, ligaments lose water content and collagen quality as we age. By middle age, some fraying inside the ACL is common even in people with no knee complaints.</p>
+      <h3>2. Repeated micro-stress</h3>
+      <p>Running, football, cricket, badminton, trekking, gym squats and jumping sports all load the ACL thousands of times. Over years, repeated small stresses can add up, especially if muscle strength or technique is poor.</p>
+      <h3>3. A narrow intercondylar notch</h3>
+      <p>The ACL sits in a groove between the thigh bone condyles called the notch. If the notch is narrow, the ligament can rub against bone with each movement, which may contribute to thickening and wear.</p>
+      <h3>4. Knee osteoarthritis and joint inflammation</h3>
+      <p>The ACL lives inside the joint and shares the same fluid environment as the cartilage. In arthritic knees, chronic inflammation of the joint lining (synovitis) can damage the ligament, and ligament weakening can in turn overload the cartilage. If you already have worn cartilage, read our plain-English guide to <a href="/blog/cartilage-degeneration-explained">cartilage degeneration</a>.</p>
+      <h3>5. An old injury that never fully healed</h3>
+      <p>A previous sprain, a partial ACL tear or a knee twist that was "walked off" years ago can leave a scarred, weakened ligament that degenerates further with time.</p>
+      <h3>6. Extra body weight</h3>
+      <p>Every extra kilogram adds several kilograms of load across the knee during walking, stairs and squatting. Over years, that raises stress on every structure, including the ACL. Our article on <a href="/blog/weight-loss-and-knee-pain">weight loss and knee pain</a> shows how much difference even modest weight reduction can make.</p>
+      <h3>7. Inflammatory and metabolic conditions</h3>
+      <p>Rheumatoid arthritis and other inflammatory joint diseases are known to attack the lining and ligaments of the knee. Poorly controlled diabetes can also affect connective tissue health.</p>
+      <h3>8. Trivial trauma on an already weak ligament</h3>
+      <p>In published case series of mucoid ACL degeneration, a majority of patients recalled only a minor knock or twist before symptoms began. A small event can be enough to trigger symptoms in a ligament that was already vulnerable.</p>
+
+      <h2>Symptoms of ACL Degeneration</h2>
+      <p>Symptoms are usually subtle and creep up over weeks or months. Common features include:</p>
+      <ul>
+        <li>Deep, dull knee pain that is hard to point to, often felt behind or in the centre of the knee</li>
+        <li>Pain with full bending, such as squatting, sitting cross-legged, kneeling or using an Indian-style toilet</li>
+        <li>Pain or tightness at the end of straightening, sometimes with a feeling that the knee will not fully lock out</li>
+        <li>Stiffness, especially after sitting for a long time or first thing in the morning</li>
+        <li>Mild swelling after activity</li>
+        <li>Clicking or a catching sensation, which can mimic a meniscus problem</li>
+        <li>A feeling of looseness or giving way, more typical when the ligament has weakened significantly or an old tear is present</li>
+      </ul>
+      <p>If your pain started after a clear twisting event with a pop and immediate swelling, that points more toward a tear. Our guide on <a href="/blog/can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru">whether you can walk with a torn ACL</a> explains what a fresh tear typically feels like.</p>
+      <h3>ACL degeneration vs ACL tear vs meniscus tear vs arthritis</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>ACL degeneration</th>
+            <th>ACL tear</th>
+            <th>Meniscus tear</th>
+            <th>Knee arthritis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Onset</td><td>Gradual</td><td>Sudden, often with a pop</td><td>Sudden or gradual</td><td>Gradual</td></tr>
+          <tr><td>Main pain</td><td>Deep, central, at end ranges</td><td>Immediate pain, then instability</td><td>Joint-line pain, locking</td><td>Joint-line pain, stiffness</td></tr>
+          <tr><td>Swelling</td><td>Mild, intermittent</td><td>Rapid, within hours</td><td>Variable</td><td>Intermittent</td></tr>
+          <tr><td>Giving way</td><td>Sometimes</td><td>Common</td><td>Occasional</td><td>Rare</td></tr>
+          <tr><td>X-ray</td><td>Usually normal</td><td>Usually normal</td><td>Usually normal</td><td>Narrowed joint space</td></tr>
+        </tbody>
+      </table>
+      <p>This table is a guide only. The only reliable way to separate these conditions is a proper examination and imaging.</p>
+
+      <h2>When Should You See an Orthopedic Doctor?</h2>
+      <p>Book a consultation if you notice any of the following:</p>
+      <ul>
+        <li>Knee pain lasting longer than 3 to 4 weeks despite rest</li>
+        <li>Difficulty fully straightening or fully bending the knee</li>
+        <li>Repeated giving way, especially on stairs, slopes or while turning</li>
+        <li>A locked knee that will not move</li>
+        <li>Swelling that keeps returning</li>
+        <li>Night pain or pain that is getting steadily worse</li>
+      </ul>
+      <p>Seek urgent care if the knee suddenly locks, swells rapidly after an injury, or you cannot bear weight. If you are unsure whether your symptoms need a specialist, our article on <a href="/blog/when-to-see-orthopedic-surgeon-for-joint-pain">when to see an orthopedic surgeon for joint pain</a> lists the red flags.</p>
+
+      <h2>How Is ACL Degeneration Diagnosed?</h2>
+      <p>Diagnosis combines your story, a physical examination and the right imaging. It should never rest on an MRI report alone, because many people have ACL changes on MRI without any symptoms.</p>
+      <h3>Clinical examination</h3>
+      <p>Your surgeon checks the range of movement, looks for pain at the end of bending or straightening, and tests stability using the Lachman test, anterior drawer test and pivot shift test. A degenerated ACL with intact stability behaves very differently from a torn, unstable one.</p>
+      <h3>X-ray</h3>
+      <p>An X-ray does not show ligaments, and in ACL degeneration it is often normal. It is still useful to check for early arthritis, a narrow notch or other bone problems.</p>
+      <h3>MRI scan</h3>
+      <p>MRI is the key test. Features that suggest ACL degeneration include:</p>
+      <ul>
+        <li>A thickened ACL with increased internal signal</li>
+        <li>A blurred or poorly defined fibre pattern</li>
+        <li>Small ganglion cysts around the ligament or its tibial attachment</li>
+        <li>An intact ligament in continuity, which separates degeneration from a complete tear</li>
+      </ul>
+      <p>Because an "abnormal ACL" on MRI does not always explain pain, the scan has to be read together with your symptoms. This is why we avoid ordering unnecessary scans and treat the patient rather than the report.</p>
+      <h3>Arthroscopy</h3>
+      <p>In selected cases, a keyhole look inside the knee confirms the diagnosis and allows treatment in the same sitting.</p>
+
+      <h2>ACL Degeneration Treatment Options</h2>
+      <p>Treatment depends on the type of degeneration, how much pain or instability you have, your age, your activity level and any associated cartilage or meniscus damage.</p>
+      <h3>Non-surgical treatment (first line for most people)</h3>
+      <p>For stable knees with mild to moderate symptoms, a structured non-surgical plan is the usual starting point:</p>
+      <ul>
+        <li><strong>Activity modification:</strong> temporarily avoiding deep squats, kneeling, pivoting sports and heavy leg-press work while the knee settles</li>
+        <li><strong>Physiotherapy:</strong> strengthening the quadriceps, hamstrings, glutes and calf muscles so they share the load and protect the ligament, plus balance and control training</li>
+        <li><strong>Weight management:</strong> often the single most effective long-term step for knee health</li>
+        <li><strong>Short course of anti-inflammatory medication:</strong> only as advised by your doctor</li>
+        <li><strong>Bracing:</strong> useful for patients who feel unsteady during sport or on uneven ground</li>
+        <li><strong>Image-guided injections:</strong> where cartilage wear or joint inflammation is part of the picture, options such as hyaluronic acid, PRP or GFC may be discussed, and precision matters, which is why we use <a href="/treatments/ultrasound-guided-orthopedic-injections">ultrasound-guided injections</a>. To be honest and clear: no injection regrows a degenerated ACL, and these treatments are aimed at pain, inflammation and the surrounding joint.</li>
+      </ul>
+      <p>A fair trial is usually 8 to 12 weeks. If you improve, you continue the strengthening programme and return to activity in stages.</p>
+      <h3>Surgical treatment</h3>
+      <p>Surgery is considered when pain, restricted movement or instability persists despite proper non-surgical care.</p>
+      <p><strong>1. Arthroscopic debridement or partial excision (for mucoid degeneration).</strong> Through two or three small keyhole cuts, the surgeon removes the swollen, hypertrophied portion of the ACL and any associated cyst, sometimes with a notchplasty (gently widening the notch to stop the ligament rubbing). In a large published series of 80 knees, about 94 percent of knees had meaningful pain relief after partial excision, though a small number developed some forward instability afterwards. This is why the amount of ligament removed must be judged carefully by an experienced arthroscopic surgeon. You can read more about the technique on our <a href="/knee-arthroscopy-bangalore">knee arthroscopy</a> page.</p>
+      <p><strong>2. ACL augmentation or reconstruction (for instability).</strong> When the ligament is too weak to control the knee and you are experiencing repeated giving way, rebuilding the ACL with a graft may be the right choice. Our <a href="/acl-reconstruction-bangalore">ACL reconstruction</a> page explains graft options and what the operation involves, and our <a href="/blog/acl-surgery-cost-and-recovery-bangalore">ACL surgery cost and recovery</a> guide covers realistic expense and timelines in Bengaluru.</p>
+      <p><strong>3. Treating the bigger picture.</strong> If ACL degeneration is part of established knee arthritis, the plan has to address the cartilage too. Depending on the pattern of wear, that may range from structured <a href="/treatments/osteoarthritis-knee-treatment">osteoarthritis knee treatment</a> to realignment or joint replacement in advanced cases. Whether the ACL is intact is an important factor in choosing the right operation, so it should be assessed before any arthritis surgery is planned.</p>
+      <h3>Which treatment suits which situation?</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Your situation</th>
+            <th>Likely approach</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Mild ache, stable knee, ACL changes found on MRI</td><td>Physiotherapy, strengthening, weight and activity guidance</td></tr>
+          <tr><td>Pain at deep bending or a block to straightening, mucoid ACL on MRI</td><td>Trial of non-surgical care, then arthroscopic partial excision if it persists</td></tr>
+          <tr><td>Giving way, positive Lachman or pivot shift</td><td>Bracing and rehab for low demand, ACL reconstruction for active or unstable knees</td></tr>
+          <tr><td>ACL changes with knee arthritis</td><td>Arthritis-focused plan: exercise, weight loss, injections, then surgery if needed</td></tr>
+          <tr><td>Over 60 with an ACL problem</td><td>Individualised decision based on activity goals, not age alone</td></tr>
+        </tbody>
+      </table>
+      <p>Age is rarely the deciding factor. Our article on <a href="/blog/acl-repair-over-age-60">ACL surgery over age 60</a> explains how an active older adult can still be a good candidate.</p>
+
+      <h2>Recovery Timeline: What to Expect</h2>
+      <p>These are typical ranges, and your surgeon will tailor them to you.</p>
+      <ul>
+        <li><strong>Non-surgical care:</strong> improvement over 6 to 12 weeks, with strengthening continuing for 3 to 6 months</li>
+        <li><strong>After arthroscopic debridement:</strong> walking within days, regaining full movement over a few weeks, and a gradual return to sport in roughly 6 to 12 weeks, depending on the extent of work done</li>
+        <li><strong>After ACL reconstruction:</strong> a longer path, usually around 6 to 9 months before full return to pivoting sport, guided by strength and function tests rather than the calendar</li>
+      </ul>
+      <p>Whatever the treatment, rehabilitation decides the final result. If you have surgery, it is worth knowing the <a href="/blog/bad-signs-after-acl-surgery">warning signs after ACL surgery</a> so that problems are caught early. Some patients also ask about adjuncts, and our review of <a href="/blog/red-light-therapy-for-acl-tear">red light therapy for ACL injuries</a> shows what the evidence does and does not support.</p>
+
+      <h2>Can You Prevent ACL Degeneration?</h2>
+      <p>You cannot stop ageing, but you can slow the stresses that wear the ligament:</p>
+      <ul>
+        <li>Keep your leg muscles strong, especially the quadriceps, hamstrings and glutes.</li>
+        <li>Maintain a healthy weight to reduce load on every knee structure.</li>
+        <li>Warm up properly and include balance and landing-control drills if you play pivoting sports.</li>
+        <li>Build up training gradually. Sudden jumps in running distance or gym load are a common trigger.</li>
+        <li>Do not ignore a twisted knee. Get a persistent "sprain" examined instead of walking it off.</li>
+        <li>Treat arthritis early. Learning the <a href="/blog/early-signs-of-knee-osteoarthritis">early signs of knee osteoarthritis</a> gives you more options and better outcomes.</li>
+        <li>Vary your exercise. Cycling, swimming and strength work protect the knee better than repeated high-impact pounding alone.</li>
+      </ul>
+
+      <h2>Why Choose Dr. Nitin N Sunku for ACL and Knee Care in Bengaluru?</h2>
+      <p>Accurate diagnosis is half the treatment in ACL degeneration, because the wrong label can lead to the wrong operation. Dr. Nitin N Sunku is a fellowship-trained orthopedic and sports medicine surgeon with an MS in Orthopedics (gold medalist), specialised training in arthroscopy, and experience as team doctor for Bengaluru FC. His approach is conservative first: surgery is advised only when the benefits clearly outweigh the risks.</p>
+      <p>You can see Dr. Nitin at Raghava Multispeciality Hospital in Attibele and Health Nest Hospital in HSR Layout. To explore our complete range of ligament and arthroscopy care, visit the <a href="/services/acl-care">ACL care service</a> page, or read about our wider <a href="/services/sports-medicine">sports medicine services</a>.</p>
+
+      <h2>Frequently Asked Questions About ACL Degeneration</h2>
+      <p><strong>What is ACL degeneration?</strong><br/>ACL degeneration is the slow breakdown of the anterior cruciate ligament's fibres due to ageing, repeated stress, osteoarthritis, old injury or mucoid build-up. The ligament usually stays in one piece but loses quality, which can cause pain, stiffness or looseness.</p>
+      <p><strong>What are the first symptoms of ACL degeneration?</strong><br/>The earliest signs are usually a deep, vague knee ache, discomfort at the end of full bending or straightening, mild stiffness and occasional swelling after activity. Giving way appears later and mainly if the ligament has become weak.</p>
+      <p><strong>Is ACL degeneration the same as an ACL tear?</strong><br/>No. A tear is typically a sudden injury with a pop and rapid swelling. Degeneration is gradual wear or internal change in the ligament. They can coexist, and a degenerated ACL can tear more easily.</p>
+      <p><strong>Can a degenerated ACL heal on its own?</strong><br/>The damaged fibres do not regrow, but symptoms often settle with physiotherapy, strengthening, weight management and activity modification. Many people live comfortably with a degenerated but functioning ACL.</p>
+      <p><strong>What causes mucoid degeneration of the ACL?</strong><br/>The exact cause is not fully understood. Suggested contributors include ageing, repeated micro-stress, a narrow notch, joint inflammation and minor trauma. It is mostly found in active middle-aged adults and is thought to be under-recognised.</p>
+      <p><strong>Can ACL degeneration be seen on X-ray?</strong><br/>Usually not. X-rays show bone, not ligaments, and are often normal. MRI, combined with a physical examination, is the main way to identify ACL degeneration.</p>
+      <p><strong>Do I need surgery for ACL degeneration?</strong><br/>Not always. Surgery is considered if pain, blocked movement or instability continues after about 8 to 12 weeks of proper non-surgical treatment. Options include arthroscopic partial excision of the swollen ligament or ACL reconstruction for an unstable knee.</p>
+      <p><strong>Can I run or exercise with ACL degeneration?</strong><br/>Often yes, with modifications. Low-impact activity such as cycling, swimming and guided strength work is generally safe. High-impact running, deep squats and pivoting sports may need to be paused or phased in until your surgeon clears you.</p>
+      <p><strong>Does ACL degeneration lead to knee arthritis?</strong><br/>The two are closely linked and can influence each other. A weak or unstable ACL can overload cartilage over time, and arthritic knees often show ACL wear. Early strengthening and weight control help protect the joint.</p>
+      <p><strong>How long does recovery take?</strong><br/>Non-surgical improvement usually takes 6 to 12 weeks. After keyhole debridement, many patients return to sport in about 6 to 12 weeks. After ACL reconstruction, full return to pivoting sport generally takes 6 to 9 months.</p>
+      <p><strong>Which doctor should I see for ACL degeneration in Bengaluru?</strong><br/>An orthopedic surgeon with sports medicine and arthroscopy training is the right specialist. Dr. Nitin N Sunku consults in Attibele and HSR Layout and can examine your knee, review your MRI and recommend a clear plan.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>ACL degeneration is a spectrum, from harmless age-related wear to a painful, swollen ligament that blocks movement or a weakened one that lets the knee give way. The key is an accurate diagnosis and a plan matched to your knee and your goals. Most people do well with patient, well-guided rehabilitation, and surgery is a useful option for those who need it, not the default.</p>
+      <p>If you have been told your ACL is "degenerated" and are unsure what it means for you, bring your MRI and reports along. Learn more about our approach to <a href="/knee-pain-bangalore">knee pain care in Bengaluru</a>, or <a href="/contact">book an appointment with Dr. Nitin N Sunku</a> or call +91-9980031006.</p>
+
+      <h2>References</h2>
+      <ul>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9038521/" target="_blank" rel="noopener noreferrer">Symptomatic ACL mucoid degeneration in middle-aged athletes (PMC)</a></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3977377" target="_blank" rel="noopener noreferrer">Mucoid degeneration of the anterior cruciate ligament: management and outcome (PMC)</a></li>
+        <li><a href="https://orthoinfo.aaos.org/en/diseases--conditions/anterior-cruciate-ligament-acl-injuries/" target="_blank" rel="noopener noreferrer">ACL injuries overview — AAOS OrthoInfo</a></li>
+      </ul>
+      <p><em>Medical disclaimer: This article is for general education and does not replace a personal medical examination. Please consult a qualified orthopedic doctor for diagnosis and treatment of knee pain or ligament problems.</em></p>
+    `,
+  },
+  {
+    slug: "posterior-horn-lateral-meniscus-tear",
+    title: "Posterior Horn Lateral Meniscus Tear: Symptoms, MRI Findings, Treatment and Recovery",
+    excerpt: "A posterior horn lateral meniscus tear is a rip in the back part of the C-shaped cartilage cushion on the outer side of your knee. It usually happens after a twisting injury, often together with an ACL tear. Typical signs are outer or back-of-knee pain, swelling, catching, and sometimes locking — and treatment ranges from rest and physiotherapy for stable tears to arthroscopic repair or partial trimming.",
+    date: "Nov 11, 2026",
+    category: "Meniscal Care",
+    image: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=1200&h=630&fit=crop&q=80&auto=format",
+    content: `
+      <h2>Quick Answer: What Is a Posterior Horn Lateral Meniscus Tear?</h2>
+      <p>A posterior horn lateral meniscus tear is a rip in the back part of the C-shaped cartilage cushion on the outer side of your knee. It usually happens after a twisting injury, often together with an ACL tear. Typical signs are outer or back-of-knee pain, swelling, catching, and sometimes locking. Treatment ranges from rest and physiotherapy for stable tears to arthroscopic repair or partial trimming for tears that cause mechanical symptoms or instability. Diagnosis rests on a clinical examination confirmed by MRI.</p>
+      <p>This guide explains each of those points in plain language, so you know what your scan report means and what to ask at your consultation.</p>
+
+      <h2>Understanding the Lateral Meniscus and Its Posterior Horn</h2>
+      <p>Each knee has two menisci, which are rubbery, wedge-shaped pads of fibrocartilage that sit between the thigh bone (femur) and the shin bone (tibia). The medial meniscus sits on the inner side. The lateral meniscus sits on the outer side.</p>
+      <p>Each meniscus is described in three zones:</p>
+      <ul>
+        <li><strong>Anterior horn:</strong> the front end</li>
+        <li><strong>Body:</strong> the middle section</li>
+        <li><strong>Posterior horn:</strong> the back end, which also includes the root, the strong attachment that anchors the meniscus to the tibia near the centre of the knee</li>
+      </ul>
+      <p>The posterior horn matters more than its size suggests. When you bend your knee, squat, sit cross-legged, or pivot, the femur rolls backward over this part of the cushion. That is why the back of the meniscus takes the heaviest load and why tears here are so common.</p>
+
+      <h3>Why the Lateral Meniscus Is Special</h3>
+      <p>The lateral meniscus is more mobile than the medial one and covers a larger share of the outer joint surface. Biomechanical studies suggest it carries a large proportion of the load across the lateral compartment, with figures around 70 percent often quoted. When it stops working properly, the cartilage on the outer side of the knee faces higher stress, which can speed up wear over the years.</p>
+      <p>The posterior horn also has extra support from small structures called the meniscofemoral ligaments and the popliteomeniscal fascicles, which tie it to the femur and the popliteus tendon at the back of the knee. These attachments help it stay in position, and when they are torn the meniscus can shift out of place.</p>
+
+      <h2>Types of Posterior Horn Lateral Meniscus Tears</h2>
+      <p>Not all tears behave the same way. Your MRI report will usually name one of these patterns:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Tear Pattern</th>
+            <th>What It Looks Like</th>
+            <th>Usual Cause</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Vertical or longitudinal tear</td><td>A split running along the length of the cartilage</td><td>Twisting injury, often with ACL tear</td></tr>
+          <tr><td>Radial tear</td><td>A split running from the inner edge outward, like a spoke</td><td>Pivoting sports, high-energy twists</td></tr>
+          <tr><td>Oblique or flap tear</td><td>A slanted tear that creates a loose flap</td><td>Mixed injury and age-related wear</td></tr>
+          <tr><td>Horizontal tear</td><td>A split between the top and bottom layers</td><td>Degeneration, usually after 40</td></tr>
+          <tr><td>Root tear</td><td>Detachment of the meniscus from its tibial anchor</td><td>ACL injury, high-energy trauma</td></tr>
+          <tr><td>Bucket-handle tear</td><td>A large vertical tear where the inner part flips into the joint</td><td>Acute twisting injury, can cause true locking</td></tr>
+          <tr><td>Complex tear</td><td>More than one pattern together</td><td>Long-standing or repeated injury</td></tr>
+        </tbody>
+      </table>
+      <h3>Why Root Tears Deserve Special Attention</h3>
+      <p>A posterior lateral meniscus root tear can make the meniscus lose its ability to hold its position, so it can push out of the joint (called meniscal extrusion) and stop sharing load properly. Studies report that lateral root tears are found in roughly 8 to 14 percent of knees with an ACL tear, and they can make the knee feel looser during pivoting. Root tears are easy to miss on a quick scan read, which is one reason a second opinion from an arthroscopy specialist can help.</p>
+
+      <h2>What Causes a Posterior Horn Lateral Meniscus Tear?</h2>
+      <h3>Acute Injury (Younger, Active Adults)</h3>
+      <p>Most lateral meniscus tears in people under 40 come from a sudden injury:</p>
+      <ul>
+        <li>Planting the foot and twisting the body, as in football, badminton, basketball, kabaddi, or cricket</li>
+        <li>Deep squatting with a pivot</li>
+        <li>A fall from a two-wheeler with the knee bent and twisted</li>
+        <li>A knee dislocation or ligament injury, especially a torn ACL</li>
+      </ul>
+      <p>The lateral meniscus is very often injured together with the ACL. The mechanism that tears the ligament, an inward collapse with rotation, also pinches the outer meniscus between the bones. If you have had an ACL injury, read our guide to <a href="/acl-reconstruction-bangalore">ACL reconstruction in Bangalore</a> and our overview of <a href="/services/acl-care">ACL care</a>, because treating the ligament and the meniscus together often gives the best result.</p>
+      <h3>Degenerative Tears (After 40)</h3>
+      <p>In middle age, the meniscus slowly loses water and strength. A tear can then follow a trivial movement, such as getting up from the floor or climbing stairs. These tears are often horizontal or complex, and they are very common on MRI even in people with no knee pain at all.</p>
+      <h3>Other Contributing Factors</h3>
+      <ul>
+        <li>Repetitive deep flexion (floor sitting, squatting, certain yoga poses)</li>
+        <li>Previous knee injury or surgery</li>
+        <li>Higher body weight, which increases joint load</li>
+        <li>Discoid lateral meniscus, an anatomical variation where the cartilage is thicker and more tear-prone, seen more often in children and young adults</li>
+      </ul>
+
+      <h2>Symptoms of a Posterior Horn Lateral Meniscus Tear</h2>
+      <p>Symptoms depend on tear type and size. Many people notice them hours after the injury rather than at once.</p>
+      <h3>Common symptoms</h3>
+      <ul>
+        <li>Pain on the outer or back side of the knee</li>
+        <li>Swelling that builds over 24 to 48 hours</li>
+        <li>Pain when squatting, twisting, or sitting cross-legged</li>
+        <li>A catching or clicking feeling in the joint</li>
+        <li>Stiffness after rest</li>
+      </ul>
+      <h3>Warning symptoms that suggest a mechanical problem</h3>
+      <ul>
+        <li>True locking: the knee gets stuck and cannot fully straighten</li>
+        <li>Giving way or a feeling that the knee will buckle</li>
+        <li>Pain that wakes you at night</li>
+        <li>A sense that something is moving inside the joint</li>
+      </ul>
+      <p><strong>How it differs from a medial meniscus tear:</strong> pain is usually felt on the outer (lateral) side, the McMurray and joint line tenderness tests are positive on that side, and giving way is more common because of the frequent link with ACL injury.</p>
+      <p>Medical help should not wait if: the knee is locked and will not straighten, the knee is hot, red and very swollen with fever, the leg is numb or pale, or you cannot bear weight after a fall.</p>
+
+      <h2>How Is a Posterior Horn Lateral Meniscus Tear Diagnosed?</h2>
+      <h3>1. Detailed History</h3>
+      <p>The most useful clue is how the injury happened. Dr. Sunku will ask about the twisting event, when swelling began, whether the knee locks or gives way, and what activities you want to return to.</p>
+      <h3>2. Clinical Examination</h3>
+      <p>Tests include joint line tenderness, the McMurray test, the Thessaly test, and ligament tests such as Lachman and pivot shift for an associated ACL injury.</p>
+      <h3>3. MRI of the Knee</h3>
+      <p>MRI is the standard imaging test and is highly useful for lateral meniscus injuries, although no scan is perfect. Terms you might see in your report:</p>
+      <ul>
+        <li><strong>Signal extending to the articular surface:</strong> a true tear, not just wear</li>
+        <li><strong>Ghost meniscus sign:</strong> the meniscus seems to vanish on one view, a clue to a root tear</li>
+        <li><strong>Meniscal extrusion:</strong> the meniscus is pushed out beyond the joint edge</li>
+        <li><strong>Radial tear or root avulsion:</strong> tear patterns with greater functional importance</li>
+        <li><strong>Bone bruising:</strong> often seen in the outer femur and back of the tibia after an ACL injury</li>
+      </ul>
+      <h3>4. X-Ray</h3>
+      <p>An X-ray does not show the meniscus, but it is used to check joint space, alignment, and early arthritis.</p>
+      <h3>Do You Need Arthroscopy to Diagnose It?</h3>
+      <p>Not usually. Arthroscopy is mainly a treatment tool. Our article on <a href="/blog/do-i-need-a-knee-arthroscopy-mri-vs-symptoms">reading the MRI against your symptoms before knee arthroscopy</a> explains why a tear on a scan does not automatically mean surgery.</p>
+
+      <h2>Treatment Options for a Posterior Horn Lateral Meniscus Tear</h2>
+      <p>The goal is to protect the knee for the long term, not only to settle today's pain. Decisions depend on tear pattern, age, symptoms, knee stability, and activity goals.</p>
+      <h3>Non-Surgical Treatment</h3>
+      <p>Suitable for small, stable tears, mostly degenerative tears without locking, and tears found with few symptoms.</p>
+      <ul>
+        <li>Relative rest and activity modification for a few weeks</li>
+        <li>Ice, compression and elevation in the early swollen phase</li>
+        <li>Anti-inflammatory medicines if prescribed for you</li>
+        <li>A structured physiotherapy plan to strengthen the quadriceps, hamstrings and hips</li>
+        <li>Weight management where relevant</li>
+        <li>Image-guided injections for selected painful cases. You can read about <a href="/prp-regenerative-treatment-bangalore">PRP and regenerative care</a> at our clinic. Note that injections can calm pain and inflammation but cannot sew a torn meniscus back together.</li>
+      </ul>
+      <p>Many patients ask whether a meniscus tear can heal without surgery. The outer third of the meniscus has a blood supply and some tears there can settle, while the inner two-thirds have little blood flow and rarely heal on their own. See our blog posts on whether a <a href="/blog/can-a-meniscus-tear-heal-without-surgery">meniscus tear can heal without surgery</a> and whether <a href="/blog/can-a-meniscus-tear-heal-with-physiotherapy-alone">physiotherapy alone is enough</a> for more detail.</p>
+      <h3>Surgical Treatment</h3>
+      <p>Surgery is considered when you have locking, repeated giving way, a displaced fragment, a root tear, a tear with ACL instability, or pain that fails to improve with a proper trial of rehab. Most operations are done by keyhole surgery. You can read about the procedure on our <a href="/knee-arthroscopy-bangalore">knee arthroscopy</a> page.</p>
+      <p><strong>Meniscus repair (preferred when possible).</strong> The surgeon stitches the torn edges together with sutures or small anchors so the cartilage can heal and keep working. Repair is usually preferred in younger patients, in tears in the well-supplied outer zone, in root tears, and when an ACL reconstruction is being done at the same time. Healing is often better when the ACL is reconstructed together with the repair.</p>
+      <p><strong>Root repair.</strong> For a root tear, the detached meniscus is pulled back to its anatomical anchor with strong sutures, often passed through a small tunnel in the tibia or fixed with an all-suture anchor. This restores the meniscus's ability to resist extrusion.</p>
+      <p><strong>Partial meniscectomy (trimming).</strong> When the tear is in the poorly supplied zone or the tissue is too frayed to hold stitches, the surgeon removes only the damaged part and keeps as much healthy meniscus as possible. Recovery is quicker, but removing meniscus tissue from the outer knee increases the risk of later arthritis, so it is used sparingly.</p>
+      <p><strong>Meniscus replacement and transplantation.</strong> In rare, selected cases of a previously removed lateral meniscus with persistent pain in a young patient, transplantation may be discussed.</p>
+
+      <h3>Repair vs Trimming: A Quick Comparison</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Meniscus Repair</th>
+            <th>Partial Meniscectomy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Goal</td><td>Preserve the meniscus</td><td>Remove the damaged piece</td></tr>
+          <tr><td>Best for</td><td>Young patients, outer-zone or root tears, ACL cases</td><td>Frayed, degenerative or non-repairable tears</td></tr>
+          <tr><td>Early recovery</td><td>Slower, protected weight bearing</td><td>Faster, walking within days</td></tr>
+          <tr><td>Long-term joint protection</td><td>Better when healing succeeds</td><td>Lower, more cartilage load</td></tr>
+          <tr><td>Return to sport</td><td>Around 6 to 9 months</td><td>Around 4 to 8 weeks</td></tr>
+        </tbody>
+      </table>
+      <p>Timelines are typical and vary with the individual and the exact procedure.</p>
+
+      <h2>Why Timing Matters: What Happens If You Ignore It</h2>
+      <p>A mechanically unstable tear can catch in the joint and wear the cartilage with every step. Over months, that can bring recurring swelling, a locked knee, repeated giving way, and faster development of knee arthritis, especially on the outer side where the meniscus bears so much load. Treating a posterior horn lateral meniscus tear early, with the right plan, is the best way to protect the joint.</p>
+
+      <h2>Recovery Timeline After Treatment</h2>
+      <h3>After a Meniscus Repair</h3>
+      <ul>
+        <li><strong>Weeks 0 to 2:</strong> Brace use, swelling control, early gentle range of motion as advised, limited weight bearing</li>
+        <li><strong>Weeks 2 to 6:</strong> Gradual weight bearing, guided physiotherapy, restricted bending depth to protect the repair</li>
+        <li><strong>Weeks 6 to 12:</strong> Strength work, stationary cycling, normal walking</li>
+        <li><strong>Months 3 to 5:</strong> Jogging in straight lines, building strength and control</li>
+        <li><strong>Months 6 to 9:</strong> Cutting, pivoting and return to sport once strength and movement tests are passed</li>
+      </ul>
+      <p>Deep squatting and sitting cross-legged are usually restricted for the first three to four months after a repair, because deep bending pushes the posterior horn hard against the joint.</p>
+      <h3>After a Partial Meniscectomy</h3>
+      <ul>
+        <li><strong>Days 1 to 7:</strong> Walking as comfort allows, swelling control</li>
+        <li><strong>Weeks 2 to 4:</strong> Return to desk work and light activity</li>
+        <li><strong>Weeks 4 to 8:</strong> Gradual return to sport</li>
+      </ul>
+      <h3>If You Are Treating Without Surgery</h3>
+      <p>Many people feel better in 6 to 12 weeks with rehab and load management. If locking, giving way, or persistent pain returns, a re-assessment is wise. For a more detailed week-by-week guide, see our article on <a href="/blog/meniscus-tear-surgery-recovery-time">meniscus tear surgery recovery time</a>.</p>
+
+      <h2>Rehabilitation Principles That Protect Your Knee</h2>
+      <p>Good rehab is often what separates a great outcome from a disappointing one.</p>
+      <ul>
+        <li><strong>Control swelling first.</strong> A swollen knee switches off the thigh muscles.</li>
+        <li><strong>Restore full straightening early.</strong> This is the first goal after nearly every treatment.</li>
+        <li><strong>Rebuild the quadriceps, hamstrings and glutes.</strong> Strong muscles shield the meniscus.</li>
+        <li><strong>Train balance and landing mechanics.</strong> Poor control raises the risk of re-injury.</li>
+        <li><strong>Return to sport by criteria, not by calendar.</strong> Strength, hop tests and confidence matter more than weeks passed.</li>
+      </ul>
+
+      <h2>Activities to Avoid with a Lateral Meniscus Tear</h2>
+      <p>While the tear is untreated or healing:</p>
+      <ul>
+        <li>Deep squats and lunges under load</li>
+        <li>Sitting cross-legged on the floor for long periods</li>
+        <li>Pivoting sports, such as football, badminton and cricket fielding</li>
+        <li>Twisting on a planted foot</li>
+        <li>Running on uneven ground</li>
+      </ul>
+      <p>Our guide on <a href="/blog/activities-to-avoid-with-a-tear-in-the-medial-meniscus">activities to avoid with a meniscus tear</a> covers daily-life modifications in more detail.</p>
+
+      <h2>Can a Posterior Horn Lateral Meniscus Tear Come With Other Injuries?</h2>
+      <p>Yes, and that is a major reason the diagnosis needs an experienced eye:</p>
+      <ul>
+        <li><strong>ACL tear:</strong> the most common partner, because both are injured in the same twisting mechanism</li>
+        <li><strong>Posterolateral corner injury:</strong> damage to the outer back-of-knee structures that control rotation</li>
+        <li><strong>Cartilage injury:</strong> small areas of bruised or damaged joint surface</li>
+        <li><strong>Popliteomeniscal fascicle tears:</strong> which can cause outer knee pain and a feeling of the meniscus slipping</li>
+      </ul>
+      <p>Treating only the meniscus while ignoring an unstable knee is a common cause of repeat tears, which is why a full assessment of the whole joint matters. If sports injuries are your concern, see our page on <a href="/sports-injury-doctor-bangalore">sports injury care in Bengaluru</a>.</p>
+
+      <h2>Prevention: Lowering the Risk of Meniscus Injury</h2>
+      <ul>
+        <li>Warm up properly before sport</li>
+        <li>Strengthen the thighs, hips and core all year</li>
+        <li>Practise safe landing and cutting techniques</li>
+        <li>Avoid prolonged deep squatting on a painful knee</li>
+        <li>Maintain a healthy weight</li>
+        <li>Treat ligament injuries early rather than living with an unstable knee</li>
+      </ul>
+
+      <h2>When Should You See an Orthopedic Specialist?</h2>
+      <p>Book a visit if you notice any of the following:</p>
+      <ul>
+        <li>Knee pain on the outer side lasting more than two weeks after an injury</li>
+        <li>Swelling that keeps returning</li>
+        <li>Locking, catching or giving way</li>
+        <li>Difficulty squatting or climbing stairs</li>
+        <li>Sports performance falling because of knee symptoms</li>
+      </ul>
+      <p>Early assessment gives you more treatment options, including repair, which becomes less possible as a tear gets older.</p>
+
+      <h2>Consult Dr. Nitin N Sunku in Bengaluru</h2>
+      <p>Dr. Nitin N Sunku is a fellowship-trained arthroscopy and sports medicine specialist and the team doctor for Bengaluru FC. He sees patients for meniscus, ACL and complex knee injuries with a conservative-first approach: surgery is advised only when the benefit clearly outweighs the risk, and meniscus preservation is prioritised wherever possible.</p>
+      <ul>
+        <li>Attibele: <a href="/orthopedic-doctor-attibele">Orthopedic doctor in Attibele</a>, Raghava Multispeciality Hospital</li>
+        <li>HSR Layout: <a href="/orthopedic-doctor-in-hsr-layout">Orthopedic doctor in HSR Layout</a>, Health Nest Hospital</li>
+        <li>General knee symptoms: <a href="/knee-pain-bangalore">Knee pain treatment in Bangalore</a></li>
+        <li>Insurance questions: <a href="/insurance-cashless-orthopedic-treatment">Cashless and insurance support</a></li>
+      </ul>
+      <p>To book, visit the <a href="/contact">contact page</a> or call +91-9980031006. Bring your MRI films and reports to the visit.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <p><strong>What is a posterior horn lateral meniscus tear?</strong><br/>It is a tear in the back portion of the outer knee cartilage cushion. It often follows a twisting injury and frequently occurs along with an ACL tear.</p>
+      <p><strong>What does a posterior horn lateral meniscus tear feel like?</strong><br/>Most people feel outer or back-of-knee pain, swelling, and catching or clicking. Some have locking, where the knee will not fully straighten, or a sense of giving way.</p>
+      <p><strong>Can a posterior horn lateral meniscus tear heal on its own?</strong><br/>Small tears in the outer, blood-supplied zone can sometimes settle with rest and rehab. Tears in the inner zone, root tears, and displaced tears rarely heal without treatment.</p>
+      <p><strong>Is a lateral meniscus tear worse than a medial meniscus tear?</strong><br/>Neither is simply worse, but the lateral meniscus carries a large share of outer-knee load and is closely linked to ACL injuries, so lateral tears often need careful attention to stability and preservation.</p>
+      <p><strong>Do I need surgery for a posterior horn lateral meniscus tear?</strong><br/>Not always. Small stable tears often respond to physiotherapy. Surgery is considered for locking, giving way, root tears, tears with an unstable ACL, or persistent pain despite a proper trial of rehab.</p>
+      <p><strong>What is a lateral meniscus root tear?</strong><br/>It is a tear at the point where the meniscus attaches to the tibia. It can let the meniscus shift out of place and is commonly found along with ACL injuries. It is often repairable with sutures.</p>
+      <p><strong>How long is recovery after a lateral meniscus repair?</strong><br/>Walking normally usually returns in 6 to 12 weeks, while return to pivoting sport takes about 6 to 9 months. Trimming surgery has a shorter recovery of around 4 to 8 weeks.</p>
+      <p><strong>Can I walk with a posterior horn lateral meniscus tear?</strong><br/>Many people can walk, although it may hurt. If the knee is locked or giving way, walking can cause further damage and an examination should not be delayed.</p>
+      <p><strong>Will I get arthritis after a lateral meniscus tear?</strong><br/>The risk rises if the meniscus is lost or left unstable, because the outer cartilage then takes more load. Preserving the meniscus through repair when possible, and keeping the knee stable and strong, lowers that risk.</p>
+      <p><strong>Which exercises are safe with a lateral meniscus tear?</strong><br/>Cycling, straight-leg raises, hamstring work, hip strengthening, and shallow-range squats are commonly used. Avoid deep squats, twisting, and impact until your surgeon clears you.</p>
+      <p><strong>Is MRI always needed for a meniscus tear?</strong><br/>MRI is the standard test when a meniscus injury is suspected and decisions about treatment depend on tear type. It is read alongside your examination, not on its own.</p>
+      <p><strong>How much does lateral meniscus surgery cost in Bangalore?</strong><br/>Cost depends on whether repair or trimming is done, whether ACL surgery is combined, the hospital, and your insurance. Request an itemised estimate at your consultation. Our team can explain cashless options.</p>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>A posterior horn lateral meniscus tear affects the back of the outer knee cartilage and usually follows a twist, often with an ACL injury.</li>
+        <li>Locking, giving way, and persistent outer knee pain are signs that need prompt assessment.</li>
+        <li>MRI and a careful examination guide the decision between rehab, repair and trimming.</li>
+        <li>Preserving the meniscus through repair, where possible, protects the knee for the long term.</li>
+        <li>Recovery depends on tear type, and structured rehab is as important as the procedure itself.</li>
+      </ul>
+
+      <p><em>Disclaimer: This article is for general education and does not replace a medical examination. Please see a qualified orthopedic surgeon for diagnosis and treatment of your own knee. External references: Radiology study on lateral meniscus root tears and extrusion with ACL tears (RSNA, Radiology); PubMed Central reviews on arthroscopic repair of posterior root tears of the lateral meniscus and comparison of medial and lateral meniscus root tears.</em></p>
+    `,
+  },
+  {
     slug: "hip-replacement-surgery-risks-and-complications",
     title: "Hip Replacement Surgery Risks and Complications: A Surgeon's Honest Guide",
     excerpt: "If your surgeon has advised a hip replacement, one question probably sits at the top of your mind: what could go wrong? It is a sensible question, and you deserve a straight answer rather than either a sales pitch or a scare story. Total hip replacement is one of the most successful operations in modern medicine, and the large majority of patients get excellent pain relief and mobility — but it is still major surgery.",

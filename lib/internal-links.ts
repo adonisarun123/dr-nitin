@@ -282,6 +282,20 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
     { label: "Meniscal Care service", href: "/services/meniscal-care" },
     { label: "Knee arthroscopy in Bangalore", href: "/knee-arthroscopy-bangalore" },
   ],
+  "posterior-horn-lateral-meniscus-tear": [
+    { label: "Can a meniscus tear heal without surgery?", href: "/blog/can-a-meniscus-tear-heal-without-surgery" },
+    { label: "Meniscus tear surgery recovery time", href: "/blog/meniscus-tear-surgery-recovery-time" },
+    { label: "ACL reconstruction in Bangalore", href: "/acl-reconstruction-bangalore" },
+    { label: "Knee arthroscopy in Bangalore", href: "/knee-arthroscopy-bangalore" },
+    { label: "Meniscal Care service", href: "/services/meniscal-care" },
+  ],
+  "acl-degeneration": [
+    { label: "ACL surgery cost & recovery in Bangalore", href: "/blog/acl-surgery-cost-and-recovery-bangalore" },
+    { label: "Can you walk with a torn ACL?", href: "/blog/can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru" },
+    { label: "ACL reconstruction in Bangalore", href: "/acl-reconstruction-bangalore" },
+    { label: "Cartilage degeneration explained", href: "/blog/cartilage-degeneration-explained" },
+    { label: "ACL Care service", href: "/services/acl-care" },
+  ],
   "compression-fracture-spine-treatment": [
     { label: "Compression fracture spine treatment cost in India", href: "/blog/compression-fracture-spine-treatment-india" },
     { label: "Spine surgery cost in India", href: "/blog/spine-surgery-cost-in-india" },
