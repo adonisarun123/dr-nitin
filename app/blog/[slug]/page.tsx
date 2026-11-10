@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { blogPosts, practicePostalAddress } from "@/lib/data";
 import { blogSeoOverrides } from "@/lib/seo-overrides";
+import { blogFaqs } from "@/lib/blog-faqs";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, User, Tag, Clock, ChevronRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -127,6 +128,21 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
         },
     };
 
+    // FAQs (optional, per slug). Rendered visibly below the article and
+    // mirrored as FAQPage JSON-LD — the schema must match on-page text.
+    const faqs = blogFaqs[post.slug] ?? [];
+    const faqSchema = faqs.length
+        ? {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": faqs.map((f) => ({
+                  "@type": "Question",
+                  "name": f.q,
+                  "acceptedAnswer": { "@type": "Answer", "text": f.a },
+              })),
+          }
+        : null;
+
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -143,6 +159,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
             <JsonLd data={articleSchema} />
             <JsonLd data={medicalArticleSchema} />
             <JsonLd data={breadcrumbSchema} />
+            {faqSchema && <JsonLd data={faqSchema} />}
 
             {/* Immersive Hero Section */}
             <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20 lg:py-32 overflow-hidden">
@@ -236,6 +253,27 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
                             {/* Blog Content with Custom Styling */}
                             <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.content }} />
                         </FadeIn>
+
+                        {/* FAQs — native <details> so answers are in the server HTML
+                            (crawlable by search and AI engines) without client JS. */}
+                        {faqs.length > 0 && (
+                            <section aria-labelledby="faq-heading" className="mt-12">
+                                <h2 id="faq-heading" className="text-2xl md:text-3xl font-heading font-bold text-slate-900 mb-6">
+                                    Frequently asked questions
+                                </h2>
+                                <div className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+                                    {faqs.map((f) => (
+                                        <details key={f.q} className="group p-5 sm:p-6">
+                                            <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-semibold text-slate-900">
+                                                <h3 className="text-base md:text-lg">{f.q}</h3>
+                                                <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-primary transition-transform group-open:rotate-90" />
+                                            </summary>
+                                            <p className="mt-3 text-slate-600 leading-relaxed">{f.a}</p>
+                                        </details>
+                                    ))}
+                                </div>
+                            </section>
+                        )}
 
                         {/* Contextual interlinks (>=3 relevant internal links) */}
                         <FadeIn delay={0.25}>

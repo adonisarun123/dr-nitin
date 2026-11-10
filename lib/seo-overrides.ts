@@ -565,6 +565,31 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         description:
             "What a multispeciality hospital in Attibele handles well, what genuinely needs a city centre, where the corporate hospital is worse rather than just farther, and how to check a local surgeon.",
     },
+    "knee-pain-chandapura-anekal-causes-by-age": {
+        title: "Knee Pain in Chandapura & Anekal: Causes by Age",
+        description:
+            "Why knees hurt at 25, 45 and 65, what the location of the pain tells you, safe home steps, and when to see an orthopedic doctor near Chandapura and Anekal.",
+    },
+    "back-neck-pain-two-wheeler-commute-chandapura-hosur-road": {
+        title: "Back & Neck Pain From Bike Commutes on Hosur Road",
+        description:
+            "Why two-wheeler commuting strains the back and neck, bike and riding fixes that work, a 10-minute routine, and red-flag signs — from an orthopedic surgeon in Attibele.",
+    },
+    "elderly-fall-hip-fracture-signs-surgery-48-hours-attibele": {
+        title: "Elderly Fall & Hip Fracture: Signs, Surgery in 48 Hours",
+        description:
+            "Signs of a hip fracture after a fall, what families should do in the first hour, why early surgery beats bed rest, recovery and fall prevention — near Chandapura & Attibele.",
+    },
+    "joint-pain-after-chikungunya-viral-fever": {
+        title: "Joint Pain After Chikungunya: How Long It Lasts",
+        description:
+            "Why chikungunya leaves joint pain, the usual timeline, safe painkillers, what helps, and when to see an orthopedic doctor or rheumatologist — Chandapura & Attibele.",
+    },
+    "sprain-or-fracture-how-to-tell-when-you-need-an-x-ray": {
+        title: "Sprain or Fracture? How to Tell & When to Get an X-Ray",
+        description:
+            "The bedside rules doctors use (Ottawa ankle, foot and knee rules), the wrist fracture most often missed, first aid that helps, and X-ray care near Chandapura and Attibele.",
+    },
 };
 
 export const serviceSeoOverrides: Record<string, SeoOverride> = {
@@ -622,6 +647,11 @@ export const serviceSeoOverrides: Record<string, SeoOverride> = {
         title: "Hip Impingement (FAI) & Hip Arthroscopy in Bangalore",
         description:
             "Femoroacetabular impingement and labral tear treatment in Bengaluru. Symptoms, why groin pain is misdiagnosed, non-surgical care first, and when hip arthroscopy helps.",
+    },
+    "artificial-ligament-acl-reconstruction": {
+        title: "Artificial Ligament ACL Surgery in Bangalore | Jewel ACL",
+        description:
+            "Tissue-sparing ACL reconstruction with the Jewel ACL artificial ligament in Bengaluru. How it compares with autografts, who is suitable, risks and recovery.",
     },
     "spine-care": {
         title: "Spine Care Treatment in Attibele | Dr. Nitin N Sunku",

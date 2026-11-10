@@ -63,6 +63,11 @@ answers, in case they change.
 - Hip replacement: https://www.drnitinsunkuortho.com/services/hip-replacement
 - Shoulder care: https://www.drnitinsunkuortho.com/services/shoulder-care
 - Bone fracture / trauma: https://www.drnitinsunkuortho.com/services/bone-fracture
+- Kneecap dislocation (MPFL surgery): https://www.drnitinsunkuortho.com/services/mpfl-patellar-dislocation
+- PCL injury: https://www.drnitinsunkuortho.com/services/pcl-injury
+- MCL & LCL knee ligament injury: https://www.drnitinsunkuortho.com/services/mcl-lcl-knee-ligament-injury
+- Hip impingement (FAI): https://www.drnitinsunkuortho.com/services/hip-impingement-fai
+- Artificial ligament ACL reconstruction (Jewel ACL): https://www.drnitinsunkuortho.com/services/artificial-ligament-acl-reconstruction
 - Spine care: https://www.drnitinsunkuortho.com/services/spine-care
 
 ## Non-surgical & regenerative treatment pages (canonical /treatments/* paths)

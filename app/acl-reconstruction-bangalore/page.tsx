@@ -339,6 +339,10 @@ export default function AclReconstructionBangalorePage() {
                                 <Link href="/services/acl-care" className="text-blue-700 font-semibold hover:text-blue-900 underline underline-offset-2">
                                     ACL care service
                                 </Link>
+                                , including{" "}
+                                <Link href="/services/artificial-ligament-acl-reconstruction" className="text-blue-700 font-semibold hover:text-blue-900 underline underline-offset-2">
+                                    artificial ligament ACL reconstruction
+                                </Link>
                                 .
                             </p>
                         </div>
@@ -509,7 +513,7 @@ export default function AclReconstructionBangalorePage() {
                     },
                     {
                         q: "What graft is used for the new ligament?",
-                        a: "Most commonly your own hamstring tendons, which give reliable results with small incisions; alternatives exist and the choice is matched to your anatomy, sport and any previous surgery. Graft choice, fixation and rehab plan are all explained before the operation.",
+                        a: "Most commonly your own hamstring tendons, which give reliable results with small incisions; alternatives include other tendons and, for suitable patients, an artificial ligament (Jewel ACL) that avoids harvesting any tendon. The choice is matched to your anatomy, sport and any previous surgery. Graft choice, fixation and rehab plan are all explained before the operation.",
                     },
                     {
                         q: "Where is the surgery done and how long is the hospital stay?",

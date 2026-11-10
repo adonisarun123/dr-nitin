@@ -33,7 +33,19 @@ const SPRINGER_IMAGE =
 const ATLAS_CERTIFICATE_IMAGE =
     "https://ik.imagekit.io/vlries1el/dr%20nitin/atlas-of-arthroscopy-certificate.jpeg";
 
+const SHOULDER_SUMMIT_IMAGE =
+    "/events/bangalore-shoulder-summit-2026-dr-nitin-sunku.jpg";
+
+const SHOULDER_SUMMIT_CERTIFICATE_IMAGE =
+    "/events/bangalore-shoulder-summit-2026-faculty-certificate-dr-nitin-sunku.jpg";
+
 const accolades = [
+    {
+        icon: Stethoscope,
+        title: "Faculty & Live-Surgery Co-surgeon — Bangalore Shoulder Summit 2026",
+        description:
+            "Faculty at the Bangalore Shoulder Summit 2026 Masterclass and invited co-surgeon for its live transosseous repair surgery, hosted by Manipal Hospitals on 1 November 2026.",
+    },
     {
         icon: BookOpen,
         title: "Academic Author — Atlas of Arthroscopy",
@@ -83,6 +95,8 @@ export default function AwardsPage() {
         award: [
             "Academic Author featured in Springer's Atlas of Arthroscopy",
             "Team Doctor, Bengaluru Football Club",
+            "Faculty, Bangalore Shoulder Summit 2026 Masterclass — Manipal Hospitals (Certificate of Appreciation)",
+            "Co-surgeon, Live Surgery (Transosseous Repair), Bangalore Shoulder Summit 2026 — Manipal Hospitals",
             "Fellowship in Arthroscopy, Joint Replacement and Sports Medicine",
         ],
         memberOf: [
@@ -232,6 +246,83 @@ export default function AwardsPage() {
                                 Errors&rdquo;</em> (co-authored with Dr. Madan Ballal and
                                 Dr. Tanveer Ahamed C) in the forthcoming Springer Nature
                                 publication <em>Atlas of Arthroscopy</em>.
+                            </p>
+                        </div>
+                    </FadeIn>
+                </div>
+            </section>
+
+            {/* Bangalore Shoulder Summit 2026 — live surgery */}
+            <section className="py-16 lg:py-20 bg-gray-50 border-t border-gray-200">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                    <div className="grid lg:grid-cols-5 gap-10 items-center">
+                        <FadeIn delay={0.1} className="lg:col-span-2 order-2 lg:order-1">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3.5 py-1.5 text-xs font-medium text-blue-700 mb-4">
+                                <Stethoscope className="h-3.5 w-3.5" aria-hidden />
+                                Live Surgery
+                            </div>
+                            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-gray-900 mb-4 leading-tight">
+                                Co-surgeon at the{" "}
+                                <span className="text-primary">Bangalore Shoulder Summit 2026</span>
+                            </h2>
+                            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                                Dr. Nitin N Sunku was invited as{" "}
+                                <strong>co-surgeon for the live transosseous repair
+                                surgery</strong> at the Bangalore Shoulder Summit 2026, hosted
+                                by <strong>Manipal Hospitals</strong> on 1 November 2026 — a
+                                procedure led by Dr. Senthilvelan, with Dr. Syed Karim as fellow
+                                co-surgeon and an expert panel discussing the case live.
+                            </p>
+                            <p className="text-gray-700 leading-relaxed">
+                                Live surgery sessions put technique in front of fellow shoulder
+                                surgeons in real time. Transosseous repair reattaches a torn
+                                tendon — most commonly the rotator cuff — to bone through small
+                                tunnels in the bone itself — one of several repair options Dr. Sunku discusses with
+                                patients who have{" "}
+                                <Link href="/shoulder-pain-bangalore" className="text-primary font-medium hover:underline">
+                                    shoulder pain or a rotator cuff tear
+                                </Link>
+                                .
+                            </p>
+                        </FadeIn>
+
+                        <FadeIn
+                            direction="left"
+                            className="lg:col-span-3 order-1 lg:order-2 relative rounded-3xl overflow-hidden bg-white border border-gray-200 shadow-xl"
+                        >
+                            <Image
+                                src={SHOULDER_SUMMIT_IMAGE}
+                                alt="Bangalore Shoulder Summit 2026 scientific programme listing Dr. Nitin Sunku as co-surgeon for the live transosseous repair surgery, Manipal Hospitals, 1 November 2026"
+                                width={1252}
+                                height={786}
+                                className="w-full h-auto object-contain"
+                                sizes="(max-width: 1024px) 100vw, 60vw"
+                            />
+                        </FadeIn>
+                    </div>
+
+                    {/* Faculty certificate */}
+                    <FadeIn delay={0.2} className="mt-12 lg:mt-16">
+                        <div className="max-w-2xl mx-auto">
+                            <p className="text-center text-sm uppercase tracking-wide text-gray-500 mb-5">
+                                Certificate of Appreciation — Faculty
+                            </p>
+                            <div className="relative rounded-3xl overflow-hidden bg-white border border-gray-200 shadow-2xl">
+                                <Image
+                                    src={SHOULDER_SUMMIT_CERTIFICATE_IMAGE}
+                                    alt="Certificate of Appreciation awarded to Dr. Nitin Sunku for his contribution as Faculty at the Bangalore Shoulder Summit 2026 Masterclass, Manipal Hospitals, Bengaluru, 1 November 2026"
+                                    width={1100}
+                                    height={1555}
+                                    className="w-full h-auto object-contain"
+                                    sizes="(max-width: 768px) 100vw, 672px"
+                                />
+                            </div>
+                            <p className="mt-4 text-center text-sm text-gray-600 leading-relaxed">
+                                Awarded by Manipal Hospitals and Smith+Nephew Academy in
+                                recognition of Dr. Sunku&rsquo;s contribution as{" "}
+                                <strong>Faculty</strong> at the Bangalore Shoulder Summit 2026
+                                Masterclass, held on 1 November 2026 in Bengaluru. Signed by
+                                Dr. Ayyappan V Nair, Organizing Chairman.
                             </p>
                         </div>
                     </FadeIn>

@@ -332,4 +332,80 @@ export const servicePageContent: Record<string, ServicePageContent> = {
         ctaHeading: "Book a Hip Impingement Assessment in Bengaluru",
         ctaText: "Groin pain that has not settled after months of physiotherapy deserves a hip joint examination and dedicated imaging. Bring your X-rays and MRI if you have them.",
     },
+    "artificial-ligament-acl-reconstruction": {
+        intro: [
+            "ACL reconstruction has traditionally meant taking a tendon from elsewhere in your leg — usually the hamstring, patellar tendon or quadriceps tendon — and using it to rebuild the torn ligament. That remains a standard, well-established operation with a long track record, and for many patients it is still the right choice.",
+            "For suitable patients, Dr. Nitin N Sunku also offers ACL reconstruction with an artificial ligament: Jewel ACL™, a synthetic ligament now used in India. It is placed inside the knee to restore stability without harvesting healthy tendon from another part of the leg, so when it is used on its own there is only one site to heal — the knee. Whether it suits you is decided on examination and imaging, not on preference alone. The procedure is available at Raghava Multispeciality Hospital, Attibele and Health Nest Hospital, HSR Layout.",
+        ],
+        conditionsHeading: "Understanding Your ACL Injury",
+        conditions: [
+            {
+                title: "What the ACL Does",
+                text: "The anterior cruciate ligament connects the thigh bone (femur) to the shin bone (tibia) inside the knee. It controls forward movement of the shin and limits excessive twisting. That matters in sport, but also on uneven ground, on stairs, and whenever you turn suddenly or change direction with your foot planted.",
+            },
+            {
+                title: "How It Tears",
+                text: "A sharp twist with the foot fixed on the ground, an awkward landing, a sudden turn, a slip or fall, or a road traffic accident. When the force on the knee exceeds the ligament’s strength, the ACL stretches or tears.",
+            },
+            {
+                title: "How It Feels",
+                text: "Pain and swelling come first. As the swelling settles, many people notice the knee feels unstable or simply cannot be trusted — on turns, on stairs, or stepping off a kerb. That loss of confidence is often the most telling symptom.",
+            },
+            {
+                title: "When Reconstruction Is Advised",
+                text: "Once a tear is confirmed, the plan is based on knee stability, age, activity level and lifestyle. For many patients, reconstruction is recommended to restore stability and to reduce the risk of further damage to the meniscus and cartilage from repeated giving-way.",
+            },
+        ],
+        conditionsNote:
+            "Before choosing any graft, it is worth asking: Am I a suitable candidate for reconstruction? Which options suit me, and why? What are the benefits and risks of each in my case? What will rehabilitation involve? When can I return to work and everyday activities? Each of these is answered in clinic.",
+        approachHeading: "Your ACL Reconstruction Options",
+        approach: [
+            {
+                title: "Traditional Autograft Reconstruction",
+                text: "A graft is taken from your own hamstring, patellar tendon or quadriceps tendon and placed inside the knee to reproduce the function of the original ACL. Autografts have a long track record and remain a standard option. Because tissue is harvested from another part of the leg, recovery involves healing at two sites — the knee and the donor site — and the choice of donor site is weighed against your activity level, age and goals.",
+            },
+            {
+                title: "Artificial Ligament Reconstruction (Jewel ACL™)",
+                text: "A tissue-sparing approach that uses a purpose-designed synthetic ligament to restore stability. When Jewel ACL™ is used on its own, no tendon is taken from your leg, so there is no second wound and only the knee needs to heal. According to the manufacturer, it is designed to use smaller bone tunnels than a conventional graft, helping preserve natural bone, and your own tissue grows into the implant over time.",
+            },
+            {
+                title: "Who May Be Considered",
+                text: "Suitability is an individual clinical decision. It depends on the pattern of the injury, how long ago it happened, whether the meniscus or other ligaments are involved, knee alignment, the demands you will place on the knee, and how much avoiding a donor site matters to you. An artificial ligament is not a substitute for every autograft. Long-term evidence for synthetic ACL ligaments is more limited than for autografts, and earlier generations of synthetic ligament had problems — which is exactly why patient selection matters, and why you will be told plainly if your own tendon is the better choice for your knee.",
+            },
+            {
+                title: "About the Implant",
+                text: "According to the manufacturer, Xiros, Jewel ACL™ has been used in India since 2023 in thousands of ACL procedures, is designed and made in the United Kingdom, is UK MDR registered, and is made from a material with a long history of use in medical implants. Xiros reports more than 40 years of implant development. These are the manufacturer’s statements; the decision to use any implant in your knee rests on your own clinical assessment.",
+            },
+            {
+                title: "Rehabilitation Still Decides the Outcome",
+                text: "Whichever graft is used, the knee has to regain strength, control and confidence. The tissue-sparing approach may allow earlier mobilisation and weight-bearing as guided by the surgeon, but a structured, supervised rehabilitation programme remains essential for a safe return to work and sport.",
+            },
+        ],
+        whyChoose:
+            "Dr. Sunku performs both autograft and artificial-ligament ACL reconstruction, so the recommendation you get is not tied to a single technique. His arthroscopy and sports medicine fellowship training, and his work as a team doctor for professional athletes, shape the assessment: the ligament, the meniscus, the cartilage and what you need the knee to do are all weighed before a graft is chosen. If an autograft is the better option for your knee — or if a structured rehabilitation programme without surgery is reasonable — that is what you will be advised.",
+        recoveryHeading: "Recovery and Rehabilitation Overview",
+        recovery: [
+            { t: "Week 0–2", d: "Weight-bearing as guided by the surgeon, usually with crutches initially. Focus on controlling swelling, regaining full straightening of the knee, and switching the quadriceps back on. With no donor site, there is only one wound to manage." },
+            { t: "Week 2–6", d: "Progressive range of motion, normalising your walking pattern, and early closed-chain strengthening under supervision. Most people return to desk-based work in this window." },
+            { t: "Week 6–12", d: "Full range of motion expected. Strength, balance and single-leg control are built up; stationary cycling and swimming are usually introduced." },
+            { t: "Month 3–6", d: "Running, then agility and change-of-direction drills once strength testing shows the operated leg is closing the gap on the other side. Progression is a capability decision, not a calendar one." },
+            { t: "Month 6 onwards", d: "Return to pivoting and contact sport after clearance, based on strength, hop and movement testing rather than a fixed date." },
+        ],
+        recoveryNote:
+            "Recovery depends on individual healing, rehabilitation and clinical guidance. Avoiding a donor site removes one source of pain and one wound; it does not remove the need for the knee itself to regain strength and control before sport.",
+        locationsHeading: "Where we see ACL Reconstruction Patients",
+        faqTitle: "Artificial Ligament ACL Reconstruction FAQ",
+        faqs: [
+            { question: "What is an artificial ACL ligament?", answer: "It is a purpose-designed synthetic ligament placed inside the knee to do the job of the torn ACL. Instead of harvesting a tendon from your hamstring, patellar tendon or quadriceps, the surgeon uses the implant to restore stability. Jewel ACL™ is the artificial ligament Dr. Sunku uses for suitable patients." },
+            { question: "Is an artificial ligament better than using my own tendon?", answer: "Not universally — they involve different trade-offs. An autograft has a long track record and is a standard, well-established option. An artificial ligament avoids taking healthy tissue from elsewhere in the leg, so there is no donor-site wound when it is used on its own. Long-term evidence is more extensive for autografts. The right choice depends on your injury, your knee and your goals, and is discussed openly in clinic." },
+            { question: "Am I a suitable candidate?", answer: "That is decided after examining the knee and reviewing your MRI. Factors include the pattern of the tear, the time since injury, any meniscus, cartilage or other ligament damage, alignment, and your activity demands. Some patients are better served by an autograft, and some by structured rehabilitation without surgery." },
+            { question: "What does “no second wound” mean?", answer: "In a traditional ACL reconstruction, tendon is harvested from another part of the leg, which leaves a donor site that also has to heal and can be sore in its own right. When Jewel ACL™ is used on its own, no tendon is taken, so only the knee needs to heal." },
+            { question: "Will I recover faster with an artificial ligament?", answer: "Without a donor site, earlier mobilisation and weight-bearing may be possible, as guided by the surgeon. But the knee still needs a full, supervised rehabilitation programme, and return to sport is decided by strength and movement testing — not by the type of graft or a date on the calendar." },
+            { question: "Is it safe, and what are the risks?", answer: "Like any ACL reconstruction, risks include infection, stiffness, persistent swelling, and re-injury or failure of the reconstruction. With synthetic ligaments, inflammation in the joint lining is a recognised concern and is one reason careful patient selection matters. According to the manufacturer, Jewel ACL™ is made from a material with a long, safe history in medical implants and is UK MDR registered. Your individual risks are discussed before any decision is made." },
+            { question: "Is this procedure available at both clinics?", answer: "Yes. Consultations and surgery are available at Raghava Multispeciality Hospital, Attibele and Health Nest Hospital, HSR Layout." },
+            { question: "What should I bring to my consultation?", answer: "Your MRI (images and report), any X-rays, and a note of how and when the injury happened. It also helps to come with your questions about suitability, risks, rehabilitation, and when you can expect to return to work and daily activities." },
+        ],
+        ctaHeading: "Book an ACL Reconstruction Consultation in Bengaluru",
+        ctaText: "If you have an ACL tear and want to understand all your reconstruction options — including whether an artificial ligament is suitable for you — bring your MRI for a proper assessment.",
+    },
 };

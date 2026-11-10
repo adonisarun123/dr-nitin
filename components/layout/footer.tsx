@@ -127,6 +127,13 @@ export function Footer() {
                         <Link href="/terms" className="hover:text-orange-400 transition-colors">Terms of Service</Link>
                     </div>
                 </div>
+
+                <p className="mt-4 text-center text-xs text-gray-400">
+                    Website by{" "}
+                    <a href="https://www.monkmantra.com" target="_blank" rel="noopener" className="text-gray-400 hover:text-gray-300 transition-colors">
+                        Monk Mantra
+                    </a>
+                </p>
             </div>
         </footer>
     );
