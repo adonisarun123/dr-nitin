@@ -373,7 +373,6 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
     { label: "Knee arthroscopy in Bangalore", href: "/knee-arthroscopy-bangalore" },
   ],
   "compression-fracture-spine-treatment": [
-    { label: "Compression fracture spine treatment cost in India", href: "/blog/compression-fracture-spine-treatment-india" },
     { label: "Spine surgery cost in India", href: "/blog/spine-surgery-cost-in-india" },
     { label: "4-phase lower back pain physiotherapy protocol", href: "/blog/lower-back-pain-physiotherapy-protocol-india" },
     { label: "Hip fracture surgery cost in India", href: "/blog/hip-fracture-surgery-cost-india" },
@@ -386,7 +385,7 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
     { label: "Non-surgical alternatives to hip replacement", href: "/blog/natural-alternatives-to-hip-replacement" },
     { label: "Hip Replacement service", href: "/services/hip-replacement" },
   ],
-  "frozen-shoulder-treatment-without-surgery-in-india": [
+  "frozen-shoulder-treatment-without-surgery-india": [
     { label: "Frozen shoulder and diabetes", href: "/blog/frozen-shoulder-and-diabetes" },
     { label: "Shoulder pain injections: precision care", href: "/blog/shoulder-pain-injections-precision-care" },
     { label: "Frozen shoulder treatment in Bangalore", href: "/frozen-shoulder-treatment-bangalore" },

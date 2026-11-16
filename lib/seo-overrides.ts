@@ -28,11 +28,6 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         description:
             "Hip replacement surgery risks and complications explained by an orthopedic surgeon: infection, clots, dislocation, warning signs and how to lower your risk.",
     },
-    "frozen-shoulder-treatment-without-surgery-in-india": {
-        title: "Frozen Shoulder Treatment Without Surgery in India: Stages & Recovery",
-        description:
-            "How frozen shoulder is treated without surgery in India — the three stages, physiotherapy, steroid injection vs hydrodilatation, recovery timeline and when surgery is needed.",
-    },
     // --- Sep 24, 2026 knowledge batch ---
     "basic-science-of-meniscus-tear": {
         title: "Basic Science of Meniscus Tear: Anatomy, Biomechanics & Healing",
@@ -512,11 +507,6 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         title: "Stress Fracture Treatment in India | Sports Medicine Guide",
         description:
             "Sports medicine guide to stress fracture treatment in India — diagnosis, recovery timeline, costs, and prevention. Consultations in Attibele & HSR Layout.",
-    },
-    "compression-fracture-spine-treatment-india": {
-        title: "Compression Fracture Spine Treatment India | Dr. Nitin Sunku",
-        description:
-            "Vertebral compression fracture in an elderly parent? A Bengaluru orthopedic surgeon explains conservative care, kyphoplasty, costs and recovery timelines.",
     },
     "lower-back-pain-physiotherapy-protocol-india": {
         title: "Lower Back Pain Physiotherapy Protocol India | 4-Phase Plan",
