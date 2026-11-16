@@ -3444,25 +3444,54 @@ export const blogPosts = [
       <p>*   Gradual return-to-sport programs to ensure safe participation</p>
       <p>*   Ongoing support for athletes and fitness-focused individuals</p>
       
+      <h2>What to Do in the First 48 Hours After an Injury</h2>
+<p>What you do immediately after an injury influences how quickly you recover. For most sprains, strains and knocks, the early priorities are to protect the injured area and control swelling:</p>
+<ul>
+<li><strong>Stop playing.</strong> Continuing on an injured knee or ankle is one of the most common reasons a minor injury becomes a major one.</li>
+<li><strong>Protect and rest</strong> the area for one to three days, using crutches, a sling or a brace if needed.</li>
+<li><strong>Ice</strong> for 15&ndash;20 minutes at a time, wrapped in a cloth, several times a day.</li>
+<li><strong>Compress and elevate</strong> to limit swelling, keeping the limb above heart level when resting.</li>
+<li><strong>Avoid</strong> heat, vigorous massage, alcohol and &quot;pulling&quot; or manipulating the joint in the first two days, as these can increase bleeding and swelling.</li>
+<li><strong>Start gentle movement</strong> as pain allows after the first couple of days; prolonged immobilisation slows most soft-tissue recovery.</li>
+</ul>
+<h3>Signs that need same-day medical attention</h3>
+<table>
+<thead><tr><th>Warning sign</th><th>What it may indicate</th></tr></thead>
+<tbody>
+<tr><td>A &quot;pop&quot; followed by rapid knee swelling within a few hours</td><td>ACL tear or other significant internal knee injury</td></tr>
+<tr><td>Unable to bear weight or take four steps</td><td>Possible fracture or severe ligament injury</td></tr>
+<tr><td>Visible deformity, or a joint that looks out of place</td><td>Fracture or dislocation &ndash; do not try to push it back yourself</td></tr>
+<tr><td>Knee that locks and cannot fully straighten</td><td>Meniscus tear or loose fragment caught in the joint</td></tr>
+<tr><td>Numbness, tingling, or a cold, pale limb</td><td>Nerve or blood vessel involvement &ndash; urgent</td></tr>
+<tr><td>Head injury with confusion, vomiting or memory loss</td><td>Concussion &ndash; must not return to play the same day</td></tr>
+</tbody>
+</table>
+<h2>How Sports Injuries Are Assessed</h2>
+<p>The clinical examination is the most important part of the assessment. Specific tests of ligament stability, joint movement and muscle strength usually narrow the diagnosis considerably. Imaging is then chosen to answer a specific question:</p>
+<ul>
+<li><strong>X-ray</strong> to rule out fractures and assess bone alignment; available in-house at the Attibele clinic, which also has a 24/7 casualty for acute injuries.</li>
+<li><strong>Ultrasound</strong> for tendons and muscles, and to guide injections.</li>
+<li><strong>MRI</strong> for suspected ligament, meniscus, cartilage or labral injuries, and for stress fractures that do not show on X-ray.</li>
+</ul>
+<h3>Acute injuries versus overuse injuries</h3>
+<p>Acute injuries, such as a ligament tear or dislocation, happen in a moment and are usually obvious. Overuse injuries, such as tendinopathy, shin splints or stress fractures, build up quietly over weeks. They are often ignored because they start as a mild ache that eases with warm-up. Pain that persists for more than two weeks, gets worse with each session, or appears earlier in each session should be assessed rather than trained through.</p>
+<h2>Preventing Injuries: Practical Tips for Weekend Players</h2>
+<p>Many injuries in Bengaluru are seen in office-goers who sit all week and then play hard cricket, football or badminton on the weekend. The body is not conditioned for sudden bursts of sprinting, jumping and twisting. A few habits make a real difference:</p>
+<ul>
+<li><strong>Warm up dynamically</strong> for ten minutes: light jogging, leg swings, lunges, and sport-specific movements. Static stretching alone is not enough.</li>
+<li><strong>Do strength training twice a week</strong>, focusing on legs, hips, core and shoulders. Structured programmes that include strength, balance and landing technique are known to reduce knee ligament injuries.</li>
+<li><strong>Build up gradually</strong> after a break, including after the monsoon or a busy work period.</li>
+<li><strong>Use the right footwear</strong> for the surface: non-marking court shoes for badminton, studs suited to the ground for football, and replace worn running shoes.</li>
+<li><strong>Stay hydrated</strong>, especially in hot afternoon matches; fatigue and dehydration increase injury risk.</li>
+<li><strong>Do not return too early</strong> from a previous injury; an earlier injury is one of the strongest predictors of the next one.</li>
+</ul>
+<p>Dr. Nitin N Sunku treats acute and overuse sports injuries at Raghava Multispeciality Hospital, Attibele, and Health Nest Hospital, HSR Layout, from diagnosis through <a href="/treatments/advanced-sports-injuries-treatment">advanced sports injury treatment</a> and supervised return to play. See also our <a href="/services/sports-medicine">sports medicine services</a>.</p>
+
       <h2>Conclusion: Strong Recovery Starts with Expert Care</h2>
       
       <p>Sports injuries don’t have to keep you off the field or away from the gym for long. Whether you’ve suffered an ACL tear, shoulder injury, or overuse strain, timely intervention is key.</p>
       
       <strong>Dr. Nitin N Sunku</strong> offers expert diagnosis, tailored treatments, and advanced sports injury care to help you recover fully—and perform stronger than before.
-      
-      <strong>Common Injuries Listed:</strong>
-      <ul><li>ACL & Ligament Tears</li>
-      <li>Shoulder Dislocations</li>
-      <li>Meniscus Injuries</li>
-      <li>Rotator Cuff Tears</li>
-      <li>Overuse Injuries (tennis elbow, shin splints, stress fractures)</li>
-      </ul>
-      <strong>Treatment Approach (Dr. Nitin N Sunku's):</strong>
-      <p>1.  <strong>Accurate Diagnosis:</strong> Clinical examination, Imaging (X-ray, MRI, ultrasound).</p>
-      <p>2.  <strong>Personalised Treatment Plans:</strong></p>
-      <p>*   Non-surgical: Rest, medication, physical therapy, PRP injections.</p>
-      <p>*   Surgical: ACL reconstruction, arthroscopic surgery, rotator cuff repair.</p>
-      <p>3.  <strong>Rehabilitation and Recovery:</strong> Physiotherapy, gradual return-to-sport programs.</p>
     `
   },
   {
@@ -3609,7 +3638,7 @@ export const blogPosts = [
       
       <p>While following your doctor’s treatment plan, here are a few home care tips to speed up healing:</p>
       
-      <ul><li>Avoid putting weight on the injured ankle</li>
+      <ul><li>Limit weight on the injured ankle for the first day or two, then increase walking as pain allows and as your doctor advises</li>
       <li>Apply an ice pack for 15–20 minutes every 2–3 hours during the first 48 hours</li>
       <li>Keep the ankle elevated when sitting or lying down</li>
       <li>Wear supportive footwear</li>
@@ -3617,6 +3646,41 @@ export const blogPosts = [
       </ul>
       <strong>Note:</strong> Don’t return to sports or high-impact activities too soon. Always follow your orthopedic specialist’s advice.
       
+      <h2>Do You Need an X-ray? Sprain or Fracture</h2>
+<p>A badly sprained ankle and a broken ankle can look and feel very similar, with swelling, bruising and pain. Doctors commonly use a well-established set of bedside checks, known as the Ottawa ankle rules, to decide whether an X-ray is needed. An X-ray is usually advised if there is:</p>
+<ul>
+<li>Bone tenderness along the back edge or tip of either ankle bone (the inner or outer bony bumps)</li>
+<li>Bone tenderness at the base of the fifth metatarsal (the bony point on the outer edge of the midfoot) or over the navicular bone on the inner midfoot</li>
+<li>Inability to take four steps, both immediately after the injury and at the time of examination</li>
+</ul>
+<p>X-ray is available in-house at the Attibele clinic, which also has a 24/7 casualty for acute injuries. An MRI is not needed for most sprains. It is considered when pain and swelling persist beyond six weeks, when a cartilage injury, a high ankle sprain or a tendon tear is suspected, or before any surgical decision.</p>
+<h3>The high ankle sprain</h3>
+<p>Not every sprain involves the usual outer ligaments. A <strong>high ankle sprain</strong> injures the ligaments that hold the two leg bones together just above the ankle. It typically follows a forceful outward twist of the foot, as in football tackles or awkward landings, and causes pain above the ankle that is worse when the foot is turned outwards or when pushing off. High ankle sprains usually take considerably longer to recover than ordinary sprains, and some unstable injuries need surgical fixation, so they deserve a proper assessment.</p>
+<h2>Realistic Recovery Timeline by Grade</h2>
+<table>
+<thead><tr><th>Grade</th><th>Walking comfortably</th><th>Return to sport (typical)</th></tr></thead>
+<tbody>
+<tr><td>Grade I (mild)</td><td>Within a few days to a week</td><td>About 1&ndash;3 weeks</td></tr>
+<tr><td>Grade II (moderate)</td><td>1&ndash;3 weeks, often with a brace</td><td>About 3&ndash;6 weeks</td></tr>
+<tr><td>Grade III (severe)</td><td>Several weeks with a brace or boot</td><td>About 6&ndash;12 weeks or more</td></tr>
+<tr><td>High ankle sprain</td><td>Variable</td><td>Often 6&ndash;12 weeks or longer</td></tr>
+</tbody>
+</table>
+<p>Ligaments continue to strengthen for months after the pain settles, which is why balance and strength training should continue even after you return to normal activity.</p>
+<h3>The rehab steps that prevent repeat sprains</h3>
+<ol>
+<li><strong>Early protected movement:</strong> gentle ankle circles and alphabet writing with the foot, and walking as comfort allows with support.</li>
+<li><strong>Strength:</strong> resistance band exercises in all directions, calf raises, and hip strengthening.</li>
+<li><strong>Balance (proprioception):</strong> single-leg standing, progressing to eyes closed, then to an unstable surface such as a pillow. This is the step that most reduces the chance of another sprain.</li>
+<li><strong>Agility and sport drills:</strong> hopping, side-stepping, figure-of-eight running and cutting before returning to matches.</li>
+</ol>
+<h2>Chronic Ankle Instability: When Sprains Keep Happening</h2>
+<p>After a sprain, some people are left with an ankle that repeatedly gives way, especially on uneven ground. This usually results from stretched ligaments combined with poor balance control after incomplete rehab. Most improve with a dedicated balance and strengthening programme and a brace for sport. When the ankle remains unstable despite good rehab, ligament reconstruction is assessed and discussed. Ongoing pain after a sprain may also signal a cartilage injury, tendon problem or missed fracture, which needs imaging.</p>
+<h3>Everyday risks in Bengaluru</h3>
+<p>Uneven footpaths, potholes, slippery tiles and waterlogged roads during the monsoon cause many sprains, as do loose slippers and heeled footwear. Badminton and football on indoor courts and turf are frequent sports causes. While recovering, choose supportive closed shoes, take extra care on stairs and wet surfaces, and use a brace for sport for several months after a significant sprain.</p>
+<h3>When to seek urgent care</h3>
+<p>Go to casualty if you cannot bear any weight, the ankle looks deformed, there is numbness or a cold, pale foot, the skin is broken over the injury, or pain and swelling are rapidly increasing. Learn more about <a href="/foot-ankle-pain-bangalore">foot and ankle pain care</a> and <a href="/fracture-treatment-attibele">fracture treatment in Attibele</a>.</p>
+
       <h2>Conclusion: Start Your Recovery The Right Way</h2>
       
       <p>An ankle sprain can feel limiting, but with the right care, you’ll be walking comfortably again in no time. Ignoring symptoms or delaying treatment can lead to long-term problems, so it’s best to act quickly.</p>
@@ -3671,10 +3735,55 @@ export const blogPosts = [
         <li><strong>Activity modification and relative rest</strong> — avoiding the specific movements that aggravate the tendon while staying otherwise active</li>
         <li><strong>Physiotherapy</strong> — progressive eccentric strengthening of the forearm is the single most effective treatment for most patients</li>
         <li><strong>Counterforce braces</strong> — to offload the tendon during activity</li>
-        <li><strong>Shockwave therapy</strong> — useful for stubborn cases that have not settled with exercise</li>
+        <li><strong>Shockwave therapy</strong> — sometimes considered for stubborn cases that have not settled with exercise; discussed and referred where appropriate</li>
         <li><strong>Ultrasound-guided injections</strong> — including PRP (platelet-rich plasma) in selected cases to support tendon healing</li>
-        <li><strong>Minor surgical release</strong> — reserved for the small number of patients whose symptoms persist beyond 6–12 months despite full conservative treatment</li>
+        <li><strong>Surgical release</strong> — rarely needed; discussed, and referred where appropriate, for for the small number of patients whose symptoms persist beyond 6–12 months despite full conservative treatment</li>
       </ul>
+
+      <h2>Not All Elbow Pain Is Tennis Elbow</h2>
+<p>Tennis elbow is the most common cause, but the site of the pain and the accompanying symptoms often point elsewhere. Getting the diagnosis right matters, because the treatment for a trapped nerve or a torn tendon is quite different.</p>
+<table>
+<thead><tr><th>Condition</th><th>Where it hurts</th><th>Key clues</th></tr></thead>
+<tbody>
+<tr><td>Tennis elbow (lateral epicondylitis)</td><td>Outer elbow</td><td>Pain with gripping, lifting with the palm down, shaking hands</td></tr>
+<tr><td>Golfer&apos;s elbow (medial epicondylitis)</td><td>Inner elbow</td><td>Pain with gripping and bending the wrist, common in gym-goers, cricketers, golfers and manual workers</td></tr>
+<tr><td>Ulnar nerve irritation (cubital tunnel)</td><td>Inner elbow, along the forearm</td><td>Tingling or numbness in the ring and little fingers, worse with the elbow bent for long periods, such as phone calls or sleeping with the arm bent</td></tr>
+<tr><td>Olecranon bursitis</td><td>Point of the elbow</td><td>A soft, fluid-filled swelling, often after leaning on the elbow; redness and warmth can mean infection</td></tr>
+<tr><td>Distal biceps tendon tear</td><td>Front of the elbow</td><td>A sudden pop while lifting something heavy, bruising and weakness turning the palm upward</td></tr>
+<tr><td>Elbow arthritis or loose bodies</td><td>Deep in the joint</td><td>Stiffness, inability to fully straighten, catching or locking</td></tr>
+<tr><td>Referred pain from the neck</td><td>Elbow and forearm</td><td>Neck stiffness, pain or tingling spreading down the whole arm</td></tr>
+</tbody>
+</table>
+<h2>Realistic Recovery Timeline for Tennis Elbow</h2>
+<p>Tendons heal slowly, and tennis elbow rewards patience and consistency. A typical course of structured non-surgical treatment looks like this:</p>
+<table>
+<thead><tr><th>Phase</th><th>Typical timing</th><th>Focus</th></tr></thead>
+<tbody>
+<tr><td>Calm the tendon</td><td>Weeks 0&ndash;2</td><td>Modify aggravating tasks, counterforce brace during activity, gentle isometric (static) holds that ease pain</td></tr>
+<tr><td>Load the tendon</td><td>Weeks 2&ndash;8</td><td>Slow, progressive strengthening of the wrist extensors, grip work, shoulder and upper-back strength</td></tr>
+<tr><td>Build capacity</td><td>Weeks 6&ndash;12</td><td>Heavier, faster loading that mimics your work or sport</td></tr>
+<tr><td>Return to full activity</td><td>Around 3 months, sometimes longer</td><td>Full sport or manual work, with a maintenance programme</td></tr>
+</tbody>
+</table>
+<p>Many patients improve noticeably within six to twelve weeks. Long-standing cases can take several months, and a small number need more than six months even with good care.</p>
+<h3>What patients commonly get wrong</h3>
+<ul>
+<li><strong>Relying on repeated steroid injections.</strong> A steroid injection can ease pain quickly, but in tennis elbow the benefit often fades and symptoms may return. Repeated injections are generally avoided; they are not a substitute for strengthening.</li>
+<li><strong>Resting the arm completely.</strong> Tendons need gradually increasing load to remodel. Total rest weakens the forearm and slows recovery.</li>
+<li><strong>Wearing the strap in the wrong place.</strong> A counterforce brace sits a few finger-widths below the painful bony bump, on the forearm muscles, not on the elbow joint itself.</li>
+<li><strong>Ignoring the workstation or tool.</strong> A laptop on a low table, a mouse far from the body, or a heavy kadai lifted one-handed every day can keep the tendon irritated despite exercises.</li>
+<li><strong>Stopping exercises once the pain improves.</strong> Recurrence is common when strengthening is dropped too early.</li>
+</ul>
+<h2>When Elbow Pain Needs Prompt Attention</h2>
+<p>See a doctor quickly, or go to casualty, if you have:</p>
+<ul>
+<li>Elbow pain, swelling or deformity after a fall, especially in children, where elbow fractures are common and can be subtle</li>
+<li>A sudden pop at the front of the elbow with bruising and weakness, which may be a distal biceps tear; early assessment matters because repair is usually most straightforward within the first few weeks</li>
+<li>A hot, red, swollen elbow, particularly with fever</li>
+<li>Numbness, tingling or weakness in the hand, or difficulty with fine finger movements</li>
+<li>An elbow that locks, or one you cannot straighten fully</li>
+</ul>
+<p>At the Attibele clinic, X-ray is available in-house for elbow injuries, and ultrasound can be used to assess tendons and to guide injections precisely. More on <a href="/treatments/ultrasound-guided-orthopedic-injections">ultrasound-guided injections</a> and <a href="/prp-regenerative-treatment-bangalore">PRP treatment</a>.</p>
 
       <h2>Self-Care You Can Start Today</h2>
 
@@ -3695,7 +3804,7 @@ export const blogPosts = [
       
       <h3>Introduction</h3>
       
-      <p>Shoulder pain can start as a mild discomfort but, over time, may become severe enough to interfere with daily tasks like lifting, dressing, or even sleeping. If you’ve tried rest, physiotherapy, and medications without long-term relief, it might be time to consider a more permanent solution.</p>
+      <p>Shoulder pain can start as a mild discomfort but, over time, may become severe enough to interfere with daily tasks like lifting, dressing, or even sleeping. If you’ve tried rest, physiotherapy, and medications without long-term relief, it may be time to discuss longer-term options with an orthopedic specialist.</p>
       
       <strong>Shoulder replacement surgery</strong> is a proven treatment for patients with advanced joint damage, especially when other therapies have failed. In this blog, we’ll help you understand when it’s needed, what it involves, and how expert care can make all the difference.
       
@@ -3714,7 +3823,7 @@ export const blogPosts = [
       
       <p>Shoulder replacement surgery is typically recommended when <strong>conservative treatments are no longer effective</strong> and joint damage is advanced.</p>
       
-      <p>#### Common Conditions That May Require Surgery:</p>
+      <h4>Common Conditions That May Require Surgery:</h4>
       
       <ul><li><strong>Severe Osteoarthritis or Rheumatoid Arthritis</strong>: Cartilage breakdown leads to bone-on-bone friction and joint stiffness.</li>
       <li><strong>Irreparable Rotator Cuff Injuries</strong>: Chronic or massive tears that cause instability and pain.</li>
@@ -3723,7 +3832,7 @@ export const blogPosts = [
       </ul>
       <h3>What to Expect from the Procedure</h3>
       
-      <p>Shoulder replacement is a safe and effective surgical solution, especially when performed by an experienced orthopedic specialist.</p>
+      <p>Shoulder replacement is an established operation that usually gives good pain relief in well-selected patients when performed by an experienced shoulder replacement surgeon.</p>
       
       <p>During the surgery:</p>
       
@@ -3733,20 +3842,59 @@ export const blogPosts = [
       </ul>
       <p>Most patients experience <strong>significant pain relief and improved shoulder function</strong> within a few months of surgery.</p>
       
+      <h2>Is It Really Time for a Replacement? Questions to Ask First</h2>
+<p>A worn-out shoulder on an X-ray does not automatically mean surgery. Shoulder replacement is usually considered when three things come together: the imaging shows advanced joint damage, the pain and stiffness are significantly limiting sleep and daily tasks, and a genuine trial of non-surgical care has not helped enough. Before replacement is discussed, it is worth asking:</p>
+<ul>
+<li>Does the pain wake me at night or stop me from dressing, combing my hair, or reaching a shelf?</li>
+<li>Have I completed a structured physiotherapy programme, not just a few sessions?</li>
+<li>Have injections or other joint-preserving treatments been tried where suitable?</li>
+<li>Is the pain truly from the shoulder joint, rather than the neck, the rotator cuff alone, or a frozen shoulder that may recover?</li>
+</ul>
+<h3>Joint-preserving options that are tried first</h3>
+<p>Many painful shoulders, even in older adults, are not yet at the replacement stage. Depending on the cause, options include physiotherapy focused on the rotator cuff and shoulder blade, <a href="/treatments/ultrasound-guided-orthopedic-injections">ultrasound-guided injections</a> to calm pain, and arthroscopic (keyhole) surgery such as rotator cuff repair or debridement when the joint surface is still reasonably preserved. Frozen shoulder, which can look alarming because of severe stiffness, usually improves without any replacement. Repairing a cuff tear early, while it is still repairable, may also help prevent the type of cuff-deficient arthritis that later needs a replacement.</p>
+<h2>Types of Shoulder Replacement</h2>
+<p>When replacement is the right option, the type depends mainly on the condition of the rotator cuff and the bone:</p>
+<table>
+<thead><tr><th>Type</th><th>What is replaced</th><th>Usually considered for</th></tr></thead>
+<tbody>
+<tr><td>Anatomic total shoulder replacement</td><td>Ball and socket, reproducing normal anatomy</td><td>Osteoarthritis with a healthy, working rotator cuff</td></tr>
+<tr><td>Reverse total shoulder replacement</td><td>Ball and socket, with their positions swapped so the deltoid muscle can lift the arm</td><td>Large irreparable cuff tears, cuff tear arthropathy, some complex fractures in older adults, and some revision cases</td></tr>
+<tr><td>Hemiarthroplasty (partial replacement)</td><td>Ball only</td><td>Selected fractures or situations where the socket is preserved</td></tr>
+</tbody>
+</table>
+<h3>Tests used in the decision</h3>
+<p>Standard X-rays show the severity of arthritis and the shape of the joint. A CT scan is often used to assess the bone of the socket and plan implant position, and an MRI or ultrasound helps judge the rotator cuff, which is critical in choosing between an anatomic and a reverse replacement. Blood tests and a general medical check-up assess fitness for surgery.</p>
+<h2>Recovery and Realistic Expectations</h2>
+<p>Recovery is gradual, and the physiotherapy afterwards is as important as the operation. A typical course looks like this, although every surgeon&apos;s protocol differs:</p>
+<table>
+<thead><tr><th>Period</th><th>What usually happens</th></tr></thead>
+<tbody>
+<tr><td>Hospital stay</td><td>Usually a short in-patient stay, with pain control and early guidance on sling use</td></tr>
+<tr><td>Weeks 0&ndash;6</td><td>Arm in a sling most of the time, gentle supervised movements, help needed with dressing and bathing</td></tr>
+<tr><td>Weeks 6&ndash;12</td><td>Sling discontinued, active movement increases, light daily tasks resume</td></tr>
+<tr><td>Months 3&ndash;6</td><td>Strengthening, most daily activities comfortable</td></tr>
+<tr><td>Up to 12 months</td><td>Continued gradual improvement in strength and movement</td></tr>
+</tbody>
+</table>
+<p>The main aim of shoulder replacement is reliable pain relief and better everyday function. Range of motion often improves, but may not return to completely normal, particularly after a reverse replacement. Most surgeons advise avoiding heavy lifting, contact sports and repetitive heavy overhead work afterwards to protect the implant. Like any major surgery, it carries risks, including infection, stiffness, instability, nerve injury and loosening of components over time, which should be discussed in detail before deciding.</p>
+<h3>When to seek urgent care</h3>
+<p>See a doctor promptly for a shoulder that is suddenly deformed or cannot move after a fall, especially in older adults, as a fracture or dislocation must be treated quickly. After any shoulder surgery, fever, increasing redness, wound discharge or severe new pain need immediate review.</p>
+<p>Dr. Nitin N Sunku&apos;s role is to establish the exact cause of your shoulder pain, offer joint-preserving treatment where it can help, and, where replacement is genuinely the best option, explain the choices and refer you to an experienced shoulder replacement surgeon. Read more about our <a href="/services/shoulder-care">shoulder care</a>.</p>
+
       <h3>Expert Shoulder Care in HSR Layout, Bengaluru</h3>
       
-      <p>At our clinic in <strong>HSR Layout, Bengaluru</strong>, Dr. Nitin N Sunku offers <strong>comprehensive evaluation</strong> and <strong>advanced imaging</strong> to determine whether shoulder replacement is the right option for you.</p>
+      <p>At our clinic in <strong>HSR Layout, Bengaluru</strong>, Dr. Nitin N Sunku offers <strong>comprehensive evaluation</strong>, with imaging arranged as needed, to determine whether shoulder replacement is the right option for you. Where it is, he discusses the options with you and refers you to an experienced shoulder replacement surgeon.</p>
       
-      <p>#### Our Services Include:</p>
+      <h4>Our Services Include:</h4>
       
       <ul><li>Detailed joint assessments</li>
-      <li>X-rays and MRI for diagnosis</li>
-      <li>Personalized treatment plans (non-surgical and surgical)</li>
-      <li>Post-operative physiotherapy and recovery guidance</li>
+      <li>X-rays, with MRI or CT arranged where needed</li>
+      <li>Personalized treatment plans, including joint-preserving options such as injections and arthroscopic surgery where suitable</li>
+      <li>Referral for shoulder replacement when needed, and physiotherapy and recovery guidance</li>
       </ul>
       <h3>Conclusion: Don’t Let Shoulder Pain Control Your Life</h3>
       
-      <p>If chronic shoulder pain is limiting your mobility and quality of life, and other treatments haven’t helped, <strong>shoulder replacement surgery</strong> could offer the long-term relief you need. With expert care from <strong>Dr. Nitin N Sunku</strong>, you can move forward confidently — and pain-free.</p>
+      <p>If chronic shoulder pain is limiting your mobility and quality of life, and other treatments haven’t helped, <strong>shoulder replacement surgery</strong> could offer the long-term relief you need. With a careful assessment from <strong>Dr. Nitin N Sunku</strong>, you can understand every option, from joint-preserving care to a well-planned referral for replacement, and move forward with confidence.</p>
     `
   },
   {
@@ -3793,19 +3941,67 @@ export const blogPosts = [
       <h3>Treatment Options Include:</h3>
       
       <ul><li><strong>Physiotherapy & Strengthening Exercises</strong>: Targeted rehabilitation to restore function and prevent recurrence.</li>
-      <li><strong>Platelet-Rich Plasma (PRP) Therapy</strong>: A regenerative treatment that uses your body’s own healing factors to repair damaged tissues.</li>
+      <li><strong>Platelet-Rich Plasma (PRP) Therapy</strong>: A regenerative treatment that uses your body’s own healing factors to support healing of damaged tendon tissue.</li>
       <li><strong>Ultrasound-Guided Injections</strong>: Corticosteroid or PRP injections delivered precisely to reduce inflammation and pain.</li>
       <li><strong>Arthroscopic (Keyhole) Surgery</strong>: Minimally invasive procedure to repair severe or complete rotator cuff tears.</li>
       </ul>
       <p>Every treatment plan is tailored to your condition, lifestyle, and recovery goals.</p>
       
+      <h2>How a Rotator Cuff Problem Is Diagnosed</h2>
+<p>Shoulder pain has many causes, and the first task is to confirm that the rotator cuff is the source. A frozen shoulder, arthritis, an AC joint problem or even a pinched nerve in the neck can all feel similar. The examination looks at:</p>
+<ul>
+<li><strong>Active versus passive movement</strong> &ndash; if the doctor can lift your arm further than you can, cuff weakness or a tear is likely. If neither can move it, frozen shoulder or arthritis is more likely.</li>
+<li><strong>Strength tests</strong> for each of the cuff tendons, which help estimate the size and site of a tear.</li>
+<li><strong>Neck examination</strong> to rule out referred pain from the cervical spine.</li>
+</ul>
+<h3>Ultrasound, X-ray or MRI?</h3>
+<table>
+<thead><tr><th>Test</th><th>What it shows</th><th>When it is useful</th></tr></thead>
+<tbody>
+<tr><td>X-ray</td><td>Bone spurs, calcium deposits, arthritis, the position of the ball in the socket</td><td>Most patients, as a baseline</td></tr>
+<tr><td>Ultrasound</td><td>Cuff tendons, bursa and biceps tendon in real time</td><td>Quick assessment of tendinopathy and many tears, and to guide injections</td></tr>
+<tr><td>MRI</td><td>Detailed view of tear size, tendon retraction, muscle quality, labrum and cartilage</td><td>When a significant tear is suspected or surgery is being planned</td></tr>
+</tbody>
+</table>
+<h2>Does Your Tear Need Surgery? How the Decision Is Made</h2>
+<p>Not every rotator cuff tear needs an operation. In fact, many partial tears and degenerative tears in older adults are managed well with physiotherapy and, when needed, injections. The decision depends on several factors together:</p>
+<table>
+<thead><tr><th>Usually managed non-surgically first</th><th>Surgical repair often discussed early</th></tr></thead>
+<tbody>
+<tr><td>Tendinopathy and bursitis</td><td>A sudden, injury-related full-thickness tear in an active person</td></tr>
+<tr><td>Partial-thickness tears</td><td>Significant new weakness, such as being unable to lift the arm, after a fall or lift</td></tr>
+<tr><td>Degenerative tears in older, less demanding shoulders with good movement</td><td>Tears that remain painful and weak after about three to six months of good rehab</td></tr>
+<tr><td>Tears where pain improves steadily with physiotherapy</td><td>Tears in younger patients, which may enlarge over time if left</td></tr>
+</tbody>
+</table>
+<p>Timing matters with acute, full-thickness tears. Over months, a torn tendon can retract and its muscle can waste, which may make a later repair more difficult or less successful. This is why a significant new tear after an injury should be assessed promptly rather than left to &quot;see how it goes&quot;.</p>
+<h3>Recovery after arthroscopic rotator cuff repair</h3>
+<p>The repaired tendon needs time to heal back to bone, so recovery after surgery is gradual:</p>
+<ul>
+<li><strong>Weeks 0&ndash;6:</strong> arm in a sling, with gentle passive movements guided by a physiotherapist.</li>
+<li><strong>Weeks 6&ndash;12:</strong> sling removed, active movement restored step by step.</li>
+<li><strong>Months 3&ndash;6:</strong> progressive strengthening; most daily activities comfortable.</li>
+<li><strong>Months 6&ndash;12:</strong> return to heavier work, gym and overhead sports, depending on progress.</li>
+</ul>
+<p>Following the protocol closely, especially avoiding lifting with the operated arm in the first weeks, protects the repair.</p>
+<h2>Living With Rotator Cuff Pain: Practical Tips</h2>
+<ul>
+<li><strong>Sleeping:</strong> lie on the other side with a pillow hugged in front of you, or sleep slightly propped up on your back with a small pillow under the elbow.</li>
+<li><strong>Daily tasks:</strong> keep frequently used items at waist-to-shoulder height and avoid reaching behind or overhead repeatedly.</li>
+<li><strong>Two-wheeler riding:</strong> long rides with arms held forward can aggravate pain; take breaks and keep the elbows relaxed.</li>
+<li><strong>Gym:</strong> pause overhead pressing, upright rows and dips until pain settles, and focus on cuff and shoulder-blade exercises.</li>
+<li><strong>Do not stop moving altogether:</strong> complete rest can lead to stiffness, particularly in people with diabetes, who are more prone to frozen shoulder.</li>
+</ul>
+<h3>When to see a doctor promptly</h3>
+<p>Seek early assessment if you suddenly cannot lift your arm after a fall or lift, if pain is severe and constant at night, or if you notice wasting of the shoulder muscles. Fever with a hot, swollen shoulder needs urgent care. Read more on our <a href="/shoulder-pain-bangalore">shoulder pain</a> and <a href="/services/shoulder-care">shoulder care</a> pages, or explore <a href="/prp-regenerative-treatment-bangalore">PRP and regenerative treatment</a> options.</p>
+
       <h2>Conclusion: Reclaim Your Shoulder Strength and Mobility</h2>
       
       <p>If your shoulder pain has been lingering or worsening, don’t wait for it to disrupt your life further. A rotator cuff injury, when addressed early, can be treated successfully — often without the need for surgery.</p>
       
       <p>With Dr. Nitin N Sunku’s expertise in <strong>shoulder and sports injury care</strong>, you can expect precise diagnosis, personalized treatment, and compassionate follow-up care.</p>
       
-      ***
+      
       
       <ul><li><strong>Rotator Cuff Definition</strong>: A group of four muscles and tendons stabilizing the shoulder joint, helping to lift and rotate the arm.</li>
       <li><strong>Injury Types</strong>: Range from tendonitis and bursitis to partial or full-thickness tears.</li>
@@ -3858,17 +4054,63 @@ export const blogPosts = [
       </ul>
       <h2>Expert Herniated Disc Treatment by Dr. Nitin N Sunku</h2>
       
-      <p>As an Orthopedic and spine specialist based in <strong>HSR Layout, Bengaluru</strong>, Dr. Nitin N Sunku offers advanced and personalized treatment for herniated discs. With a strong background in orthopedic care and a patient-focused approach, he has helped many individuals regain their comfort and quality of life.</p>
+      <p>As an orthopedic specialist consulting at <strong>Health Nest Hospital, HSR Layout</strong> and <strong>Raghava Multispeciality Hospital, Attibele</strong>, Dr. Nitin N Sunku offers personalized non-surgical treatment for herniated discs and coordinates referral to a spine surgeon when an operation is needed. With a strong background in orthopedic care and a patient-focused approach, he has helped many individuals regain their comfort and quality of life.</p>
       
       <h3>Treatment Options</h3>
       
       <p>Treatment plans are tailored to the individual’s condition, lifestyle, and goals, and may include:</p>
       
       <ul><li><strong>Non-surgical care</strong> like rest, physiotherapy, posture correction, and medications</li>
-      <li><strong>Epidural steroid injections</strong> for inflammation relief</li>
-      <li><strong>Minimally invasive procedures</strong> for disc decompression</li>
-      <li><strong>Surgical intervention</strong> in severe or unresponsive cases</li>
+      <li><strong>Epidural steroid injections</strong> for selected patients with severe nerve pain, assessed and referred where needed</li>
+      
+      <li><strong>Referral to a spine surgeon</strong> for severe, progressive or unresponsive cases, where minimally invasive decompression or other surgery may be advised</li>
       </ul>
+      <h2>How a Herniated Disc Is Diagnosed</h2>
+<p>A disc herniation is diagnosed first by its pattern of symptoms and a careful examination, not by a scan. The examination checks which movements reproduce your pain, the straight-leg raise test for an irritated sciatic nerve, and the strength, sensation and reflexes in the legs or arms. This tells the doctor which nerve root is involved and how much it is affected.</p>
+<ul>
+<li><strong>X-ray</strong> does not show the disc itself, but it can show alignment, disc-space narrowing, instability or other bone problems, and is useful when pain follows an injury or in older patients.</li>
+<li><strong>MRI</strong> is the test that shows the disc and nerves. It is advised when there is significant leg or arm weakness, red-flag symptoms, pain that is not improving after about six weeks of good non-surgical care, or when an injection or surgery is being considered.</li>
+</ul>
+<p>An important point: disc bulges are very common on MRI in people who have no pain at all, and the size of a bulge does not always match how severe the symptoms are. The scan must be read alongside your examination, which is why an orthopedic assessment comes first.</p>
+<h2>What Recovery Usually Looks Like</h2>
+<p>The natural course of a herniated disc is often favourable. In many patients the herniated material shrinks over weeks to months as the body reabsorbs it, and leg pain eases gradually. A typical non-surgical path looks like this:</p>
+<table>
+<thead><tr><th>Phase</th><th>Typical timing</th><th>What helps</th></tr></thead>
+<tbody>
+<tr><td>Acute pain</td><td>First 1&ndash;2 weeks</td><td>Short spells of rest only when needed, gentle walking, medication prescribed by your doctor, positions that ease leg pain</td></tr>
+<tr><td>Settling</td><td>Weeks 2&ndash;6</td><td>Guided physiotherapy, nerve-gliding exercises, gradually longer walks, avoiding heavy lifting and prolonged sitting</td></tr>
+<tr><td>Strengthening</td><td>Weeks 6&ndash;12</td><td>Core and hip strengthening, posture and lifting technique, return to most work and daily activity</td></tr>
+<tr><td>Return to full activity</td><td>Around 3 months onward</td><td>Sport, gym and heavier work built up step by step</td></tr>
+</tbody>
+</table>
+<p>Leg pain usually improves before back pain, and numbness can take longer than pain to recover. Progress is rarely a straight line; occasional flare-ups during recovery are common and do not mean treatment has failed.</p>
+<h3>When surgery is considered</h3>
+<p>Dr. Nitin N Sunku&apos;s scope for disc problems is non-surgical care. Surgery is not the first step for most people, and he refers to a spine surgeon when it is genuinely needed, typically for:</p>
+<ul>
+<li>Cauda equina syndrome or other emergencies (see below)</li>
+<li>Progressive or significant weakness, such as foot drop</li>
+<li>Severe leg pain that has not improved after six to twelve weeks of good non-surgical care and is badly affecting life</li>
+</ul>
+<h2>Emergency Red Flags: Cauda Equina Syndrome</h2>
+<p>Rarely, a large disc herniation compresses the bundle of nerves at the bottom of the spinal canal that controls the bladder, bowel and sexual function. This is <strong>cauda equina syndrome</strong> and it needs emergency assessment, usually with an urgent MRI and surgery the same day. Go to an emergency department immediately if you have back pain or sciatica with any of these:</p>
+<ul>
+<li>Difficulty passing urine, a weak stream, or not feeling when the bladder is full</li>
+<li>Loss of bladder or bowel control</li>
+<li>Numbness in the saddle area: around the groin, genitals, inner thighs or back passage</li>
+<li>Sciatica in both legs, or rapidly worsening weakness in the legs</li>
+<li>New sexual dysfunction</li>
+</ul>
+<p>Do not wait for a routine appointment if these symptoms appear. Early treatment gives the best chance of recovering nerve function.</p>
+<h3>Daily habits that help a disc recover</h3>
+<ul>
+<li>Keep walking in short, frequent bouts; long bed rest tends to slow recovery.</li>
+<li>Break up sitting every 20&ndash;30 minutes, including at desks and during long commutes.</li>
+<li>Avoid lifting while bending and twisting together; bend the knees and keep loads close.</li>
+<li>Avoid long, bumpy two-wheeler rides during the acute phase where possible.</li>
+<li>Avoid floor sitting and very low seats while leg pain is severe.</li>
+</ul>
+<p>For more detail on assessment and non-surgical options, see our pages on <a href="/slip-disc-treatment-bangalore">slip disc treatment</a> and <a href="/services/spine-care">spine care</a>.</p>
+
       <h2>Conclusion: Don’t Let Back Pain Limit You</h2>
       
       <p>A herniated disc can affect your work, sleep, and daily activities—but it doesn’t have to be permanent. With timely care from a skilled orthopedic specialist like <strong>Dr. Nitin N Sunku</strong>, you can regain control and return to a pain-free, active life.</p>
@@ -3884,7 +4126,7 @@ export const blogPosts = [
     content: `
       <h2>Introduction</h2>
       
-      <p>Are you experiencing persistent pain, swelling, or stiffness in your joints that’s affecting your daily life? You may be suffering from <strong>tendonitis</strong>—a common yet often overlooked condition that involves inflammation of the tendons. While it might start as mild discomfort, untreated tendonitis can lead to more serious joint issues. Fortunately, effective treatment is available. <strong>Dr. Nitin N Sunku</strong>, a leading Orthopedic specialist in Bengaluru, is here to guide you on the road to recovery with expert diagnosis and personalized care.</p>
+      <p>Are you experiencing persistent pain, swelling, or stiffness in your joints that’s affecting your daily life? You may be suffering from <strong>tendonitis</strong>—a common yet often overlooked condition that involves inflammation of the tendons. While it might start as mild discomfort, untreated tendonitis can lead to more serious joint issues. Fortunately, effective treatment is available. <strong>Dr. Nitin N Sunku</strong>, an orthopedic and sports medicine surgeon in Bengaluru, is here to guide you on the road to recovery with expert diagnosis and personalized care.</p>
       
       <h2>Understanding Tendonitis: Key Concepts Simplified</h2>
       
@@ -3919,11 +4161,54 @@ export const blogPosts = [
       </ul>
       <p>Each treatment plan is tailored to suit your specific condition, helping reduce inflammation, restore mobility, and prevent recurrence.</p>
       
+      <h2>Your first 6 weeks: a simple self-care plan</h2>
+<p>Most tendon pain improves with the right home care, as long as you are patient and consistent. This plan suits common problems like tennis elbow, pain below the kneecap, Achilles pain and heel pain. If your pain started with a sudden injury, or any warning signs listed further below apply, see a doctor first.</p>
+<table>
+<thead><tr><th>Week</th><th>Goal</th><th>What to do</th></tr></thead>
+<tbody>
+<tr><td>Week 1</td><td>Calm it down</td><td>Cut back the activity that clearly triggers the pain, but keep moving. Use ice for 10–15 minutes after activity. Start gentle "hold" exercises: press or push against resistance without moving the joint, for 30–45 seconds, 4–5 times, once or twice a day.</td></tr>
+<tr><td>Week 2</td><td>Find your safe level</td><td>Continue the holds. Notice which daily tasks hurt and adjust them — lighter bags, a different grip, shorter walks. Pain during exercise should stay mild (up to about 3 out of 10).</td></tr>
+<tr><td>Weeks 3–4</td><td>Start building strength</td><td>Add slow strengthening: for the elbow, lifting a light water bottle with the wrist; for the knee, slow sit-to-stand from a chair; for the Achilles, slow heel raises on both feet. Three sets of 10–15, every other day.</td></tr>
+<tr><td>Weeks 5–6</td><td>Get back to normal</td><td>Gradually increase the weight or move to single-leg or single-arm versions. Slowly reintroduce your usual sport or work tasks, starting at about half your normal amount.</td></tr>
+</tbody>
+</table>
+<h3>The 24-hour rule</h3>
+<p>Your tendon tells you whether you are doing too much. Mild discomfort during or after exercise that settles by the next morning is fine. If the pain is worse the next day, or the tendon feels stiffer in the morning, you did too much — go back a step for a few days rather than stopping completely.</p>
+
+<h2>Everyday changes that help tendons recover</h2>
+<ul>
+<li><strong>At the desk:</strong> keep your wrist straight on the mouse and keyboard, raise the screen to eye level, and take a short break every 45–60 minutes.</li>
+<li><strong>At home:</strong> carry bags with your palm facing up or close to the body, and avoid wringing clothes forcefully if your elbow hurts.</li>
+<li><strong>On the road:</strong> on a two-wheeler, avoid gripping the throttle and clutch hard with a bent wrist; take breaks on long rides.</li>
+<li><strong>Footwear:</strong> for heel and Achilles pain, avoid walking barefoot on hard floors and flat, worn-out chappals. A cushioned shoe with a slight heel often helps.</li>
+<li><strong>Sport:</strong> warm up properly, and avoid sudden jumps in training, such as adding several badminton sessions in one week.</li>
+<li><strong>General health:</strong> sleep well, stay hydrated, and keep diabetes well controlled, because high sugar levels slow tendon healing.</li>
+</ul>
+
+<h2>Common mistakes beginners make</h2>
+<ul>
+<li><strong>Resting completely for weeks.</strong> Tendons need some load to heal. Total rest makes them weaker.</li>
+<li><strong>Pushing through sharp pain.</strong> Mild discomfort is okay; sharp or worsening pain is not.</li>
+<li><strong>Relying only on painkillers or pain-relief gels.</strong> These can ease symptoms but do not strengthen the tendon.</li>
+<li><strong>Stretching hard on a painful tendon.</strong> Aggressive stretching can irritate some tendons, especially at the heel.</li>
+<li><strong>Stopping exercises once pain goes.</strong> Keep strengthening for a few more weeks to prevent it coming back.</li>
+</ul>
+
+<h2>When to stop self-care and see a doctor</h2>
+<ul>
+<li>A sudden pop or snap followed by weakness, especially at the back of the ankle or the shoulder</li>
+<li>Major swelling, bruising, or a joint that is hot and red, particularly with fever</li>
+<li>Inability to lift the arm, stand on tiptoe or bear weight</li>
+<li>Numbness or tingling spreading into the hand or foot</li>
+<li>No improvement after 4–6 weeks of sensible home care</li>
+</ul>
+<p>At that stage, an examination, often with an ultrasound scan, helps confirm the diagnosis and guide treatment, which may include supervised physiotherapy and, in stubborn cases, <a href="/treatments/ultrasound-guided-orthopedic-injections">ultrasound-guided injections</a>. For sports-related tendon pain, see <a href="/sports-injury-doctor-bangalore">sports injury care in Bengaluru</a>. Dr. Nitin N Sunku sees patients at Raghava Multispeciality Hospital in Attibele and Health Nest Hospital in HSR Layout.</p>
+
       <h2>Conclusion: Take the First Step Toward a Pain-Free Life</h2>
       
       <p>Tendonitis may feel like a minor issue at first, but it can impact your quality of life if left untreated. With the right guidance and care from Dr. Nitin N Sunku, recovery is well within reach. Whether you’re a working professional, athlete, or senior citizen, you don’t have to live with joint pain any longer.</p>
       
-      <p>Schedule a consultation with Dr. Nitin N Sunku today and take your first confident step toward a pain-free, active lifestyle. Trust your recovery to one of Bengaluru’s most experienced orthopedic specialists.</p>
+      <p>Schedule a consultation with Dr. Nitin N Sunku today and take your first confident step toward a pain-free, active lifestyle. Consultations are available at Attibele and HSR Layout, Monday to Saturday.</p>
     `
   },
   {
@@ -4053,6 +4338,49 @@ export const blogPosts = [
       <li>Delay or prevent the need for joint surgery</li>
       <li>Support overall health and reduce inflammation</li>
       </ul>
+      <h2>Joint by joint: where extra weight does the most damage</h2>
+<p>Excess weight does not affect every joint in the same way. Understanding the pattern helps explain why some people feel it first in the knees while others notice back or heel pain.</p>
+<table>
+<thead><tr><th>Area</th><th>What happens</th><th>Typical symptoms</th></tr></thead>
+<tbody>
+<tr><td>Knees</td><td>The knee takes several times body weight with each step, and more on stairs and when rising from a squat. The inner (medial) side of the knee usually bears the most, which is why arthritis often starts there and can slowly bow the legs.</td><td>Pain on stairs, stiffness after sitting, swelling after long walks, difficulty squatting or sitting on the floor.</td></tr>
+<tr><td>Hips</td><td>The hip also carries multiples of body weight with walking. Weight is linked with hip osteoarthritis, though the link is less strong than at the knee. Weak buttock muscles add to the strain.</td><td>Groin or outer hip pain, difficulty putting on socks or getting out of a car, limping.</td></tr>
+<tr><td>Lower back</td><td>A heavier abdomen tilts the pelvis forward and increases the curve of the lower back, loading the small facet joints and discs. Weak core muscles make this worse.</td><td>Aching after standing or long two-wheeler rides, morning stiffness, pain that eases on sitting.</td></tr>
+<tr><td>Feet and ankles</td><td>The arch flattens under load and the plantar fascia and Achilles tendon are stretched with every step.</td><td>Heel pain on the first steps in the morning (plantar fasciitis), ankle and arch fatigue.</td></tr>
+</tbody>
+</table>
+<p>If any of these sound familiar, see the pages on <a href="/hip-pain-bangalore">hip pain</a>, <a href="/back-pain-bangalore">back pain</a> and <a href="/foot-ankle-pain-bangalore">foot and ankle pain</a> for condition-specific care.</p>
+
+<h2>More than load: fat tissue, metabolism and cartilage</h2>
+<p>For years, joint damage in obesity was explained purely as "wear and tear." We now understand it is also metabolic. Fat tissue, particularly around the abdomen, releases inflammatory chemical messengers. These circulate throughout the body and can affect cartilage and the joint lining even in joints that do not carry weight. This is one reason why people with obesity have a higher rate of hand osteoarthritis too.</p>
+<p>Conditions that often travel with excess weight add to the picture:</p>
+<ul>
+<li><strong>Type 2 diabetes</strong> is linked with stiffer tendons, frozen shoulder and slower healing.</li>
+<li><strong>High uric acid</strong> raises the chance of gout attacks, often in the big toe, ankle or knee.</li>
+<li><strong>Low vitamin D</strong>, which is common in India and more frequent in people carrying extra weight, can contribute to muscle weakness and aches.</li>
+<li><strong>Poor sleep and sleep apnoea</strong> increase pain sensitivity and fatigue, making activity harder.</li>
+</ul>
+<p>The practical message: improving diet, blood sugar and sleep helps joints even before the scale moves much.</p>
+
+<h2>Obesity, joint surgery and recovery</h2>
+<p>When joints are badly damaged, surgery such as knee or hip replacement may become the right option. Carrying significant excess weight does not automatically rule this out, but it does change the risk picture. In general, higher body weight is associated with:</p>
+<ul>
+<li>A higher chance of wound healing problems and infection</li>
+<li>Greater risk of blood clots after surgery</li>
+<li>More anaesthesia and breathing considerations, especially with sleep apnoea or diabetes</li>
+<li>A slower early recovery and more demanding rehabilitation</li>
+</ul>
+<p>For this reason, surgeons often work with patients on weight, blood sugar and fitness before a planned operation. Even a few months of preparation can make surgery safer and recovery smoother. The same is true for fracture healing and ligament reconstructions in younger patients.</p>
+
+<h2>What patients commonly get wrong</h2>
+<ul>
+<li><strong>"My joint hurts, so I should rest it."</strong> Prolonged rest weakens muscles, increases stiffness and leads to more weight gain. The goal is the right kind of movement, not no movement.</li>
+<li><strong>"I will lose weight first, then treat my knee."</strong> Often it works the other way: treating pain with strengthening, physiotherapy and, where needed, injections makes it possible to exercise and lose weight.</li>
+<li><strong>"Supplements will protect my cartilage."</strong> Some patients find certain supplements helpful, but none replace weight management and strength work.</li>
+<li><strong>"It is just age."</strong> Weight, muscle strength and old injuries are often bigger factors than age alone, and many of them can be changed.</li>
+</ul>
+<p>Seek prompt medical review if a joint becomes suddenly hot, red and swollen, if you have fever with joint pain, or if pain stops you from bearing weight.</p>
+
       <h2>How We Can Help in HSR Layout, Bengaluru</h2>
       
       <p>If you’re experiencing joint pain and are concerned about the role of weight in your condition, <strong>Dr. Nitin N Sunku</strong>, Orthopedic Specialist in HSR Layout, can help.</p>
@@ -4107,6 +4435,54 @@ export const blogPosts = [
 
       <p>Recovery depends on what was done. After a simple procedure such as a partial meniscectomy, many patients walk the same day and return to desk work within one to two weeks. After a ligament reconstruction or meniscus repair, recovery is more gradual and structured physiotherapy over several months is essential to restore strength, motion, and confidence. Following your rehabilitation plan closely is the single biggest factor in a good long-term outcome.</p>
 
+      <h2>How the Decision Is Made</h2>
+<p>Arthroscopy works best when it is aimed at a specific, mechanical problem that has been identified before surgery. The assessment usually includes:</p>
+<ul>
+<li><strong>A detailed history:</strong> how the problem started, whether there was a twist or pop, and whether the knee locks, catches or gives way.</li>
+<li><strong>Examination:</strong> joint-line tenderness, swelling, range of motion, kneecap tracking, and ligament stability tests.</li>
+<li><strong>X-ray:</strong> ideally taken standing, to look for arthritis, alignment problems, loose bodies and fractures. It is quick and is done in-house at the Attibele hospital.</li>
+<li><strong>MRI:</strong> to show the meniscus, ligaments and cartilage in detail. Not everyone needs one, but it is usually done before a planned arthroscopy.</li>
+</ul>
+<table>
+<thead><tr><th>Arthroscopy usually helps</th><th>Arthroscopy usually does not help</th></tr></thead>
+<tbody>
+<tr><td>A meniscus tear that locks or catches</td><td>Knee pain caused mainly by osteoarthritis</td></tr>
+<tr><td>A torn ACL or PCL in an active person</td><td>A degenerative meniscus tear in a worn knee without locking</td></tr>
+<tr><td>Loose bodies floating in the joint</td><td>Kneecap pain that has not had a proper physiotherapy trial</td></tr>
+<tr><td>A recurrently dislocating kneecap needing stabilisation</td><td>&quot;Just having a look&quot; when imaging and examination are normal</td></tr>
+</tbody>
+</table>
+<p>The point about arthritis matters. Arthroscopic &quot;washout&quot; or &quot;cleaning&quot; of an arthritic knee has generally not been shown to give lasting pain relief, so for arthritic pain, other treatments come first. See <a href="/arthritis-treatment-bangalore">arthritis treatment in Bengaluru</a> for those options.</p>
+
+<h2>Before and On the Day of Surgery</h2>
+<ul>
+<li><strong>Pre-operative tests:</strong> blood tests, and an ECG and physician review where age or health conditions call for it.</li>
+<li><strong>Medicines:</strong> you will be told whether to pause blood thinners or adjust diabetes medicines. Do not stop any medicine on your own.</li>
+<li><strong>Fasting:</strong> usually no food for about six hours before surgery; you will be given exact timings.</li>
+<li><strong>After the procedure:</strong> a physiotherapist starts gentle exercises, and most patients go home the same day or the next morning. Someone should drive you home.</li>
+</ul>
+
+<h2>Typical Recovery by Procedure</h2>
+<table>
+<thead><tr><th>Procedure</th><th>Walking</th><th>Desk work</th><th>Driving</th><th>Sport</th></tr></thead>
+<tbody>
+<tr><td>Partial meniscectomy or loose body removal</td><td>Same day or next day, often with crutches briefly</td><td>1&ndash;2 weeks</td><td>About 1&ndash;2 weeks, once you can brake firmly</td><td>Roughly 6&ndash;8 weeks</td></tr>
+<tr><td>Meniscus repair</td><td>Crutches and brace for about 4&ndash;6 weeks</td><td>2&ndash;3 weeks</td><td>About 6 weeks</td><td>About 4&ndash;6 months</td></tr>
+<tr><td>ACL reconstruction</td><td>Walking with support within days</td><td>2&ndash;3 weeks</td><td>About 4&ndash;6 weeks</td><td>Usually 9 months or more</td></tr>
+</tbody>
+</table>
+<p>These are typical ranges, not promises; your own plan depends on what is found and repaired. More detail is on the <a href="/knee-arthroscopy-bangalore">knee arthroscopy</a> page and the <a href="/acl-reconstruction-bangalore">ACL reconstruction</a> page.</p>
+
+<h3>Warning signs after surgery</h3>
+<p>Arthroscopy is a safe procedure, but contact your surgeon promptly if you develop fever, increasing redness or discharge from a wound, pain that keeps getting worse instead of better, or pain and swelling in the calf, which can signal a blood clot. Sudden breathlessness after surgery needs emergency care.</p>
+<h2>Common Misconceptions</h2>
+<ul>
+<li><strong>&quot;Keyhole means no recovery.&quot;</strong> The cuts are small, but the work done inside the knee can be significant. A repaired meniscus or a new ligament needs the same healing time whether the incision is large or small.</li>
+<li><strong>&quot;An arthroscopy will clean out my arthritis.&quot;</strong> As explained above, this rarely brings lasting relief and can delay treatments that actually help.</li>
+<li><strong>&quot;If the MRI shows a tear, I need arthroscopy.&quot;</strong> Many tears seen on MRI, especially in people over 40, are part of normal ageing and settle without surgery. The decision depends on symptoms and examination, not the scan alone.</li>
+<li><strong>&quot;Physiotherapy is optional after a small procedure.&quot;</strong> Even after a simple trim, the thigh muscles weaken quickly. A few weeks of guided exercises makes the difference between a knee that feels normal and one that stays weak and swollen.</li>
+</ul>
+
       <h2>What Makes Arthroscopy a Good Option</h2>
 
       <p>Because it preserves healthy tissue and avoids large incisions, arthroscopy typically means smaller scars, less post-operative pain, lower complication rates, and an earlier return to daily life and sport. Early, accurate treatment also helps protect the joint from further wear that can lead to arthritis.</p>
@@ -4130,13 +4506,69 @@ export const blogPosts = [
       
       <p>If joint pain is affecting your life, consider consulting with Dr. Nitin N Sunku in Bengaluru. Take the first step towards a pain-free future and regain your active lifestyle. Your journey to better joint health starts here.</p>
       
-      <p>The article, written by Dr. Nitin N Sunku, an Orthopedics expert, provides the following key information and advice regarding joint pain:</p>
+      <p>In short:</p>
       
       <ul><li><strong>Diagnosis and Treatment:</strong> Joint pain can be managed and relieved with the correct diagnosis and a personalized treatment plan.</li>
       <li><strong>Treatment Modalities:</strong> Personalized care for joint conditions may encompass <strong>physical therapy</strong>, <strong>medication management</strong>, or <strong>advanced surgical options</strong> when necessary.</li>
       <li><strong>Conditions Treated:</strong> The doctor specializes in treating various joint conditions, including <strong>arthritis</strong>, <strong>sports injuries</strong>, and <strong>age-related joint issues</strong>.</li>
       <li><strong>Call to Action:</strong> Individuals struggling with joint pain are advised to consult with Dr. Nitin N Sunku in Bengaluru to start their journey toward a pain-free and active lifestyle.</li>
       </ul>
+
+      <h2>Common causes of joint pain, joint by joint</h2>
+<p>Joint pain is a symptom, not a diagnosis. The same ache can come from cartilage wear, a tendon, a ligament, a nerve or inflammation, and each needs a different plan. These are the patterns seen most often in clinic:</p>
+<table>
+<thead><tr><th>Joint</th><th>Common causes</th><th>Clues</th></tr></thead>
+<tbody>
+<tr><td>Knee</td><td>Osteoarthritis, meniscus tears, kneecap pain, ligament injuries, tendinopathy</td><td>Pain on stairs or squatting, swelling, locking, giving way after a twist</td></tr>
+<tr><td>Shoulder</td><td>Rotator cuff tendinopathy or tears, frozen shoulder, dislocation</td><td>Pain lifting the arm or reaching back, night pain lying on that side, stiffness</td></tr>
+<tr><td>Hip</td><td>Osteoarthritis, outer hip tendon pain, impingement in younger adults</td><td>Groin pain, difficulty putting on socks, pain lying on the side</td></tr>
+<tr><td>Back and neck</td><td>Muscle strain, disc problems, facet joint arthritis</td><td>Stiffness after sitting or riding, pain spreading to the arm or leg</td></tr>
+<tr><td>Foot and ankle</td><td>Plantar fasciitis, Achilles problems, recurrent sprains</td><td>Heel pain on first steps in the morning, ankle "rolling"</td></tr>
+<tr><td>Many joints at once</td><td>Inflammatory arthritis, gout, vitamin D deficiency</td><td>Morning stiffness lasting over an hour, swollen small joints, sudden hot red joint</td></tr>
+</tbody>
+</table>
+<p>Daily life in Bengaluru adds its own triggers: long two-wheeler commutes, desk jobs with little movement, weekend badminton or cricket after a sedentary week, floor sitting and squatting at home, and low vitamin D levels, which are common in Indian adults.</p>
+
+<h2>What to expect at your consultation</h2>
+<ol>
+<li><strong>A detailed history</strong> — when the pain started, what makes it better or worse, previous injuries, work and sport, and other medical conditions such as diabetes or thyroid problems.</li>
+<li><strong>Examination</strong> — joint movement, strength, stability, swelling and the way you walk, comparing with the other side.</li>
+<li><strong>Imaging only when it adds value</strong> — an X-ray for suspected arthritis or fracture, ultrasound for tendons and bursae, and an MRI only when ligament, meniscus or cartilage damage is suspected or the picture is unclear.</li>
+<li><strong>Blood tests if needed</strong> — for inflammatory arthritis, uric acid or vitamin D.</li>
+<li><strong>A clear explanation and plan</strong> — what is causing the pain, the realistic options and the expected timeline.</li>
+</ol>
+<p>Treatment is usually stepped. Most patients start with physiotherapy, activity changes and short-term medication. Ultrasound-guided injections such as hyaluronic acid, PRP or GFC are added in selected cases. Surgery — for example knee arthroscopy, ligament reconstruction, joint replacement or fracture fixation — is recommended only when it offers a clearly better result.</p>
+
+<h3>Common myths about joint pain</h3>
+<ul>
+<li><strong>"It is just age, nothing can be done."</strong> Muscle strength, weight, posture and old injuries often matter more than age, and most of these can be improved at any stage.</li>
+<li><strong>"Exercise will wear out my joints faster."</strong> The right exercise usually protects joints by strengthening the muscles around them.</li>
+<li><strong>"An MRI will tell me exactly what to do."</strong> Scans often show age-related changes even in people without pain; they must be read alongside the examination.</li>
+<li><strong>"Once a doctor sees me, I will need surgery."</strong> Most patients are treated without an operation.</li>
+</ul>
+
+<h2>Sensible first steps at home</h2>
+<ul>
+<li>Keep moving within comfort. Complete rest often increases stiffness and weakness.</li>
+<li>Use ice for 15 minutes after activity for a fresh injury or flare; gentle heat often helps chronic stiffness.</li>
+<li>Reduce the activity that clearly aggravates the pain rather than stopping everything.</li>
+<li>Avoid taking painkillers daily for weeks without medical advice, especially if you have stomach, kidney or heart problems.</li>
+<li>Check your footwear, chair and screen height, and take breaks from long rides and long sitting.</li>
+</ul>
+
+<h2>When to see a doctor without delay</h2>
+<ul>
+<li>A joint that becomes suddenly hot, red and swollen, especially with fever</li>
+<li>Inability to bear weight or use the limb after an injury or fall</li>
+<li>Visible deformity, or a joint that locks and will not straighten</li>
+<li>Numbness, weakness or pins and needles spreading down an arm or leg</li>
+<li>Back pain with bladder or bowel changes</li>
+<li>Pain that wakes you every night or comes with unexplained weight loss</li>
+</ul>
+<p>For pain that is not urgent but has lasted more than a few weeks, an assessment is still worthwhile — early treatment is usually simpler.</p>
+
+<h2>Where to see Dr. Nitin N Sunku</h2>
+<p>Dr. Nitin N Sunku, orthopedic and sports medicine surgeon, consults at two locations. At <a href="/orthopedic-doctor-attibele">Raghava Multispeciality Hospital, Attibele</a> (Sarjapura–Attibele Road; Monday to Saturday, 10 am to 6 pm), with in-house X-ray and 24/7 casualty, he sees patients from Anekal, Chandapura, Bommasandra, Electronic City and Hosur Road. At <a href="/orthopedic-doctor-in-hsr-layout">Health Nest Hospital, HSR Layout</a> (Monday to Saturday, 10 am to 8 pm), he sees patients from Koramangala, BTM, Bellandur and Sarjapur Road. Bring any previous X-rays, scans and prescriptions to your first visit. For specific problems, see <a href="/knee-pain-bangalore">knee pain treatment</a> and <a href="/shoulder-pain-bangalore">shoulder pain treatment</a>.</p>
     `
   },
   {
@@ -4186,6 +4618,39 @@ export const blogPosts = [
 
       <p>Modern arthroscopy allows tears to be repaired through small incisions, preserving as much of the natural meniscus as possible — which is important for protecting the knee from early arthritis later in life.</p>
 
+      <h2>Healing vs Settling: An Important Difference</h2>
+<p>When people ask whether a meniscus tear can &quot;heal&quot; without surgery, they often mean two different things. <strong>Healing</strong> means the torn tissue joins back together. <strong>Settling</strong> means the knee stops hurting and works normally, even though the tear is still visible on a scan. Outer-zone tears can genuinely heal. Many degenerative tears never heal, yet settle so well that the person no longer notices them. Both are good outcomes, and both can be reached without an operation in the right tear.</p>
+
+<h2>Which Tears Tend to Do Well Without Surgery?</h2>
+<p>Location is only one part of the picture. The pattern, size and stability of the tear matter just as much.</p>
+<table>
+<thead><tr><th>Tear type</th><th>Outlook without surgery</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Short, stable longitudinal tear in the outer zone</td><td>Good chance of healing</td><td>Blood supply is present and the torn edges stay in contact</td></tr>
+<tr><td>Degenerative or horizontal tear in a person over 40</td><td>Symptoms often settle, though the tear remains</td><td>Pain is driven by irritation and muscle weakness more than by the tear itself</td></tr>
+<tr><td>Small partial-thickness tear</td><td>Often settles</td><td>The meniscus still holds its shape and function</td></tr>
+<tr><td>Radial tear reaching the outer rim</td><td>Poor</td><td>It cuts through the ring that lets the meniscus carry load</td></tr>
+<tr><td>Root tear</td><td>Poor in most active patients</td><td>The meniscus loses its anchor and stops working, which can speed up wear</td></tr>
+<tr><td>Bucket-handle or displaced flap tear</td><td>Very poor</td><td>The torn piece moves into the joint and causes locking</td></tr>
+</tbody>
+</table>
+<p>A tear is called <strong>stable</strong> when the torn part does not move out of place when the knee is examined or probed. Stable tears are the main candidates for non-surgical care. Unstable tears tend to catch, enlarge and damage cartilage if they are left alone.</p>
+
+<h2>Age, Ligaments and Activity Change the Decision</h2>
+<ul>
+<li><strong>Under about 40 with a clear injury:</strong> the tear is usually traumatic, the tissue is healthy, and it may be repairable. Here, waiting too long carries a cost.</li>
+<li><strong>Over about 45 with gradual pain:</strong> the tear is often degenerative and part of early joint wear. Non-surgical care is the first choice for most people in this group, and arthroscopic trimming generally adds little for arthritic pain.</li>
+<li><strong>A torn ACL alongside:</strong> a meniscus tear in an unstable knee is unlikely to settle, because every episode of giving way stresses it again.</li>
+<li><strong>High demands:</strong> a professional footballer and a person whose main activity is walking may reasonably choose differently for the same tear.</li>
+</ul>
+
+<h3>True locking or just stiffness?</h3>
+<p>Many patients say their knee &quot;locks&quot; when they actually mean it feels stiff after sitting. True locking is different: the knee suddenly gets stuck and cannot be straightened fully until it is wiggled free, or not at all. True locking points to a displaced fragment and is one of the clearest signs that a tear will not settle on its own. Stiffness that eases after a few steps is common with degenerative tears and early arthritis, and does not by itself mean surgery is needed.</p>
+
+<h2>Do Not Wait Too Long With a Repairable Tear</h2>
+<p>This is the part most patients do not hear. A fresh tear in a young, healthy meniscus may be stitchable today, but if the knee keeps catching for months, the edges fray, the tear can extend, and the tissue may no longer hold sutures. What could have been a repair becomes a partial removal. For this reason, a non-surgical trial in a younger patient with a traumatic tear should be time-limited, usually around six weeks, with a clear review point.</p>
+<p>A sensible trial looks like this: an MRI and examination to confirm the tear is stable, a structured programme of <a href="/treatments/non-surgical-knee-pain-treatment">non-surgical knee care</a>, and a review at about six weeks. If the knee is clearly improving, continue. If it has plateaued, keeps catching, or has locked, the plan changes. More detail is on the <a href="/services/meniscal-care">meniscal care</a> page, and patients from Anekal, Chandapura and Hosur Road can be seen by an <a href="/orthopedic-doctor-attibele">orthopedic doctor in Attibele</a>.</p>
+
       <h2>The Bottom Line</h2>
 
       <p>Some meniscus tears heal well without surgery, while others do not — and trying to "push through" the wrong type of tear can cause further damage. A proper diagnosis, usually combining a clinical examination with an MRI, is the only reliable way to know which path is right for you. If you have ongoing knee pain, swelling, or instability, an evaluation with an orthopedic specialist in Bengaluru will protect your long-term knee health and prevent avoidable damage.</p>
@@ -4216,7 +4681,7 @@ export const blogPosts = [
       <ul>
         <li>Mild to moderate osteoarthritis in the knee or hip</li>
         <li>Tendon injuries such as tennis elbow, golfer's elbow, or patellar tendinopathy</li>
-        <li>Cartilage damage from wear and tear</li>
+        <li>Early cartilage wear, where the aim is pain relief and better function rather than rebuilding cartilage</li>
         <li>Sports-related joint and tendon pain that has not improved with rest or physiotherapy</li>
       </ul>
 
@@ -4233,6 +4698,52 @@ export const blogPosts = [
       <h2>What PRP Cannot Do</h2>
 
       <p>It is important to have realistic expectations. PRP is not a cure for every condition, and it cannot reverse advanced arthritis or replace a worn-out joint. It tends to work best in early-to-moderate disease and in tendon problems. Results vary from person to person, and more than one session is sometimes needed. For severe joint damage, options such as joint replacement may give more reliable results — which is exactly why proper assessment matters.</p>
+
+      <h2>Who is a good candidate — and who is not</h2>
+<p>PRP works best when it is matched to the right problem. The same injection can help one person a great deal and do very little for another, mostly because of the underlying diagnosis.</p>
+<table>
+<thead><tr><th>Often a good candidate</th><th>Usually a poor candidate</th></tr></thead>
+<tbody>
+<tr><td>Mild to moderate knee osteoarthritis on a standing X-ray</td><td>Advanced, bone-on-bone arthritis with deformity</td></tr>
+<tr><td>Chronic tennis elbow, patellar tendinopathy or plantar fasciitis that has not settled with a proper exercise programme</td><td>Pain that has not yet been treated with physiotherapy or load changes</td></tr>
+<tr><td>Active people who want to stay active and will continue rehab</td><td>People expecting a single injection to replace exercise and weight management</td></tr>
+<tr><td>Patients who had only short-lived relief from steroid injections</td><td>Pain caused by a mechanical block, such as a displaced meniscus tear that locks the knee</td></tr>
+<tr><td>Generally healthy adults with good platelet counts</td><td>Inflammatory arthritis (such as rheumatoid arthritis) or gout that is not controlled, which need medical treatment first</td></tr>
+<tr><td>Those willing to wait several weeks for gradual improvement</td><td>Pain referred from elsewhere, such as hip arthritis felt in the knee or a slipped disc causing leg pain</td></tr>
+</tbody>
+</table>
+<p>PRP is also generally avoided in people with active infection, certain blood or platelet disorders and active cancer, and needs individual review in people on blood thinners.</p>
+
+<h2>Getting the diagnosis right</h2>
+<p>"Chronic joint pain" covers many conditions, so the first visit focuses on finding the actual source:</p>
+<ul>
+<li><strong>History and examination</strong> — where exactly it hurts, what makes it worse, any swelling, locking or instability, and other joints involved.</li>
+<li><strong>X-ray</strong> — for suspected arthritis, ideally taken standing for knees, to grade joint space and alignment.</li>
+<li><strong>Ultrasound</strong> — excellent for tendons, bursae and fluid around joints, and can be done at the same visit.</li>
+<li><strong>MRI</strong> — reserved for suspected meniscus, ligament or cartilage injuries, or when the picture is unclear.</li>
+<li><strong>Blood tests</strong> — when an inflammatory arthritis, gout or vitamin D deficiency is suspected.</li>
+</ul>
+
+<h2>What a PRP course usually looks like</h2>
+<table>
+<thead><tr><th>Stage</th><th>What happens</th></tr></thead>
+<tbody>
+<tr><td>Before the injection</td><td>Assessment and imaging; anti-inflammatory painkillers stopped for several days as advised; physiotherapy started or reviewed</td></tr>
+<tr><td>Injection day</td><td>Blood draw, processing, and ultrasound-guided injection; home the same day</td></tr>
+<tr><td>Days 1–3</td><td>Soreness or swelling is common; ice, rest from heavy activity and paracetamol if needed</td></tr>
+<tr><td>Weeks 1–4</td><td>Gradual return to normal activity and rehab; early change may begin</td></tr>
+<tr><td>Weeks 4–12</td><td>Further injection(s) if planned; strengthening progressed; benefit usually builds through this period</td></tr>
+<tr><td>Around 3 months</td><td>Review of pain, function and goals to decide on next steps</td></tr>
+</tbody>
+</table>
+<p>For knees, a course is commonly one to three injections. For tendons, one or two sessions alongside a loading programme is typical. The plan should be reviewed at each step rather than fixed in advance.</p>
+<h3>Making the most of the injection</h3>
+<p>The weeks after PRP are the best time to build strength, because pain is easing. Keep up your exercises, manage weight, and reduce high-load habits for a while — deep squatting, cross-legged floor sitting and long two-wheeler rides in traffic for knee pain, or heavy lifting with a straight arm for elbow pain.</p>
+<h3>Why ultrasound guidance helps</h3>
+<p>Tendons and many joints are small or deep, and an injection placed a few millimetres off target may not reach the problem area. <a href="/treatments/ultrasound-guided-orthopedic-injections">Ultrasound-guided injections</a> let the doctor see the needle reach the right spot in real time, which is especially important for shoulders, hips and tendons.</p>
+<h3>When to seek help urgently</h3>
+<p>Whether or not you have had an injection, a joint that becomes hot, red and very swollen, especially with fever, needs same-day medical review. So does sudden inability to bear weight or a joint that locks and will not straighten.</p>
+<p>Dr. Nitin N Sunku provides <a href="/prp-regenerative-treatment-bangalore">PRP and regenerative treatment</a> at Raghava Multispeciality Hospital in Attibele and Health Nest Hospital in HSR Layout, and will also explain when another option, such as GFC, hyaluronic acid or surgery, is more likely to help.</p>
 
       <h2>Is PRP Right for You?</h2>
 
@@ -4275,6 +4786,42 @@ export const blogPosts = [
       <h2>What a Typical Programme Looks Like</h2>
 
       <p>Treatment usually progresses in stages: first calming pain and swelling, then restoring full motion, then building strength, and finally returning to sport-specific or work-specific activity. Most patients who are suitable for conservative care notice meaningful improvement within six to twelve weeks of consistent effort. Commitment to the home exercise plan is what makes the difference.</p>
+
+      <h2>The Rehab Programme, Phase by Phase</h2>
+<p>A good meniscus programme is not a list of random exercises. Each phase has a clear goal, and you move to the next one when your knee meets specific markers, not simply because a certain number of weeks has passed. The timings below are typical for a stable tear managed without surgery.</p>
+<table>
+<thead><tr><th>Phase</th><th>Typical timing</th><th>Goal</th><th>Example exercises</th><th>Move on when</th></tr></thead>
+<tbody>
+<tr><td>1. Calm the knee</td><td>Weeks 0&ndash;2</td><td>Settle pain and swelling, restore full straightening</td><td>Quadriceps sets, straight-leg raises, heel slides within comfort, ankle pumps, ice and elevation</td><td>Swelling is minimal and the knee straightens fully</td></tr>
+<tr><td>2. Restore motion and basic strength</td><td>Weeks 2&ndash;6</td><td>Near-full bending, normal walking</td><td>Stationary cycling, glute bridges, mini squats to a shallow depth, hamstring curls with a resistance band, calf raises</td><td>You walk without a limp and climb stairs without pain</td></tr>
+<tr><td>3. Build strength and control</td><td>Weeks 6&ndash;10</td><td>Strength close to the other leg, good single-leg control</td><td>Step-downs from a low step, single-leg balance, partial-range leg press, side-stepping with a band, wall sits</td><td>A controlled single-leg squat without the knee wobbling inward</td></tr>
+<tr><td>4. Return to your demands</td><td>Weeks 10&ndash;12 onward</td><td>Sport, work or daily life without symptoms</td><td>For athletes: straight-line jogging, then agility and sport drills. For others: longer walks, stair endurance, controlled floor sitting practice</td><td>Activity causes no swelling the next morning</td></tr>
+</tbody>
+</table>
+<p>Older patients with degenerative tears follow the same order, but phase 4 focuses on walking distance, stairs and getting up from the floor rather than sport.</p>
+
+<h2>Progress Markers Worth Tracking</h2>
+<p>Write these down every week. They tell you and your physiotherapist far more than how the knee &quot;feels&quot; on a given day.</p>
+<ul>
+<li><strong>Swelling:</strong> compare both knees in the mirror, or measure around the kneecap with a tape. Swelling that keeps returning means the load is too high.</li>
+<li><strong>Straightening:</strong> lie on your back and check whether the back of the knee touches the bed as fully as the other side.</li>
+<li><strong>Bending:</strong> note how close your heel gets to your buttock.</li>
+<li><strong>Strength:</strong> how long you can hold a wall sit, or how many controlled step-downs you can do on each leg.</li>
+<li><strong>The 24-hour rule:</strong> mild discomfort during exercise is acceptable if it settles by the next morning. Pain or swelling that is worse the next day means you should drop back a step.</li>
+</ul>
+<p>The most common mistakes are relying only on machines such as ultrasound or interferential therapy without active exercise, stopping the home programme when pain eases, and pushing through sharp pain with painkillers.</p>
+
+<h2>When to Stop and Get Re-examined</h2>
+<p>Physiotherapy should be paused and the knee reassessed by your orthopedic doctor if:</p>
+<ul>
+<li>The knee locks, even once, and you cannot fully straighten it</li>
+<li>New or increasing swelling appears after a specific twist or movement</li>
+<li>The knee gives way during ordinary walking or on stairs</li>
+<li>Progress has stalled for three to four weeks despite doing the programme properly</li>
+<li>Pain starts waking you at night</li>
+</ul>
+<p>Re-examination does not always mean a new scan. An MRI is usually repeated only if the symptoms have changed in a way that suggests the tear has extended or displaced, or if surgery is being considered. In patients over 40, a standing X-ray may be more useful, because it shows whether arthritis is contributing to the pain. Read more about how tears are managed on the <a href="/services/meniscal-care">meniscal care</a> page, and about structured rehabilitation through <a href="/services/sports-medicine">sports medicine</a>.</p>
+<p>Dr. Nitin N Sunku plans and reviews meniscus rehabilitation for patients at Raghava Multispeciality Hospital, Attibele, and Health Nest Hospital, HSR Layout. Regular reviews mean the programme is adjusted as your knee changes, and any sign that physiotherapy alone is not enough is picked up early. You can <a href="/book-appointment">book an appointment</a> at either clinic.</p>
 
       <h2>When Surgery May Be Needed</h2>
 
@@ -4319,7 +4866,7 @@ export const blogPosts = [
       <li>Pain that worsens with activity and eases with rest.</li>
       <li>Mild swelling in the lower leg.</li>
       </ul>
-      <strong>Note on Surgery:</strong> The original article included a section titled "When is surgery recommended?" followed by a list of symptoms. This appears to be a formatting error in the source, as surgery is not typically recommended for the symptoms listed. The list describes the symptoms of shin splints, not the criteria for surgery.
+      
       
       <p>Management of shin splints focuses on reducing inflammation and addressing the underlying causes.</p>
       
@@ -4334,6 +4881,46 @@ export const blogPosts = [
       <ul><li><strong>Stretching and Strengthening:</strong> Perform exercises targeting the calves and shins.</li>
       <li><strong>Gradual Return to Running:</strong> Only resume running under guidance, ensuring a slow and progressive increase in intensity and distance.</li>
       </ul>
+      <h2>Shin Splints or Stress Fracture? How to Tell the Difference</h2>
+<p>The most important job when a runner has shin pain is to make sure it is not a stress fracture, a small crack in the bone caused by repeated loading. Both conditions come from doing too much too soon, and one can progress to the other if training continues through pain.</p>
+<table>
+<thead><tr><th>Feature</th><th>Shin splints (MTSS)</th><th>Tibial stress fracture</th></tr></thead>
+<tbody>
+<tr><td>Area of pain</td><td>Diffuse, along a stretch of the inner shin, often several centimetres long</td><td>Sharp, pinpoint tenderness over one small spot of bone</td></tr>
+<tr><td>Pattern with running</td><td>Often worst at the start of a run, may ease as you warm up, aches afterwards</td><td>Gets worse the longer you run, and may force you to stop</td></tr>
+<tr><td>At rest</td><td>Usually settles with rest</td><td>May ache at rest or at night as it progresses</td></tr>
+<tr><td>Hopping test</td><td>Uncomfortable but usually possible</td><td>Hopping on the affected leg is often clearly painful</td></tr>
+<tr><td>Swelling</td><td>Mild, if any</td><td>A localised swelling or bump can appear</td></tr>
+</tbody>
+</table>
+<p>A third, less common cause is <strong>chronic exertional compartment syndrome</strong>, where pressure builds inside the muscle compartments during exercise. It typically causes tightness, cramping or numbness that comes on at a predictable point in a run and settles within minutes of stopping. It needs specific assessment.</p>
+<h3>Do you need an X-ray or MRI?</h3>
+<p>Shin splints are diagnosed mainly through history and examination. An X-ray is often taken to look for a stress fracture, but early stress fractures frequently do not show on X-ray for the first few weeks. When a stress fracture is suspected and the X-ray is normal, an MRI is the most useful test because it picks up bone stress early. Blood tests, including vitamin D, may be checked in runners with repeated bone stress injuries.</p>
+<h2>Realistic Recovery and Return-to-Running Timeline</h2>
+<p>Recovery depends on how long symptoms have been present and whether training was continued through pain. The following is a typical pattern for uncomplicated shin splints; a confirmed stress fracture needs a longer, more cautious plan set by your doctor.</p>
+<table>
+<thead><tr><th>Phase</th><th>Typical timing</th><th>Focus</th></tr></thead>
+<tbody>
+<tr><td>Settle the pain</td><td>Weeks 1&ndash;2</td><td>Stop running or cut it sharply; walk, cycle or swim if pain-free; ice and calf mobility</td></tr>
+<tr><td>Rebuild strength</td><td>Weeks 2&ndash;4</td><td>Calf raises, tibialis and foot strengthening, hip and glute work, balance training</td></tr>
+<tr><td>Walk-run return</td><td>Weeks 3&ndash;6</td><td>Short run intervals on softer surfaces on alternate days, only if pain-free during and the next morning</td></tr>
+<tr><td>Build volume</td><td>Weeks 6&ndash;10</td><td>Increase total weekly distance gradually, add speed and hills last</td></tr>
+</tbody>
+</table>
+<p>A practical guide is that pain during or after running should stay mild, settle within 24 hours, and not be worse the next morning. If it does not, step back one stage.</p>
+<h2>Prevention: What Runners Commonly Get Wrong</h2>
+<ul>
+<li><strong>Jumping mileage too fast.</strong> New runners, people training for a first 10K or half marathon, and those returning after a break are the most affected. Increase weekly distance gradually and build in easier weeks.</li>
+<li><strong>Running every day.</strong> Bone adapts during rest days. Alternate running with cycling, swimming or strength work, especially early on.</li>
+<li><strong>Ignoring strength training.</strong> Strong calves, hips and core absorb load that would otherwise go to the shin bone.</li>
+<li><strong>Keeping shoes too long.</strong> Replace running shoes when the cushioning is clearly worn, and choose a shoe that feels comfortable rather than chasing a particular type.</li>
+<li><strong>Running only on hard roads.</strong> In Bengaluru, mixing in park tracks, a synthetic track or a well-maintained mud path reduces repetitive impact. Watch for uneven, waterlogged surfaces during the monsoon.</li>
+<li><strong>Under-fuelling.</strong> Eating too little for the amount of training, and low vitamin D, which is common in India even in sunny cities, both raise the risk of bone stress injuries.</li>
+</ul>
+<h3>When to see a doctor urgently</h3>
+<p>Get prompt assessment for pinpoint bone tenderness, pain at rest or at night, pain that stops you mid-run, a visible lump on the shin, or numbness, tingling or foot weakness during exercise. Recurrent shin pain despite sensible training also deserves a closer look at running technique, foot posture and bone health.</p>
+<p>Dr. Nitin N Sunku, an orthopedic and <a href="/services/sports-medicine">sports medicine</a> surgeon, assesses runners with shin pain at Raghava Multispeciality Hospital, Attibele, where X-ray is available in-house, and at Health Nest Hospital, HSR Layout. The aim is to confirm whether the bone is involved, correct the training and strength factors behind the problem, and plan a safe return to running. You can read more about <a href="/foot-ankle-pain-bangalore">foot, ankle and lower-leg pain care</a> or book an assessment if your shin pain keeps coming back.</p>
+
       <strong>When to Consult a Doctor:</strong>
       
       <p>If shin pain persists despite rest and home management, it is crucial to consult an orthopedic doctor. Proper diagnosis is essential to rule out more serious conditions like <strong>stress fractures</strong> or other underlying causes, ensuring a treatment plan is tailored to your specific needs.</p>
@@ -4365,21 +4952,48 @@ export const blogPosts = [
       
       <p>If symptoms persist, advanced options such as injections or minimally invasive surgery may be advised.</p>
       
+      <h2>Which Hip Problem Is It? Telling the Common Causes Apart</h2>
+<p>Pain on getting up from a chair is a symptom, not a diagnosis. Several quite different problems produce it, and the location of the pain is often the most useful clue. Before your appointment, notice exactly where it hurts and what else sets it off.</p>
+<table>
+<thead><tr><th>Likely cause</th><th>Where you feel it</th><th>Typical clues</th></tr></thead>
+<tbody>
+<tr><td>Hip osteoarthritis</td><td>Groin, front of the thigh, sometimes down to the knee</td><td>Morning stiffness, difficulty putting on socks or cutting toenails, pain after long sitting, gradually shrinking range of movement, usually over 50</td></tr>
+<tr><td>Gluteal tendinopathy (greater trochanteric pain)</td><td>Outer side of the hip, over the bony point</td><td>Painful to lie on that side at night, pain climbing stairs or standing on one leg, tender to press, more common in women in their 40s to 60s</td></tr>
+<tr><td>Hip impingement (FAI) or labral irritation</td><td>Deep groin, sometimes a &quot;C-shaped&quot; ache around the hip</td><td>Pinching with deep bending, squatting or sitting in low chairs, clicking or catching, often active adults in their 20s to 40s</td></tr>
+<tr><td>Pain referred from the lower back</td><td>Buttock, back of the thigh, sometimes below the knee</td><td>Back stiffness, pain that changes with bending or sitting posture, tingling or numbness in the leg, hip movements themselves may feel free</td></tr>
+</tbody>
+</table>
+<p>These overlap, and more than one can be present at once. A person with early hip arthritis may also have an irritated gluteal tendon because they limp, and many people over 50 have some wear in both the hip and the lower spine. That is why a hands-on examination matters more than any single scan.</p>
+<h3>How the diagnosis is made</h3>
+<p>At the clinic, the examination focuses on how the hip rotates, whether bending and turning the hip inwards reproduces groin pain (pointing towards the joint itself), whether pressing on the outer hip or standing on one leg reproduces your pain (pointing towards the tendons), and whether back movements and nerve tests bring on the symptoms (pointing towards the spine).</p>
+<ul>
+<li><strong>X-ray</strong> is usually the first and often the only test needed. A standing pelvis X-ray shows joint-space narrowing in arthritis and the bone shape changes seen in impingement. It is available in-house at the Attibele clinic.</li>
+<li><strong>Ultrasound</strong> helps confirm gluteal tendon problems and can guide an injection precisely when one is needed.</li>
+<li><strong>MRI</strong> is reserved for specific questions: suspected labral tears, unexplained pain with a normal X-ray, suspected nerve compression in the back, or rarer conditions such as avascular necrosis of the hip.</li>
+</ul>
+<h2>What Patients Commonly Get Wrong</h2>
+<ul>
+<li><strong>Calling all outer hip pain &quot;bursitis&quot;.</strong> In most people with pain over the side of the hip, the gluteal tendons are the main problem rather than the bursa alone. The treatment emphasis is therefore on loading the tendon correctly, not only on reducing inflammation.</li>
+<li><strong>Stretching the painful outer hip hard.</strong> Crossing the leg over to stretch the side of the hip compresses the irritated tendon and often makes gluteal pain worse.</li>
+<li><strong>Assuming groin pain is a hernia or a back problem.</strong> True hip-joint pain is very often felt in the groin and even the knee, which can delay the right diagnosis.</li>
+<li><strong>Resting completely.</strong> Total rest weakens the hip muscles further. Most hip conditions do better with the right type of graded strengthening.</li>
+</ul>
+<h3>Everyday changes that help, especially in Indian homes</h3>
+<p>Low sofas, floor sitting and the Indian-style toilet all demand deep hip bending, which aggravates arthritis and impingement. Using a firmer, slightly higher chair, a cushion to raise the seat, or a western-style commode while symptoms settle can make a real difference. When standing up, shift forward to the edge of the seat, place your feet slightly back and use the armrests. Avoid sitting cross-legged or with knees together and crossed for long periods if you have outer hip pain, and try sleeping with a pillow between the knees. A <a href="/hip-pain-bangalore">detailed hip pain assessment</a> can tell you which of these adjustments matter for your specific problem.</p>
+<h2>When to Seek Help Quickly</h2>
+<p>See a doctor promptly, or go to casualty, if you notice any of the following:</p>
+<ul>
+<li>Sudden hip pain and inability to bear weight after a fall, especially in older adults, as a hip fracture must be ruled out</li>
+<li>Fever, a hot or very painful hip, or feeling unwell, which can indicate infection</li>
+<li>New numbness, weakness in the leg, or any change in bladder or bowel control alongside back or buttock pain</li>
+<li>Night pain that does not ease with rest, unexplained weight loss, or a history of cancer</li>
+<li>Deep groin pain in someone on long-term steroids or with heavy alcohol use</li>
+</ul>
+<p>For most people, though, pain on rising from a chair is a manageable problem. Physiotherapy, sensible activity changes and, in selected cases, an ultrasound-guided injection settle a large share of tendon and early joint problems. When advanced arthritis is limiting walking and sleep despite these measures, Dr. Nitin N Sunku discusses <a href="/services/hip-replacement">hip replacement</a> as an option, and for younger patients with impingement he assesses whether <a href="/services/hip-impingement-fai">FAI-focused care</a> is appropriate. He consults at Raghava Multispeciality Hospital, Attibele, and Health Nest Hospital, HSR Layout.</p>
+
       <p>If you regularly feel hip pain when standing, consult an orthopedic doctor in Bengaluru for accurate diagnosis and a tailored treatment plan.</p>
       
       <p>Early evaluation helps prevent worsening and protects your joint health.</p>
-      
-      <p>1.  <strong>Common Complaint</strong>: Hip pain when rising from a chair is common, especially in middle-aged and older adults, and often signals an underlying joint issue.</p>
-      <p>2.  <strong>Possible Causes</strong>:</p>
-      <p>*   Hip arthritis</p>
-      <p>*   Hip impingement</p>
-      <p>*   Muscle weakness (gluteal or thigh)</p>
-      <p>*   Bursitis</p>
-      <p>*   Tendon strain</p>
-      <p>3.  <strong>Warning Signs</strong>: Early signs like stiffness, catching, or swelling should not be ignored.</p>
-      <p>4.  <strong>Conservative Treatments</strong>: Physiotherapy, posture correction, activity modification, and medication.</p>
-      <p>5.  <strong>Advanced Options</strong>: Injections or minimally invasive surgery if symptoms persist.</p>
-      <p>6.  <strong>Recommendation</strong>: Consult an orthopedic doctor for accurate diagnosis and a tailored treatment plan, as early evaluation helps prevent worsening and protects joint health.</p>
     `
   },
   {
@@ -4421,6 +5035,55 @@ export const blogPosts = [
         <li><strong>Minimally invasive (arthroscopic) surgery</strong> to repair a torn labrum or tighten stretched ligaments, recommended for recurrent dislocations or when physiotherapy does not restore stability</li>
       </ul>
 
+      <h2>Not All Instability Is the Same</h2>
+<p>Doctors broadly separate shoulder instability into two groups, because they are treated differently:</p>
+<table>
+<thead><tr><th>Feature</th><th>Traumatic instability</th><th>Atraumatic (multidirectional) instability</th></tr></thead>
+<tbody>
+<tr><td>How it starts</td><td>A clear injury: a fall on an outstretched arm, a tackle, or a forceful throw</td><td>No major injury; gradual onset, often with repetitive overhead sport</td></tr>
+<tr><td>Typical patient</td><td>Young athletes in contact and collision sports</td><td>People with naturally flexible joints, swimmers, gymnasts, some throwers</td></tr>
+<tr><td>Underlying problem</td><td>Torn labrum and ligaments, sometimes bone damage</td><td>Loose capsule and poor muscle control</td></tr>
+<tr><td>First-line treatment</td><td>Physiotherapy for some; arthroscopic stabilisation often for young, high-risk athletes</td><td>Structured physiotherapy is the mainstay; surgery is rarely needed</td></tr>
+</tbody>
+</table>
+<h3>What to do if your shoulder dislocates</h3>
+<ul>
+<li>Support the arm in the most comfortable position and go to casualty promptly.</li>
+<li>Do not let teammates pull or twist the arm to &quot;put it back&quot;. Untrained attempts can damage nerves, blood vessels or bone, and an X-ray is needed to check for a fracture.</li>
+<li>After it has been put back, an X-ray confirms position, and a sling is used briefly for comfort.</li>
+<li>Book a follow-up with an orthopedic surgeon; the first dislocation is the right time to plan how to reduce the risk of the next one.</li>
+</ul>
+<h2>Surgery or Rehab After a First Dislocation?</h2>
+<p>This is one of the most common questions young athletes ask. There is no single answer for everyone. The decision weighs:</p>
+<ul>
+<li><strong>Age</strong> &ndash; younger patients, particularly teenagers and those in their early twenties, have a considerably higher chance of further dislocations.</li>
+<li><strong>Sport and goals</strong> &ndash; contact and overhead sports such as rugby, kabaddi, wrestling, volleyball, cricket fast bowling and fielding dives place high demands on the shoulder.</li>
+<li><strong>Imaging findings</strong> &ndash; the size of the labral tear and any bone loss from the socket or the ball. Significant bone loss may need more than a soft-tissue repair, and these cases are assessed and discussed individually.</li>
+<li><strong>How the shoulder responds to rehab</strong> &ndash; some patients regain stable, confident function with physiotherapy alone.</li>
+</ul>
+<p>For an older or less active patient, structured rehabilitation is often enough. For a young athlete in a high-risk sport, early arthroscopic stabilisation is frequently discussed because each further dislocation can add damage to the labrum, cartilage and bone.</p>
+<h3>Recovery after arthroscopic stabilisation</h3>
+<table>
+<thead><tr><th>Period</th><th>What usually happens</th></tr></thead>
+<tbody>
+<tr><td>Weeks 0&ndash;4/6</td><td>Sling, protected gentle movement, avoiding the risky position of arm raised and turned outwards</td></tr>
+<tr><td>Weeks 6&ndash;12</td><td>Range of motion restored, early strengthening of the cuff and shoulder blade</td></tr>
+<tr><td>Months 3&ndash;4</td><td>Progressive strengthening, light non-contact training</td></tr>
+<tr><td>Months 4&ndash;6 onward</td><td>Sport-specific drills; contact and overhead sport usually around five to six months, once strength and confidence are restored</td></tr>
+</tbody>
+</table>
+<h3>Common mistakes after a shoulder injury</h3>
+<ul>
+<li>Returning to the sport as soon as the pain settles, before strength and control are back.</li>
+<li>Skipping the shoulder-blade and rotator cuff programme once the arm &quot;feels fine&quot;.</li>
+<li>Repeatedly reducing a dislocating shoulder yourself and carrying on, which can lead to progressive damage.</li>
+<li>Wearing a sling for too long after a dislocation, causing stiffness, particularly in older adults.</li>
+</ul>
+<h3>Reducing the risk of another episode</h3>
+<p>Whether or not you have surgery, a long-term maintenance routine helps: two or three sessions a week of rotator cuff and shoulder-blade strengthening, a proper warm-up before throwing or overhead play, and good technique in fielding dives and tackles. Fatigue reduces muscle control, so build training volume gradually rather than playing several long matches back to back after a layoff.</p>
+<p>Seek urgent care if, after an injury, the shoulder looks deformed, you cannot move it, the arm is numb, or the hand is cold or pale. In older adults, a dislocation may also be accompanied by a rotator cuff tear, so persistent weakness after the shoulder is back in place should be checked.</p>
+<p>Dr. Nitin N Sunku assesses and treats shoulder instability, including arthroscopic stabilisation where needed, at Raghava Multispeciality Hospital, Attibele, and Health Nest Hospital, HSR Layout. Read more about <a href="/services/shoulder-care">shoulder care</a> and <a href="/sports-injury-doctor-bangalore">sports injury treatment</a>.</p>
+
       <h2>Why Early Care Matters</h2>
 
       <p>Each episode of instability can cause further damage to the labrum and cartilage, and repeated dislocations raise the long-term risk of shoulder arthritis. Addressing the problem early gives the best chance of a stable, pain-free shoulder. If you are facing shoulder pain or instability after a sports injury, consult an orthopedic and sports medicine specialist in Bengaluru for a proper evaluation and treatment plan. Early care can prevent long-term damage and help you return safely to activity.</p>
@@ -4454,6 +5117,41 @@ export const blogPosts = [
       <ul><li><strong>Enhanced Results For Active Adults</strong></li>
       </ul>    Athletes and fitness enthusiasts benefit from quicker return to activity when the meniscus is preserved and repaired correctly. For those who undergo meniscus repair along with ACL knee surgery, the joint remains more stable, supporting an active lifestyle.
       
+      <h2>Repair vs Removal: Why the Long View Matters</h2>
+<p>The meniscus works like a ring-shaped gasket. When the knee takes weight, the meniscus spreads that load over a wide area of cartilage. If a torn piece is removed, the same body weight is carried on a smaller patch of cartilage, and that patch wears faster over the years. This is the main reason surgeons try to <strong>repair</strong> a meniscus whenever the tear allows it.</p>
+<p>The honest trade-off looks like this:</p>
+<ul>
+<li><strong>Partial meniscectomy (removal)</strong> gives a quicker early recovery, often with return to sport within weeks, but leaves the knee with less protection for the decades ahead.</li>
+<li><strong>Meniscus repair</strong> asks for more patience in the first few months, with crutches, a brace and limited bending, but keeps the knee&#39;s natural cushioning when it heals.</li>
+<li><strong>Not every repair heals.</strong> In some patients, a repaired tear does not unite fully and a second arthroscopy is needed, usually to trim the part that failed. This risk is one reason careful patient selection and strict rehabilitation matter.</li>
+</ul>
+<p>For a young or active adult with a repairable tear, most knee surgeons consider the slower recovery a worthwhile price for a healthier knee in later life. For older patients with degenerative tears, the balance is different and repair is less often possible.</p>
+
+<h2>What Happens on the Day of Surgery</h2>
+<ol>
+<li><strong>Before admission:</strong> routine blood tests and, depending on age and health, an ECG and a physician check. You will be told when to stop eating and drinking, and whether to pause any blood thinners or diabetes medicines.</li>
+<li><strong>Anaesthesia:</strong> most meniscus repairs are done under spinal anaesthesia, which numbs the legs while you breathe on your own, or under general anaesthesia when that suits you better.</li>
+<li><strong>The arthroscopy:</strong> two or three small cuts are made around the kneecap. The whole joint is inspected first, including the ACL and cartilage, because other problems are often found and treated at the same time.</li>
+<li><strong>The repair:</strong> the tear edges are freshened to encourage healing, and then stitched using all-inside devices or inside-out sutures, depending on where the tear sits.</li>
+<li><strong>After surgery:</strong> the knee is dressed and placed in a brace. A physiotherapist usually starts you on ankle pumps and quadriceps exercises the same day and teaches you to walk with crutches.</li>
+<li><strong>Going home:</strong> most patients go home the same day or the next morning, once pain is controlled and they can manage crutches safely.</li>
+</ol>
+
+<h2>Recovery Timeline After Meniscus Repair</h2>
+<p>Every surgeon&#39;s protocol differs slightly, and root and radial tear repairs are usually protected more strictly than simple longitudinal repairs. A typical pathway looks like this:</p>
+<table>
+<thead><tr><th>Time after surgery</th><th>What you can usually do</th><th>Main goals</th></tr></thead>
+<tbody>
+<tr><td>Weeks 0&ndash;2</td><td>Walk with crutches and brace; weight-bearing as advised; keep the leg elevated</td><td>Control swelling, get the knee fully straight, wake up the quadriceps</td></tr>
+<tr><td>Weeks 2&ndash;6</td><td>Gradually more weight through the leg; bending limited to about 90 degrees; desk work from home or office</td><td>Regain motion within limits, protect the repair</td></tr>
+<tr><td>Weeks 6&ndash;12</td><td>Crutches and brace usually stopped; stationary cycling; gentle strengthening; driving once control is good</td><td>Normal walking, full motion, building strength</td></tr>
+<tr><td>Months 3&ndash;4</td><td>Gym strengthening, balance work, straight-line jogging when cleared</td><td>Match strength in both legs</td></tr>
+<tr><td>Months 4&ndash;6</td><td>Agility drills, then gradual return to cricket, football, badminton and other pivoting sport</td><td>Return to sport based on strength and control tests</td></tr>
+</tbody>
+</table>
+<p>Deep squatting, sitting cross-legged and using an Indian-style toilet put the most stress on a healing repair, so these are usually avoided for around four months. The commonest mistake patients make is feeling well at six weeks and returning to these positions too early.</p>
+<p>If you have been told you have a meniscus tear, the <a href="/services/meniscal-care">meniscal care</a> page explains how tears are assessed, and the <a href="/knee-arthroscopy-bangalore">knee arthroscopy</a> page covers the procedure in more detail. Athletes can also read about <a href="/sports-injury-doctor-bangalore">sports injury care in Bengaluru</a>. Dr. Nitin sees patients at Raghava Multispeciality Hospital, Attibele, where surgery is performed, as well as at Health Nest Hospital, HSR Layout.</p>
+
       <h2>Expert Knee Care in Bengaluru</h2>
       
       <p>For expert knee evaluation, meniscus treatment, and advanced ligament care including ACL surgery, visit Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru.</p>
@@ -4471,7 +5169,7 @@ export const blogPosts = [
       
       <h2>Increased Spine Strain</h2>
       
-      <p>Slouching or leaning forward puts excess pressure on the spine, leading to neck, shoulder, and lower back pain. This is one of the most common reasons patients consult a spine surgery specialist or visit a spine specialist for evaluation.</p>
+      <p>Slouching or leaning forward puts excess pressure on the spine, leading to neck, shoulder, and lower back pain. This is one of the most common reasons patients visit a spine specialist for evaluation.</p>
       
       <h2>Joint Misalignment</h2>
       
@@ -4489,8 +5187,53 @@ export const blogPosts = [
       
       <p>When posture is poor, muscles work overtime to support the body, causing fatigue, soreness, and imbalance over time.</p>
       
-      <p>Maintaining proper posture while sitting, standing, working, and using digital devices helps protect your spine and joints. Regular strengthening exercises, stretching, and ergonomic habits can improve posture and reduce chronic pain. For people experiencing persistent symptoms, getting the best spine treatment ensures early diagnosis and faster recovery.</p>
+      <p>Maintaining proper posture while sitting, standing, working, and using digital devices helps protect your spine and joints. Regular strengthening exercises, stretching, and ergonomic habits can improve posture and reduce chronic pain. For people experiencing persistent symptoms, getting timely spine care helps with early diagnosis and a faster recovery.</p>
       
+      <h2>What &quot;Good Posture&quot; Really Means</h2>
+<p>There is no single perfect posture that protects the spine. The body is built to move, and the problem in most people is not one bad position but holding any position for too long. A straight-backed posture held rigidly for three hours can be as uncomfortable as a slouch held for three hours. The practical goal is a reasonably neutral position most of the time, plus frequent changes of position through the day.</p>
+<p>Posture is also only one contributor to pain. Fitness, sleep, stress, previous injuries and the overall amount of movement in your day matter just as much. That is why fixing a chair alone rarely solves long-standing back or neck pain, while combining better set-up with regular strengthening usually helps.</p>
+<h3>Workstation and daily set-up checklist</h3>
+<table>
+<thead><tr><th>Situation</th><th>Common problem</th><th>Simple fix</th></tr></thead>
+<tbody>
+<tr><td>Laptop work</td><td>Head pushed forward and down for hours</td><td>Raise the screen to eye level on a stand or books, and use a separate keyboard and mouse</td></tr>
+<tr><td>Office chair</td><td>Sliding forward, lower back unsupported</td><td>Sit back in the chair, use a small cushion or rolled towel at the lower back, feet flat on the floor</td></tr>
+<tr><td>Mobile phone use</td><td>Neck bent sharply for long periods</td><td>Bring the phone up towards eye level and limit long scrolling sessions</td></tr>
+<tr><td>Two-wheeler commute</td><td>Hunched shoulders, jolts through the spine on bumpy roads</td><td>Adjust mirrors and seat so you sit upright, keep elbows relaxed, take a short break on long rides</td></tr>
+<tr><td>Floor sitting and cooking</td><td>Prolonged deep bending of hips, knees and back</td><td>Alternate between floor and chair, and use a kitchen counter at a comfortable height</td></tr>
+<tr><td>Carrying bags or children</td><td>Load always on one side</td><td>Switch sides, use a backpack with both straps, and keep loads close to the body</td></tr>
+</tbody>
+</table>
+<p>A useful rule is the 30-minute reminder: every half an hour, stand, walk a few steps, roll the shoulders and look away from the screen. These brief movement breaks often achieve more than any special chair.</p>
+<h2>Exercises That Support Better Posture</h2>
+<p>Posture improves most reliably when the muscles that hold you up are strong enough to do so without tiring. A simple routine, done most days, can include:</p>
+<ul>
+<li><strong>Chin tucks</strong> to counter the forward-head position from screens</li>
+<li><strong>Shoulder blade squeezes and wall slides</strong> to strengthen the upper back</li>
+<li><strong>Bridges and bird-dogs</strong> to build the buttock and deep back muscles</li>
+<li><strong>Planks or modified planks</strong> for trunk endurance</li>
+<li><strong>Hip flexor and chest stretches</strong> for those who sit for long hours</li>
+<li><strong>Regular walking</strong>, which remains one of the best all-round activities for spinal health</li>
+</ul>
+<p>Start gently and increase gradually. Mild muscle soreness the next day is normal; sharp pain, or pain spreading down an arm or leg, is a signal to stop and get checked. If you have an existing spine condition, have a physiotherapist adapt these movements for you.</p>
+<h3>Common myths about posture</h3>
+<ul>
+<li><strong>&quot;Slouching has already damaged my spine permanently.&quot;</strong> In most people, posture-related pain is a muscle and joint overload problem that improves with movement and strengthening.</li>
+<li><strong>&quot;I need a posture brace.&quot;</strong> Braces can remind you briefly, but long-term reliance can let supporting muscles weaken. They are not a substitute for exercise.</li>
+<li><strong>&quot;Bed rest is best for back pain.&quot;</strong> For ordinary back pain, staying gently active usually leads to a faster recovery than prolonged rest.</li>
+<li><strong>&quot;A firm wooden bed is always better.&quot;</strong> A medium-firm mattress that supports the natural curves of the spine is comfortable for most people.</li>
+</ul>
+<h2>When Posture-Related Pain Needs a Doctor</h2>
+<p>Most posture-related aches settle within a few weeks once habits change. An orthopedic assessment is worthwhile if pain lasts more than four to six weeks, keeps returning, wakes you at night, or limits work and sleep. Seek urgent care for any of the following:</p>
+<ul>
+<li>Numbness, tingling or weakness spreading into an arm or leg</li>
+<li>Loss of bladder or bowel control, or numbness around the groin and buttocks</li>
+<li>Back or neck pain after a fall or accident</li>
+<li>Pain with fever, unexplained weight loss, or a past history of cancer</li>
+<li>Progressive clumsiness of the hands or difficulty walking steadily</li>
+</ul>
+<p>Assessment begins with a careful history and examination of the spine, shoulders and hips. X-rays are helpful when structural changes are suspected, and MRI is arranged only when nerve symptoms or red flags are present. Dr. Nitin N Sunku provides non-surgical care for <a href="/back-pain-bangalore">back pain</a> and <a href="/neck-pain-bangalore">neck pain</a>, coordinating physiotherapy and ergonomic advice, and refers to a spine surgeon where an operation is needed. He consults at Raghava Multispeciality Hospital, Attibele, and Health Nest Hospital, HSR Layout.</p>
+
       <h2>Expert Spine & Joint Care in Bengaluru</h2>
       
       <p>For comprehensive spine and joint assessment, visit Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist at Health Nest Hospital, HSR Layout, Bengaluru — your trusted expert for posture-related issues, joint pain, and spine conditions.</p>
@@ -4599,6 +5342,44 @@ export const blogPosts = [
       <h2>Diagnosis and Treatment</h2>
 
       <p>Diagnosis involves a clinical examination — including a posterior drawer test — supported by X-rays and an MRI to confirm the tear and check for associated injuries. Many isolated, low-grade PCL tears are treated successfully without surgery, using bracing and a focused physiotherapy programme that strengthens the quadriceps to support the knee. Higher-grade tears, combined ligament injuries, or persistent instability may need surgical reconstruction.</p>
+
+      <h2>PCL Tear Grades and What They Mean</h2>
+<p>PCL injuries are graded by how far the shin bone can be pushed backward compared with the healthy knee. The grade, together with whether other structures are injured, largely decides treatment.</p>
+<table>
+<thead><tr><th>Grade</th><th>What it means</th><th>Usual approach</th></tr></thead>
+<tbody>
+<tr><td>Grade I</td><td>Partial tear; the ligament is stretched but still holds well</td><td>Physiotherapy and a short period of protection</td></tr>
+<tr><td>Grade II</td><td>More significant partial tear with noticeable looseness</td><td>Usually non-surgical, often with a PCL brace and a longer rehab programme</td></tr>
+<tr><td>Grade III</td><td>Complete tear; the shin bone sags backward clearly</td><td>Often non-surgical if isolated, but other injuries must be ruled out carefully</td></tr>
+<tr><td>Combined injury</td><td>PCL tear with damage to other ligaments, especially the structures on the outer back corner of the knee</td><td>Surgery is commonly needed; a tailored plan is made after MRI</td></tr>
+</tbody>
+</table>
+<p>One special case is a <strong>PCL avulsion</strong>, where the ligament pulls off a small piece of bone from the back of the shin. This shows on X-ray, and when the fragment is displaced, it is usually fixed surgically, because bone-to-bone healing is reliable when the piece is put back in place.</p>
+
+<h2>Non-Surgical Treatment in More Detail</h2>
+<p>Most isolated PCL tears are managed without an operation, but the details matter:</p>
+<ul>
+<li><strong>Bracing:</strong> for higher-grade tears, a brace that supports the back of the shin helps stop it sagging while the ligament heals in a better position.</li>
+<li><strong>Quadriceps first:</strong> the thigh muscle pulls the shin forward, directly countering the PCL&#39;s weakness. Quadriceps strengthening is the core of rehab.</li>
+<li><strong>Hamstrings later:</strong> hamstrings pull the shin backward, so isolated hamstring curls are usually avoided in the early weeks.</li>
+<li><strong>Gradual return:</strong> many people return to daily activity within weeks and to sport over a few months, depending on the grade and how well the knee responds.</li>
+<li><strong>Regular reviews:</strong> the knee is re-examined over the first few months to confirm the shin is not sagging further and that strength is returning on schedule.</li>
+</ul>
+<p>Athletes returning to football, kabaddi or hockey benefit from a structured return-to-sport plan with strength and hop testing; see <a href="/sports-injury-doctor-bangalore">sports injury care in Bengaluru</a> for how this is organised.</p>
+
+<h2>When Reconstruction Is Considered</h2>
+<ul>
+<li>Combined ligament injuries, particularly with damage to the outer back corner of the knee</li>
+<li>A displaced bony avulsion</li>
+<li>Ongoing instability or a feeling of the knee shifting despite a full rehab programme</li>
+<li>Persistent pain at the front of the knee or along the inner joint line in a loose knee, which may signal cartilage overload</li>
+</ul>
+<p>PCL reconstruction is performed arthroscopically, using a tendon graft to replace the torn ligament. Rehabilitation afterwards is slower than after ACL surgery and is usually planned over many months. Learn more on the <a href="/services/pcl-injury">PCL injury</a> page.</p>
+
+<h2>Road Accidents and PCL Injuries in Bengaluru</h2>
+<p>In everyday practice, many PCL tears come not from sport but from road traffic accidents: a two-wheeler fall where the bent knee strikes the road, or a car crash where the knee hits the dashboard. These injuries are often missed because attention goes to cuts, fractures or a head injury, and the knee seems only bruised. If you have had such an accident and the knee still feels weak, aches at the back, or is unsteady going downstairs weeks later, ask specifically for a ligament examination. Patients from Hosur Road, Chandapura and Electronic City can be seen at Attibele, where <a href="/fracture-treatment-attibele">fracture and trauma care</a> is available.</p>
+<h3>Red flags after a high-energy knee injury</h3>
+<p>A badly swollen, deformed knee after an accident, especially with numbness, coldness or a pale foot, can mean the knee joint dislocated and a blood vessel or nerve is injured. This is an emergency; go to the nearest casualty immediately.</p>
 
       <p><strong>Early evaluation helps prevent long-term instability</strong> and reduces the risk of cartilage wear and arthritis later. For accurate diagnosis and treatment, consult Dr. Nitin N Sunku, Orthopedic Doctor and Sports Medicine Specialist, at his clinics in HSR Layout and Attibele, Bengaluru.</p>
     `
@@ -4879,7 +5660,7 @@ export const blogPosts = [
       </ul>
       
       <h2>Symptoms and Diagnosis</h2>
-      <p>Common signs include joint line pain, swelling, locking, and "giving way". Diagnosis involves clinical tests (McMurray's) and MRI, which has >90% sensitivity.</p>
+      <p>Common signs include joint line pain, swelling, locking, and "giving way". Diagnosis involves clinical tests (McMurray's) and an MRI, which is highly accurate for most meniscus tears.</p>
       
       <h2>Treatment Options</h2>
       <h3>Step 1: Conservative Management</h3>
@@ -4889,13 +5670,54 @@ export const blogPosts = [
       <ul>
         <li><strong>Meniscus Repair:</strong> Preferred for younger patients with acute, peripheral tears. Dr. Nitin uses contemporary suturing techniques (inside-out, all-inside).</li>
         <li><strong>Partial Meniscectomy:</strong> Trimming irreparable portions. Faster initial recovery but higher long-term arthritis risk.</li>
-        <li><strong>Meniscus Reconstruction:</strong> Transplantation using an allograft for patients with total meniscus loss.</li>
+        <li><strong>Meniscus Transplant (Reconstruction):</strong> Replacing a meniscus that has been lost almost entirely, using donor (allograft) tissue. This is a specialised procedure for a small group of patients; suitability is assessed and discussed, and patients are referred where needed.</li>
       </ul>
       
-      <h3>Frequently Asked Questions (FAQ)</h3>
-      <p><strong>Can I play sports again?</strong><br/>Yes, most athletes return after 4–6 months (repair) or 4–6 weeks (meniscectomy).</p>
-      <p><strong>Cost of surgery in Bengaluru?</strong><br/>Varies based on procedure and implants; typically covered by insurance.</p>
-    `
+      <h2>Repair, Partial Meniscectomy or Transplant: Who Gets Which?</h2>
+<p>Once a tear is confirmed and it is clear that it needs surgery, the real decision is not &quot;surgery or no surgery&quot; but <strong>which</strong> surgery. The three options do very different things to the knee over the long term.</p>
+<table>
+<thead><tr><th>Option</th><th>What is done</th><th>Usually suited to</th><th>Recovery outline</th></tr></thead>
+<tbody>
+<tr><td>Meniscus repair</td><td>The torn edges are stitched together arthroscopically so the tissue can heal and keep working.</td><td>Younger, active patients; fresh tears in the outer, blood-rich zone; longitudinal and bucket-handle tears; many root tears; tears found during ACL reconstruction.</td><td>Slower: crutches and a brace for some weeks, protected bending, return to sport usually around four to six months.</td></tr>
+<tr><td>Partial meniscectomy</td><td>Only the unstable, torn fragment is trimmed away; healthy meniscus is left in place.</td><td>Tears in the inner, poorly supplied zone; frayed or complex tears with poor tissue quality; tears that cause catching or locking but cannot be stitched.</td><td>Faster: walking within days, return to most sport over several weeks.</td></tr>
+<tr><td>Meniscus transplant</td><td>A donor meniscus replaces one that has been almost completely lost.</td><td>A small group of younger patients with persistent pain after losing most of a meniscus, with a well-aligned, stable knee and little arthritis.</td><td>Long and demanding. Assessed and discussed, with referral where needed.</td></tr>
+</tbody>
+</table>
+
+<h3>The factors that decide your option</h3>
+<ul>
+<li><strong>Where the tear is:</strong> outer-zone tears have a blood supply and can heal after stitching; inner-zone tears usually cannot.</li>
+<li><strong>Tear pattern:</strong> vertical and longitudinal tears repair well; heavily frayed degenerative tears generally do not.</li>
+<li><strong>Tissue quality:</strong> this is often only fully judged during arthroscopy, which is why consent is usually taken for both repair and trimming.</li>
+<li><strong>Age and activity:</strong> the younger and more active you are, the more it is worth accepting a slower recovery to keep your meniscus.</li>
+<li><strong>Your ligaments:</strong> a repair in a knee with a torn ACL is likely to fail unless the ACL is also reconstructed, ideally at the same operation.</li>
+<li><strong>Existing arthritis and alignment:</strong> in a knee that is already worn or bow-legged, the meniscus tear may not be the main source of pain.</li>
+<li><strong>Time since injury:</strong> repairable tears tend to become less repairable the longer they are left, especially if the knee keeps catching.</li>
+</ul>
+
+<h2>Situations That Change the Usual Plan</h2>
+<h3>Root tears</h3>
+<p>A tear where the meniscus attaches to the bone at its back end can make the whole meniscus stop working, behaving almost as if it had been removed. In suitable knees, the root is reattached rather than trimmed, because leaving it can speed up wear on that side of the joint.</p>
+<h3>Degenerative tears in a knee with arthritis</h3>
+<p>In middle-aged and older adults, a tear seen on MRI is very often part of general wear in the joint. Arthroscopic trimming in this situation usually does not relieve arthritic pain, so the first line is structured physiotherapy, weight management and, where appropriate, injections. Surgery is kept for genuine mechanical symptoms such as true locking.</p>
+<h3>Tears that come with an ACL injury</h3>
+<p>When the ACL and meniscus are injured together, both are usually addressed in one sitting. A stable knee protects the repaired meniscus, and a working meniscus protects the new ligament. See <a href="/acl-reconstruction-bangalore">ACL reconstruction</a> for how that combined surgery is planned.</p>
+
+<h3>Questions worth asking before surgery</h3>
+<ul>
+<li>Is my tear in a zone that can heal if it is stitched?</li>
+<li>If you find during surgery that it cannot be repaired, what will you do instead?</li>
+<li>Is my ACL intact, and does that change the plan?</li>
+<li>How long will I be on crutches, and when can I return to work, driving and sport?</li>
+<li>What happens to my knee if I decide to wait?</li>
+</ul>
+<p>Good answers to these questions mean you understand the trade-off you are choosing between a faster recovery now and a healthier knee later.</p>
+
+<h2>What Happens When You Come for a Decision</h2>
+<p>At the consultation, Dr. Nitin will take a history of how the injury happened, examine the knee for joint-line tenderness, swelling, locking and ligament stability, and review your imaging. A standing X-ray is often useful in patients over 40 to look for arthritis and alignment problems that an MRI alone does not show. You will then be told which option suits your knee, what the recovery involves, and what happens if you choose to wait.</p>
+<p>Arthroscopic meniscus repair and partial meniscectomy are performed at Raghava Multispeciality Hospital, Attibele, which has its own operating theatre and in-patient ward, and patients are also seen at Health Nest Hospital, HSR Layout. Read more on the <a href="/services/meniscal-care">meniscal care</a> page or about <a href="/knee-arthroscopy-bangalore">knee arthroscopy in Bengaluru</a>.</p>
+
+      `
   },
   {
     slug: "activities-to-avoid-with-a-tear-in-the-medial-meniscus",
@@ -4942,10 +5764,51 @@ export const blogPosts = [
         <li>Wear supportive footwear.</li>
       </ul>
       
-      <h3>Frequently Asked Questions (FAQs)</h3>
-      <p><strong>Can I walk?</strong><br/>Yes, on flat surfaces, but avoid stairs or long distances initially.</p>
-      <p><strong>Is cycling safe?</strong><br/>Stationary cycling is one of the safest options when set up correctly.</p>
-    `
+      <h2>Everyday Activities, One by One</h2>
+<p>Most advice on meniscus tears is written for gym-goers abroad. Daily life in Bengaluru puts very different demands on the inner (medial) side of the knee, so here is how common activities affect a medial meniscus tear, and what to do instead while the knee settles.</p>
+<table>
+<thead><tr><th>Activity</th><th>Why it stresses a medial tear</th><th>Safer alternative for now</th></tr></thead>
+<tbody>
+<tr><td>Sitting cross-legged or in vajrasana</td><td>Deep bending plus outward rotation squeezes the back part (posterior horn) of the medial meniscus, where most tears sit.</td><td>Sit on a chair or a low stool with the knee bent less than a right angle; for pooja or family meals, use a cushion or chair.</td></tr>
+<tr><td>Squatting, Indian-style toilets, floor mopping</td><td>Full squatting loads the torn edge at its most vulnerable angle and is a classic trigger for catching.</td><td>Use a Western toilet or a commode chair; mop with a long-handled mop instead of sitting on the heels.</td></tr>
+<tr><td>Stairs in apartments and metro stations</td><td>Going down is harder than going up, because the knee absorbs body weight while bent.</td><td>Use the lift or escalator; on stairs, lead with the good leg going up and the injured leg going down, holding the railing.</td></tr>
+<tr><td>Riding a two-wheeler</td><td>Riding itself is gentle; the risk is planting the foot and twisting when you stop, kick-start, or put the stand down.</td><td>Use the self-start, stop on even ground, take weight on the good leg, and avoid rough roads and long commutes for the first few weeks.</td></tr>
+<tr><td>Driving a car</td><td>Getting in and out with a twist of the bent knee, and long stop-start traffic on the clutch, irritate a painful knee.</td><td>Sit down first, then swing both legs in together; an automatic car spares the left knee in heavy traffic.</td></tr>
+<tr><td>Gym training</td><td>Deep squats, lunges, leg press with heavy loads, and jump work compress and shear the meniscus.</td><td>Upper-body work, straight-leg raises, partial-range leg press with light weight, and a stationary bike with a high seat.</td></tr>
+<tr><td>Cricket, badminton, football</td><td>Planting and pivoting, lunging for a shuttle, or turning between runs all twist a bent, loaded knee.</td><td>Pause these sports until a doctor or physiotherapist clears you; keep fitness through cycling or swimming.</td></tr>
+<tr><td>Yoga</td><td>Padmasana, deep kneeling poses, and twisted standing poses force the knee into flexion and rotation.</td><td>Stick to supported standing poses, gentle supine stretches, and breathing work; tell your instructor about the tear.</td></tr>
+</tbody>
+</table>
+
+<h3>Small habits that make a big difference</h3>
+<ul>
+<li><strong>Turn with your feet, not your knee.</strong> When you turn in the kitchen or at your desk, take small steps rather than pivoting on a planted foot.</li>
+<li><strong>Get up from a chair in two stages.</strong> Shift to the edge of the seat first, then stand with your weight on both legs.</li>
+<li><strong>Watch wet floors.</strong> During the monsoon, a slip on a wet bathroom or a muddy footpath is a common cause of a tear getting worse.</li>
+<li><strong>Do not use a painkiller to get through a match.</strong> Pain is your warning signal; masking it is how a stable tear becomes a displaced one.</li>
+</ul>
+
+<h2>How Long Do These Restrictions Last?</h2>
+<p>There is no single answer, because it depends on what kind of tear you have and how it is being treated:</p>
+<ul>
+<li><strong>Managed without surgery:</strong> restrictions are eased step by step over roughly six to twelve weeks as swelling settles and strength returns. Many people can return to normal floor sitting later, but some with degenerative tears find that very deep squatting always provokes symptoms.</li>
+<li><strong>After a partial meniscectomy:</strong> walking usually resumes within days, and most everyday activities come back over a few weeks, guided by swelling.</li>
+<li><strong>After a meniscus repair:</strong> the rules are much stricter, because the stitched tissue needs time to heal. Deep squatting and sitting cross-legged are usually avoided for around four months.</li>
+</ul>
+<p>Your own plan should come from an assessment. See <a href="/services/meniscal-care">meniscal care</a> for how tears are evaluated and treated, and <a href="/knee-arthroscopy-bangalore">knee arthroscopy</a> if surgery has been suggested.</p>
+
+<h2>Red Flags: Stop and Get Checked</h2>
+<p>Activity changes are only appropriate for a stable tear. See an orthopedic doctor promptly if you notice any of these:</p>
+<ul>
+<li>The knee locks and you cannot straighten it fully</li>
+<li>Rapid, tense swelling within a few hours of an injury</li>
+<li>You cannot put weight on the leg</li>
+<li>The knee gives way repeatedly, especially with a feeling of the joint shifting</li>
+<li>Pain that steadily worsens over two to three weeks despite rest</li>
+</ul>
+<p>Dr. Nitin N Sunku, orthopedic and sports medicine surgeon, assesses meniscus injuries at Raghava Multispeciality Hospital in Attibele and Health Nest Hospital in HSR Layout. A clear diagnosis tells you exactly which activities are safe for your knee, rather than avoiding everything out of fear. You can <a href="/book-appointment">book an appointment</a> at either clinic.</p>
+
+      `
   },
   {
     slug: "bilateral-total-knee-replacement",

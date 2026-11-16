@@ -3,6 +3,7 @@ import Link from "next/link";
 import { blogPosts, practicePostalAddress } from "@/lib/data";
 import { blogSeoOverrides } from "@/lib/seo-overrides";
 import { blogFaqs } from "@/lib/blog-faqs";
+import { extractInlineFaqs } from "@/lib/inline-faqs";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, User, Tag, Clock, ChevronRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -130,12 +131,17 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
 
     // FAQs (optional, per slug). Rendered visibly below the article and
     // mirrored as FAQPage JSON-LD — the schema must match on-page text.
-    const faqs = blogFaqs[post.slug] ?? [];
-    const faqSchema = faqs.length
+    // Curated FAQs win; otherwise derive schema from an inline FAQ section
+    // already present in the post body (rendered there, so not repeated below).
+    const curatedFaqs = blogFaqs[post.slug] ?? [];
+    const inlineFaqs = curatedFaqs.length ? [] : extractInlineFaqs(post.content);
+    const faqs = curatedFaqs;
+    const schemaFaqs = curatedFaqs.length ? curatedFaqs : inlineFaqs;
+    const faqSchema = schemaFaqs.length
         ? {
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "mainEntity": faqs.map((f) => ({
+              "mainEntity": schemaFaqs.map((f) => ({
                   "@type": "Question",
                   "name": f.q,
                   "acceptedAnswer": { "@type": "Answer", "text": f.a },

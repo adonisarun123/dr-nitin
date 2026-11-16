@@ -5,6 +5,7 @@ import { PageInternalLinks } from "@/components/ui/page-internal-links";
 import { teamData } from "@/lib/data";
 import { FadeIn } from "@/components/animations/fade-in";
 import { siteOrigin } from "@/lib/site-url";
+import { PageSchema } from "@/components/seo/page-schema";
 
 export const metadata: Metadata = {
     title: {
@@ -17,6 +18,21 @@ export const metadata: Metadata = {
 export default function TeamPage() {
     return (
         <main className="min-h-screen pb-20">
+            <PageSchema
+                pageType="AboutPage"
+                name="Our Medical Team"
+                path="/team"
+                description="The clinicians who support Dr. Nitin N Sunku's orthopedic and sports medicine practice in Attibele and HSR Layout."
+                extraNodes={teamData
+                    .filter((m) => m.name !== "Dr. Nitin N Sunku")
+                    .map((m) => ({
+                        "@type": "Person",
+                        "name": m.name,
+                        "jobTitle": m.role,
+                        "description": m.qualifications,
+                        "worksFor": { "@id": `${siteOrigin}/#physician` },
+                    }))}
+            />
             <PageHeaderBold
                 title="Meet Our Team"
                 description="Dedicated professionals committed to getting you back to your best."

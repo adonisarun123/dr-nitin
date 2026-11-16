@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { BlogGrid } from "@/components/blog/blog-grid";
 import { blogPosts } from "@/lib/data";
 import { siteOrigin } from "@/lib/site-url";
+import { PageSchema } from "@/components/seo/page-schema";
 
 export const metadata: Metadata = {
     title: "Orthopedic & Sports Medicine Blog",
@@ -21,6 +22,25 @@ export default function BlogPage() {
 
     return (
         <main className="min-h-screen pb-20 bg-slate-50/40">
+            <PageSchema
+                pageType="CollectionPage"
+                name="Orthopedic & Sports Medicine Blog"
+                path="/blog"
+                description="Patient guides by Dr. Nitin N Sunku on knee, shoulder, spine and sports injuries, joint replacement and recovery."
+                extraNodes={[
+                    {
+                        "@type": "ItemList",
+                        "@id": `${siteOrigin}/blog#latest`,
+                        "name": "Latest articles",
+                        "itemListElement": sortedPosts.slice(0, 30).map((post, i) => ({
+                            "@type": "ListItem",
+                            "position": i + 1,
+                            "url": `${siteOrigin}/blog/${post.slug}`,
+                            "name": post.title,
+                        })),
+                    },
+                ]}
+            />
             <PageHeaderBold
                 title="Ortho Blog"
                 description="Expert insights, tips, and updates from Dr. Nitin N Sunku on orthopedic health and sports medicine."

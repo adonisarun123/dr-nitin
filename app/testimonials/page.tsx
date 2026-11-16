@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { TestimonialsShowcase } from "@/components/sections/testimonials-showcase";
 import { GOOGLE_REVIEWS_URL, GOOGLE_RATING, GOOGLE_REVIEW_COUNT_LABEL } from "@/lib/google-reviews";
 import { siteOrigin } from "@/lib/site-url";
+import { PageSchema } from "@/components/seo/page-schema";
 
 export const metadata: Metadata = {
     title: {
@@ -24,6 +25,11 @@ export default function TestimonialsPage() {
     // LocalBusiness. The real rating lives on the Google Business Profile.
     return (
         <main className="min-h-screen pb-20">
+            <PageSchema
+                name="Patient Testimonials"
+                path="/testimonials"
+                description="Excerpts from Google reviews left by patients of Dr. Nitin N Sunku."
+            />
             <PageHeaderBold
                 title="Patient Stories"
                 description="Hear from patients who have regained their mobility and active lifestyle with Dr. Nitin's care."
