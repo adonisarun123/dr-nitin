@@ -9,6 +9,8 @@ import { HideNavigation } from "@/components/ui/hide-navigation";
 import { LandingPageTracker } from "@/components/analytics/landing-page-tracker";
 import { TrackedButton } from "@/components/analytics/tracked-button";
 
+import { LandingFaq, type LandingFaqItem } from "@/components/landing/landing-faq";
+
 export const metadata: Metadata = {
     title: "Book an Orthopedic Appointment | Attibele & HSR Layout",
     description: `Book your appointment with Dr. Nitin N Sunku, leading orthopedic specialist in Attibele & HSR Layout. Expert in knee injuries, sports medicine, joint replacement & trauma care. Call ${siteConfig.phone}`,
@@ -31,6 +33,15 @@ export const metadata: Metadata = {
         type: "website",
     },
 };
+
+const BOOKING_FAQS: LandingFaqItem[] = [
+    { q: "How soon can I get an appointment with Dr. Nitin N Sunku?", a: "Submit the form or call the clinic and the team will confirm the earliest available slot at Attibele or HSR Layout. For a fresh injury with severe pain, swelling or inability to walk, call the hospital directly rather than waiting for a callback." },
+    { q: "Do I need a referral to see an orthopedic specialist?", a: "No referral is needed. You can book directly for knee, shoulder, back, hip, ankle or fracture problems. If another doctor has already seen you, bring their notes and any scans so the assessment can build on what has already been done." },
+    { q: "What happens at the first orthopedic consultation?", a: "Plan for the consultation itself plus waiting time and any X-ray taken on the day. The visit covers your history, a physical examination of the joint, a review of existing scans and a clear explanation of the diagnosis and options." },
+    { q: "Can I get a second opinion before surgery?", a: "Yes. Many patients book specifically for a second opinion on a recommended knee arthroscopy, ACL reconstruction, spine treatment or joint replacement. Bring the MRI or X-ray images themselves, not just the reports, along with the previous surgeon's advice." },
+    { q: "Is my orthopedic treatment covered by insurance?", a: "Outpatient consultations are usually paid directly unless your policy includes OPD cover, while planned surgery and in-patient care are commonly covered by health insurance, subject to your policy. The hospital desk helps with cashless pre-authorisation once surgery is advised; bring your insurance card and ID." },
+    { q: "Will I need an X-ray or MRI on the day?", a: "Only if it will change the decision. An X-ray can be taken on site at Attibele when bone, alignment or arthritis needs to be checked. An MRI is booked separately when a ligament, meniscus, cartilage or disc injury is suspected." },
+];
 
 export default function BookAppointmentPage() {
     const sellingPoints = [
@@ -365,6 +376,13 @@ export default function BookAppointmentPage() {
             </section>
 
             {/* Final CTA */}
+            <LandingFaq
+                pageName="Book an Orthopedic Appointment"
+                pagePath="/book-appointment"
+                heading="Before you book"
+                items={BOOKING_FAQS}
+            />
+
             <section className="py-16 bg-gradient-to-r from-blue-50 to-blue-100 border-t-4 border-blue-600">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-900">

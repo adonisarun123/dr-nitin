@@ -20,7 +20,7 @@
  * - Only add routes that actually exist under `app/`.
  * - Do NOT add the noindex ads-only pages (/sports-orthopedic-doctor-hsr-layout,
  *   /total-knee-replacement-surgery, /orthopaedic-clinic-near-me,
- *   /bone-doctor-near-me). They are deliberately excluded from the sitemap and
+ *   /bone-doctor-near-me, /orthopedic-doctor-near-me). They are deliberately excluded from the sitemap and
  *   from all internal linking so they cannot cannibalise the indexed pages.
  * - Keep labels short — they render in a 4-column footer grid.
  */

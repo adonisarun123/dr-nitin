@@ -5,9 +5,9 @@ import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { PageInternalLinks } from "@/components/ui/page-internal-links";
 import { Button } from "@/components/ui/button";
 import { TestimonialsShowcase } from "@/components/sections/testimonials-showcase";
-import { JsonLd } from "@/components/seo/json-ld";
-import { testimonialsData } from "@/lib/data";
+import { GOOGLE_REVIEWS_URL, GOOGLE_RATING, GOOGLE_REVIEW_COUNT_LABEL } from "@/lib/google-reviews";
 import { siteOrigin } from "@/lib/site-url";
+import { PageSchema } from "@/components/seo/page-schema";
 
 export const metadata: Metadata = {
     title: {
@@ -19,39 +19,17 @@ export const metadata: Metadata = {
 };
 
 export default function TestimonialsPage() {
-    const ratings = testimonialsData.map((t) => t.rating);
-    const avgRating = (
-        ratings.reduce((a, b) => a + b, 0) / ratings.length
-    ).toFixed(1);
-
-    const reviewSchema = {
-        "@context": "https://schema.org",
-        "@type": "Physician",
-        "@id": `${siteOrigin}/#physician`,
-        name: "Dr. Nitin N Sunku",
-        url: `${siteOrigin}/testimonials`,
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: avgRating,
-            reviewCount: testimonialsData.length,
-            bestRating: "5",
-            worstRating: "1",
-        },
-        review: testimonialsData.map((t) => ({
-            "@type": "Review",
-            author: { "@type": "Person", name: t.name },
-            reviewRating: {
-                "@type": "Rating",
-                ratingValue: String(t.rating),
-                bestRating: "5",
-            },
-            reviewBody: t.quote,
-        })),
-    };
-
+    // No Review / AggregateRating JSON-LD on purpose: these reviews are copied
+    // from Google, and Google's structured-data rules don't allow marking up
+    // reviews collected elsewhere, or self-serving reviews on a Physician /
+    // LocalBusiness. The real rating lives on the Google Business Profile.
     return (
         <main className="min-h-screen pb-20">
-            <JsonLd data={reviewSchema} />
+            <PageSchema
+                name="Patient Testimonials"
+                path="/testimonials"
+                description="Excerpts from Google reviews left by patients of Dr. Nitin N Sunku."
+            />
             <PageHeaderBold
                 title="Patient Stories"
                 description="Hear from patients who have regained their mobility and active lifestyle with Dr. Nitin's care."
@@ -59,14 +37,21 @@ export default function TestimonialsPage() {
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 max-w-3xl text-center">
                 <p className="text-gray-700 leading-relaxed text-base">
-                    Feedback here comes from people treated for ligament injuries, meniscus
-                    tears, shoulder problems, joint replacement recovery, and fracture
-                    care. Quotes summarise their experience with communication,
-                    postoperative guidance, and confidence returning to work or sport. Your
-                    own outcome depends on diagnosis, adherence to rehabilitation, and
-                    general health; use these stories as encouragement rather than a
-                    guarantee of results. New patients can book through the contact page
-                    to discuss expectations in person.
+                    These are word-for-word excerpts from Google reviews left by patients
+                    treated for ACL and meniscus tears, fractures and other orthopedic
+                    problems. Dr. Nitin is rated {GOOGLE_RATING} across{" "}
+                    {GOOGLE_REVIEW_COUNT_LABEL} Google reviews &mdash;{" "}
+                    <a
+                        href={GOOGLE_REVIEWS_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-700 font-semibold underline underline-offset-2"
+                    >
+                        read them all on Google
+                    </a>
+                    . Your own outcome depends on diagnosis, adherence to rehabilitation,
+                    and general health; use these stories as encouragement rather than a
+                    guarantee of results.
                 </p>
                 <p className="mt-5 text-sm text-gray-500 italic max-w-2xl mx-auto">
                     <strong className="not-italic font-semibold text-gray-700">Disclaimer:</strong>{" "}

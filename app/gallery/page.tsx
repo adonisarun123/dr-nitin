@@ -3,6 +3,7 @@ import { PageHeaderBold } from "@/components/ui/page-header-bold";
 import { PageInternalLinks } from "@/components/ui/page-internal-links";
 import { GalleryClient, type GalleryImage } from "@/components/gallery/gallery-client";
 import { siteOrigin } from "@/lib/site-url";
+import { PageSchema } from "@/components/seo/page-schema";
 
 export const metadata: Metadata = {
     title: {
@@ -101,6 +102,12 @@ const images: GalleryImage[] = [...arthroImages, ...practiceImages];
 export default function GalleryPage() {
     return (
         <main className="min-h-screen pb-20">
+            <PageSchema
+                pageType="CollectionPage"
+                name="Clinic & Treatment Gallery"
+                path="/gallery"
+                description="Photos of surgery, clinic facilities and team at Dr. Nitin N Sunku's orthopedic practice."
+            />
             <PageHeaderBold
                 eyebrow="Photo Gallery"
                 title="Inside Our"

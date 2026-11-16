@@ -14,10 +14,10 @@ import { testimonialsData } from "@/lib/data";
  * The two marquees use the existing `animate-scroll` keyframe from
  * tailwind.config.ts and pause on hover for accessibility.
  *
- * Original testimonial copy is preserved verbatim.
+ * Testimonial copy comes verbatim from real Google reviews (lib/google-reviews.ts).
  */
 export function TestimonialsShowcase() {
-    const featured = testimonialsData[0]; // Arjun R. — longest, most descriptive
+    const featured = testimonialsData[0]; // real Google review — see lib/google-reviews.ts
 
     // For seamless infinite scroll the array is duplicated; the keyframe shifts
     // -50% so when the first half ends, the second half is exactly in place.

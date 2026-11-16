@@ -4,9 +4,10 @@
  * Why this exists: the original service detail page was a hardcoded if-chain,
  * ~200 lines of bespoke JSX per service. Every new procedure page made that
  * file harder to maintain. New service pages are authored here as data and
- * rendered by <ServiceBody />; the eight legacy services still fall through to
+ * rendered by <ServiceBody />; the remaining legacy services still fall through to
  * the if-chain in app/services/[slug]/page.tsx and can be migrated one at a
- * time without touching live copy.
+ * time without touching live copy. Migrated Nov 2026: knee-replacement and
+ * shoulder-care (GSC flagged both "crawled, not indexed" as generic/overlapping).
  *
  * Authoring notes (same rules as lib/treatments.ts):
  * - Clinics: Raghava Multispeciality Hospital, Attibele (primary);
@@ -44,6 +45,103 @@ export type ServicePageContent = {
 };
 
 export const servicePageContent: Record<string, ServicePageContent> = {
+    "knee-replacement": {
+        intro: [
+            "Knee replacement is the operation for a knee that arthritis has worn out: pain on most days, stiffness after sitting, stairs that have become a negotiation, and a walking distance that keeps shrinking. When medicines, physiotherapy, weight management and injections no longer give enough relief, resurfacing the damaged joint reliably reduces pain and restores everyday function for the large majority of patients.",
+            "This page is about the clinical decision: whether you need a replacement yet, which type suits your knee, what the operation involves, and what recovery really looks like. Dr. Nitin N Sunku offers total and partial (unicondylar) knee replacement at the Attibele hospital, with consultations in Attibele and HSR Layout. For costs, see the knee replacement cost guide; for the hospital and in-patient facilities, see the Attibele joint replacement page.",
+        ],
+        conditionsHeading: "When Knee Replacement Is Considered",
+        conditions: [
+            { title: "Advanced Osteoarthritis", text: "By far the most common reason. X-rays show the cartilage space worn down, often with bone rubbing on bone, and the pain matches the X-ray: activity-related, worse on stairs and rising from a chair, and increasingly present at rest or at night." },
+            { title: "Rheumatoid and Inflammatory Arthritis", text: "When inflammatory arthritis has destroyed the joint surfaces despite good medical control. Surgery is planned together with the treating rheumatologist so medicines are adjusted safely around the operation." },
+            { title: "Post-Traumatic Arthritis", text: "Arthritis that develops years after a fracture into the knee joint or a major ligament and meniscus injury. These knees can be technically more demanding, and previous scars and hardware are planned for." },
+            { title: "Deformity and Instability", text: "Knees that have bowed inward (varus) or knocked outward (valgus), or that buckle because the worn joint has lost its shape. A well-aligned replacement corrects the deformity as part of the operation." },
+            { title: "Arthritis Limited to One Compartment", text: "When wear is confined to the inner (medial) side and the ligaments are intact, a partial knee replacement may be possible. It keeps the healthy parts of the knee and usually recovers faster." },
+        ],
+        conditionsNote: "An X-ray alone is not a reason to operate. The decision rests on how much the knee limits your life, what has already been tried, and your general health. Many people with arthritic X-rays manage well without surgery for years.",
+        approachHeading: "Treatment Approach / Procedures Offered",
+        approach: [
+            { title: "Trying Everything Sensible First", text: "Before replacement is recommended, the non-surgical options are reviewed properly: a structured strengthening programme, weight management where relevant, pain-relief medication, bracing, and injections where they make sense. If you have not genuinely tried these, you will be told so, rather than being booked for surgery." },
+            { title: "Total Knee Replacement (TKR)", text: "All three compartments of the knee (inner, outer and behind the kneecap) are resurfaced with metal components and a medical-grade plastic bearing. This is the standard operation for arthritis that involves more than one part of the knee, or for knees with significant deformity." },
+            { title: "Partial (Unicondylar) Knee Replacement", text: "Only the worn compartment is resurfaced and the healthy bone, cartilage and cruciate ligaments are kept. It suits a minority of knees, typically isolated inner-side arthritis with stable ligaments. The trade-off is a slightly higher chance of needing further surgery later if arthritis progresses in the rest of the knee." },
+            { title: "Implant Choice, Explained Plainly", text: "Implant brands and materials (for example titanium, cobalt-chrome or ceramic-coated options) are discussed openly, including what the evidence does and does not show about each, and how the choice affects cost. The best implant is the one appropriate for your knee, bone quality and activity level, implanted and aligned well." },
+            { title: "Anaesthesia and Pain Control", text: "Most knee replacements are done under spinal anaesthesia, combined with nerve blocks and multimodal pain control so that walking can start early. Blood-clot prevention, antibiotics and wound care follow standard protocols." },
+            { title: "Medical Optimisation Before Surgery", text: "Diabetes, blood pressure, heart and kidney function, anaemia and any blood thinners are reviewed and optimised before a date is fixed. This step does more than any implant choice to reduce complications." },
+        ],
+        whyChoose: "Dr. Nitin N Sunku is a fellowship-trained orthopedic surgeon in arthroplasty and arthroscopy, and team doctor for Bengaluru FC. He treats replacement as one option among several, not the default answer to an arthritic X-ray. You will get a clear explanation of total versus partial replacement, of implant options and costs, and of realistic outcomes, including what a new knee will and will not let you do. Surgery is performed at the Attibele hospital, close to Electronic City, Chandapura, Anekal and the Hosur Road belt, so follow-up visits do not mean a cross-city drive.",
+        recoveryHeading: "Recovery and Rehabilitation Overview",
+        recovery: [
+            { t: "Day 0–1", d: "Walking with a walker, usually within 24 hours of surgery, guided by a physiotherapist. Knee-bending exercises and ankle pumps start immediately." },
+            { t: "Day 2–5", d: "Most patients are discharged within a few days, once they can walk safely, manage stairs with support, and pain is controlled with tablets." },
+            { t: "Week 2–6", d: "Home or outpatient physiotherapy to regain straightening and bending, with progressive quadriceps strengthening. Stitches or clips are reviewed at about two weeks. Many patients move from a walker to a stick in this period." },
+            { t: "Week 6–12", d: "Walking without support for most patients, return to most household activities, and driving once strength and reaction time allow. Desk-based work usually resumes in this window." },
+            { t: "Month 3–12", d: "Swelling and warmth settle gradually, and strength and comfort keep improving through the first year. Walking, cycling, swimming and similar low-impact activities are encouraged long term." },
+        ],
+        recoveryNote: "Most patients get substantial pain relief and better walking. A replaced knee is not a natural knee, though. Some awareness of the implant, difficulty kneeling and occasional stiffness are common, and high-impact sport is generally not advised. Effort in physiotherapy over the first three months has the biggest influence on the final range of movement.",
+        locationsHeading: "Where we see Knee Replacement Patients",
+        faqTitle: "Knee Replacement FAQ",
+        faqs: [
+            { question: "How do I know it is time for a knee replacement?", answer: "When arthritis pain limits your daily life (walking distance, stairs, sleep, work) despite a fair trial of non-surgical treatment, and X-rays confirm advanced joint damage. There is no age cut-off in either direction. The right time is when the knee is costing you more quality of life than the operation and recovery would." },
+            { question: "Total or partial knee replacement: which is better?", answer: "Neither is better in general. They suit different knees. A partial replacement is an option only when arthritis is confined to one compartment and the ligaments are intact. Most Indian patients present with arthritis affecting more than one compartment, often with bowing, and for them a total replacement is the appropriate operation." },
+            { question: "Can both knees be replaced at the same time?", answer: "Sometimes. Replacing both knees in one sitting is offered selectively, to fit patients without significant heart, lung or kidney problems. For others, the two knees are done a few weeks to months apart, which is safer. The decision is individual and made after a medical assessment." },
+            { question: "How long will I stay in hospital?", answer: "Usually a few days. You go home once you can walk safely with a walker, manage the toilet and a few steps, and your pain is controlled with tablets." },
+            { question: "How long does a knee replacement last?", answer: "Modern implants last well beyond 15 years in most patients, and many last for life. Longevity depends on implant positioning, body weight, activity level and bone quality, more than on the brand name." },
+            { question: "What are the main risks?", answer: "Infection, blood clots, stiffness, persistent pain in a minority of patients, and wear or loosening years later are the main risks. Careful medical optimisation, sterile technique, clot prevention and early mobilisation reduce them, and they are discussed in detail before you consent." },
+            { question: "Will I be able to sit cross-legged or squat?", answer: "Deep squatting and sitting cross-legged on the floor are difficult for most people after a knee replacement, and repeated deep bending is not recommended for the implant. Most patients can sit comfortably on chairs, use a western toilet, climb stairs and walk long distances." },
+            { question: "How much does it cost, and does insurance cover it?", answer: "Cost depends on the implant, whether one or both knees are done, and the room category. See the knee replacement cost page for current ranges. Knee replacement is generally covered by health insurance, subject to your policy's waiting periods and limits, and the team helps with cashless pre-authorisation." },
+        ],
+        ctaHeading: "Book a Knee Replacement Consultation",
+        ctaText: "Bring your latest knee X-rays (standing views if possible), any MRI, and a list of your medicines. You will leave with a clear answer on whether you need surgery now, later, or not at all.",
+    },
+    "shoulder-care": {
+        intro: [
+            "Most shoulder problems do not need surgery, and a good shoulder surgeon spends much of the consultation explaining which ones do. Rotator cuff tears that have lost strength, shoulders that keep dislocating, and joints worn out by arthritis often do. Impingement-type pain and many partial tears usually settle with the right rehabilitation.",
+            "Dr. Nitin N Sunku assesses and treats shoulder injuries and degenerative conditions at the Attibele hospital and in HSR Layout. Where surgery is needed, it is usually keyhole (arthroscopic): rotator cuff repair, stabilisation for recurrent dislocation, labral and biceps procedures, and capsular release for resistant frozen shoulder. Joint replacement is used for advanced arthritis. For symptom-led guidance, see the shoulder pain and frozen shoulder pages. This page covers what surgical treatment involves.",
+        ],
+        conditionsHeading: "Shoulder Conditions We Treat",
+        conditions: [
+            { title: "Rotator Cuff Tears", text: "Night pain, pain lifting the arm, and, in larger tears, real weakness. A tear after a fall or lift in an active person is time-sensitive, because torn tendons retract and the muscle weakens over months. Degenerative tears in older adults are often managed without surgery first." },
+            { title: "Recurrent Dislocation and Instability", text: "A shoulder that has dislocated once is at high risk of doing so again, especially in young athletes. Repeated dislocations damage the labrum (Bankart lesion) and can wear away bone from the socket rim, which changes the type of surgery needed." },
+            { title: "Labral (SLAP) Tears and Biceps Problems", text: "Deep pain, clicking or catching in throwing athletes, gym-goers and manual workers. Many settle with rehabilitation. Persistent cases may need a repair, or a biceps tenodesis or tenotomy." },
+            { title: "Impingement and Bursitis", text: "Pain when reaching overhead or behind the back. This is usually treated with targeted rehabilitation and, where needed, an ultrasound-guided injection. Surgery is reserved for the minority who do not improve." },
+            { title: "Frozen Shoulder (Adhesive Capsulitis)", text: "Progressive stiffness and pain, common in people with diabetes. Most cases resolve with staged physiotherapy and injection or hydrodilatation. Arthroscopic capsular release is considered only for stiffness that persists despite proper treatment." },
+            { title: "Shoulder Arthritis and Complex Fractures", text: "Grinding pain and loss of movement from worn cartilage, or fractures of the humeral head that cannot be fixed reliably. These may need partial or total shoulder replacement." },
+        ],
+        conditionsNote: "A tear on an MRI report is not, by itself, a reason for surgery. Partial-thickness cuff tears and labral changes are common in people with no symptoms. Treatment is based on the examination, strength testing and how the shoulder affects your life.",
+        approachHeading: "Treatment Approach / Procedures Offered",
+        approach: [
+            { title: "Diagnosis Before Treatment", text: "A structured examination of strength, stability and the specific provocation tests, plus X-rays and, where needed, MRI or ultrasound. Neck problems that refer pain to the shoulder are ruled out, because they are a common cause of failed shoulder treatment." },
+            { title: "Rehabilitation and Image-Guided Injections", text: "A targeted programme for the rotator cuff and shoulder-blade muscles is the first line for impingement, many partial tears and early frozen shoulder. Ultrasound-guided injections are used selectively to settle pain so that rehabilitation can progress." },
+            { title: "Arthroscopic Rotator Cuff Repair", text: "Torn tendons are reattached to bone with suture anchors through small incisions. Repair is most successful when the tear is repaired before the tendon retracts and the muscle wastes, which is why a traumatic tear in an active person should be assessed early." },
+            { title: "Arthroscopic Stabilisation", text: "For recurrent dislocation, the torn labrum and capsule are repaired back to the socket (Bankart repair). When repeated dislocations have caused significant bone loss, a bone-based stabilisation may be advised instead, because a soft-tissue repair alone has a higher failure rate in that situation." },
+            { title: "Labral, Biceps and Capsular Procedures", text: "SLAP repair, biceps tenodesis or tenotomy, subacromial decompression where indicated, and arthroscopic capsular release for frozen shoulder that has not responded to non-surgical care." },
+            { title: "Shoulder Replacement", text: "For advanced arthritis or unreconstructable fractures, partial, total or reverse shoulder replacement restores a smooth joint surface and relieves pain. Reverse replacement is used when the rotator cuff is also irreparably torn." },
+        ],
+        whyChoose: "Dr. Nitin N Sunku is fellowship-trained in arthroscopy and sports surgery and is team doctor for Bengaluru FC, so overhead athletes, gym-goers and manual workers are a large part of his shoulder practice. The emphasis is on selection: operating when timing matters, such as with acute cuff tears and recurrent dislocations, and avoiding surgery when rehabilitation will do the job. Rehabilitation is planned with the physiotherapy team from the first visit, and progress is checked against strength and motion goals before each return-to-activity step.",
+        recoveryHeading: "Recovery After Shoulder Surgery",
+        recovery: [
+            { t: "Day 0–1", d: "Most arthroscopic shoulder procedures are done with a nerve block and allow discharge the same or next day. A sling protects the repair. Hand, wrist and elbow movement starts immediately." },
+            { t: "Week 1–6", d: "Sling for most repairs. Physiotherapist-guided passive and then assisted movement, to prevent stiffness without stressing the repair. Desk work often resumes within one to two weeks, one-handed." },
+            { t: "Week 6–12", d: "Sling discontinued, active movement restored, and light strengthening begun. Driving usually resumes in this period once the shoulder is comfortable and controlled." },
+            { t: "Month 3–6", d: "Progressive strengthening and return to most daily and work tasks. Heavy lifting and overhead work are reintroduced gradually." },
+            { t: "Month 6–9", d: "Return to contact, throwing and overhead sport after rotator cuff repair or stabilisation, once strength and stability criteria are met." },
+        ],
+        recoveryNote: "Timelines differ by procedure. Capsular release and decompression recover faster than tendon repair, because nothing needs to heal back to bone. Rotator cuff tendons heal slowly, and the first three months of protected rehabilitation largely decide the result.",
+        locationsHeading: "Where we see Shoulder Patients",
+        faqTitle: "Shoulder Surgery FAQ",
+        faqs: [
+            { question: "Does every rotator cuff tear need surgery?", answer: "No. Many partial-thickness and degenerative tears in older adults improve with targeted rehabilitation. Surgery is advised for full-thickness tears that cause weakness, for acute tears after an injury in active people, and for tears that have not improved despite proper rehabilitation." },
+            { question: "Why does timing matter for a rotator cuff tear?", answer: "After a full-thickness tear, the tendon can pull back and the muscle can turn into fat over months. Both make repair harder and less reliable. An acute tear with weakness in an active person should be assessed within weeks rather than months." },
+            { question: "My shoulder has dislocated twice. Should I have surgery?", answer: "Recurrent dislocation, particularly in people under 30 or those who play contact or overhead sport, has a high chance of happening again, and each episode can cause more damage. Stabilisation surgery is usually recommended after a second dislocation, and sometimes after the first in high-risk athletes. Imaging shows whether there is bone loss, which determines the type of surgery." },
+            { question: "Is shoulder arthroscopy painful?", answer: "Discomfort is significant for the first few nights, especially after rotator cuff repair, but it is well controlled with a nerve block given at surgery followed by tablets. Sleeping semi-upright is often more comfortable in the first weeks." },
+            { question: "How long will I need a sling?", answer: "Typically four to six weeks after rotator cuff repair or stabilisation, and much less, sometimes only a few days, after capsular release or decompression, where early movement is the goal." },
+            { question: "When can I return to the gym or sport?", answer: "Light training of the other limbs and lower body can start early. Shoulder strengthening starts around three months. Overhead lifting, throwing and contact sport usually return between six and nine months after a repair, once strength and stability tests are passed." },
+            { question: "Do I need a shoulder replacement for arthritis?", answer: "Only when pain and stiffness from advanced arthritis limit daily life despite non-surgical care. Shoulder replacement relieves pain reliably. Reverse shoulder replacement is designed for shoulders where the rotator cuff is also irreparably torn." },
+            { question: "Is shoulder surgery covered by insurance?", answer: "Arthroscopic shoulder procedures and shoulder replacement are generally covered by health insurance, subject to your policy's terms. The team helps with cashless pre-authorisation." },
+        ],
+        ctaHeading: "Book a Shoulder Consultation",
+        ctaText: "Bring any X-rays, MRI or ultrasound reports. If your shoulder has dislocated or suddenly lost strength after an injury, please book early, as timing affects the options.",
+    },
     "mpfl-patellar-dislocation": {
         intro: [
             "A kneecap that slips out of place — patellar dislocation or subluxation — is one of the most under-treated knee problems we see. The first dislocation is usually blamed on bad luck. The second one is a pattern, and by then the medial patellofemoral ligament (MPFL), the main soft-tissue restraint holding the kneecap in its groove, has almost always been stretched or torn.",

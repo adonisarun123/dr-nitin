@@ -26,6 +26,8 @@ export function LandingFaq({
     items,
     heading = "Frequently Asked Questions",
     subheading,
+    pageType = "MedicalWebPage",
+    extraNodes = [],
 }: {
     /** Human-readable page name for schema + breadcrumb, e.g. "Knee Pain Specialist in Bangalore". */
     pageName: string;
@@ -36,6 +38,14 @@ export function LandingFaq({
     items: LandingFaqItem[];
     heading?: string;
     subheading?: string;
+    /**
+     * schema.org type of the page node. Landing pages are MedicalWebPage (the
+     * physician is the mainEntity); hub/utility pages pass CollectionPage,
+     * ContactPage etc., where the physician is referenced via `about`.
+     */
+    pageType?: string;
+    /** Extra @graph nodes, e.g. an ItemList of the cards on a hub page. */
+    extraNodes?: Record<string, unknown>[];
 }) {
     const url = `${siteOrigin}${pagePath}`;
 
@@ -43,7 +53,7 @@ export function LandingFaq({
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "MedicalWebPage",
+                "@type": pageType,
                 "@id": `${url}#webpage`,
                 "url": url,
                 "name": pageName,
@@ -51,7 +61,9 @@ export function LandingFaq({
                 ...(aboutCondition
                     ? { "about": { "@type": "MedicalCondition", "name": aboutCondition } }
                     : {}),
-                "mainEntity": { "@id": `${siteOrigin}/#physician` },
+                ...(pageType === "MedicalWebPage"
+                    ? { "mainEntity": { "@id": `${siteOrigin}/#physician` } }
+                    : { "about": { "@id": `${siteOrigin}/#physician` } }),
                 "breadcrumb": { "@id": `${url}#breadcrumb` },
             },
             {
@@ -71,6 +83,7 @@ export function LandingFaq({
                     "acceptedAnswer": { "@type": "Answer", "text": a },
                 })),
             },
+            ...extraNodes,
         ],
     };
 

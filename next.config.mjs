@@ -57,6 +57,41 @@ const nextConfig = {
                 destination: '/knee-replacement-cost-bangalore',
                 permanent: true,
             },
+            // Nov 2026: duplicate-post merges. In each pair the URL with more
+            // Search Console impressions (Aug–Nov 2026) was kept; the unique
+            // sections of the dropped post were moved into it before deletion.
+            {
+                source: '/blog/rotator-cuff-surgery-cost-in-india',
+                destination: '/blog/rotator-cuff-surgery-cost-india',
+                permanent: true,
+            },
+            {
+                source: '/blog/endoscopic-spine-surgery-in-india',
+                destination: '/blog/endoscopic-spine-surgery-india',
+                permanent: true,
+            },
+            {
+                source: '/blog/frozen-shoulder-treatment-without-surgery-in-india',
+                destination: '/blog/frozen-shoulder-treatment-without-surgery-india',
+                permanent: true,
+            },
+            {
+                source: '/blog/compression-fracture-spine-treatment-india',
+                destination: '/blog/compression-fracture-spine-treatment',
+                permanent: true,
+            },
+            {
+                source: '/blog/common-causes-of-meniscus-tears-and-acl-injuries',
+                destination: '/blog/common-causes-of-meniscus-tears-in-active-adults',
+                permanent: true,
+            },
+            // Nov 2026: this post targeted the same intent as the Attibele money
+            // page and GSC left it "crawled, not indexed". Consolidated into it.
+            {
+                source: '/blog/best-orthopedic-surgeon-in-attibele',
+                destination: '/orthopedic-doctor-attibele',
+                permanent: true,
+            },
         ];
     },
 };

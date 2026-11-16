@@ -28,11 +28,6 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         description:
             "Hip replacement surgery risks and complications explained by an orthopedic surgeon: infection, clots, dislocation, warning signs and how to lower your risk.",
     },
-    "frozen-shoulder-treatment-without-surgery-in-india": {
-        title: "Frozen Shoulder Treatment Without Surgery in India: Stages & Recovery",
-        description:
-            "How frozen shoulder is treated without surgery in India — the three stages, physiotherapy, steroid injection vs hydrodilatation, recovery timeline and when surgery is needed.",
-    },
     // --- Sep 24, 2026 knowledge batch ---
     "basic-science-of-meniscus-tear": {
         title: "Basic Science of Meniscus Tear: Anatomy, Biomechanics & Healing",
@@ -114,11 +109,6 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         title: "SLAP Tear Shoulder Surgery Recovery: Do's and Don'ts Timeline",
         description:
             "A complete timeline guide for SLAP tear shoulder surgery recovery. Discover critical do's and don'ts, recovery stages, and physiotherapy milestones.",
-    },
-    "best-orthopedic-surgeon-in-attibele": {
-        title: "Best Orthopedic Surgeon in Attibele | Dr. Nitin N Sunku",
-        description:
-            "Looking for the best orthopedic surgeon in Attibele? What to look for, conditions treated, first-visit cost, and how to book with Dr. Nitin N Sunku at Raghava Hospital.",
     },
     "surgery-vs-injections-for-knee-pain": {
         title: "Surgery vs Injections for Knee Pain: Which Is Right? (2026)",
@@ -513,11 +503,6 @@ export const blogSeoOverrides: Record<string, SeoOverride> = {
         description:
             "Sports medicine guide to stress fracture treatment in India — diagnosis, recovery timeline, costs, and prevention. Consultations in Attibele & HSR Layout.",
     },
-    "compression-fracture-spine-treatment-india": {
-        title: "Compression Fracture Spine Treatment India | Dr. Nitin Sunku",
-        description:
-            "Vertebral compression fracture in an elderly parent? A Bengaluru orthopedic surgeon explains conservative care, kyphoplasty, costs and recovery timelines.",
-    },
     "lower-back-pain-physiotherapy-protocol-india": {
         title: "Lower Back Pain Physiotherapy Protocol India | 4-Phase Plan",
         description:
@@ -593,9 +578,9 @@ export const serviceSeoOverrides: Record<string, SeoOverride> = {
             "Expert ACL tear diagnosis and arthroscopic reconstruction by Dr. Sunku. Learn causes, symptoms, treatment, recovery.",
     },
     "knee-replacement": {
-        title: "Knee Replacement Surgery – Dr. Nitin N Sunku Orthopedics",
+        title: "Knee Replacement Surgery in Bangalore: Total vs Partial",
         description:
-            "Advanced total & partial knee replacements by Dr. Sunku. Relieve arthritis pain, restore mobility. Learn about surgery, recovery",
+            "When knee replacement is needed, total vs partial, implant choices, risks and a week-by-week recovery plan. Dr. Nitin N Sunku, Attibele & HSR Layout, Bengaluru.",
     },
     "meniscal-care": {
         title: "Meniscus Tear Treatment – Dr. Nitin N Sunku Orthopedics",
@@ -608,9 +593,9 @@ export const serviceSeoOverrides: Record<string, SeoOverride> = {
             "Expert hip replacement surgeries in Bengaluru. Dr. Sunku treats arthritis and hip fractures with advanced prostheses. Learn about surgery, recovery (3-6 months)",
     },
     "shoulder-care": {
-        title: "Shoulder Care & Surgery – Dr. Nitin N Sunku",
+        title: "Shoulder Surgery in Bangalore: Rotator Cuff & Instability",
         description:
-            "Comprehensive shoulder pain treatment by Dr. Sunku. We manage rotator cuff tears, impingement, instability, frozen shoulder with personalized care.",
+            "Arthroscopic rotator cuff repair, dislocation stabilisation, labral and biceps surgery, and shoulder replacement. When surgery is needed and recovery by week. Dr. Nitin N Sunku.",
     },
     "bone-fracture": {
         title: "Bone Fracture Treatment – Dr. Nitin N Sunku",

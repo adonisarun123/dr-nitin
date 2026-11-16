@@ -36,6 +36,7 @@ import { HSR_CLINIC, CLINICS } from "@/lib/practice";
 import { siteOrigin } from "@/lib/site-url";
 import { LockBodyOverflow } from "./lock-body-overflow";
 import { LandingFaq } from "@/components/landing/landing-faq";
+import { REAL_GOOGLE_REVIEWS, GOOGLE_RATING, GOOGLE_REVIEW_COUNT_LABEL } from "@/lib/google-reviews";
 
 // ---------- SEO ----------
 export const metadata: Metadata = {
@@ -167,36 +168,8 @@ const services = [
     },
 ];
 
-const googleReviews = [
-    {
-        initial: "A",
-        name: "Arjun R.",
-        when: "2 weeks ago",
-        bg: "bg-gradient-to-br from-emerald-400 to-emerald-600",
-        text: "Excellent doctor! He explained the issue in detail and the treatment was very effective. Highly recommended.",
-    },
-    {
-        initial: "P",
-        name: "Pooja S.",
-        when: "1 month ago",
-        bg: "bg-gradient-to-br from-purple-400 to-purple-600",
-        text: "I had shoulder arthroscopy. Recovery was smooth and Dr. Nitin's care was exceptional throughout.",
-    },
-    {
-        initial: "K",
-        name: "Karthik M.",
-        when: "3 weeks ago",
-        bg: "bg-gradient-to-br from-blue-400 to-blue-600",
-        text: "Very professional and friendly. Best orthopedic surgeon in the Attibele area, hands down.",
-    },
-    {
-        initial: "S",
-        name: "Sunita G.",
-        when: "1 month ago",
-        bg: "bg-gradient-to-br from-pink-400 to-pink-600",
-        text: "Dr. Nitin treated my mother's knee arthritis without surgery. So grateful for his patience and expertise.",
-    },
-];
+// Real Google reviews only — see lib/google-reviews.ts.
+const googleReviews = REAL_GOOGLE_REVIEWS;
 
 const whyChoose = [
     {
@@ -586,8 +559,8 @@ export default function OrthopedicAttibeleLandingPage() {
                                         <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                                     ))}
                                 </div>
-                                <span className="font-bold text-gray-900">4.9</span>
-                                <span>· Based on patient reviews</span>
+                                <span className="font-bold text-gray-900">{GOOGLE_RATING}</span>
+                                <span>· {GOOGLE_REVIEW_COUNT_LABEL} Google reviews</span>
                             </div>
                         </div>
                     </FadeIn>

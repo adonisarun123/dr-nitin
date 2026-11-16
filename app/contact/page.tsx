@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/animations/fade-in";
 import { BookingForm } from "@/components/forms/booking-form";
 import { CLINICS, PRACTICE_EMAIL } from "@/lib/practice";
 import { siteOrigin } from "@/lib/site-url";
+import { LandingFaq, type LandingFaqItem } from "@/components/landing/landing-faq";
 
 export const metadata: Metadata = {
     title: {
@@ -14,6 +15,15 @@ export const metadata: Metadata = {
     description: "Get in touch with Dr. Nitin N Sunku, orthopedic & sports medicine specialist in Attibele for appointments, consultations, and expert joint care.",
     alternates: { canonical: `${siteOrigin}/contact` },
 };
+
+const CONTACT_FAQS: LandingFaqItem[] = [
+    { q: "Which clinic should I visit, Attibele or HSR Layout?", a: "Choose the one closer to home. Raghava Multispeciality Hospital on Sarjapura–Attibele Road suits patients from Attibele, Anekal, Chandapura, Bommasandra, Hosur Road and Electronic City, and has in-house X-ray, 24/7 casualty and an operating theatre. Health Nest Hospital in HSR Layout suits patients from HSR, Koramangala, BTM Layout, Bellandur and Sarjapur Road." },
+    { q: "What are Dr. Nitin N Sunku's consultation hours?", a: "At Raghava Multispeciality Hospital, Attibele, outpatient hours are Monday to Saturday, 10 am to 6 pm. At Health Nest Hospital, HSR Layout, they are Monday to Saturday, 10 am to 8 pm. Calling ahead helps the front desk confirm the doctor's session on the day you plan to visit." },
+    { q: "How do I book an orthopedic appointment?", a: "Fill in the appointment form on this page, call the hospital number listed for your preferred clinic, or send a WhatsApp message. Mention your main symptom, how long it has lasted and any previous treatment so the team can book the right consultation length." },
+    { q: "What should I bring to my first consultation?", a: "Bring any X-ray films, MRI or CT reports and CDs, previous prescriptions and discharge summaries, a list of current medicines, and your health insurance card if you may need a procedure. Wear loose clothing so the painful joint can be examined easily." },
+    { q: "What should I do in an orthopedic emergency?", a: "For an open wound over a suspected fracture, an obvious deformity, a dislocated joint, loss of consciousness or new weakness after an accident, go straight to the nearest emergency department. Raghava Multispeciality Hospital in Attibele has 24/7 casualty. Do not wait for a reply to an online form." },
+    { q: "Which languages does Dr. Nitin consult in?", a: "Consultations are available in English, Kannada and Hindi, so patients and family members can discuss the diagnosis and treatment plan in the language they are most comfortable with." },
+];
 
 export default function ContactPage() {
     return (
@@ -198,6 +208,14 @@ export default function ContactPage() {
                     </FadeIn>
                 </div>
             </div>
+
+            <LandingFaq
+                pageName="Contact Dr. Nitin N Sunku"
+                pagePath="/contact"
+                pageType="ContactPage"
+                heading="Appointments, clinics and directions"
+                items={CONTACT_FAQS}
+            />
         </main>
     );
 }
