@@ -20,6 +20,12 @@ import {
     PROCEDURE_LINKS,
     LOCATION_LINKS,
 } from "@/lib/landing-links";
+import {
+    REAL_GOOGLE_REVIEWS,
+    GOOGLE_REVIEWS_URL,
+    GOOGLE_RATING,
+    GOOGLE_REVIEW_COUNT_LABEL,
+} from "@/lib/google-reviews";
 
 /**
  * Shared design-system chrome for the conversion landing pages.
@@ -147,36 +153,8 @@ export function StatsStrip({
 }
 
 /* ----------------------------- GOOGLE REVIEWS ----------------------------- */
-const DEFAULT_REVIEWS = [
-    {
-        initial: "A",
-        name: "Arjun R.",
-        when: "2 weeks ago",
-        bg: "bg-gradient-to-br from-emerald-400 to-emerald-600",
-        text: "Excellent doctor! He explained the issue in detail and the treatment was very effective. Highly recommended.",
-    },
-    {
-        initial: "P",
-        name: "Pooja S.",
-        when: "1 month ago",
-        bg: "bg-gradient-to-br from-purple-400 to-purple-600",
-        text: "I had shoulder arthroscopy. Recovery was smooth and Dr. Nitin's care was exceptional throughout.",
-    },
-    {
-        initial: "K",
-        name: "Karthik M.",
-        when: "3 weeks ago",
-        bg: "bg-gradient-to-br from-blue-400 to-blue-600",
-        text: "Very professional and friendly. Best orthopedic surgeon in the area, hands down.",
-    },
-    {
-        initial: "S",
-        name: "Sunita G.",
-        when: "1 month ago",
-        bg: "bg-gradient-to-br from-pink-400 to-pink-600",
-        text: "Dr. Nitin treated my mother's knee arthritis without surgery. So grateful for his patience and expertise.",
-    },
-];
+// Review data lives in lib/google-reviews.ts (real Google reviews only — read its header).
+const DEFAULT_REVIEWS = REAL_GOOGLE_REVIEWS;
 
 export function GoogleReviews({
     reviews = DEFAULT_REVIEWS,
@@ -210,8 +188,8 @@ export function GoogleReviews({
                                     />
                                 ))}
                             </div>
-                            <span className="font-bold text-gray-900">4.9</span>
-                            <span>· Based on patient reviews</span>
+                            <span className="font-bold text-gray-900">{GOOGLE_RATING}</span>
+                            <span>· {GOOGLE_REVIEW_COUNT_LABEL} Google reviews</span>
                         </div>
                     </div>
                 </FadeIn>
@@ -256,7 +234,15 @@ export function GoogleReviews({
                 </div>
 
                 <FadeIn delay={0.2}>
-                    <div className="text-center mt-10">
+                    <div className="text-center mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+                        <a
+                            href={GOOGLE_REVIEWS_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-700 hover:bg-blue-50 font-semibold px-6 py-3 rounded-full transition-all"
+                        >
+                            Read all {GOOGLE_REVIEW_COUNT_LABEL} reviews on Google
+                        </a>
                         <TrackedButton
                             buttonName="Book Appointment - Reviews"
                             buttonLocation="Reviews"
