@@ -1,26 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Tag } from "lucide-react";
-import { blogPosts } from "@/lib/data";
+import { getRelatedPosts } from "@/lib/related-posts";
 
 interface RelatedPostsProps {
     currentSlug: string;
-    category: string;
+    /** Kept for call-site compatibility; selection is now topic-scored in lib/related-posts.ts. */
+    category?: string;
 }
 
-export function RelatedPosts({ currentSlug, category }: RelatedPostsProps) {
-    // Simple suggestion logic: same category, exclude current
-    const related = blogPosts
-        .filter((post) => post.category === category && post.slug !== currentSlug)
-        .slice(0, 3);
-
-    // Fallback if not enough related
-    if (related.length < 3) {
-        const others = blogPosts
-            .filter((post) => post.slug !== currentSlug && post.category !== category)
-            .slice(0, 3 - related.length);
-        related.push(...others);
-    }
+export function RelatedPosts({ currentSlug }: RelatedPostsProps) {
+    const related = getRelatedPosts(currentSlug);
 
     if (related.length === 0) return null;
 

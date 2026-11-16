@@ -6590,7 +6590,7 @@ export const blogPosts = [
         <li>Selected cases of lumbar canal stenosis, when the compression is localized</li>
         <li>Facet joint–related nerve impingement</li>
       </ul>
-      <p>If you are still unsure whether your back pain fits this category, it is worth reading a broader explainer on <a href="/blog/sciatica-treatment-without-surgery-in-india">sciatica treatment without surgery in India</a>, since many patients resolve their symptoms with rehabilitation alone before any procedure is even discussed.</p>
+      <p>If you are still unsure whether your back pain fits this category, it is worth reading a broader explainer on <a href="/blog/sciatica-treatment-without-surgery-india">sciatica treatment without surgery in India</a>, since many patients resolve their symptoms with rehabilitation alone before any procedure is even discussed.</p>
 
       <h2>Types of Endoscopic Spine Surgery</h2>
       <p>There are three broad approaches used in India, and the choice depends on where the disc herniation sits relative to the nerve root.</p>
@@ -6620,7 +6620,7 @@ export const blogPosts = [
         <li>Active spinal infection or tumour</li>
         <li>Very high body weight combined with distorted anatomy that limits endoscopic visualization safely</li>
       </ul>
-      <p>An honest surgeon will tell you when endoscopic surgery is not the right fit rather than fitting every patient into one technique. If your pain has followed you from a fall or sudden collapse rather than gradual disc degeneration, it is worth reading about <a href="/blog/compression-fracture-spine-treatment-in-india">compression fracture spine treatment in India</a> as the management pathway is different.</p>
+      <p>An honest surgeon will tell you when endoscopic surgery is not the right fit rather than fitting every patient into one technique. If your pain has followed you from a fall or sudden collapse rather than gradual disc degeneration, it is worth reading about <a href="/blog/compression-fracture-spine-treatment">compression fracture spine treatment in India</a> as the management pathway is different.</p>
 
       <h2>What Happens During the Procedure: Step by Step</h2>
       <ul>
@@ -6699,7 +6699,7 @@ export const blogPosts = [
         </tbody>
       </table>
       
-      <p>Recovery is generally faster than open surgery, but "minimally invasive" does not mean "no rehabilitation needed." Patients who skip structured physiotherapy have a higher chance of recurrent symptoms. If your job or recovery plan depends on a clear phase-by-phase home programme, this <a href="/blog/4-phase-lower-back-pain-physiotherapy-protocol-for-india">4-phase lower back pain physiotherapy protocol for India</a> is a useful companion resource regardless of which spine procedure you undergo.</p>
+      <p>Recovery is generally faster than open surgery, but "minimally invasive" does not mean "no rehabilitation needed." Patients who skip structured physiotherapy have a higher chance of recurrent symptoms. If your job or recovery plan depends on a clear phase-by-phase home programme, this <a href="/blog/lower-back-pain-physiotherapy-protocol-india">4-phase lower back pain physiotherapy protocol for India</a> is a useful companion resource regardless of which spine procedure you undergo.</p>
 
       <h2>Benefits of Endoscopic Spine Surgery</h2>
       <ul>
@@ -6782,7 +6782,7 @@ export const blogPosts = [
         <li>What physiotherapy and follow-up structure is built into the recovery plan?</li>
         <li>Is a second opinion or non-surgical pathway discussed before recommending surgery?</li>
       </ul>
-      <p>If your MRI shows disc-related neck or arm symptoms rather than lower back involvement, the surgical decision-making is different and it is worth reading about <a href="/blog/cervical-disc-replacement-in-india">cervical disc replacement in India</a> to understand how ACDF and disc replacement compare to decompression-only approaches.</p>
+      <p>If your MRI shows disc-related neck or arm symptoms rather than lower back involvement, the surgical decision-making is different and it is worth reading about <a href="/blog/cervical-disc-replacement-india">cervical disc replacement in India</a> to understand how ACDF and disc replacement compare to decompression-only approaches.</p>
 
       <h2>Why Patients Choose India for Endoscopic Spine Surgery</h2>
       <p>India has become a significant destination for endoscopic and minimally invasive spine care, both for domestic patients and medical tourists, due to a combination of experienced fellowship-trained spine surgeons, modern endoscopic and navigation equipment in most metro and tier-2 city hospitals, treatment costs that are a fraction of the US, UK, or Gulf equivalent, and shorter waiting times for elective spine procedures. For international patients, most centres also assist with visa documentation, accommodation, and coordinated post-operative follow-up before travel home.</p>
@@ -6795,7 +6795,7 @@ export const blogPosts = [
         <li>Pain that disturbs sleep or does not respond to 2–3 weeks of rest and basic pain relief</li>
         <li>Any change in bladder or bowel control — this needs same-day evaluation</li>
       </ul>
-      <p>For a broader look at deciding whether your symptoms need specialist review at all, this guide on <a href="/blog/when-you-should-see-an-orthopedic-surgeon-for-joint-or-back-pain">when you should see an orthopedic surgeon for joint or back pain</a> walks through the red-flag checklist in plain language.</p>
+      <p>For a broader look at deciding whether your symptoms need specialist review at all, this guide on <a href="/blog/when-to-see-orthopedic-surgeon-for-joint-pain">when you should see an orthopedic surgeon for joint or back pain</a> walks through the red-flag checklist in plain language.</p>
 
       <h2>Frequently Asked Questions</h2>
       <p><strong>Is endoscopic spine surgery safe?</strong><br/>Yes, in experienced hands it is considered a safe, well-established technique with a strong safety record for single-level disc herniation and foraminal stenosis. Risks such as nerve irritation, infection, or incomplete decompression exist but are comparable to, or lower than, conventional microdiscectomy.</p>

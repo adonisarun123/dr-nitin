@@ -49,6 +49,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
       { label: "Artificial ligament ACL reconstruction", href: "/services/artificial-ligament-acl-reconstruction" },
       { label: "PCL Injury Treatment service", href: "/services/pcl-injury" },
       { label: "MCL & LCL Ligament Surgery service", href: "/services/mcl-lcl-knee-ligament-injury" },
+      { label: "Kneecap dislocation & MPFL reconstruction", href: "/services/mpfl-patellar-dislocation" },
       { label: "Bad signs after ACL surgery", href: "/blog/bad-signs-after-acl-surgery" },
     ],
   },
@@ -126,7 +127,6 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
     links: [
       { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
       { label: "Vitamin D & calcium deficiency in Indian adults", href: "/blog/vitamin-d-and-calcium-deficiency-bone-health-india" },
-      { label: "Fracture & trauma care in Attibele", href: "/fracture-treatment-attibele" },
       { label: "Fracture Treatment service", href: "/services/bone-fracture" },
       { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
     ],
@@ -147,6 +147,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
       { label: "Hip replacement cost in Bangalore (2026 guide)", href: "/hip-replacement-cost-bangalore" },
       { label: "How long does a knee or hip replacement last?", href: "/blog/how-long-does-a-knee-or-hip-replacement-last" },
       { label: "Hip Replacement service", href: "/services/hip-replacement" },
+      { label: "Hip impingement (FAI) treatment", href: "/services/hip-impingement-fai" },
       { label: "Natural alternatives to hip replacement", href: "/blog/natural-alternatives-to-hip-replacement" },
       { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
       { label: "Non-surgical knee pain treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
@@ -341,6 +342,7 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
     { label: "Best orthopedic surgeon in Attibele", href: "/blog/best-orthopedic-surgeon-in-attibele" },
     { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
     { label: "Are you struggling with joint pain in Bangalore?", href: "/blog/are-you-struggling-with-joint-pain-in-bangalore" },
+    { label: "Joint pain after chikungunya or viral fever", href: "/blog/joint-pain-after-chikungunya-viral-fever" },
     { label: "Explore all treatments", href: "/treatments" },
   ],
   "acl-surgery-cost-and-recovery-bangalore": [
@@ -400,25 +402,29 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
  * depth).
  */
 const SERVICE_LINKS: Record<string, InternalLink[]> = {
+  // Capped at 5 by getServiceLinks — order matters. Nov 2026: the artificial-
+  // ligament link was 6th and silently dropped; the sibling ligament services
+  // (PCL / MCL-LCL / MPFL) had almost no inbound links, so they come first.
   "acl-care": [
     { label: "ACL reconstruction in Bangalore", href: "/acl-reconstruction-bangalore" },
-    { label: "ACL surgery cost & recovery in Bangalore", href: "/blog/acl-surgery-cost-and-recovery-bangalore" },
-    { label: "Can you walk with a torn ACL?", href: "/blog/can-you-walk-with-a-torn-acl-acl-treatment-in-bengaluru" },
-    { label: "Advanced sports injuries treatment", href: "/treatments/advanced-sports-injuries-treatment" },
-    { label: "Sports Medicine service", href: "/services/sports-medicine" },
     { label: "Artificial ligament ACL reconstruction (Jewel ACL)", href: "/services/artificial-ligament-acl-reconstruction" },
+    { label: "PCL Injury Treatment service", href: "/services/pcl-injury" },
+    { label: "MCL & LCL Ligament Surgery service", href: "/services/mcl-lcl-knee-ligament-injury" },
+    { label: "Kneecap dislocation & MPFL reconstruction", href: "/services/mpfl-patellar-dislocation" },
   ],
   "meniscal-care": [
     { label: "Can a meniscus tear heal without surgery?", href: "/blog/can-a-meniscus-tear-heal-without-surgery" },
     { label: "Meniscus tear surgery recovery time", href: "/blog/meniscus-tear-surgery-recovery-time" },
     { label: "Benefits of arthroscopic meniscus repair", href: "/blog/benefits-of-arthroscopic-meniscus-repair-surgery" },
     { label: "ACL Surgery service", href: "/services/acl-care" },
+    { label: "Knee arthroscopy in Bangalore", href: "/knee-arthroscopy-bangalore" },
   ],
   "sports-medicine": [
     { label: "Advanced sports injuries treatment", href: "/treatments/advanced-sports-injuries-treatment" },
     { label: "Why rehabilitation is essential after a sports injury", href: "/blog/why-rehabilitation-is-essential-after-a-sports-injury" },
     { label: "ACL surgery cost & recovery in Bangalore", href: "/blog/acl-surgery-cost-and-recovery-bangalore" },
     { label: "Shoulder & Rotator Cuff Surgery service", href: "/services/shoulder-care" },
+    { label: "Kneecap dislocation & MPFL reconstruction", href: "/services/mpfl-patellar-dislocation" },
   ],
   "knee-replacement": [
     { label: "Knee replacement cost in Bangalore (2026)", href: "/knee-replacement-cost-bangalore" },
