@@ -1,3 +1,4 @@
+import { PATIENT_TESTIMONIALS } from "./google-reviews";
 import { treatmentClusterPosts } from "./blog-posts-treatments";
 import {
   ATTIBELE_CLINIC,
@@ -168,43 +169,8 @@ export const teamData = [
   }
 ];
 
-export const testimonialsData = [
-  {
-    id: 1,
-    name: "Arjun R.",
-    condition: "Ankle Sprain",
-    quote: "Dr. Nitin was prompt, responsive and honest. He explained my ankle injury clearly and offered options instead of pushing unnecessary treatment.",
-    rating: 5
-  },
-  {
-    id: 2,
-    name: "Sarah K.",
-    condition: "Knee Pain",
-    quote: "Honest advice & no unnecessary scans. Dr. Nitin is truly patient-centric. I felt very comfortable during the consultation.",
-    rating: 5
-  },
-  {
-    id: 3,
-    name: "Rajesh M.",
-    condition: "Sports Injury",
-    quote: "Recovered fully after his prescribed physiotherapy. Highly recommended for any sports-related injuries!",
-    rating: 5
-  },
-  {
-    id: 4,
-    name: "Priya S.",
-    condition: "Back Pain",
-    quote: "Very approachable and explains my condition in detail. Best ortho in HSR Layout.",
-    rating: 5
-  },
-  {
-    id: 5,
-    name: "Amit B.",
-    condition: "Shoulder Dislocation",
-    quote: "Excellent diagnosis and treatment plan. I was back to playing badminton in 3 months.",
-    rating: 5
-  }
-];
+// Real Google reviews only — see lib/google-reviews.ts. Do not add invented testimonials here.
+export const testimonialsData = PATIENT_TESTIMONIALS;
 
 export const blogPosts = [
   {
