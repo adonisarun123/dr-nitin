@@ -196,12 +196,30 @@ const deriveChannel = (
     if (params.get('fbclid')) return 'paid-meta';
     if (params.get('msclkid')) return 'paid-bing';
 
+    // `campaignid` only arrives via the Google Ads Final URL suffix, so it is a
+    // Google Ads click even if auto-tagging (gclid) is ever switched off.
+    if (params.get('campaignid')) return 'paid-google';
+
     const medium = (params.get('utm_medium') || '').toLowerCase();
+    const source = (params.get('utm_source') || '').toLowerCase();
+    // Map a paid utm_source to its platform so manually tagged ads are not lumped
+    // into 'paid-other' (previously utm_source=google&utm_medium=cpc did that).
+    const paidPlatform = (): string => {
+        if (['google', 'adwords', 'googleads', 'google_ads'].includes(source)) return 'paid-google';
+        if (['facebook', 'fb', 'instagram', 'ig', 'meta'].includes(source)) return 'paid-meta';
+        if (['bing', 'microsoft', 'msads'].includes(source)) return 'paid-bing';
+        return 'paid-other';
+    };
     if (medium) {
-        if (['cpc', 'ppc', 'paid', 'paidsearch', 'paid_search', 'display'].includes(medium)) return 'paid-other';
+        if (['cpc', 'ppc', 'paid', 'paidsearch', 'paid_search', 'display'].includes(medium)) return paidPlatform();
+        // Paid social is PAID — it used to fall into 'social', which counted as organic.
+        if (['paid_social', 'paid-social', 'paidsocial'].includes(medium)) {
+            const p = paidPlatform();
+            return p === 'paid-other' ? 'paid-social' : p;
+        }
         if (['organic'].includes(medium)) return 'organic';
         if (['email'].includes(medium)) return 'email';
-        if (['social', 'paid_social', 'paid-social'].includes(medium)) return 'social';
+        if (['social'].includes(medium)) return 'social';
         return 'utm-' + medium;
     }
     if (params.get('utm_source')) return 'utm-' + params.get('utm_source');
@@ -251,6 +269,15 @@ export const captureUTMParameters = () => {
         utm_campaign: params.get('utm_campaign'),
         utm_term: params.get('utm_term'),
         utm_content: params.get('utm_content'),
+        // Google Ads ValueTrack fields, passed via the campaign-level Final URL
+        // suffix (campaignid={campaignid}&adgroupid={adgroupid}&matchtype=...).
+        // They answer "which ad group / match type / device produced this lead"
+        // without having to join against the Ads account by gclid.
+        campaignid: params.get('campaignid'),
+        adgroupid: params.get('adgroupid'),
+        matchtype: params.get('matchtype'),
+        device: params.get('device'),
+        network: params.get('network'),
         // Click IDs — the only signal present on most real ad clicks.
         gclid: params.get('gclid'),
         gbraid: params.get('gbraid'),
