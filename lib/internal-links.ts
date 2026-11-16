@@ -157,7 +157,7 @@ const TOPIC_LINKS: { keywords: string[]; links: InternalLink[] }[] = [
 
 /** Always-relevant links used to top up any post to >= 3. */
 const GENERIC_LINKS: InternalLink[] = [
-  { label: "Best orthopedic surgeon in Attibele", href: "/blog/best-orthopedic-surgeon-in-attibele" },
+  { label: "Orthopedic doctor in Attibele", href: "/orthopedic-doctor-attibele" },
   { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
   { label: "Explore all treatments", href: "/treatments" },
   { label: "Book an appointment", href: "/contact" },
@@ -320,12 +320,6 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
     { label: "Shoulder pain specialist in Bangalore", href: "/shoulder-pain-bangalore" },
     { label: "How posture affects spine and joint health", href: "/blog/how-posture-affects-spine-and-joint-health" },
   ],
-  "best-orthopedic-surgeon-in-attibele": [
-    { label: "Knee replacement cost in Bangalore", href: "/knee-replacement-cost-bangalore" },
-    { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
-    { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
-    { label: "Explore all treatments", href: "/treatments" },
-  ],
   "surgery-vs-injections-for-knee-pain": [
     { label: "PRP & GFC injection cost and eligibility", href: "/blog/prp-gfc-injection-cost-eligibility-bangalore" },
     { label: "Knee replacement cost in Bangalore", href: "/knee-replacement-cost-bangalore" },
@@ -339,7 +333,7 @@ const CURATED_LINKS: Record<string, InternalLink[]> = {
     { label: "Hyaluronic acid injection treatment", href: "/treatments/hyaluronic-acid-injection-treatment" },
   ],
   "when-to-see-orthopedic-surgeon-for-joint-pain": [
-    { label: "Best orthopedic surgeon in Attibele", href: "/blog/best-orthopedic-surgeon-in-attibele" },
+    { label: "Orthopedic doctor in Attibele", href: "/orthopedic-doctor-attibele" },
     { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
     { label: "Are you struggling with joint pain in Bangalore?", href: "/blog/are-you-struggling-with-joint-pain-in-bangalore" },
     { label: "Joint pain after chikungunya or viral fever", href: "/blog/joint-pain-after-chikungunya-viral-fever" },
@@ -429,8 +423,8 @@ const SERVICE_LINKS: Record<string, InternalLink[]> = {
     { label: "Knee replacement cost in Bangalore (2026)", href: "/knee-replacement-cost-bangalore" },
     { label: "Insurance & cashless orthopedic treatment", href: "/insurance-cashless-orthopedic-treatment" },
     { label: "Types of total knee replacement", href: "/blog/types-of-total-knee-replacement" },
+    { label: "Knee & hip replacement hospital in Attibele", href: "/joint-replacement-hospital-attibele" },
     { label: "Non-surgical knee pain treatment", href: "/treatments/non-surgical-knee-pain-treatment" },
-    { label: "Surgery vs injections for knee pain", href: "/blog/surgery-vs-injections-for-knee-pain" },
   ],
   "hip-replacement": [
     { label: "Hip pain specialist in Bangalore", href: "/hip-pain-bangalore" },
@@ -444,14 +438,14 @@ const SERVICE_LINKS: Record<string, InternalLink[]> = {
     { label: "Rotator cuff injury: how to treat shoulder pain", href: "/blog/rotator-cuff-injury-heres-how-to-treat-shoulder-pain-effectively" },
     { label: "When is shoulder replacement needed?", href: "/blog/when-is-shoulder-replacement-surgery-needed" },
     { label: "Shoulder arthroscopy explained", href: "/blog/arthroscopy-shoulder" },
-    { label: "Sports Medicine service", href: "/services/sports-medicine" },
+    { label: "Frozen shoulder treatment in Bangalore", href: "/frozen-shoulder-treatment-bangalore" },
   ],
   "bone-fracture": [
     { label: "Fracture & accident care in Attibele", href: "/fracture-treatment-attibele" },
     { label: "Pediatric orthopedic care in Bangalore", href: "/pediatric-orthopedic-bangalore" },
     { label: "When to see an orthopedic surgeon for joint pain", href: "/blog/when-to-see-orthopedic-surgeon-for-joint-pain" },
     { label: "Why rehabilitation is essential after a sports injury", href: "/blog/why-rehabilitation-is-essential-after-a-sports-injury" },
-    { label: "Best orthopedic surgeon in Attibele", href: "/blog/best-orthopedic-surgeon-in-attibele" },
+    { label: "Orthopedic doctor in Attibele", href: "/orthopedic-doctor-attibele" },
     { label: "Sports Medicine service", href: "/services/sports-medicine" },
   ],
   "mpfl-patellar-dislocation": [

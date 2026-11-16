@@ -85,6 +85,13 @@ const nextConfig = {
                 destination: '/blog/common-causes-of-meniscus-tears-in-active-adults',
                 permanent: true,
             },
+            // Nov 2026: this post targeted the same intent as the Attibele money
+            // page and GSC left it "crawled, not indexed". Consolidated into it.
+            {
+                source: '/blog/best-orthopedic-surgeon-in-attibele',
+                destination: '/orthopedic-doctor-attibele',
+                permanent: true,
+            },
         ];
     },
 };

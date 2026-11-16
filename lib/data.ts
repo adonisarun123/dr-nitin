@@ -350,7 +350,7 @@ export const blogPosts = [
         <li>What movement precautions will I have, and for how long?</li>
         <li>What happens if a complication occurs, and who will I contact after hours?</li>
       </ul>
-      <p>A surgeon who welcomes these questions is a good sign. For more help choosing, see our guide to the <a href="/blog/best-orthopedic-surgeon-in-attibele">best orthopedic surgeon in Attibele</a>.</p>
+      <p>A surgeon who welcomes these questions is a good sign. For more help choosing, see our page on <a href="/orthopedic-doctor-attibele">orthopedic care in Attibele</a>.</p>
 
       <h2>Hip Replacement Care with Dr. Nitin N Sunku in Bengaluru</h2>
       <p>Dr. Nitin N Sunku is a fellowship-trained orthopedic and sports medicine surgeon with an MS in Orthopedics (gold medalist), who consults in Attibele and HSR Layout. His approach is conservative first: surgery is recommended only when the benefits clearly outweigh the risks, and every plan starts with a careful examination, honest risk discussion and health optimisation.</p>
@@ -6664,95 +6664,6 @@ export const blogPosts = [
 
       <hr/>
       <p><em>Further reading: For a deeper clinical overview of the anterior approach, see these resources from the <a href="https://www.cedars-sinai.org/health-library/tests-and-procedures/t/total-hip-replacement-anterior-approach.html" target="_blank" rel="noopener noreferrer">Cedars-Sinai Health Library</a> and <a href="https://www.yalemedicine.org/conditions/total-hip-replacement-anterior-approach" target="_blank" rel="noopener noreferrer">Yale Medicine</a>.</em></p>
-    `
-  },
-  {
-    slug: "best-orthopedic-surgeon-in-attibele",
-    title: "Best Orthopedic Surgeon in Attibele: How to Choose & What It Costs (2026)",
-    excerpt: "Looking for the best orthopedic surgeon in Attibele? Learn what to look for, conditions treated, first-visit costs, and how to book with Dr. Nitin N Sunku at Raghava Hospital.",
-    date: "Jun 14, 2026",
-    category: "Find a Specialist",
-    image: "https://ik.imagekit.io/M0nger/best-orthopedic-surgeon-attibele.jpg",
-    content: `
-      <p>If you have been searching for the <strong>best orthopedic surgeon in Attibele</strong>, you are probably tired of two things: knee, shoulder or back pain that will not settle, and the long, expensive trip into central Bengaluru every time you need to see a specialist. The good news is that you no longer have to choose between expertise and convenience. Dr. Nitin N Sunku, a fellowship-trained orthopedic and sports medicine surgeon, consults at Raghava Multispeciality Hospital on Sarjapura&ndash;Attibele Road, bringing high-volume joint, ligament and regenerative care to Attibele, Anekal, Bommasandra, Chandapura, Hosur Road and Electronic City.</p>
-      <p>This guide explains exactly what to look for in an orthopedic specialist near you, what conditions are treated locally, what a first visit costs and involves, and how to book &mdash; so you can make a confident decision instead of scrolling through endless listings.</p>
-
-      <h2>Why choosing a local orthopedic specialist matters</h2>
-      <p>Orthopedic problems are rarely a single visit. A torn ligament, an arthritic knee, a frozen shoulder or a fracture all need staged review &mdash; examination, imaging, a treatment decision, and then follow-up to confirm you are healing. When your surgeon is 25&ndash;40 km away in the city, those repeat visits become a real barrier, and many patients quietly stop coming back before treatment is finished. Choosing a qualified specialist who consults close to home in Attibele removes that friction and keeps your recovery on track.</p>
-      <p>Convenience, however, should never come at the cost of competence. The single most important factor in orthopedic outcomes &mdash; especially in surgery &mdash; is the experience and case volume of the operating surgeon. The goal is to find a specialist who offers both: genuine sub-specialty training <em>and</em> a consulting location you can reach in minutes.</p>
-
-      <h2>What to look for in the best orthopedic surgeon near you</h2>
-      <p>Before you book with anyone, run them through this short checklist:</p>
-      <ul>
-        <li><strong>Sub-specialty training.</strong> "Orthopedics" is a wide field. For knee, shoulder and sports problems, look for fellowship training in arthroscopy and sports medicine, not just a general MS Orthopedics.</li>
-        <li><strong>A full treatment ladder.</strong> The best specialists do not jump straight to surgery. They offer the complete range &mdash; physiotherapy guidance, injections (including regenerative options like PRP and GFC), and surgery only when it is genuinely needed.</li>
-        <li><strong>Honest, options-based counselling.</strong> You should leave the consultation understanding your condition, your choices, and the trade-offs of each &mdash; not feeling pushed toward an expensive procedure.</li>
-        <li><strong>Hospital backing.</strong> A surgeon attached to a proper multispeciality hospital can arrange imaging, anaesthesia, blood work and inpatient care under one roof.</li>
-        <li><strong>Reachability.</strong> A clear phone number, sensible consulting hours, and a location you can actually get to for follow-up.</li>
-      </ul>
-
-      <h2>About Dr. Nitin N Sunku</h2>
-      <p>Dr. Nitin N Sunku is an orthopedic and sports medicine specialist with an MS in Orthopedics (Gold Medalist) and fellowship training in arthroscopy and sports medicine. He serves as Team Doctor for Bengaluru FC and has consulted at leading Bengaluru hospitals, bringing a high-performance, athlete-grade approach to everyday patients &mdash; whether you are a runner with a knee problem, a software professional with chronic back pain, or a parent dealing with arthritis.</p>
-      <p>At Raghava Multispeciality Hospital in Attibele, that expertise is available to South Bengaluru and the Hosur Road belt without the city commute. The emphasis is on accurate diagnosis, conservative treatment wherever possible, and clear communication at every step.</p>
-
-      <h2>Conditions treated at the Attibele clinic</h2>
-      <p>The practice covers the full range of adult orthopedic and sports medicine concerns, including:</p>
-      <ul>
-        <li><strong>Knee problems</strong> &mdash; osteoarthritis, ACL and meniscus tears, runner's knee, and knee replacement when appropriate.</li>
-        <li><strong>Shoulder problems</strong> &mdash; rotator cuff tears, frozen shoulder, impingement, instability after sports injury.</li>
-        <li><strong>Sports injuries</strong> &mdash; sprains, ligament tears, tendon problems, and structured return-to-sport rehabilitation.</li>
-        <li><strong>Regenerative treatments</strong> &mdash; PRP and GFC injections for early arthritis and tendon injuries, as an alternative to surgery in suitable patients.</li>
-        <li><strong>Back and spine pain</strong> &mdash; disc-related pain, posture-related problems, and non-surgical management.</li>
-        <li><strong>Fractures and trauma</strong> &mdash; casting, and surgical fixation where needed.</li>
-        <li><strong>Hip arthritis and hip replacement</strong> for advanced joint damage.</li>
-      </ul>
-
-      <h2>What happens at your first consultation</h2>
-      <p>Knowing what to expect removes the anxiety of a first visit. A typical first orthopedic consultation at Attibele runs like this:</p>
-      <ul>
-        <li><strong>History.</strong> Dr. Nitin asks how the problem started, what makes it better or worse, and how it is affecting your work, sleep and daily activity.</li>
-        <li><strong>Examination.</strong> A hands-on physical exam of the affected joint &mdash; range of movement, stability, strength and specific clinical tests.</li>
-        <li><strong>Imaging review.</strong> Existing X-rays or MRI are reviewed; if needed, fresh imaging can be arranged at the hospital.</li>
-        <li><strong>Diagnosis and plan.</strong> You receive a clear explanation of what is wrong and a treatment plan that lays out conservative and surgical options where both exist.</li>
-      </ul>
-      <p>Most patients leave the first visit with a definite next step &mdash; a physiotherapy protocol, a scheduled injection, a request for imaging, or a surgical plan with timelines.</p>
-
-      <h2>How much does an orthopedic consultation cost in Bengaluru?</h2>
-      <p>A specialist orthopedic consultation in Bengaluru typically costs in the region of &#8377;500&ndash;&#8377;1,000, with follow-up visits often lower. Imaging is charged separately &mdash; a plain X-ray is usually a few hundred rupees, while an MRI scan generally ranges from around &#8377;4,000 to &#8377;8,000 depending on the joint and the centre. These figures are indicative for general guidance only; please call the clinic for current consultation fees, as charges vary and may change over time.</p>
-      <p>The value of seeing the right specialist early is that it often <em>saves</em> money &mdash; an accurate diagnosis prevents months of ineffective treatment and unnecessary scans.</p>
-
-      <h2>Areas served from Attibele</h2>
-      <p>The Attibele clinic is positioned to serve patients across South-East Bengaluru and the Karnataka&ndash;Tamil Nadu border belt, including Attibele, Anekal, Bommasandra, Chandapura, Sarjapura, Hosur Road and Electronic City. For many residents of these areas, Raghava Multispeciality Hospital is the nearest point of access to fellowship-trained orthopedic and sports medicine care.</p>
-
-      <h2>How to book an appointment</h2>
-      <p>Booking is straightforward. You can call the Attibele clinic directly, book online through the website, or send a WhatsApp message to describe your problem and request a slot. If you already have X-rays or an MRI, bring them &mdash; it speeds up the consultation and may save you a repeat scan.</p>
-      <p><strong>Attibele clinic:</strong> Raghava Multispeciality Hospital, 39, Sarjapura&ndash;Attibele Road, opposite Canara Bank, Attibele, Bengaluru 562107. Phone: +91-9980031006. Consulting hours: Monday&ndash;Saturday, 10:00 AM &ndash; 6:00 PM.</p>
-
-      <h2>Frequently Asked Questions</h2>
-      <strong>Q1: Who is the best orthopedic surgeon in Attibele for knee pain?</strong>
-      <p>A: Dr. Nitin N Sunku is a fellowship-trained orthopedic and sports medicine specialist who consults at Raghava Multispeciality Hospital in Attibele. He treats the full range of knee problems &mdash; from early arthritis managed with physiotherapy and injections, to ACL and meniscus tears, to knee replacement &mdash; which lets him recommend the least invasive option that will actually work for you. The "best" surgeon for you is one with relevant sub-specialty training who you can reach easily for follow-up.</p>
-
-      <strong>Q2: Do I need a referral to see an orthopedic specialist?</strong>
-      <p>A: No. You can book an orthopedic consultation directly without a referral from a GP. If you already have imaging or reports from another doctor, bring them along, but they are not required to be seen.</p>
-
-      <strong>Q3: How do I know if I need an orthopedic surgeon or a physiotherapist?</strong>
-      <p>A: As a rule of thumb, see an orthopedic specialist first if you have had significant trauma, cannot bear weight, have a locked or unstable joint, marked swelling, or pain that has not improved after a few weeks of rest and basic care. The specialist can then direct you to physiotherapy, injections or surgery as appropriate &mdash; so you do not waste time on the wrong path.</p>
-
-      <strong>Q4: What should I bring to my first appointment?</strong>
-      <p>A: Bring any previous X-rays, MRI scans or reports, a list of medications you take, and details of how and when the problem started. Wear or carry clothing that allows the affected joint to be examined easily.</p>
-
-      <strong>Q5: Does the Attibele clinic offer non-surgical treatment?</strong>
-      <p>A: Yes. A large share of orthopedic problems are managed without surgery &mdash; through activity modification, physiotherapy, medication, and injections including regenerative options such as PRP and GFC. Surgery is recommended only when conservative treatment is unlikely to work or has already failed.</p>
-
-      <p><em>This article is for general information and does not replace a personal medical consultation. Please see a qualified orthopedic surgeon to discuss your individual condition.</em></p>
-
-      <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
-          <p class="font-bold text-lg mb-2">Author: Dr. Nitin N Sunku, MS Orthopedics (Gold Medalist), Fellowship in Arthroscopy & Sports Medicine.</p>
-          <p class="mb-4">Consulting at Raghava Multispeciality Hospital, Attibele and Health Nest Hospital, HSR Layout, Bengaluru.</p>
-          <a href="/contact" class="inline-flex items-center justify-center rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-white font-bold no-underline hover:bg-primary/90 h-10 px-4 py-2">
-              Book your Attibele consultation or call +91-9980031006
-          </a>
-      </div>
     `
   },
     {
