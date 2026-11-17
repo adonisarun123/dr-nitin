@@ -22,6 +22,17 @@ export interface SeoOverride {
 }
 
 export const blogSeoOverrides: Record<string, SeoOverride> = {
+    // --- Nov 11, 2026 knowledge batch ---
+    "acl-degeneration": {
+        title: "ACL Degeneration: Causes, Symptoms & Treatment Guide",
+        description:
+            "ACL degeneration explained by an orthopedic surgeon: causes, symptoms, MRI signs, non-surgical and surgical treatment, and recovery. Book in Bengaluru.",
+    },
+    "posterior-horn-lateral-meniscus-tear": {
+        title: "Posterior Horn Lateral Meniscus Tear: Symptoms, MRI & Treatment",
+        description:
+            "Posterior horn lateral meniscus tear explained — symptoms, MRI findings, repair vs trimming, recovery timeline and the frequent link with ACL injury. By Dr. Nitin N Sunku.",
+    },
     // --- Oct 7, 2026 knowledge batch ---
     "hip-replacement-surgery-risks-and-complications": {
         title: "Hip Replacement Surgery Risks and Complications Explained",
