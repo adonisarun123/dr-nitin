@@ -10,6 +10,12 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'images.unsplash.com',
             },
+            {
+                // No Bad Science logo (Dr. Nitin is their Clinical Advisor) — /about bio card.
+                protocol: 'https',
+                hostname: 'nobadscience.in',
+                pathname: '/cdn/shop/files/**',
+            },
         ],
         // Allow locally-stored SVG headers used by the treatment cluster
         // blog posts. Sandboxed CSP keeps this safe.
