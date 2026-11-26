@@ -135,6 +135,33 @@ export default function AboutPage() {
                                 </p>
                             </div>
 
+                            {/* Advisory role — No Bad Science */}
+                            <a
+                                href="https://nobadscience.in/"
+                                target="_blank"
+                                rel="noopener"
+                                className="group mb-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:border-primary/40 hover:shadow-md"
+                                aria-label="Dr. Nitin N Sunku is Clinical Advisor to No Bad Science (opens nobadscience.in in a new tab)"
+                            >
+                                <div className="flex shrink-0 items-center justify-center rounded-xl bg-gray-50 px-4 py-3 ring-1 ring-gray-100">
+                                    <Image
+                                        src="https://nobadscience.in/cdn/shop/files/Final-Logo-No-BS_3.png?v=1781010842"
+                                        alt="No Bad Science logo"
+                                        width={168}
+                                        height={51}
+                                        className="h-auto w-[168px] object-contain"
+                                    />
+                                </div>
+                                <div className="sm:border-l sm:border-gray-200 sm:pl-6">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">Clinical Advisor</p>
+                                    <p className="mt-1 text-base font-semibold text-gray-900">No Bad Science</p>
+                                    <p className="mt-1 text-sm text-gray-600">
+                                        Advises on clinical evidence and transparency for a science-first wellness brand.
+                                    </p>
+                                    <p className="mt-2 text-sm font-medium text-primary group-hover:underline underline-offset-2">nobadscience.in →</p>
+                                </div>
+                            </a>
+
                             <div className="grid sm:grid-cols-2 gap-6 mb-8">
                                 <div className="bg-blue-50 p-4 rounded-xl">
                                     <Award className="h-8 w-8 text-blue-600 mb-2" />
