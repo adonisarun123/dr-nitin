@@ -468,7 +468,7 @@ export default function OrthopedicDoctorAttibelePage() {
 
                         <FadeIn delay={0.1}>
                             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border border-white/50">
-                                <BookingForm source="ads-attibele" />
+                                <BookingForm source="ads-attibele" defaultLocation="attibele" />
                             </div>
                         </FadeIn>
 

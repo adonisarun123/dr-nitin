@@ -61,14 +61,11 @@ export const trackPageView = (url: string, title?: string) => {
 
 // Track conversions
 export const trackConversion = (conversionType: 'lead' | 'contact' | 'phone_click', metadata?: Record<string, any>) => {
-    // Google Analytics 4 / Google Tag Manager (id is configurable)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'conversion', {
-            send_to: GA_MEASUREMENT_ID,
-            conversion_type: conversionType,
-            ...metadata,
-        });
-    }
+    // GA4: deliberately NOT sent from here any more. The old
+    // gtag('event', 'conversion', { send_to: GA_MEASUREMENT_ID }) call never
+    // registered in GA4 (0 events in 90 days). GA4 key events are now:
+    //   - form_success   (from trackFormEvent)
+    //   - phone_click / whatsapp_click (from <ContactClickTracker /> in layout)
 
     // Meta Pixel - Standard Events
     if (typeof window !== 'undefined' && (window as any).fbq) {
