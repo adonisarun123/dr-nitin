@@ -16,6 +16,7 @@ import {
 import { siteOrigin } from "@/lib/site-url";
 import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
 import { UtmCapture } from "@/components/analytics/utm-capture";
+import { ContactClickTracker } from "@/components/analytics/contact-click-tracker";
 import { GA_MEASUREMENT_ID } from "@/lib/gtag";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -164,6 +165,7 @@ export default function RootLayout({
             of the session. Previously this only ran on landing pages, so leads from
             blog posts and /book-appointment arrived with no attribution at all. */}
         <UtmCapture />
+        <ContactClickTracker />
         <Header />
         {children}
         <Footer />

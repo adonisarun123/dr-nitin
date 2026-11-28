@@ -504,7 +504,7 @@ export default function FractureTreatmentAttibelePage() {
 
                         <FadeIn delay={0.1}>
                             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border border-white/50">
-                                <BookingForm source="ads-fracture-attibele" />
+                                <BookingForm source="ads-fracture-attibele" defaultLocation="attibele" />
                             </div>
                         </FadeIn>
 

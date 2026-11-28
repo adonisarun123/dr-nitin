@@ -466,7 +466,7 @@ export default function JointReplacementHospitalAttibelePage() {
 
                         <FadeIn delay={0.1}>
                             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border border-white/50">
-                                <BookingForm source="joint-replacement-attibele" />
+                                <BookingForm source="joint-replacement-attibele" defaultLocation="attibele" />
                             </div>
                         </FadeIn>
 

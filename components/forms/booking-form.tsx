@@ -8,15 +8,17 @@ import { PRIMARY_CLINIC } from "@/lib/practice";
 
 interface BookingFormProps {
     source?: string;
+    /** Pre-selects the clinic. Visitors can still change it. */
+    defaultLocation?: "attibele" | "hsr-layout";
 }
 
-export function BookingForm({ source = "website" }: BookingFormProps) {
+export function BookingForm({ source = "website", defaultLocation }: BookingFormProps) {
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
         email: "",
         condition: "",
-        preferredLocation: "",
+        preferredLocation: defaultLocation ?? "",
         preferredDate: "",
         message: "",
         // Honeypot — kept blank in normal use. Bots that auto-fill all fields
